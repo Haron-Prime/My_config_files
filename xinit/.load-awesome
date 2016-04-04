@@ -1,0 +1,10 @@
+#!/bin/sh
+# setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp &
+# perWindowLayoutD &
+# xset m 5/2 0 &
+# xset s 5999 &
+# xset dpms 6000 6002 6002 &
+urxvtd -q -f -o &
+# pcmanfm -d &
+exec awesome
+exit 0

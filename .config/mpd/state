@@ -1,0 +1,16 @@
+sw_volume: 100
+audio_device_state:1:pulse audio
+state: pause
+current: 0
+time: 8.148000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Russian/Nautilus Pompilius/Первые издания/1983 - Переезд/01 В итальянской опере.m4a
+1:Russian/Nautilus Pompilius/Первые издания/1983 - Переезд/01 В итальянской опере.m4a
+playlist_end

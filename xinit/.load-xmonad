@@ -1,0 +1,8 @@
+#!/bin/sh
+urxvtd -q -f -o &
+pcmanfm -d &
+feh --bg-center /home/haron/pics/xmonad/XMONAD012.png &
+trayer &
+python3 /home/haron/lib/gis-weather/gis-weather.py &
+exec xmonad
+exit 0
