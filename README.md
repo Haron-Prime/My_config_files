@@ -1,3 +1,3 @@
 # My_config_files
 
-My confit xmonad, xmobar, zsh etc
+My config xmonad, xmobar, zsh etc
