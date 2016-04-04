@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="16"
+   id="svg7217"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="folder-remote-symbolic.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.1"
+   inkscape:export-filename="folder-symbolic.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs7219" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="56"
+     inkscape:cx="6.5223812"
+     inkscape:cy="4.6866885"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1248"
+     inkscape:window-height="688"
+     inkscape:window-x="217"
+     inkscape:window-y="264"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2994"
+       empspacing="2"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7222">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(0,-32)">
+    <path
+       style="fill:#bebebe;fill-opacity:1;stroke:none"
+       d="m 2,33 c -0.5384074,0 -1.0113123,0.246515 -1,1 l -0.0209932,3.04 14.04198624,2.5e-5 0,-1.044125 c 0.0034,-0.758727 -0.17817,-1.017298 -0.723986,-1.015801 L 7,35.000124 5.4662534,33.31 C 5.3698632,33.178248 5.1362847,33 5,33 z"
+       id="path15"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sccccsccss" />
+    <path
+       style="fill:#bebebe;fill-opacity:1;stroke:none;display:inline;enable-background:new"
+       d="m 0.5,5.990625 c -0.2027474,0 -0.3584984,0.08342 -0.34375,0.21875 l 0.4375,5.571875 c 0.0106903,0.135573 0.2347561,0.25 0.4375,0.25 L 7,12.03125 7,14 1.46875,14 C 1.20576,14 1,14.20565 1,14.46875 l 0,1.0625 C 1,15.79425 1.20576,16 1.46875,16 l 13.0625,0 C 14.79424,16 15,15.79425 15,15.53125 l 0,-1.0625 C 15,14.20575 14.79425,14 14.53125,14 L 9,14 l 0,-1.96875 5.96875,0 c 0.202747,0 0.42693,-0.114423 0.4375,-0.25 l 0.4375,-5.571875 C 15.85923,6.074043 15.702747,5.990625 15.5,5.990625 z"
+       transform="translate(0,32)"
+       id="path39063"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sccsccssssssssccsccss" />
+    <g
+       id="g3877"
+       transform="translate(1,32)">
+      <g
+         style="display:inline"
+         id="layer9"
+         transform="translate(-462,-176)"
+         inkscape:label="status" />
+      <g
+         id="layer10"
+         transform="translate(-462,-176)"
+         inkscape:label="devices" />
+      <g
+         id="layer11"
+         transform="translate(-462,-176)"
+         inkscape:label="apps" />
+      <g
+         id="layer12"
+         transform="translate(-462,-176)"
+         inkscape:label="actions" />
+      <g
+         id="layer13"
+         transform="translate(-462,-176)"
+         inkscape:label="places">
+        <g
+           id="g14176"
+           transform="translate(234.0002,-820)"
+           inkscape:label="folder-remote" />
+      </g>
+      <g
+         id="layer14"
+         transform="translate(-462,-176)"
+         inkscape:label="mimetypes" />
+      <g
+         style="display:inline"
+         id="layer15"
+         transform="translate(-462,-176)"
+         inkscape:label="emblems" />
+    </g>
+  </g>
+</svg>

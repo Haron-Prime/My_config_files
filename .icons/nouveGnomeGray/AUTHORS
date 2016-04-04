@@ -1,0 +1,15 @@
+ABOUT:
+
+The nouveGnomeGray icon theme is made by Pedram Pourang (aka Tsu Jan) in Dec 2011, to be used alongside the GTK+ theme GnomishDark. It is NOT a complete icon set but depends on GNOME Desktop icon theme, which is provided by the package gnome-icon-theme in the Debian-based systems. nouveGnomeGray is intended to be used only with dark GTK+ themes, i.e. against dark backgrounds.
+
+nouveGnomeGray is inspired by A. Moore's nuoveXT and A. Roncone's AwOken. nuoveXT can be downloaded from:
+
+	http://nuovext.pwsp.net/
+
+AwOken can be found at "http://gnome-look.org/".
+
+The neat folder icon of GNOME-Colors is used in modified forms. The project home of GNOME-Colors is here:
+
+	http://code.google.com/p/gnome-colors/
+
+Some other icons are made by editing or mixing GNOME and KDE project icons, which can be found in Debian and Ubuntu repositories.
