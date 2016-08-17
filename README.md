@@ -1,3 +1,3 @@
 # My_config_files
 
-My config xmonad, xmobar, zsh etc
+My config awesome wm, xmonad, xmobar, i3wm, i3blocks, zsh etc
