@@ -27,4 +27,5 @@ urxvtd -q -f -o &
 pcmanfm -d &
 feh --bg-center /home/haron/Pictures/Walpapers/into-the-mist.jpg &
 python3 /home/haron/lib/gis-weather/gis-weather.py &
+mocicon &
 exec i3
