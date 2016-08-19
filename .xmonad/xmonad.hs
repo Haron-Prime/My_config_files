@@ -67,7 +67,7 @@ myWorkspaces         = [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "VM" , "I
 myNormalBorderColor  = "#151515"
 myFocusedBorderColor = "#9df"
 myFont               = "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
-scratchPad = scratchpadSpawnActionTerminal "urxvtc -name terminal"
+scratchPad = scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
  
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $

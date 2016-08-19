@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Action
+Name=Symlink
+Icon=emblem-symbolic-link
+Profiles=symlink;
+
+[X-Action-Profile symlink]
+Exec=ln -s %f %f-link
+MimeTypes=*;
+SelectionCount==1

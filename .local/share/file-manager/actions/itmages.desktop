@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Action
+Name=Upload to ITmages
+Icon=go-up
+Profiles=upload;
+
+[X-Action-Profile upload]
+Exec=sh -c 'itmages-upload-mod $1 | grep BB_code_preview | cut -c 18-200 | xclip -selection cli' dummy %f
+MimeTypes=image/*;
+SelectionCount==1

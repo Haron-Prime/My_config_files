@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Action
+Name=Mediainfo
+Icon=video-x-generic
+Profiles=mediainfo;
+
+[X-Action-Profile mediainfo]
+Exec=sh -c 'mediainfo "$1" | zenity --title=Mediainfo --width 1600 --height 900 --font="Terminus Re33" --text-info' dummy %f
+MimeTypes=video/*;audio/*;
+SelectionCount==1
