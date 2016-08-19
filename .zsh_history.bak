@@ -1,0 +1,145 @@
+crontab -e
+yain xmlto
+zramctl
+sudo pacman -S testing/linux testing/linux-headers
+uname -a
+vim .Xdefaults
+pacmanxg
+yareps rxvt g install
+yareps xmonad g install
+yareps xmonad
+sudo fc-cache -fv
+su
+fonts
+pacloc curl
+cal
+dmesg | grep scheduler
+pacloc linix
+yareps linux g install
+yareps linux-zen g install
+yaupd
+dmesg |grep NCQ
+cat /sys/block/HDD/queue/scheduler
+modprobe bfq-iosched
+modprobe bfq
+echo "bfq" /sys/block/sda/queue/scheduler
+sudo echo "bfq" /sys/block/sda/queue/scheduler
+sctl reboot
+yare linux linux-headers
+yains /media/haron/320G/pacman/pkg/linux-headers-4.5-1-x86_64.pkg.tar.xz /media/haron/320G/pacman/pkg/linux-4.5-1-x86_64.pkg.tar.xz
+pacloc linux
+pacloc linux-zen
+whois nnm-club.me
+ping -c3 ya.ru
+ping -c3 nnm-club.me
+sudo echo "BFQ" /sys/block/sda/queue/scheduler
+dmesg | grep schedule
+vbeinfo
+sudo mkinitcpio -p linux
+sst /etc/hosts
+sctl status udisk2
+sudo systemctl enable udisks2
+nslookup
+winecfg
+sudo systemctl start udisks2
+cat /sys/block/sda/queue/scheduler
+cat /sys/block/sdb/queue/scheduler
+yaloc pacman
+jctlc
+dmesg g tail
+dmesg tail
+dmesg
+dmesg | tail
+jctlb g error
+sctl status udisks2
+cat .Xdefaults
+yalocs urxvt
+git clone git@github.com:muennich/urxvt-perls.git
+yareps zsh-autosuggestions
+yain zsh-autosuggestions-git
+yain zsh-autosuggestions
+svim /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+vim .zshrc
+cat .xmonad/xmonad.hs g myTerminal
+cat .xinitrc
+cat .load-xmonad
+jctlb g failed
+sudo systemctl start systemd-modules-load.servic
+sctl status systemd-modules-load.service
+sudo systemctl status systemd-modules-load.service
+sudo modprobe vboxguest
+yareps vboxguest
+yareps virtualbox-host-dkms
+yain virtualbox-host-dkms
+yain virtualbox-guest-dkms virtualbox-guest-iso virtualbox-guest-utils
+sudo /sbin/rcvboxdrv setup
+sudo systemctl start systemd-modules-load.service
+jctl -xe
+virtualbox
+yare aria2-fast
+cat /etc/udev/rules.d/60-schedulers.rules
+sctl poweroff
+vim
+yain awesome
+vim .xinitrc
+exec awesome
+awesome
+svim
+svim /etc/default/grub
+git add *
+git add -a
+man xmonad
+yareps lrzip
+yain lrzip
+yareps linux-pf
+df
+sha256sum aufs4-standalone
+makepkg
+yain linux-pf linux-pf-headers
+rmrf /tmp/yaourt-tmp-haron
+xprop g CLASS
+xmonad --recompile
+xmonad --restart
+xprop
+pgrep terminal
+htop
+xev g keycode
+yare qt5-quick1 qt5-websockets
+yare qt5-script\
+
+urxvtc -name term
+source .zshrc
+xmonad --recompile && xmonad --restart
+sudo update-grub
+s [isDialog --> doCenterFloat]
+s -b opera-developer "[isDialog --> doCenterFloat]"
+source ~/.zshrc
+s "[isDialog --> doCenterFloat]"
+uname -r
+sudo pacman -Syy
+sudo pacman -S testing/linux-zen testing/linux-zen-headers
+yains qt5-
+fg
+yains qt5-quick1-5.6.0-1-x86_64.pkg.tar.xz
+git commit --all
+git pull
+yareps git
+yareps git-git
+gw-git
+mksrcinfo
+git add --all
+git commit
+git push
+yareps opera-developer
+sst
+sudo cp 51-android.rules automount.rules sftp://haron@192.168.0.12/etc/udev/rules.d
+sudo cp 51-android.rules automount.rules sftp://haron@192.168.0.12/etc/udev/rules.d/
+sudo cp 51-android.rules automount.rules ssh://haron@192.168.0.12/etc/udev/rules.d/
+ssh haron@192.168.0.12
+<x
+hwinfo
+hwinfo --help
+startx
+hwinfo --short
+yaupg
+x
