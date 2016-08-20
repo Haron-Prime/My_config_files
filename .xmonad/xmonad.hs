@@ -182,7 +182,7 @@ myLayout =  avoidStruts
             $ onWorkspace "W"  (Full ||| tiled ||| GridRatio 1)
             $ onWorkspace "M"  (tiled ||| Full)
             $ onWorkspace "E"  (tiled ||| Mirror tiled ||| GridRatio 1) 
-            $ onWorkspace "F"  (Full ||| tiled)
+            $ onWorkspace "F"  (Full ||| tiled ||| Grid)
             $ onWorkspace "S"  (tiled ||| Mirror tiled)
             $ onWorkspace "V"  (Full  ||| tiled)
             $ onWorkspace "P"  (Full  ||| tiled ||| Grid)
