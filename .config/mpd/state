@@ -1,0 +1,20 @@
+sw_volume: 100
+audio_device_state:1:pulse audio
+state: play
+current: 1
+time: 120.093000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Foreign/Frank O'Connor - 2009 - Celtic Paradise/01. Frank O' Connor - The Rainbow Song.mp3
+1:Foreign/Frank O'Connor - 2009 - Celtic Paradise/02. Frank O' Connor - Amhrain Do Rae.mp3
+2:Foreign/Frank O'Connor - 2009 - Celtic Paradise/03. Frank O' Connor - Ag Dul Abhaile Gobreffni.mp3
+3:Foreign/Frank O'Connor - 2009 - Celtic Paradise/04. Frank O' Connor - Tar Chuig Na Sleibhte.mp3
+4:Foreign/Frank O'Connor - 2009 - Celtic Paradise/05. Frank O' Connor - Celtic Quest.mp3
+5:Foreign/Frank O'Connor - 2009 - Celtic Paradise/06. Frank O' Connor - Tir Na Bhana.mp3
+playlist_end
