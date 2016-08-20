@@ -1,0 +1,8 @@
+# установка планировщика deadline для SSD
+ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="deadline"
+
+# установка планировщика bfq для HDD
+ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="bfq"
+
+# установка планировщика для flash
+# ACTION=="add|change", KERNEL=="sd[a-z]", ATTR{removable}=="1", ATTR{queue/scheduler}="noop"
