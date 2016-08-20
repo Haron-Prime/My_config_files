@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="menus_have_icons" mtime="1430743015" type="bool" value="true"/>
+	<entry name="monospace_font_name" mtime="1430743006" type="string">
+		<stringvalue>Droid Sans Mono 9</stringvalue>
+	</entry>
+	<entry name="font_name" mtime="1430743005" type="string">
+		<stringvalue>Droid Sans 9</stringvalue>
+	</entry>
+	<entry name="document_font_name" mtime="1430743005" type="string">
+		<stringvalue>Droid Sans 9</stringvalue>
+	</entry>
+	<entry name="gtk_theme" mtime="1430743004" type="string">
+		<stringvalue>Elegant-GTK</stringvalue>
+	</entry>
+	<entry name="icon_theme" mtime="1430743003" type="string">
+		<stringvalue>Elegant-AwOken</stringvalue>
+	</entry>
+</gconf>

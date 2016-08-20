@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="Realtek_ALC888-Input_Source" mtime="1444038406" type="bool" value="true"/>
+	<entry name="Realtek_ALC888-IEC958_Default_PCM" mtime="1444038406" type="bool" value="true"/>
+	<entry name="Realtek_ALC888-IEC958" mtime="1444038406" type="bool" value="true"/>
+</gconf>

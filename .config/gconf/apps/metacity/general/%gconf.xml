@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="button_layout" mtime="1430743010" type="string">
+		<stringvalue>menu:minimize,maximize,close</stringvalue>
+	</entry>
+	<entry name="theme" mtime="1430743009" type="string">
+		<stringvalue>Elegant-GTK-Squared</stringvalue>
+	</entry>
+	<entry name="titlebar_font" mtime="1430743006" type="string">
+		<stringvalue>Droid Sans Bold 9</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,44 @@
+[Default Applications]
+application/x-bittorrent=userapp-transgui-GQ7JHY.desktop;
+application/x-bzip-compressed-tar=xarchiver.desktop;
+application/x-kdeuser1=userapp-PRO100.exe-846CIY.desktop;
+application/x-kdeuser3=userapp-PRO100.exe-JAVSHY.desktop;
+application/x-theme=sublime_text_3.desktop;
+application/x-xz-compressed-tar=xarchiver.desktop;
+application/zip=xarchiver.desktop;
+image/gif=mirage.desktop;
+image/jpeg=userapp-feh -.-9BLK4X.desktop;
+image/png=userapp-feh -.-SZX73X.desktop
+text/plain=userapp-xvim-Q8P55X.desktop;
+text/vnd.trolltech.linguist=mpv.desktop;
+video/x-matroska=mpv.desktop;
+video/x-msvideo=mpv.desktop;
+x-scheme-handler/acestream=acestream-player.desktop;
+x-scheme-handler/http="vivaldi-snapshot.desktop".desktop;vivaldi-snapshot.desktop;
+x-scheme-handler/https=vivaldi-snapshot.desktop;
+x-scheme-handler/mailto=thunderbird.desktop;
+x-scheme-handler/sop=sopcast-player.desktop;
+
+[Added Associations]
+application/javascript=vivaldi-snapshot.desktop;
+application/x-bittorrent=userapp-transgui-GQ7JHY.desktop;
+application/x-bzip-compressed-tar=xarchiver.desktop;
+application/x-extension-html=vivaldi-snapshot.desktop;sublime_text_3.desktop;
+application/x-iwork-keynote-sffkey=sublime_text_3.desktop;
+application/x-kdeuser1=userapp-PRO100.exe-846CIY.desktop;
+application/x-kdeuser3=userapp-PRO100.exe-JAVSHY.desktop;
+application/x-theme=sublime_text_3.desktop;
+application/x-xz-compressed-tar=xarchiver.desktop;
+application/zip=xarchiver.desktop;
+image/gif=feh.desktop;mirage.desktop;
+image/jpeg=userapp-feh -.-9BLK4X.desktop;
+image/png=userapp-feh -.-SZX73X.desktop;feh.desktop;
+text/plain=userapp-xvim-Q8P55X.desktop;
+text/vnd.trolltech.linguist=mpv.desktop;
+video/x-matroska=mpv.desktop;
+video/x-msvideo=mpv.desktop;
+x-scheme-handler/acestream=acestream-player.desktop;
+x-scheme-handler/http=vivaldi-snapshot.desktop;
+x-scheme-handler/https=vivaldi-snapshot.desktop;
+x-scheme-handler/mailto=thunderbird.desktop;
+x-scheme-handler/sop=sopcast-player.desktop;
