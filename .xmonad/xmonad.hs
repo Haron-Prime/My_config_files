@@ -75,7 +75,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
       ((0,                      0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up")
     , ((0,                      0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down")
     , ((0,                      0x1008ff12),     spawn "/usr/bin/pulseaudio-ctl mute")
-    , ((mod1Mask,                     0x71),     spawn "mpc toggle")
+    , ((modm,                         0x60),     spawn "mpc toggle")
     , ((0,                      0x1008ff14),     spawn "mpc toggle")
     , ((0,                      0x1008ff15),     spawn "mpc stop")
     , ((0,                      0x1008ff16),     spawn "mpc prev")
@@ -179,10 +179,10 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout =  avoidStruts
             $ Tog.toggleLayouts (noBorders Full) 
             $ smartBorders
-            $ onWorkspace "W"  (GridRatio 1 ||| Full ||| tiled)
+            $ onWorkspace "W"  (Full ||| tiled ||| GridRatio 1)
             $ onWorkspace "M"  (tiled ||| Full)
             $ onWorkspace "E"  (tiled ||| Mirror tiled ||| GridRatio 1) 
-            $ onWorkspace "F"  (tiled ||| Full)
+            $ onWorkspace "F"  (Full ||| tiled)
             $ onWorkspace "S"  (tiled ||| Mirror tiled)
             $ onWorkspace "V"  (Full  ||| tiled)
             $ onWorkspace "P"  (Full  ||| tiled ||| Grid)
