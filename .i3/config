@@ -249,8 +249,5 @@ for_window [window_role="^conversation$"] floating enable
 for_window [window_role="task_dialog|messages|pop-up"] floating enable
 
 for_window [class="Galculator|Pavucontrol|feh|lxappearance|xarchiver|Pulseaudio-equalizer.py|Gnome-alsamixer|Gsmartcontrol|Gis-weather.py"] floating enable focus
-# for_window [class="Pavucontrol"] floating enable focus
-# for_window [class="feh"] floating enable focus
 
 for_window [title="ranger|ncmpcpp|htop|xvim|vim|mocp"] move scratchpad focus
-# for_window [title="mocp"] floating enable
