@@ -126,14 +126,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Alt+W
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart")                                                      --Win+Q
     , ((modm,                         0x70),     spawn "gmrun")                                                                                       --Wim+P
-    , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+C
+    , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
  
     , ((mod1Mask,                   0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
     , ((mod1Mask,                   0xffbf),     shellPrompt myXPConfig)                                                                              --Alt+F2
     , ((mod1Mask,                   0xffc0),     runOrRaisePrompt myXPConfig)                                                                         --Alt+F3
     , ((modm,                       xK_Tab),     windows W.focusDown)                                                                                 --Alt+Tab
     , ((mod1Mask,                   xK_Tab),     windows W.focusMaster)                                                                               --Win+Tab
-    , ((modm     .|. shiftMask,       0x63),     kill)                                                                                                --Win+Shift+C
+    , ((modm,                         0x63),     kill)                                                                                                --Win+C
     , ((modm,                     xK_space),     sendMessage NextLayout)
     , ((modm     .|. shiftMask,   xK_space),     setLayout $ XMonad.layoutHook conf)
     , ((modm,                         0x6e),     refresh)                                                                                             --Win+N
@@ -179,11 +179,11 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout =  avoidStruts
             $ Tog.toggleLayouts (noBorders Full) 
             $ smartBorders
-            $ onWorkspace "W"  (Full ||| tiled ||| GridRatio 1)
+            $ onWorkspace "W"  (Full  ||| tiled ||| GridRatio 1)
             $ onWorkspace "M"  (tiled ||| Full)
-            $ onWorkspace "E"  (tiled ||| Mirror tiled ||| GridRatio 1) 
-            $ onWorkspace "F"  (Full ||| tiled ||| Grid)
-            $ onWorkspace "S"  (tiled ||| Mirror tiled)
+            $ onWorkspace "E"  (Full  ||| tiled ||| GridRatio 1) 
+            $ onWorkspace "F"  (Full  ||| tiled ||| Grid)
+            $ onWorkspace "S"  (Full  ||| tiled ||| Mirror tiled)
             $ onWorkspace "V"  (Full  ||| tiled)
             $ onWorkspace "P"  (Full  ||| tiled ||| Grid)
             $ onWorkspace "J"  (Full  ||| Grid)
@@ -247,7 +247,7 @@ myManageHook = composeAll . concat $
 
     , [currentWs =? "E"           --> insertPosition Below Newer]
  
-    , [currentWs =? "VM"         --> insertPosition Below Newer]
+    , [currentWs =? "VM"          --> insertPosition Below Newer]
  
     , [currentWs =? "XII"         --> insertPosition Below Newer]
 
