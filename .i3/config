@@ -218,16 +218,17 @@ bindsym XF86Explorer         exec --no-startup-id pcmanfm
 bindsym XF86Calculator       exec --no-startup-id galculator
 bindsym XF86Sleep            exec --no-startup-id i3lock
 
-bindsym Mod1+F2              exec "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'"
-bindsym Print                exec "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
-bindsym Mod1+Print           exec "scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+bindsym $mod+F12             exec --no-startup-id "urxvtc -name guake"
+bindsym Mod1+F2              exec --no-startup-id "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'"
+bindsym Print                exec --no-startup-id "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+bindsym Mod1+Print           exec --no-startup-id "scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 bindsym $mod+p               exec --no-startup-id gmrun
 bindsym Mod1+g               exec --no-startup-id gimp
 bindsym Mod1+l               exec --no-startup-id "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard"
 bindsym Mod1+m               exec --no-startup-id "urxvtc -name mc -e mc"
 bindsym Mod1+v               exec --no-startup-id "urxvtc -name xvim -e vim"
 bindsym Mod1+r               exec --no-startup-id "urxvtc -name ranger -e ranger"
-bindsym Mod1+p               exec --no-startup-id "env WINEPREFIX='/home/haron/.wine' wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe'"
+bindsym Mod1+p               exec --no-startup-id "wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe'"
 bindsym Mod1+s               exec --no-startup-id subl3
 bindsym Mod1+Shift+s         exec --no-startup-id "gksu subl3"
 bindsym Mod1+t               exec --no-startup-id telegram-desktop
@@ -249,4 +250,5 @@ for_window [window_role="task_dialog|messages|pop-up"] floating enable
 
 for_window [class="Galculator|Pavucontrol|feh|lxappearance|xarchiver|Pulseaudio-equalizer.py|Gnome-alsamixer|Gsmartcontrol|Gis-weather.py"] floating enable focus
 
-for_window [title="ranger|ncmpcpp|htop|xvim|vim|mocp"] move scratchpad focus
+for_window [title="guake"] move scratchpad focus
+for_window [instance="xvim|ranger|ncmpcpp|htop|mocp"] move scratchpad focus
