@@ -116,28 +116,28 @@ bindsym $mod+minus scratchpad show
 bindsym F12 scratchpad show
 
 # switch to workspace
-bindsym $mod+1 workspace W
-bindsym $mod+2 workspace M
-bindsym $mod+3 workspace E
-bindsym $mod+4 workspace F
-bindsym $mod+5 workspace S
-bindsym $mod+6 workspace V
-bindsym $mod+7 workspace P
-bindsym $mod+8 workspace J
-bindsym $mod+9 workspace T
-bindsym $mod+0 workspace IM
+bindsym $mod+1 workspace 1:W
+bindsym $mod+2 workspace 2:M
+bindsym $mod+3 workspace 3:E
+bindsym $mod+4 workspace 4:F
+bindsym $mod+5 workspace 5:S
+bindsym $mod+6 workspace 6:V
+bindsym $mod+7 workspace 7:P
+bindsym $mod+8 workspace 8:J
+bindsym $mod+9 workspace 9:T
+bindsym $mod+0 workspace 0:IM
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace W
-bindsym $mod+Shift+2 move container to workspace M
-bindsym $mod+Shift+3 move container to workspace E
-bindsym $mod+Shift+4 move container to workspace F
-bindsym $mod+Shift+5 move container to workspace S
-bindsym $mod+Shift+6 move container to workspace V
-bindsym $mod+Shift+7 move container to workspace P
-bindsym $mod+Shift+8 move container to workspace J
-bindsym $mod+Shift+9 move container to workspace T
-bindsym $mod+Shift+0 move container to workspace IM
+bindsym $mod+Shift+1 move container to workspace 1:W
+bindsym $mod+Shift+2 move container to workspace 2:M
+bindsym $mod+Shift+3 move container to workspace 3:E
+bindsym $mod+Shift+4 move container to workspace 4:F
+bindsym $mod+Shift+5 move container to workspace 5:S
+bindsym $mod+Shift+6 move container to workspace 6:V
+bindsym $mod+Shift+7 move container to workspace 7:P
+bindsym $mod+Shift+8 move container to workspace 8:J
+bindsym $mod+Shift+9 move container to workspace 9:T
+bindsym $mod+Shift+0 move container to workspace 0:IM
 
 bindsym $mod+x [urgent=latest] focus
 
@@ -234,16 +234,16 @@ bindsym Mod1+Shift+s         exec --no-startup-id "gksu subl3"
 bindsym Mod1+t               exec --no-startup-id telegram-desktop
 bindsym Mod1+w               exec --no-startup-id "gksu pacmanxg"
 
-assign [class="vivaldi-snapshot|Firefox|Opera developer|Tor Browser"] W
-assign [class="Thunderbird"] M
-assign [class="Subl3|libreoffice-startcenter|Et|Wps|Acroread|FoxitReader"] E
-assign [class="Pcmanfm"] F
-assign [class="pacmanxg|Baobab|systemdx|GParted|Sysinfo|Systemadm|Tk|Zenmap|Xfce4-power-manager-settings"] S
-assign [class="mpv|Vlc|Sopcast-player.py|PornTime|Deadbeef|Cheese"] V
-assign [class="Mirage|Gimp"] P
-assign [class="Wine"] J
-assign [class="Transgui|Tixati|Transmission-gtk|Transmission-remote-gtk"] T
-assign [class="Telegram|psi|Psi|Viber|Hexchat"] IM
+assign [class="vivaldi-snapshot|Firefox|Opera developer|Tor Browser"] 1:W
+assign [class="Thunderbird"] 2:M
+assign [class="Subl3|libreoffice-startcenter|Et|Wps|Acroread|FoxitReader"] 3:E
+assign [class="Pcmanfm"] 4:F
+assign [class="pacmanxg|Baobab|systemdx|GParted|Sysinfo|Systemadm|Tk|Zenmap|Xfce4-power-manager-settings"] 5:S
+assign [class="mpv|Vlc|Sopcast-player.py|PornTime|Deadbeef|Cheese"] 6:V
+assign [class="Mirage|Gimp"] 7:P
+assign [class="Wine"] 8:J
+assign [class="Transgui|Tixati|Transmission-gtk|Transmission-remote-gtk"] 9:T
+assign [class="Telegram|psi|Psi|Viber|Hexchat"] 0:IM
 
 for_window [window_role="^conversation$"] floating enable
 for_window [window_role="task_dialog|messages|pop-up"] floating enable
@@ -252,3 +252,5 @@ for_window [class="Galculator|Pavucontrol|feh|lxappearance|xarchiver|Pulseaudio-
 
 for_window [title="guake"] move scratchpad focus
 for_window [instance="xvim|ranger|ncmpcpp|htop|mocp"] move scratchpad focus
+
+workspace_auto_back_and_forth yes
