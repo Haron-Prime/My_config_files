@@ -1,6 +1,8 @@
 sw_volume: 100
 audio_device_state:1:pulse audio
-state: stop
+state: play
+current: 2
+time: 120.149000
 random: 0
 repeat: 0
 single: 0
@@ -9,119 +11,49 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Foreign/100% Relax hits/002-Jason - Tyrello - What the memories say.mp3
-1:Foreign/100% Relax hits/012-Ingo Pickhan - Bali chill.mp3
-2:Foreign/100% Relax hits/013-Alexander Hitzler - Goa jam.mp3
-3:Foreign/100% Relax hits/014-Eric del Mar - Isla margherita.mp3
-4:Foreign/100% Relax hits/015-Mahoroba - Des moment.mp3
-5:Foreign/100% Relax hits/017-Mahoroba - Unearthly.mp3
-6:Foreign/100% Relax hits/018-Alexander Hitzler - Gran Canaria sunset session.mp3
-7:Foreign/100% Relax hits/019-Mahoroba - Le monde.mp3
-8:Foreign/100% Relax hits/020-Jason Tyrello - Rain sunday.mp3
-9:Foreign/100% Relax hits/026-Skyway - Jamo.mp3
-10:Foreign/100% Relax hits/027-Mahoroba - Les Paysages.mp3
-11:Foreign/100% Relax hits/028-Skyway-Chanted Minds.mp3
-12:Foreign/100% Relax hits/029-Skyway - Its A Pleasure.mp3
-13:Foreign/100% Relax hits/034-Rank1-Airwave (Sunset Chillout Remix).mp3
-14:Foreign/100% Relax hits/042-Sharon_tully-eallin_life.mp3
-15:Foreign/100% Relax hits/048-Schiller - Hill out.mp3
-16:Foreign/100% Relax hits/052-Schiller Mit Heppner] Dream Of You (Chillout Mix).mp3
-17:Foreign/100% Relax hits/060-Envio touched by the sun -Rusch and_Elusives chill out mix.mp3
-18:Foreign/100% Relax hits/064-Envio-Touched By The Sun (Envios Sunrise Mix).mp3
-19:Foreign/100% Relax hits/066-Vision II-The ocean.mp3
-20:Foreign/100% Relax hits/068-Klaus Schultze-Floating.mp3
-21:Foreign/100% Relax hits/074-Blank & Jones - Watching The Waves (Ambient Remix).mp3
-22:Foreign/100% Relax hits/080-Relaxing dreams-dance of the elves.mp3
-23:Foreign/100% Relax hits/085-Sarah Mclaclan - Angel (Dusted Remix.mp3
-24:Foreign/100% Relax hits/087-Conjure One - Center of the Sun (Solar Stone's Chilled Out Remix).mp3
-25:Foreign/100% Relax hits/088-Sarah McLlaclan - Angel.mp3
-26:Foreign/100% Relax hits/092-Conjure one center of the sun(Solar Stones-chilled_out_remix-ds.mp3
-27:Foreign/100% Relax hits/097-Blank & Jones - The hardest heart.mp3
-28:Foreign/100% Relax hits/102-Mike Oldfield - Jungle Gardenia.mp3
-29:Foreign/100% Relax hits/105-Schiller & Heppner - Dream of You (Chillout Mix).mp3
-30:Foreign/100% Relax hits/001-Jason - Tyrello-Da sun is gone at copa.mp3
-31:Foreign/100% Relax hits/035-Nacho Sotomayor- Abolut.mp3
-32:Foreign/100% Relax hits/037-Moby-Whispering mind.mp3
-33:Foreign/100% Relax hits/045-Paul Oakenfold - Bunkka-Southern Sun (Solar Stone Chill Out Mix).mp3
-34:Foreign/100% Relax hits/061-Kinobe - Slip into something more comfortable.mp3
-35:Foreign/100% Relax hits/065-Lemon Jelly-Elements.mp3
-36:Foreign/100% Relax hits/078-Mauro Picotto - Goodbye.mp3
-37:Foreign/100% Relax hits/081-ATB - Ecstasy (original airplay mix).mp3
-38:Foreign/100% Relax hits/090-Pet Shop boys-Home & Dry-ambient-mix-house.mp3
-39:Foreign/100% Relax hits/109-Blank & Jones - Breezin'.mp3
-40:Foreign/100% Relax hits/032-Mahoroba - Basic dreams.mp3
-41:Foreign/100% Relax hits/072-M.I.K.E. - Turn Out The Lights (Chillout Mix).mp3
-42:Foreign/100% Relax hits/079-Dj Tiesto - Close to you-(feat._jan_johnston).mp3
-43:Foreign/100% Relax hits/083-Blank & Jones - Beyond Time (Ambient Mix).mp3
-44:Foreign/100% Relax hits/091-Blank & Jones-Unknown_Treasure - Claudia Brucken.mp3
-45:Foreign/100% Relax hits/113-Vargo-Get back to serenity-(beach_mix).mp3
-46:Foreign/100% Relax hits/033-The Voice Of Enigma Medley (Razormaid).mp3
-47:Foreign/100% Relax hits/070-Giant Leap-The Way You Dream (feat. Michael Stipe & Asha Bhosle).mp3
-48:Foreign/100% Relax hits/073-Masters & Nickson - Out There (Christian Rush Remix).mp3
-49:Foreign/100% Relax hits/089-Plastyc Buddha   Rhodes Royce.mp3
-50:Foreign/100% Relax hits/098-Blank&Jones - Desire (Ambient Mix).mp3
-51:Foreign/100% Relax hits/099-Blank & Jones - Le Grand Bleu (Ambient Mix).mp3
-52:Foreign/100% Relax hits/024-Hypnotic - Share your dreams.mp3
-53:Foreign/100% Relax hits/003-Enigma - Boum Boum.mp3
-54:Foreign/100% Relax hits/022-Loveletter - Once there was a girl.mp3
-55:Foreign/100% Relax hits/044-The KLF-Madrugada Eternavvudhqix.mp3
-56:Foreign/100% Relax hits/095-Solar Stone - Seven Cities (Ambient Dub).mp3
-57:Foreign/100% Relax hits/114-DAB - The Blues.mp3
-58:Foreign/100% Relax hits/004-Enigma - Total eclipse of the moon.mp3
-59:Foreign/100% Relax hits/023-Skyway - Mercury.mp3
-60:Foreign/100% Relax hits/050-Nacho Sotomayor-Caf del Mar.mp3
-61:Foreign/100% Relax hits/108-Blank And Jones - Flaming (June Elles).mp3
-62:Foreign/100% Relax hits/115-Deep Ambient Instrumental.mp3
-63:Foreign/100% Relax hits/116-Nacho Satomayor - Caf Del Mar.mp3
-64:Foreign/100% Relax hits/005-Enigma - Look of today.mp3
-65:Foreign/100% Relax hits/038-Julee Cruise Falling.mp3
-66:Foreign/100% Relax hits/043-Bent - I love my man.mp3
-67:Foreign/100% Relax hits/054-Delerium-flatlands.mp3
-68:Foreign/100% Relax hits/076-Together we will conquer.mp3
-69:Foreign/100% Relax hits/101-Blank & Jones-Relax.mp3
-70:Foreign/100% Relax hits/006-Enigma - In the shadow in the light.mp3
-71:Foreign/100% Relax hits/011-Code14 - No Limites.mp3
-72:Foreign/100% Relax hits/047-The KLF-08-3AM Somewhere Out Of Beaumont.mp3
-73:Foreign/100% Relax hits/056-Moby _ Go (In Dub Mix).mp3
-74:Foreign/100% Relax hits/057-Carlos Santana - Dance Of The Rainbow Serpent; Spirit (Vol 3) - 08 - Chill Out (Things Gonna Change).mp3
-75:Foreign/100% Relax hits/067-Tricky - My Mermaid.mp3
-76:Foreign/100% Relax hits/075-Amillionsons - Misti Blu.mp3
-77:Foreign/100% Relax hits/104-Sarah Mclachlan - Angel.mp3
-78:Foreign/100% Relax hits/025-Sebastian m.w. - Karens ballade.mp3
-79:Foreign/100% Relax hits/036-S.W.-Sweet Lullabies.mp3
-80:Foreign/100% Relax hits/008-Mahoroba - World colours.mp3
-81:Foreign/100% Relax hits/030-Mahoroba-Le Monde2.mp3
-82:Foreign/100% Relax hits/031-Mahoroba-Jouer du piano-.mp3
-83:Foreign/100% Relax hits/039-Pulsar-Bleu carpe noctem.mp3
-84:Foreign/100% Relax hits/049-Bent-Swollen.mp3
-85:Foreign/100% Relax hits/051-Moodswings - Redemption Song.mp3
-86:Foreign/100% Relax hits/062-Groove Armada - A Private Interlude (Kinobe Remix) - www.impactmp3.org.mp3
-87:Foreign/100% Relax hits/084-Pet Shop Boys - Love comes quickly (Blank & Jones mix).mp3
-88:Foreign/100% Relax hits/007-Enigma-Following the sun.mp3
-89:Foreign/100% Relax hits/016-Mahoroba-Enter the underworld-(cool_meditation_mix).mp3
-90:Foreign/100% Relax hits/055-House chill Dubtribe Sound System - Do It Now.mp3
-91:Foreign/100% Relax hits/063-Lemon Jelly-His Majesty King Raam.mp3
-92:Foreign/100% Relax hits/100-Blank And Jones--Secrets And Lies.mp3
-93:Foreign/100% Relax hits/021-Cyborg - Sounds.mp3
-94:Foreign/100% Relax hits/040-Phobos-Edge of forever.mp3
-95:Foreign/100% Relax hits/082-Blank And Jones - Desire (ambient Mix)- Fsp.mp3
-96:Foreign/100% Relax hits/112-Vargo - The Moment (Original Mix).mp3
-97:Foreign/100% Relax hits/009-Beat Production-88 - Heartbeat.mp3
-98:Foreign/100% Relax hits/010-Jason Tyrello -  Lost in paradise.mp3
-99:Foreign/100% Relax hits/041-Moodswings-Into the blue.mp3
-100:Foreign/100% Relax hits/069-Lemon Jelly-In The Bath.mp3
-101:Foreign/100% Relax hits/077-Let U Go (Schiller remix) [ATB].mp3
-102:Foreign/100% Relax hits/086-Dj Orikidea Beautiful (ambient mix).mp3
-103:Foreign/100% Relax hits/096-Conjure One - Sleep (Solarstone afterhours mix).mp3
-104:Foreign/100% Relax hits/058-The Lonely Shepherdndbrcrtb.mp3
-105:Foreign/100% Relax hits/093-Blank & Jones - Driftin'.mp3
-106:Foreign/100% Relax hits/103-Smash - Supermode.mp3
-107:Foreign/100% Relax hits/106-Solar Stone - The Calling (Chilled Mix).mp3
-108:Foreign/100% Relax hits/111-Blank & Jones feat. Anne Clark-The Hardest Heart (Ambient Mix).mp3
-109:Foreign/100% Relax hits/053-Moodswings-State Of Indep.mp3
-110:Foreign/100% Relax hits/059-Chris_coco-hazy_lazy_(afterlife_mix)-rns.mp3
-111:Foreign/100% Relax hits/037-Dubtribe Sound System-Do it now.mp3
-112:Foreign/100% Relax hits/071-Ambient Guitars.mp3
-113:Foreign/100% Relax hits/046-Libra - Calling your name (Solar Stone chillout mix)-the legacy club_mix-ipz.mp3
-114:Foreign/100% Relax hits/110-Deep Forest - Forest Hymn (Long Ambient Vers.mp3
+0:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/01. Speak To Me - Breathe.m4a
+1:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/02. On The Run.m4a
+2:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/03. Time.m4a
+3:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/04. The Great Gig In The Sky.m4a
+4:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/05. Money.m4a
+5:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/06. Us And Them.m4a
+6:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/07. Any Colour You Like.m4a
+7:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/08. Brain Damage.m4a
+8:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/09. Eclipse.m4a
+9:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/01. Shine On You Crazy Diamond (Part 1-5).m4a
+10:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/02. Welcome To The Machine.m4a
+11:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/03. Have A Cigar.m4a
+12:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/04. Wish You Were Here.m4a
+13:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/05. Shine On You Crazy Diamond (Part 6-9).m4a
+14:Foreign/Pink Floyd [Vinyl]/1977 - Animals/01. Pigs on the Wing (Part 1).m4a
+15:Foreign/Pink Floyd [Vinyl]/1977 - Animals/02. Dogs.m4a
+16:Foreign/Pink Floyd [Vinyl]/1977 - Animals/03. Pigs (Three Different Ones).m4a
+17:Foreign/Pink Floyd [Vinyl]/1977 - Animals/04. Sheep.m4a
+18:Foreign/Pink Floyd [Vinyl]/1977 - Animals/05. Pigs on the Wing (Part 2).m4a
+19:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/01. In The Flesh.m4a
+20:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/02. The Thin Ice.m4a
+21:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/03. Another Brick In The Wall (Part 1).m4a
+22:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/04. The Happiest Days Of Our Lives.m4a
+23:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/05. Another Brick In The Wall (Part 2).m4a
+24:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/06. Mother.m4a
+25:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/07. Goodbye Blue Sky.m4a
+26:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/08. Empty Spaces.m4a
+27:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/09. Young Lust.m4a
+28:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/10. One of My Turns.m4a
+29:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/11. Don't Leave Me Now.m4a
+30:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/12. Another Brick In The Wall (Part 3).m4a
+31:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/13. Goodbye Cruel World.m4a
+32:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/01. Hey You.m4a
+33:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/02. Is There Anybody Out There.m4a
+34:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/03. Nobody Home.m4a
+35:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/04. Vera.m4a
+36:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/05. Bring The Boys Back Home.m4a
+37:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/06. Comfortably Numb.m4a
+38:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/07. The Show Must Go On.m4a
+39:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/08. In The Flesh.m4a
+40:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/09. Run Like Hell.m4a
+41:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/10. Waiting For The Worms.m4a
+42:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/11. Stop.m4a
+43:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/12. The Trial.m4a
+44:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/13. Outside The Wall.m4a
 playlist_end

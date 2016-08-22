@@ -269,7 +269,7 @@ myManageHook = composeAll . concat $
     myMail    = ["Thunderbird"]
     myEdit    = ["Subl3","Et","Wps","Wpp","Acroread","FoxitReader"]
     myFile    = ["Pcmanfm"]
-    mySystem  = ["pacmanxg","Baobab","systemdx","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap","Xfce4-power-manager-settings"]
+    mySystem  = ["pacmanxg","systemdx","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap","Xfce4-power-manager-settings"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","PornTime","Deadbeef"]
     myPic     = ["Pinta","Gimp","Gimp-2.8","Inkscape"]
     myWork    = ["Wine"]
@@ -317,14 +317,10 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
 
   where
 
-    h = 0.333     -- terminal height, 90%
-    w = 1       -- terminal width, 100%
-    t = 1 - h   -- distance from top edge, 20px
-    l = 1 - w   -- distance from left edge, 0%
-    --h = 0.9
-    --w = 0.9
-    --t = 0.05
-    --l = 0.05
+    h = 0.333     -- terminal height
+    w = 1       -- terminal width
+    t = 1 - h   -- distance from top edge
+    l = 1 - w   -- distance from left edge
  
 main = do
     xmonad =<< xmobar defaults
