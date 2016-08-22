@@ -23,19 +23,19 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     , Run Cpu ["-L","10","-H","75","--normal","#cfdf00","--high","orange"] 10
                     , Run Com "cpu-temp" [] "" 50
                     , Run Com "mb-temp" [] "" 50
-                    , Run Com "fan1" [] "" 50
-                    , Run Com "fan2" [] "" 50
+                    --, Run Com "fan1" [] "" 50
+                    --, Run Com "fan2" [] "" 50
                     , Run Memory ["-t","Mem: <usedratio>%"] 50
                     , Run Com "vol.sh" [] "" 10
                     , Run Kbd [("us", "<fc=#aaddff>EN</fc>"), ("ru", "<fc=orange>RU</fc>")]
                     , Run Com "xmdate" [] "" 600
                     , Run Com "xmtime" [] "" 10
                     , Run Com "weather" [] "" 600
-                    , Run Com "kern" [] "" 6000
+                    --, Run Com "kern" [] "" 6000
                     , Run Locks 
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %XMonadLog% }{<fc=#afdfff><<</fc> Net: %enp3s0%  In: %Net_in%  Out: %Net_out%  %cpu% %cpu-temp%  MB: %mb-temp%  Fan: %fan1% %fan2%  %memory%  Vol: %vol.sh%  <fn=2>%kbd%</fn>  %xmdate%  <fc=#aaddff>%xmtime%</fc>  <fn=2><fc=#afdfff>%weather%</fc></fn>"
+       , template = " %XMonadLog% }{ <<fc=#8fbfdf><</fc><fc=#afdfff><</fc><fc=#8fbfdf><</fc>< Net: %enp3s0%  In: %Net_in%  Out: %Net_out%  %cpu% %cpu-temp%  MB: %mb-temp%  %memory%  Vol: %vol.sh%  <fn=2>%kbd%</fn>  %xmdate%  <fc=#aaddff>%xmtime%</fc>  <fn=2><fc=#afdfff>%weather%</fc></fn>"
        }
 

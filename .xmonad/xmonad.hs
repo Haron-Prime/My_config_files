@@ -288,14 +288,14 @@ myEventHook = fullscreenEventHook <+> docksEventHook
 -- Status bars and logging.
 myLogHook = dynamicLogString $ xmobarPP {
           ppCurrent         = xmobarColor "#9fdfff" ""
-        , ppTitle           = xmobarColor "#999" "". shorten 36
+        , ppTitle           = xmobarColor "#999" "". shorten 60
         }
  
 -- Startup hook
 myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D"
 
 mynameScratchpads = [ NS "ncmpcpp" "urxvtc -name ncmpcpp -e ncmpcpp" (appName =? "ncmpcpp") (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                , NS "mocp" "urxvtc -name mocp -e mocp" (appName =? "mocp") (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+                --, NS "mocp" "urxvtc -name mocp -e mocp" (appName =? "mocp") (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                 , NS "htop" "urxvtc -name htop -e htop" (appName =? "htop") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                 , NS "mc" "urxvtc -name mc -e mc" (appName =? "mc") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                 , NS "gpick" "gpick" (appName =? "gpick") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
