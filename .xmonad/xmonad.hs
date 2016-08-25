@@ -82,18 +82,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                      0x1008ff17),     spawn "mpc next")
     , ((0,                      0x1008ff30),     spawn "transgui")
     , ((0,                      0x1008ff18),     spawn "vivaldi-snapshot")
-    --, ((mod1Mask .|. shiftMask, 0x1008ff18),     spawn "opera-developer")
-    --, ((modm,                   0x1008ff18),     spawn "firefoxR")
-    --, ((mod1Mask,               0x1008ff18),     spawn "foxb.sh")
-    --, ((0       .|. shiftMask,  0x1008ff18),     spawn "foxn.sh")
     , ((0,                      0x1008ff19),     spawn "/usr/bin/thunderbird")
-    --, ((0,                      0x1008ff19),     spawn "thunderbird-esr")
     , ((0,                      0x1008ff5d),     spawn "pcmanfm")
     , ((0       .|. shiftMask,  0x1008ff5d),     spawn "gksu pcmanfm")
     , ((0,                      0x1008ff1d),     spawn "galculator")
     , ((0,                      0x1008ff2f),     spawn "slock")
     , ((0,                      0x1008ff81),     spawn "urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp")
-    --, ((0,                      0x1008ff81),     spawn "urxvtc -name mocp -e mocp")
     , ((0,                      0x1008ff1b),     spawn "urxvtc -name htop -e /usr/bin/htop")
     , ((0,                      0x1008ff73),     spawn "compreboot")
     , ((0,                          0xff69),     spawn "compdown")
@@ -101,7 +95,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                       0xffc9),     spawn "urxvtc -name term")                                                                           --Meta+F12
     , ((0,                          0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Print
     , ((mod1Mask,                   0xff61),     spawn "scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                     --Alt+Print
-	--, ((mod1Mask,                     0x61),     spawn "urxvtc -name TMUX -e mux default")                                                            --Alt+A
+	--, ((mod1Mask,                     0x61),     spawn "xterm")                                                                                       --Alt+A
     --, ((mod1Mask,                     0x62),     spawn "baobab")                                                                                      --Alt+B
     --, ((mod1Mask,                     0x63),     spawn "chromium")                                                                                    --Alt+C
     , ((mod1Mask,                     0x64),     spawn "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")         --Alt+D
@@ -116,7 +110,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x6f),     spawn "opera-developer")                                                                             --Alt+O
     , ((mod1Mask,                     0x70),     spawn "wine /home/haron/lib/Pro100-5.20-GIV/PRO100.exe")                                             --Alt+P
 	, ((mod1Mask,                     0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
-    , ((mod1Mask .|. shiftMask,       0x72),     spawn "urxvtc -name Video -e ranger ~/Video")                                                        --Alt+Shift+R
     , ((mod1Mask .|. controlMask,     0x72),     spawn "urxvtc -name home -e ranger")                                                                 --Alt+Ctrl+R
     , ((mod1Mask,                     0x73),     spawn "subl3")                                                                                       --Alt+S
     , ((mod1Mask .|. shiftMask,       0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
@@ -295,7 +288,6 @@ myLogHook = dynamicLogString $ xmobarPP {
 myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D"
 
 mynameScratchpads = [ NS "ncmpcpp" "urxvtc -name ncmpcpp -e ncmpcpp" (appName =? "ncmpcpp") (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                --, NS "mocp" "urxvtc -name mocp -e mocp" (appName =? "mocp") (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                 , NS "htop" "urxvtc -name htop -e htop" (appName =? "htop") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                 , NS "mc" "urxvtc -name mc -e mc" (appName =? "mc") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                 , NS "gpick" "gpick" (appName =? "gpick") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
@@ -317,7 +309,7 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
 
   where
 
-    h = 0.333     -- terminal height
+    h = 0.333   -- terminal height
     w = 1       -- terminal width
     t = 1 - h   -- distance from top edge
     l = 1 - w   -- distance from left edge

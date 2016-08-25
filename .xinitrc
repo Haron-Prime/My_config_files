@@ -29,6 +29,5 @@ feh --bg-center /home/haron/pics/xmonad/XMONAD011-2.png &
 # /usr/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --widthtype request --width 1 --transparent true --alpha 1 --tint 0x000000 --height 20 --expand true &
 stalonetray &
 python3 /home/haron/lib/gis-weather/gis-weather.py &
-# mocicon &
 exec xmonad
 
