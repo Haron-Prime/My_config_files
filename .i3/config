@@ -4,17 +4,20 @@ set $mod Mod4
 show_marks no
 new_window pixel 1
 new_float pixel 1
-hide_edge_borders both
+# hide_edge_borders both
 # for_window [title="ncmpcpp|htop|mc"] border pixel 1 move scratchpad focus
 focus_on_window_activation focus
 # floating_minimum_size -1 x -1
+popup_during_fullscreen smart
+# workspace_auto_back_and_forth yes
+focus_on_window_activation focus
 
 # Font
 font pango:SonyEricssonLogo 10
 
 # Colors
 # class                 border  backgr. text    indicator
-client.focused          #656565 #353535 #bbbbbb #959595
+client.focused          #99ddff #353535 #bbbbbb #959595
 client.focused_inactive #333333 #5f676a #bbbbbb #484e50
 client.unfocused        #333333 #222222 #888888 #292d2e
 client.urgent           #2f343a #900000 #bbbbbb #900000
@@ -199,6 +202,8 @@ bar {
     }
 }
 
+bindsym $mod+Escape          workspace back_and_forth
+
 bindsym Cancel               exec --no-startup-id compdown
 bindsym XF86Reload           exec --no-startup-id compreboot
 bindsym XF86Search           exec --no-startup-id "urxvtc -name htop -e htop" 
@@ -233,6 +238,7 @@ bindsym Mod1+s               exec --no-startup-id subl3
 bindsym Mod1+Shift+s         exec --no-startup-id "gksu subl3"
 bindsym Mod1+t               exec --no-startup-id telegram-desktop
 bindsym Mod1+w               exec --no-startup-id "gksu pacmanxg"
+bindsym Mod1+f               exec --no-startup-id fox
 
 assign [class="vivaldi-snapshot|Firefox|Opera developer|Tor Browser"] 1:W
 assign [class="Thunderbird"] 2:M
@@ -252,5 +258,3 @@ for_window [class="Galculator|Pavucontrol|feh|lxappearance|xarchiver|Pulseaudio-
 
 for_window [title="guake"] move scratchpad focus
 for_window [instance="xvim|ranger|ncmpcpp|htop|mocp"] move scratchpad focus
-
-workspace_auto_back_and_forth yes

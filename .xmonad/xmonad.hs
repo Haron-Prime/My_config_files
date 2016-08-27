@@ -39,7 +39,7 @@ import XMonad.Layout.LayoutCombinators
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Spacing
-import XMonad.Layout.TwoPane
+--import XMonad.Layout.TwoPane
 --import XMonad.Layout.Tabbed
 import qualified XMonad.Layout.ToggleLayouts as Tog
  
@@ -98,7 +98,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	--, ((mod1Mask,                     0x61),     spawn "xterm")                                                                                       --Alt+A
     --, ((mod1Mask,                     0x62),     spawn "baobab")                                                                                      --Alt+B
     --, ((mod1Mask,                     0x63),     spawn "chromium")                                                                                    --Alt+C
-    , ((mod1Mask,                     0x64),     spawn "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")         --Alt+D
+    --, ((mod1Mask,                     0x64),     spawn "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")         --Alt+D
     --, ((mod1Mask,                     0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
     , ((mod1Mask,                     0x66),     spawn "fox")                                                                                         --Alt+F
     , ((mod1Mask,                     0x67),     spawn "gimp")                                                                                        --Alt+G
