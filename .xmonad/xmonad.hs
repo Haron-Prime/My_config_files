@@ -103,6 +103,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --, ((mod1Mask,                     0x63),     spawn "chromium")                                                                                    --Alt+C
     --, ((mod1Mask,                     0x64),     spawn "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")         --Alt+D
     --, ((mod1Mask,                     0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
+    , ((mod1Mask,                     0x65),     spawn "urxvtc -name equalizer -e alsamixer -D equal")                                              --Alt+E
     , ((mod1Mask,                     0x66),     spawn "fox")                                                                                         --Alt+F
     , ((mod1Mask,                     0x67),     spawn "gimp")                                                                                        --Alt+G
     --, ((mod1Mask .|. shiftMask,       0x67),     spawn "python3 /home/haron/lib/gis-weather/gis-weather.py")                                          --Alt+Shift+G
