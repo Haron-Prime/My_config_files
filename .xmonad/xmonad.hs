@@ -72,9 +72,12 @@ scratchPad = scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
-      ((0,                      0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up")
-    , ((0,                      0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down")
-    , ((0,                      0x1008ff12),     spawn "/usr/bin/pulseaudio-ctl mute")
+      --((0,                      0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up")
+      ((0,                      0x1008ff13),     spawn "amixer set Master 1dB+")
+    --, ((0,                      0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down")
+    , ((0,                      0x1008ff11),     spawn "amixer set Master 1dB-")
+    --, ((0,                      0x1008ff12),     spawn "/usr/bin/pulseaudio-ctl mute")
+    , ((0,                      0x1008ff12),     spawn "amixer set Master toggle")
     , ((modm,                         0x60),     spawn "mpc toggle")
     , ((0,                      0x1008ff14),     spawn "mpc toggle")
     , ((0,                      0x1008ff15),     spawn "mpc stop")

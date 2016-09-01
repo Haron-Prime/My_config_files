@@ -1,12 +1,49 @@
-pcm.pulse {
-    type pulse
+### ALSA
+# pcm.pulse {
+#     type hw
+#     card 0
+# }
+# ctl.pulse {
+#     type hw
+#     card 0
+# }
+# pcm.!default {
+#     type hw
+#     card 0
+# }
+# ctl.!default {
+#     type hw
+#     card 0
+# }
+
+### PulseAudio
+# pcm.pulse {
+#     type pulse
+# }
+# ctl.pulse {
+#     type pulse
+# }
+# pcm.!default {
+#     type pulse
+# }
+# ctl.!default {
+#     type pulse
+# }
+
+### ALDAEqual
+ctl.equal {
+    type equal;
 }
-ctl.pulse {
-    type pulse
+
+pcm.plugequal {
+    type equal;
+    # Modify the line below if you do not
+    # want to use sound card 0.
+    #slave.pcm "plughw:0,0";
+    # by default we want to play from more sources at time:
+    slave.pcm "plug:dmix";
 }
 pcm.!default {
-    type pulse
-}
-ctl.!default {
-    type pulse
+    type plug;
+    slave.pcm plugequal;
 }
