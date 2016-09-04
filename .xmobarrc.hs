@@ -36,6 +36,5 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %XMonadLog% }{ <<fc=#8fbfdf><</fc><fc=#afdfff><</fc><fc=#8fbfdf><</fc>< Net: %enp3s0%  In: %Net_in%  Out: %Net_out%  %cpu% %cpu-temp%  MB: %mb-temp%  %memory%  Vol: %vol.sh%  <fn=2>%kbd%</fn>  %xmdate% <fc=#aaddff>%xmtime%</fc>  <fn=2><fc=#afdfff>%weather%</fc></fn>"
+       , template = " %XMonadLog% }{ <<fc=#8fbfdf><</fc><fc=#afdfff><</fc><fc=#8fbfdf><</fc><   <fc=red>↓</fc><fc=green>↑</fc> %enp3s0% <fc=red>↓</fc> %Net_in% <fc=green>↑</fc> %Net_out%   %cpu% %cpu-temp%   MB: %mb-temp%   %memory%   Vol: %vol.sh%   <fn=2>%kbd%</fn>   %xmdate% <fc=#aaddff>%xmtime%</fc>   <fn=2><fc=#afdfff>%weather%</fc></fn>"
        }
-

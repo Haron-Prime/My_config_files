@@ -94,6 +94,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                      0x1008ff1b),     spawn "urxvtc -name htop -e /usr/bin/htop")
     , ((0,                      0x1008ff73),     spawn "compreboot")
     , ((0,                          0xff69),     spawn "compdown")
+    , ((0,                          0xff67),     spawn "gmrun")
     , ((0,                          0xffc9),     scratchPad)                                                                                          --F12
     , ((modm,                       0xffc9),     spawn "urxvtc -name term")                                                                           --Meta+F12
     , ((0,                          0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Print
@@ -103,7 +104,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --, ((mod1Mask,                     0x63),     spawn "chromium")                                                                                    --Alt+C
     --, ((mod1Mask,                     0x64),     spawn "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")         --Alt+D
     --, ((mod1Mask,                     0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
-    , ((mod1Mask,                     0x65),     spawn "urxvtc -name equalizer -e alsamixer -D equal")                                              --Alt+E
+    , ((mod1Mask,                     0x65),     spawn "urxvtc -name equalizer -e alsamixer -D equal")                                                --Alt+E
     , ((mod1Mask,                     0x66),     spawn "fox")                                                                                         --Alt+F
     , ((mod1Mask,                     0x67),     spawn "gimp")                                                                                        --Alt+G
     --, ((mod1Mask .|. shiftMask,       0x67),     spawn "python3 /home/haron/lib/gis-weather/gis-weather.py")                                          --Alt+Shift+G
@@ -122,7 +123,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
     , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Alt+W
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart")                                                      --Win+Q
-    , ((modm,                         0x70),     spawn "gmrun")                                                                                       --Wim+P
+    --, ((modm,                         0x70),     spawn "gmrun")                                                                                       --Wim+P
     , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
  
     , ((mod1Mask,                   0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1

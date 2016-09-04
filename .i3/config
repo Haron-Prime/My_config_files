@@ -208,9 +208,12 @@ bindsym Cancel               exec --no-startup-id compdown
 bindsym XF86Reload           exec --no-startup-id compreboot
 bindsym XF86Search           exec --no-startup-id "urxvtc -name htop -e htop" 
 bindsym XF86Tools            exec --no-startup-id "urxvtc -name ncmpcpp -e ncmpcpp"
-bindsym XF86AudioMute        exec --no-startup-id "pulseaudio-ctl mute"
-bindsym XF86AudioLowerVolume exec --no-startup-id "pulseaudio-ctl down"
-bindsym XF86AudioRaiseVolume exec --no-startup-id "pulseaudio-ctl up"
+# bindsym XF86AudioMute        exec --no-startup-id "pulseaudio-ctl mute"
+bindsym XF86AudioMute        exec --no-startup-id "amixer set Master toggle"
+# bindsym XF86AudioLowerVolume exec --no-startup-id "pulseaudio-ctl down"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 1dB-"
+# bindsym XF86AudioRaiseVolume exec --no-startup-id "pulseaudio-ctl up"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 1dB+"
 bindsym XF86AudioPlay        exec --no-startup-id "mpc toggle"
 bindsym $mod+0x60            exec --no-startup-id "mpc toggle"
 bindsym XF86AudioStop        exec --no-startup-id "mpc stop"
@@ -222,12 +225,13 @@ bindsym XF86Mail             exec --no-startup-id /usr/bin/thunderbird
 bindsym XF86Explorer         exec --no-startup-id pcmanfm
 bindsym XF86Calculator       exec --no-startup-id galculator
 bindsym XF86Sleep            exec --no-startup-id i3lock
+bindsym Menu                 exec --no-startup-id gmrun
 
 bindsym $mod+F12             exec --no-startup-id "urxvtc -name guake"
 bindsym Mod1+F2              exec --no-startup-id "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'"
 bindsym Print                exec --no-startup-id "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 bindsym Mod1+Print           exec --no-startup-id "scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
-bindsym $mod+p               exec --no-startup-id gmrun
+# bindsym $mod+p               exec --no-startup-id gmrun
 bindsym Mod1+g               exec --no-startup-id gimp
 bindsym Mod1+l               exec --no-startup-id "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard"
 bindsym Mod1+m               exec --no-startup-id "urxvtc -name mc -e mc"
@@ -239,6 +243,7 @@ bindsym Mod1+Shift+s         exec --no-startup-id "gksu subl3"
 bindsym Mod1+t               exec --no-startup-id telegram-desktop
 bindsym Mod1+w               exec --no-startup-id "gksu pacmanxg"
 bindsym Mod1+f               exec --no-startup-id fox
+bindsym Mod1+e                exec --no-startup-id "urxvtc -name equalizer -e alsamixer -D equal"
 
 assign [class="vivaldi-snapshot|Firefox|Opera developer|Tor Browser"] 1:W
 assign [class="Thunderbird"] 2:M
@@ -257,4 +262,4 @@ for_window [window_role="task_dialog|messages|pop-up"] floating enable
 for_window [class="Galculator|Pavucontrol|feh|lxappearance|xarchiver|Pulseaudio-equalizer.py|Gnome-alsamixer|Gsmartcontrol|Gis-weather.py"] floating enable focus
 
 for_window [title="guake"] move scratchpad focus
-for_window [instance="xvim|ranger|ncmpcpp|htop|mocp"] move scratchpad focus
+for_window [instance="xvim|ranger|ncmpcpp|htop|mocp|equalizer"] move scratchpad focus
