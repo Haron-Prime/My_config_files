@@ -73,9 +73,9 @@ scratchPad = scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
       --((0,                      0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up")
-      ((0,                      0x1008ff13),     spawn "amixer set Master 1dB+")
+      ((0,                      0x1008ff13),     spawn "amixer set Master 5%+")
     --, ((0,                      0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down")
-    , ((0,                      0x1008ff11),     spawn "amixer set Master 1dB-")
+    , ((0,                      0x1008ff11),     spawn "amixer set Master 5%-")
     --, ((0,                      0x1008ff12),     spawn "/usr/bin/pulseaudio-ctl mute")
     , ((0,                      0x1008ff12),     spawn "amixer set Master toggle")
     , ((modm,                         0x60),     spawn "mpc toggle")
@@ -103,6 +103,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --, ((mod1Mask,                     0x62),     spawn "baobab")                                                                                      --Alt+B
     --, ((mod1Mask,                     0x63),     spawn "chromium")                                                                                    --Alt+C
     --, ((mod1Mask,                     0x64),     spawn "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")         --Alt+D
+    , ((mod1Mask,                     0x64),     spawn "deadbeef")                                                                                    --Alt+D
     --, ((mod1Mask,                     0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
     , ((mod1Mask,                     0x65),     spawn "urxvtc -name equalizer -e alsamixer -D equal")                                                --Alt+E
     , ((mod1Mask,                     0x66),     spawn "fox")                                                                                         --Alt+F
@@ -268,7 +269,7 @@ myManageHook = composeAll . concat $
     myEdit    = ["Subl3","Et","Wps","Wpp","Acroread","FoxitReader"]
     myFile    = ["Pcmanfm"]
     mySystem  = ["pacmanxg","systemdx","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap","Xfce4-power-manager-settings"]
-    myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","PornTime","Deadbeef"]
+    myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","PornTime"]
     myPic     = ["Pinta","Gimp","Gimp-2.8","Inkscape"]
     myWork    = ["Wine"]
     myTorrent = ["Tixati","Transgui","Transmission-gtk","Transmission-remote-gtk"]
@@ -286,7 +287,7 @@ myEventHook = fullscreenEventHook <+> docksEventHook
 -- Status bars and logging.
 myLogHook = dynamicLogString $ xmobarPP {
           ppCurrent         = xmobarColor "#9fdfff" ""
-        , ppTitle           = xmobarColor "#999" "". shorten 60
+        , ppTitle           = xmobarColor "#999" "". shorten 52
         }
  
 -- Startup hook

@@ -1,5 +1,5 @@
 Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
-       , additionalFonts = ["xft:Forced Square:size=12:weight=bold:antialias=true:hinting=true","xft:Terminus:size=12:weight=bold:antialias=true:hinting=true","xft:Ubuntu Mono:size=12:weight=bold:antialias=true:hinting=true"] 
+       , additionalFonts = ["xft:Terminus:size=12:weight=bold:antialias=true:hinting=true","xft:Ubuntu Mono:size=12:weight=bold:antialias=true:hinting=true"] 
        , borderColor = "#151515"
        , border = TopB
        , bgColor = "#151515"
@@ -22,6 +22,7 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     , Run Com "Net_out" [] "" 600
                     , Run Cpu ["-L","10","-H","75","--normal","#cfdf00","--high","orange"] 10
                     , Run Com "cpu-temp" [] "" 50
+                    , Run Com "cpufreq" [] "" 6000
                     , Run Com "mb-temp" [] "" 50
                     --, Run Com "fan1" [] "" 50
                     --, Run Com "fan2" [] "" 50
@@ -36,5 +37,5 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %XMonadLog% }{ <<fc=#8fbfdf><</fc><fc=#afdfff><</fc><fc=#8fbfdf><</fc><   <fc=red>↓</fc><fc=green>↑</fc> %enp3s0% <fc=red>↓</fc> %Net_in% <fc=green>↑</fc> %Net_out%   %cpu% %cpu-temp%   MB: %mb-temp%   %memory%   Vol: %vol.sh%   <fn=2>%kbd%</fn>   %xmdate% <fc=#aaddff>%xmtime%</fc>   <fn=2><fc=#afdfff>%weather%</fc></fn>"
+       , template = " %XMonadLog% }{ <<fc=#8fbfdf><</fc><fc=#afdfff><</fc><fc=#8fbfdf><</fc><   <fc=red>↓</fc><fc=green>↑</fc> %enp3s0% <fc=red>↓</fc> %Net_in% <fc=green>↑</fc> %Net_out%   %cpu% %cpu-temp% %cpufreq%MHz   MB: %mb-temp%   %memory%   Vol: %vol.sh%   <fn=2>%kbd%</fn>   %xmdate% <fc=#aaddff>%xmtime%</fc>   <fn=1><fc=#afdfff>%weather%</fc></fn>"
        }
