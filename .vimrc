@@ -3,6 +3,8 @@ if v:progname =~? "evim"
   finish
 endif
 
+runtime! archlinux.vim
+
 set backspace=indent,eol,start
 
 if has("vms")
@@ -76,15 +78,15 @@ set commentstring=#%s
 set tabpagemax=150
 set showtabline=1                                   " 2 always, 1 only if multiple tabs
 set smarttab                                        " tab and backspace are smart
-set foldmethod=syntax
-set foldenable
-set foldcolumn=1                                    " the blank left-most bar left of the numbered lines
+" set foldmethod=syntax
+" set foldenable
+" set foldcolumn=1                                    " the blank left-most bar left of the numbered lines
 set sc                                              " override 'ignorecase' when pattern has upper case characters
 set smartcase                                       " Ignore case when searching lowercase
 set showmatch                                       " show matching bracket
 set diffopt=filler,iwhite                           " ignore all whitespace and sync"
 set stal=2
-set viewoptions=folds,localoptions,cursor
+" set viewoptions=folds,localoptions,cursor
 set ruler                                           " show the cursor position all the time
 set showcmd                                         " display incomplete commands
 set incsearch                                       " do incremental searching
@@ -202,7 +204,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'vim-scripts/netrw.vim'
 " Plugin 'vim-scripts/sudo.vim'
 Plugin 'scrooloose/nerdtree'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'tomtom/tcomment_vim'
 " Plugin 'vim-scripts/toggle_words.vim'
 Plugin 'scrooloose/syntastic'

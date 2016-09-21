@@ -72,12 +72,12 @@ scratchPad = scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
-      --((0,                      0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up")
-      ((0,                      0x1008ff13),     spawn "amixer set Master 5%+")
-    --, ((0,                      0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down")
-    , ((0,                      0x1008ff11),     spawn "amixer set Master 5%-")
-    --, ((0,                      0x1008ff12),     spawn "/usr/bin/pulseaudio-ctl mute")
-    , ((0,                      0x1008ff12),     spawn "amixer set Master toggle")
+      ((0,                      0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up")
+      --((0,                      0x1008ff13),     spawn "amixer set Master 5%+")
+    , ((0,                      0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down")
+    --, ((0,                      0x1008ff11),     spawn "amixer set Master 5%-")
+    , ((0,                      0x1008ff12),     spawn "/usr/bin/pulseaudio-ctl mute")
+    --, ((0,                      0x1008ff12),     spawn "amixer set Master toggle")
     , ((modm,                         0x60),     spawn "mpc toggle")
     , ((0,                      0x1008ff14),     spawn "mpc toggle")
     , ((0,                      0x1008ff15),     spawn "mpc stop")
@@ -104,17 +104,17 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --, ((mod1Mask,                     0x63),     spawn "chromium")                                                                                    --Alt+C
     --, ((mod1Mask,                     0x64),     spawn "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")         --Alt+D
     , ((mod1Mask,                     0x64),     spawn "deadbeef")                                                                                    --Alt+D
-    --, ((mod1Mask,                     0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
-    , ((mod1Mask,                     0x65),     spawn "urxvtc -name equalizer -e alsamixer -D equal")                                                --Alt+E
+    , ((mod1Mask,                     0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
+    --, ((mod1Mask,                     0x65),     spawn "urxvtc -name equalizer -e alsamixer -D equal")                                                --Alt+E
     , ((mod1Mask,                     0x66),     spawn "fox")                                                                                         --Alt+F
     , ((mod1Mask,                     0x67),     spawn "gimp")                                                                                        --Alt+G
-    --, ((mod1Mask .|. shiftMask,       0x67),     spawn "python3 /home/haron/lib/gis-weather/gis-weather.py")                                          --Alt+Shift+G
     --, ((mod1Mask,                     0x68),     spawn "hexchat")                                                                                     --Alt+H
-    --, ((mod1Mask,                     0x69),     spawn "iron")                                                                                        --Alt+I
+    , ((mod1Mask,                     0x69),     spawn "2D-Place")                                                                                    --Alt+I
     , ((mod1Mask,                     0x6c),     spawn "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")              --Alt+L
     , ((mod1Mask,                     0x6d),     spawn "urxvtc -name mc -e mc")                                                                       --Alt+M
     , ((mod1Mask,                     0x6f),     spawn "opera-developer")                                                                             --Alt+O
     , ((mod1Mask,                     0x70),     spawn "wine /home/haron/lib/Pro100-5.20-GIV/PRO100.exe")                                             --Alt+P
+    , ((mod1Mask,                     0x71),     spawn "pavucontrol")                                                                                 --Alt+Q
 	, ((mod1Mask,                     0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
     , ((mod1Mask .|. controlMask,     0x72),     spawn "urxvtc -name home -e ranger")                                                                 --Alt+Ctrl+R
     , ((mod1Mask,                     0x73),     spawn "subl3")                                                                                       --Alt+S
@@ -124,6 +124,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
     , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Alt+W
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart")                                                      --Win+Q
+    , ((modm,                         0x78),     spawn "xmbr")                                                                                        --Win+X
     --, ((modm,                         0x70),     spawn "gmrun")                                                                                       --Wim+P
     , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
  
@@ -271,7 +272,7 @@ myManageHook = composeAll . concat $
     mySystem  = ["pacmanxg","systemdx","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap","Xfce4-power-manager-settings"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","PornTime"]
     myPic     = ["Pinta","Gimp","Gimp-2.8","Inkscape"]
-    myWork    = ["Wine"]
+    myWork    = ["Wine","V3DGui","V3DBase","V3DCutting","Visual3D"]
     myTorrent = ["Tixati","Transgui","Transmission-gtk","Transmission-remote-gtk"]
     myVM      = ["VirtualBox"]
     myIM      = ["Hexchat","psi","Psi","Viber","Telegram"]
@@ -287,7 +288,7 @@ myEventHook = fullscreenEventHook <+> docksEventHook
 -- Status bars and logging.
 myLogHook = dynamicLogString $ xmobarPP {
           ppCurrent         = xmobarColor "#9fdfff" ""
-        , ppTitle           = xmobarColor "#999" "". shorten 52
+        , ppTitle           = xmobarColor "#999" "" . shorten 44
         }
  
 -- Startup hook

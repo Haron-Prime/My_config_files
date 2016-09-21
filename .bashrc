@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 export EDITOR=/usr/bin/vim
-xhost + >/dev/null
+# xhost + >/dev/null
 [ -n "$XTERM_VERSION" ] && transset-df -a >/dev/null
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return

@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+
+################################
+# Shows info about sound/volume.
+# Allows simple volume controls.
+#
+# Thanks to [@EliteTK](https://gist.github.com/EliteTK/36d061fa24372fb70312),
+# for the big speed gain when switching to `ponymix`
+#
+# Dependencies:
+# - ponymix
+# - ttf-font-icons
+#
+# @return {Number}: Current volume
+################################
+
+dir=$(dirname $0)
+source $dir/util.sh
+
+full=""
+short=""
+status=0
+
+step=${BLOCK_INSTANCE:-5}
+
+getVolume() {
+	ponymix get-volume
+}
+
+isMuted() {
+	ponymix is-muted
+}
+
+case $BLOCK_BUTTON in
+	# right click
+	# mute/unmute
+	3) ponymix toggle >/dev/null ;;
+
+	# scroll up
+	# raise volume
+	4) ponymix increase $step >/dev/null ;;
+
+	# scroll down
+	# lower volume
+	5) ponymix decrease $step >/dev/null ;;
+esac
+
+vol=$(getVolume)
+
+# level-based icon
+if (( $vol == 0 )); then
+	icon=""
+elif (( $vol < 34 )); then
+	icon=""
+elif (( $vol < 67 )); then
+	icon=""
+else
+	icon=""
+fi
+
+# determine mute status
+if isMuted; then
+	status=33
+fi
+
+full="$icon $vol%"
+short=$vol
+
+echo $full
+echo $short
+exit $status

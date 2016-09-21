@@ -1,8 +1,8 @@
 sw_volume: 100
-audio_device_state:1:Master
+audio_device_state:1:pulse audio
 state: pause
-current: 1
-time: 11.271000
+current: 0
+time: 3097.332000
 random: 0
 repeat: 0
 single: 0
@@ -11,14 +11,5 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:audiobooks/Amber/Желязны Роджер - Хроники Амбера - Книга 1 - Девять Принцев Амбера.m4b
-1:audiobooks/Amber/Желязны Роджер - Хроники Амбера - Книга 2 - Ружья Авалона.m4b
-2:audiobooks/Amber/Желязны Роджер - Хроники Амбера - Книга 3 - Знак Единорога.m4b
-3:audiobooks/Amber/Желязны Роджер - Хроники Амбера - Книга 4 - Рука Оберона.m4b
-4:audiobooks/Amber/Желязны Роджер - Хроники Амбера - Книга 5 - Владения Хаоса.m4b
-5:audiobooks/Amber/Желязны Роджер - Хроники Амбера - Книга 6 - Карты Судьбы.m4b
-6:audiobooks/Amber/Желязны Роджер - Хроники Амбера - Книга 7 - Кровь Амбера.m4b
-7:audiobooks/Amber/Желязны Роджер - Хроники Амбера - Книга 8 - Знак Хаоса.m4b
-8:audiobooks/Amber/Желязны Роджер - Хроники Амбера - Книга 9 - Рыцарь Теней.m4b
-9:audiobooks/Amber/Желязны Роджер - Хроники Амбера - Книга 10 - Принц Хаоса.m4b
+0:Foreign/Deep Forest & Projects/Deep Forest (Projects)/Wes 1996 - Welenga (Japanese Press)/Wes - Welenga (Japanese Press).ape
 playlist_end

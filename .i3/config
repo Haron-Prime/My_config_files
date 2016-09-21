@@ -208,12 +208,12 @@ bindsym Cancel               exec --no-startup-id compdown
 bindsym XF86Reload           exec --no-startup-id compreboot
 bindsym XF86Search           exec --no-startup-id "urxvtc -name htop -e htop" 
 bindsym XF86Tools            exec --no-startup-id "urxvtc -name ncmpcpp -e ncmpcpp"
-# bindsym XF86AudioMute        exec --no-startup-id "pulseaudio-ctl mute"
-bindsym XF86AudioMute        exec --no-startup-id "amixer set Master toggle"
-# bindsym XF86AudioLowerVolume exec --no-startup-id "pulseaudio-ctl down"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 1dB-"
-# bindsym XF86AudioRaiseVolume exec --no-startup-id "pulseaudio-ctl up"
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 1dB+"
+bindsym XF86AudioMute        exec --no-startup-id "pulseaudio-ctl mute"
+# bindsym XF86AudioMute        exec --no-startup-id "amixer set Master toggle"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pulseaudio-ctl down"
+# bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 1dB-"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pulseaudio-ctl up"
+# bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 1dB+"
 bindsym XF86AudioPlay        exec --no-startup-id "mpc toggle"
 bindsym $mod+0x60            exec --no-startup-id "mpc toggle"
 bindsym XF86AudioStop        exec --no-startup-id "mpc stop"
@@ -243,7 +243,10 @@ bindsym Mod1+Shift+s         exec --no-startup-id "gksu subl3"
 bindsym Mod1+t               exec --no-startup-id telegram-desktop
 bindsym Mod1+w               exec --no-startup-id "gksu pacmanxg"
 bindsym Mod1+f               exec --no-startup-id fox
-bindsym Mod1+e                exec --no-startup-id "urxvtc -name equalizer -e alsamixer -D equal"
+# bindsym Mod1+e               exec --no-startup-id "urxvtc -name equalizer -e alsamixer -D equal"
+bindsym Mod1+e               exec --no-startup-id "pulseaudio-equalizer-gtk"
+bindsym Mod1+q               exec --no-startup-id "pavucontrol"
+bindsym Mod1+i               exec --no-startup-id "2D-Place"
 
 assign [class="vivaldi-snapshot|Firefox|Opera developer|Tor Browser"] 1:W
 assign [class="Thunderbird"] 2:M
@@ -252,7 +255,7 @@ assign [class="Pcmanfm"] 4:F
 assign [class="pacmanxg|Baobab|systemdx|GParted|Sysinfo|Systemadm|Tk|Zenmap|Xfce4-power-manager-settings"] 5:S
 assign [class="mpv|Vlc|Sopcast-player.py|PornTime|Deadbeef|Cheese"] 6:V
 assign [class="Mirage|Gimp"] 7:P
-assign [class="Wine"] 8:J
+assign [class="Wine|V3DGui|V3DBase|V3DCutting|Visual3D"] 8:J
 assign [class="Transgui|Tixati|Transmission-gtk|Transmission-remote-gtk"] 9:T
 assign [class="Telegram|psi|Psi|Viber|Hexchat"] 0:IM
 
