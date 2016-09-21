@@ -4,5 +4,7 @@ My config awesome wm, xmonad, xmobar, i3wm, i3blocks, zsh etc
 
 #### Some screenshots 
 
-![](/screenshots/1.png?raw=true)
-![](/screenshots/2.png?raw=true)
+![](/screenshots/xmonad-1.png?raw=true)
+![](/screenshots/xmonad-2.png?raw=true)
+![](/screenshots/i3wm-1.png?raw=true)
+![](/screenshots/i3wm-2.png?raw=true)
