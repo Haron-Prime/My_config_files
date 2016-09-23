@@ -19,3 +19,12 @@ Sep 23 19:33 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Sep 23 19:34 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/01. Speak To Me - Breathe.m4a"
 Sep 23 19:36 : client: [3] opened from 127.0.0.1:55888
 Sep 23 19:36 : client: [3] closed
+Sep 23 20:06 : client: [4] opened from 127.0.0.1:57404
+Sep 23 20:06 : client: [4] closed
+Sep 23 20:07 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 23 20:07 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/02. On The Run.m4a"
+Sep 23 20:11 : client: [5] opened from 127.0.0.1:58894
+Sep 23 20:11 : client: [5] closed
+Sep 23 20:11 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/03. Time.m4a"
+Sep 23 20:12 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 23 20:12 : avahi: Service 'Music Player' successfully established.
