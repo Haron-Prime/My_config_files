@@ -22,9 +22,9 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     , Run Com "Net_in" [] "" 600
                     , Run Com "Net_out" [] "" 600
                     , Run Cpu ["-t","CPU:<fn=2> </fn><total>%","-L","10","-H","75","--normal","#cfdf00","--high","orange"] 10
-                    , Run Com "cpu-temp" [] "" 50
-                    , Run Com "cpufreq" [] "" 600
-                    , Run Com "mb-temp" [] "" 50
+                    , Run Com "cpu-temp" [] "" 30
+                    , Run Com "cpufreq" [] "" 100
+                    , Run Com "mb-temp" [] "" 30
                     --, Run Com "fan1" [] "" 50
                     --, Run Com "fan2" [] "" 50
                     , Run Memory ["-t", "Mem:<fn=2> </fn><usedratio>%"] 50

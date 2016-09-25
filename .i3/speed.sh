@@ -56,9 +56,9 @@ if [[ "${time_diff}" -gt 0 ]]; then
   # incoming
   rx_kib=$(( $rx_rate >> 10 ))
   if [[ "$rx_rate" -gt 1048576 ]]; then
-    echo -n "${rx_kib:0:-3}.${rx_kib: -3:-2} M↓"
+    echo -n "${rx_kib:0:-3}.${rx_kib: -3:-2} MiB/s"
   else
-    echo -n "${rx_kib} K↓"
+    echo -n "${rx_kib} KiB/s"
   fi
 
   echo -n "  "
@@ -66,9 +66,9 @@ if [[ "${time_diff}" -gt 0 ]]; then
   # outgoing
   tx_kib=$(( $tx_rate >> 10 ))
   if [[ "$tx_rate" -gt 1048576 ]]; then
-    echo -n "${tx_kib:0:-3}.${tx_kib: -3:-2} M↑"
+    echo -n "${tx_kib:0:-3}.${tx_kib: -3:-2} MiB/s"
   else
-    echo -n "${tx_kib} K↑"
+    echo -n "${tx_kib} KiB/s"
   fi
 else
   echo -n " ? "

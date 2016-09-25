@@ -194,9 +194,9 @@ bar {
         background #252525
         statusline #bbbbbb
 
-        focused_workspace  #656565 #454545 #aaddff
-        active_workspace   #333333 #5f676a #ffffff
-        inactive_workspace #333333 #222222 #888888
+        focused_workspace  #757575 #454545 #aaddff
+        # active_workspace   #333333 #5f676a #ffffff
+        # inactive_workspace #333333 #222222 #888888
         urgent_workspace   #2f343a #900000 #ffffff
         binding_mode       #2f343a #900000 #ffffff
     }
@@ -244,8 +244,8 @@ bindsym Mod1+t               exec --no-startup-id telegram-desktop
 bindsym Mod1+w               exec --no-startup-id "gksu pacmanxg"
 bindsym Mod1+f               exec --no-startup-id fox
 # bindsym Mod1+e               exec --no-startup-id "urxvtc -name equalizer -e alsamixer -D equal"
-bindsym Mod1+e               exec --no-startup-id "pulseaudio-equalizer-gtk"
-bindsym Mod1+q               exec --no-startup-id "pavucontrol"
+# bindsym Mod1+e               exec --no-startup-id "pulseaudio-equalizer-gtk"
+bindsym Mod1+e               exec --no-startup-id "pavucontrol"
 bindsym Mod1+i               exec --no-startup-id "2D-Place"
 bindsym Mod1+h               exec --no-startup-id "urxvtc -name vifm -e vifm"
 
@@ -267,3 +267,5 @@ for_window [class="Galculator|Pavucontrol|feh|lxappearance|xarchiver|Pulseaudio-
 
 for_window [title="guake"] move scratchpad focus
 for_window [instance="xvim|ranger|ncmpcpp|htop|mocp|equalizer"] move scratchpad focus
+
+# exec --no-startup-id alternating_layouts.py
