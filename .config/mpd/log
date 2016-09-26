@@ -1,0 +1,106 @@
+Sep 26 10:15 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 10:15 : avahi: Service 'Music Player' successfully established.
+Sep 26 15:47 : client: [0] opened from 127.0.0.1:53884
+Sep 26 15:47 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/05. Another Brick In The Wall (Part 2).m4a"
+Sep 26 15:47 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 15:48 : client: [0] closed
+Sep 26 15:49 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 15:50 : player: played "Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/01 The Voice Of Enigma.m4a"
+Sep 26 16:01 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 16:01 : player: played "Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/02 Principles Of Lust [(A) Sadeness,.m4a"
+Sep 26 16:06 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 16:06 : player: played "Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/03 Callas Went Away.m4a"
+Sep 26 16:07 : client: [1] opened from 127.0.0.1:54564
+Sep 26 16:07 : client: [1] closed
+Sep 26 16:36 : client: [2] opened from 127.0.0.1:55662
+Sep 26 16:36 : client: [2] closed
+Sep 26 16:40 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 16:41 : player: played "Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/04 Mea Culpa.m4a"
+Sep 26 16:42 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 16:42 : player: played "Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/05 The Voice & The Snake.m4a"
+Sep 26 16:46 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 16:47 : player: played "Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/06 Knocking On Forbidden Doors.m4a"
+Sep 26 16:57 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 16:57 : player: played "Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/07 Back To The Rivers Of Belief [(A).m4a"
+Sep 26 16:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 17:00 : player: played "Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/01 Second Chapter.m4a"
+Sep 26 17:07 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 17:07 : player: played "Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/02 The Eyes Of Truth.m4a"
+Sep 26 17:11 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 17:11 : player: played "Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/03 Return To Innocence.m4a"
+Sep 26 17:20 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 17:20 : player: played "Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/04 I Love You ... I'll Kill You.m4a"
+Sep 26 17:26 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 17:26 : player: played "Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/05 Silent Warrior.m4a"
+Sep 26 17:29 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 17:29 : player: played "Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/06 The Dream Of The Dolphin.m4a"
+Sep 26 17:34 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 17:34 : player: played "Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/07 Age Of Loneliness (Carly's Song).m4a"
+Sep 26 17:39 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 17:39 : player: played "Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/08 Out From The Deep.m4a"
+Sep 26 17:41 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 17:42 : player: played "Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/09 The Cross Of Changes.m4a"
+Sep 26 17:48 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 17:49 : player: played "Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/10 Return To Innocence [Long & Alive.m4a"
+Sep 26 17:55 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 17:55 : player: played "Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/11 Age Of Loneliness (Enigmatic Club.m4a"
+Sep 26 18:02 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:02 : player: played "Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/12 The Eyes Of Truth (The Götterdämm.m4a"
+Sep 26 18:04 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:04 : player: played "Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/01 Le Roi Est Mort, Vive Le Roi!.m4a"
+Sep 26 18:10 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:10 : player: played "Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/02 Morphing Thru Time.m4a"
+Sep 26 18:10 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:11 : player: played "Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/03 Third Of Its Kind.m4a"
+Sep 26 18:14 : client: [3] opened from 127.0.0.1:59380
+Sep 26 18:14 : client: [3] closed
+Sep 26 18:23 : client: [4] opened from 127.0.0.1:59736
+Sep 26 18:23 : client: [4] closed
+Sep 26 18:24 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:24 : player: played "Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/04 Beyond The Invisible.m4a"
+Sep 26 18:29 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:29 : player: played "Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/05 Why! ....m4a"
+Sep 26 18:33 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:34 : player: played "Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/06 Shadows In Silence.m4a"
+Sep 26 18:38 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:39 : player: played "Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/07 The Child In Us.m4a"
+Sep 26 18:43 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:43 : player: played "Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/08 T.N.T. For The Brain.m4a"
+Sep 26 18:46 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:47 : player: played "Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/09 Almost Full Moon.m4a"
+Sep 26 18:50 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:50 : player: played "Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/10 The Roundabout.m4a"
+Sep 26 18:55 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:55 : player: played "Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/11 Prism Of Life.m4a"
+Sep 26 18:56 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:57 : player: played "Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/12 Odyssey Of The Mind.m4a"
+Sep 26 18:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 18:59 : player: played "Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/01 - The Gate.m4a"
+Sep 26 19:05 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 19:05 : player: played "Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/02 - Push the Limits.m4a"
+Sep 26 19:09 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 19:09 : player: played "Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/03 - Gravity of Love.m4a"
+Sep 26 19:14 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 19:14 : player: played "Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/04 - Smell of Desire.m4a"
+Sep 26 19:18 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 19:18 : player: played "Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/05 - Modern Crusaders.m4a"
+Sep 26 19:22 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 19:22 : player: played "Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/06 - Traces (Light and Weight).m4a"
+Sep 26 19:26 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 19:26 : player: played "Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/07 - The Screen Behind the Mirror.m4a"
+Sep 26 19:29 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 19:29 : player: played "Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/08 - Endless Quest.m4a"
+Sep 26 19:31 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 19:31 : player: played "Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/09 - Camera Obscura.m4a"
+Sep 26 19:35 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 19:35 : player: played "Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/10 - Between Mind & Heart.m4a"
+Sep 26 19:40 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 19:40 : player: played "Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/11 - Silence Must Be Heard.m4a"
+Sep 26 19:44 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 19:45 : player: played "Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/01 From East To West.m4a"
+Sep 26 19:45 : client: [5] opened from 127.0.0.1:35652
+Sep 26 19:45 : client: [5] closed
+Sep 26 19:54 : client: [6] opened from 127.0.0.1:36144
+Sep 26 19:54 : client: [6] closed
+Sep 26 19:58 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 19:59 : player: played "Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/02 Voyageur.m4a"
