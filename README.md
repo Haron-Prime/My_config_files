@@ -9,7 +9,7 @@ My config awesome wm, xmonad, xmobar, i3wm, i3blocks, zsh etc
 ![](/screenshots/i3wm-1.png?raw=true)
 ![](/screenshots/i3wm-2.png?raw=true)
 
-#### License -  http://www.wtfpl.net/ 
+#### License - © 2016 WTFPL - http://www.wtfpl.net/ 
 
 ```
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
