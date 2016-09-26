@@ -104,3 +104,7 @@ Sep 26 19:54 : client: [6] opened from 127.0.0.1:36144
 Sep 26 19:54 : client: [6] closed
 Sep 26 19:58 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Sep 26 19:59 : player: played "Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/02 Voyageur.m4a"
+Sep 26 20:03 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 20:03 : player: played "Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/03 Incognito.m4a"
+Sep 26 20:10 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 20:10 : player: played "Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/04 Page Of Cups.m4a"
