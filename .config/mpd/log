@@ -118,3 +118,20 @@ Sep 26 20:26 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Sep 26 20:26 : player: played "Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/08 In The Shadow, In The Light.m4a"
 Sep 26 20:28 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Sep 26 20:28 : player: played "Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/09 Weightless.m4a"
+Sep 26 20:31 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 26 20:31 : player: played "Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/10 The Piano.m4a"
+Sep 26 20:35 : client: [7] opened from 127.0.0.1:39122
+Sep 26 20:35 : client: [7] closed
+Sep 26 23:59 : avahi: Client Disconnected, will reconnect shortly
+Sep 26 23:59 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Sep 26 23:59 : player: played "Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/11 Following The Sun.m4a"
+Sep 27 09:53 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 09:53 : avahi: Service 'Music Player' successfully established.
+Sep 27 10:00 : avahi: Client Disconnected, will reconnect shortly
+Sep 27 10:00 : avahi: Client Disconnected, will reconnect shortly
+Sep 27 10:00 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Sep 27 10:00 : player: played "Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/11 Following The Sun.m4a"
+Sep 27 19:08 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 19:08 : avahi: Service 'Music Player' successfully established.
+Sep 27 22:37 : client: [0] opened from 127.0.0.1:38860
+Sep 27 22:39 : client: [0] closed

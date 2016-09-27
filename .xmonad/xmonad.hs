@@ -1,3 +1,4 @@
+-- Base
 import XMonad hiding ( (|||) )
 import Control.Monad
 import Data.Ratio ((%))
@@ -119,7 +120,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask .|. controlMask,     0x72),     spawn "urxvtc -name home -e ranger")                                                                 --Alt+Ctrl+R
     , ((mod1Mask,                     0x73),     spawn "subl3")                                                                                       --Alt+S
     , ((mod1Mask .|. shiftMask,       0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
-    , ((mod1Mask,                     0x74),     spawn "telegram")                                                                                    --Alt+T
+    , ((mod1Mask,                     0x74),     spawn "telegram-desktop")                                                                            --Alt+T
 	, ((mod1Mask .|. shiftMask,       0x74),     spawn "tor-browser")                                                                                 --Alt+Shift+T
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
     , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Alt+W
