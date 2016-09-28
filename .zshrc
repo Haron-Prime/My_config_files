@@ -1,3 +1,4 @@
+# Author - Haron Prime
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit promptinit zfinit
@@ -140,11 +141,12 @@ source /usr/share/oh-my-zsh/plugins/web-search/web-search.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/history-substring-search/history-substring-search.zsh
 source /usr/share/oh-my-zsh/plugins/zsh_reload/zsh_reload.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/web-search/web-search.plugin.zsh
+source /usr/share/oh-my-zsh/plugins/colorize/colorize.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/global_aliases.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/my_aliases.plugin.zsh
+source $HOME/scripts/my_zhs_plugins/extract.plugin.zsh
+source $HOME/scripts/my_zhs_plugins/pk.plugin.zsh
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source $HOME/scripts/my_zhs_plugins/extract.plugin.zsh
-# source $HOME/scripts/my_zhs_plugins/pk.plugin.zsh
  
 # aliases
 alias ls="ls -la --classify --color=auto"
@@ -181,7 +183,7 @@ export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 export PAGER="less"
 export EDITOR="vim"
 export ARCHFLAGS="arch x86_64"
-export BROWSER="firefox"
+export BROWSER="vivaldi-snapshot"
 export MAIL="thunderbird"
 export OOO_FORCE_DESKTOP="xmonad"
 
@@ -238,27 +240,27 @@ DIRSTACKSIZE=20
 
 setopt autopushd pushdsilent pushdtohome
 
-extract () {
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2) tar xvjf $1   ;;
-      *.tar.gz)  tar xvzf $1   ;;
-      *.tar.xz)  tar xvfJ $1   ;;
-      *.bz2)     bunzip2 $1    ;;
-      *.rar)     unrar x $1    ;;
-      *.gz)      gunzip $1     ;;
-      *.tar)     tar xvf $1    ;;
-      *.tbz2)    tar xvjf $1   ;;
-      *.tgz)     tar xvzf $1   ;;
-      *.zip)     unzip $1      ;;
-      *.Z)       uncompress $1 ;;
-      *.7z)      7z x $1       ;;
-      *)         echo "'$1' cannot be extracted via >extract<" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
+# extract () {
+#   if [ -f $1 ] ; then
+#     case $1 in
+#       *.tar.bz2) tar xvjf $1   ;;
+#       *.tar.gz)  tar xvzf $1   ;;
+#       *.tar.xz)  tar xvfJ $1   ;;
+#       *.bz2)     bunzip2 $1    ;;
+#       *.rar)     unrar x $1    ;;
+#       *.gz)      gunzip $1     ;;
+#       *.tar)     tar xvf $1    ;;
+#       *.tbz2)    tar xvjf $1   ;;
+#       *.tgz)     tar xvzf $1   ;;
+#       *.zip)     unzip $1      ;;
+#       *.Z)       uncompress $1 ;;
+#       *.7z)      7z x $1       ;;
+#       *)         echo "'$1' cannot be extracted via >extract<" ;;
+#     esac
+#   else
+#     echo "'$1' is not a valid file"
+#   fi
+# }
 
 if [ -f $HOME/scripts/s-completion.bash ]; then
     . $HOME/scripts/s-completion.bash
