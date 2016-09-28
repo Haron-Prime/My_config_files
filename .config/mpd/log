@@ -135,3 +135,94 @@ Sep 27 19:08 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Sep 27 19:08 : avahi: Service 'Music Player' successfully established.
 Sep 27 22:37 : client: [0] opened from 127.0.0.1:38860
 Sep 27 22:39 : client: [0] closed
+Sep 27 23:18 : client: [1] opened from 127.0.0.1:41524
+Sep 27 23:18 : player: played "Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/11 Following The Sun.m4a"
+Sep 27 23:18 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:18 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/01. Speak To Me - Breathe.m4a"
+Sep 27 23:18 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:21 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:22 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/03. Another Brick In The Wall (Part 1).m4a"
+Sep 27 23:22 : client: [1] closed
+Sep 27 23:23 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:23 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/04. The Happiest Days Of Our Lives.m4a"
+Sep 27 23:27 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:27 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/05. Another Brick In The Wall (Part 2).m4a"
+Sep 27 23:33 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:33 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/06. Mother.m4a"
+Sep 27 23:36 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:36 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/07. Goodbye Blue Sky.m4a"
+Sep 27 23:38 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:38 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/08. Empty Spaces.m4a"
+Sep 27 23:41 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:41 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/09. Young Lust.m4a"
+Sep 27 23:45 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:45 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/10. One of My Turns.m4a"
+Sep 27 23:49 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:49 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/11. Don't Leave Me Now.m4a"
+Sep 27 23:50 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:50 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/12. Another Brick In The Wall (Part 3).m4a"
+Sep 27 23:51 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:52 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/13. Goodbye Cruel World.m4a"
+Sep 27 23:53 : client: [2] opened from 127.0.0.1:43118
+Sep 27 23:53 : client: [2] closed
+Sep 27 23:56 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 27 23:56 : client: [3] opened from 127.0.0.1:43242
+Sep 27 23:56 : client: [3] closed
+Sep 28 00:15 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/01. Hey You.m4a"
+Sep 28 18:53 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 18:53 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 18:53 : avahi: Service 'Music Player' successfully established.
+Sep 28 19:31 : client: [0] opened from 127.0.0.1:59422
+Sep 28 19:31 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/01. Hey You.m4a"
+Sep 28 19:31 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 19:32 : client: [0] closed
+Sep 28 19:35 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 19:35 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/01. Speak To Me - Breathe.m4a"
+Sep 28 19:39 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 19:39 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/02. On The Run.m4a"
+Sep 28 19:46 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 19:46 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/03. Time.m4a"
+Sep 28 19:51 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 19:51 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/04. The Great Gig In The Sky.m4a"
+Sep 28 19:57 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 19:57 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/05. Money.m4a"
+Sep 28 20:05 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 20:05 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/06. Us And Them.m4a"
+Sep 28 20:06 : client: [1] opened from 127.0.0.1:33226
+Sep 28 20:06 : client: [1] closed
+Sep 28 20:08 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 20:09 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/07. Any Colour You Like.m4a"
+Sep 28 20:12 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 20:12 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/08. Brain Damage.m4a"
+Sep 28 20:14 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 20:14 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/09. Eclipse.m4a"
+Sep 28 20:28 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 20:28 : player: played "Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/01. Shine On You Crazy Diamond (Part 1-5).m4a"
+Sep 28 20:35 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 20:36 : player: played "Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/02. Welcome To The Machine.m4a"
+Sep 28 20:41 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 20:41 : player: played "Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/03. Have A Cigar.m4a"
+Sep 28 20:46 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 20:46 : player: played "Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/04. Wish You Were Here.m4a"
+Sep 28 20:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 20:59 : player: played "Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/05. Shine On You Crazy Diamond (Part 6-9).m4a"
+Sep 28 21:00 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 21:00 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/01. Pigs on the Wing (Part 1).m4a"
+Sep 28 21:17 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 21:17 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/02. Dogs.m4a"
+Sep 28 21:29 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 21:29 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/03. Pigs (Three Different Ones).m4a"
+Sep 28 21:39 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 21:39 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/04. Sheep.m4a"
+Sep 28 21:40 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 21:41 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/05. Pigs on the Wing (Part 2).m4a"
+Sep 28 21:44 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 21:44 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/01. In The Flesh.m4a"
+Sep 28 21:46 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 21:46 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/02. The Thin Ice.m4a"
+Sep 28 21:50 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 21:50 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/03. Another Brick In The Wall (Part 1).m4a"
+Sep 28 21:51 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 21:51 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/04. The Happiest Days Of Our Lives.m4a"
+Sep 28 21:55 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 21:55 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/05. Another Brick In The Wall (Part 2).m4a"

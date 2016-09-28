@@ -108,7 +108,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+d focus child
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -180,12 +180,8 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    # status_command    xmobar /home/haron/.xmobarrc
     status_command    i3blocks -c ~/.i3/i3blocks.conf
     position          top
-    # mode hide
-    # hidden_state hide
-    # modifier Mod1
     strip_workspace_numbers yes
     binding_mode_indicator yes
     workspace_buttons yes
@@ -195,8 +191,6 @@ bar {
         statusline #bbbbbb
 
         focused_workspace  #757575 #454545 #aaddff
-        # active_workspace   #333333 #5f676a #ffffff
-        # inactive_workspace #333333 #222222 #888888
         urgent_workspace   #2f343a #900000 #ffffff
         binding_mode       #2f343a #900000 #ffffff
     }
@@ -231,7 +225,6 @@ bindsym $mod+F12             exec --no-startup-id "urxvtc -name guake"
 bindsym Mod1+F2              exec --no-startup-id "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'"
 bindsym Print                exec --no-startup-id "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 bindsym Mod1+Print           exec --no-startup-id "scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
-# bindsym $mod+p               exec --no-startup-id gmrun
 bindsym Mod1+g               exec --no-startup-id gimp
 bindsym Mod1+l               exec --no-startup-id "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard"
 bindsym Mod1+m               exec --no-startup-id "urxvtc -name mc -e mc"

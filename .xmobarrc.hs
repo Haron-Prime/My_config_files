@@ -21,7 +21,7 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     , Run Network "enp3s0" ["-S", "True", "-d", "1", "-t", "<fc=red>↓</fc><fn=2> </fn><rx> <fc=green>↑</fc><fn=2> </fn><tx>"] 10
                     , Run Com "Net_in" [] "" 600
                     , Run Com "Net_out" [] "" 600
-                    , Run Cpu ["-t","CPU:<fn=2> </fn><total>%","-L","10","-H","75","--normal","#cfdf00","--high","orange"] 10
+                    , Run Cpu ["-t","CPU:<fn=2> </fn><total>%","-L","10","-H","75","--normal","yellow","--high","orange"] 10
                     , Run Com "cpu-temp" [] "" 30
                     , Run Com "cpufreq" [] "" 100
                     , Run Com "mb-temp" [] "" 30
