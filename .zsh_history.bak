@@ -163,7 +163,6 @@ yaloc xarchiver-gtk2
 yalocs vim
 yain opera-developer
 gw-git
-uname -a
 jctlb g failed
 whois 93.91.162.52
 whois 92.100.75.196
@@ -195,8 +194,6 @@ cat ~/.config/mpd/mpd.conf
 mpv http://tv.multinet.dp.ua/play.m3u
 alsamixer --help
 cat ~/.asoundrc
-crontab -e
-notify-send "TIME" "\n –Éø–æ—Ä–∞ —Å–ø–∞—Ç—É¨"
 yain --force core/util-linux
 yains linux-pf-headers-jaguar-4.5.1-2-x86_64.pkg.tar.xz linux-pf-jaguar-4.5.1-2-x86_64.pkg.tar.xz
 yains linux-pf-jaguar-4.5.1-2-x86_64.pkg.tar.xz linux-pf-headers-jaguar-4.5.1-2-x86_64.pkg.tar.xz
@@ -364,7 +361,6 @@ whois ua.pool.ntp.org
 ping -c3 rutracker.org
 /usr/bin/thunderbird --safw-mode
 /usr/bin/thunderbird --safe-mode
-thunderbird --safe-mode
 thunderbird
 ./thunderbird
 systemd-analyze blame
@@ -503,7 +499,6 @@ acestream-launcher --player mpv acestream://4e834bc11f1385fdb6e06da0d3eedc3cee6c
 whois 83.139.139.157
 sudo rm -f files.db
 sudo systemctl status minidlna
-sudo systemctl stop minidlna
 cat /etc/profile.d/libreoffice-fresh.sh
 sudo systemctl startus dhcpcd
 ls /etc/environment
@@ -563,18 +558,15 @@ cp /etc/i3status.conf ~/.config/i3status/config
 modprobe -c | grep btrfs
 df -h /var/log
 du -h /var/log
-sudo systemctl start minidlna
 sudo systemctl enable minidlna
 yaupd
 sc
-sctl status minidlna
 yareps gisomount
 acestream-launcher --player mpv acestream://2540d59be0713c48bf1c9d9b10cefff8935429c6
 acestream-launcher --player mpv acestream://42d039184f4bb909729d1151106582f021ebe957
 acestream-launcher --player mpv acestream://f67f9c9965326c92185f886bb700b80ae04900c5
 feh --bg-center /home/haron/4412996.jpg
 feh --bg-scale /home/haron/4412996.jpg
-feh --bg-center /home/haron/pics/xmonad/XMONAD011-2.png
 systemctl status mpd
 systemctl --user status mpd
 yareps numix
@@ -584,8 +576,6 @@ acestream-launcher --player mpv acestream://5d947436e1618ad3ccd32a67cef3261d567e
 galculator
 yareps i3style
 yareps i3-style
-yareps i3
-cd git
 git clone git@github.com:acrisci/i3-style.git
 npm install -g i3-style~
 yain community/nodejs
@@ -727,7 +717,6 @@ yareps android-file-transfer
 yain android-file-transfer-linux-git
 uptime
 users
-cd .local/bin
 chmod +x backup
 extract Franz-linux-x64-3.1.1.tgz
 cat /sys/block/sdb/queue/scheduler
@@ -804,7 +793,6 @@ jctlb g mpd
 yains mpd-0.19.17-2-x86_64.pkg.tar.xz
 yaloc mpd
 1920/3
-v
 urxvtc -name terminal
 xprop g title
 xprop g name
@@ -883,7 +871,6 @@ ldd xmonad
 ldd firefox
 ldd /usr/bin/thunderbird
 cp /usr/lib/i3blocks/disk .i3
-sudo pacmanxg
 pkill .xmobar
 yareps xmobar
 yain xmobar-git
@@ -897,7 +884,6 @@ yain xmobar
 fish
 source ~/.zshrc
 chmod +x .local/bin/cpu-temp2
-uname --help
 swapctl
 sensors | grep Board
 sensors | grep Board | cut -s 1
@@ -1028,7 +1014,6 @@ sensors | grep fan1 | cut -c 14-22 | echo ${string2:1}
 sensors | grep fan1 | cut -c 14-22 | {string2:1}
 sensors | grep fan1 | cut -c 14-22 | echo {2:1}
 sensors | grep fan1 | cut -c 14-22 | echo ${2:1}
-bash
 sensors | grep fan1 | cut -c 14-22 | ${2:1}
 sensors | grep fan1 | cut -c 14-22 | {2:1}
 sensors | grep fan1 | cut -c 14-22 | awk {2:1}
@@ -1074,11 +1059,9 @@ sensors | grep 'Board' | awk '{print $3}'
 cat /home/haron/Documents/last.pass | xclip -selection clipboard
 scr
 uname -rnm
-pacman -Qdt
 yaourt -Qdt
 systemdx
 systemctl status tmp.mount
-screenfetch
 nano .xmobarrc
 mc
 pacloc nano
@@ -1099,7 +1082,6 @@ gpg --keyserver pgp.mit.edu --recv-keys D8692123C4065DEA5E0F3AB5249B39D24F25E3B6
 makepkg
 yains libgcrypt15-1.5.6-1-x86_64.pkg.tar.xz
 yain mpd
-ipt
 ranger ~/Video
 ranger ~/Video/FANTASTIC/Mad_Max
 ranger ~/Video/FANTASTIC/Tron
@@ -1108,7 +1090,6 @@ sctl --user status mransmission
 sctl rebbot
 xterm
 xterm -name htop -e htop
-vnstat
 vnstat -d
 vnstat -m
 vnstat -w
@@ -1149,7 +1130,6 @@ yare lxsession
 ls /
 df /
 ls -la /
-su
 sctl status tmp.mount
 df g tmpfs
 cd /tmp/yaourt-tmp-haron/aur-vivaldi-snapshot
@@ -1168,7 +1148,6 @@ df g sda1 | awk '{print %}'
 df -h | grep 'sda1' | awk '{print $5}'
 yaourt -Sya
 sudo pcmanfm
-cat /proc/meminfo
 xset -q
 pacloc xmobar
 yareps simple
@@ -1252,7 +1231,6 @@ yare vivaldi
 extract micro-1c2b815-linux64.tar.gz
 yareps micro
 yareps micro-git
-micro
 sudo smartctl /dev/sdb
 sudo smartctl -a /dev/sdb
 sudo smartctl -a /dev/sdb g Pre-fail
@@ -1262,7 +1240,6 @@ xev
 xmonad --recompile && xmonad --restart
 yareps terminus
 yain terminus-re33
-fonts
 yareps ring
 asl acestream://f56b3f3c676f3dfcd5bc56d35c7e29ddd1858cde
 acestream-launcher acestream://dbbf997a2e5ab856d30755136e430ad8e7c90590
@@ -1277,7 +1254,6 @@ tmux list-windows
 tmuxinator doctor
 tmuxinator default
 z
-jctlf
 sctl status tmux
 sudo systemctl restart tmux@haron
 sctl status tmux@haron
@@ -1285,14 +1261,10 @@ tmux
 df -h | grep 'sda1' | awk '{print $4}'
 df -h | grep 'sda1'
 df -h
-cd git/My_config_files
-source .zshrc
 ttmux
 cd /home/haron
 clear
 alsamixer -D equal
-ncmpcpp
-ranger
 sctl -b g alsa
 vim scripts/my_zhs_plugins/my_aliases.plugin.zsh
 sudo systemctl restart dhcpcd
@@ -1361,9 +1333,6 @@ cat /proc/cpuinfo g MHz | tail -1 | cut -c 12-16
 cat /proc/cpuinfo g MHz | tail -1 | cut -c 12-15
 chmod +x .local/bin/cpufreq
 cpufreq
-cd /
-xmobar
-pkill xmobar
 watch grep MHz /proc/cpuinfo
 mount g /dev/sd
 mount g tmpfs
@@ -1374,7 +1343,6 @@ sctl --user status psd
 yain miraclecast
 yare miraclecast
 cat /var/log/pacman.log
-free
 psd --help
 rmrf /home/haron/.config/opera-developer-backup-crashrecovery-20160908*
 df g sdc1
@@ -1399,7 +1367,6 @@ df g " / "
 df g " /@"
 df g /
 grep --help
-df g -w /
 pacloc ncmpcpp
 pacloc mpd
 cat /etc/X11/xorg.conf
@@ -1407,15 +1374,12 @@ root-disk
 sctl --user status transmission
 ping -c3 ubuntu.ru
 git add --all
-git commit -m "Update"
-git push
 gitk
 yare rlog
 vi .xinitrc
 vim .xinitrc
 vim .i3/config
 vim .xmonad/xmonad.hs
-vim
 man xset
 cat /etc/sudoers
 sudo cat /etc/sudoers
@@ -1440,13 +1404,11 @@ sctl g pulse
 sctl
 yaloc pulse
 yalocs pulse
-pamixer
 paprefs
 sudo pulseaudio
 st ~/.config/pulse/default.pa
 sst /etc/asd.conf
 sudo mount -a
-df
 sctl status fstrim.service
 sctl status fstrim.timer
 mount
@@ -1462,14 +1424,11 @@ sudo fstrim -v /
 sctl start asd
 sctl enable asd
 sctl status asd
-xev g keycode
 yare pulseaudio-equalizer-ladspa
 yare pulseaudio-equalizer
 yare python-pyqt4
 yare pyqt4-common python-sip
 yare sip
-git pull
-mksrcinfo
 asd p
 sudo systemctl asd stop
 sudo systemctl stop asd
@@ -1479,7 +1438,6 @@ sudo asd c
 sudo asd p
 sudo rm -fr /media/haron/BKP2
 sudo rm -fr /media/haron/MEDIA
-yaourt -Syyua
 yare ladspa
 yare ladspa caps fil-plugins liblrdf mcp-plugins pvoc swh-plugins
 pacloc vim
@@ -1488,14 +1446,11 @@ zramctl
 paclocs dbus-x11
 yain dbus-x11
 yare docbook-xml itstool yelp-xsl dbus-docs docbook-xsl doxygen yelp-tools
-htop
 jctlb d pulse
 jctlb g pulse
-jctlc
 cd .ACEStream/.acestream_cache
 rmrf *
 rmrf .*
-uname -r
 rmrf .mozilla/firefox/keb4eqqm.tmp-backup-crashrecovery-*
 rmrf .config/opera-developer-*
 rmrf .config/vivaldi-snapshot-backup-crashrecovery-20160916_162200
@@ -1509,7 +1464,6 @@ rmrf .config/vivaldi-snapshot-backup-crashrecovery-
 rmrf .config/vivaldi-snapshot-backup-crashrecovery-20160916_161042
 yain pulseaudio-equalizer-ladspa
 pulseaudio-equalizer-gtk
-svim
 alsactl --help
 systemctl status alsa-restore.service
 svim /etc/pulse/daemon.conf
@@ -1521,8 +1475,6 @@ svim /etc/asound.conf
 sst /etc/asound.conf
 ls /etc/skel
 sctl reboot
-sctl --user stop transmission
-sctl --user start transmission
 pacloc bash
 for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
 yain pulseaudio-equalizer
@@ -1534,11 +1486,9 @@ alsamixer
 alsactl restore
 sudo alsactl restore
 jctlb g alsa
-gitf
 pulseaudio -k
 pulseaudio
 sudo alsactl store
-psd p
 pkill transgui
 wine --help
 winecfg
@@ -1552,7 +1502,6 @@ sst /etc/locale.gen
 yareps libmyodbc
 yareps unixodbc
 yain lib32-unixodbc unixodbc
-sst
 sudo locale-gen
 winetricks
 winetricks tahoma
@@ -1564,7 +1513,6 @@ wine /home/haron/tmp/AutoRun.exe
 wine astra-nesting-setup5.exe
 wine MasterBasic2.2.0.msi
 wine Install.exe
-cd
 cd .wine
 cd drive_c/Raskroy
 wine RASKROY.EXE
@@ -1582,11 +1530,9 @@ wine demo.exe
 wine demo.plk
 wine demo.rus
 sx
-ls
 Setup64
 ./Setup64
 xprop g CLASS
-x3
 asl acestream://a3d6475c17fc2c7789cc45f802a9018764f0352c
 asl acestream://74480d76f65d2623d5fa8188ee248e788e8c62ec
 asl sop://broker.sopcast.com:3912/147460s
@@ -1595,21 +1541,199 @@ acestream-launcher acestream://c8778c4db1b71e3acac31b643f4b5598e1cd5562
 asl acestream://6ee7268899b4477d9b7e0a95470b8d61873a80d2
 asl acestream://77409bf354cdc002830d582a02962dc3a97a1cc1
 asl acestream://0825888bee792ba41b792aedaefce5219e9840a4
-x1
-yaupg
-sctl --user start mpd
-sctl --user status mpd
 mpd
-x
-sctl --user status mpd
 rmrf .config/mpd/pid
-sctl --user status mpd
 sctl --user start mpd
 sctl --user status mpd
-x1
-sctl --user start mpd
-sctl --user status mpd
-crontab --help
-crontab -l
 rm -f $HOME/.zsh_history.bak
 cp $HOME/.zsh_history $HOME/.zsh_history.bak
+jctlf
+jctlc
+cat .zsh_history.bak
+notify-send "TIME" "\n –Éø–æ—Ä–∞ —Å–ø–∞—Ç—É¨"
+chmod +x .local/bin/sleep_me
+notify-send --help
+sleep_me
+crontab --help
+man crontab
+crontab -l
+pacman -Qdt
+jctlb g cron
+jctlb g cron g haron
+jctlf g cron g haron
+jctlf g cron
+jctlf g crond
+sst
+./install.py
+svim
+jctlb g crond | tail
+yaourt -Syuua
+yaourt -Syyua
+bash
+sctl ststud minidlna
+sudo systemctl stop minidlna
+sudo systemctl disable minidlna
+yain tremotesf
+chmod +x .local/bin/xmbrestart
+xmbrestart
+cd .local/bin
+mv ./xmbrestart ./xmbr
+xmbr
+ls /sys/class/thermal
+pkill xmobar
+xmobar
+crontab -e
+feh --bg-scale /home/haron/Pictures/sgs-foto/cats/P_20140824_130932.jpg
+feh --bg-center /home/haron/pics/xmonad/XMONAD011-2.png
+cat /proc/cpuinfo | grep MHz | tail -1
+cat /proc/cpuinfo | grep MHz | tail -1 | awk '{print $2}'
+cat /proc/cpuinfo | grep MHz | tail -1 | awk '{print $4}'
+cat /proc/cpuinfo | grep MHz | tail -1 | awk '{print $4$2}'
+cat /proc/cpuinfo | grep MHz | tail -1 | cut -c 5-30 | awk '{print $1}'
+cat /proc/cpuinfo | grep MHz | tail -1 | cut -c 5-30
+cat /proc/cpuinfo | grep MHz | tail -1 | cut -c 5-24
+cat /proc/cpuinfo | grep MHz | tail -1 | cut -c 5-16
+cat /proc/cpuinfo | grep MHz | tail -1 | cut -c 5-15
+cat /proc/cpuinfo | grep MHz | tail -1 | cut -c 5-30 | awk '{print $1,$3}'
+cat /proc/cpuinfo | grep MHz | tail -1 | cut -c 5-30 | awk '{print $3,$1}'
+cat /proc/cpuinfo | grep MHz | tail -1 | cut -c 5-15 | awk '{print $3,$1}'
+free
+cd git
+git pull git@github.com:acleverpun/i3-blocks-contrib.git
+git clone git@github.com:acleverpun/i3-blocks-contrib.git
+yareps ttf-font-icons
+yain ttf-font-icons
+fonts
+amixer get Master
+pactl --help
+pactl volume
+pactl volume stat
+pamixer
+pamixer --list-sinks
+pamixer --list-sourxes
+pamixer --list-sources
+chmod +x .i3/vol2.sh
+xdotool getactivewindow getwindowname
+ls .local/bin
+vol2.sh
+ls
+/usr/bin/ls
+/usr/bin/ls -l
+ranger
+yareps vifm
+yain vifm
+vifm-options
+vifm $ MYVIFMRC
+vifm-$MYVIFMRC
+sudo pacmanxg
+vifm -c
+vifm --help
+yain vifm-git
+git clone git@github.com:vifm/vifm-colors.git
+git clone git@github.com:vifm/vifm.vim.git
+pkill vifm
+tar -cvf haron-dark.tar.bz2 ./home
+tar -cvf haron-dark.tar.bz2 ./oomox-haron-dark2
+git add .themes/oomox-haron-dark3.tar.gz
+git add -f .themes/oomox-haron-dark3.tar.gz
+git add .zshrc .Xdefaults .ncmpcpp
+git commit -m "Update"
+cat /var/log/pacman.log tail
+cat /var/log/pacman.log | tail
+cat /var/log/pacman.log g gtk
+v
+v .zshrc
+vvsp
+yareps oh-my-zsh
+ipt
+cd Video/tmp
+mpv Independence.Day.Resurgence.2016.1080p.WEB-DL.Dub.Line.NNMCLUB.mkv
+cat /usr/share/X11/xkb/compat/basic
+uname -r
+uname
+uname --help
+uname -or
+uname -s
+uname -sr
+df
+cat .local/bin/Net_in
+vim .local/bin/Net_in
+pacloc nouveau
+pacloc xf86-video-nouveau
+yalocs p7z
+sensors | grep -m 1 'fan1' | awk '{print $2,$3}' && sensors | grep 'fan1' | awk '{print $2,$3}' | tail -n 1
+sensors | grep -m 1 'fan1' | awk '{print $2,$3}' & sensors | grep 'fan1' | awk '{print $2,$3}' | tail -n 1
+xev g keycode
+cat /sys/devices/pci0000:00/0000:00:0a.0/0000:03:00.0/net/enp3s0/statistics
+ls /sys/devices/pci0000:00/0000:00:0a.0/0000:03:00.0/net/enp3s0/statistics
+cat /sys/devices/pci0000:00/0000:00:0a.0/0000:03:00.0/net/enp3s0/statistics/rx_bytes
+uname -a
+cp /usr/lib/i3blocks/memory ~/.i3/
+mem
+cat /proc/meminfo
+chmod +x .i3/speed_in.sh .i3/speed_out.sh
+c
+chmod +x .i3/speed_out.sh
+touch .i3/measure-net-speed
+touch .i3/measure-net-speed-tx
+yareps i3
+yareps i3 g install
+yareps i3-wm
+yain alternating-layouts-git
+htop
+chmod +x .local/bin/light.sh
+light.sh
+vnstat
+mksrcinfo
+find .directory | rm
+sudo find -name .directory | xargs rm
+cd
+find -name .directory | xargs rm
+find -name .directory | xargs rm -f
+find /home/haron -name .directory -exec rm {} +
+find /home/haron/ -name .directory -exec rm {} +
+find /home/haron/ -R -name .directory -exec rm {} +
+find --help
+yareps mlocate
+yain mlocate
+locate .directory
+sudo rm -f /home/haron/.config/xxkb/.directory /home/haron/lib/deadbeef/pixmaps/.directory /usr/share/icons/oxy-black/cursors/.directory
+locate /.directory | sudo rm -f
+sudo rm -f /home/haron/.config/xxkb/.directory /home/haron/.icons/AwOkenWhite/clear/24x24/apps/.directory /home/haron/.local/share/icons/hicolor/24x24/apps/.directory /home/haron/lib/deadbeef/pixmaps/.directory /usr/share/icons/oxy-black/cursors/.directory
+ls /home/haron/.config/xxkb/
+cd /
+locate /.directory
+su
+git add LICENSE
+git commit -m "Add License"
+git pull
+git push
+uname -srm
+vifm
+micro
+psd p
+source .zshrc
+chmod +x .xinitrc-xmonad
+df g -w /
+df /media/haron/320G
+df /media/haron/320G/
+df /media/haron/320G/Sync
+xmodmap
+x3
+echo ‚É¶É≥‚É¶É±
+echo ÉøÉ∂¥
+print ÉøÉ∂¥
+vim .i3/i3blocks.conf
+thunderbird --safe-mode
+ncmpcpp
+screenfetch
+vim
+x1
+yaupg
+sudo systemctl start minidlna
+sctl status minidlna
+sctl --user stop transmission
+sctl --user start transmission
+cd git/My_config_files
+gitf
+x
