@@ -228,3 +228,195 @@ Sep 28 21:55 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Sep 28 21:55 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/05. Another Brick In The Wall (Part 2).m4a"
 Sep 28 22:01 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Sep 28 22:01 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/06. Mother.m4a"
+Sep 28 22:04 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:04 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/07. Goodbye Blue Sky.m4a"
+Sep 28 22:06 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:06 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/08. Empty Spaces.m4a"
+Sep 28 22:09 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:09 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/09. Young Lust.m4a"
+Sep 28 22:13 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:13 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/10. One of My Turns.m4a"
+Sep 28 22:17 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:17 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/11. Don't Leave Me Now.m4a"
+Sep 28 22:18 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:18 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/12. Another Brick In The Wall (Part 3).m4a"
+Sep 28 22:20 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:20 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/13. Goodbye Cruel World.m4a"
+Sep 28 22:24 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:24 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/01. Hey You.m4a"
+Sep 28 22:27 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:27 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/02. Is There Anybody Out There.m4a"
+Sep 28 22:30 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:31 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/03. Nobody Home.m4a"
+Sep 28 22:32 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:32 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/04. Vera.m4a"
+Sep 28 22:33 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:33 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/05. Bring The Boys Back Home.m4a"
+Sep 28 22:40 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:40 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/06. Comfortably Numb.m4a"
+Sep 28 22:41 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:42 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/07. The Show Must Go On.m4a"
+Sep 28 22:46 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:46 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/08. In The Flesh.m4a"
+Sep 28 22:46 : client: [2] opened from 127.0.0.1:42408
+Sep 28 22:46 : client: [2] closed
+Sep 28 22:50 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:50 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/09. Run Like Hell.m4a"
+Sep 28 22:54 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:54 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/10. Waiting For The Worms.m4a"
+Sep 28 22:55 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 28 22:55 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/11. Stop.m4a"
+Sep 28 22:59 : client: [3] opened from 127.0.0.1:43146
+Sep 28 23:00 : client: [3] closed
+Sep 28 23:04 : client: [4] opened from 127.0.0.1:43378
+Sep 28 23:04 : client: [4] closed
+Sep 28 23:05 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/12. The Trial.m4a"
+Sep 28 23:07 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/13. Outside The Wall.m4a"
+Sep 28 23:07 : client: [5] opened from 127.0.0.1:43578
+Sep 28 23:07 : client: [5] closed
+Sep 28 23:08 : client: [6] opened from 127.0.0.1:43686
+Sep 28 23:08 : player: played "Foreign/100% Relax hits/002-Jason - Tyrello - What the memories say.mp3"
+Sep 28 23:09 : client: [7] opened from 127.0.0.1:43694
+Sep 28 23:09 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/01. Триллипут.mp3"
+Sep 28 23:09 : client: [7] closed
+Sep 28 23:09 : client: [6] closed
+Sep 28 23:13 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/02. Кошка, чашка, муха и лапоть.mp3"
+Sep 28 23:14 : client: [8] opened from 127.0.0.1:44138
+Sep 28 23:14 : client: [8] closed
+Sep 28 23:15 : client: [9] opened from 127.0.0.1:44210
+Sep 28 23:15 : client: [9] closed
+Sep 28 23:19 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/03. Том ждет.mp3"
+Sep 28 23:24 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/04. Настасья.mp3"
+Sep 28 23:29 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/05. Элизобарра-торр.mp3"
+Sep 28 23:34 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/06. Моя звезда.mp3"
+Sep 28 23:40 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/07. Вот тогда, любовь моя.mp3"
+Sep 28 23:45 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/08. Запасные сны.mp3"
+Sep 28 23:47 : client: [10] opened from 127.0.0.1:45630
+Sep 28 23:47 : client: [10] closed
+Sep 28 23:52 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/09. Десять шагов.mp3"
+Sep 28 23:56 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/10. Лабрадор-Гибралтар.mp3"
+Sep 29 00:00 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/11. Берег.mp3"
+Sep 29 00:01 : client: [11] opened from 127.0.0.1:46626
+Sep 29 00:01 : client: [11] closed
+Sep 29 00:13 : avahi: Client Disconnected, will reconnect shortly
+Sep 29 00:13 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Sep 29 00:13 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/12. Венера.mp3"
+Sep 29 16:56 : avahi: Service 'Music Player' successfully established.
+Sep 29 17:04 : client: [0] opened from 127.0.0.1:51982
+Sep 29 17:04 : client: [0] closed
+Sep 29 17:06 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/12. Венера.mp3"
+Sep 29 17:06 : client: [1] opened from 127.0.0.1:52094
+Sep 29 17:06 : player: played "Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/13. Песня о песне.mp3"
+Sep 29 17:07 : client: [1] closed
+Sep 29 17:11 : player: played "Foreign/Amethystium/2001 - Odonata/01 - Opaque.m4a"
+Sep 29 17:16 : player: played "Foreign/Amethystium/2001 - Odonata/02 - Ilona.m4a"
+Sep 29 17:22 : player: played "Foreign/Amethystium/2001 - Odonata/03 - Enchantment.m4a"
+Sep 29 17:26 : player: played "Foreign/Amethystium/2001 - Odonata/04 - Dreamdance.m4a"
+Sep 29 17:29 : player: played "Foreign/Amethystium/2001 - Odonata/05 - Tinuviel.m4a"
+Sep 29 17:35 : player: played "Foreign/Amethystium/2001 - Odonata/06 - Avalon.m4a"
+Sep 29 17:39 : player: played "Foreign/Amethystium/2001 - Odonata/07 - Calantha.m4a"
+Sep 29 17:44 : player: played "Foreign/Amethystium/2001 - Odonata/08 - Odyssey.m4a"
+Sep 29 17:47 : player: played "Foreign/Amethystium/2001 - Odonata/09 - Fairyland.m4a"
+Sep 29 17:51 : player: played "Foreign/Amethystium/2001 - Odonata/10 - Paean.m4a"
+Sep 29 17:55 : player: played "Foreign/Amethystium/2001 - Odonata/11 - Arcane Voices.m4a"
+Sep 29 18:00 : player: played "Foreign/Amethystium/2001 - Odonata/12 - Ascension.m4a"
+Sep 29 18:04 : player: played "Foreign/Amethystium/2001 - Odonata/13 - Ethereal.m4a"
+Sep 29 18:07 : client: [2] opened from 127.0.0.1:55562
+Sep 29 18:07 : client: [2] closed
+Sep 29 18:07 : client: [3] opened from 127.0.0.1:55564
+Sep 29 18:07 : client: [3] closed
+Sep 29 18:07 : client: [4] opened from 127.0.0.1:55586
+Sep 29 18:07 : client: [4] closed
+Sep 29 18:07 : client: [5] opened from 127.0.0.1:55610
+Sep 29 18:07 : client: [5] closed
+Sep 29 18:08 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 18:08 : player: played "Foreign/Amethystium/2001 - Odonata/14 - Lhasa.m4a"
+Sep 29 18:13 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 18:14 : player: played "Foreign/Amethystium/2003 - Aphelion/01 - Shadow to Light.m4a"
+Sep 29 18:19 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 18:19 : player: played "Foreign/Amethystium/2003 - Aphelion/02 - Garden of Sakuntala.m4a"
+Sep 29 18:25 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 18:26 : player: played "Foreign/Amethystium/2003 - Aphelion/03 - Exultation.m4a"
+Sep 29 18:32 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 18:32 : player: played "Foreign/Amethystium/2003 - Aphelion/04 - Ad Astra.m4a"
+Sep 29 18:38 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 18:38 : player: played "Foreign/Amethystium/2003 - Aphelion/05 - Gates of Morpheus.m4a"
+Sep 29 18:40 : client: [6] opened from 127.0.0.1:57428
+Sep 29 18:40 : client: [6] closed
+Sep 29 19:27 : client: [7] opened from 127.0.0.1:59436
+Sep 29 19:27 : client: [7] closed
+Sep 29 19:30 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 19:31 : player: played "Foreign/Amethystium/2003 - Aphelion/06 - Autumn Interlude.m4a"
+Sep 29 19:36 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 19:37 : player: played "Foreign/Amethystium/2003 - Aphelion/07 - Elvensong.m4a"
+Sep 29 19:41 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 19:41 : player: played "Foreign/Amethystium/2003 - Aphelion/08 - Shibumi.m4a"
+Sep 29 19:45 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 19:46 : player: played "Foreign/Amethystium/2003 - Aphelion/09 - Hymnody.m4a"
+Sep 29 19:46 : client: [8] opened from 127.0.0.1:60248
+Sep 29 19:49 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 19:49 : player: played "Foreign/Amethystium/2003 - Aphelion/10 - Withdrawal.m4a"
+Sep 29 19:53 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 19:54 : player: played "Foreign/Amethystium/2003 - Aphelion/11 - Berceuse.m4a"
+Sep 29 19:54 : client: [8] closed
+Sep 29 19:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 19:59 : player: played "Foreign/Amethystium/2004 - Evermind/01 - Arcus.m4a"
+Sep 29 20:03 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 20:04 : player: played "Foreign/Amethystium/2004 - Evermind/02 - Into the Twilight.m4a"
+Sep 29 20:09 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 20:09 : player: played "Foreign/Amethystium/2004 - Evermind/03 - Shadowlands.m4a"
+Sep 29 20:15 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 20:15 : avahi: Service 'Music Player' successfully established.
+Sep 29 20:19 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 20:19 : player: played "Foreign/Amethystium/2004 - Evermind/03 - Shadowlands.m4a"
+Sep 29 20:23 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 29 20:23 : player: played "Foreign/Amethystium/2004 - Evermind/04 - Break of Dawn.m4a"
+Sep 29 20:26 : client: [0] opened from 127.0.0.1:45936
+Sep 29 20:26 : player: played "Foreign/Amethystium/2004 - Evermind/05 - Innocence.m4a"
+Sep 29 20:26 : client: [0] closed
+Sep 29 20:27 : client: [1] opened from 127.0.0.1:46012
+Sep 29 20:27 : client: [1] closed
+Sep 29 20:28 : client: [2] opened from 127.0.0.1:46014
+Sep 29 20:28 : client: [2] closed
+Sep 29 20:32 : player: played "Foreign/100% Relax hits/002-Jason - Tyrello - What the memories say.mp3"
+Sep 29 20:37 : client: [3] opened from 127.0.0.1:46592
+Sep 29 20:37 : client: [3] closed
+Sep 29 20:37 : client: [4] opened from 127.0.0.1:46616
+Sep 29 20:37 : client: [4] closed
+Sep 29 20:40 : player: played "Foreign/100% Relax hits/012-Ingo Pickhan - Bali chill.mp3"
+Sep 29 20:46 : player: played "Foreign/100% Relax hits/013-Alexander Hitzler - Goa jam.mp3"
+Sep 29 20:49 : player: played "Foreign/100% Relax hits/014-Eric del Mar - Isla margherita.mp3"
+Sep 29 20:54 : player: played "Foreign/100% Relax hits/015-Mahoroba - Des moment.mp3"
+Sep 29 20:59 : player: played "Foreign/100% Relax hits/017-Mahoroba - Unearthly.mp3"
+Sep 29 21:04 : player: played "Foreign/100% Relax hits/018-Alexander Hitzler - Gran Canaria sunset session.mp3"
+Sep 29 21:09 : player: played "Foreign/100% Relax hits/019-Mahoroba - Le monde.mp3"
+Sep 29 21:13 : player: played "Foreign/100% Relax hits/020-Jason Tyrello - Rain sunday.mp3"
+Sep 29 21:18 : player: played "Foreign/100% Relax hits/026-Skyway - Jamo.mp3"
+Sep 29 21:24 : player: played "Foreign/100% Relax hits/027-Mahoroba - Les Paysages.mp3"
+Sep 29 21:30 : player: played "Foreign/100% Relax hits/028-Skyway-Chanted Minds.mp3"
+Sep 29 21:35 : player: played "Foreign/100% Relax hits/029-Skyway - Its A Pleasure.mp3"
+Sep 29 21:40 : player: played "Foreign/100% Relax hits/034-Rank1-Airwave (Sunset Chillout Remix).mp3"
+Sep 29 21:46 : player: played "Foreign/100% Relax hits/042-Sharon_tully-eallin_life.mp3"
+Sep 29 22:00 : player: played "Foreign/100% Relax hits/048-Schiller - Hill out.mp3"
+Sep 29 22:07 : client: [5] opened from 127.0.0.1:51558
+Sep 29 22:07 : client: [5] closed
+Sep 29 22:11 : client: [6] opened from 127.0.0.1:51694
+Sep 29 22:11 : client: [6] closed
+Sep 29 22:15 : player: played "Foreign/100% Relax hits/052-Schiller Mit Heppner] Dream Of You (Chillout Mix).mp3"
+Sep 29 22:26 : player: played "Foreign/100% Relax hits/060-Envio touched by the sun -Rusch and_Elusives chill out mix.mp3"
+Sep 29 22:36 : player: played "Foreign/100% Relax hits/064-Envio-Touched By The Sun (Envios Sunrise Mix).mp3"
+Sep 29 22:40 : player: played "Foreign/100% Relax hits/066-Vision II-The ocean.mp3"
+Sep 29 22:44 : client: [7] opened from 127.0.0.1:53788
+Sep 29 22:44 : client: [7] closed
+Sep 29 22:51 : player: played "Foreign/100% Relax hits/068-Klaus Schultze-Floating.mp3"
+Sep 29 22:56 : player: played "Foreign/100% Relax hits/074-Blank & Jones - Watching The Waves (Ambient Remix).mp3"
+Sep 29 23:06 : player: played "Foreign/100% Relax hits/080-Relaxing dreams-dance of the elves.mp3"
+Sep 29 23:07 : player: played "Foreign/100% Relax hits/085-Sarah Mclaclan - Angel (Dusted Remix.mp3"
+Sep 29 23:18 : avahi: Service 'Music Player' successfully established.
+Sep 29 23:28 : avahi: Service 'Music Player' successfully established.
+Sep 29 23:35 : client: [0] opened from 127.0.0.1:45372
+Sep 29 23:35 : client: [0] closed
+Sep 29 23:35 : client: [1] opened from 127.0.0.1:45374
+Sep 29 23:35 : client: [1] closed
+Sep 29 23:35 : player: played "Foreign/100% Relax hits/087-Conjure One - Center of the Sun (Solar Stone's Chilled Out Remix).mp3"
+Sep 29 23:35 : avahi: Service 'Music Player' successfully established.

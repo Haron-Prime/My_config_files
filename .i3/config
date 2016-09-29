@@ -108,7 +108,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-bindsym $mod+d focus child
+# bindsym $mod+d focus child
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -183,7 +183,7 @@ bar {
     status_command    i3blocks -c ~/.i3/i3blocks.conf
     position          top
     strip_workspace_numbers yes
-    binding_mode_indicator yes
+    # binding_mode_indicator yes
     workspace_buttons yes
     font pango:Terminus Re33 12
     colors {
@@ -192,7 +192,7 @@ bar {
 
         focused_workspace  #757575 #454545 #aaddff
         urgent_workspace   #2f343a #900000 #ffffff
-        binding_mode       #2f343a #900000 #ffffff
+        # binding_mode       #2f343a #900000 #ffffff
     }
 }
 

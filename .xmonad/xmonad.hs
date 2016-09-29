@@ -107,7 +107,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x64),     spawn "deadbeef")                                                                                    --Alt+D
     , ((mod1Mask,                     0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
     --, ((mod1Mask,                     0x65),     spawn "urxvtc -name equalizer -e alsamixer -D equal")                                                --Alt+E
-    , ((mod1Mask,                     0x66),     spawn "fox")                                                                                         --Alt+F
+    , ((mod1Mask,                     0x66),     spawn "firefox")                                                                                         --Alt+F
     , ((mod1Mask,                     0x67),     spawn "gimp")                                                                                        --Alt+G
     --, ((mod1Mask,                     0x68),     spawn "hexchat")                                                                                     --Alt+H
     , ((mod1Mask,                     0x69),     spawn "2D-Place")                                                                                    --Alt+I
