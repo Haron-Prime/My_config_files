@@ -237,7 +237,8 @@ myManageHook = composeAll . concat $
     , [className =? c             --> doCenterFloat                | c <- myFloatC]
     , [appName   =? a             --> doCenterFloat                | a <- myFloatA]
     , [title     =? t             --> doCenterFloat                | t <- myFloatT]
- 
+    , [role      =? r             --> doCenterFloat                | r <- myFloatR]
+
     , [title     =? "LibreOffice" --> doF (W.shift "E")]
  
     , [currentWs =? "W"           --> insertPosition Below Newer]
@@ -258,7 +259,15 @@ myManageHook = composeAll . concat $
 
     , [isFullscreen               --> doFullFloat]
 
-	, [stringProperty "WM_WINDOW_ROLE" =? "About"       --> doCenterFloat]
+	-- , [stringProperty "WM_WINDOW_ROLE" =? "About"             --> doCenterFloat]
+
+    -- , [stringProperty "WM_WINDOW_ROLE" =? "task_dialog"       --> doCenterFloat]
+
+    -- , [stringProperty "WM_WINDOW_ROLE" =? "messages"          --> doCenterFloat]
+
+    -- , [stringProperty "WM_WINDOW_ROLE" =? "pop-up"            --> doCenterFloat]
+
+    -- , [stringProperty "WM_WINDOW_ROLE" =? "^conversation$"    --> doFloat]
 
     , [transience']
  
@@ -282,6 +291,9 @@ myManageHook = composeAll . concat $
     myFloatC  = ["Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","Gis-weather.py"]
     myFloatA  = ["lxappearance","xarchiver","gmrun"]
     myFloatT  = ["Software Update"]
+    myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
+    role = stringProperty "WM_WINDOW_ROLE"
+
  
 -- Event handling
 myEventHook = fullscreenEventHook <+> docksEventHook

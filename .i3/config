@@ -188,7 +188,7 @@ bar {
     font pango:Terminus Re33 12
     colors {
         background #252525
-        statusline #bbbbbb
+        # statusline #bbbbbb
 
         focused_workspace  #757575 #454545 #aaddff
         urgent_workspace   #2f343a #900000 #ffffff
