@@ -292,7 +292,7 @@ myManageHook = composeAll . concat $
     myFloatA  = ["lxappearance","xarchiver","gmrun"]
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
-    role = stringProperty "WM_WINDOW_ROLE"
+    role      = stringProperty "WM_WINDOW_ROLE"
 
  
 -- Event handling
