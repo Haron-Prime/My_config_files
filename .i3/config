@@ -238,9 +238,10 @@ bindsym Mod1+w               exec --no-startup-id "gksu pacmanxg"
 bindsym Mod1+f               exec --no-startup-id fox
 # bindsym Mod1+e               exec --no-startup-id "urxvtc -name equalizer -e alsamixer -D equal"
 # bindsym Mod1+e               exec --no-startup-id "pulseaudio-equalizer-gtk"
-bindsym Mod1+e               exec --no-startup-id "pavucontrol"
-bindsym Mod1+i               exec --no-startup-id "2D-Place"
-bindsym Mod1+h               exec --no-startup-id "urxvtc -name vifm -e vifm"
+bindsym Mod1+e               exec --no-startup-id pavucontrol
+bindsym Mod1+i               exec --no-startup-id 2D-Place
+# bindsym Mod1+h               exec --no-startup-id "urxvtc -name vifm -e vifm"
+bindsym Mod1+h               exec --no-startup-id hexchat
 
 assign [class="vivaldi-snapshot|Firefox|Opera developer|Tor Browser"] 1:W
 assign [class="Thunderbird"] 2:M
