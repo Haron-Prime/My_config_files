@@ -36,9 +36,9 @@ zle -N self-insert url-quote-magic
 # prompt (if running screen, show window #)
 export KERNEL="$(uname -rm)"
  if [ x$WINDOW != x ]; then
-     export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n@%m %B%{$fg[blue]%}%{$KERNEL <%l [%?] %h> %b%{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%} %*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
+     export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n@%m <%l [%?] %h> %B%{$fg[blue]%}%{$KERNEL %b%{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%} %*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
  else
-     export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n@%m %B%{$fg[blue]%}%{$KERNEL <%l [%?] %h> %b%{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%} %*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
+     export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n@%m <%l [%?] %h> %B%{$fg[blue]%}%{$KERNEL %b%{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%} %*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
  fi
 #  export RPROMPT="%{$reset_color%}"
 
