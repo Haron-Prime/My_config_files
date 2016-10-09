@@ -103,13 +103,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	--, ((mod1Mask,                     0x61),     spawn "xterm")                                                                                       --Alt+A
     --, ((mod1Mask,                     0x62),     spawn "baobab")                                                                                      --Alt+B
     --, ((mod1Mask,                     0x63),     spawn "chromium")                                                                                    --Alt+C
-    --, ((mod1Mask,                     0x64),     spawn "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")         --Alt+D
     , ((mod1Mask,                     0x64),     spawn "deadbeef")                                                                                    --Alt+D
     , ((mod1Mask,                     0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
     --, ((mod1Mask,                     0x65),     spawn "urxvtc -name equalizer -e alsamixer -D equal")                                                --Alt+E
     , ((mod1Mask,                     0x66),     spawn "firefox")                                                                                         --Alt+F
     , ((mod1Mask,                     0x67),     spawn "gimp")                                                                                        --Alt+G
-    --, ((mod1Mask,                     0x68),     spawn "hexchat")                                                                                     --Alt+H
+    , ((mod1Mask,                     0x68),     spawn "hexchat")                                                                                     --Alt+H
     , ((mod1Mask,                     0x69),     spawn "2D-Place")                                                                                    --Alt+I
     , ((mod1Mask,                     0x6c),     spawn "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")              --Alt+L
     , ((mod1Mask,                     0x6d),     spawn "urxvtc -name mc -e mc")                                                                       --Alt+M
@@ -132,11 +131,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                   0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
     , ((mod1Mask,                   0xffbf),     shellPrompt myXPConfig)                                                                              --Alt+F2
     , ((mod1Mask,                   0xffc0),     runOrRaisePrompt myXPConfig)                                                                         --Alt+F3
-    , ((modm,                       xK_Tab),     windows W.focusDown)                                                                                 --Alt+Tab
-    , ((mod1Mask,                   xK_Tab),     windows W.focusMaster)                                                                               --Win+Tab
+    , ((mod1Mask,                   0xffc1),     spawn "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'") --Alt+F4
+    , ((modm,                       xK_Tab),     windows W.focusDown)                                                                                 --Win+Tab
+    , ((mod1Mask,                   xK_Tab),     windows W.focusMaster)                                                                               --Alt+Tab
     , ((modm,                         0x63),     kill)                                                                                                --Win+C
-    , ((modm,                     xK_space),     sendMessage NextLayout)
-    , ((modm     .|. shiftMask,   xK_space),     setLayout $ XMonad.layoutHook conf)
+    , ((modm,                     xK_space),     sendMessage NextLayout)                                                                              --Win+Space
+    , ((modm     .|. shiftMask,   xK_space),     setLayout $ XMonad.layoutHook conf)                                                                  --Win+Shift+Space
     , ((modm,                         0x6e),     refresh)                                                                                             --Win+N
     , ((modm,                    xK_Escape),     toggleWS' ["NSP"])                                                                                   --Win+Escape
     , ((modm,                         0x6a),     windows W.focusDown)                                                                                 --Win+J
@@ -148,8 +148,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                         0x68),     sendMessage Shrink)                                                                                  --Win+H
     , ((modm,                         0x6c),     sendMessage Expand)                                                                                  --Win+L
     , ((modm,                         0x74),     withFocused $ windows . W.sink)                                                                      --Win+T
-    , ((modm,                     xK_comma),     sendMessage (IncMasterN 1))
-    , ((modm,                    xK_period),     sendMessage (IncMasterN (-1)))
+    , ((modm,                     xK_comma),     sendMessage (IncMasterN 1))                                                                          --Win+Comma
+    , ((modm,                    xK_period),     sendMessage (IncMasterN (-1)))                                                                       --Win+Period
     , ((modm,                         0x62),     sendMessage ToggleStruts)                                                                            --Win+B
     , ((modm     .|. shiftMask,       0x71),     io (exitWith ExitSuccess))                                                                           --Win+Shift+Q
     ]
