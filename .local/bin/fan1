@@ -1,0 +1,3 @@
+#!/bin/sh
+sensors | grep -m 1 'fan1' | awk '{print $2,$3}'
+exit 0

@@ -1,0 +1,3 @@
+#!/bin/sh
+cat /home/haron/.config/gis-weather/cur_temp
+exit 0

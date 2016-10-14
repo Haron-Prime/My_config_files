@@ -1,0 +1,3 @@
+#!/bin/sh
+sensors | grep 'Board' | awk '{print $3}'
+exit 0

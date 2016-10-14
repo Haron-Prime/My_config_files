@@ -1,0 +1,6 @@
+#!/bin/sh
+zenity  --question --text "Вы действительно желаете перезагрузить компьтер?"
+if [ $? = 0 ]
+	then systemctl --user stop transmission && systemctl reboot
+fi
+exit 0
