@@ -1,0 +1,3 @@
+#!/bin/sh
+uptime | cut -d , -f 1 | awk '{print $3 $4}' 
+exit 0
