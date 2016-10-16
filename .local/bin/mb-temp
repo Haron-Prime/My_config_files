@@ -1,3 +1,13 @@
 #!/bin/sh
-sensors | grep 'Board' | awk '{print $3}'
+temp1=`sensors | grep 'Board' | awk '{print $3}'`
+temp2=`sensors | grep 'Board' | awk '{print $3}' | cut -c 2-3`
+if [[ $temp2 > 40 ]]; then
+	if [[ $temp2 > 55 ]]; then
+		echo '<fc=orange>'$temp1'</fc>'
+	else 
+		echo '<fc=yellow>'$temp1'</fc>'
+	fi
+else
+	echo $temp1
+fi
 exit 0
