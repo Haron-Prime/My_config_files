@@ -9,6 +9,7 @@ My config awesome wm, xmonad, xmobar, i3wm, i3blocks, herbstluftwm, zsh etc
 ![](/screenshots/i3wm-1.png?raw=true)
 ![](/screenshots/i3wm-2.png?raw=true)
 ![](/screenshots/herbstluftwm-1.png?raw=true)
+![](/screenshots/herbstluftwm-3.png?raw=true)
 
 #### License - © 2016 WTFPL - http://www.wtfpl.net/ 
 
