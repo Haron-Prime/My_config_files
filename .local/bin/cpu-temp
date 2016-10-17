@@ -1,13 +1,8 @@
 #!/bin/sh
-temp1=`sensors | grep 'temp2' | awk '{print $2}'`
-temp2=`sensors | grep 'temp2' | awk '{print $2}' | cut -c 2-3`
-if [[ $temp2 > 40 ]]; then
-	if [[ $temp2 > 55 ]]; then
-		echo '<fc=orange>'$temp1'</fc>'
-	else 
-		echo '<fc=yellow>'$temp1'</fc>'
-	fi
-else
-	echo $temp1
+temp1=`sensors | grep temp2 | tr -s \  | cut -d \  -f 2`
+temp2=`sensors | grep temp2 | tr -s \  | cut -d \  -f 2 | cut -c 2-3`
+if [ $temp2 -gt 55 ]; then echo '<fc=orange>'$temp1'</fc>'
+elif [ $temp2 -gt 40 ]; then echo '<fc=yellow>'$temp1'</fc>'
+else echo $temp1
 fi
 exit 0
