@@ -1,6 +1,7 @@
 #!/bin/sh
 ROM=`df -h | grep -w / | tr -s \  | cut -d \  -f 5 | cut -c 1-2`
-if [ $ROM -gt 50 ]; then echo '<fc=yellow>'$ROM'%</fc>'
+if [ $ROM -gt 75 ]; then echo '<fc=orange>'$ROM'%</fc>'
+elif [ $ROM -gt 50 ]; then echo '<fc=yellow>'$ROM'%</fc>'
 else echo $ROM'%'
 fi
 exit 0
