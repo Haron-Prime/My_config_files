@@ -27,7 +27,7 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     --, Run Com "fan1" [] "" 50
                     --, Run Com "fan2" [] "" 50
                     , Run Memory ["-t", "RAM:<fn=2> </fn><usedratio>%","-L","50","-H","85","--normal","yellow","--high","orange"] 50
-                    , Run Com "root-disk2" [] "" 100
+                    , Run Com "ROM" [] "" 100
                     , Run Com "xmuptime" [] "" 600
                     --, Run Volume "default" "Master" [] 10
                     , Run Com "vol2.sh" [] "" 10
@@ -40,5 +40,5 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %XMonadLog% }{ <<fc=#88bbdd><</fc><fc=#aaddff><</fc><fc=#88bbdd><</fc><  %enp3s0%  %Net_in% <fc=green>↓</fc><fc=red>↑</fc> %Net_out%  %cpu% %TCpu% %cpu-freq%MHz  MB:<fn=2> </fn>%TMB%  %memory%  ROM:<fn=2> </fn>%root-disk2%  Up:<fn=2> </fn>%xmuptime%  Vol:<fn=2> </fn>%vol2.sh%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#aaddff>%xmtime%</fc>   <fn=1><fc=#aaddff>%weather%</fc></fn>"
+       , template = " %XMonadLog% }{ <<fc=#88bbdd><</fc><fc=#aaddff><</fc><fc=#88bbdd><</fc><  %enp3s0%  %Net_in% <fc=green>↓</fc><fc=red>↑</fc> %Net_out%  %cpu% %TCpu% %cpu-freq%MHz  MB:<fn=2> </fn>%TMB%  %memory%  ROM:<fn=2> </fn>%ROM%  Up:<fn=2> </fn>%xmuptime%  Vol:<fn=2> </fn>%vol2.sh%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#aaddff>%xmtime%</fc>   <fn=1><fc=#aaddff>%weather%</fc></fn>"
        }
