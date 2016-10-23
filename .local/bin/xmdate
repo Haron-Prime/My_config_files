@@ -1,8 +1,8 @@
 #!/bin/sh
-yesterday=`date "+%d.%m.%Y"`
-day=`date "+%A"`
-if [[ $day = "Суббота" ]]; then echo '<fc=yellow>'$day'</fc>' $yesterday
-elif [[ $day = "Воскресенье" ]]; then echo '<fc=orange>'$day'</fc>' $yesterday
-else echo $day $yesterday
+DATA=`date "+%d.%m.%Y"`
+DAY=`date "+%A"`
+if [[ $DAY = "Суббота" ]]; then echo '<fc=yellow>'$DAY'</fc>' $DATA
+elif [[ $DAY = "Воскресенье" ]]; then echo '<fc=orange>'$DAY'</fc>' $DATA
+else echo $DAY $DATA
 fi
 exit 0
