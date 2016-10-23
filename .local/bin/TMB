@@ -1,7 +1,8 @@
 #!/bin/sh
 temp1=`sensors | grep Board | tr -s \  | cut -d \  -f 3 | cut -c 2-3`
-if [ $temp1 -gt 55 ]; then echo '<fc=orange>+'$temp1'.0°C</fc>'
-elif [ $temp1 -gt 40 ]; then echo '<fc=yellow>+'$temp1'.0°C</fc>'
-else echo '+'$temp1'.0°C'
+temp2=`sensors | grep Board | tr -s \  | cut -d \  -f 3`
+if [ $temp1 -gt 55 ]; then echo '<fc=orange>'$temp2'</fc>'
+elif [ $temp1 -gt 40 ]; then echo '<fc=yellow>'$temp2'</fc>'
+else echo $temp2
 fi
 exit 0
