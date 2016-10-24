@@ -19,6 +19,7 @@ import XMonad.Actions.Promote
 import XMonad.Actions.SpawnOn
 import XMonad.Actions.SwapWorkspaces
 import XMonad.Actions.UpdateFocus
+-- import XMonad.Actions.WindowGo
  
 -- Hooks
 import XMonad.Hooks.DynamicLog
@@ -124,7 +125,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
     , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Alt+W
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart")                                                      --Win+Q
-    , ((modm,                         0x78),     spawn "xmbr")                                                                                        --Win+X
+    , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
     --, ((modm,                         0x70),     spawn "gmrun")                                                                                       --Wim+P
     , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
  
@@ -182,7 +183,7 @@ myLayout =  avoidStruts
             $ smartBorders
             $ onWorkspace "W"  (Full  ||| tiled ||| GridRatio 1)
             $ onWorkspace "M"  (tiled ||| Full)
-            $ onWorkspace "E"  (Full  ||| tiled ||| GridRatio 1) 
+            $ onWorkspace "E"  (Mirror tiled ||| tiled ||| Full) 
             $ onWorkspace "F"  (Full  ||| tiled ||| Grid)
             $ onWorkspace "S"  (Full  ||| tiled ||| Mirror tiled)
             $ onWorkspace "V"  (Full  ||| tiled)
@@ -292,6 +293,7 @@ myManageHook = composeAll . concat $
     myFloatA  = ["lxappearance","xarchiver","gmrun"]
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
+
     role      = stringProperty "WM_WINDOW_ROLE"
 
  
@@ -301,7 +303,7 @@ myEventHook = fullscreenEventHook <+> docksEventHook
 -- Status bars and logging.
 myLogHook = dynamicLogString $ xmobarPP {
           ppCurrent         = xmobarColor "#9fdfff" ""
-        , ppTitle           = xmobarColor "#999" "" . shorten 44
+        , ppTitle           = xmobarColor "#959595" "" . shorten 44
         }
  
 -- Startup hook
@@ -335,11 +337,11 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     l = 1 - w   -- distance from left edge
  
 main = do
-    xmonad =<< xmobar defaults
+    xmonad =<< xmobar myConfig
 encodeCChar :: B.ByteString -> [CChar]
 encodeCChar = map fromIntegral . B.unpack
  
-defaults = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen = Focused } defaultConfig {
+myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen = Focused } defaultConfig {
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
         borderWidth        = myBorderWidth,
