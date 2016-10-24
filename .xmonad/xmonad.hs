@@ -33,16 +33,16 @@ import XMonad.Hooks.WorkspaceByPos
 import XMonad.Hooks.UrgencyHook hiding (Never)
  
 -- Layouts
-import XMonad.Layout.Accordion
---import XMonad.Layout.CenteredMaster
+-- import XMonad.Layout.Accordion
+-- import XMonad.Layout.CenteredMaster
 import XMonad.Layout.Grid
 import XMonad.Layout.IM
 import XMonad.Layout.LayoutCombinators
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Spacing
---import XMonad.Layout.TwoPane
---import XMonad.Layout.Tabbed
+-- import XMonad.Layout.TwoPane
+-- import XMonad.Layout.Tabbed
 import qualified XMonad.Layout.ToggleLayouts as Tog
  
 -- Prompts
@@ -189,7 +189,7 @@ myLayout =  avoidStruts
             $ onWorkspace "V"  (Full  ||| tiled)
             $ onWorkspace "P"  (Full  ||| tiled ||| Grid)
             $ onWorkspace "J"  (Full  ||| Grid)
-            $ onWorkspace "T"  (Full  ||| Accordion ||| (Mirror $ Accordion))
+            $ onWorkspace "T"  (Full  ||| tiled)
             $ onWorkspace "VM" (Full  ||| Grid)
             $ onWorkspace "IM" (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
             $ onWorkspace "XII"(Grid  ||| tiled ||| Mirror tiled)
@@ -240,7 +240,7 @@ myManageHook = composeAll . concat $
     , [title     =? t             --> doCenterFloat                | t <- myFloatT]
     , [role      =? r             --> doCenterFloat                | r <- myFloatR]
 
-    , [title     =? "LibreOffice" --> doF (W.shift "E")]
+    -- , [title     =? "LibreOffice" --> doF (W.shift "E")]
  
     , [currentWs =? "W"           --> insertPosition Below Newer]
  
@@ -259,16 +259,6 @@ myManageHook = composeAll . concat $
     , [isDialog                   --> doCenterFloat]
 
     , [isFullscreen               --> doFullFloat]
-
-    -- , [stringProperty "WM_WINDOW_ROLE" =? "About"             --> doCenterFloat]
-
-    -- , [stringProperty "WM_WINDOW_ROLE" =? "task_dialog"       --> doCenterFloat]
-
-    -- , [stringProperty "WM_WINDOW_ROLE" =? "messages"          --> doCenterFloat]
-
-    -- , [stringProperty "WM_WINDOW_ROLE" =? "pop-up"            --> doCenterFloat]
-
-    -- , [stringProperty "WM_WINDOW_ROLE" =? "^conversation$"    --> doFloat]
 
     , [transience']
  
