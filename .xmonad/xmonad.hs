@@ -101,7 +101,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((modm,                       0xffc9),     spawn "urxvtc -name term")                                                                           --Win+F12
     , ((0,                          0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Print
     , ((mod1Mask,                   0xff61),     spawn "scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                     --Alt+Print
-	--, ((mod1Mask,                     0x61),     spawn "xterm")                                                                                       --Alt+A
+    --, ((mod1Mask,                     0x61),     spawn "xterm")                                                                                       --Alt+A
     --, ((mod1Mask,                     0x62),     spawn "baobab")                                                                                      --Alt+B
     --, ((mod1Mask,                     0x63),     spawn "chromium")                                                                                    --Alt+C
     , ((mod1Mask,                     0x64),     spawn "deadbeef")                                                                                    --Alt+D
@@ -116,12 +116,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((mod1Mask,                     0x6f),     spawn "opera-developer")                                                                             --Alt+O
     , ((mod1Mask,                     0x70),     spawn "wine /home/haron/lib/Pro100-5.20-GIV/PRO100.exe")                                             --Alt+P
     , ((mod1Mask,                     0x71),     spawn "pavucontrol")                                                                                 --Alt+Q
-	, ((mod1Mask,                     0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
+    , ((mod1Mask,                     0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
     -- , ((mod1Mask .|. controlMask,     0x72),     spawn "urxvtc -name home -e ranger")                                                                 --Alt+Ctrl+R
     , ((mod1Mask,                     0x73),     spawn "subl3")                                                                                       --Alt+S
     , ((mod1Mask .|. shiftMask,       0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
     , ((mod1Mask,                     0x74),     spawn "telegram-desktop")                                                                            --Alt+T
-	, ((mod1Mask .|. shiftMask,       0x74),     spawn "tor-browser")                                                                                 --Alt+Shift+T
+    , ((mod1Mask .|. shiftMask,       0x74),     spawn "tor-browser")                                                                                 --Alt+Shift+T
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
     , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Alt+W
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart")                                                      --Win+Q
@@ -260,7 +260,7 @@ myManageHook = composeAll . concat $
 
     , [isFullscreen               --> doFullFloat]
 
-	-- , [stringProperty "WM_WINDOW_ROLE" =? "About"             --> doCenterFloat]
+    -- , [stringProperty "WM_WINDOW_ROLE" =? "About"             --> doCenterFloat]
 
     -- , [stringProperty "WM_WINDOW_ROLE" =? "task_dialog"       --> doCenterFloat]
 
@@ -320,9 +320,9 @@ mynameScratchpads = [ NS "ncmpcpp" "urxvtc -name ncmpcpp -e ncmpcpp" (appName =?
                 , NS "Mirage" "mirage" (className =? "Mirage") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                 , NS "font-manager" "font-manager" (className =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                 --, NS "Telegram" "telegram" (className =? "Telegram") (customFloating $ W.RationalRect 0.8 0.02 0.2 0.98)
-				, NS "page-info" "page-info " (stringProperty "WM_WINDOW_ROLE" =? "page-info") (customFloating $ W.RationalRect 0.15 0.15 0.7 0.7)
-				, NS "Organizer" "Organizer" (stringProperty "WM_WINDOW_ROLE" =? "Organizer") (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-				]
+                , NS "page-info" "page-info " (stringProperty "WM_WINDOW_ROLE" =? "page-info") (customFloating $ W.RationalRect 0.15 0.15 0.7 0.7)
+                , NS "Organizer" "Organizer" (stringProperty "WM_WINDOW_ROLE" =? "Organizer") (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+                ]
  
 -- Scratchpad
 --
