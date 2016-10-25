@@ -1,0 +1,3 @@
+#!/bin/sh
+vnstat | grep total | grep TiB | awk '{print $8$9}'
+exit 0
