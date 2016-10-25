@@ -36,8 +36,6 @@ env | cut -d'=' -f1 | tee "$config/.env" | \
         eval $hc setenv $e \"\$$e\"
     done
 
-xsetroot -solid '#000000'
-
 # keybindings
 # if you have a super key you will be much happier with Mod set to Mod4
 # Mod=Mod1    # Use alt as the main modifier
@@ -141,6 +139,7 @@ hc keybind XF86AudioMute           spawn pulseaudio-ctl mute
 hc keybind XF86AudioLowerVolume    spawn pulseaudio-ctl down
 hc keybind XF86AudioRaiseVolume    spawn pulseaudio-ctl up
 hc keybind XF86Play                spawn mpc toggle
+hc keybind $Mod-grave              spawn mpc toggle
 hc keybind XF86AudioStop           spawn mpc stop
 hc keybind XF86AudioPrev           spawn mpc prev
 hc keybind XF86AudioNext           spawn mpc next

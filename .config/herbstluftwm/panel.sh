@@ -83,11 +83,11 @@ hc pad $monitor $panel_height
         # and then waits for the next event to happen.
         bordercolor="#26221C"
         separator="^bg()^fg($selbg)|"
-        # enp3s0=`speed.sh`
+        enp3s0=`speed.sh`
         # net_in=`vnstat | grep 'today' | awk '{print $2,$3}'`
         # net_out=`vnstat | grep 'today' | awk '{print $5,$6}'`
-        # cpu=`cpu_usage`
-        # cputemp=`sensors | grep 'temp2' | cut -c 16-19`
+        cpu=`cpu_usage`
+        cputemp=`sensors | grep 'temp2' | cut -c 15-19`
         # cpufreq=`cat /proc/cpuinfo | grep MHz | tail -1 | cut -c 12-15`
         vol=`vol2.sh`
         lang=`skb 1`
@@ -129,7 +129,7 @@ hc pad $monitor $panel_height
         # echo -n "$separator"
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
         # small adjustments
-        right="^fg(#959595)Vol: $vol   ^fg(#a5d5f5)$lang   $date"
+        right="Net: $enp3s0   CPU: $cpu $cputemp   Vol: $vol   ^fg(#aaddff)$lang   $date"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
         # get width of right aligned text.. and add some space..
         width=$($textwidth "$font" "$right_text_only  ")

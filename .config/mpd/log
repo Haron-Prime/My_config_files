@@ -1,1 +1,153 @@
-Oct 08 18:16 : avahi: Service 'Music Player' successfully established.
+Oct 22 09:16 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 09:16 : avahi: Service 'Music Player' successfully established.
+Oct 22 09:35 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/01. In The Flesh.m4a"
+Oct 22 17:21 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 17:21 : avahi: Service 'Music Player' successfully established.
+Oct 22 19:53 : client: [0] opened from 127.0.0.1:44080
+Oct 22 19:53 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/01. In The Flesh.m4a"
+Oct 22 19:53 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 19:53 : client: [0] closed
+Oct 22 19:56 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 19:56 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/01. In The Flesh.m4a"
+Oct 22 19:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 19:59 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/02. The Thin Ice.m4a"
+Oct 22 20:02 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:02 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/03. Another Brick In The Wall (Part 1).m4a"
+Oct 22 20:04 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:04 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/04. The Happiest Days Of Our Lives.m4a"
+Oct 22 20:08 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:08 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/05. Another Brick In The Wall (Part 2).m4a"
+Oct 22 20:13 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:13 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/06. Mother.m4a"
+Oct 22 20:16 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:16 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/07. Goodbye Blue Sky.m4a"
+Oct 22 20:18 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:18 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/08. Empty Spaces.m4a"
+Oct 22 20:22 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:22 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/09. Young Lust.m4a"
+Oct 22 20:25 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:25 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/10. One of My Turns.m4a"
+Oct 22 20:30 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:30 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/11. Don't Leave Me Now.m4a"
+Oct 22 20:31 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:31 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/12. Another Brick In The Wall (Part 3).m4a"
+Oct 22 20:32 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:32 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/13. Goodbye Cruel World.m4a"
+Oct 22 20:37 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:37 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/01. Hey You.m4a"
+Oct 22 20:39 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:39 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/02. Is There Anybody Out There.m4a"
+Oct 22 20:43 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:43 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/03. Nobody Home.m4a"
+Oct 22 20:44 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:45 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/04. Vera.m4a"
+Oct 22 20:46 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:46 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/05. Bring The Boys Back Home.m4a"
+Oct 22 20:52 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:52 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/06. Comfortably Numb.m4a"
+Oct 22 20:54 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:54 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/07. The Show Must Go On.m4a"
+Oct 22 20:58 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 22 20:58 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/08. In The Flesh.m4a"
+Oct 22 21:01 : client: [1] opened from 127.0.0.1:47622
+Oct 22 21:01 : client: [1] closed
+Oct 23 00:09 : avahi: Client Disconnected, will reconnect shortly
+Oct 23 00:09 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Oct 23 00:09 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/09. Run Like Hell.m4a"
+Oct 23 10:29 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 23 10:29 : avahi: Service 'Music Player' successfully established.
+Oct 23 10:37 : avahi: Client Disconnected, will reconnect shortly
+Oct 23 10:37 : avahi: Client Disconnected, will reconnect shortly
+Oct 23 10:37 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Oct 23 10:37 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/09. Run Like Hell.m4a"
+Oct 23 10:38 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 23 10:38 : avahi: Service 'Music Player' successfully established.
+Oct 23 17:37 : client: [0] opened from 127.0.0.1:57260
+Oct 23 17:37 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/09. Run Like Hell.m4a"
+Oct 23 17:37 : client: [0] closed
+Oct 23 17:37 : client: [1] opened from 127.0.0.1:57264
+Oct 23 17:37 : client: [1] closed
+Oct 23 17:42 : player: played "Foreign/Amethystium/2001 - Odonata/01 - Opaque.m4a"
+Oct 23 17:47 : player: played "Foreign/Amethystium/2001 - Odonata/02 - Ilona.m4a"
+Oct 23 17:53 : player: played "Foreign/Amethystium/2001 - Odonata/03 - Enchantment.m4a"
+Oct 23 17:57 : player: played "Foreign/Amethystium/2001 - Odonata/04 - Dreamdance.m4a"
+Oct 23 18:00 : player: played "Foreign/Amethystium/2001 - Odonata/05 - Tinuviel.m4a"
+Oct 23 18:05 : player: played "Foreign/Amethystium/2001 - Odonata/06 - Avalon.m4a"
+Oct 23 18:10 : player: played "Foreign/Amethystium/2001 - Odonata/07 - Calantha.m4a"
+Oct 23 18:14 : player: played "Foreign/Amethystium/2001 - Odonata/08 - Odyssey.m4a"
+Oct 23 18:17 : player: played "Foreign/Amethystium/2001 - Odonata/09 - Fairyland.m4a"
+Oct 23 18:22 : player: played "Foreign/Amethystium/2001 - Odonata/10 - Paean.m4a"
+Oct 23 18:26 : player: played "Foreign/Amethystium/2001 - Odonata/11 - Arcane Voices.m4a"
+Oct 23 18:29 : client: [2] opened from 127.0.0.1:60310
+Oct 23 18:29 : client: [2] closed
+Oct 24 00:08 : player: played "Foreign/Amethystium/2001 - Odonata/12 - Ascension.m4a"
+Oct 24 09:14 : avahi: Service 'Music Player' successfully established.
+Oct 24 09:59 : client: [0] opened from 127.0.0.1:56322
+Oct 24 09:59 : client: [0] closed
+Oct 24 10:01 : player: played "Foreign/Amethystium/2001 - Odonata/12 - Ascension.m4a"
+Oct 24 10:05 : player: played "Foreign/Amethystium/2001 - Odonata/13 - Ethereal.m4a"
+Oct 24 10:08 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 10:09 : player: played "Foreign/Amethystium/2001 - Odonata/14 - Lhasa.m4a"
+Oct 24 10:14 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 10:14 : player: played "Foreign/Amethystium/2003 - Aphelion/01 - Shadow to Light.m4a"
+Oct 24 10:20 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 10:20 : player: played "Foreign/Amethystium/2003 - Aphelion/02 - Garden of Sakuntala.m4a"
+Oct 24 10:26 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 10:26 : player: played "Foreign/Amethystium/2003 - Aphelion/03 - Exultation.m4a"
+Oct 24 10:32 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 10:33 : player: played "Foreign/Amethystium/2003 - Aphelion/04 - Ad Astra.m4a"
+Oct 24 10:38 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 10:39 : player: played "Foreign/Amethystium/2003 - Aphelion/05 - Gates of Morpheus.m4a"
+Oct 24 10:44 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 10:44 : player: played "Foreign/Amethystium/2003 - Aphelion/06 - Autumn Interlude.m4a"
+Oct 24 10:50 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 10:50 : player: played "Foreign/Amethystium/2003 - Aphelion/07 - Elvensong.m4a"
+Oct 24 10:55 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 10:55 : player: played "Foreign/Amethystium/2003 - Aphelion/08 - Shibumi.m4a"
+Oct 24 10:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 10:59 : client: [1] opened from 127.0.0.1:58518
+Oct 24 10:59 : client: [1] closed
+Oct 24 12:36 : player: played "Foreign/Amethystium/2003 - Aphelion/09 - Hymnody.m4a"
+Oct 24 12:37 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 12:37 : avahi: Service 'Music Player' successfully established.
+Oct 24 12:37 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 17:15 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 17:15 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 17:15 : avahi: Service 'Music Player' successfully established.
+Oct 24 17:18 : player: played "Foreign/Amethystium/2003 - Aphelion/09 - Hymnody.m4a"
+Oct 24 17:19 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 17:19 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 17:19 : avahi: Service 'Music Player' successfully established.
+Oct 24 17:24 : player: played "Foreign/Amethystium/2003 - Aphelion/09 - Hymnody.m4a"
+Oct 24 17:25 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 17:25 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 17:25 : avahi: Service 'Music Player' successfully established.
+Oct 24 17:57 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 17:57 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 17:57 : avahi: Service 'Music Player' successfully established.
+Oct 24 17:59 : player: played "Foreign/Amethystium/2003 - Aphelion/09 - Hymnody.m4a"
+Oct 24 17:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 17:59 : avahi: Service 'Music Player' successfully established.
+Oct 24 17:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 18:41 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 18:41 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 18:41 : avahi: Service 'Music Player' successfully established.
+Oct 24 19:03 : avahi: Client Disconnected, will reconnect shortly
+Oct 24 19:03 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Oct 24 19:03 : player: played "Foreign/Amethystium/2003 - Aphelion/09 - Hymnody.m4a"
+Oct 24 19:05 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 19:05 : avahi: Service 'Music Player' successfully established.
+Oct 24 19:05 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 20:18 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 20:18 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 24 20:18 : avahi: Service 'Music Player' successfully established.
+Oct 25 00:07 : avahi: Client Disconnected, will reconnect shortly
+Oct 25 00:07 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Oct 25 00:07 : player: played "Foreign/Amethystium/2003 - Aphelion/09 - Hymnody.m4a"
+Oct 25 09:55 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 25 09:55 : avahi: Service 'Music Player' successfully established.
+Oct 25 09:55 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 25 12:56 : player: played "Foreign/Amethystium/2003 - Aphelion/09 - Hymnody.m4a"
+Oct 25 12:57 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 25 12:57 : avahi: Service 'Music Player' successfully established.
+Oct 25 12:57 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set

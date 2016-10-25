@@ -273,6 +273,8 @@ let g:gundo_right = 1
 
 set backup
 
+set rtp+=~/.fzf
+
 " сохранять умные резервные копии ежедневно
 function! BackupDir()
 	" определим каталог для сохранения резервной копии

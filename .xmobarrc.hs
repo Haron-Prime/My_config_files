@@ -6,7 +6,7 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
        , fgColor = "#959595"
        , alpha = 1
        --, position = Static { xpos = 0, ypos = 0, width = 1850, height = 20 }
-       , position = TopP 0 66
+       , position = TopP 0 54
        , textOffset = -1
        , iconOffset = -1
        , lowerOnStart = True
@@ -36,5 +36,5 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %XMonadLog% }{ <<fc=#88bbdd><</fc><fc=#aaddff><</fc><fc=#88bbdd><</fc><  %enp3s0%  %Net_in%<fn=2> </fn><fc=green>↓</fc><fc=red>↑</fc><fn=2> </fn>%Net_out%  %cpu% %TCpu%  MB:<fn=2> </fn>%TMB%  VC:<fn=2> </fn>%TNV%  %memory%  ROM:<fn=2> </fn>%ROM%  Up:<fn=2> </fn>%xmuptime%  Vol:<fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#aaddff>%xmtime%</fc>   <fn=1><fc=#aaddff>%weather%</fc></fn>"
+       , template = " %XMonadLog% }{ <<fc=#88bbdd><</fc><fc=#aaddff><</fc><fc=#88bbdd><</fc><  %enp3s0%  %Net_in%<fn=2> </fn><fc=green>↓</fc><fc=red>↑</fc><fn=2> </fn>%Net_out%  %cpu% %TCpu%  MB:<fn=2> </fn>%TMB%  GPU:<fn=2> </fn>%TNV%  %memory%  ROM:<fn=2> </fn>%ROM%  Up:<fn=2> </fn>%xmuptime%  Vol:<fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#aaddff>%xmtime%</fc>  <fn=1><fc=#aaddff>%weather%</fc></fn>"
        }
