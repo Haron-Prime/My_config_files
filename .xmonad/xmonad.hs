@@ -181,7 +181,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout =  avoidStruts
             $ Tog.toggleLayouts (noBorders Full) 
             $ smartBorders
-            $ onWorkspace "W"  (Full  ||| tiled ||| GridRatio 1)
+            $ onWorkspace "W"  (Full  ||| tiled)
             $ onWorkspace "M"  (tiled ||| Full)
             $ onWorkspace "E"  (Mirror tiled ||| tiled ||| Full) 
             $ onWorkspace "F"  (Full  ||| tiled ||| Grid)

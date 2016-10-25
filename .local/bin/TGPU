@@ -2,7 +2,7 @@
 temp1=`sensors | grep temp1 | tail -1 | tr -s \  | cut -d \  -f 2 | cut -c 2-3`
 temp2=`sensors | grep temp1 | tail -1 | tr -s \  | cut -d \  -f 2`
 if [ $temp1 -gt 59 ]; then echo '<fc=orange>'$temp2'</fc>'
-elif [ $temp1 -gt 49 ]; then echo '<fc=yellow>'$temp2'</fc>'
+elif [ $temp1 -gt 44 ]; then echo '<fc=yellow>'$temp2'</fc>'
 else echo $temp2
 fi
 exit 0
