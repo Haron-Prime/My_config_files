@@ -1,3 +1,0 @@
-#!/bin/sh
-df -h | grep -w / | awk '{print $5}'
-exit 0
