@@ -293,7 +293,8 @@ myEventHook = fullscreenEventHook <+> docksEventHook
 -- Status bars and logging.
 myLogHook = dynamicLogString $ xmobarPP {
           ppCurrent         = xmobarColor "#9fdfff" ""
-        , ppTitle           = xmobarColor "#959595" "" . shorten 38
+        -- , ppTitle           = xmobarColor "#959595" "" . shorten 38
+        , ppTitle           = (\str -> "")
         }
  
 -- Startup hook
