@@ -21,10 +21,10 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     , Run Com "Net_in" [] "" 600
                     , Run Com "Net_out" [] "" 600
                     , Run Cpu ["-t","CPU:<fn=2> </fn><total>%","-L","25","-H","75","--normal","yellow","--high","orange"] 10
-                    , Run Com "TCpu" [] "" 10
+                    , Run Com "TCPU" [] "" 10
                     -- , Run Com "cpu-freq" [] "" 100
                     , Run Com "TMB" [] "" 10
-                    , Run Com "TNV" [] "" 10
+                    , Run Com "TGPU" [] "" 10
                     , Run Memory ["-t", "RAM:<fn=2> </fn><usedratio>%","-L","50","-H","85","--normal","yellow","--high","orange"] 50
                     , Run Com "ROM" [] "" 100
                     , Run Com "xmuptime" [] "" 600
@@ -36,5 +36,5 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %XMonadLog% }{ <<fc=#88bbdd><</fc><fc=#aaddff><</fc><fc=#88bbdd><</fc><  %enp3s0%  %Net_in%<fn=2> </fn><fc=green>↓</fc><fc=red>↑</fc><fn=2> </fn>%Net_out%  %cpu% %TCpu%  MB:<fn=2> </fn>%TMB%  GPU:<fn=2> </fn>%TNV%  %memory%  ROM:<fn=2> </fn>%ROM%  Up:<fn=2> </fn>%xmuptime%  Vol:<fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#aaddff>%xmtime%</fc>  <fn=1><fc=#aaddff>%weather%</fc></fn>"
+       , template = " %XMonadLog% }{ <<fc=#88bbdd><</fc><fc=#aaddff><</fc><fc=#88bbdd><</fc>< %enp3s0%  %Net_in%<fn=2> </fn><fc=green>↓</fc><fc=red>↑</fc><fn=2> </fn>%Net_out%  %cpu% %TCPU%  MB:<fn=2> </fn>%TMB%  GPU:<fn=2> </fn>%TGPU%  %memory%  ROM:<fn=2> </fn>%ROM%  Up:<fn=2> </fn>%xmuptime%  Vol:<fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#aaddff>%xmtime%</fc>  <fn=1><fc=#aaddff>%weather%</fc></fn>"
        }
