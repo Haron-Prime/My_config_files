@@ -266,7 +266,7 @@ myManageHook = composeAll . concat $
  
     ]
     where
-    myWeb     = ["Firefox","Opera","Tor Browser","vivaldi-snapshot"]
+    myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
     myMail    = ["Thunderbird"]
     myEdit    = ["Subl3","Et","Wps","Wpp","Acroread","FoxitReader"]
     myFile    = ["Pcmanfm"]

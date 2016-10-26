@@ -1,0 +1,25 @@
+Oct 26 10:25 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 26 10:25 : avahi: Service 'Music Player' successfully established.
+Oct 26 12:07 : client: [0] opened from 127.0.0.1:59996
+Oct 26 12:07 : client: [0] closed
+Oct 26 12:12 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 26 12:12 : player: played "Foreign/Amethystium/2008 - Isabliss/03 - Treasure.m4a"
+Oct 26 12:17 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 26 12:17 : player: played "Foreign/Amethystium/2008 - Isabliss/04 - Unbounded.m4a"
+Oct 26 12:22 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 26 12:22 : player: played "Foreign/Amethystium/2008 - Isabliss/05 - Anthemoessa.m4a"
+Oct 26 12:27 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 26 12:27 : player: played "Foreign/Amethystium/2008 - Isabliss/06 - Automne.m4a"
+Oct 26 12:32 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 26 12:32 : player: played "Foreign/Amethystium/2008 - Isabliss/07 - Strangely Beautiful.m4a"
+Oct 26 12:37 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 26 12:37 : player: played "Foreign/Amethystium/2008 - Isabliss/08 - Frosty Morning Bliss.m4a"
+Oct 26 12:42 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 26 12:42 : player: played "Foreign/Amethystium/2008 - Isabliss/09 - Silken Twine.m4a"
+Oct 26 12:47 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 26 12:47 : player: played "Foreign/Amethystium/2008 - Isabliss/10 - Dreamlike Insomnia.m4a"
+Oct 26 12:52 : client: [1] opened from 127.0.0.1:33496
+Oct 26 12:52 : client: [1] closed
+Oct 26 12:52 : client: [2] opened from 127.0.0.1:33498
+Oct 26 12:52 : client: [2] closed
+Oct 26 12:52 : player: played "Foreign/Amethystium/2008 - Isabliss/11 - Elegy.m4a"
