@@ -41,6 +41,7 @@ import XMonad.Layout.LayoutCombinators
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Spacing
+import XMonad.Layout.MouseResizableTile
 -- import XMonad.Layout.TwoPane
 -- import XMonad.Layout.Tabbed
 import qualified XMonad.Layout.ToggleLayouts as Tog
@@ -181,18 +182,18 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout =  avoidStruts
             $ Tog.toggleLayouts (noBorders Full) 
             $ smartBorders
-            $ onWorkspace "W"  (Full  ||| tiled)
-            $ onWorkspace "M"  (tiled ||| Full)
-            $ onWorkspace "E"  (Mirror tiled ||| tiled ||| Full) 
-            $ onWorkspace "F"  (Full  ||| tiled ||| Grid)
-            $ onWorkspace "S"  (Full  ||| tiled ||| Mirror tiled)
-            $ onWorkspace "V"  (Full  ||| tiled)
-            $ onWorkspace "P"  (Full  ||| tiled ||| Grid)
+            $ onWorkspace "W"  (Full  ||| tiled ||| mouseResizableTile)
+            $ onWorkspace "M"  (mouseResizableTile ||| Full)
+            $ onWorkspace "E"  (Mirror tiled ||| mouseResizableTile ||| Full) 
+            $ onWorkspace "F"  (Full  ||| mouseResizableTile ||| Grid)
+            $ onWorkspace "S"  (Full  ||| mouseResizableTile ||| Mirror tiled)
+            $ onWorkspace "V"  (Full  ||| mouseResizableTile)
+            $ onWorkspace "P"  (Full  ||| mouseResizableTile ||| Grid)
             $ onWorkspace "J"  (Full  ||| Grid)
-            $ onWorkspace "T"  (Full  ||| tiled)
+            $ onWorkspace "T"  (Full  ||| mouseResizableTile)
             $ onWorkspace "VM" (Full  ||| Grid)
             $ onWorkspace "IM" (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-            $ onWorkspace "XII"(Grid  ||| tiled ||| Mirror tiled)
+            $ onWorkspace "XII"(Grid  ||| mouseResizableTile ||| Mirror tiled)
             $ tiled ||| Mirror tiled  ||| Full
   where
     tiled   = Tall nmaster delta ratio
