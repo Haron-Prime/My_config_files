@@ -21,18 +21,18 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     , Run Com "Net_in" [] "" 600
                     , Run Com "Net_out" [] "" 600
                     , Run Com "Net_all" [] "" 600
-                    , Run Cpu ["-t","CPU:<fn=2> </fn><total>%","-L","25","-H","75","--normal","#DFD700","--high","#FF4500"] 10
+                    , Run Cpu ["-t","CPU:<fn=2> </fn><total>%","-L","25","-H","75","--normal","#dfdf00","--high","#ff6500"] 10
                     , Run Com "TCPU" [] "" 10
                     -- , Run Com "cpu-freq" [] "" 100
                     , Run Com "TMB" [] "" 10
                     , Run Com "TGPU" [] "" 10
                     -- , Run Com "fan1" [] "" 30
                     -- , Run Com "fan2" [] "" 30
-                    , Run Memory ["-t", "RAM:<fn=2> </fn><usedratio>%","-L","50","-H","85","--normal","#DFD700","--high","#FF4500"] 50
+                    , Run Memory ["-t", "RAM:<fn=2> </fn><usedratio>%","-L","50","-H","85","--normal","#dfdf00","--high","#ff6500"] 50
                     , Run Com "ROM" [] "" 100
                     , Run Com "xmuptime" [] "" 600
                     , Run Com "XVol" [] "" 10
-                    , Run Kbd [("us", "<fc=#aaddff>EN</fc>"), ("ru", "<fc=#FF4500>RU</fc>")]
+                    , Run Kbd [("us", "<fc=#aaddff>EN</fc>"), ("ru", "<fc=#ff6500>RU</fc>")]
                     , Run Com "xmdate" [] "" 600
                     , Run Com "xmtime" [] "" 10
                     , Run Com "weather" [] "" 600
