@@ -9,7 +9,6 @@ import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 import qualified Data.ByteString as B
 
- 
 -- Actions
 import XMonad.Actions.CycleWS
 import XMonad.Actions.FloatSnap
@@ -20,7 +19,7 @@ import XMonad.Actions.SpawnOn
 import XMonad.Actions.SwapWorkspaces
 import XMonad.Actions.UpdateFocus
 -- import XMonad.Actions.WindowGo
- 
+
 -- Hooks
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
@@ -31,7 +30,7 @@ import XMonad.Hooks.Place
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceByPos
 import XMonad.Hooks.UrgencyHook hiding (Never)
- 
+
 -- Layouts
 -- import XMonad.Layout.Accordion
 -- import XMonad.Layout.CenteredMaster
@@ -45,19 +44,19 @@ import XMonad.Layout.MouseResizableTile
 -- import XMonad.Layout.TwoPane
 -- import XMonad.Layout.Tabbed
 import qualified XMonad.Layout.ToggleLayouts as Tog
- 
+
 -- Prompts
 import XMonad.Prompt
 import XMonad.Prompt.Man
 import XMonad.Prompt.RunOrRaise
 import XMonad.Prompt.Shell
- 
+
 -- Utils
 import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
- 
+
 myBrowser            = "vivaldi-snapshot"
 myTerminal           = "urxvtc"
 myShell              = "zsh"
@@ -71,7 +70,7 @@ myNormalBorderColor  = "#151515"
 myFocusedBorderColor = "#9df"
 myFont               = "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 scratchPad = scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
- 
+
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
@@ -129,7 +128,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
     --, ((modm,                         0x70),     spawn "gmrun")                                                                                       --Wim+P
     , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
- 
+
     , ((mod1Mask,                   0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
     , ((mod1Mask,                   0xffbf),     shellPrompt myXPConfig)                                                                              --Alt+F2
     , ((mod1Mask,                   0xffc0),     runOrRaisePrompt myXPConfig)                                                                         --Alt+F3
@@ -156,7 +155,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,       0x71),     io (exitWith ExitSuccess))                                                                           --Win+Shift+Q
     ]
     ++
- 
+
     [((m .|. modm, k), windows $ f i)
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1, xK_2, xK_3, xK_4, xK_5, xK_6, xK_7, xK_8, xK_9, xK_0, xK_minus, xK_equal]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
@@ -165,7 +164,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
         | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
- 
+
 -- Mouse bindings: default actions bound to mouse events
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
  
@@ -177,7 +176,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm, button3), (\w -> focus w >> mouseResizeWindow w
                                        >> windows W.shiftMaster))
     ]
- 
+
 -- Layouts:
 myLayout =  avoidStruts
             $ Tog.toggleLayouts (noBorders Full) 
@@ -205,7 +204,7 @@ myLayout =  avoidStruts
 myIMLayout = withIM (1%7) psi Grid
     where
       psi   = And (ClassName "psi") (Role "main")
- 
+
 -- XP
 myXPConfig = defaultXPConfig {
           font              = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
@@ -219,7 +218,7 @@ myXPConfig = defaultXPConfig {
         , alwaysHighlight   = True
         , historySize       = 100
     }
- 
+
 -- Window rules:
 myManageHook = composeAll . concat $
     [ 
@@ -235,36 +234,36 @@ myManageHook = composeAll . concat $
     , [className =? c             --> doF (W.shift "VM")           | c <- myVM]
     , [className =? c             --> doF (W.shift "IM")           | c <- myIM]
     , [appName   =? c             --> doF (W.shift "XII")          | c <- myTerm]
- 
+
     , [className =? c             --> doCenterFloat                | c <- myFloatC]
     , [appName   =? a             --> doCenterFloat                | a <- myFloatA]
     , [title     =? t             --> doCenterFloat                | t <- myFloatT]
     , [role      =? r             --> doCenterFloat                | r <- myFloatR]
 
     -- , [title     =? "LibreOffice" --> doF (W.shift "E")]
- 
+
     , [currentWs =? "W"           --> insertPosition Below Newer]
- 
+
     , [currentWs =? "M"           --> insertPosition Below Newer]
 
     , [currentWs =? "T"           --> insertPosition Below Newer]
 
     , [currentWs =? "E"           --> insertPosition Below Newer]
- 
+
     , [currentWs =? "VM"          --> insertPosition Below Newer]
- 
+
     , [currentWs =? "XII"         --> insertPosition Below Newer]
 
     , [resource  =? "stalonetray" --> doIgnore]
- 
+
     , [isDialog                   --> doCenterFloat]
 
     , [isFullscreen               --> doFullFloat]
 
     , [transience']
- 
+
     , [manageDocks]
- 
+
     ]
     where
     myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
@@ -287,7 +286,6 @@ myManageHook = composeAll . concat $
 
     role      = stringProperty "WM_WINDOW_ROLE"
 
- 
 -- Event handling
 myEventHook = fullscreenEventHook <+> docksEventHook
  
@@ -297,7 +295,7 @@ myLogHook = dynamicLogString $ xmobarPP {
         -- , ppTitle           = xmobarColor "#959595" "" . shorten 38
         , ppTitle           = (\str -> "")
         }
- 
+
 -- Startup hook
 myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D"
 
@@ -311,11 +309,11 @@ mynameScratchpads = [ NS "ncmpcpp" "urxvtc -name ncmpcpp -e ncmpcpp" (appName =?
                 , NS "feh" "feh" (className =? "feh") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                 , NS "Mirage" "mirage" (className =? "Mirage") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                 , NS "font-manager" "font-manager" (className =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                --, NS "Telegram" "telegram" (className =? "Telegram") (customFloating $ W.RationalRect 0.8 0.02 0.2 0.98)
-                , NS "page-info" "page-info " (stringProperty "WM_WINDOW_ROLE" =? "page-info") (customFloating $ W.RationalRect 0.15 0.15 0.7 0.7)
+                -- , NS "Telegram" "telegram" (className =? "Telegram") (customFloating $ W.RationalRect 0.8 0.02 0.2 0.98)
+                -- , NS "page-info" "page-info " (stringProperty "WM_WINDOW_ROLE" =? "page-info") (customFloating $ W.RationalRect 0.15 0.15 0.7 0.7)
                 , NS "Organizer" "Organizer" (stringProperty "WM_WINDOW_ROLE" =? "Organizer") (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                 ]
- 
+
 -- Scratchpad
 --
 manageScratchPad :: ManageHook
@@ -332,7 +330,7 @@ main = do
     xmonad =<< xmobar myConfig
 encodeCChar :: B.ByteString -> [CChar]
 encodeCChar = map fromIntegral . B.unpack
- 
+
 myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen = Focused } defaultConfig {
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
@@ -349,4 +347,3 @@ myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen =
         logHook            = myLogHook >>= xmonadPropLog,
         startupHook        = myStartupHook
     }
-

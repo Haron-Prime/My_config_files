@@ -1,8 +1,8 @@
 #!/bin/sh
 DATA=`date "+%d.%m.%Y"`
 DAY=`date "+%A"`
-if [[ $DAY = "Суббота" ]]; then echo '<fc=yellow>'$DAY'</fc>' $DATA
-elif [[ $DAY = "Воскресенье" ]]; then echo '<fc=orange>'$DAY'</fc>' $DATA
+if [[ $DAY = "Суббота" ]]; then echo '<fc=#DFD700>'$DAY'</fc>' $DATA
+elif [[ $DAY = "Воскресенье" ]]; then echo '<fc=#FF4500>'$DAY'</fc>' $DATA
 else echo $DAY $DATA
 fi
 exit 0
