@@ -34,13 +34,13 @@ autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
  
 # prompt (if running screen, show window #)
-export KERNEL="$(uname -rm)"
+
  if [ x$WINDOW != x ]; then
-     export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n@%m <%l [%?] %h> %B%{$fg[blue]%}%{$KERNEL %b%{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%} %*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
+     export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n@%m %B%{$fg[blue]%}%l %{$fg[red]%}%? %{$fg[blue]%}%h %b%{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%} %*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
  else
-     export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n@%m <%l [%?] %h> %B%{$fg[blue]%}%{$KERNEL %b%{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%} %*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
+     export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n@%m %B%{$fg[blue]%}%l %{$fg[red]%}%? %{$fg[blue]%}%h %b%{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%} %*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
  fi
-#  export RPROMPT="%{$reset_color%}"
+ # export RPROMPT="$GIT_PROMPT%{$reset_color%}"
 
 # format titles for screen and rxvt
 function title() {
@@ -141,13 +141,14 @@ source /usr/share/oh-my-zsh/plugins/rsync/rsync.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/web-search/web-search.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/history-substring-search/history-substring-search.zsh
 source /usr/share/oh-my-zsh/plugins/zsh_reload/zsh_reload.plugin.zsh
-source /usr/share/oh-my-zsh/plugins/web-search/web-search.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/colorize/colorize.plugin.zsh
+# source $HOME/scripts/my_zhs_plugins/git-prompt/git-prompt.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/global_aliases.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/my_aliases.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/extract.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/pk.plugin.zsh
 source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/haron/scripts/my_zhs_plugins/git-prompt.zsh
  
 # aliases
 alias ls="ls -la --classify --color=auto"
