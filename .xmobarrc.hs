@@ -39,5 +39,5 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %XMonadLog% }{ <<fc=#85b5d5><</fc><fc=#95d5f5><</fc><fc=#85b5d5><</fc><  %enp3s0%  %Net_in%<fn=2> </fn><fc=green>↓</fc><fc=red>↑</fc><fn=2> </fn>%Net_out%  <fc=#cccccc>Σ:</fc><fn=2> </fn>%Net_all%  %cpu% %TCPU%  <fc=#cccccc>MB:</fc><fn=2> </fn>%TMB%  <fc=#cccccc>GPU:</fc><fn=2> </fn>%TGPU%  %memory%  <fc=#cccccc>ROM:</fc><fn=2> </fn>%ROM%  <fc=#cccccc>Up:</fc><fn=2> </fn>%xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#cccccc>%xmtime%</fc>  <fn=1><fc=#95d5f5>%weather%</fc></fn>"
+       , template = " %XMonadLog% }{ <<fc=#85b5d5><</fc><fc=#95d5f5><</fc><fc=#85b5d5><</fc><  %enp3s0%  <fc=#cccccc>Tr:</fc><fn=2> </fn>%Net_in%<fn=2> </fn><fc=green>↓</fc><fc=red>↑</fc><fn=2> </fn>%Net_out%  <fc=#cccccc>Σ:</fc><fn=2> </fn>%Net_all%  %cpu% %TCPU%  <fc=#cccccc>MB:</fc><fn=2> </fn>%TMB%  <fc=#cccccc>GPU:</fc><fn=2> </fn>%TGPU%  %memory%  <fc=#cccccc>ROM:</fc><fn=2> </fn>%ROM%  <fc=#cccccc>Up:</fc><fn=2> </fn>%xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#cccccc>%xmtime%</fc>  <fn=1><fc=#95d5f5>%weather%</fc></fn>"
        }
