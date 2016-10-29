@@ -1,0 +1,24 @@
+Oct 27 08:02 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 27 08:02 : avahi: Service 'Music Player' successfully established.
+Oct 27 08:19 : player: played "Foreign/Amethystium/2003 - Aphelion/05 - Gates of Morpheus.m4a"
+Oct 27 19:18 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 27 19:18 : avahi: Service 'Music Player' successfully established.
+Oct 27 23:22 : client: [0] opened from 127.0.0.1:48724
+Oct 27 23:24 : client: [0] closed
+Oct 28 00:15 : player: played "Foreign/Amethystium/2003 - Aphelion/05 - Gates of Morpheus.m4a"
+Oct 28 08:15 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 28 08:15 : avahi: Service 'Music Player' successfully established.
+Oct 28 08:33 : player: played "Foreign/Amethystium/2003 - Aphelion/05 - Gates of Morpheus.m4a"
+Oct 28 19:49 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 28 19:49 : avahi: Service 'Music Player' successfully established.
+Oct 29 00:01 : avahi: Client Disconnected, will reconnect shortly
+Oct 29 00:01 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Oct 29 00:01 : player: played "Foreign/Amethystium/2003 - Aphelion/05 - Gates of Morpheus.m4a"
+Oct 29 08:55 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 29 08:55 : avahi: Service 'Music Player' successfully established.
+Oct 29 09:15 : avahi: Client Disconnected, will reconnect shortly
+Oct 29 09:15 : avahi: Client Disconnected, will reconnect shortly
+Oct 29 09:15 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Oct 29 09:15 : player: played "Foreign/Amethystium/2003 - Aphelion/05 - Gates of Morpheus.m4a"
+Oct 29 15:50 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 29 15:50 : avahi: Service 'Music Player' successfully established.
