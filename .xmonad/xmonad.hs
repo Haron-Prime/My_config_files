@@ -98,7 +98,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                          0xff69),     spawn "compdown")
     , ((0,                          0xff67),     spawn "gmrun")
     , ((0,                          0xffc9),     scratchPad)                                                                                          --F12
-    -- , ((modm,                       0xffc9),     spawn "urxvtc -name term")                                                                           --Win+F12
     , ((0,                          0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Print
     , ((mod1Mask,                   0xff61),     spawn "scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                     --Alt+Print
     --, ((mod1Mask,                     0x61),     spawn "xterm")                                                                                       --Alt+A
@@ -113,11 +112,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x69),     spawn "2D-Place")                                                                                    --Alt+I
     , ((mod1Mask,                     0x6c),     spawn "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")              --Alt+L
     , ((mod1Mask,                     0x6d),     spawn "urxvtc -name mc -e mc")                                                                       --Alt+M
-    -- , ((mod1Mask,                     0x6f),     spawn "opera-developer")                                                                             --Alt+O
+    , ((mod1Mask,                     0x6f),     spawn "opera12")                                                                                     --Alt+O
     , ((mod1Mask,                     0x70),     spawn "wine /home/haron/lib/Pro100-5.20-GIV/PRO100.exe")                                             --Alt+P
     , ((mod1Mask,                     0x71),     spawn "pavucontrol")                                                                                 --Alt+Q
     , ((mod1Mask,                     0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
-    -- , ((mod1Mask .|. controlMask,     0x72),     spawn "urxvtc -name home -e ranger")                                                                 --Alt+Ctrl+R
     , ((mod1Mask,                     0x73),     spawn "subl3")                                                                                       --Alt+S
     , ((mod1Mask .|. shiftMask,       0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
     , ((mod1Mask,                     0x74),     spawn "telegram-desktop")                                                                            --Alt+T
@@ -270,10 +268,10 @@ myManageHook = composeAll . concat $
     myMail    = ["Thunderbird"]
     myEdit    = ["Subl3","Et","Wps","Wpp","Acroread","FoxitReader"]
     myFile    = ["Pcmanfm"]
-    mySystem  = ["pacmanxg","systemdx","systemadm","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap","Xfce4-power-manager-settings"]
+    mySystem  = ["pacmanxg","systemdx","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap","Xfce4-power-manager-settings"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","PornTime","Easytag"]
     myPic     = ["Gimp","Gimp-2.8","Inkscape"]
-    myWork    = ["Wine","V3DGui","V3DBase","V3DCutting","Visual3D"]
+    myWork    = ["Wine"]
     myTorrent = ["Tixati","Transgui","Transmission-gtk","Transmission-remote-gtk"]
     myVM      = ["VirtualBox"]
     myIM      = ["Hexchat","psi","Psi","Viber","Telegram"]

@@ -18,9 +18,9 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
        , overrideRedirect = True
        , commands = [ Run XMonadLog
                     , Run Network "enp3s0" ["-S", "True", "-d", "1", "-t", "<fc=#cccccc>Net:</fc><fn=2> </fn><rx><fn=2> </fn><fc=green>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
-                    , Run Com "Net_in" [] "" 600
-                    , Run Com "Net_out" [] "" 600
-                    , Run Com "Net_all" [] "" 600
+                    , Run Com "Net_in" [] "" 50
+                    , Run Com "Net_out" [] "" 50
+                    , Run Com "Net_all" [] "" 50
                     , Run Cpu ["-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>%","-L","25","-H","75","--normal","yellow","--high","#ff6500"] 10
                     , Run Com "TCPU" [] "" 10
                     -- , Run Com "cpu-freq" [] "" 100
