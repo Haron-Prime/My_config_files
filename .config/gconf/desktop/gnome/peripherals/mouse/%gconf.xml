@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="cursor_theme" mtime="1430743005" type="string">
-		<stringvalue>Neutral++</stringvalue>
-	</entry>
-</gconf>

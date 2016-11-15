@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="USB_Mixer" mtime="1444038422" type="bool" value="true"/>
-	<entry name="Realtek_ALC888" mtime="1444038422" type="bool" value="true"/>
-</gconf>

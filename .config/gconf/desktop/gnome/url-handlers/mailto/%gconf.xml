@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="needs_terminal" mtime="1409945302" type="bool" value="false"/>
-	<entry name="enabled" mtime="1409945302" type="bool" value="true"/>
-	<entry name="command" mtime="1409945302" type="string">
-		<stringvalue>/home/haron/lib/thunderbird/thunderbird %s</stringvalue>
-	</entry>
-</gconf>

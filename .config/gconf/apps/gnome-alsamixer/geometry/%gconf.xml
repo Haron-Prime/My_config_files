@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="main_window_width" mtime="1471527961" type="int" value="956"/>
-	<entry name="main_window_height" mtime="1471527961" type="int" value="1056"/>
-	<entry name="mixer_slider_toggle_style" mtime="1444038422" type="bool" value="true"/>
-	<entry name="mixer_slider_style" mtime="1444038422" type="bool" value="false"/>
-</gconf>

@@ -48,3 +48,5 @@ alias gita='git add'
 alias gitc='git commit -m "Update"'
 alias vimf='vim $(fzf)'
 alias stf='subl3 $(fzf)'
+alias nout='ssh haron@192.168.0.11 -p 232'
+
