@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="audiosink" mtime="1443725460" type="string">
+		<stringvalue>pulsesink</stringvalue>
+	</entry>
+</gconf>

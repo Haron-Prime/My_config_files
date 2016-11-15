@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="need-terminal" mtime="1402731535" type="bool" value="false"/>
+	<entry name="enabled" mtime="1402731535" type="bool" value="true"/>
+	<entry name="command" mtime="1402731535" type="string">
+		<stringvalue>/usr/bin/tixati &quot;%s&quot;</stringvalue>
+	</entry>
+</gconf>

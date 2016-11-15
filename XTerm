@@ -1,1 +1,26 @@
-/home/haron/XTerm
+!XTerm config
+Xterm*termName: xterm-256color
+XTerm*locale: true
+XTerm*metaSendsEscape: true
+XTerm*utf8Title: true
+XTerm*renderFont: true
+XTerm*faceName: Terminus Re33
+XTerm*faceSize: 12
+XTerm*foreground: #bbbbbb
+XTerm*background: #151515
+XTerm*saveLines: 1000
+XTerm*loginShell: true
+Xterm*bellIsUrgent: true
+XTerm*scaleHeight: 1.01
+Xterm*borderWidth: 0
+XTerm*cursorBlink: true
+XTerm*cursorColor: red
+XTerm*selectToClipboard: true
+XTerm*allowSendEvents: false
+XTerm*sessionMgt: false
+XTerm*eightBitInput:  false
+XTerm*VT100*colorULMode:  off
+XTerm*VT100*colorBDMode:  off
+XTerm.VT100.titeInhibit:  off
+XTerm*colorUL: yellow
+XTerm*colorBD: white

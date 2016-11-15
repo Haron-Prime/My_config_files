@@ -1,0 +1,5 @@
+mpd_host = "localhost"
+system_encoding = UTF8
+clock_display_seconds = yes
+display_bitrate = yes
+enable_window_title = no

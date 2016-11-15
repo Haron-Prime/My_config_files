@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="sidebar_show_places_menu" mtime="1430743008" type="bool" value="false"/>
+	<entry name="side_pane_view" mtime="1430743008" type="string">
+		<stringvalue>NautilusPlacesSidebar</stringvalue>
+	</entry>
+	<entry name="rgba_colormap" mtime="1430743008" type="bool" value="false"/>
+	<entry name="pathbar_like_breadcrumbs" mtime="1430743008" type="bool" value="true"/>
+	<entry name="desktop_font" mtime="1430743006" type="string">
+		<stringvalue>Droid Sans 9</stringvalue>
+	</entry>
+</gconf>

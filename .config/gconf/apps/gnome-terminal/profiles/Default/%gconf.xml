@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="use_theme_colors" mtime="1430743007" type="bool" value="true"/>
+	<entry name="use_system_font" mtime="1430743007" type="bool" value="true"/>
+	<entry name="scrollbar_position" mtime="1430743007" type="string">
+		<stringvalue>hidden</stringvalue>
+	</entry>
+	<entry name="background_type" mtime="1430743007" type="string">
+		<stringvalue>transparent</stringvalue>
+	</entry>
+	<entry name="background_darkness" mtime="1430743007" type="float" value="0.80000000000000004"/>
+</gconf>

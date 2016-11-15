@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="Realtek_ALC888-Digital" mtime="1444038405" type="string">
+		<stringvalue>Digital</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Rear_Mic_Boost" mtime="1444038406" type="string">
+		<stringvalue>Rear Mic</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Rear_Mic" mtime="1444038406" type="string">
+		<stringvalue>Rear Mic</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Capture" mtime="1444038405" type="string">
+		<stringvalue>Capture</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Beep" mtime="1444038405" type="string">
+		<stringvalue>Beep</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-CD" mtime="1444038405" type="string">
+		<stringvalue>CD</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Line_Boost" mtime="1444038405" type="string">
+		<stringvalue>Line Boo</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Line" mtime="1444038405" type="string">
+		<stringvalue>Line</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Side" mtime="1444038405" type="string">
+		<stringvalue>Side</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-LFE" mtime="1444038405" type="string">
+		<stringvalue>LFE</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Center" mtime="1444038405" type="string">
+		<stringvalue>Center</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Surround" mtime="1444038405" type="string">
+		<stringvalue>Surround</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Front_Mic_Boost" mtime="1444038404" type="string">
+		<stringvalue>Front Mi</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Front_Mic" mtime="1444038404" type="string">
+		<stringvalue>Front Mi</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Front" mtime="1444038404" type="string">
+		<stringvalue>Front</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-PCM" mtime="1444038404" type="string">
+		<stringvalue>PCM</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Headphone" mtime="1444038404" type="string">
+		<stringvalue>Headphon</stringvalue>
+	</entry>
+	<entry name="Realtek_ALC888-Master" mtime="1444038404" type="string">
+		<stringvalue>Master</stringvalue>
+	</entry>
+</gconf>

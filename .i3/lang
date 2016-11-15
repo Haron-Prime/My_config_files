@@ -1,0 +1,3 @@
+# !/bin/sh
+skb 1
+exit 0

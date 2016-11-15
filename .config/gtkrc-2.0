@@ -1,1 +1,10 @@
-/home/haron/.config/gtkrc-2.0
+# created by KDE, чт авг. 21 16:11:03 2014
+#
+# If you do not want KDE to override your GTK settings, select
+# Appearance -> Colors in the System Settings and disable the checkbox
+# "Apply colors to non-KDE4 applications"
+#
+#
+
+gtk-alternative-button-order = 1
+
