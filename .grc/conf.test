@@ -1,6 +1,6 @@
 # comment
 regexp=^#.*$
-colours=blue
+colours=bold blue
 =======
 # from http://make-linux.blogspot.com/search/label/grc
 # -rwxrwxrwx
@@ -31,3 +31,4 @@ colours=bold yellow
 # critical failed err*
 regexp=([Cc][Rr][Ii][Tt][Ii][Cc][Aa][Ll])|([Ff][Aa][Ii][Ll][Ee][Dd])|([Ee][Rr][Rr])\w+
 colours=bold red
+count=more

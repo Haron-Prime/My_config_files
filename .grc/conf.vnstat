@@ -1,0 +1,18 @@
+regexp=([-+|])
+colour=white
+-
+regexp=([a-z]\D+[0-9][a-z][0-9])|(\d+\,\d+)
+colours=yellow
+-
+# data
+regexp=(\d+\.\d+\.\d+)
+colours=bold blue
+-
+regexp=(mont\D+)|(da[iy]\D+)|(rx)|(tx)|(total)|(avg. rate)|(last)|(wee\D+)|(curr\D+)|( [0-9]{1,2} )|(top \d+)|(#)|(\d+\:\d+\:\d+)|([a-z]\D+(day))|(\ [А-Яа-я]\D+ '\d+)|([A-Z][a-z]{2}\ [A-Z][a-z]{2})|(\ [0-9]{4})
+colours=green
+-
+regexp=estimated
+colour=bold red
+-
+regexp=([KMGT](iB))|([KM](bit)\/s)
+colour=cyan

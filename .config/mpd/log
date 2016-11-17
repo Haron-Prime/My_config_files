@@ -350,3 +350,100 @@ Nov 15 20:39 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Nov 15 20:39 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/01. Speak To Me - Breathe.m4a"
 Nov 15 20:43 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Nov 15 20:43 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/02. On The Run.m4a"
+Nov 15 20:50 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 20:50 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/03. Time.m4a"
+Nov 15 20:54 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 20:55 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/04. The Great Gig In The Sky.m4a"
+Nov 15 20:56 : client: [6] opened from 127.0.0.1:37390
+Nov 15 20:56 : client: [6] closed
+Nov 15 21:07 : client: [7] opened from 127.0.0.1:37824
+Nov 15 21:07 : client: [7] closed
+Nov 15 21:10 : client: [8] opened from 127.0.0.1:37932
+Nov 15 21:10 : client: [8] closed
+Nov 15 21:11 : client: [9] opened from 127.0.0.1:37974
+Nov 15 21:11 : client: [9] closed
+Nov 15 21:13 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 21:14 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/05. Money.m4a"
+Nov 15 21:21 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 21:21 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/06. Us And Them.m4a"
+Nov 15 21:25 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 21:25 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/07. Any Colour You Like.m4a"
+Nov 15 21:28 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 21:29 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/08. Brain Damage.m4a"
+Nov 15 21:31 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 21:31 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/09. Eclipse.m4a"
+Nov 15 21:44 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 21:44 : player: played "Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/01. Shine On You Crazy Diamond (Part 1-5).m4a"
+Nov 15 21:52 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 21:52 : player: played "Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/02. Welcome To The Machine.m4a"
+Nov 15 21:57 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 21:57 : player: played "Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/03. Have A Cigar.m4a"
+Nov 15 21:59 : client: [10] opened from 127.0.0.1:40702
+Nov 15 21:59 : client: [10] closed
+Nov 15 22:16 : client: [11] opened from 127.0.0.1:41384
+Nov 15 22:16 : client: [11] closed
+Nov 15 22:19 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 22:19 : player: played "Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/04. Wish You Were Here.m4a"
+Nov 15 22:31 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 22:31 : player: played "Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/05. Shine On You Crazy Diamond (Part 6-9).m4a"
+Nov 15 22:33 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 22:33 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/01. Pigs on the Wing (Part 1).m4a"
+Nov 15 22:50 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 15 22:50 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/02. Dogs.m4a"
+Nov 15 23:01 : client: [12] opened from 127.0.0.1:49146
+Nov 15 23:01 : client: [12] closed
+Nov 16 00:15 : avahi: Client Disconnected, will reconnect shortly
+Nov 16 00:15 : avahi: Client Disconnected, will reconnect shortly
+Nov 16 00:15 : pulse_output: failed to connect the stream: Connection terminated
+Nov 16 00:15 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Nov 16 00:15 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/03. Pigs (Three Different Ones).m4a"
+Nov 16 11:08 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 11:08 : avahi: Service 'Music Player' successfully established.
+Nov 16 11:12 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 11:12 : avahi: Service 'Music Player' successfully established.
+Nov 16 12:01 : client: [0] opened from 127.0.0.1:57170
+Nov 16 12:02 : client: [0] closed
+Nov 16 12:02 : client: [1] opened from 127.0.0.1:57172
+Nov 16 12:02 : client: [1] closed
+Nov 16 12:02 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 12:02 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/03. Pigs (Three Different Ones).m4a"
+Nov 16 12:12 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 12:13 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/04. Sheep.m4a"
+Nov 16 12:14 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 12:14 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/05. Pigs on the Wing (Part 2).m4a"
+Nov 16 12:17 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 12:17 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/01. In The Flesh.m4a"
+Nov 16 12:20 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 12:20 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/02. The Thin Ice.m4a"
+Nov 16 12:23 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 12:23 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/03. Another Brick In The Wall (Part 1).m4a"
+Nov 16 12:25 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 12:25 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/04. The Happiest Days Of Our Lives.m4a"
+Nov 16 12:29 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 12:29 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/05. Another Brick In The Wall (Part 2).m4a"
+Nov 16 12:34 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 12:34 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/06. Mother.m4a"
+Nov 16 12:35 : client: [2] opened from 127.0.0.1:58916
+Nov 16 12:35 : client: [2] closed
+Nov 16 12:37 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 12:37 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/07. Goodbye Blue Sky.m4a"
+Nov 16 12:39 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 12:39 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/08. Empty Spaces.m4a"
+Nov 16 12:43 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 16 12:43 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/09. Young Lust.m4a"
+Nov 16 12:43 : client: [3] opened from 127.0.0.1:59262
+Nov 16 12:43 : client: [3] closed
+Nov 17 00:22 : avahi: Client Disconnected, will reconnect shortly
+Nov 17 00:22 : pulse_output: failed to connect the stream: Connection terminated
+Nov 17 00:22 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Nov 17 00:22 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/10. One of My Turns.m4a"
+Nov 17 10:09 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 17 10:09 : avahi: Service 'Music Player' successfully established.
+Nov 17 11:48 : client: [0] opened from 127.0.0.1:54902
+Nov 17 11:48 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/10. One of My Turns.m4a"
+Nov 17 11:48 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 17 11:48 : client: [0] closed
+Nov 17 11:51 : client: [1] opened from 127.0.0.1:55132
+Nov 17 11:51 : client: [1] closed
+Nov 17 21:02 : client: [2] opened from 127.0.0.1:55180
+Nov 17 21:02 : client: [2] closed
