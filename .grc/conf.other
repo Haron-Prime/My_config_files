@@ -1,0 +1,45 @@
+# comment
+regexp=^#.*$
+colours=blue
+=======
+# from http://make-linux.blogspot.com/search/label/grc
+# -rwxrwxrwx
+regexp=(-|([bcCdDlMnpPs?]))(?=[-r][-w][-xsStT][-r][-w][-xsStT][-r][-w][-xsStT])
+colours=unchanged,unchanged,bold blue
+=======
+regexp=(?<=[-bcCdDlMnpPs?])(-|(r))(-|(w))(-|([xsStT]))(?=[-r][-w][-xsStT][-r][-w][-xsStT])
+colours=unchanged,unchanged,bold green,unchanged,bold green,unchanged,bold green
+=======
+regexp=(?<=[-bcCdDlMnpPs?][-r][-w][-xsStT])(-|(r))(-|(w))(-|([xsStT]))(?=[-r][-w][-xsStT])
+colours=unchanged,unchanged,bold yellow,unchanged,bold yellow,unchanged,bold yellow
+=======
+regexp=(?<=[-bcCdDlMnpPs?][-r][-w][-xsStT][-r][-w][-xsStT])(-|(r))(-|(w))(-|([xsStT]))
+colours=unchanged,unchanged,bold red,unchanged,bold red,unchanged,bold red
+=======
+# n:n
+regexp=(\s|^)\d+(:\d+)+(?=[\s,]|$)
+colours=bold magenta
+=======
+# size
+regexp=(\s|^)\d+([.,]\d+)?\s?([kKMG][bB]|[bB]|[kKMG])(?=[\s,]|$)
+colours=yellow
+=======
+# warning
+regexp=/(warning)/i
+colours=bold yellow
+count=more
+======
+# critical
+regexp=/(critical)/i
+colours=bold red
+count=more
+======
+# error
+regexp=/(err)\w+/i
+colours=white
+count=more
+======
+# failed
+regexp=/(failed)/i
+colours=bold red
+count=more
