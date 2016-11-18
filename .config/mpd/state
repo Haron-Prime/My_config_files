@@ -1,8 +1,8 @@
 sw_volume: 100
 audio_device_state:1:pulse audio
-state: pause
-current: 15
-time: 104.597000
+state: play
+current: 14
+time: 120.000000
 random: 0
 repeat: 0
 single: 0
@@ -11,49 +11,81 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/01. Speak To Me - Breathe.m4a
-1:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/02. On The Run.m4a
-2:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/03. Time.m4a
-3:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/04. The Great Gig In The Sky.m4a
-4:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/05. Money.m4a
-5:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/06. Us And Them.m4a
-6:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/07. Any Colour You Like.m4a
-7:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/08. Brain Damage.m4a
-8:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/09. Eclipse.m4a
-9:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/01. Shine On You Crazy Diamond (Part 1-5).m4a
-10:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/02. Welcome To The Machine.m4a
-11:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/03. Have A Cigar.m4a
-12:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/04. Wish You Were Here.m4a
-13:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/05. Shine On You Crazy Diamond (Part 6-9).m4a
-14:Foreign/Pink Floyd [Vinyl]/1977 - Animals/01. Pigs on the Wing (Part 1).m4a
-15:Foreign/Pink Floyd [Vinyl]/1977 - Animals/02. Dogs.m4a
-16:Foreign/Pink Floyd [Vinyl]/1977 - Animals/03. Pigs (Three Different Ones).m4a
-17:Foreign/Pink Floyd [Vinyl]/1977 - Animals/04. Sheep.m4a
-18:Foreign/Pink Floyd [Vinyl]/1977 - Animals/05. Pigs on the Wing (Part 2).m4a
-19:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/01. In The Flesh.m4a
-20:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/02. The Thin Ice.m4a
-21:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/03. Another Brick In The Wall (Part 1).m4a
-22:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/04. The Happiest Days Of Our Lives.m4a
-23:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/05. Another Brick In The Wall (Part 2).m4a
-24:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/06. Mother.m4a
-25:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/07. Goodbye Blue Sky.m4a
-26:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/08. Empty Spaces.m4a
-27:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/09. Young Lust.m4a
-28:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/10. One of My Turns.m4a
-29:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/11. Don't Leave Me Now.m4a
-30:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/12. Another Brick In The Wall (Part 3).m4a
-31:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/13. Goodbye Cruel World.m4a
-32:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/01. Hey You.m4a
-33:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/02. Is There Anybody Out There.m4a
-34:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/03. Nobody Home.m4a
-35:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/04. Vera.m4a
-36:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/05. Bring The Boys Back Home.m4a
-37:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/06. Comfortably Numb.m4a
-38:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/07. The Show Must Go On.m4a
-39:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/08. In The Flesh.m4a
-40:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/09. Run Like Hell.m4a
-41:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/10. Waiting For The Worms.m4a
-42:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/11. Stop.m4a
-43:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/12. The Trial.m4a
-44:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/13. Outside The Wall.m4a
+0:Foreign/Amethystium/2001 - Odonata/01 - Opaque.m4a
+1:Foreign/Amethystium/2001 - Odonata/02 - Ilona.m4a
+2:Foreign/Amethystium/2001 - Odonata/03 - Enchantment.m4a
+3:Foreign/Amethystium/2001 - Odonata/04 - Dreamdance.m4a
+4:Foreign/Amethystium/2001 - Odonata/05 - Tinuviel.m4a
+5:Foreign/Amethystium/2001 - Odonata/06 - Avalon.m4a
+6:Foreign/Amethystium/2001 - Odonata/07 - Calantha.m4a
+7:Foreign/Amethystium/2001 - Odonata/08 - Odyssey.m4a
+8:Foreign/Amethystium/2001 - Odonata/09 - Fairyland.m4a
+9:Foreign/Amethystium/2001 - Odonata/10 - Paean.m4a
+10:Foreign/Amethystium/2001 - Odonata/11 - Arcane Voices.m4a
+11:Foreign/Amethystium/2001 - Odonata/12 - Ascension.m4a
+12:Foreign/Amethystium/2001 - Odonata/13 - Ethereal.m4a
+13:Foreign/Amethystium/2001 - Odonata/14 - Lhasa.m4a
+14:Foreign/Amethystium/2003 - Aphelion/01 - Shadow to Light.m4a
+15:Foreign/Amethystium/2003 - Aphelion/02 - Garden of Sakuntala.m4a
+16:Foreign/Amethystium/2003 - Aphelion/03 - Exultation.m4a
+17:Foreign/Amethystium/2003 - Aphelion/04 - Ad Astra.m4a
+18:Foreign/Amethystium/2003 - Aphelion/05 - Gates of Morpheus.m4a
+19:Foreign/Amethystium/2003 - Aphelion/06 - Autumn Interlude.m4a
+20:Foreign/Amethystium/2003 - Aphelion/07 - Elvensong.m4a
+21:Foreign/Amethystium/2003 - Aphelion/08 - Shibumi.m4a
+22:Foreign/Amethystium/2003 - Aphelion/09 - Hymnody.m4a
+23:Foreign/Amethystium/2003 - Aphelion/10 - Withdrawal.m4a
+24:Foreign/Amethystium/2003 - Aphelion/11 - Berceuse.m4a
+25:Foreign/Amethystium/2004 - Evermind/01 - Arcus.m4a
+26:Foreign/Amethystium/2004 - Evermind/02 - Into the Twilight.m4a
+27:Foreign/Amethystium/2004 - Evermind/03 - Shadowlands.m4a
+28:Foreign/Amethystium/2004 - Evermind/04 - Break of Dawn.m4a
+29:Foreign/Amethystium/2004 - Evermind/05 - Innocence.m4a
+30:Foreign/Amethystium/2004 - Evermind/06 - Satori.m4a
+31:Foreign/Amethystium/2004 - Evermind/07 - Barefoot.m4a
+32:Foreign/Amethystium/2004 - Evermind/08 - Reverie.m4a
+33:Foreign/Amethystium/2004 - Evermind/09 - Lost.m4a
+34:Foreign/Amethystium/2004 - Evermind/10 - Fable.m4a
+35:Foreign/Amethystium/2004 - Evermind/11 - Imaginatio.m4a
+36:Foreign/Amethystium/2005 - Transversa/01 - Break Of Dawn.m4a
+37:Foreign/Amethystium/2005 - Transversa/02 - Shadow To  Light.m4a
+38:Foreign/Amethystium/2005 - Transversa/03 - Ad Astra.m4a
+39:Foreign/Amethystium/2005 - Transversa/04 - Shadowlands.m4a
+40:Foreign/Amethystium/2005 - Transversa/05 - Arcus.m4a
+41:Foreign/Amethystium/2005 - Transversa/06 - Enchantment.m4a
+42:Foreign/Amethystium/2005 - Transversa/07 - Arcane Voices.m4a
+43:Foreign/Amethystium/2005 - Transversa/08 - Gates Of Morpheus.m4a
+44:Foreign/Amethystium/2005 - Transversa/09 - Innocence.m4a
+45:Foreign/Amethystium/2005 - Transversa/10 - Autumn Interlude.m4a
+46:Foreign/Amethystium/2005 - Transversa/11 - Opaque.m4a
+47:Foreign/Amethystium/2005 - Transversa/12 - Satori.m4a
+48:Foreign/Amethystium/2005 - Transversa/13 - Avalon.m4a
+49:Foreign/Amethystium/2005 - Transversa/14 - Lhasa.m4a
+50:Foreign/Amethystium/2005 - Transversa/15 - Into The Twilight.m4a
+51:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/01 - Ethereal.m4a
+52:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/02 - Arcus.m4a
+53:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/03 - Exultation.m4a
+54:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/04 - Autumn Interlude.m4a
+55:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/05 - Shadowlands.m4a
+56:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/06 - Fable.m4a
+57:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/08 - Dreamdance.m4a
+58:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/09 - Odyssey.m4a
+59:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/10 - Ad Astra.m4a
+60:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/11 - Enchantment.m4a
+61:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/12 - Satori.m4a
+62:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/13 - Elvensong.m4a
+63:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/14 - Meadowland.m4a
+64:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/15 - Anthemoessa.m4a
+65:Foreign/Amethystium/2006 - Emblem (Selected Pieces)/01 - A Small Adventure.m4a
+66:Foreign/Amethystium/2008 - Isabliss/01 - A Small Adventure.m4a
+67:Foreign/Amethystium/2008 - Isabliss/02 - La Pluie.m4a
+68:Foreign/Amethystium/2008 - Isabliss/03 - Treasure.m4a
+69:Foreign/Amethystium/2008 - Isabliss/04 - Unbounded.m4a
+70:Foreign/Amethystium/2008 - Isabliss/05 - Anthemoessa.m4a
+71:Foreign/Amethystium/2008 - Isabliss/06 - Automne.m4a
+72:Foreign/Amethystium/2008 - Isabliss/07 - Strangely Beautiful.m4a
+73:Foreign/Amethystium/2008 - Isabliss/08 - Frosty Morning Bliss.m4a
+74:Foreign/Amethystium/2008 - Isabliss/09 - Silken Twine.m4a
+75:Foreign/Amethystium/2008 - Isabliss/10 - Dreamlike Insomnia.m4a
+76:Foreign/Amethystium/2008 - Isabliss/11 - Elegy.m4a
 playlist_end

@@ -3,3 +3,77 @@ Nov 18 15:06 : avahi: Service 'Music Player' successfully established.
 Nov 18 15:10 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/02. Dogs.m4a"
 Nov 18 15:10 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
 Nov 18 15:10 : avahi: Service 'Music Player' successfully established.
+Nov 18 16:17 : client: [0] opened from 127.0.0.1:51972
+Nov 18 16:17 : client: [0] closed
+Nov 18 16:32 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 16:32 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/02. Dogs.m4a"
+Nov 18 16:44 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 16:44 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/03. Pigs (Three Different Ones).m4a"
+Nov 18 16:54 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 16:54 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/04. Sheep.m4a"
+Nov 18 16:55 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 16:56 : player: played "Foreign/Pink Floyd [Vinyl]/1977 - Animals/05. Pigs on the Wing (Part 2).m4a"
+Nov 18 16:59 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 16:59 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/01. In The Flesh.m4a"
+Nov 18 17:01 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 17:01 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/02. The Thin Ice.m4a"
+Nov 18 17:05 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 17:05 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/03. Another Brick In The Wall (Part 1).m4a"
+Nov 18 17:06 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 17:06 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/04. The Happiest Days Of Our Lives.m4a"
+Nov 18 17:10 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 17:10 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/05. Another Brick In The Wall (Part 2).m4a"
+Nov 18 17:13 : client: [1] opened from 127.0.0.1:54430
+Nov 18 17:13 : client: [1] closed
+Nov 18 18:30 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/06. Mother.m4a"
+Nov 18 18:31 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 18:31 : avahi: Service 'Music Player' successfully established.
+Nov 18 18:49 : avahi: Client Disconnected, will reconnect shortly
+Nov 18 18:49 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Nov 18 18:49 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/06. Mother.m4a"
+Nov 18 18:53 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 18:53 : avahi: Service 'Music Player' successfully established.
+Nov 18 19:16 : client: [0] opened from 127.0.0.1:48332
+Nov 18 19:16 : client: [0] closed
+Nov 18 19:19 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 19:19 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/06. Mother.m4a"
+Nov 18 19:19 : client: [1] opened from 127.0.0.1:48416
+Nov 18 19:19 : client: [1] closed
+Nov 18 19:22 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 19:22 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/07. Goodbye Blue Sky.m4a"
+Nov 18 19:24 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 19:24 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/08. Empty Spaces.m4a"
+Nov 18 19:27 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 19:27 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/09. Young Lust.m4a"
+Nov 18 19:31 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 19:31 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/10. One of My Turns.m4a"
+Nov 18 19:35 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 19:35 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/11. Don't Leave Me Now.m4a"
+Nov 18 19:36 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 19:36 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/12. Another Brick In The Wall (Part 3).m4a"
+Nov 18 19:38 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 19:38 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/13. Goodbye Cruel World.m4a"
+Nov 18 19:40 : client: [2] opened from 127.0.0.1:49022
+Nov 18 19:40 : client: [2] closed
+Nov 18 20:42 : client: [3] opened from 127.0.0.1:55578
+Nov 18 20:42 : player: played "Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/01. Hey You.m4a"
+Nov 18 20:42 : client: [3] closed
+Nov 18 20:46 : client: [4] opened from 127.0.0.1:55760
+Nov 18 20:46 : client: [4] closed
+Nov 18 21:48 : client: [5] opened from 127.0.0.1:58908
+Nov 18 21:48 : client: [5] closed
+Nov 18 21:50 : player: played "Foreign/Amethystium/2001 - Odonata/01 - Opaque.m4a"
+Nov 18 21:54 : player: played "Foreign/Amethystium/2001 - Odonata/02 - Ilona.m4a"
+Nov 18 22:00 : player: played "Foreign/Amethystium/2001 - Odonata/03 - Enchantment.m4a"
+Nov 18 22:05 : player: played "Foreign/Amethystium/2001 - Odonata/04 - Dreamdance.m4a"
+Nov 18 22:08 : player: played "Foreign/Amethystium/2001 - Odonata/05 - Tinuviel.m4a"
+Nov 18 22:13 : player: played "Foreign/Amethystium/2001 - Odonata/06 - Avalon.m4a"
+Nov 18 22:17 : player: played "Foreign/Amethystium/2001 - Odonata/07 - Calantha.m4a"
+Nov 18 22:22 : player: played "Foreign/Amethystium/2001 - Odonata/08 - Odyssey.m4a"
+Nov 18 22:25 : player: played "Foreign/Amethystium/2001 - Odonata/09 - Fairyland.m4a"
+Nov 18 22:30 : player: played "Foreign/Amethystium/2001 - Odonata/10 - Paean.m4a"
+Nov 18 22:34 : player: played "Foreign/Amethystium/2001 - Odonata/11 - Arcane Voices.m4a"
+Nov 18 22:38 : player: played "Foreign/Amethystium/2001 - Odonata/12 - Ascension.m4a"
+Nov 18 22:43 : player: played "Foreign/Amethystium/2001 - Odonata/13 - Ethereal.m4a"
+Nov 18 22:46 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 22:46 : player: played "Foreign/Amethystium/2001 - Odonata/14 - Lhasa.m4a"

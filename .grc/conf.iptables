@@ -1,7 +1,4 @@
-regexp=(\d+\.\d+\.\d+\.\d+)|(\/\d+\b)
-colours=bold blue
--
-regexp=(.{0,2}x.{0,2}\/.{0,2}x.{0,2})|((\d+\D{0,1})\ ((packets)|(bytes)))|(avg \d\/\D+\d)
+regexp=(\d+\.\d+\.\d+\.\d+)|(\/\d+\b)|(.{0,2}x.{0,2}\/.{0,2}x.{0,2})|((\d+\D{0,1})\ ((packets)|(bytes)))|(avg \d\/\D+\d)
 colours=bold blue
 -
 regexp=([-]\D+)

@@ -2,7 +2,6 @@
 regexp=^#.*$
 colours=blue
 =======
-# from http://make-linux.blogspot.com/search/label/grc
 # -rwxrwxrwx
 regexp=(-|([bcCdDlMnpPs?]))(?=[-r][-w][-xsStT][-r][-w][-xsStT][-r][-w][-xsStT])
 colours=unchanged,unchanged,bold blue
