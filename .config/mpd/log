@@ -447,3 +447,11 @@ Nov 17 11:51 : client: [1] opened from 127.0.0.1:55132
 Nov 17 11:51 : client: [1] closed
 Nov 17 21:02 : client: [2] opened from 127.0.0.1:55180
 Nov 17 21:02 : client: [2] closed
+Nov 18 00:12 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/01. Speak To Me - Breathe.m4a"
+Nov 18 10:19 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 10:19 : avahi: Service 'Music Player' successfully established.
+Nov 18 10:31 : avahi: Client Disconnected, will reconnect shortly
+Nov 18 10:31 : avahi: Could not reconnect: An unexpected D-Bus error occurred
+Nov 18 10:31 : player: played "Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/01. Speak To Me - Breathe.m4a"
+Nov 18 10:32 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 18 10:32 : avahi: Service 'Music Player' successfully established.

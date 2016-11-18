@@ -1,8 +1,0 @@
-# warning
-regexp=([Ww][Aa][Rr][Nn][Ii][Nn][Gg])
-colours=bold yellow
-======
-# critical failed err*
-regexp=([Cc][Rr][Ii][Tt][Ii][Cc][Aa][Ll])|([Ff][Aa][Ii][Ll][Ee][Dd])|([Ee][Rr][Rr])\w+
-colours=bold red
-count=more
