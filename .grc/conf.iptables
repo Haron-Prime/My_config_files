@@ -1,0 +1,23 @@
+regexp=(\d+\.\d+\.\d+\.\d+)|(\/\d+\b)
+colours=bold blue
+-
+regexp=(.{0,2}x.{0,2}\/.{0,2}x.{0,2})|((\d+\D{0,1})\ ((packets)|(bytes)))|(avg \d\/\D+\d)
+colours=bold blue
+-
+regexp=([-]\D+)
+colours=white
+-
+regexp=DROP|INVALID
+colours=bold red
+-
+regexp=ACCEPT|NEW|RELATED|ESTABLISHED|UPDATE|SET|SSH
+colours=bold green
+-
+regexp=INPUT|OUTPUT|FORWARD|sshguard
+colours=bold magenta
+-
+regexp=pkts|(bytes )|target|prot|opt|\bin\b|out|source|destination
+colours=green
+-
+regexp=policy|Chain|all|tcp|udp|(icm\w+)|state|limit|recent|([a-z_]+:)|(source mask)
+colours=yellow
