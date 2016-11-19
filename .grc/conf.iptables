@@ -1,20 +1,26 @@
-regexp=(\d+\.\d+\.\d+\.\d+)|(\/\d+\b)|(.{0,2}x.{0,2}\/.{0,2}x.{0,2})|((\d+\D{0,1})\ ((packets)|(bytes)))|(avg \d\/\D+\d)
+regexp=(\d+\.\d+\.\d+\.\d+)|(\/\d+\b)|(.{0,2}x.{0,2}\/.{0,2}x.{0,2})|((\d+\D{0,1})\ ((packets)|(bytes)))|(avg \d\/\D+\d)|(\d{1,4}\D{0,1})|(\S+ references)
 colours=bold blue
+count=more
 -
 regexp=([-]\D+)
-colours=white
+colours=bold white
+count=more
 -
 regexp=DROP|INVALID
 colours=bold red
 -
 regexp=ACCEPT|NEW|RELATED|ESTABLISHED|UPDATE|SET|SSH
 colours=bold green
+count=more
 -
 regexp=INPUT|OUTPUT|FORWARD|sshguard
-colours=bold magenta
+colours=cyan
+count=more
 -
 regexp=pkts|(bytes )|target|prot|opt|\bin\b|out|source|destination
 colours=green
+count=more
 -
-regexp=policy|Chain|all|tcp|udp|(icm\w+)|state|limit|recent|([a-z_]+:)|(source mask)
+regexp=policy|Chain|all|tcp|udp|(icm\w+)|(\D{0,2}state)|limit|recent|([a-z_]+:)|(source mask)|[\(\)]
 colours=yellow
+count=more
