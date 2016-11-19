@@ -1,0 +1,31 @@
+# n:n
+regexp=(\s|^)\d+(:\d+)+(?=[\s,]|$)|(\b\D{3}\ \d{1,2}\b)|(\[\d+\-\d+\-\d+\ \d+\:\d+\:\S+\])
+colours=bold blue
+=====
+# size
+regexp=(\s|^)\d+([.,]\d+)?\s?([kKMG][bB]|[bB]|[kKMG])(?=[\s,]|$)
+colours=yellow
+=====
+# warning
+regexp=([Ww][Aa][Rr][Nn][Ii][Nn][Gg])
+colours=bold yellow
+=====
+# failed err*
+regexp=([Ff][Aa][Ii][Ll][Ee][Dd])|([Ee][Rr][Rr])\w+|(\S+\s?root\s?)
+colours=bold red
+=====
+regexp=([Cc][Rr][Ii][Tt][Ii][Cc][Aa][Ll])
+colours=bold magenta
+=====
+regexp=(session\ \D+for)
+colours=green
+=====
+regexp=(\S+\s?haron\s?)
+colours=bold green
+=====
+regexp=(\(\/\D+\/\D+\))|(\(\D+\:\D+\))|(\(uid\S+\))
+colours=yellow
+=====
+regexp=(\S+\[\d+\])
+colours=cyan
+

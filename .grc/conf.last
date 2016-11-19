@@ -1,0 +1,23 @@
+regexp=(\(\d+\:\d+\))
+colours=yellow
+-
+regexp=(pts\/\d+)|(tty\d+)|(still\D+)
+colours=green
+-
+regexp=crash
+colours=red
+-
+regexp=(\d+\:\d+\:\d+\ \d{4})|(\d\.\d\.\d\-\d\-\D{3})|( \d{2}\:\d{2} )
+colours=bold blue
+-
+regexp=(\D{3}\ \D{3}\ +\d{1,2})
+colours=cyan
+-
+regexp=haron
+colours=bold green
+-
+regexp=root
+colours=bold red
+-
+regexp=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+colours=bold magenta
