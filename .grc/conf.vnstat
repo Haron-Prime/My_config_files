@@ -1,17 +1,17 @@
 regexp=[-+|]
 colour=white
 -
-regexp=([a-z]{3}\d\D\d)
+regexp=(\D{3}\d\D\d)
 colours=yellow
 -
 regexp=(\d+\,\d+)|(\d{2,})
 colours=yellow
 -
 # data
-regexp=(\d+\.\d+\.\d+)|([А-Яа-я]\D+\ \'\d+)|(((last)|(current)).{3}\w+)|([a-z]+(day))
+regexp=(\d+\.\d+\.\d+)|([А-Яа-я]\D+\s\'\d+)|((last|current).{3}\w+)|(\D+day\b)
 colours=bold blue
 -
-regexp=(mont\D{2,4})|(daily|weekly)|(rx|tx|total)|(avg.\ rate)|(top 10)|(#)|(\D{3}\ \D{3}\ \d{2}\ (\d+\:\d+\:\d+)\ \d{4})|(packets|max|min\w{,4}|average|bytes|time|traffic|statistics|sec\w+)|(\bday\b)
+regexp=(mont\D{2,4})|(daily|weekly)|(rx|tx|total)|(avg. rate)|(top 10)|(#)|(\D{3}\s\D{3}\s\d{2}\s(\d+\:\d+\:\d+)\s\d{4})|(packets|max|min\w{,4}|average|bytes|time|traffic|statistics|sec\w+)|(\bday\b)
 colours=green
 -
 regexp=estimated

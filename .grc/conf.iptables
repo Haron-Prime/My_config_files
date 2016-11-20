@@ -1,4 +1,4 @@
-regexp=(\d+\.\d+\.\d+\.\d+)|(\/\d+\b)|(.{0,2}x.{0,2}\/.{0,2}x.{0,2})|((\d+\D{0,1})\ ((packets)|(bytes)))|(avg \d\/\D+\d)|(\d{1,4}\D{0,1})|(\S+ references)
+regexp=(\d+\.\d+\.\d+\.\d+)|(.{0,2}x.{0,2}\/.{0,2}x.{0,2})|((\d+\D{0,1})\ ((packets)|(bytes)))|(avg \d\/\D+\d)|(\d{1,4}\D{0,1})|(\S+ references)
 colours=bold blue
 count=more
 -
@@ -8,6 +8,7 @@ count=more
 -
 regexp=DROP|INVALID
 colours=bold red
+count=more
 -
 regexp=ACCEPT|NEW|RELATED|ESTABLISHED|UPDATE|SET|SSH
 colours=bold green
@@ -17,10 +18,10 @@ regexp=INPUT|OUTPUT|FORWARD|sshguard
 colours=cyan
 count=more
 -
-regexp=pkts|(bytes )|target|prot|opt|\bin\b|out|source|destination
+regexp=pkts|(bytes\s)|target|prot|opt|\bin\b|out|source|destination
 colours=green
 count=more
 -
-regexp=policy|Chain|all|tcp|udp|(icm\w+)|(\D{0,2}state)|limit|recent|([a-z_]+:)|(source mask)|[\(\)]
+regexp=policy|Chain|all|tcp|udp|(icmp\w*)|(\D{0,2}state)|limit|recent|([a-z_]+:)|(source mask)|[\(\)]
 colours=yellow
 count=more

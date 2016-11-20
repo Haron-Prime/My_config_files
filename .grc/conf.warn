@@ -17,20 +17,35 @@ regexp=(?<=[-bcCdDlMnpPs?][-r][-w][-xsStT][-r][-w][-xsStT])(-|(r))(-|(w))(-|([xs
 colours=unchanged,unchanged,bold red,unchanged,bold red,unchanged,bold red
 =====
 # n:n
-regexp=(\s|^)\d+(:\d+)+(?=[\s,]|$)
+regexp=(\s|^)\d+(:\d+)+(?=[\s,]|$)|(\d+\-\d+\-\d+)
 colours=bold blue
 =====
 # size
-regexp=(\s|^)\d+([.,]\d+)?\s?([kKMG][bB]|[bB]|[kKMG])(?=[\s,]|$)
+regexp=(\s|^)\d+([.,]\d+)?\s?([kKMG][bB]|[bB]|[kKMG])(?=[\s,]|$)|(\(?!!\)?)
 colours=yellow
 =====
 # warning
-regexp=([Ww][Aa][Rr][Nn][Ii][Nn][Gg])
+regexp=([Ww][Aa][Rr][Nn][Ii][Nn][Gg])|(\(?WW\)?)
 colours=bold yellow
 =====
 # failed err*
-regexp=([Ff][Aa][Ii][Ll][Ee][Dd])|([Ee][Rr][Rr])\w+
+regexp=([Ff][Aa][Ii][Ll][Ee][Dd])|(([Ee][Rr][Rr])\w+)|(\(?EE\)?)
 colours=bold red
 =====
 regexp=([Cc][Rr][Ii][Tt][Ii][Cc][Aa][Ll])
 colours=bold magenta
+=====
+regexp=(\(?\+\+\)?)
+colours=green
+=====
+regexp=(\(?\=\=\)?)
+colours=white
+=====
+regexp=(\(?II\)?)
+colours=cyan
+=====
+regexp=(\(?--\)?)
+colours=bold cyan
+=====
+regexp=(\(?\*\*\)?)
+colours=bold white

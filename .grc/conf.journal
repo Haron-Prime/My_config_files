@@ -14,19 +14,20 @@ colours=bold yellow
 regexp=([Ff][Aa][Ii][Ll][Ee][Dd])|([Ee][Rr][Rr])\w+
 colours=bold red
 =====
+# critical
 regexp=([Cc][Rr][Ii][Tt][Ii][Cc][Aa][Ll])
 colours=bold magenta
 =====
-regexp=(session\ \D+for)
+regexp=(ses\D+for)
 colours=green
 =====
-regexp=(\(*\/\D+\/\S+\)?)|(\(\D+\:\D+\)?)
+regexp=(\(\D+\:\D+\)?)
 colours=yellow
 =====
 regexp=(\S+\[\d+\])
 colours=cyan
 =====
-regexp=CMD|(COMMAND)|(PWD)|(\(uid\S+\))|(TTY\S+)
+regexp=(CMD\s\(.*\))|(COMMAND)|(PWD)|(\(uid\S+\))|(TTY\S+)
 colours=white
 =====
 regexp=(\S*[^/]\s?haron\s?)
