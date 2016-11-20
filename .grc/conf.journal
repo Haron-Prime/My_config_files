@@ -11,7 +11,7 @@ regexp=([Ww][Aa][Rr][Nn][Ii][Nn][Gg])
 colours=bold yellow
 =====
 # failed err*
-regexp=([Ff][Aa][Ii][Ll][Ee][Dd])|([Ee][Rr][Rr])\w+|(\S+\s?root\s?)
+regexp=([Ff][Aa][Ii][Ll][Ee][Dd])|([Ee][Rr][Rr])\w+
 colours=bold red
 =====
 regexp=([Cc][Rr][Ii][Tt][Ii][Cc][Aa][Ll])
@@ -20,12 +20,17 @@ colours=bold magenta
 regexp=(session\ \D+for)
 colours=green
 =====
-regexp=(\S+\s?haron\s?)
-colours=bold green
-=====
-regexp=(\(\/\D+\/\D+\))|(\(\D+\:\D+\))|(\(uid\S+\))
+regexp=(\(*\/\D+\/\S+\)?)|(\(\D+\:\D+\)?)
 colours=yellow
 =====
 regexp=(\S+\[\d+\])
 colours=cyan
-
+=====
+regexp=CMD|(COMMAND)|(PWD)|(\(uid\S+\))|(TTY\S+)
+colours=white
+=====
+regexp=(\S*[^/]\s?haron\s?)
+colours=bold green
+=====
+regexp=(\S*\s?root\s?)|(sudo)
+colours=bold red
