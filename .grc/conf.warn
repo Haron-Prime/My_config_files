@@ -44,7 +44,7 @@ colours=white
 regexp=(\(?II\)?)
 colours=cyan
 =====
-regexp=(\(?--\)?)
+regexp=(\s\(?--\)?\s)
 colours=bold cyan
 =====
 regexp=(\(?\*\*\)?)
