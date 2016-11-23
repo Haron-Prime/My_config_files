@@ -1,35 +1,49 @@
-# comment
-regexp=^#.*$
-colours=blue
-=======
+colours=bold blue
+=====
+# from http://make-linux.blogspot.com/search/label/grc
 # -rwxrwxrwx
 regexp=(-|([bcCdDlMnpPs?]))(?=[-r][-w][-xsStT][-r][-w][-xsStT][-r][-w][-xsStT])
 colours=unchanged,unchanged,bold blue
-=======
+=====
 regexp=(?<=[-bcCdDlMnpPs?])(-|(r))(-|(w))(-|([xsStT]))(?=[-r][-w][-xsStT][-r][-w][-xsStT])
 colours=unchanged,unchanged,bold green,unchanged,bold green,unchanged,bold green
-=======
+=====
 regexp=(?<=[-bcCdDlMnpPs?][-r][-w][-xsStT])(-|(r))(-|(w))(-|([xsStT]))(?=[-r][-w][-xsStT])
 colours=unchanged,unchanged,bold yellow,unchanged,bold yellow,unchanged,bold yellow
-=======
+=====
 regexp=(?<=[-bcCdDlMnpPs?][-r][-w][-xsStT][-r][-w][-xsStT])(-|(r))(-|(w))(-|([xsStT]))
 colours=unchanged,unchanged,bold red,unchanged,bold red,unchanged,bold red
-=======
+=====
 # n:n
-regexp=(\s|^)\d+(:\d+)+(?=[\s,]|$)
-colours=bold magenta
-=======
+regexp=(\s|^)\d+(:\d+)+(?=[\s,]|$)|(\d+\-\d+\-\d+)
+colours=bold blue
+=====
 # size
-regexp=(\s|^)\d+([.,]\d+)?\s?([kKMG][bB]|[bB]|[kKMG])(?=[\s,]|$)
+regexp=(\s|^)\d+([.,]\d+)?\s?([kKMG][bB]|[bB]|[kKMG])(?=[\s,]|$)|(\(?!!\)?)
 colours=yellow
-=======
+=====
 # warning
-regexp=([Ww][Aa][Rr][Nn][Ii][Nn][Gg])
+regexp=([Ww][Aa][Rr][Nn][Ii][Nn][Gg])|(\(?WW\)?)
 colours=bold yellow
-======
-# critical failed err*
-regexp=([Ff][Aa][Ii][Ll][Ee][Dd])|([Ee][Rr][Rr])\D+
+=====
+# failed err*
+regexp=([Ff][Aa][Ii][Ll][Ee][Dd])|(([Ee][Rr][Rr])\w+)|(\(?EE\)?)
 colours=bold red
-======
+=====
 regexp=([Cc][Rr][Ii][Tt][Ii][Cc][Aa][Ll])
 colours=bold magenta
+=====
+regexp=(\(?\+\+\)?)
+colours=green
+=====
+regexp=(\(?\=\=\)?)
+colours=white
+=====
+regexp=(\(?II\)?)
+colours=cyan
+=====
+regexp=(\s\(?--\)?\s)
+colours=bold cyan
+=====
+regexp=(\(?\*\*\)?)
+colours=bold white

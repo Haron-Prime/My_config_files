@@ -25,7 +25,7 @@ colours=cyan
 =======
 #flags
 regexp=(?<=[,<])[^,]+?(?=[,>])
-colours=blue
+colours=bold blue
 =======
 # mtu
 regexp=(?i)mtu(\s|\:)\d+

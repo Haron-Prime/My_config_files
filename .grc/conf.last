@@ -7,10 +7,10 @@ colours=green
 regexp=crash
 colours=red
 -
-regexp=(\d+\:\d+\:\d+\ \d{4})|(\d\.\d\.\d\-\d\-\D{3})|( \d{2}\:\d{2} )
+regexp=(\d+\:\d+\:\d+\s\d{4})|(\d\.\d\.\d{,2}\-\d\-\D{,5})|(\s\d{2}\:\d{2}\s)
 colours=bold blue
 -
-regexp=(\D{3}\ \D{3}\ +\d{1,2})
+regexp=(\D{3}\s\D{3}\s+\d{1,2})
 colours=cyan
 -
 regexp=haron
@@ -21,3 +21,9 @@ colours=bold red
 -
 regexp=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
 colours=bold magenta
+-
+regexp=(\s\:\d+)
+colours=red
+-
+regexp=(tmux\S+)
+colours=bold cyan
