@@ -1,0 +1,336 @@
+# Default config for sway
+#
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+# Your preferred terminal emulator
+set $term urxvtc
+# Your preferred application launcher
+set $menu dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'
+
+show_marks no
+new_window pixel 1
+new_float pixel 1
+# hide_edge_borders both
+focus_on_window_activation focus
+# floating_minimum_size -1 x -1
+popup_during_fullscreen smart
+# workspace_auto_back_and_forth yes
+focus_on_window_activation focus
+
+# Font
+font pango:SonyEricssonLogo 10
+
+# Colors
+# class                 border  backgr. text    indicator
+client.focused          #99ddff #353535 #bbbbbb #959595
+client.focused_inactive #333333 #5f676a #bbbbbb #484e50
+client.unfocused        #333333 #222222 #888888 #292d2e
+client.urgent           #2f343a #900000 #bbbbbb #900000
+
+### Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/share/sway/)
+# output * bg /usr/share/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+### Input configuration
+#
+# Example configuration:
+#
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+#
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# The escape symbol "\" has to be removed.
+# Read `man 5 sway-input` for more information about this section.
+
+### Key bindings
+#
+# Basics:
+#
+    # start a terminal
+    bindsym $mod+Return exec $term
+
+    # kill focused window
+    bindsym $mod+Shift+q kill
+
+    # start your launcher
+    bindsym $mod+d exec $menu
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
+    floating_modifier $mod normal
+
+    # reload the configuration file
+    bindsym $mod+Shift+c reload
+
+    # exit sway (logs you out of your wayland session)
+    bindsym $mod+Shift+e exit
+#
+# Moving around:
+#
+    # Move your focus around
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+    # or use $mod+[up|down|left|right]
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # _move_ the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+    # ditto, with arrow keys
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+#
+# Workspaces:
+#
+# switch to workspace
+bindsym $mod+1 workspace 1:W
+bindsym $mod+2 workspace 2:M
+bindsym $mod+3 workspace 3:E
+bindsym $mod+4 workspace 4:F
+bindsym $mod+5 workspace 5:S
+bindsym $mod+6 workspace 6:V
+bindsym $mod+7 workspace 7:P
+bindsym $mod+8 workspace 8:J
+bindsym $mod+9 workspace 9:T
+bindsym $mod+0 workspace 0:IM
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1:W
+bindsym $mod+Shift+2 move container to workspace 2:M
+bindsym $mod+Shift+3 move container to workspace 3:E
+bindsym $mod+Shift+4 move container to workspace 4:F
+bindsym $mod+Shift+5 move container to workspace 5:S
+bindsym $mod+Shift+6 move container to workspace 6:V
+bindsym $mod+Shift+7 move container to workspace 7:P
+bindsym $mod+Shift+8 move container to workspace 8:J
+bindsym $mod+Shift+9 move container to workspace 9:T
+bindsym $mod+Shift+0 move container to workspace 0:IM
+
+bindsym $mod+x [urgent=latest] focus
+
+# Layout stuff:
+#
+    # You can "split" the current object of your focus with
+    # $mod+b or $mod+v, for horizontal and vertical splits
+    # respectively.
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
+    # Switch the current container between different layout styles
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+
+    # move focus to the parent container
+    bindsym $mod+a focus parent
+#
+# Scratchpad:
+#
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+minus move scratchpad
+    bindsym Shift+F12 move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+minus scratchpad show
+    bindsym F12 scratchpad show
+#
+# Resizing containers:
+#
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width 10 px or 10 ppt
+    bindsym $down resize grow height 10 px or 10 ppt
+    bindsym $up resize shrink height 10 px or 10 ppt
+    bindsym $right resize grow width 10 px or 10 ppt
+
+    # ditto, with arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+
+bar {
+    status_command    i3blocks -c ~/.i3/i3blocks.conf
+    position          top
+    strip_workspace_numbers yes
+    # binding_mode_indicator yes
+    workspace_buttons yes
+    font pango:Terminus Re33 12
+    colors {
+        background #252525
+        # statusline #bbbbbb
+
+        focused_workspace  #757575 #454545 #aaddff
+        urgent_workspace   #2f343a #900000 #ffffff
+        # binding_mode       #2f343a #900000 #ffffff
+    }
+}
+
+bindsym $mod+Escape          workspace back_and_forth
+
+bindsym Cancel               exec --no-startup-id compdown
+bindsym XF86Reload           exec --no-startup-id compreboot
+bindsym XF86Search           exec --no-startup-id urxvtc -name htop -e htop
+bindsym XF86Tools            exec --no-startup-id urxvtc -name ncmpcpp -e ncmpcpp
+bindsym XF86AudioMute        exec --no-startup-id pulseaudio-ctl mute
+# bindsym XF86AudioMute        exec --no-startup-id "amixer set Master toggle"
+bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down
+# bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 1dB-"
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up
+# bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 1dB+"
+bindsym XF86AudioPlay        exec --no-startup-id mpc toggle
+bindsym $mod+0x60            exec --no-startup-id mpc toggle
+bindsym XF86AudioStop        exec --no-startup-id mpc stop
+bindsym XF86AudioPrev        exec --no-startup-id mpc prev
+bindsym XF86AudioNext        exec --no-startup-id mpc next
+bindsym XF86Favorites        exec --no-startup-id transgui 
+bindsym XF86HomePage         exec --no-startup-id vivaldi-snapshot
+bindsym XF86Mail             exec --no-startup-id /usr/bin/thunderbird
+bindsym XF86Explorer         exec --no-startup-id pcmanfm
+bindsym XF86Calculator       exec --no-startup-id galculator
+bindsym XF86Sleep            exec --no-startup-id i3lock
+bindsym Menu                 exec --no-startup-id gmrun
+
+# bindsym $mod+F12             exec --no-startup-id urxvtc -name guake
+bindsym Mod1+F2              exec --no-startup-id dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'
+bindsym Print                exec --no-startup-id swaygrab
+# bindsym Print                exec --no-startup-id scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'
+# bindsym Mod1+Print           exec --no-startup-id scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'
+bindsym Mod1+g               exec --no-startup-id gimp
+bindsym Mod1+l               exec --no-startup-id cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard
+bindsym Mod1+m               exec --no-startup-id urxvtc -name mc -e mc
+bindsym Mod1+v               exec --no-startup-id urxvtc -name xvim -e vim
+bindsym Mod1+r               exec --no-startup-id urxvtc -name ranger -e ranger
+bindsym Mod1+p               exec --no-startup-id wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe'
+bindsym Mod1+s               exec --no-startup-id subl3
+# bindsym Mod1+Shift+s         exec --no-startup-id gksu subl3
+bindsym Mod1+t               exec --no-startup-id telegram-desktop
+bindsym Mod1+w               exec --no-startup-id pacmanxg
+bindsym Mod1+f               exec --no-startup-id firefox
+# bindsym Mod1+e               exec --no-startup-id "urxvtc -name equalizer -e alsamixer -D equal"
+# bindsym Mod1+e               exec --no-startup-id "pulseaudio-equalizer-gtk"
+bindsym Mod1+e               exec --no-startup-id pavucontrol
+bindsym Mod1+i               exec --no-startup-id 2D-Place
+bindsym Mod1+h               exec --no-startup-id hexchat
+
+assign [class="crx_mpognobbkildjkofajifpdfhcokliml"] 1:W
+assign [class="Navigator"] 1:W
+
+assign [class="Mail"] 2:M
+
+assign [class="subl3"] 3:E
+
+assign [class="pcmanfm"] 4:F
+
+assign [class="pacmanxg"] 5:S
+
+assign [class="mpv"] 6:V
+assign [class="vlc"] 6:V
+assign [class="sopcast-player.py"] 6:V
+
+assign [class="mirage"] 7:P
+assign [class="gimp"] 7:P
+
+assign [class="PRO100.exe"] 8:J
+
+assign [class="transgui"] 9:T
+
+assign [class="telegram-desktop"] 0:IM
+assign [class="hexchat"] 0:IM
+
+for_window [window_role="^conversation$"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="messages"] floating enable
+for_window [window_role="pop-up"] floating enable
+
+# for_window [instance="ncmpcpp|equalizer|htop|ranger|lxappearance"] floating enable focus
+
+# for_window [title="guake"] move scratchpad focus
+for_window [id="zenity"] floating enable
+for_window [id="galculator"] floating enable
+for_window [id="pavucontrol"] floating enable
+for_window [id="xarchiver"] floating enable
+
+for_window [title="Gsmartcontrol"] floating enable
+for_window [title="Gis-weather"] floating enable
+for_window [title="Shutter"] floating enable
+
+for_window [class="gmrun"] floating enable
+for_window [class="feh"] floating enable
+for_window [class="lxappearance"] floating enable
+for_window [class="xarchiver"] floating enable
+
+for_window [title="ncmpcpp"] move scratchpad
+for_window [title="htop"] move scratchpad
+for_window [title="ranger"] move scratchpad
+
+# for_window [instance="ranger|htop|mocp|equalizer|ncmpcpp"] move scratchpad focus
+
+# You may want this:
+#
+# include ~/.config/sway/conf.d/*
+#
+# Protip:
+#
+# include ~/.config/sway/`hostname`/*
