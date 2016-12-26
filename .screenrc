@@ -1,0 +1,16 @@
+# Select whether you want to see the copyright
+# notice during startup.
+# Default is ‘on’, as you probably noticed.
+startup_message off
+
+#change the hardstatus settings to give an window list at the bottom of the
+#screen, with the time and date and with the current window highlighted
+hardstatus alwayslastline
+hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+
+defscrollback 10240
+
+termcapinfo xterm ti@:te@
+
+chdir startup_message off vbell off caption always "%{= bb}%{+b w}%n %h %=%t %c" hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"

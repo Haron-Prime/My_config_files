@@ -98,6 +98,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                          0xff69),     spawn "compdown")
     , ((0,                          0xff67),     spawn "gmrun")
     , ((0,                          0xffc9),     scratchPad)                                                                                          --F12
+    , ((0         .|. shiftMask,    0xffc9),     spawn "termux")                                                                                      --Shift+F12
     , ((0,                          0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Print
     , ((mod1Mask,                   0xff61),     spawn "scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                     --Alt+Print
     --, ((mod1Mask,                     0x61),     spawn "xterm")                                                                                       --Alt+A
@@ -118,8 +119,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
     , ((mod1Mask,                     0x73),     spawn "subl3")                                                                                       --Alt+S
     , ((mod1Mask .|. shiftMask,       0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
-    , ((mod1Mask,                     0x74),     spawn "telegram-desktop")                                                                            --Alt+T
-    , ((mod1Mask .|. shiftMask,       0x74),     spawn "tor-browser")                                                                                 --Alt+Shift+T
+    , ((mod1Mask,                     0x74),     spawn "tor-browser")                                                                                 --Alt+T
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
     , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Alt+W
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart")                                                      --Win+Q
@@ -179,7 +179,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout =  avoidStruts
             $ Tog.toggleLayouts (noBorders Full) 
             $ smartBorders
-            $ onWorkspace "W"  (Full  ||| tiled ||| mouseResizableTile)
+            $ onWorkspace "W"  (Full  ||| tiled ||| Mirror tiled ||| mouseResizableTile)
             $ onWorkspace "M"  (mouseResizableTile ||| Full)
             $ onWorkspace "E"  (Mirror tiled ||| mouseResizableTile ||| Full) 
             $ onWorkspace "F"  (Full  ||| mouseResizableTile ||| Grid)
@@ -267,7 +267,7 @@ myManageHook = composeAll . concat $
     myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
     myMail    = ["Thunderbird"]
     myEdit    = ["Subl3","Et","Wps","Wpp","Acroread","FoxitReader"]
-    myFile    = ["Pcmanfm"]
+    myFile    = ["Pcmanfm","Thunar"]
     mySystem  = ["pacmanxg","systemdx","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap","Xfce4-power-manager-settings"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","PornTime","Easytag"]
     myPic     = ["Gimp","Gimp-2.8","Inkscape"]
@@ -275,7 +275,7 @@ myManageHook = composeAll . concat $
     myTorrent = ["Tixati","Transgui","Transmission-gtk","Transmission-remote-gtk"]
     myVM      = ["VirtualBox"]
     myIM      = ["Hexchat","psi","Psi","Viber","Telegram"]
-    myTerm    = ["term","TMUX"]
+    myTerm    = ["term","TMUX","termux"]
     -- CenterFloat
     myFloatC  = ["Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","Gis-weather.py"]
     myFloatA  = ["lxappearance","xarchiver","gmrun"]
@@ -300,7 +300,7 @@ myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D"
 
 mynameScratchpads = [ NS "ncmpcpp" "urxvtc -name ncmpcpp -e ncmpcpp" (appName =? "ncmpcpp") (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                 , NS "htop" "urxvtc -name htop -e htop" (appName =? "htop") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-                , NS "mc" "urxvtc -name mc -e mc" (appName =? "mc") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+                -- , NS "mc" "urxvtc -name mc -e mc" (appName =? "mc") (customFloating $ W.RationalRect 0.02 0.02 0.96 0.96)
                 , NS "gpick" "gpick" (appName =? "gpick") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                 , NS "ranger" "urxvtc -name ranger -e ranger" (appName =? "ranger") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                 -- , NS "equaliser" "urxvtc -name equaliser -e alsamixer -D equal" (appName =? "equaliser") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)

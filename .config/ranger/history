@@ -5,3 +5,5 @@ shell git pull
 shell mv ./OFT.JPG ~/tozen
 filter folder
 filter  
+cd Video/animation/
+cd /home/haron/Video/animation/
