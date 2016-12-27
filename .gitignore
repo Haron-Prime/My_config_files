@@ -1,5 +1,5 @@
 *.[oa]
 *~
-/.config/mpd/log
-/.config/mpd/state
-/.config/mpv/watch_latter/
+.config/mpd/log
+.config/mpd/state
+.config/mpv/watch_latter/
