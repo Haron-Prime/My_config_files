@@ -21,12 +21,12 @@ xset s 6999 &
 xset dpms 6000 6001 6002 &
 xset m 5/2 0 &
 numlockx &
-perWindowLayoutD &
+# perWindowLayoutD &
 compton -b &
 urxvtd -q -f -o &
 pcmanfm -d &
-feh --bg-center /home/haron/Pictures/pics/xmonad/XMONAD011-2.png &
+# feh --bg-center /home/haron/Pictures/pics/xmonad/XMONAD011-2.png &
 # /usr/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --widthtype request --width 1 --transparent true --alpha 1 --tint 0x000000 --height 20 --expand true &
-stalonetray &
-python3 /home/haron/lib/gis-weather/gis-weather.py &
-exec xmonad
+# stalonetray &
+# python3 /home/haron/lib/gis-weather/gis-weather.py &
+exec awesome

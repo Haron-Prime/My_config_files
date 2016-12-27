@@ -17,15 +17,19 @@ fi
 /usr/bin/xdg-user-dirs-update &
 setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp &
 xsetroot -cursor_name left_ptr &
-xset s 6999 &
-xset dpms 6000 6001 6002 &
+xsetroot -solid '#000000' &
+# xset s 6999 &
+# xset dpms 6000 6001 6002 &
 xset m 5/2 0 &
 numlockx &
 perWindowLayoutD &
 compton -b &
 urxvtd -q -f -o &
 pcmanfm -d &
-feh --bg-center /home/haron/Pictures/pics/xmonad/XMONAD011-2.png &
+# feh --bg-center /home/haron/wall/XMONAD011-2.png &
+# feh --bg-scale /home/haron/Pictures/Walpapers/hs-2005-01-a-full_jpg.jpg &
+feh --bg-scale /home/haron/wall/starrynight3.png &
 stalonetray &
 python3 /home/haron/lib/gis-weather/gis-weather.py &
+# /home/haron/.local/bin/xmb2 &
 exec xmonad

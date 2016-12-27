@@ -17,6 +17,7 @@ fi
 /usr/bin/xdg-user-dirs-update &
 setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp &
 xsetroot -cursor_name left_ptr &
+xsetroot -solid '#000000' &
 xset s 6999 &
 xset dpms 6000 6001 6002 &
 xset m 5/2 0 &
@@ -25,7 +26,6 @@ perWindowLayoutD &
 compton -b &
 urxvtd -q -f -o &
 pcmanfm -d &
-feh --bg-center /home/haron/Pictures/Walpapers/into-the-mist.jpg &
+feh --bg-center /home/haron/Pictures/Walpapers/i3wm.png &
 python3 /home/haron/lib/gis-weather/gis-weather.py &
-mocicon &
 exec i3
