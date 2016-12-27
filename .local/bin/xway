@@ -1,0 +1,7 @@
+#!/bin/sh
+/usr/bin/xdg-user-dirs-update &
+urxvtd -q -f -o &
+pcmanfm -d &
+python3 /home/haron/lib/gis-weather/gis-weather.py &
+XKB_DEFAULT_LAYOUT=us,ru XKB_DEFAULT_OPTIONS=grp:caps_toggle dbus-launch --sh-syntax --exit-with-session sway
+exit 0
