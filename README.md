@@ -1,6 +1,6 @@
 # My_config_files
 
-My config awesome wm, xmonad, xmobar, i3wm, i3blocks, herbstluftwm, zsh etc
+My config awesome wm, xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh etc
 
 #### Some screenshots 
 
@@ -8,6 +8,8 @@ My config awesome wm, xmonad, xmobar, i3wm, i3blocks, herbstluftwm, zsh etc
 ![](/screenshots/xmonad-2.png?raw=true)
 ![](/screenshots/i3wm-1.png?raw=true)
 ![](/screenshots/i3wm-2.png?raw=true)
+![](/screenshots/sway1.png?raw=true)
+![](/screenshots/sway2.png?raw=true)
 ![](/screenshots/herbstluftwm-1.png?raw=true)
 ![](/screenshots/herbstluftwm-3.png?raw=true)
 
