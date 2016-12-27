@@ -159,7 +159,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-    status_command    i3blocks -c ~/lib/sway/swaybar.conf
+    status_command    i3blocks -c ~/.config/sway/swaybar.conf
     position          top
     strip_workspace_numbers yes
     # binding_mode_indicator yes
