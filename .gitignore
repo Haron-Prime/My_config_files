@@ -1,3 +1,4 @@
 /.config/mpd/log
 /.config/mpd/state
 /.config/mpv/watch_latter/*
+/.gitignore
