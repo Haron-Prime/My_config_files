@@ -14,7 +14,6 @@ local menubar = require("menubar")
 local applicationsmenu = require("applicationsmenu")
 local vicious = require("vicious")
 local bashets = require("bashets")
-local freedesktop = require("freedesktop")
 local quake = require("quake")
 local quakeconsole = {}
 for s = 1, screen.count() do
@@ -22,7 +21,6 @@ for s = 1, screen.count() do
            height = 0.95,
            screen = s })
 end
-
 
 -- os.setlocale("ru_UA.UTF-8")
 os.setlocale(os.getenv("LANG"), "time")
@@ -100,13 +98,13 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "W", "M", "E", "F", "S", "V", "P", "J", "T" }, s, {layouts[1], layouts[1], layouts[4], layouts[10], layouts[10], layouts[9], layouts[8], layouts[9]})
+    tags[s] = awful.tag({ "Web", "Mail", "Editor", "Files", "System", "Video", "Pictures", "Work", "Torrents" }, s, {layouts[1], layouts[1], layouts[4], layouts[10], layouts[10], layouts[9], layouts[8], layouts[10], layouts[10]})
 end
 -- }}}
 
 mymainmenu = awful.menu({items = {
 --                                { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                  -- {"Accessories", applicationsmenu.applicationsmenu() ,beautiful.accesoires_icon},
+                                  {"Accessories", applicationsmenu.applicationsmenu() ,beautiful.accesoires_icon},
                                   { " " },
                                   { "Run", "dmenu_run -i -p 'Run command:' -nb '" .. beautiful.bg_normal .. "' -nf '" .. beautiful.fg_normal .. "' -sb '" .. beautiful.bg_myfocus .. "' -sf '" .. beautiful.fg_myurgent .. "' -fn '-misc-fixed-medium-r-normal-*-15-140-75-75-c-90-iso10646-1'", beautiful.run_icon},
                                   { " " },
@@ -169,15 +167,15 @@ vicious.register(mytempbox1, temp_cpu, "<span font=\"Terminus Re33 12\">+$1</spa
 mytempbox1a = wibox.widget.textbox("<span font=\"Terminus Re33 11\">°C</span>")
 
 -- Temp GPU widget
--- local function temp_gpu()
---     local f = io.popen("nvidia-settings -q gpucoretemp -t")
---     local out = f:read("*a")
---     f:close()
---     return { out }
--- end
--- mytempbox2 = wibox.widget.textbox()
--- vicious.register(mytempbox2, temp_gpu, "<span font=\"Terminus Re33 12\">+$1</span>", 5)
--- mytempbox2a = wibox.widget.textbox("<span font=\"Terminus Re33 11\">°C</span>")
+local function temp_gpu()
+    local f = io.popen("nvidia-settings -q gpucoretemp -t")
+    local out = f:read("*a")
+    f:close()
+    return { out }
+end
+mytempbox2 = wibox.widget.textbox()
+vicious.register(mytempbox2, temp_gpu, "<span font=\"Terminus Re33 12\">+$1</span>", 5)
+mytempbox2a = wibox.widget.textbox("<span font=\"Terminus Re33 11\">°C</span>")
 
 -- Uptime widget
 local function uptime_output()
@@ -366,7 +364,7 @@ for s = 1, screen.count() do
     right_layout:add(separator2)
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(separator3)
-    -- right_layout:add(mylayoutbox[s])
+    right_layout:add(mylayoutbox[s])
 
     -- Now bring it all together (with the tasklist in the middle)
     local layout = wibox.layout.align.horizontal()
@@ -457,10 +455,10 @@ globalkeys = awful.util.table.join(
     awful.key({                   }, "XF86Favorites",        function () awful.util.spawn_with_shell("transgui")                                             end),
     awful.key({                   }, "XF86Explorer",         function () awful.util.spawn_with_shell("pcmanfm")                                              end),
     awful.key({"Mod1"             }, "XF86Explorer",         function () awful.util.spawn_with_shell("gksu pcmanfm")                                         end),
-    awful.key({                   }, "XF86Mail",             function () awful.util.spawn_with_shell("thunderbird")                                          end),
+    awful.key({                   }, "XF86Mail",             function () awful.util.spawn_with_shell("/home/haron/.local/bin/thunderbird")                   end),
     awful.key({                   }, "XF86Calculator",       function () awful.util.spawn_with_shell("galculator")                                           end),
     awful.key({                   }, "XF86Tools",            function () awful.util.spawn_with_shell("urxvtc -e /usr/bin/ncmpcpp")                           end),
-    awful.key({                   }, "XF86HomePage",         function () awful.util.spawn_with_shell("vivaldi-snapshot")                                     end),
+    awful.key({                   }, "XF86HomePage",         function () awful.util.spawn_with_shell("firefox")                                              end),
     awful.key({                   }, "XF86Search",           function () awful.util.spawn_with_shell("urxvtc -name htop -e /usr/bin/htop")                   end),
     awful.key({                   }, "XF86AudioMute",        function () awful.util.spawn(           "amixer set Master toggle")                             end),
     awful.key({                   }, "XF86AudioLowerVolume", function () awful.util.spawn(           "amixer set Master 5%-")                                end),

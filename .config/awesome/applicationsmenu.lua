@@ -5,144 +5,108 @@ module("applicationsmenu")
 applicationsmenu = {}
 
 applicationsmenu[10] = {
-{[====[Doublecmd]====], [====[/home/haron/.local/bin/doublecmd]====]},
-{[====[PCManFM]====], [====[pcmanfm]====]},
-{[====[PCManFM as root]====], [====[gksu pcmanfm]====]},
-{[====[Thunar]====], [====[thunar]====]},
-{[====[Thunar as root]====], [====[gksu thunar]====]},
-{[====[7-Zip FM]====], [====[7zFM]====]},
+{[====[ALSCenter]====], [====[/opt/Almin-Soft/ALSCenter/alscenter]====]},
+{[====[Archive Manager]====], [====[file-roller]====]},
+{[====[Capture the current active window]====], [====[shutter --active]====]},
+{[====[Character Map]====], [====[gucharmap]====]},
 {[====[compton]====], [====[compton]====]},
-{[====[dupeGuru]====], [====[dupeguru-se]====]},
+{[====[Font Manager]====], [====[font-manager %u]====]},
+{[====[Font Viewer]====], [====[/usr/libexec/font-manager/font-viewer %u]====]},
 {[====[Galculator]====], [====[galculator]====]},
-{[====[Gis Weather]====], [====[/usr/bin/gis-weather]====]},
+{[====[Google Drive Indicator]====], [====[/opt/grive-tools/grive-indicator]====]},
+{[====[Grive Setup]====], [====[/bin/bash /opt/grive-tools/grive-setup]====]},
+{[====[Help]====], [====[xdg-open https://support.google.com/drive]====]},
 {[====[HP Device Manager]====], [====[hp-toolbox]====]},
-{[====[Q7Z]====], [====[Q7Z.pyw]====]},
+{[====[PacmanXG]====], [====[ssx pacmanxg]====]},
+{[====[PacmanXG]====], [====[kdesu ssx pacmanxg]====]},
+{[====[Root Terminal]====], [====[gksu -l gnome-terminal]====]},
+{[====[Search for Files or Folders]====], [====[pcmanfm-mod --find-files %F]====]},
 {[====[Shortcut Editor]====], [====[lxshortcut -i %f]====]},
-{[====[System info]====], [====[/home/haron/.local/bin/sysinfo]====]}
+{[====[SystemDX]====], [====[ssx systemdx]====]},
+{[====[SystemDX - Tracking journal in real-time]====], [====[ssx systemdx -tj]====]},
+{[====[SystemDX - Udev Monitor]====], [====[ssx systemdx -u]====]},
+{[====[Xarchiver]====], [====[xarchiver %f]====]}
 }
 applicationsmenu[20] = {
-{[====[2D-Place]====], [====[/home/haron/bin/2D-Place]====]},
-{[====[PRO100 4.42]====], [====[env WINEPREFIX="/home/haron/.wine" wine '/home/haron/lib/PRO100/pro100.exe']====]},
-{[====[PRO100 5.20]====], [====[env WINEPREFIX="/home/haron/.wine" wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe']====]}
 }
 applicationsmenu[30] = {
-{[====[HMM3]====], [====[/home/haron/.local/bin/heroes3]====]},
 {[====[StarMade]====], [====[starmade]====]}
 }
 applicationsmenu[40] = {
 {[====[Feh]====], [====[feh %F]====]},
-{[====[FontForge]====], [====[fontforge]====]},
-{[====[GIMP]====], [====[gimp-2.8]====]},
+{[====[GNU Image Manipulation Program]====], [====[gimp-2.8]====]},
 {[====[Gpick]====], [====[gpick]====]},
-{[====[GThumb]====], [====[gthumb]====]},
-{[====[inkscape]====], [====[inkscape]====]},
-{[====[Pinta]====], [====[pinta]====]},
-{[====[Shutter]====], [====[shutter]====]}
+{[====[Mirage]====], [====[mirage %f]====]},
+{[====[New Drawing]====], [====[inkscape]====]},
+{[====[Pinta]====], [====[pinta %F]====]}
 }
 applicationsmenu[50] = {
-{[====[Firefox Web Browser]====], [====[/home/haron/.local/bin/firefox]====]},
-{[====[Tor-Browser]====], [====[/home/haron/.local/bin/tor-browser]====]},
-{[====[Iron Web Browser]====], [====[/usr/bin/iron]====]},
-{[====[Iron (portable)]====], [====[/home/haron/.local/bin/iron]====]},
-{[====[Opera Web Browser]====], [====[/home/haron/.local/bin/opera]====]},
-{[====[Daily]====], [====[/home/haron/.local/bin/thunderbird]====]},
-{[====[Contacts]====], [====[/home/haron/.local/bin/thunderbird -addressbook]====]},
-{[====[Dropbox]====], [====[dropboxd]====]},
-{[====[MEGASync]====], [====[megasync]====]},
-{[====[Google Drive Indicator]====], [====[/opt/thefanclub/grive-tools/grive-indicator]====]},
-{[====[Grive Setup]====], [====[/bin/bash /opt/thefanclub/grive-tools/grive-setup]====]},
-{[====[NixNote]====], [====[/usr/bin/nixnote2 --newNote]====]},
-{[====[Transmission Remote GUI]====], [====[/usr/bin/transmission-remote-gtk]====]},
-{[====[Tixati]====], [====[tixati]====]},
-{[====[Viber]====], [====[viber]====]},
-{[====[Zenmap]====], [====[zenmap %F]====]},
-{[====[Zenmap (as root)]====], [====[/usr/share/zenmap/su-to-zenmap.sh %F]====]},
 {[====[Avahi SSH Server Browser]====], [====[/usr/bin/bssh]====]},
-{[====[Avahi VNC Server Browser]====], [====[/usr/bin/bvnc]====]}
+{[====[Avahi VNC Server Browser]====], [====[/usr/bin/bvnc]====]},
+{[====[Dropbox]====], [====[dropboxd]====]},
+{[====[Links]====], [====[xlinks -g]====]},
+{[====[Open address book]====], [====[thunderbird -addressbook]====]},
+{[====[Open Safe Mode]====], [====[hexchat --no-auto --no-plugins]====]},
+{[====[Opera]====], [====[/home/haron/lib/opera/opera]====]},
+{[====[Opera]====], [====[/home/haron/lib/opera/opera]====]},
+{[====[Psi]====], [====[psi]====]},
+{[====[Start-Tor-Browser]====], [====[/home/haron/lib/tor-browser_ru/start-tor-browser]====]},
+{[====[Telegram Desktop]====], [====[telegram-desktop -- %u]====]},
+{[====[Telegram Desktop]====], [====[-- %u]====]},
+{[====[Tixati]====], [====[tixati]====]},
+{[====[Tixati]====], [====[/usr/bin/tixati]====]},
+{[====[Viber]====], [====[viber]====]},
+{[====[Viber]====], [====[/opt/viber/Viber]====]},
+{[====[Vivaldi (snapshot)]====], [====[/usr/bin/vivaldi-snapshot]====]},
+{[====[Zenmap]====], [====[zenmap %F]====]},
+{[====[Zenmap (as root)]====], [====[/usr/share/zenmap/su-to-zenmap.sh %F]====]}
 }
 applicationsmenu[60] = {
-{[====[Sublime Text 3 Dev]====], [====[subl3]====]},
-{[====[Adobe Reader 9]====], [====[acroread]====]},
+{[====[Math]====], [====[libreoffice --math]====]},
+{[====[New Database]====], [====[libreoffice --base]====]},
+{[====[New Document]====], [====[libreoffice --writer]====]},
+{[====[New Drawing]====], [====[libreoffice --draw]====]},
+{[====[New Formula]====], [====[libreoffice --math]====]},
+{[====[New Presentation]====], [====[libreoffice --impress]====]},
+{[====[New Spreadsheet]====], [====[libreoffice --calc]====]},
+{[====[WPS Presentation]====], [====[/usr/bin/wpp %f]====]},
+{[====[WPS Spreadsheets]====], [====[/usr/bin/et %f]====]},
+{[====[WPS Writer]====], [====[/usr/bin/wps %f]====]}
+}
+applicationsmenu[70] = {
+{[====[2D-Place]====], [====[/home/haron/bin/2D-Place]====]},
+{[====[A Wine application]====], [====[env WINEPREFIX="/home/haron/prefix32" wine start /ProgIDOpen VBSFile %f]====]},
+{[====[Access Prompt]====], [====[/usr/lib/gcr/gcr-prompter]====]},
+{[====[Acestream Launcher]====], [====[/usr/bin/acestream-launcher %u]====]},
+{[====[Daily]====], [====[/home/haron/lib/thunderbird/thunderbird]====]},
+{[====[Deadbeef-portable]====], [====[/home/haron/lib/deadbeef/deadbeef]====]},
+{[====[feh-scale]====], [====[feh -. %f]====]},
+{[====[feh-scale]====], [====[feh -. %f]====]},
+{[====[Firefox]====], [====[/home/haron/lib/firefox-beta/firefox %u]====]},
+{[====[Firefox]====], [====[/home/haron/lib/firefox-esr/firefox %u]====]},
+{[====[FoxitReader]====], [====[/home/haron/.local/bin/FoxitReader %f]====]},
+{[====[Geoclue Demo agent]====], [====[/usr/lib/geoclue2/geoclue-2.0/demos/agent]====]},
+{[====[Gis-Weather]====], [====[python /home/haron/lib/gis-weather-0.7.5/gis-weather.py]====]},
+{[====[Google Keep – заметки и списки]====], [====[/opt/vivaldi-snapshot/vivaldi-snapshot]====]},
+{[====[Google Keep – заметки и списки]====], [====[/usr/bin/chromium --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki]====]},
+{[====[HMM3]====], [====[/home/haron/lib/hmm3/heroes3]====]},
+{[====[i3]====], [====[i3]====]},
 {[====[LibreOffice XSLT based filters]====], [====[libreoffice]====]},
-{[====[LO New Database]====], [====[libreoffice --base]====]},
-{[====[LO New Document]====], [====[libreoffice --writer]====]},
-{[====[LO New Drawing]====], [====[libreoffice --draw]====]},
-{[====[LO New Formula]====], [====[libreoffice --math]====]},
-{[====[LO New Presentation]====], [====[libreoffice --impress]====]},
-{[====[LO New Spreadsheet]====], [====[libreoffice --calc]====]},
-{[====[WPS Presentation]====], [====[/usr/bin/wpp]====]},
-{[====[WPS Spreadsheets]====], [====[/usr/bin/et]====]},
-{[====[WPS Writer]====], [====[/usr/bin/wps]====]},
-{[====[YAGF]====], [====[yagf %F]====]}
+{[====[Open Folder]====], [====[pcmanfm-mod]====]},
+{[====[Pocket]====], [====[/usr/bin/chromium --profile-directory=Default --app-id=mjcnijlhddpbdemagnpefmlkjdagkogk]====]},
+{[====[PRO100]====], [====[wine /home/haron/lib/Pro100-5.20-GIV/PRO100.exe %f]====]},
+{[====[PRO100]====], [====[wine /home/haron/lib/Pro100-5.20-GIV/PRO100.exe %f]====]},
+{[====[PRO100 4.42]====], [====[env WINEPREFIX="/home/haron/.wine" wine '/home/haron/lib/PRO100/pro100.exe']====]},
+{[====[PRO100 5.20]====], [====[env WINEPREFIX="/home/haron/.wine" wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe']====]},
+{[====[subl3]====], [====[subl3]====]},
+{[====[thunderbird]====], [====[/home/haron/.local/bin/thunderbird %f]====]},
+{[====[transgui]====], [====[transgui %f]====]},
+{[====[View file]====], [====[/usr/bin/gcr-viewer]====]},
+{[====[Where am I?]====], [====[/usr/lib/geoclue2/geoclue-2.0/demos/where-am-i]====]},
+{[====[Wine Installer]====], [====[env WINEPREFIX="/home/haron/prefix32" wine start /ProgIDOpen Msi.Patch %f]====]},
+{[====[Wine Windows Program Loader]====], [====[wine start /unix %f]====]},
+{[====[winebrowser]====], [====[env WINEPREFIX="/home/haron/.wine" wine start /ProgIDOpen pdffile %f]====]},
+{[====[xmicro]====], [====[xmicro %f]====]},
+{[====[xvim]====], [====[xvim %f]====]},
+{[====[Платежная система Интернет-магазина Chrome]====], [====[/usr/bin/chromium --profile-directory=Default --app-id=nmmhkkegccagdldgiimedpiccmgmieda]====]}
 }
-applicationsmenu[80] = {
-{[====[CMake]====], [====[cmake-gui %f]====]},
-{[====[OpenJDK Monitoring & Management Console]====], [====[/usr/bin/jconsole]====]},
-{[====[OpenJDK Policy Tool]====], [====[/usr/bin/policytool]====]},
-{[====[Qt Assistant]====], [====[/usr/lib/qt/bin/assistant]====]},
-{[====[Qt Designer]====], [====[/usr/lib/qt/bin/designer]====]},
-{[====[Qt Linguist]====], [====[/usr/lib/qt/bin/linguist]====]},
-{[====[Qt QDbusViewer]====], [====[/usr/lib/qt/bin/qdbusviewer]====]},
-{[====[Qt4 Assistant]====], [====[assistant-qt4]====]},
-{[====[Qt4 Designer]====], [====[designer-qt4]====]},
-{[====[Qt4 Linguist]====], [====[linguist-qt4]====]},
-{[====[Qt4 QDbusViewer]====], [====[qdbusviewer-qt4]====]}
-}
-applicationsmenu[90] = {
-{[====[AcetoneISO]====], [====[acetoneiso %f]====]},
-{[====[Deadbeef-local]====], [====[/home/haron/.local/bin/deadbeef]====]},
-{[====[Deadbeef]====], [====[deadbeef]====]},
-{[====[gMTP]====], [====[gmtp]====]},
-{[====[MPlayer Media Player]====], [====[mplayer %F]====]},
-{[====[mpv Media Player]====], [====[mpv --no-terminal --force-window --]====]},
-{[====[PornTime]====], [====[/home/haron/.local/bin/PornTime]====]},
-{[====[Qt V4L2 test Utility]====], [====[qv4l2]====]},
-{[====[SimpleScreenRecorder]====], [====[simplescreenrecorder --logfile]====]},
-{[====[SMPlayer]====], [====[smplayer]====]},
-{[====[SMPlayer YouTube Browser]====], [====[smtube]====]},
-{[====[Enqueue in SMPlayer]====], [====[smplayer -add-to-playlist]====]},
-{[====[SopCast Player]====], [====[sopcast-player]====]},
-{[====[VLC media player]====], [====[/usr/bin/vlc --started-from-file]====]}
-}
-applicationsmenu[100] = {
-{[====[AppSet-Qt]====], [====[/usr/bin/appset-launch.sh]====]},
-{[====[Avahi Zeroconf Browser]====], [====[/usr/bin/avahi-discover]====]},
-{[====[GParted]====], [====[gksu /usr/bin/gparted]====]},
-{[====[GSmartControl]====], [====[/usr/bin/gsmartcontrol_polkit]====]},
-{[====[Htop]====], [====[htop]====]},
-{[====[Manage Printing]====], [====[/usr/bin/xdg-open http://localhost:631/]====]},
-{[====[VirtualBox]====], [====[VirtualBox]====]},
-{[====[UNetbootin]====], [====[/usr/bin/unetbootin_polkit]====]},
-{[====[urxvt]====], [====[urxvt]====]},
-{[====[urxvt (client)]====], [====[urxvtc]====]},
-{[====[urxvt (tabbed)]====], [====[urxvt-tabbed]====]},
-{[====[UXTerm]====], [====[uxterm]====]},
-{[====[XTerm]====], [====[xterm]====]},
-{[====[SystemDX]====], [====[gksu systemdx]====]},
-{[====[SystemDX - Tracking journal in real-time]====], [====[gksu systemdx -tj]====]},
-{[====[SystemDX - Udev Monitor]====], [====[gksu systemdx -u]====]},
-{[====[PacmanXG]====], [====[gksu pacmanxg]====]}
-}
-applicationsmenu[110] = {
-{[====[Desktop Preferences]====], [====[pcmanfm --desktop-pref]====]},
-{[====[NVIDIA X Server Settings]====], [====[/usr/bin/nvidia-settings]====]},
-{[====[Preferred Applications]====], [====[libfm-pref-apps]====]},
-{[====[Privilege granting]====], [====[gksu-properties]====]},
-{[====[Qt4 Config]====], [====[qtconfig-qt4]====]}
-}
-
-applicationsmenu[1] = {
-{[====[Accessories]====], applicationsmenu[10]},
-{[====[Work]====], applicationsmenu[20]},
-{[====[Games]====], applicationsmenu[30]},
-{[====[Graphics]====], applicationsmenu[40]},
-{[====[Internet]====], applicationsmenu[50]},
-{[====[Office]====], applicationsmenu[60]},
-{[====[Programming]====], applicationsmenu[80]},
-{[====[Sound & Video]====], applicationsmenu[90]},
-{[====[System Tools]====], applicationsmenu[100]},
-{[====[Preferences]====], applicationsmenu[110]}
-}
-
-passed = applicationsmenu[1]
-function applicationsmenu() return passed end

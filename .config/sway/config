@@ -19,10 +19,10 @@ font pango:SonyEricssonLogo 10
 
 # Colors
 # class                 border  backgr. text    indicator
-client.focused          #99ddff #353535 #bbbbbb #959595
-client.focused_inactive #333333 #5f676a #bbbbbb #484e50
-client.unfocused        #333333 #222222 #888888 #292d2e
-client.urgent           #2f343a #900000 #bbbbbb #900000
+# client.focused          #99ddff #353535 #bbbbbb #959595
+# client.focused_inactive #333333 #5f676a #bbbbbb #484e50
+# client.unfocused        #333333 #222222 #888888 #292d2e
+# client.urgent           #2f343a #900000 #bbbbbb #900000
 
 ### Key bindings
 #
@@ -159,7 +159,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-    status_command    i3blocks -c ~/.i3/i3blocks.conf
+    status_command    i3blocks -c ~/lib/sway/swaybar.conf
     position          top
     strip_workspace_numbers yes
     # binding_mode_indicator yes
@@ -174,6 +174,12 @@ bar {
         # binding_mode       #2f343a #900000 #ffffff
     }
 }
+# bar {
+#     status_command          i3status
+#     position                top
+#     strip_workspace_numbers yes
+#     font pango:Terminus Re33 12
+# }
 
 bindsym $mod+Escape          workspace back_and_forth
 
@@ -194,7 +200,7 @@ bindsym XF86HomePage         exec --no-startup-id vivaldi-snapshot
 bindsym XF86Mail             exec --no-startup-id /usr/bin/thunderbird
 bindsym XF86Explorer         exec --no-startup-id pcmanfm
 bindsym XF86Calculator       exec --no-startup-id galculator
-bindsym XF86Sleep            exec --no-startup-id i3lock
+bindsym XF86Sleep            exec --no-startup-id swaylock
 bindsym Menu                 exec --no-startup-id gmrun
 
 bindsym Mod1+F2              exec --no-startup-id dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'
@@ -238,10 +244,10 @@ assign [class="transgui"] 9:T
 assign [class="telegram-desktop"] 0:IM
 assign [class="hexchat"] 0:IM
 
-for_window [window_role="^conversation$"] floating enable
-for_window [window_role="task_dialog"] floating enable
-for_window [window_role="messages"] floating enable
-for_window [window_role="pop-up"] floating enable
+# for_window [window_role="^conversation$"] floating enable
+# for_window [window_role="task_dialog"] floating enable
+# for_window [window_role="messages"] floating enable
+# for_window [window_role="pop-up"] floating enable
 
 for_window [id="zenity"] floating enable
 for_window [id="galculator"] floating enable
@@ -257,6 +263,6 @@ for_window [class="feh"] floating enable
 for_window [class="lxappearance"] floating enable
 for_window [class="xarchiver"] floating enable
 
-for_window [title="ncmpcpp"] move scratchpad
-for_window [title="htop"] move scratchpad
-for_window [title="ranger"] move scratchpad
+for_window [title="ncmpcpp"] floating enable
+for_window [title="htop"] floating enable
+for_window [title="ranger"] floating enable
