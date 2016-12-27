@@ -1,4 +1,5 @@
+*.[oa]
+*~
 /.config/mpd/log
 /.config/mpd/state
-/.config/mpv/watch_latter/*
-/.gitignore
+/.config/mpv/watch_latter/
