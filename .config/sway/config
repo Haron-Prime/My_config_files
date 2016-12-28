@@ -200,7 +200,7 @@ bindsym XF86HomePage         exec --no-startup-id vivaldi-snapshot
 bindsym XF86Mail             exec --no-startup-id /usr/bin/thunderbird
 bindsym XF86Explorer         exec --no-startup-id pcmanfm
 bindsym XF86Calculator       exec --no-startup-id galculator
-bindsym XF86Sleep            exec --no-startup-id swaylock
+bindsym XF86Sleep            exec --no-startup-id swaylock -i /home/haron/wall/black-hole_web.png -s center
 bindsym Menu                 exec --no-startup-id gmrun
 
 bindsym Mod1+F2              exec --no-startup-id dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'
