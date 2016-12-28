@@ -27,8 +27,6 @@ applicationsmenu[10] = {
 {[====[SystemDX - Udev Monitor]====], [====[ssx systemdx -u]====]},
 {[====[Xarchiver]====], [====[xarchiver %f]====]}
 }
-applicationsmenu[20] = {
-}
 applicationsmenu[30] = {
 {[====[StarMade]====], [====[starmade]====]}
 }

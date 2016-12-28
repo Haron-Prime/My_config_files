@@ -11,10 +11,10 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
-local applicationsmenu = require("applicationsmenu")
+-- local applicationsmenu = require("applicationsmenu")
 local vicious = require("vicious")
 local bashets = require("bashets")
-local freedesktop = require("freedesktop")
+-- local freedesktop = require("freedesktop")
 local quake = require("quake")
 local quakeconsole = {}
 for s = 1, screen.count() do
@@ -58,7 +58,7 @@ beautiful.init("/home/haron/.config/awesome/themes/haron/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvtc"
-editor = os.getenv("EDITOR") or "nano"
+editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -107,9 +107,10 @@ end
 mymainmenu = awful.menu({items = {
 --                                { "awesome", myawesomemenu, beautiful.awesome_icon },
                                   -- {"Accessories", applicationsmenu.applicationsmenu() ,beautiful.accesoires_icon},
-                                  { " " },
-                                  { "Run", "dmenu_run -i -p 'Run command:' -nb '" .. beautiful.bg_normal .. "' -nf '" .. beautiful.fg_normal .. "' -sb '" .. beautiful.bg_myfocus .. "' -sf '" .. beautiful.fg_myurgent .. "' -fn '-misc-fixed-medium-r-normal-*-15-140-75-75-c-90-iso10646-1'", beautiful.run_icon},
-                                  { " " },
+                                  -- { " " },
+                                  -- { "Run", "dmenu_run -i -p 'Run command:' -nb '" .. beautiful.bg_normal .. "' -nf '" .. beautiful.fg_normal .. "' -sb '" .. beautiful.bg_myfocus .. "' -sf '" .. beautiful.fg_myurgent .. "' -fn '-misc-fixed-medium-r-normal-*-15-140-75-75-c-90-iso10646-1'", beautiful.run_icon},
+                                  { "Run", "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'", beautiful.run_icon},
+                                  -- { " " },
                                   { " Exit", awesome.quit, beautiful.logout_icon},
                                   { " Reboot", function()  awful.util.spawn_with_shell("systemctl reboot") end, beautiful.reboot_icon},
                                   { " Power off", function()  awful.util.spawn_with_shell("systemctl poweroff") end, beautiful.shutdown_icon},
@@ -194,34 +195,34 @@ vicious.register(myuptimebox, uptime_output, "<span font=\"Terminus Re33 12\">$1
 netwidget = wibox.widget.textbox()
 vicious.register(netwidget, vicious.widgets.net, "⬇ <span font=\"Terminus Re33 12\">${enp3s0 down_mb}M</span> <span color=\"#ffffff\"> ✦ </span>⬆ <span font=\"Terminus Re33 12\">${enp3s0 up_mb}M</span>", 1)
   --In
-local function net_stat_in()
-    local f = io.popen("vnstat  | grep 'today' | awk '{print $2 $3}'")
-    local out = f:read("*a")
-    f:close()
-    return { out }
-end
-netstat_in = wibox.widget.textbox()
-vicious.register(netstat_in, net_stat_in, "<span font=\"Terminus Re33 12\">$1</span>", 60)
+-- local function net_stat_in()
+--     local f = io.popen("vnstat  | grep 'today' | awk '{print $2 $3}'")
+--     local out = f:read("*a")
+--     f:close()
+--     return { out }
+-- end
+-- netstat_in = wibox.widget.textbox()
+-- vicious.register(netstat_in, net_stat_in, "<span font=\"Terminus Re33 12\">$1</span>", 60)
   --Out
-local function net_stat_out()
-    local f = io.popen("vnstat  | grep 'today' | awk '{print $5 $6}'")
-    local out = f:read("*a")
-    f:close()
-    return { out }
-end
-netstat_out = wibox.widget.textbox()
-vicious.register(netstat_out, net_stat_out, "<span font=\"Terminus Re33 12\">$1</span>", 60)
+-- local function net_stat_out()
+--     local f = io.popen("vnstat  | grep 'today' | awk '{print $5 $6}'")
+--     local out = f:read("*a")
+--     f:close()
+--     return { out }
+-- end
+-- netstat_out = wibox.widget.textbox()
+-- vicious.register(netstat_out, net_stat_out, "<span font=\"Terminus Re33 12\">$1</span>", 60)
 
 -- MPD widget
-mpdwidget = wibox.widget.textbox()
-vicious.register(mpdwidget, vicious.widgets.mpd,
-    function (mpdwidget, args)
-        if args["{state}"] == "Stop" then 
-            return ""
-        else 
-            return args["{Artist}"]..' - '.. args["{Title}"]..'   '
-        end
-    end, 10)
+-- mpdwidget = wibox.widget.textbox()
+-- vicious.register(mpdwidget, vicious.widgets.mpd,
+--     function (mpdwidget, args)
+--         if args["{state}"] == "Stop" then 
+--             return ""
+--         else 
+--             return args["{Artist}"]..' - '.. args["{Title}"]..'   '
+--         end
+--     end, 10)
 
 -- Volume widget
 volumewidget = wibox.widget.textbox()
@@ -366,7 +367,7 @@ for s = 1, screen.count() do
     right_layout:add(separator2)
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(separator3)
-    -- right_layout:add(mylayoutbox[s])
+    right_layout:add(mylayoutbox[s])
 
     -- Now bring it all together (with the tasklist in the middle)
     local layout = wibox.layout.align.horizontal()
@@ -468,25 +469,27 @@ globalkeys = awful.util.table.join(
     awful.key({                   }, "XF86AudioPrev",        function () awful.util.spawn(           "mpc prev")                                             end),
     awful.key({                   }, "XF86AudioNext",        function () awful.util.spawn(           "mpc next")                                             end),
     awful.key({                   }, "XF86AudioPlay",        function () awful.util.spawn(           "mpc toggle")                                           end),
+    awful.key({modkey             }, "#49",                  function () awful.util.spawn(           "mpc toggle")                                           end),
     awful.key({                   }, "XF86AudioStop",        function () awful.util.spawn(           "mpc stop")                                             end),
     awful.key({                   }, "XF86Sleep",            function () awful.util.spawn(           "xautolock -locknow")                                   end),
     awful.key({                   }, "Cancel",               function () awful.util.spawn(           "/home/haron/bin/awst")                                 end),
     awful.key({                   }, "Print",                function () awful.util.spawn(           "scrot -e 'mv $f ~/Screenshots/ 2>/dev/null'")          end),
     awful.key({ "Mod1"            }, "Print",                function () awful.util.spawn(           "scrot -s -e 'mv $f ~/Screenshots/ 2>/dev/null'")       end),
-    awful.key({ "Mod1"            }, "#31",                  function () awful.util.spawn_with_shell("/home/haron/.local/bin/iron")                          end), -- Alt+i
-    awful.key({ "Mod1"            }, "#32",                  function () awful.util.spawn_with_shell("/home/haron/.local/bin/opera")                         end), -- Alt+o
+    awful.key({                   }, "Menu",                 function () awful.util.spawn_with_shell("gmrun")                                                end),
+    -- awful.key({ "Mod1"            }, "#31",                  function () awful.util.spawn_with_shell("/home/haron/.local/bin/iron")                          end), -- Alt+i
+    -- awful.key({ "Mod1"            }, "#32",                  function () awful.util.spawn_with_shell("/home/haron/.local/bin/opera")                         end), -- Alt+o
     awful.key({ "Mod1",           }, "#33",                  function () awful.util.spawn_with_shell("env WINEPREFIX='/home/haron/.wine' wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe'")                                                                                                                                          end), -- Alt+p
     awful.key({ "Mod1"            }, "#39",                  function () awful.util.spawn_with_shell("subl3")                                                end), -- Alt+s
     awful.key({ "Mod1"            }, "#42",                  function () awful.util.spawn_with_shell("gimp")                                                 end), -- Alt+g
     awful.key({ "Mod1"            }, "#43",                  function () awful.util.spawn_with_shell("/usr/bin/hexchat")                                     end), -- Alt+h
     awful.key({ "Mod1"            }, "#46",                  function () awful.util.spawn_with_shell("cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")                                                                                                                                            end), -- Alt+l
     awful.key({ "Mod1"            }, "#25",                  function () awful.util.spawn_with_shell("gksu /usr/bin/pacmanxg")                               end), -- Alt+w
-    awful.key({ "Mod1"            }, "#54",                  function () awful.util.spawn_with_shell("chromium")                                             end), -- Alt+c
-    awful.key({ "Mod1", "Control" }, "#54",                  function () awful.util.spawn_with_shell("/home/haron/.local/bin/chrome --disable-setuid-sandbox")                                                                                                                                                      end), -- Alt+Ctrl+c
+    -- awful.key({ "Mod1"            }, "#54",                  function () awful.util.spawn_with_shell("chromium")                                             end), -- Alt+c
+    -- awful.key({ "Mod1", "Control" }, "#54",                  function () awful.util.spawn_with_shell("/home/haron/.local/bin/chrome --disable-setuid-sandbox")                                                                                                                                                      end), -- Alt+Ctrl+c
     awful.key({ "Mod1"            }, "#55",                  function () awful.util.spawn_with_shell("xvim")                                                 end), -- Alt+v
-    awful.key({ "Mod1"            }, "#56",                  function () awful.util.spawn_with_shell("baobab")                                               end), -- Alt+b
+    -- awful.key({ "Mod1"            }, "#56",                  function () awful.util.spawn_with_shell("baobab")                                               end), -- Alt+b
     awful.key({ "Mod1"            }, "#58",                  function () awful.util.spawn_with_shell("urxvtc -name mc -e /usr/bin/mc")                       end), -- Alt+m
-    awful.key({ "Mod1"            }, "F2",                   function () awful.util.spawn_with_shell("dmenu_run -i -p 'Run command:' -nb '" .. beautiful.bg_normal .. "' -nf '" .. beautiful.fg_normal .. "' -sb '" .. beautiful.bg_myfocus .. "' -sf '" .. beautiful.fg_myurgent .. "' -fn '-misc-fixed-medium-r-normal-*-15-140-75-75-c-90-iso10646-1'")                                                                                                                                                      end)
+    awful.key({ "Mod1"            }, "F2",                   function () awful.util.spawn_with_shell("dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")                                                                                                                                                      end)
     -- }}}
 )
 
@@ -587,6 +590,8 @@ awful.rules.rules = {
     { rule = { class = "hexchat" },
       properties = { floating = true, focus = true } },
     { rule = { class = "Firefox" },
+       properties = {                   tag = tags[1][1], switchtotag = true, focus = true } },
+    { rule = { class = "Vivaldi-snapshot" },
        properties = {                   tag = tags[1][1], switchtotag = true, focus = true } },
     { rule = { class = "Opera" },
        properties = {                   tag = tags[1][1], switchtotag = true, focus = true } },
