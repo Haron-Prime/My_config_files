@@ -4,6 +4,7 @@ local awful = require("awful")
 awful.rules = require("awful.rules")
 require("awful.autofocus")
 require("eminent")
+-- local eminent = require("eminent")
 -- Widget and layout library
 local wibox = require("wibox")
 -- Theme handling library
@@ -11,6 +12,7 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
+local hotkeys_popup = require("awful.hotkeys_popup").widget
 -- local applicationsmenu = require("applicationsmenu")
 local vicious = require("vicious")
 local bashets = require("bashets")
@@ -85,6 +87,21 @@ local layouts =
     awful.layout.suit.magnifier
 
 }
+-- }}}
+
+-- {{{ Helper functions
+local function client_menu_toggle_fn()
+    local instance = nil
+
+    return function ()
+        if instance and instance.wibox.visible then
+            instance:hide()
+            instance = nil
+        else
+            instance = awful.menu.clients({ theme = { width = 250 } })
+        end
+    end
+end
 -- }}}
 
 -- {{{ Wallpaper
