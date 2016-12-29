@@ -7,8 +7,8 @@ theme.icon_dir   = "/home/haron/.icons"
 -- }}}
 
 -- {{{ Styles
-theme.font        = "SonyEricsson Logo 12"
-theme.myfont      = "Terminus Re33 14"
+theme.font        = "SonyEricsson Logo 11"
+theme.myfont      = "Terminus Re33 12"
 
 -- {{{ Colors
 theme.fg_normal    = "#999999"

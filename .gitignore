@@ -4,3 +4,5 @@
 .config/mpd/state
 .config/mpd/pid
 .config/mpv/watch_latter/
+.xmonad/history
+.xmonad/xmonad.errors

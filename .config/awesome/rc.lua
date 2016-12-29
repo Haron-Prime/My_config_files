@@ -470,8 +470,9 @@ globalkeys = awful.util.table.join(
 
     -- {{{ My keys
 
-    awful.key({                   }, "XF86Reload",           awesome.restart                                                                                    ),
     awful.key({                   }, "F12",                  function () quakeconsole[mouse.screen]:toggle()                                                 end),
+    awful.key({                   }, "Cancel",               function () awful.util.spawn_with_shell( "compdown" )                                           end),
+    awful.key({                   }, "XF86Reload",           function () awful.util.spawn_with_shell( "compreboot" )                                         end),
     awful.key({                   }, "XF86Favorites",        function () awful.util.spawn_with_shell("transgui")                                             end),
     awful.key({                   }, "XF86Explorer",         function () awful.util.spawn_with_shell("pcmanfm")                                              end),
     awful.key({"Mod1"             }, "XF86Explorer",         function () awful.util.spawn_with_shell("gksu pcmanfm")                                         end),
