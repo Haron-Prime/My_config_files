@@ -15,14 +15,14 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 -- local applicationsmenu = require("applicationsmenu")
 local vicious = require("vicious")
 local bashets = require("bashets")
-local freedesktop = require("freedesktop")
-local quake = require("quake")
-local quakeconsole = {}
-for s = 1, screen.count() do
-   quakeconsole[s] = quake({ terminal = "urxvtc",
-           height = 0.95,
-           screen = s })
-end
+-- local freedesktop = require("freedesktop")
+-- local quake = require("quake")
+-- local quakeconsole = {}
+-- for s = 1, screen.count() do
+--    quakeconsole[s] = quake({ terminal = "urxvtc",
+--            height = 0.95,
+--            screen = s })
+-- end
 
 
 -- os.setlocale("ru_UA.UTF-8")
@@ -457,22 +457,22 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "#57",                  awful.client.restore                                                                               ), -- Win+Ctrl+n
 
     -- Prompt
-    awful.key({ modkey            }, "#27",                  function () mypromptbox[mouse.screen]:run()                                                     end), -- Win+r
+    -- awful.key({ modkey            }, "#27",                  function () mypromptbox[mouse.screen]:run()                                                     end), -- Win+r
 
-    awful.key({ modkey            }, "#53",                                                                                                                        -- Win+x
-              function ()
-                  awful.prompt.run({ prompt = "Run Lua code: " },
-                  mypromptbox[mouse.screen].widget,
-                  awful.util.eval, nil,
-                  awful.util.getdir("cache") .. "/history_eval")
-              end),
+    -- awful.key({ modkey            }, "#53",                                                                                                                        -- Win+x
+    --           function ()
+    --               awful.prompt.run({ prompt = "Run Lua code: " },
+    --               mypromptbox[mouse.screen].widget,
+    --               awful.util.eval, nil,
+    --               awful.util.getdir("cache") .. "/history_eval")
+    --           end),
     -- Menubar
     awful.key({ modkey            }, "#33",                  function() menubar.show()                                                                       end), -- Win+p
 
     -- {{{ My keys
 
     awful.key({ "Mod1"            }, "F2",                   function () awful.util.spawn_with_shell("dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")                                                                                                                                        end),
-    awful.key({                   }, "F12",                  function () quakeconsole[mouse.screen]:toggle()                                                 end),
+    -- awful.key({                   }, "F12",                  function () quakeconsole[mouse.screen]:toggle()                                                 end),
     awful.key({                   }, "Cancel",               function () awful.util.spawn_with_shell( "compdown" )                                           end),
     awful.key({                   }, "XF86Reload",           function () awful.util.spawn_with_shell( "compreboot" )                                         end),
     awful.key({                   }, "XF86Favorites",        function () awful.util.spawn_with_shell("transgui")                                             end),
