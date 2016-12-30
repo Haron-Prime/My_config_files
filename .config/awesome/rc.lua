@@ -199,14 +199,14 @@ mytempbox1a = wibox.widget.textbox("<span font=\"Terminus Re33 11\">°C</span>")
 -- mytempbox2a = wibox.widget.textbox("<span font=\"Terminus Re33 11\">°C</span>")
 
 -- Uptime widget
-local function uptime_output()
-    local f = io.popen("uptime | cut -c 11-19")
-    local out = f:read("*a")
-    f:close()
-    return { out }
-end
-myuptimebox = wibox.widget.textbox()
-vicious.register(myuptimebox, uptime_output, "<span font=\"Terminus Re33 12\">$1</span>", 60)
+-- local function uptime_output()
+--     local f = io.popen("uptime | cut -c 11-19")
+--     local out = f:read("*a")
+--     f:close()
+--     return { out }
+-- end
+-- myuptimebox = wibox.widget.textbox()
+-- vicious.register(myuptimebox, uptime_output, "<span font=\"Terminus Re33 12\">$1</span>", 60)
 
 -- Netstat widget
   --Speed
@@ -269,8 +269,8 @@ separator4: set_text ("/")
 
 -- }}}
 
-mytextclock = awful.widget.textclock("<span font=\"Terminus Re33 12\">%a, %d %b</span>", 1)
-mytextclock2 = awful.widget.textclock("<span color=\"#90d0f0\" font=\"Terminus Re33 14\">%H:%M</span>", 1)
+mytextclock = awful.widget.textclock("<span font=\"Terminus Re33 12\">%A, %d %B %Y</span>", 1)
+mytextclock2 = awful.widget.textclock("<span color=\"#90d0f0\" font=\"Terminus Re33 14\">%H:%M:%S</span>", 1)
 
 -- Create a wibox for each screen and add it
 mywibox = {}
