@@ -4,7 +4,6 @@ local awful = require("awful")
 awful.rules = require("awful.rules")
 require("awful.autofocus")
 require("eminent")
--- local eminent = require("eminent")
 -- Widget and layout library
 local wibox = require("wibox")
 -- Theme handling library
@@ -16,7 +15,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 -- local applicationsmenu = require("applicationsmenu")
 local vicious = require("vicious")
 local bashets = require("bashets")
--- local freedesktop = require("freedesktop")
+local freedesktop = require("freedesktop")
 local quake = require("quake")
 local quakeconsole = {}
 for s = 1, screen.count() do
@@ -126,6 +125,8 @@ mymainmenu = awful.menu({items = {
                                   -- {"Accessories", applicationsmenu.applicationsmenu() ,beautiful.accesoires_icon},
                                   -- { " " },
                                   -- { "Run", "dmenu_run -i -p 'Run command:' -nb '" .. beautiful.bg_normal .. "' -nf '" .. beautiful.fg_normal .. "' -sb '" .. beautiful.bg_myfocus .. "' -sf '" .. beautiful.fg_myurgent .. "' -fn '-misc-fixed-medium-r-normal-*-15-140-75-75-c-90-iso10646-1'", beautiful.run_icon},
+                                  -- { "Applications", xdgmenu ,beautiful.accesoires_icon},
+                                  { " " },
                                   { "Run", "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'", beautiful.run_icon},
                                   -- { " " },
                                   { " Exit", awesome.quit, beautiful.logout_icon},
@@ -470,6 +471,7 @@ globalkeys = awful.util.table.join(
 
     -- {{{ My keys
 
+    awful.key({ "Mod1"            }, "F2",                   function () awful.util.spawn_with_shell("dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")                                                                                                                                        end),
     awful.key({                   }, "F12",                  function () quakeconsole[mouse.screen]:toggle()                                                 end),
     awful.key({                   }, "Cancel",               function () awful.util.spawn_with_shell( "compdown" )                                           end),
     awful.key({                   }, "XF86Reload",           function () awful.util.spawn_with_shell( "compreboot" )                                         end),
@@ -481,9 +483,12 @@ globalkeys = awful.util.table.join(
     awful.key({                   }, "XF86Tools",            function () awful.util.spawn_with_shell("urxvtc -e /usr/bin/ncmpcpp")                           end),
     awful.key({                   }, "XF86HomePage",         function () awful.util.spawn_with_shell("vivaldi-snapshot")                                     end),
     awful.key({                   }, "XF86Search",           function () awful.util.spawn_with_shell("urxvtc -name htop -e /usr/bin/htop")                   end),
-    awful.key({                   }, "XF86AudioMute",        function () awful.util.spawn(           "amixer set Master toggle")                             end),
-    awful.key({                   }, "XF86AudioLowerVolume", function () awful.util.spawn(           "amixer set Master 5%-")                                end),
-    awful.key({                   }, "XF86AudioRaiseVolume", function () awful.util.spawn(           "amixer set Master 5%+")                                end),
+    -- awful.key({                   }, "XF86AudioMute",        function () awful.util.spawn(           "amixer set Master toggle")                             end),
+    awful.key({                   }, "XF86AudioMute",        function () awful.util.spawn(           "/usr/bin/pulseaudio-ctl mute")                         end),
+    -- awful.key({                   }, "XF86AudioLowerVolume", function () awful.util.spawn(           "amixer set Master 5%-")                                end),
+    awful.key({                   }, "XF86AudioLowerVolume", function () awful.util.spawn(           "/usr/bin/pulseaudio-ctl down")                         end),
+    -- awful.key({                   }, "XF86AudioRaiseVolume", function () awful.util.spawn(           "amixer set Master 5%+")                                end),
+    awful.key({                   }, "XF86AudioRaiseVolume", function () awful.util.spawn(           "/usr/bin/pulseaudio-ctl up")                           end),
     awful.key({                   }, "XF86AudioPrev",        function () awful.util.spawn(           "mpc prev")                                             end),
     awful.key({                   }, "XF86AudioNext",        function () awful.util.spawn(           "mpc next")                                             end),
     awful.key({                   }, "XF86AudioPlay",        function () awful.util.spawn(           "mpc toggle")                                           end),
@@ -494,20 +499,23 @@ globalkeys = awful.util.table.join(
     awful.key({                   }, "Print",                function () awful.util.spawn(           "scrot -e 'mv $f ~/Screenshots/ 2>/dev/null'")          end),
     awful.key({ "Mod1"            }, "Print",                function () awful.util.spawn(           "scrot -s -e 'mv $f ~/Screenshots/ 2>/dev/null'")       end),
     awful.key({                   }, "Menu",                 function () awful.util.spawn_with_shell("gmrun")                                                end),
-    -- awful.key({ "Mod1"            }, "#31",                  function () awful.util.spawn_with_shell("/home/haron/.local/bin/iron")                          end), -- Alt+i
-    -- awful.key({ "Mod1"            }, "#32",                  function () awful.util.spawn_with_shell("/home/haron/.local/bin/opera")                         end), -- Alt+o
-    awful.key({ "Mod1",           }, "#33",                  function () awful.util.spawn_with_shell("env WINEPREFIX='/home/haron/.wine' wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe'")                                                                                                                                          end), -- Alt+p
+
+    awful.key({ "Mod1"            }, "#40",                  function () awful.util.spawn_with_shell("deadbeef")                                             end), -- Alt+d
+    awful.key({ "Mod1"            }, "#41",                  function () awful.util.spawn_with_shell("firefox")                                              end), -- Alt+f
+    awful.key({ "Mod1"            }, "#25",                  function () awful.util.spawn_with_shell("gksu /usr/bin/pacmanxg")                               end), -- Alt+w
+    awful.key({ "Mod1"            }, "#55",                  function () awful.util.spawn_with_shell("xvim")                                                 end), -- Alt+v
+    awful.key({ "Mod1"            }, "#58",                  function () awful.util.spawn_with_shell("urxvtc -name mc -e /usr/bin/mc")                       end), -- Alt+m
     awful.key({ "Mod1"            }, "#39",                  function () awful.util.spawn_with_shell("subl3")                                                end), -- Alt+s
     awful.key({ "Mod1"            }, "#42",                  function () awful.util.spawn_with_shell("gimp")                                                 end), -- Alt+g
     awful.key({ "Mod1"            }, "#43",                  function () awful.util.spawn_with_shell("/usr/bin/hexchat")                                     end), -- Alt+h
-    awful.key({ "Mod1"            }, "#46",                  function () awful.util.spawn_with_shell("cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")                                                                                                                                            end), -- Alt+l
-    awful.key({ "Mod1"            }, "#25",                  function () awful.util.spawn_with_shell("gksu /usr/bin/pacmanxg")                               end), -- Alt+w
-    -- awful.key({ "Mod1"            }, "#54",                  function () awful.util.spawn_with_shell("chromium")                                             end), -- Alt+c
-    -- awful.key({ "Mod1", "Control" }, "#54",                  function () awful.util.spawn_with_shell("/home/haron/.local/bin/chrome --disable-setuid-sandbox")                                                                                                                                                      end), -- Alt+Ctrl+c
-    awful.key({ "Mod1"            }, "#55",                  function () awful.util.spawn_with_shell("xvim")                                                 end), -- Alt+v
+    awful.key({ "Mod1",           }, "#33",                  function () awful.util.spawn_with_shell("env WINEPREFIX='/home/haron/.wine' wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe'")                                                                                                                                          end), -- Alt+p
+    awful.key({ "Mod1"            }, "#46",                  function () awful.util.spawn_with_shell("cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")                                                                                                                                                     end) -- Alt+l
+
     -- awful.key({ "Mod1"            }, "#56",                  function () awful.util.spawn_with_shell("baobab")                                               end), -- Alt+b
-    awful.key({ "Mod1"            }, "#58",                  function () awful.util.spawn_with_shell("urxvtc -name mc -e /usr/bin/mc")                       end), -- Alt+m
-    awful.key({ "Mod1"            }, "F2",                   function () awful.util.spawn_with_shell("dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")                                                                                                                                                      end)
+    -- awful.key({ "Mod1"            }, "#31",                  function () awful.util.spawn_with_shell("/home/haron/.local/bin/iron")                          end), -- Alt+i
+    -- awful.key({ "Mod1"            }, "#32",                  function () awful.util.spawn_with_shell("/home/haron/.local/bin/opera")                         end), -- Alt+o
+    -- awful.key({ "Mod1"            }, "#54",                  function () awful.util.spawn_with_shell("chromium")                                             end), -- Alt+c
+
     -- }}}
 )
 
