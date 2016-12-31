@@ -1,7 +1,8 @@
 
 -- {{{ Main
 theme = {}
-theme.wallpaper  = "/home/haron/Pictures/Walpapers/linux_arch_gnu_linux_1920x1080_5999.jpg"
+-- theme.wallpaper  = "/home/haron/Pictures/Walpapers/linux_arch_gnu_linux_1920x1080_5999.jpg"
+theme.wallpaper  = "/home/haron/wall/awesome3.png"
 theme.icon_theme = "AwOkenWhite"
 theme.icon_dir   = "/home/haron/.icons"
 -- }}}
