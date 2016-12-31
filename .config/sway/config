@@ -262,9 +262,9 @@ for_window [id="xarchiver"] floating enable
 for_window [title="Gsmartcontrol"] floating enable
 for_window [title="Gis-weather"] floating enable
 for_window [title="Shutter"] floating enable
-for_window [title="ncmpcpp"] floating enable
-for_window [title="htop"] floating enable
 for_window [title="ranger"] floating enable
+for_window [title="ncmpcpp"] move scratchpad; scratchpad show
+for_window [title="htop"] move scratchpad; scratchpad show
 
 for_window [class="gmrun"] floating enable
 for_window [class="feh"] floating enable

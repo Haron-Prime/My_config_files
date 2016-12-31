@@ -769,7 +769,7 @@ end
 -- delay a command before starting it (in seconds).
 -- autostart("compton -b", 1)
 -- autostart("urxvtd -q -f -o &", 1)
-autostart("python3 /home/haron/lib/gis-weather/gis-weather.py", 1)
+-- autostart("python3 /home/haron/lib/gis-weather/gis-weather.py", 1)
 -- }}}
 
 -- {{{ Run .desktop files with dex
