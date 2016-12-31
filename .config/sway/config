@@ -135,7 +135,7 @@ bindsym $mod+x [urgent=latest] focus
 # Scratchpad:
 #
     bindsym $mod+Shift+minus move scratchpad
-    bindsym Shift+F12 move scratchpad
+    bindsym Shift+F12 move scratchpad; scratchpad show
     bindsym $mod+minus scratchpad show
     bindsym F12 scratchpad show
 #
