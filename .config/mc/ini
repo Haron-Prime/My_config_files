@@ -91,13 +91,13 @@ keybar_visible=1
 xterm_title=0
 output_lines=4
 command_prompt=1
-menubar_visible=1
+menubar_visible=0
 free_space=1
 horizontal_split=0
 vertical_equal=1
 left_panel_size=119
 horizontal_equal=1
-top_panel_size=33
+top_panel_size=31
 
 [Misc]
 timeformat_recent=%b %e %H:%M
