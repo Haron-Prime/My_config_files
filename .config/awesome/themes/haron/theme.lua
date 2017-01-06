@@ -81,12 +81,12 @@ theme.taglist_font          = "Terminus Re33 12"
 
 
 --{{{ Applications
-theme.firefox_icon	     = "/home/haron/.icons/AwOkenWhite/clear/22x22/apps/firefox.png"
-theme.thunderbird_icon	 = "/home/haron/.icons/AwOkenWhite/clear/22x22/apps/thunderbird.png"
-theme.vbox_icon		     = "/home/haron/.icons/AwOkenWhite/clear/22x22//mimetypes/virtualbox.png"
-theme.doublecmd_icon     = "/home/haron/.icons/AwOkenWhite/clear/22x22/apps/krusader_user.png"
-theme.opera_icon	     = "/home/haron/.icons/AwOkenWhite/clear/22x22/apps/opera-browser.png"
-theme.kopete_icon	     = "/home/haron/.icons/AwOkenWhite/clear/22x22/apps/kopete.png"
+theme.firefox_icon	     = "/home/haron/.icons/nouveGnomeGray/22x22/apps/firefox.png"
+theme.thunderbird_icon	 = "/home/haron/.icons/nouveGnomeGray/22x22/apps/thunderbird.png"
+-- theme.vbox_icon		     = "/home/haron/.icons/AwOkenWhite/clear/22x22//mimetypes/virtualbox.png"
+-- theme.doublecmd_icon     = "/home/haron/.icons/AwOkenWhite/clear/22x22/apps/krusader_user.png"
+-- theme.opera_icon	     = "/home/haron/.icons/AwOkenWhite/clear/22x22/apps/opera-browser.png"
+-- theme.kopete_icon	     = "/home/haron/.icons/AwOkenWhite/clear/22x22/apps/kopete.png"
 theme.run_icon	         = "/home/haron/.icons/nouveGnomeGray/22x22/actions/system-run.png"
 theme.shutdown_icon	     = "/home/haron/.icons/nouveGnomeGray/22x22/actions/system-shutdown.png"
 theme.reboot_icon	     = "/home/haron/.icons/nouveGnomeGray/22x22/actions/stock_refresh.png"
