@@ -200,29 +200,29 @@ bindsym $mod+0x60            exec --no-startup-id mpc toggle
 bindsym XF86AudioStop        exec --no-startup-id mpc stop
 bindsym XF86AudioPrev        exec --no-startup-id mpc prev
 bindsym XF86AudioNext        exec --no-startup-id mpc next
-bindsym XF86Favorites        exec --no-startup-id transgui 
-bindsym XF86HomePage         exec --no-startup-id vivaldi-snapshot
-bindsym XF86Mail             exec --no-startup-id /usr/bin/thunderbird
-bindsym XF86Explorer         exec --no-startup-id pcmanfm
+bindsym XF86Favorites        exec --no-startup-id transgui; workspace 9:T
+bindsym XF86HomePage         exec --no-startup-id vivaldi-snapshot; workspace 1:W
+bindsym XF86Mail             exec --no-startup-id /usr/bin/thunderbird; workspace 2:M
+bindsym XF86Explorer         exec --no-startup-id pcmanfm; workspace 4:F
 bindsym XF86Calculator       exec --no-startup-id galculator
 bindsym XF86Sleep            exec --no-startup-id swaylock -i /home/haron/wall/black-hole_web.png -s center
 bindsym Menu                 exec --no-startup-id gmrun
 
 bindsym Mod1+F2              exec --no-startup-id dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'
 bindsym Print                exec --no-startup-id swaygrab
-bindsym Mod1+g               exec --no-startup-id gimp
+bindsym Mod1+g               exec --no-startup-id gimp; workspace 7:P
 bindsym Mod1+l               exec --no-startup-id cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard
 bindsym Mod1+m               exec --no-startup-id urxvtc -name mc -e mc
 bindsym Mod1+v               exec --no-startup-id urxvtc -name xvim -e vim
 bindsym Mod1+r               exec --no-startup-id urxvtc -name ranger -e ranger
-bindsym Mod1+p               exec --no-startup-id wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe'
-bindsym Mod1+s               exec --no-startup-id subl3
-bindsym Mod1+t               exec --no-startup-id telegram-desktop
-bindsym Mod1+w               exec --no-startup-id pacmanxg
-bindsym Mod1+f               exec --no-startup-id firefox
+bindsym Mod1+p               exec --no-startup-id wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe'; workspace 8:J
+bindsym Mod1+s               exec --no-startup-id subl3; workspace 3:E
+bindsym Mod1+t               exec --no-startup-id telegram-desktop; workspace 0:IM
+bindsym Mod1+w               exec --no-startup-id pacmanxg; workspace 5:S
+bindsym Mod1+f               exec --no-startup-id firefox; workspace 1:W
 bindsym Mod1+e               exec --no-startup-id pavucontrol
-bindsym Mod1+i               exec --no-startup-id 2D-Place
-bindsym Mod1+h               exec --no-startup-id hexchat
+bindsym Mod1+i               exec --no-startup-id 2D-Place; workspace 8:J
+bindsym Mod1+h               exec --no-startup-id hexchat; workspace 0:IM
 
 assign [class="crx_mpognobbkildjkofajifpdfhcokliml"] 1:W
 assign [class="Navigator"] 1:W
