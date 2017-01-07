@@ -209,7 +209,7 @@ bindsym XF86Sleep            exec --no-startup-id swaylock -i /home/haron/wall/b
 bindsym Menu                 exec --no-startup-id gmrun
 
 bindsym Mod1+F2              exec --no-startup-id dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'
-bindsym Print                exec --no-startup-id swaygrab
+bindsym Print                exec --no-startup-id swaygrab ~/Pictures/Screenshots/output.png
 bindsym Mod1+g               workspace 7:P; exec --no-startup-id gimp
 bindsym Mod1+l               exec --no-startup-id cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard
 bindsym Mod1+m               exec --no-startup-id urxvtc -name mc -e mc
