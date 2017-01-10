@@ -273,4 +273,4 @@ for_window [class="xarchiver"] floating enable
 
 exec urxvtd -q -f -o
 exec pcmanfm -d
-exec python3 /home/haron/lib/gis-weather/gis-weather.py
+# exec python3 /home/haron/lib/gis-weather/gis-weather.py

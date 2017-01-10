@@ -10,7 +10,7 @@ local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 local vicious = require("vicious")
 local bashets = require("bashets")
-local freedesktop = require("freedesktop")
+-- local freedesktop = require("freedesktop")
 os.setlocale(os.getenv("LANG"), "time")
 
 if awesome.startup_errors then
@@ -82,8 +82,8 @@ for s = 1, screen.count() do
 end
 
 mymainmenu = awful.menu({items = {
-                                  { "applications", freedesktop.menu.build(), beautiful.accesoires_icon},
-                                  { " " },
+                                  -- { "applications", freedesktop.menu.build(), beautiful.accesoires_icon},
+                                  -- { " " },
                                   { "Run", "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'", beautiful.run_icon},
                                   { " " },
                                   { " Exit", awesome.quit, beautiful.logout_icon},

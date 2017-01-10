@@ -5,8 +5,8 @@ shell_patterns=1
 auto_save_setup=1
 preallocate_space=1
 auto_menu=0
-use_internal_view=0
-use_internal_edit=0
+use_internal_view=1
+use_internal_edit=1
 clear_before_exec=1
 confirm_delete=1
 confirm_overwrite=1
@@ -85,6 +85,8 @@ skin=haron
 
 editor_state_full_filename=0
 
+filepos_max_saved_entries=1024
+
 [Layout]
 message_visible=0
 keybar_visible=1
@@ -145,6 +147,9 @@ select_flags=6
 simple_swap=false
 
 panel_scroll_center=false
+
+[HotlistConfig]
+expanded_view_of_groups=0
 
 [Panelize]
 Изменённые файлы под контролем git=git ls-files --modified
