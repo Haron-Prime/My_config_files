@@ -1,8 +1,8 @@
 sw_volume: 100
 audio_device_state:1:pulse audio
-state: pause
-current: 9
-time: 163.375000
+state: play
+current: 0
+time: 1218.072000
 random: 0
 repeat: 0
 single: 0
@@ -11,44 +11,16 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/01 Ortiga - Ilumbarada.mp3
-1:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/02 Mike Oldfield - Sentinel (Tubular Bells II) (remix).mp3
-2:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/03 De-Phazz - Time Slips.mp3
-3:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/04 B-Tribe - You Won't See Me Cry.mp3
-4:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/05 Anne Clark - Virtuality (Global Youth remix).mp3
-5:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/06 Blank & Jones - Breezin'.mp3
-6:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/07 Apollo 440 - The Man With the Harmonica.mp3
-7:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/08 Superlounger - Superlounger (radio edit).mp3
-8:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/09 Index ID - Federflug (edit).mp3
-9:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/10 Naoki Kenji - My Destiny.mp3
-10:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/11 Everything but the Girl - Missing.mp3
-11:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/12 Jakatta - American Dream (Afterlife mix).mp3
-12:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/13 Dario G - Voices (radio edit).mp3
-13:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/14 The Beloved - The Sun Rising.mp3
-14:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/15 Chris Rea - Josephine (2001 edit).mp3
-15:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD1)/16 Rose Royce - Wishing on a Star.mp3
-16:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/06. Gilberto Gil - A Paz.mp3
-17:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/01 Beautiful World - In Existence.mp3
-18:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/03 Replique - Such a Shame (feat. Shirin).mp3
-19:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/04 Think About Cosmos - Miss You So.mp3
-20:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/05 Dino Lenny vs. The Housemartins - Change the World.mp3
-21:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/07 Ed Motta - Um Jantar Pra Dois.mp3
-22:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/08 Marcos Valle - Guanbara.mp3
-23:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/09 Phonosynthese - Waldall.mp3
-24:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/10 The Sushi Club - Tsuki.mp3
-25:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/11 Evora - It's Time to Open Your Mind (feat. Elena Weyl).mp3
-26:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/12 Cinemascope - Another Advise.mp3
-27:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/13 Fresh Moods - I Feel.mp3
-28:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/14 Thievery Corporation - Il Grande Silencio.mp3
-29:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/15 Craig Armstrong - Rise.mp3
-30:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD2)/16 Nouri - Peace & Friendship.mp3
-31:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD3)/02 The Man Behind C. - Miles Away.mp3
-32:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD3)/03 Guardner - N.Y.C. (edit).mp3
-33:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD3)/04 Aural Float - Freefloat (edit).mp3
-34:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD3)/05 George Pallikaris - Woman (edit).mp3
-35:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD3)/06 Vaporia - Underwater (original mix) (edit).mp3
-36:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD3)/07 Smith & Mighty - That Woman (feat. Tammy Payne).mp3
-37:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD3)/14 Kruder & Dorfmeister - Black Baby (DJ Kicks).mp3
-38:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD3)/15 Rapid Eye - Circa-Forever (Rapid Eye's Chillseeking remix).mp3
-39:Foreign/Best of Chill-Out-Listen and Relax/Best_of_Chill-Out-Listen_and_Relax(CD3)/16 Angelo Badalamenti - Twin Peaks Theme (instrumental).mp3
+0:Foreign/Jason Tyrello - Real Good Moments (2002)/Jason Tyrello - Real Good Moments (2002).flac
+1:Foreign/Jason Tyrello - Real Good Moments (2002)/Jason Tyrello - Real Good Moments (2002).flac
+2:Foreign/Jason Tyrello - Real Good Moments (2002)/Jason Tyrello - Real Good Moments (2002).flac
+3:Foreign/Jason Tyrello - Real Good Moments (2002)/Jason Tyrello - Real Good Moments (2002).flac
+4:Foreign/Jason Tyrello - Real Good Moments (2002)/Jason Tyrello - Real Good Moments (2002).flac
+5:Foreign/Jason Tyrello - Real Good Moments (2002)/Jason Tyrello - Real Good Moments (2002).flac
+6:Foreign/Jason Tyrello - Real Good Moments (2002)/Jason Tyrello - Real Good Moments (2002).flac
+7:Foreign/Jason Tyrello - Real Good Moments (2002)/Jason Tyrello - Real Good Moments (2002).flac
+8:Foreign/Jason Tyrello - Real Good Moments (2002)/Jason Tyrello - Real Good Moments (2002).flac
+9:Foreign/Jason Tyrello - Real Good Moments (2002)/Jason Tyrello - Real Good Moments (2002).flac
+10:Foreign/Jason Tyrello - Real Good Moments (2002)/Jason Tyrello - Real Good Moments (2002).flac
+11:Foreign/Jason Tyrello - Real Good Moments (2002)/Jason Tyrello - Real Good Moments (2002).flac
 playlist_end
