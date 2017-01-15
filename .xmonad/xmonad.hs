@@ -139,6 +139,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,   xK_space),     setLayout $ XMonad.layoutHook conf)                                                                  --Win+Shift+Space
     , ((modm,                         0x6e),     refresh)                                                                                             --Win+N
     , ((modm,                    xK_Escape),     toggleWS' ["NSP"])                                                                                   --Win+Escape
+    , ((modm,                       0xff08),     toggleWS' ["NSP"])                                                                                   --Win+Backspace
     , ((modm,                         0x6a),     windows W.focusDown)                                                                                 --Win+J
     , ((modm,                         0x6b),     windows W.focusUp)                                                                                   --Win+K
     , ((modm,                         0x6d),     windows W.focusMaster)                                                                               --Win+M
