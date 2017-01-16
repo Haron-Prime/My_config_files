@@ -85,7 +85,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                      0x1008ff15),     spawn "mpc stop")
     , ((0,                      0x1008ff16),     spawn "mpc prev")
     , ((0,                      0x1008ff17),     spawn "mpc next")
-    , ((0,                      0x1008ff30),     spawn "transgui")
+    , ((0,                      0x1008ff30),     spawn "if pgrep 'transgui'; then pkill transgui; else transgui; fi")
     , ((0,                      0x1008ff18),     spawn "vivaldi-snapshot")
     , ((0,                      0x1008ff19),     spawn "/usr/bin/thunderbird")
     , ((0,                      0x1008ff5d),     spawn "pcmanfm")
