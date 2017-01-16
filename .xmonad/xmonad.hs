@@ -90,8 +90,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                      0x1008ff19),     spawn "/usr/bin/thunderbird")
     , ((0,                      0x1008ff5d),     spawn "pcmanfm")
     , ((0       .|. shiftMask,  0x1008ff5d),     spawn "gksu pcmanfm")
-    , ((0,                      0x1008ff1d),     spawn "galculator")
-    -- , ((0,                      0x1008ff2f),     spawn "slock")
+    , ((0,                      0x1008ff1d),     spawn "if pgrep 'galculator'; then pkill galculator; else galculator; fi")
     , ((0,                      0x1008ff2f),     spawn "i3lock -i /home/haron/wall/starrynight.png")
     , ((0,                      0x1008ff81),     spawn "if pgrep 'ncmpcpp'; then pkill ncmpcpp; else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp; fi")
     , ((0,                      0x1008ff1b),     spawn "if pgrep 'htop'; then pkill htop; else urxvtc -name htop -e /usr/bin/htop; fi")
@@ -99,7 +98,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                          0xff69),     spawn "compdown")
     , ((0,                          0xff67),     spawn "gmrun")
     , ((0,                          0xffc9),     scratchPad)                                                                                          --F12
-    , ((0         .|. shiftMask,    0xffc9),     spawn "termux")                                                                                      --Shift+F12
+    -- , ((0         .|. shiftMask,    0xffc9),     spawn "termux")                                                                                      --Shift+F12
     , ((0,                          0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Print
     , ((mod1Mask,                   0xff61),     spawn "scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                     --Alt+Print
     --, ((mod1Mask,                     0x61),     spawn "xterm")                                                                                       --Alt+A
@@ -124,8 +123,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
     , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Alt+W
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart")                                                      --Win+Q
-    , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
-    --, ((modm,                         0x70),     spawn "gmrun")                                                                                       --Wim+P
+    -- , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
+    -- , ((modm,                         0x70),     spawn "gmrun")                                                                                       --Wim+P
     , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
 
     , ((mod1Mask,                   0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
