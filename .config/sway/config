@@ -190,8 +190,8 @@ bindsym $mod+Escape          workspace back_and_forth
 
 bindsym Cancel               exec --no-startup-id compdown
 bindsym XF86Reload           exec --no-startup-id compreboot
-bindsym XF86Search           exec --no-startup-id urxvtc -name htop -e htop
-bindsym XF86Tools            exec --no-startup-id urxvtc -name ncmpcpp -e ncmpcpp
+bindsym XF86Search           exec --no-startup-id if pgrep -e 'htop' >/dev/null; then kill -9 $(pgrep -e 'htop'); else urxvtc -name htop -e htop; fi
+bindsym XF86Tools            exec --no-startup-id if pgrep -e 'ncmpcpp' >/dev/null; then kill -9 $(pgrep -e 'ncmpcpp'); else urxvtc -name ncmpcpp -e ncmpcpp; fi
 bindsym XF86AudioMute        exec --no-startup-id pulseaudio-ctl mute
 bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down
 bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up
@@ -200,11 +200,11 @@ bindsym $mod+0x60            exec --no-startup-id mpc toggle
 bindsym XF86AudioStop        exec --no-startup-id mpc stop
 bindsym XF86AudioPrev        exec --no-startup-id mpc prev
 bindsym XF86AudioNext        exec --no-startup-id mpc next
-bindsym XF86Favorites        workspace 9:T; exec --no-startup-id transgui
+bindsym XF86Favorites        workspace 9:T; exec --no-startup-id if pgrep -e 'transgui' >/dev/null; then kill -9 $(pgrep 'transgui'); else transgui; fi
 bindsym XF86HomePage         workspace 1:W; exec --no-startup-id vivaldi-snapshot
 bindsym XF86Mail             workspace 2:M; exec --no-startup-id /usr/bin/thunderbird
 bindsym XF86Explorer         workspace 4:F; exec --no-startup-id pcmanfm
-bindsym XF86Calculator       exec --no-startup-id galculator
+bindsym XF86Calculator       exec --no-startup-id if pgrep -e 'galculator' >/dev/null; then kill -9 $(pgrep 'galculator'); else galculator; fi
 bindsym XF86Sleep            exec --no-startup-id swaylock -i /home/haron/wall/black-hole_web.png -s center
 bindsym Menu                 exec --no-startup-id gmrun
 
