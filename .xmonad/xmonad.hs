@@ -85,15 +85,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                      0x1008ff15),     spawn "mpc stop")
     , ((0,                      0x1008ff16),     spawn "mpc prev")
     , ((0,                      0x1008ff17),     spawn "mpc next")
-    , ((0,                      0x1008ff30),     spawn "if pgrep -x 'transgui' >/dev/null; then kill -9 $(pgrep -x 'transgui'); else transgui; fi")
+    , ((0,                      0x1008ff30),     spawn "if pgrep -x 'transgui' >/dev/null; then kill -15 $(pgrep -x 'transgui'); else transgui; fi")
     , ((0,                      0x1008ff18),     spawn "vivaldi-snapshot")
     , ((0,                      0x1008ff19),     spawn "thunderbird")
     , ((0,                      0x1008ff5d),     spawn "pcmanfm")
     , ((0       .|. shiftMask,  0x1008ff5d),     spawn "gksu pcmanfm")
-    , ((0,                      0x1008ff1d),     spawn "if pgrep -x 'galculator' >/dev/null; then kill -9 $(pgrep -x 'galculator'); else galculator; fi")
+    , ((0,                      0x1008ff1d),     spawn "if pgrep -x 'galculator' >/dev/null; then kill -15 $(pgrep -x 'galculator'); else galculator; fi")
     , ((0,                      0x1008ff2f),     spawn "i3lock -i /home/haron/wall/starrynight.png")
-    , ((0,                      0x1008ff81),     spawn "if pgrep -x 'ncmpcpp' >/dev/null; then kill -9 $(pgrep -x 'ncmpcpp'); else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp; fi")
-    , ((0,                      0x1008ff1b),     spawn "if pgrep -x 'htop' >/dev/null; then kill -9 $(pgrep -x 'htop'); else urxvtc -name htop -e /usr/bin/htop; fi")
+    , ((0,                      0x1008ff81),     spawn "if pgrep -x 'ncmpcpp' >/dev/null; then kill -15 $(pgrep -x 'ncmpcpp'); else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp; fi")
+    , ((0,                      0x1008ff1b),     spawn "if pgrep -x 'htop' >/dev/null; then kill -15 $(pgrep -x 'htop'); else urxvtc -name htop -e /usr/bin/htop; fi")
     , ((0,                      0x1008ff73),     spawn "compreboot")
     , ((0,                          0xff69),     spawn "compdown")
     , ((0,                          0xff67),     spawn "gmrun")
@@ -123,7 +123,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
     , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Alt+W
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart")                                                      --Win+Q
-    -- , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
+    , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
     -- , ((modm,                         0x70),     spawn "gmrun")                                                                                       --Wim+P
     , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
 
