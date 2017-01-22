@@ -10,7 +10,14 @@ local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 local vicious = require("vicious")
 local bashets = require("bashets")
--- local freedesktop = require("freedesktop")
+local freedesktop = require("freedesktop")
+local quake = require("quake")
+local quakeconsole = {}
+for s = 1, screen.count() do
+   quakeconsole[s] = quake({ app = "urxvtc",
+           height = 0.95,
+           screen = s })
+end
 os.setlocale(os.getenv("LANG"), "time")
 
 if awesome.startup_errors then
@@ -81,16 +88,28 @@ for s = 1, screen.count() do
     tags[s] = awful.tag({ "W", "M", "E", "F", "S", "V", "P", "J", "T" }, s, {layouts[1], layouts[1], layouts[4], layouts[10], layouts[10], layouts[9], layouts[8], layouts[9]})
 end
 
-mymainmenu = awful.menu({items = {
-                                  -- { "applications", freedesktop.menu.build(), beautiful.accesoires_icon},
-                                  -- { " " },
-                                  { "Run", "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'", beautiful.run_icon},
-                                  { " " },
-                                  { " Exit", awesome.quit, beautiful.logout_icon},
-                                  { " Reboot", function()  awful.util.spawn_with_shell("systemctl reboot") end, beautiful.reboot_icon},
-                                  { " Power off", function()  awful.util.spawn_with_shell("systemctl poweroff") end, beautiful.shutdown_icon},
-                           }
-                        })
+-- mymainmenu = awful.menu({items = {
+--                                   { "applications", freedesktop.menu.build(), beautiful.accesoires_icon},
+--                                   { " " },
+--                                   { "Run", "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'", beautiful.run_icon},
+--                                   { " " },
+--                                   { " Exit", awesome.quit, beautiful.logout_icon},
+--                                   { " Reboot", function()  awful.util.spawn_with_shell("systemctl reboot") end, beautiful.reboot_icon},
+--                                   { " Power off", function()  awful.util.spawn_with_shell("systemctl poweroff") end, beautiful.shutdown_icon},
+--                            }
+--                         })
+mymainmenu = freedesktop.menu.build({
+  after = {
+    { " " },
+    { " Run", "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'", beautiful.run_icon},
+    { " " },
+    { " Restart", awesome.restart, beautiful.reboot_icon},
+    { " Exit", function() awesome.quit() end, beautiful.logout_icon},
+    { " " },
+    { " Reboot", function()  awful.util.spawn_with_shell("systemctl reboot") end, beautiful.reboot_icon},
+    { " Power off", function()  awful.util.spawn_with_shell("systemctl poweroff") end, beautiful.shutdown_icon},
+  }
+})
 
 mylauncher = awful.widget.launcher({ image = beautiful.a2_icon,
                                      menu = mymainmenu })
@@ -296,6 +315,7 @@ globalkeys = awful.util.table.join(
         end),
 
     -- Standard program
+    awful.key({                   }, "F12",                  function () quakeconsole[mouse.screen]:toggle()   end),
     awful.key({ modkey,           }, "Return",               function () awful.util.spawn(terminal)                                                          end),
     awful.key({ modkey, "Control" }, "#27",                  awesome.restart                                                                                    ), -- Win+Ctrl+r
     awful.key({ modkey, "Shift"   }, "#24",                  awesome.quit                                                                                       ), -- Win+Shift+q
