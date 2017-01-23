@@ -65,7 +65,7 @@ myFocusFollowsMouse  = True
 myBorderWidth        = 1
 myModMask            = mod4Mask
 myWorkspaces         :: [String]
-myWorkspaces         = [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "VM" , "IM", "XII"] 
+myWorkspaces         = [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"] 
 myNormalBorderColor  = "#151515"
 myFocusedBorderColor = "#9df"
 myFont               = "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
@@ -189,8 +189,8 @@ myLayout =  avoidStruts
             $ onWorkspace "P"  (Full  ||| mouseResizableTile ||| Grid)
             $ onWorkspace "J"  (Full  ||| Grid)
             $ onWorkspace "T"  (Full  ||| mouseResizableTile)
-            $ onWorkspace "VM" (Full  ||| Grid)
-            $ onWorkspace "IM" (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
+            $ onWorkspace "X" (Full  ||| Grid)
+            $ onWorkspace "XI" (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
             $ onWorkspace "XII"(Grid  ||| mouseResizableTile ||| Mirror tiled)
             $ tiled ||| Mirror tiled  ||| Full
   where
@@ -230,8 +230,8 @@ myManageHook = composeAll . concat $
     , [className =? c             --> doF (W.shift "P")            | c <- myPic]
     , [className =? c             --> doF (W.shift "J")            | c <- myWork]
     , [className =? c             --> doF (W.shift "T")            | c <- myTorrent]
-    , [className =? c             --> doF (W.shift "VM")           | c <- myVM]
-    , [className =? c             --> doF (W.shift "IM")           | c <- myIM]
+    , [className =? c             --> doF (W.shift "X")           | c <- myVM]
+    , [className =? c             --> doF (W.shift "XI")           | c <- myIM]
     , [appName   =? c             --> doF (W.shift "XII")          | c <- myTerm]
 
     , [className =? c             --> doCenterFloat                | c <- myFloatC]
@@ -249,7 +249,7 @@ myManageHook = composeAll . concat $
 
     , [currentWs =? "E"           --> insertPosition Below Newer]
 
-    , [currentWs =? "VM"          --> insertPosition Below Newer]
+    , [currentWs =? "X"          --> insertPosition Below Newer]
 
     , [currentWs =? "XII"         --> insertPosition Below Newer]
 
