@@ -115,7 +115,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x6d),     spawn "urxvtc -name mc -e mc")                                                                       --Alt+M
     , ((mod1Mask,                     0x6f),     spawn "opera12")                                                                                     --Alt+O
     , ((mod1Mask,                     0x70),     spawn "wine /home/haron/lib/Pro100-5.20-GIV/PRO100.exe")                                             --Alt+P
-    , ((mod1Mask,                     0x71),     spawn "pavucontrol")                                                                                 --Alt+Q
+    , ((mod1Mask,                     0x71),     spawn "if pgrep -x 'pavucontrol' >/dev/null; then kill -15 $(pgrep -x 'pavucontrol'); else pavucontrol; fi") --Alt+Q
     , ((mod1Mask,                     0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
     , ((mod1Mask,                     0x73),     spawn "subl3")                                                                                       --Alt+S
     , ((mod1Mask .|. shiftMask,       0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
