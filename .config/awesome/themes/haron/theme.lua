@@ -12,6 +12,13 @@ theme.icon_dir   = "/home/haron/.icons"
 -- {{{ Styles
 theme.font        = "SonyEricsson Logo 11"
 theme.myfont      = "Terminus Re33 12"
+-- }}}
+
+-- {{{ Gaps
+theme.useless_gap       = 5
+theme.gap_single_client = false
+size_hints_honor = false
+-- }}}
 
 -- {{{ Colors
 theme.fg_normal    = "#999999"
