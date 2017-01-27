@@ -197,6 +197,7 @@ bar {
 }
 
 bindsym $mod+Escape          workspace back_and_forth
+bindsym $mod+BackSpace       workspace back_and_forth
 
 bindsym Cancel               exec --no-startup-id compdown
 bindsym XF86Reload           exec --no-startup-id compreboot
