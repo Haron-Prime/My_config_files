@@ -2,7 +2,7 @@
 alias x='exit'
 alias ipt='iptables -L -vn'
 alias dump='sudo screendump > ~/output.txt'
-alias radio='~/scripts/radio'
+# alias radio='~/scripts/radio'
 # alias gmx='mount https://storage-file-eu.gmx.com'
 alias st='subl3'
 alias sst='sudo subl3'

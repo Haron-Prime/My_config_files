@@ -224,7 +224,7 @@ Plugin 'vim-scripts/pacmanlog.vim'
 Plugin 'vim-scripts/open-browser.vim'
 Plugin 'groenewege/vim-less'
 " Plugin 'guns/xterm-color-table.vim'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+" Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 " Plugin 'vim-scripts/Tabstuff'
 
 "My settings
