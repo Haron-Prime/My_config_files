@@ -189,7 +189,7 @@ myLayout =  avoidStruts
             $ onWorkspace "P"  (Full  ||| mouseResizableTile ||| Grid)
             $ onWorkspace "J"  (Full  ||| Grid)
             $ onWorkspace "T"  (Full  ||| mouseResizableTile)
-            $ onWorkspace "X" (Full  ||| Grid)
+            $ onWorkspace "X"  (tiled ||| Grid ||| Full)
             $ onWorkspace "XI" (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
             $ onWorkspace "XII"(Grid  ||| mouseResizableTile ||| Mirror tiled)
             $ tiled ||| Mirror tiled  ||| Full
