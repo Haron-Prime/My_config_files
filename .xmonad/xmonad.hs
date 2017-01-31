@@ -230,7 +230,7 @@ myManageHook = composeAll . concat $
     , [className =? c             --> doF (W.shift "P")            | c <- myPic]
     , [className =? c             --> doF (W.shift "J")            | c <- myWork]
     , [className =? c             --> doF (W.shift "T")            | c <- myTorrent]
-    , [className =? c             --> doF (W.shift "X")           | c <- myVM]
+    , [className =? c             --> doF (W.shift "X")            | c <- myVM]
     , [className =? c             --> doF (W.shift "XI")           | c <- myIM]
     , [appName   =? c             --> doF (W.shift "XII")          | c <- myTerm]
 
