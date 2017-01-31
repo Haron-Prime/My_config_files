@@ -277,6 +277,7 @@ for_window [class="lxappearance"] floating enable
 # for_window [instance="ranger|"] floating enable; focus
 # for_window [instance="lxappearance"] floating enable; focus
 
+exec xrdb -merge ~/.Xresources
 exec urxvtd -q -f -o
 exec pcmanfm -d
 # exec python3 /home/haron/lib/gis-weather/gis-weather.py
