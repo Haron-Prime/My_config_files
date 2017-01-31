@@ -1,29 +1,20 @@
-Xft.dpi:96
-Xft.autohint: 0
+Xft.dpi:        96
+Xft.autohint:   0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintsfull
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb! 
+Xft.hinting:    1
+Xft.antialias:  1
+Xft.rgba:       rgb!
 
 ! Normal
-! color0    black
-! color1    red
-! color2    green
-! color3    yellow
-! color4    blue (синий)
-! color5    purple (фиолетовый)
-! color6    cyan (голубой)
-! color7    white
-
-urxvt*color0:    #000000
-urxvt*color1:    #C00000
-urxvt*color2:    #00C000
-urxvt*color3:    #C0C000
-urxvt*color4:    #0C00C0
-urxvt*color5:    #AA00AA
-urxvt*color6:    #00AAAA
-urxvt*color7:    #FFFFFF
+! color0     black
+! color1     red
+! color2     green
+! color3     yellow
+! color4     blue (синий)
+! color5     purple (фиолетовый)
+! color6     cyan (голубой)
+! color7     white
 
 ! Light
 ! color8     darkgray
@@ -36,6 +27,14 @@ urxvt*color7:    #FFFFFF
 ! color15    lightgray
 ! color16    orange
 
+urxvt*color0:     #000000
+urxvt*color1:     #C00000
+urxvt*color2:     #00C000
+urxvt*color3:     #C0C000
+urxvt*color4:     #0C00C0
+urxvt*color5:     #AA00AA
+urxvt*color6:     #00AAAA
+urxvt*color7:     #FFFFFF
 urxvt*color8:     #151515
 urxvt*color9:     #FF8080
 urxvt*color10:    #80FF80
@@ -52,7 +51,7 @@ XTerm*.utf8Title:          true
 XTerm*.renderFont:         true
 XTerm*.faceName:           Terminus Re33
 XTerm*.faceSize:           12
-XTerm*.foreground:         #bbbbbb
+XTerm*.foreground:         #BBBBBB
 XTerm*.background:         #151515
 XTerm*.saveLines:          1000
 XTerm*.loginShell:         true
@@ -65,15 +64,15 @@ XTerm*.selectToClipboard:  true
 XTerm*.allowSendEvents:    false
 XTerm*.sessionMgt:         false
 XTerm*.eightBitInput:      false
-XTerm*VT100*.colorULMode:  off
-XTerm*VT100*.colorBDMode:  off
+XTerm*.VT100*colorULMode:  off
+XTerm*.VT100*colorBDMode:  off
 XTerm*.VT100.titeInhibit:  off
 XTerm*.colorUL:            #FFFF00
 XTerm*.colorBD:            #FFFFFF
 
 URxvt*.transparent:                false
 URxvt*.shading:                    75
-URxvt*saveLines:                   9999
+URxvt*.saveLines:                  9999
 URxvt*.font:                       xft:Terminus Re33:size=11:antialias=true:hinting=true
 URxvt*.boldFont:                   xft:Terminus Re33:size=11:antialias=true:hinting=true
 URxvt*.letterSpace:                 -1
