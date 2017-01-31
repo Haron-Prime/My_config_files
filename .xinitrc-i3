@@ -4,11 +4,13 @@ export MM_CHARSET=UTF-8
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
-for f in /etc/X11/xinit/xinitrc.d/*; do
-  [ -x "$f" ] && . "$f"
-done
-unset f
+ for f in /etc/X11/xinit/xinitrc.d/?*; do
+   [ -x "$f" ] && . "$f"
+ done
+ unset f
 fi
+
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
     eval "$(dbus-launch --sh-syntax --exit-with-session)"
@@ -18,9 +20,9 @@ fi
 setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp &
 xsetroot -cursor_name left_ptr &
 xsetroot -solid '#000000' &
-xset s 6999 &
-xset dpms 6000 6001 6002 &
-xset m 5/2 0 &
+# xset s 6999 &
+# xset dpms 6000 6001 6002 &
+# xset m 5/2 0 &
 numlockx &
 perWindowLayoutD &
 compton -b &
