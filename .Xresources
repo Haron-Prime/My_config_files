@@ -40,6 +40,16 @@ Xft.rgba:       rgb!
 *color14:    #9BFFFF
 *color15:    #656565
 
+*.cursorBlink:                true
+*.saveLines:                  9999
+*.background:                 #151515
+*.foreground:                 #BBBBBB
+*.colorUL:                    #86A2BE
+*.colorBD:                    #FFFFFF
+*.cursorColor:                #FF0000
+*.SimpleMenu*background:      #353535
+*.SimpleMenu*foreground:      #aaaaaa
+
 Xterm*.termName:           xterm-256color
 XTerm*.locale:             true
 XTerm*.metaSendsEscape:    true
@@ -47,15 +57,10 @@ XTerm*.utf8Title:          true
 XTerm*.renderFont:         true
 XTerm*.faceName:           Terminus Re33
 XTerm*.faceSize:           12
-XTerm*.foreground:         #BBBBBB
-XTerm*.background:         #151515
-XTerm*.saveLines:          1000
 XTerm*.loginShell:         true
 Xterm*.bellIsUrgent:       true
 XTerm*.scaleHeight:        1.01
 Xterm*.borderWidth:        0
-XTerm*.cursorBlink:        true
-XTerm*.cursorColor:        #FF6500
 XTerm*.selectToClipboard:  true
 XTerm*.allowSendEvents:    false
 XTerm*.sessionMgt:         false
@@ -63,24 +68,18 @@ XTerm*.eightBitInput:      false
 XTerm*.VT100*colorULMode:  off
 XTerm*.VT100*colorBDMode:  off
 XTerm*.VT100.titeInhibit:  off
-XTerm*.colorUL:            #86A2BE
-XTerm*.colorBD:            #FFFFFF
 
 URxvt*.transparent:                false
 URxvt*.shading:                    75
-URxvt*.saveLines:                  9999
 URxvt*.font:                       xft:Terminus Re33:size=11:antialias=true:hinting=true
 URxvt*.boldFont:                   xft:Terminus Re33:size=11:antialias=true:hinting=true
 URxvt*.letterSpace:                 -1
 URxvt*.scrollBar:                  false
-URxvt*.background:                 #151515
-URxvt*.foreground:                 #BBBBBB
-URxvt*.cursorColor:                #FF6500
-URxvt*.cursorBlink:                true
 URxvt*.internalBorder:             5
 URxvt*.perl-lib:                   /home/haron/.config/urxvt/perl
-URxvt*.perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard
-URxvt*.iso14755:                   False
+URxvt*.perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard,resize-font,vtwheel
+URxvt*.iso14755:                   false
+URxvt*.iso14755_52:                false
 URxvt*.keysym.Shift-Control-C:     perl:clipboard:copy
 URxvt*.keysym.Shift-Control-V:     perl:clipboard:paste
 URxvt*.keysym.M-w:                 perl:url-picker
@@ -88,7 +87,6 @@ URxvt*.matcher.button:             1
 URxvt*.matcher.pattern.0:          (?:https?:\\/\\/|ftp:\\/\\/|news:\\/\\/|mailto:|file:\\/\\/|\\bwww\\.)\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\n\(\n\\\([a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\\)| # Allow a pair of matched parentheses\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_+*~]  # exclude some trailing characters (heuristic)\n\)+
 URxvt*.urlLauncher:                vivaldi-snapshot
 URxvt*.underlineURLs:              true
-URxvt*.colorUL:                    #86A2BE
 URxvt*.keysym.M-q:                 perl:url-select:select_next
 URxvt*.tabbed.new-button:          no
 URxvt*.tabbed.tabbar-fg:           15
@@ -105,3 +103,5 @@ URxvt*.keysym.Control-Shift-Tab:   perl:tabbedex:prev_tab
 URxvt*.keysym.Control-Shift-Left:  perl:tabbedex:move_tab_left
 URxvt*.keysym.Control-Shift-Right: perl:tabbedex:move_tab_right
 URxvt*.urgentOnBell:               true
+URxvt*.resize-font.smaller:        C-Down
+URxvt*.resize-font.bigger:         C-Up
