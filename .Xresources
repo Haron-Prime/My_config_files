@@ -6,7 +6,6 @@ Xft.hinting:    1
 Xft.antialias:  1
 Xft.rgba:       rgb!
 
-! Normal
 ! color0     black
 ! color1     red
 ! color2     green
@@ -15,8 +14,6 @@ Xft.rgba:       rgb!
 ! color5     purple (фиолетовый)
 ! color6     cyan (голубой)
 ! color7     white
-
-! Light
 ! color8     darkgray
 ! color9     red
 ! color10    green
@@ -24,25 +21,24 @@ Xft.rgba:       rgb!
 ! color12    blue (синий)
 ! color13    purple (фиолетовый)
 ! color14    cyan (голубой)
-! color15    lightgray
-! color16    orange
+! color15    gray
 
-urxvt*color0:     #000000
-urxvt*color1:     #C00000
-urxvt*color2:     #00C000
-urxvt*color3:     #C0C000
-urxvt*color4:     #0C00C0
-urxvt*color5:     #AA00AA
-urxvt*color6:     #00AAAA
-urxvt*color7:     #FFFFFF
-urxvt*color8:     #151515
-urxvt*color9:     #FF8080
-urxvt*color10:    #80FF80
-urxvt*color11:    #FFFF88
-urxvt*color12:    #99CCFF
-urxvt*color13:    #B14CC2
-urxvt*color14:    #9BFFFF
-urxvt*color15:    #757575
+*color0:     #000000
+*color1:     #C00000
+*color2:     #00C000
+*color3:     #C0C000
+*color4:     #0C00C0
+*color5:     #AA00AA
+*color6:     #00AAAA
+*color7:     #FFFFFF
+*color8:     #151515
+*color9:     #FF8080
+*color10:    #80FF80
+*color11:    #FFFF88
+*color12:    #99CCFF
+*color13:    #B14CC2
+*color14:    #9BFFFF
+*color15:    #656565
 
 Xterm*.termName:           xterm-256color
 XTerm*.locale:             true
@@ -59,7 +55,7 @@ Xterm*.bellIsUrgent:       true
 XTerm*.scaleHeight:        1.01
 Xterm*.borderWidth:        0
 XTerm*.cursorBlink:        true
-XTerm*.cursorColor:        #FF0000
+XTerm*.cursorColor:        #FF6500
 XTerm*.selectToClipboard:  true
 XTerm*.allowSendEvents:    false
 XTerm*.sessionMgt:         false
@@ -67,7 +63,7 @@ XTerm*.eightBitInput:      false
 XTerm*.VT100*colorULMode:  off
 XTerm*.VT100*colorBDMode:  off
 XTerm*.VT100.titeInhibit:  off
-XTerm*.colorUL:            #FFFF00
+XTerm*.colorUL:            #86A2BE
 XTerm*.colorBD:            #FFFFFF
 
 URxvt*.transparent:                false
@@ -79,11 +75,11 @@ URxvt*.letterSpace:                 -1
 URxvt*.scrollBar:                  false
 URxvt*.background:                 #151515
 URxvt*.foreground:                 #BBBBBB
-URxvt*.cursorColor:                #FF0000
+URxvt*.cursorColor:                #FF6500
 URxvt*.cursorBlink:                true
 URxvt*.internalBorder:             5
 URxvt*.perl-lib:                   /home/haron/.config/urxvt/perl
-URxvt*.perl-ext-common:            default,tabbedex,clipboard,matcher,osc-xterm-clipboard
+URxvt*.perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard
 URxvt*.iso14755:                   False
 URxvt*.keysym.Shift-Control-C:     perl:clipboard:copy
 URxvt*.keysym.Shift-Control-V:     perl:clipboard:paste
@@ -92,7 +88,7 @@ URxvt*.matcher.button:             1
 URxvt*.matcher.pattern.0:          (?:https?:\\/\\/|ftp:\\/\\/|news:\\/\\/|mailto:|file:\\/\\/|\\bwww\\.)\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\n\(\n\\\([a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\\)| # Allow a pair of matched parentheses\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_+*~]  # exclude some trailing characters (heuristic)\n\)+
 URxvt*.urlLauncher:                vivaldi-snapshot
 URxvt*.underlineURLs:              true
-URxvt*.colorUL:                    #86a2be
+URxvt*.colorUL:                    #86A2BE
 URxvt*.keysym.M-q:                 perl:url-select:select_next
 URxvt*.tabbed.new-button:          no
 URxvt*.tabbed.tabbar-fg:           15
