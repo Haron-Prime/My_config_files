@@ -6,68 +6,107 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb! 
 
-Xterm*termName: xterm-256color
-XTerm*locale: true
-XTerm*metaSendsEscape: true
-XTerm*utf8Title: true
-XTerm*renderFont: true
-XTerm*faceName: Terminus Re33
-XTerm*faceSize: 12
-XTerm*foreground: #bbbbbb
-XTerm*background: #151515
-XTerm*saveLines: 1000
-XTerm*loginShell: true
-Xterm*bellIsUrgent: true
-XTerm*scaleHeight: 1.01
-Xterm*borderWidth: 0
-XTerm*cursorBlink: true
-XTerm*cursorColor: #FF0000
-XTerm*selectToClipboard: true
-XTerm*allowSendEvents: false
-XTerm*sessionMgt: false
-XTerm*eightBitInput:  false
-XTerm*VT100*colorULMode:  off
-XTerm*VT100*colorBDMode:  off
-XTerm.VT100.titeInhibit:  off
-XTerm*colorUL: #FFFF00
-XTerm*colorBD: #FFFFFF
+! Normal
+! color0    black
+! color1    red
+! color2    green
+! color3    yellow
+! color4    blue (синий)
+! color5    purple (фиолетовый)
+! color6    cyan (голубой)
+! color7    white
 
-URxvt*.transparent:               false
-URxvt*.shading:                   75
-URxvt*saveLines:                  9999
-URxvt.font:                       xft:Terminus Re33:size=11:antialias=true:hinting=true
-URxvt.boldFont:                   xft:Terminus Re33:size=11:antialias=true:hinting=true
-URxvt*letterSpace:                -1
-URxvt*scrollBar:                  false
-URxvt*background:                 #151515
-URxvt*foreground:                 #BBBBBB
-URxvt*cursorColor:                #FF0000
-URxvt*cursorBlink:                true
-URxvt*internalBorder:             5
-URxvt.perl-lib:                   /home/haron/.config/urxvt/perl
-URxvt.perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard
-URxvt.iso14755:                   False
-URxvt.keysym.Shift-Control-C:     perl:clipboard:copy
-URxvt.keysym.Shift-Control-V:     perl:clipboard:paste
-URxvt.keysym.M-w:                 perl:url-picker
-URxvt.matcher.button:             1
-URxvt.matcher.pattern.0:          (?:https?:\\/\\/|ftp:\\/\\/|news:\\/\\/|mailto:|file:\\/\\/|\\bwww\\.)\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\n\(\n\\\([a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\\)| # Allow a pair of matched parentheses\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_+*~]  # exclude some trailing characters (heuristic)\n\)+
-URxvt.urlLauncher:                vivaldi-snapshot
-URxvt.underlineURLs:              true
-URxvt.colorUL:                    #86a2be
-URxvt.keysym.M-q:                 perl:url-select:select_next
-URxvt.tabbed.new-button:          no
-URxvt.tabbed.tabbar-fg:           #757575
-URxvt.tabbed.tabbar-bg:           #151515
-URxvt.tabbed.tab-fg:              #151515
-URxvt.tabbed.tab-bg:              #757575
-URxvt.tabbed.title-fg:            #757575
-URxvt.tabbed.title-bg:            #151515
-URxvt.tabbed.autohide:            true
-URxvt.tabbed.reopen-on-close:     yes
-URxvt.keysym.Control-t:           perl:tabbedex:new_tab
-URxvt.keysym.Control-Tab:         perl:tabbedex:next_tab
-URxvt.keysym.Control-Shift-Tab:   perl:tabbedex:prev_tab
-URxvt.keysym.Control-Shift-Left:  perl:tabbedex:move_tab_left
-URxvt.keysym.Control-Shift-Right: perl:tabbedex:move_tab_right
-URxvt.urgentOnBell:               true
+urxvt*color0:    #000000
+urxvt*color1:    #C00000
+urxvt*color2:    #00C000
+urxvt*color3:    #C0C000
+urxvt*color4:    #0C00C0
+urxvt*color5:    #AA00AA
+urxvt*color6:    #00AAAA
+urxvt*color7:    #FFFFFF
+
+! Light
+! color8     darkgray
+! color9     red
+! color10    green
+! color11    yellow
+! color12    blue (синий)
+! color13    purple (фиолетовый)
+! color14    cyan (голубой)
+! color15    lightgray
+! color16    orange
+
+urxvt*color8:     #151515
+urxvt*color9:     #FF8080
+urxvt*color10:    #80FF80
+urxvt*color11:    #FFFF88
+urxvt*color12:    #99CCFF
+urxvt*color13:    #B14CC2
+urxvt*color14:    #9BFFFF
+urxvt*color15:    #757575
+
+Xterm*.termName:           xterm-256color
+XTerm*.locale:             true
+XTerm*.metaSendsEscape:    true
+XTerm*.utf8Title:          true
+XTerm*.renderFont:         true
+XTerm*.faceName:           Terminus Re33
+XTerm*.faceSize:           12
+XTerm*.foreground:         #bbbbbb
+XTerm*.background:         #151515
+XTerm*.saveLines:          1000
+XTerm*.loginShell:         true
+Xterm*.bellIsUrgent:       true
+XTerm*.scaleHeight:        1.01
+Xterm*.borderWidth:        0
+XTerm*.cursorBlink:        true
+XTerm*.cursorColor:        #FF0000
+XTerm*.selectToClipboard:  true
+XTerm*.allowSendEvents:    false
+XTerm*.sessionMgt:         false
+XTerm*.eightBitInput:      false
+XTerm*VT100*.colorULMode:  off
+XTerm*VT100*.colorBDMode:  off
+XTerm*.VT100.titeInhibit:  off
+XTerm*.colorUL:            #FFFF00
+XTerm*.colorBD:            #FFFFFF
+
+URxvt*.transparent:                false
+URxvt*.shading:                    75
+URxvt*saveLines:                   9999
+URxvt*.font:                       xft:Terminus Re33:size=11:antialias=true:hinting=true
+URxvt*.boldFont:                   xft:Terminus Re33:size=11:antialias=true:hinting=true
+URxvt*.letterSpace:                 -1
+URxvt*.scrollBar:                  false
+URxvt*.background:                 #151515
+URxvt*.foreground:                 #BBBBBB
+URxvt*.cursorColor:                #FF0000
+URxvt*.cursorBlink:                true
+URxvt*.internalBorder:             5
+URxvt*.perl-lib:                   /home/haron/.config/urxvt/perl
+URxvt*.perl-ext-common:            default,tabbedex,clipboard,matcher,osc-xterm-clipboard
+URxvt*.iso14755:                   False
+URxvt*.keysym.Shift-Control-C:     perl:clipboard:copy
+URxvt*.keysym.Shift-Control-V:     perl:clipboard:paste
+URxvt*.keysym.M-w:                 perl:url-picker
+URxvt*.matcher.button:             1
+URxvt*.matcher.pattern.0:          (?:https?:\\/\\/|ftp:\\/\\/|news:\\/\\/|mailto:|file:\\/\\/|\\bwww\\.)\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\n\(\n\\\([a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\\)| # Allow a pair of matched parentheses\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_+*~]  # exclude some trailing characters (heuristic)\n\)+
+URxvt*.urlLauncher:                vivaldi-snapshot
+URxvt*.underlineURLs:              true
+URxvt*.colorUL:                    #86a2be
+URxvt*.keysym.M-q:                 perl:url-select:select_next
+URxvt*.tabbed.new-button:          no
+URxvt*.tabbed.tabbar-fg:           15
+URxvt*.tabbed.tabbar-bg:           8
+URxvt*.tabbed.tab-fg:              8
+URxvt*.tabbed.tab-bg:              15
+URxvt*.tabbed.title-fg:            15
+URxvt*.tabbed.title-bg:            8
+URxvt*.tabbed.autohide:            true
+URxvt*.tabbed.reopen-on-close:     yes
+URxvt*.keysym.Control-t:           perl:tabbedex:new_tab
+URxvt*.keysym.Control-Tab:         perl:tabbedex:next_tab
+URxvt*.keysym.Control-Shift-Tab:   perl:tabbedex:prev_tab
+URxvt*.keysym.Control-Shift-Left:  perl:tabbedex:move_tab_left
+URxvt*.keysym.Control-Shift-Right: perl:tabbedex:move_tab_right
+URxvt*.urgentOnBell:               true
