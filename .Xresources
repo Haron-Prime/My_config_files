@@ -38,7 +38,7 @@ Xft.rgba:       rgb!
 *color12:    #99CCFF
 *color13:    #B14CC2
 *color14:    #9BFFFF
-*color15:    #656565
+*color15:    #757575
 
 ! *.loginShell:                 true
 *.cursorBlink:                true
@@ -104,11 +104,11 @@ URxvt*.tabbed.title-fg:            12
 URxvt*.tabbed.title-bg:            8
 URxvt*.tabbed.autohide:            true
 URxvt*.tabbed.reopen-on-close:     yes
-URxvt*.keysym.Control-t:           perl:tabbedex:new_tab
-URxvt*.keysym.Control-Tab:         perl:tabbedex:next_tab
-URxvt*.keysym.Control-Shift-Tab:   perl:tabbedex:prev_tab
-URxvt*.keysym.Control-Shift-Left:  perl:tabbedex:move_tab_left
-URxvt*.keysym.Control-Shift-Right: perl:tabbedex:move_tab_right
+! URxvt*.keysym.Control-t:           perl:tabbedex:new_tab
+! URxvt*.keysym.Control-Tab:         perl:tabbedex:next_tab
+! URxvt*.keysym.Control-Shift-Tab:   perl:tabbedex:prev_tab
+! URxvt*.keysym.Control-Shift-Left:  perl:tabbedex:move_tab_left
+! URxvt*.keysym.Control-Shift-Right: perl:tabbedex:move_tab_right
 URxvt*.urgentOnBell:               true
 URxvt*.resize-font.smaller:        C-Down
 URxvt*.resize-font.bigger:         C-Up
