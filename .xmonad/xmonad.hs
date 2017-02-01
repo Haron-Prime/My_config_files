@@ -121,7 +121,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask .|. shiftMask,       0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
     , ((mod1Mask,                     0x74),     spawn "tor-browser")                                                                                 --Alt+T
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
-    , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Alt+W
+    -- , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Alt+W
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart")                                                      --Win+Q
     , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
     -- , ((modm,                         0x70),     spawn "gmrun")                                                                                       --Wim+P

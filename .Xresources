@@ -96,11 +96,11 @@ URxvt*.underlineURLs:              true
 URxvt*.keysym.M-w:                 perl:url-picker
 URxvt*.keysym.Control-Shift-U:     perl:url-select:select_next
 URxvt*.tabbed.new-button:          no
-URxvt*.tabbed.tabbar-fg:           15
+URxvt*.tabbed.tabbar-fg:           12
 URxvt*.tabbed.tabbar-bg:           8
 URxvt*.tabbed.tab-fg:              8
-URxvt*.tabbed.tab-bg:              15
-URxvt*.tabbed.title-fg:            15
+URxvt*.tabbed.tab-bg:              12
+URxvt*.tabbed.title-fg:            12
 URxvt*.tabbed.title-bg:            8
 URxvt*.tabbed.autohide:            true
 URxvt*.tabbed.reopen-on-close:     yes
