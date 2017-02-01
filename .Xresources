@@ -58,13 +58,13 @@ Xft.rgba:       rgb!
 *.imFont:                     xft:Terminus Re33:size=11:antialias=false:hinting=true
 *.utf8Title:                  true
 
-Xterm*.termName:           xterm-256color
+XTerm*.termName:           xterm-256color
 XTerm*.locale:             true
 XTerm*.metaSendsEscape:    true
 XTerm*.renderFont:         true
 XTerm*.faceName:           Terminus Re33:size=11:antialias=false:hinting=true
 ! XTerm*.faceSize:           11
-Xterm*.bellIsUrgent:       true
+XTerm*.bellIsUrgent:       true
 XTerm*.scaleHeight:        1.01
 Xterm*.borderWidth:        0
 XTerm*.selectToClipboard:  true
