@@ -53,7 +53,7 @@ Xft.rgba:       rgb!
 *.shading:                    75
 *.mouseWheelScrollPage:       true
 *.pointerBlank:               true
-*.pointerColor:               15
+*.pointerColor:               #656565
 *.imLocale:                   en_US.UTF8
 
 Xterm*.termName:           xterm-256color
