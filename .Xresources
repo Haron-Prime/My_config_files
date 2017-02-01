@@ -40,7 +40,7 @@ Xft.rgba:       rgb!
 *color14:    #9BFFFF
 *color15:    #656565
 
-*.loginShell:                 true
+! *.loginShell:                 true
 *.cursorBlink:                true
 *.saveLines:                  999
 *.background:                 #151515
@@ -55,14 +55,15 @@ Xft.rgba:       rgb!
 *.pointerBlank:               true
 *.pointerColor:               #656565
 *.imLocale:                   en_US.utf8
+*.imFont:                     xft:Terminus Re33:size=11:antialias=false:hinting=true
 *.utf8Title:                  true
 
 Xterm*.termName:           xterm-256color
 XTerm*.locale:             true
 XTerm*.metaSendsEscape:    true
 XTerm*.renderFont:         true
-XTerm*.faceName:           Terminus Re33
-XTerm*.faceSize:           11
+XTerm*.faceName:           Terminus Re33:size=11:antialias=false:hinting=true
+! XTerm*.faceSize:           11
 Xterm*.bellIsUrgent:       true
 XTerm*.scaleHeight:        1.01
 Xterm*.borderWidth:        0
@@ -75,8 +76,8 @@ XTerm*.VT100*colorBDMode:  off
 XTerm*.VT100.titeInhibit:  off
 
 URxvt*.transparent:                false
-URxvt*.font:                       xft:Terminus Re33:size=11:antialias=true:hinting=true
-URxvt*.boldFont:                   xft:Terminus Re33:size=11:antialias=true:hinting=true
+URxvt*.font:                       xft:Terminus Re33:size=11:antialias=false:hinting=true
+URxvt*.boldFont:                   xft:Terminus Re33:size=11:antialias=false:hinting=true
 URxvt*.letterSpace:                 -1
 URxvt*.scrollBar:                  false
 URxvt*.internalBorder:             5
