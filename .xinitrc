@@ -10,6 +10,17 @@ done
 unset f
 fi
 
+sysresources=/etc/X11/xinit/.Xresources
+userresources=$HOME/.Xresources
+
+if [ -f $sysresources ]; then
+    xrdb -merge $sysresources
+fi
+
+if [ -f "$userresources" ]; then
+    xrdb -merge "$userresources"
+fi
+
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
     eval "$(dbus-launch --sh-syntax --exit-with-session)"
 fi
@@ -25,8 +36,9 @@ perWindowLayoutD &
 compton -b &
 urxvtd -q -f -o &
 pcmanfm -d &
-feh --bg-center /home/haron/Pictures/pics/xmonad/XMONAD011-2.png &
+feh --bg-scale /home/haron/wall/starrynight.png &
+# feh --bg-center /home/haron/Pictures/pics/xmonad/XMONAD011-2.png &
 # /usr/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --widthtype request --width 1 --transparent true --alpha 1 --tint 0x000000 --height 20 --expand true &
-stalonetray &
-python3 /home/haron/lib/gis-weather/gis-weather.py &
-exec xmonad
+# stalonetray &
+# python3 /home/haron/lib/gis-weather/gis-weather.py &
+exec spectrwm
