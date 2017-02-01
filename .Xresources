@@ -40,13 +40,11 @@ Xft.rgba:       rgb!
 *color14:    #9BFFFF
 *color15:    #757575
 
-! *.loginShell:                 true
 *.cursorBlink:                true
 *.saveLines:                  999
 *.background:                 #151515
 *.foreground:                 #BBBBBB
 *.colorUL:                    #8989C0
-! *.colorBD:                    #FFFFFF
 *.cursorColor:                #FF0000
 *.SimpleMenu*background:      #353535
 *.SimpleMenu*foreground:      #AAAAAA
@@ -63,7 +61,6 @@ XTerm*.locale:             true
 XTerm*.metaSendsEscape:    true
 XTerm*.renderFont:         true
 XTerm*.faceName:           Terminus Re33:size=11:antialias=false:hinting=true
-! XTerm*.faceSize:           11
 XTerm*.bellIsUrgent:       true
 XTerm*.scaleHeight:        1.01
 Xterm*.borderWidth:        0
@@ -104,11 +101,6 @@ URxvt*.tabbed.title-fg:            12
 URxvt*.tabbed.title-bg:            8
 URxvt*.tabbed.autohide:            true
 URxvt*.tabbed.reopen-on-close:     yes
-! URxvt*.keysym.Control-t:           perl:tabbedex:new_tab
-! URxvt*.keysym.Control-Tab:         perl:tabbedex:next_tab
-! URxvt*.keysym.Control-Shift-Tab:   perl:tabbedex:prev_tab
-! URxvt*.keysym.Control-Shift-Left:  perl:tabbedex:move_tab_left
-! URxvt*.keysym.Control-Shift-Right: perl:tabbedex:move_tab_right
 URxvt*.urgentOnBell:               true
 URxvt*.resize-font.smaller:        C-Down
 URxvt*.resize-font.bigger:         C-Up
