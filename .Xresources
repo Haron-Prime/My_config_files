@@ -41,7 +41,7 @@ Xft.rgba:       rgb!
 *color15:    #656565
 
 *.cursorBlink:                true
-*.saveLines:                  9999
+*.saveLines:                  999
 *.background:                 #151515
 *.foreground:                 #BBBBBB
 *.colorUL:                    #86A2BE
