@@ -40,15 +40,21 @@ Xft.rgba:       rgb!
 *color14:    #9BFFFF
 *color15:    #656565
 
+*.loginShell:                 true
 *.cursorBlink:                true
 *.saveLines:                  999
 *.background:                 #151515
 *.foreground:                 #BBBBBB
 *.colorUL:                    #86A2BE
-*.colorBD:                    #FFFFFF
+! *.colorBD:                    #FFFFFF
 *.cursorColor:                #FF0000
 *.SimpleMenu*background:      #353535
 *.SimpleMenu*foreground:      #aaaaaa
+*.shading:                    75
+*.mouseWheelScrollPage:       true
+*.pointerBlank:               true
+*.pointerColor:               15
+*.imLocale:                   ru_UA.UTF-8
 
 Xterm*.termName:           xterm-256color
 XTerm*.locale:             true
@@ -57,7 +63,6 @@ XTerm*.utf8Title:          true
 XTerm*.renderFont:         true
 XTerm*.faceName:           Terminus Re33
 XTerm*.faceSize:           12
-XTerm*.loginShell:         true
 Xterm*.bellIsUrgent:       true
 XTerm*.scaleHeight:        1.01
 Xterm*.borderWidth:        0
@@ -70,7 +75,6 @@ XTerm*.VT100*colorBDMode:  off
 XTerm*.VT100.titeInhibit:  off
 
 URxvt*.transparent:                false
-URxvt*.shading:                    75
 URxvt*.font:                       xft:Terminus Re33:size=11:antialias=true:hinting=true
 URxvt*.boldFont:                   xft:Terminus Re33:size=11:antialias=true:hinting=true
 URxvt*.letterSpace:                 -1
