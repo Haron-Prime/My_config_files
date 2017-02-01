@@ -7,20 +7,20 @@ Xft.antialias:  1
 Xft.rgba:       rgb!
 
 ! color0     black
-! color1     red
-! color2     green
-! color3     yellow
-! color4     blue (синий)
+! color1     red (тёмно-красный)
+! color2     green (тёмно-зелёный)
+! color3     yellow (тёмно-жёлтый)
+! color4     blue (тёмно-синий)
 ! color5     purple (фиолетовый)
-! color6     cyan (голубой)
+! color6     cyan (бирюзовый)
 ! color7     white
 ! color8     darkgray
-! color9     red
-! color10    green
-! color11    yellow
-! color12    blue (синий)
-! color13    purple (фиолетовый)
-! color14    cyan (голубой)
+! color9     red (тёмно-розовый)
+! color10    green (светло-зелёный)
+! color11    yellow (светло-жёлтый)
+! color12    blue (голубой)
+! color13    purple (сиреневый)
+! color14    cyan (светло-бирюзовый)
 ! color15    gray
 
 *color0:     #000000
