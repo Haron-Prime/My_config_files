@@ -49,20 +49,20 @@ Xft.rgba:       rgb!
 ! *.colorBD:                    #FFFFFF
 *.cursorColor:                #FF0000
 *.SimpleMenu*background:      #353535
-*.SimpleMenu*foreground:      #aaaaaa
+*.SimpleMenu*foreground:      #AAAAAA
 *.shading:                    75
 *.mouseWheelScrollPage:       true
 *.pointerBlank:               true
 *.pointerColor:               #656565
 *.imLocale:                   en_US.UTF8
+*.utf8Title:                  true
 
 Xterm*.termName:           xterm-256color
 XTerm*.locale:             true
 XTerm*.metaSendsEscape:    true
-XTerm*.utf8Title:          true
 XTerm*.renderFont:         true
 XTerm*.faceName:           Terminus Re33
-XTerm*.faceSize:           12
+XTerm*.faceSize:           11
 Xterm*.bellIsUrgent:       true
 XTerm*.scaleHeight:        1.01
 Xterm*.borderWidth:        0
@@ -84,14 +84,14 @@ URxvt*.perl-lib:                   /home/haron/.config/urxvt/perl
 URxvt*.perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard,resize-font,vtwheel
 URxvt*.iso14755:                   false
 URxvt*.iso14755_52:                false
-URxvt*.keysym.Shift-Control-C:     perl:clipboard:copy
-URxvt*.keysym.Shift-Control-V:     perl:clipboard:paste
+URxvt*.keysym.Control-Shift-C:     perl:clipboard:copy
+URxvt*.keysym.Control-Shift-V:     perl:clipboard:paste
 URxvt*.keysym.M-w:                 perl:url-picker
 URxvt*.matcher.button:             1
 URxvt*.matcher.pattern.0:          (?:https?:\\/\\/|ftp:\\/\\/|news:\\/\\/|mailto:|file:\\/\\/|\\bwww\\.)\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\n\(\n\\\([a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\\)| # Allow a pair of matched parentheses\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_+*~]  # exclude some trailing characters (heuristic)\n\)+
-URxvt*.urlLauncher:                vivaldi-snapshot
+URxvt*.urlLauncher:                /usr/bin/vivaldi-snapshot
 URxvt*.underlineURLs:              true
-URxvt*.keysym.M-q:                 perl:url-select:select_next
+URxvt*.keysym.Control-Shift-U:     perl:url-select:select_next
 URxvt*.tabbed.new-button:          no
 URxvt*.tabbed.tabbar-fg:           15
 URxvt*.tabbed.tabbar-bg:           8
