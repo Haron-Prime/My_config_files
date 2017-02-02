@@ -72,7 +72,7 @@ Xft.rgba:       rgb!
 *.allowSendEvents:    false
 *.sessionMgt:         false
 *.eightBitInput:      false
-*.VT100*colorULMode:  off
+*.VT100*colorULMode:  on
 *.VT100*colorBDMode:  off
 *.VT100.titeInhibit:  off
 
