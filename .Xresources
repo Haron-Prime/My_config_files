@@ -42,39 +42,39 @@ Xft.rgba:       rgb!
 
 ! Common parameters
 
-*.cursorBlink:                true
-*.saveLines:                  999
-*.background:                 #151515
-*.foreground:                 #BBBBBB
-*.colorUL:                    #8989C0
-*.cursorColor:                #FF0000
-*.SimpleMenu*background:      #353535
-*.SimpleMenu*foreground:      #AAAAAA
-*.shading:                    75
-*.mouseWheelScrollPage:       true
-*.pointerBlank:               true
-*.pointerColor:               #656565
-*.imLocale:                   en_US.utf8
-*.imFont:                     xft:Terminus Re33:size=11:antialias=false:hinting=true
-*.utf8Title:                  true
+*.cursorBlink:                     true
+*.saveLines:                       999
+*.background:                      #151515
+*.foreground:                      #BBBBBB
+*.colorUL:                         #8989C0
+*.cursorColor:                     #FF0000
+*.shading:                         75
+*.mouseWheelScrollPage:            true
+*.pointerBlank:                    true
+*.pointerColor:                    #656565
+*.imLocale:                        en_US.utf8
+*.imFont:                          xft:Terminus Re33:size=11:antialias=false:hinting=true
+*.utf8Title:                       true
 
 ! XTerm/UXTerm parameters
 
-*.termName:           xterm-256color
-*.locale:             true
-*.metaSendsEscape:    true
-*.renderFont:         true
-*.faceName:           Terminus Re33:size=11:antialias=false:hinting=true
-*.bellIsUrgent:       true
-*.scaleHeight:        1.01
-*.borderWidth:        0
-*.selectToClipboard:  true
-*.allowSendEvents:    false
-*.sessionMgt:         false
-*.eightBitInput:      false
-*.VT100*colorULMode:  on
-*.VT100*colorBDMode:  off
-*.VT100.titeInhibit:  off
+*.termName:                        xterm-256color
+*.locale:                          true
+*.metaSendsEscape:                 true
+*.renderFont:                      true
+*.faceName:                        Terminus Re33:size=11:antialias=false:hinting=true
+*.bellIsUrgent:                    true
+*.scaleHeight:                     1.01
+*.borderWidth:                     0
+*.selectToClipboard:               true
+*.allowSendEvents:                 false
+*.sessionMgt:                      false
+*.eightBitInput:                   false
+*.VT100*colorULMode:               on
+*.VT100*colorBDMode:               off
+*.VT100.titeInhibit:               off
+*.SimpleMenu*background:           #353535
+*.SimpleMenu*foreground:           #AAAAAA
 
 ! URxvt parameters
 
