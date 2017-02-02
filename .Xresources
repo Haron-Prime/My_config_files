@@ -40,6 +40,8 @@ Xft.rgba:       rgb!
 *color14:    #9BFFFF
 *color15:    #757575
 
+! Common parameters
+
 *.cursorBlink:                true
 *.saveLines:                  999
 *.background:                 #151515
@@ -56,21 +58,25 @@ Xft.rgba:       rgb!
 *.imFont:                     xft:Terminus Re33:size=11:antialias=false:hinting=true
 *.utf8Title:                  true
 
-XTerm*.termName:           xterm-256color
-XTerm*.locale:             true
-XTerm*.metaSendsEscape:    true
-XTerm*.renderFont:         true
-XTerm*.faceName:           Terminus Re33:size=11:antialias=false:hinting=true
-XTerm*.bellIsUrgent:       true
-XTerm*.scaleHeight:        1.01
-Xterm*.borderWidth:        0
-XTerm*.selectToClipboard:  true
-XTerm*.allowSendEvents:    false
-XTerm*.sessionMgt:         false
-XTerm*.eightBitInput:      false
-XTerm*.VT100*colorULMode:  off
-XTerm*.VT100*colorBDMode:  off
-XTerm*.VT100.titeInhibit:  off
+! XTerm/UXTerm parameters
+
+*.termName:           xterm-256color
+*.locale:             true
+*.metaSendsEscape:    true
+*.renderFont:         true
+*.faceName:           Terminus Re33:size=11:antialias=false:hinting=true
+*.bellIsUrgent:       true
+*.scaleHeight:        1.01
+*.borderWidth:        0
+*.selectToClipboard:  true
+*.allowSendEvents:    false
+*.sessionMgt:         false
+*.eightBitInput:      false
+*.VT100*colorULMode:  off
+*.VT100*colorBDMode:  off
+*.VT100.titeInhibit:  off
+
+! URxvt parameters
 
 URxvt*.transparent:                false
 URxvt*.font:                       xft:Terminus Re33:size=11:antialias=false:hinting=true
@@ -79,7 +85,7 @@ URxvt*.letterSpace:                 -1
 URxvt*.scrollBar:                  false
 URxvt*.internalBorder:             5
 URxvt*.perl-lib:                   /home/haron/.config/urxvt/perl
-URxvt*.perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard,resize-font,vtwheel
+URxvt*.perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,url-picker,osc--clipboard,resize-font,vtwheel
 URxvt*.iso14755:                   false
 URxvt*.iso14755_52:                false
 URxvt*.keysym.Control-Shift-C:     perl:clipboard:copy
