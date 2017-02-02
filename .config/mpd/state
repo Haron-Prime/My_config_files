@@ -1,8 +1,8 @@
 sw_volume: 100
 audio_device_state:1:pulse audio
 state: pause
-current: 106
-time: 27.991000
+current: 1
+time: 639.639000
 random: 0
 repeat: 0
 single: 0
@@ -11,119 +11,95 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Foreign/100% Relax hits/Jason - Tyrello - What the memories say.mp3
-1:Foreign/100% Relax hits/Ingo Pickhan - Bali chill.mp3
-2:Foreign/100% Relax hits/Alexander Hitzler - Goa jam.mp3
-3:Foreign/100% Relax hits/Eric del Mar - Isla margherita.mp3
-4:Foreign/100% Relax hits/Mahoroba - Des moment.mp3
-5:Foreign/100% Relax hits/Mahoroba - Unearthly.mp3
-6:Foreign/100% Relax hits/Alexander Hitzler - Gran Canaria sunset session.mp3
-7:Foreign/100% Relax hits/Mahoroba - Le monde.mp3
-8:Foreign/100% Relax hits/ason Tyrello - Rain sunday.mp3
-9:Foreign/100% Relax hits/Skyway - Jamo.mp3
-10:Foreign/100% Relax hits/Mahoroba - Les Paysages.mp3
-11:Foreign/100% Relax hits/Skyway-Chanted Minds.mp3
-12:Foreign/100% Relax hits/Skyway - Its A Pleasure.mp3
-13:Foreign/100% Relax hits/Rank1-Airwave (Sunset Chillout Remix).mp3
-14:Foreign/100% Relax hits/Sharon_tully-eallin_life.mp3
-15:Foreign/100% Relax hits/Schiller - Hill out.mp3
-16:Foreign/100% Relax hits/Schiller Mit Heppner] Dream Of You (Chillout Mix).mp3
-17:Foreign/100% Relax hits/Envio touched by the sun -Rusch and_Elusives chill out mix.mp3
-18:Foreign/100% Relax hits/Envio-Touched By The Sun (Envios Sunrise Mix).mp3
-19:Foreign/100% Relax hits/Vision II-The ocean.mp3
-20:Foreign/100% Relax hits/Klaus Schultze-Floating.mp3
-21:Foreign/100% Relax hits/Blank & Jones - Watching The Waves (Ambient Remix).mp3
-22:Foreign/100% Relax hits/Relaxing dreams-dance of the elves.mp3
-23:Foreign/100% Relax hits/Sarah Mclaclan - Angel (Dusted Remix.mp3
-24:Foreign/100% Relax hits/Conjure One - Center of the Sun (Solar Stone's Chilled Out Remix).mp3
-25:Foreign/100% Relax hits/Sarah McLlaclan - Angel.mp3
-26:Foreign/100% Relax hits/Conjure one center of the sun(Solar Stones-chilled_out_remix-ds.mp3
-27:Foreign/100% Relax hits/Blank & Jones - The hardest heart.mp3
-28:Foreign/100% Relax hits/Mike Oldfield - Jungle Gardenia.mp3
-29:Foreign/100% Relax hits/Schiller & Heppner - Dream of You (Chillout Mix).mp3
-30:Foreign/100% Relax hits/Jason Tyrello - Da sun is gone at copa.mp3
-31:Foreign/100% Relax hits/Nacho Sotomayor- Abolut.mp3
-32:Foreign/100% Relax hits/Moby-Whispering mind.mp3
-33:Foreign/100% Relax hits/Paul Oakenfold - Bunkka-Southern Sun (Solar Stone Chill Out Mix).mp3
-34:Foreign/100% Relax hits/Kinobe - Slip into something more comfortable.mp3
-35:Foreign/100% Relax hits/Lemon Jelly-Elements.mp3
-36:Foreign/100% Relax hits/Mauro Picotto - Goodbye.mp3
-37:Foreign/100% Relax hits/ATB - Ecstasy (original airplay mix).mp3
-38:Foreign/100% Relax hits/Pet Shop boys-Home & Dry-ambient-mix-house.mp3
-39:Foreign/100% Relax hits/Blank & Jones - Breezin'.mp3
-40:Foreign/100% Relax hits/Mahoroba - Basic dreams.mp3
-41:Foreign/100% Relax hits/M.I.K.E. - Turn Out The Lights (Chillout Mix).mp3
-42:Foreign/100% Relax hits/Dj Tiesto - Close to you-(feat._jan_johnston).mp3
-43:Foreign/100% Relax hits/Blank & Jones - Beyond Time (Ambient Mix).mp3
-44:Foreign/100% Relax hits/Blank & Jones-Unknown_Treasure - Claudia Brucken.mp3
-45:Foreign/100% Relax hits/Vargo-Get back to serenity-(beach_mix).mp3
-46:Foreign/100% Relax hits/The Voice Of Enigma Medley (Razormaid).mp3
-47:Foreign/100% Relax hits/Giant Leap-The Way You Dream (feat. Michael Stipe & Asha Bhosle).mp3
-48:Foreign/100% Relax hits/Masters & Nickson - Out There (Christian Rush Remix).mp3
-49:Foreign/100% Relax hits/Plastyc Buddha   Rhodes Royce.mp3
-50:Foreign/100% Relax hits/Blank&Jones - Desire (Ambient Mix).mp3
-51:Foreign/100% Relax hits/Blank & Jones - Le Grand Bleu (Ambient Mix).mp3
-52:Foreign/100% Relax hits/Hypnotic - Share your dreams.mp3
-53:Foreign/100% Relax hits/Enigma - Boum Boum.mp3
-54:Foreign/100% Relax hits/Loveletter - Once there was a girl.mp3
-55:Foreign/100% Relax hits/The KLF-Madrugada Eternavvudhqix.mp3
-56:Foreign/100% Relax hits/Solar Stone - Seven Cities (Ambient Dub).mp3
-57:Foreign/100% Relax hits/DAB - The Blues.mp3
-58:Foreign/100% Relax hits/Enigma - Total eclipse of the moon.mp3
-59:Foreign/100% Relax hits/Skyway - Mercury.mp3
-60:Foreign/100% Relax hits/Nacho Sotomayor-Cafe del Mar.mp3
-61:Foreign/100% Relax hits/Blank And Jones - Flaming (June Elles).mp3
-62:Foreign/100% Relax hits/Deep Ambient Instrumental.mp3
-63:Foreign/100% Relax hits/Nacho Satomayor - Cafe Del Mar.mp3
-64:Foreign/100% Relax hits/Enigma - Look of today.mp3
-65:Foreign/100% Relax hits/Julee Cruise Falling.mp3
-66:Foreign/100% Relax hits/Bent - I love my man.mp3
-67:Foreign/100% Relax hits/Delerium-flatlands.mp3
-68:Foreign/100% Relax hits/Together we will conquer.mp3
-69:Foreign/100% Relax hits/Blank & Jones-Relax.mp3
-70:Foreign/100% Relax hits/Enigma - In the shadow in the light.mp3
-71:Foreign/100% Relax hits/Code14 - No Limites.mp3
-72:Foreign/100% Relax hits/The KLF-08-3AM Somewhere Out Of Beaumont.mp3
-73:Foreign/100% Relax hits/Moby _ Go (In Dub Mix).mp3
-74:Foreign/100% Relax hits/Carlos Santana - Dance Of The Rainbow Serpent.mp3
-75:Foreign/100% Relax hits/Tricky - My Mermaid.mp3
-76:Foreign/100% Relax hits/Amillionsons - Misti Blu.mp3
-77:Foreign/100% Relax hits/Sarah Mclachlan - Angel.mp3
-78:Foreign/100% Relax hits/Sebastian m.w. - Karens ballade.mp3
-79:Foreign/100% Relax hits/S.W.-Sweet Lullabies.mp3
-80:Foreign/100% Relax hits/Mahoroba - World colours.mp3
-81:Foreign/100% Relax hits/Mahoroba-Le Monde2.mp3
-82:Foreign/100% Relax hits/Mahoroba-Jouer du piano-.mp3
-83:Foreign/100% Relax hits/Pulsar-Bleu carpe noctem.mp3
-84:Foreign/100% Relax hits/Bent-Swollen.mp3
-85:Foreign/100% Relax hits/Moodswings - Redemption Song.mp3
-86:Foreign/100% Relax hits/Groove Armada - A Private Interlude (Kinobe Remix) - www.impactmp3.org.mp3
-87:Foreign/100% Relax hits/Pet Shop Boys - Love comes quickly (Blank & Jones mix).mp3
-88:Foreign/100% Relax hits/Enigma-Following the sun.mp3
-89:Foreign/100% Relax hits/Mahoroba-Enter the underworld-(cool_meditation_mix).mp3
-90:Foreign/100% Relax hits/House chill Dubtribe Sound System - Do It Now.mp3
-91:Foreign/100% Relax hits/Lemon Jelly-His Majesty King Raam.mp3
-92:Foreign/100% Relax hits/Blank And Jones--Secrets And Lies.mp3
-93:Foreign/100% Relax hits/Cyborg - Sounds.mp3
-94:Foreign/100% Relax hits/Phobos-Edge of forever.mp3
-95:Foreign/100% Relax hits/Blank And Jones - Desire (ambient Mix)- Fsp.mp3
-96:Foreign/100% Relax hits/Vargo - The Moment (Original Mix).mp3
-97:Foreign/100% Relax hits/Beat Production-88 - Heartbeat.mp3
-98:Foreign/100% Relax hits/Jason Tyrello -  Lost in paradise.mp3
-99:Foreign/100% Relax hits/Moodswings-Into the blue.mp3
-100:Foreign/100% Relax hits/Lemon Jelly-In The Bath.mp3
-101:Foreign/100% Relax hits/Let U Go (Schiller remix) [ATB].mp3
-102:Foreign/100% Relax hits/Dj Orikidea Beautiful (ambient mix).mp3
-103:Foreign/100% Relax hits/Conjure One - Sleep (Solarstone afterhours mix).mp3
-104:Foreign/100% Relax hits/The Lonely Shepherdndbrcrtb.mp3
-105:Foreign/100% Relax hits/Blank & Jones - Driftin'.mp3
-106:Foreign/100% Relax hits/Smash - Supermode.mp3
-107:Foreign/100% Relax hits/Solar Stone - The Calling (Chilled Mix).mp3
-108:Foreign/100% Relax hits/Blank & Jones feat. Anne Clark-The Hardest Heart (Ambient Mix).mp3
-109:Foreign/100% Relax hits/Moodswings-State Of Indep.mp3
-110:Foreign/100% Relax hits/Chris_coco-hazy_lazy_(afterlife_mix)-rns.mp3
-111:Foreign/100% Relax hits/Dubtribe Sound System-Do it now.mp3
-112:Foreign/100% Relax hits/Ambient Guitars.mp3
-113:Foreign/100% Relax hits/Libra - Calling your name (Solar Stone chillout mix)-the legacy club_mix-ipz.mp3
-114:Foreign/100% Relax hits/Deep Forest - Forest Hymn (Long Ambient Vers.mp3
+0:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/01 The Voice Of Enigma.m4a
+1:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/02 Principles Of Lust [(A) Sadeness,.m4a
+2:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/03 Callas Went Away.m4a
+3:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/04 Mea Culpa.m4a
+4:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/05 The Voice & The Snake.m4a
+5:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/06 Knocking On Forbidden Doors.m4a
+6:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/07 Back To The Rivers Of Belief [(A).m4a
+7:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/01 Second Chapter.m4a
+8:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/02 The Eyes Of Truth.m4a
+9:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/03 Return To Innocence.m4a
+10:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/04 I Love You ... I'll Kill You.m4a
+11:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/05 Silent Warrior.m4a
+12:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/06 The Dream Of The Dolphin.m4a
+13:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/07 Age Of Loneliness (Carly's Song).m4a
+14:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/08 Out From The Deep.m4a
+15:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/09 The Cross Of Changes.m4a
+16:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/10 Return To Innocence [Long & Alive.m4a
+17:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/11 Age Of Loneliness (Enigmatic Club.m4a
+18:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/12 The Eyes Of Truth (The Götterdämm.m4a
+19:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/01 Le Roi Est Mort, Vive Le Roi!.m4a
+20:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/02 Morphing Thru Time.m4a
+21:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/03 Third Of Its Kind.m4a
+22:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/04 Beyond The Invisible.m4a
+23:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/05 Why! ....m4a
+24:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/06 Shadows In Silence.m4a
+25:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/07 The Child In Us.m4a
+26:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/08 T.N.T. For The Brain.m4a
+27:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/09 Almost Full Moon.m4a
+28:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/10 The Roundabout.m4a
+29:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/11 Prism Of Life.m4a
+30:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/12 Odyssey Of The Mind.m4a
+31:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/01 - The Gate.m4a
+32:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/02 - Push the Limits.m4a
+33:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/03 - Gravity of Love.m4a
+34:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/04 - Smell of Desire.m4a
+35:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/05 - Modern Crusaders.m4a
+36:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/06 - Traces (Light and Weight).m4a
+37:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/07 - The Screen Behind the Mirror.m4a
+38:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/08 - Endless Quest.m4a
+39:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/09 - Camera Obscura.m4a
+40:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/10 - Between Mind & Heart.m4a
+41:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/11 - Silence Must Be Heard.m4a
+42:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/01 From East To West.m4a
+43:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/02 Voyageur.m4a
+44:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/03 Incognito.m4a
+45:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/04 Page Of Cups.m4a
+46:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/05 Boum-Boum.m4a
+47:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/06 Total Eclipse Of The Moon.m4a
+48:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/07 Look Of Today.m4a
+49:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/08 In The Shadow, In The Light.m4a
+50:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/09 Weightless.m4a
+51:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/10 The Piano.m4a
+52:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/11 Following The Sun.m4a
+53:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/01 Hello & Welcome (The Single).m4a
+54:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/02 The Child In Us.m4a
+55:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/03 Age Of Loneliness.m4a
+56:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/04 Eyes Of Truth.m4a
+57:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/05 Rivers Of Belief.m4a
+58:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/06 Endless Quest.m4a
+59:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/07 Sadeness PT 1.m4a
+60:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/08 Voyageur.m4a
+61:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/09 Beyond The Invisible.m4a
+62:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/01 Eppur Si Muove.m4a
+63:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/02 Feel Me Heaven.m4a
+64:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/03 Dreaming Of Andromeda.m4a
+65:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/04 Dancing With Mephisto.m4a
+66:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/05 Northern Lights.m4a
+67:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/06 Invisible Love.m4a
+68:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/07 Message From 10.m4a
+69:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/08 Hello And Welcome.m4a
+70:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/09 20.000 Miles Over The Sea.m4a
+71:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/10 Sitting On The Moon.m4a
+72:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/11 The Alchemist.m4a
+73:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/12 Goodbye Milky Way.m4a
+74:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/01 Encounters.m4a
+75:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/02 Seven Lives.m4a
+76:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/03 Touchness.m4a
+77:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/04 The Same Parents.m4a
+78:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/05 Fata Morgana (Instrumental).m4a
+79:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/06 Hell's Heaven.m4a
+80:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/07 La Puerta Del Cielo.m4a
+81:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/08 Distorted Love.m4a
+82:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/09 Ja T'aime Till My Dying Day.m4a
+83:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/10 Deja Vu (Instrumental).m4a
+84:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/11 Between Generations.m4a
+85:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/12 The Language Of Sound.m4a
+86:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD2/2-01 Superficial.m4a
+87:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD2/2-02 We Are Nature.m4a
+88:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD2/2-03 Downtown Silence.m4a
+89:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD2/2-04 Sunrise.m4a
+90:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD2/2-05 The Language Of Sound (Slow Edi.m4a
 playlist_end

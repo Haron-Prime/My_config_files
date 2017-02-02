@@ -92,15 +92,16 @@ URxvt*perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,
 URxvt*iso14755:                   false
 URxvt*iso14755_52:                false
 URxvt*keysym.Control-Shift-C:     perl:clipboard:copy
-URxvt*keysym.Control-Shift-V:     perl:clipboard:paste
+URxvt*keysym.Control-Shift-V:     perl:clipb
 URxvt*matcher.button:             1
 URxvt*keysym.C-Delete:            perl:matcher:last
 URxvt*keysym.M-Delete:            perl:matcher:list
 URxvt*matcher.pattern.0:          (?:https?:\\/\\/|ftp:\\/\\/|news:\\/\\/|mailto:|file:\\/\\/|\\bwww\\.)\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\n\(\n\\\([a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\\)| # Allow a pair of matched parentheses\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_+*~]  # exclude some trailing characters (heuristic)\n\)+
-URxvt*urlLauncher:                /usr/bin/vivaldi-snapshot
-URxvt*underlineURLs:              true
+URxvt*url-select.launcher:        /usr/bin/xdg-open
+URxvt*url-launcher:               /usr/bin/xdg-open
 URxvt*keysym.M-w:                 perl:url-picker
-URxvt*keysym.Control-Shift-U:     perl:url-select:select_next
+URxvt*keysym.M-u:                 perl:url-select:select_next
+URxvt*underlineURLs:              true
 URxvt*tabbed.new-button:          no
 URxvt*tabbed.tabbar-fg:           12
 URxvt*tabbed.tabbar-bg:           8
