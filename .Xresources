@@ -6,6 +6,9 @@ Xft.hinting:                       1
 Xft.antialias:                     1
 Xft.rgba:                          rgb!
 
+Xcursor.theme:                     Oxygen Black
+Xcursor.size:                      22
+
 ! color0                           black
 ! color1                           red (тёмно-красный)
 ! color2                           green (тёмно-зелёный)
@@ -71,13 +74,14 @@ Xft.rgba:                          rgb!
 *selectToClipboard:               true
 *allowSendEvents:                 false
 *sessionMgt:                      false
-*eightBitInput:                   false
+*eightBitInput:                   true
 *VT100*colorULMode:               on
 *VT100*colorBDMode:               off
 *VT100.titeInhibit:               off
 *VT100.geometry:                  80x32
 *SimpleMenu*background:           #353535
 *SimpleMenu*foreground:           #AAA
+*dynamicColors:                   true
 
 ! URxvt parameters
 
