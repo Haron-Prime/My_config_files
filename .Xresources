@@ -23,21 +23,21 @@ Xft.rgba:                          rgb!
 ! color14                          cyan (светло-бирюзовый)
 ! color15                          gray
 
-*color0:                           #000000
+*color0:                           #000
 *color1:                           #C00000
 *color2:                           #00C000
 *color3:                           #C0C000
 *color4:                           #0C00C0
-*color5:                           #AA00AA
-*color6:                           #00AAAA
-*color7:                           #FFFFFF
+*color5:                           #A0A
+*color6:                           #0AA
+*color7:                           #FFF
 *color8:                           #151515
-*color9:                           #FF8080
+*color9:                           #F88
 *color10:                          #80FF80
-*color11:                          #FFFF88
-*color12:                          #99CCFF
+*color11:                          #FF8
+*color12:                          #9CF
 *color13:                          #B14CC2
-*color14:                          #9BFFFF
+*color14:                          #9FF
 *color15:                          #757575
 
 ! Common parameters
@@ -47,9 +47,9 @@ Xft.rgba:                          rgb!
 *cursorUnderline:                 true
 *saveLines:                       999
 *background:                      #151515
-*foreground:                      #BBBBBB
-*colorUL:                         #8989C0
-*cursorColor:                     #FF0000
+*foreground:                      #BBB
+*colorUL:                         #59B
+*cursorColor:                     #F00
 *shading:                         75
 *mouseWheelScrollPage:            false
 *pointerBlank:                    true
@@ -77,7 +77,7 @@ Xft.rgba:                          rgb!
 *VT100.titeInhibit:               off
 *VT100.geometry:                  80x32
 *SimpleMenu*background:           #353535
-*SimpleMenu*foreground:           #AAAAAA
+*SimpleMenu*foreground:           #AAA
 
 ! URxvt parameters
 
@@ -99,7 +99,6 @@ URxvt*keysym.M-Delete:            perl:matcher:list
 URxvt*matcher.pattern.0:          (?:https?:\\/\\/|ftp:\\/\\/|rsync:\\/\\/|news:\\/\\/|mailto:|file:\\/\\/|\\bwww\\.)\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\n\(\n\\\([a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\\)| # Allow a pair of matched parentheses\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_+*~]  # exclude some trailing characters (heuristic)\n\)+
 URxvt*url-select.launcher:        /usr/bin/xdg-open
 URxvt*url-launcher:               /usr/bin/xdg-open
-! URxvt*keysym.M-w:                 perl:url-picker
 URxvt*keysym.M-w:                 perl:url-select:select_next
 URxvt*underlineURLs:              true
 URxvt*tabbed.new-button:          no
