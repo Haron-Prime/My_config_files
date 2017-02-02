@@ -73,6 +73,7 @@ Xft.rgba:                          rgb!
 *.VT100*colorULMode:               on
 *.VT100*colorBDMode:               off
 *.VT100.titeInhibit:               off
+*.VT100.geometry:                  80x32
 *.SimpleMenu*background:           #353535
 *.SimpleMenu*foreground:           #AAAAAA
 
@@ -84,6 +85,7 @@ URxvt*.boldFont:                   xft:Terminus Re33:size=11:antialias=false:hin
 URxvt*.letterSpace:                 -1
 URxvt*.scrollBar:                  false
 URxvt*.internalBorder:             5
+URxvt*.skipBuiltinGlyphs:          true
 URxvt*.perl-lib:                   /home/haron/.config/urxvt/perl
 URxvt*.perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard,resize-font,vtwheel
 URxvt*.iso14755:                   false
