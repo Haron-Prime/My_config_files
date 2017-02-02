@@ -44,13 +44,14 @@ Xft.rgba:                          rgb!
 
 *transparent:                     false
 *cursorBlink:                     true
+*cursorUnderline:                 true
 *saveLines:                       999
 *background:                      #151515
 *foreground:                      #BBBBBB
 *colorUL:                         #8989C0
 *cursorColor:                     #FF0000
 *shading:                         75
-*mouseWheelScrollPage:            true
+*mouseWheelScrollPage:            false
 *pointerBlank:                    true
 *pointerColor:                    #656565
 *imLocale:                        en_US.utf8
