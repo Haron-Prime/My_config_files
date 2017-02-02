@@ -1,44 +1,44 @@
-Xft.dpi:        96
-Xft.autohint:   0
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintsfull
-Xft.hinting:    1
-Xft.antialias:  1
-Xft.rgba:       rgb!
+Xft.dpi:                           96
+Xft.autohint:                      0
+Xft.lcdfilter:                     lcddefault
+Xft.hintstyle:                     hintsfull
+Xft.hinting:                       1
+Xft.antialias:                     1
+Xft.rgba:                          rgb!
 
-! color0     black
-! color1     red (тёмно-красный)
-! color2     green (тёмно-зелёный)
-! color3     yellow (тёмно-жёлтый)
-! color4     blue (тёмно-синий)
-! color5     purple (фиолетовый)
-! color6     cyan (бирюзовый)
-! color7     white
-! color8     darkgray
-! color9     red (тёмно-розовый)
-! color10    green (светло-зелёный)
-! color11    yellow (светло-жёлтый)
-! color12    blue (голубой)
-! color13    purple (сиреневый)
-! color14    cyan (светло-бирюзовый)
-! color15    gray
+! color0                           black
+! color1                           red (тёмно-красный)
+! color2                           green (тёмно-зелёный)
+! color3                           yellow (тёмно-жёлтый)
+! color4                           blue (тёмно-синий)
+! color5                           purple (фиолетовый)
+! color6                           cyan (бирюзовый)
+! color7                           white
+! color8                           darkgray
+! color9                           red (тёмно-розовый)
+! color10                          green (светло-зелёный)
+! color11                          yellow (светло-жёлтый)
+! color12                          blue (голубой)
+! color13                          purple (сиреневый)
+! color14                          cyan (светло-бирюзовый)
+! color15                          gray
 
-*color0:     #000000
-*color1:     #C00000
-*color2:     #00C000
-*color3:     #C0C000
-*color4:     #0C00C0
-*color5:     #AA00AA
-*color6:     #00AAAA
-*color7:     #FFFFFF
-*color8:     #151515
-*color9:     #FF8080
-*color10:    #80FF80
-*color11:    #FFFF88
-*color12:    #99CCFF
-*color13:    #B14CC2
-*color14:    #9BFFFF
-*color15:    #757575
+*color0:                           #000000
+*color1:                           #C00000
+*color2:                           #00C000
+*color3:                           #C0C000
+*color4:                           #0C00C0
+*color5:                           #AA00AA
+*color6:                           #00AAAA
+*color7:                           #FFFFFF
+*color8:                           #151515
+*color9:                           #FF8080
+*color10:                          #80FF80
+*color11:                          #FFFF88
+*color12:                          #99CCFF
+*color13:                          #B14CC2
+*color14:                          #9BFFFF
+*color15:                          #757575
 
 ! Common parameters
 
