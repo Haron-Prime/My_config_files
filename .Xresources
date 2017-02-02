@@ -92,7 +92,7 @@ URxvt*perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,
 URxvt*iso14755:                   false
 URxvt*iso14755_52:                false
 URxvt*keysym.Control-Shift-C:     perl:clipboard:copy
-URxvt*keysym.Control-Shift-V:     perl:clipb
+URxvt*keysym.Control-Shift-V:     perl:clipboard:paste
 URxvt*matcher.button:             1
 URxvt*keysym.C-Delete:            perl:matcher:last
 URxvt*keysym.M-Delete:            perl:matcher:list
