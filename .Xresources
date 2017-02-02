@@ -62,7 +62,7 @@ Xft.rgba:                          rgb!
 *.locale:                          true
 *.metaSendsEscape:                 true
 *.renderFont:                      true
-*.faceName:                        Terminus Re33:size=11:antialias=false:hinting=true
+*.faceName:                        xft:Terminus Re33:size=11:antialias=false:hinting=true
 *.bellIsUrgent:                    true
 *.scaleHeight:                     1.01
 *.borderWidth:                     0
