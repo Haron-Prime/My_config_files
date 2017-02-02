@@ -42,6 +42,7 @@ Xft.rgba:                          rgb!
 
 ! Common parameters
 
+*transparent:                     false
 *cursorBlink:                     true
 *saveLines:                       999
 *background:                      #151515
@@ -79,7 +80,6 @@ Xft.rgba:                          rgb!
 
 ! URxvt parameters
 
-URxvt*transparent:                false
 URxvt*font:                       xft:Terminus Re33:size=11:antialias=false:hinting=true
 URxvt*boldFont:                   xft:Terminus Re33:size=11:antialias=false:hinting=true
 URxvt*letterSpace:                 -1
