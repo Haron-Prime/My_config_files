@@ -85,7 +85,7 @@ URxvt*.letterSpace:                 -1
 URxvt*.scrollBar:                  false
 URxvt*.internalBorder:             5
 URxvt*.perl-lib:                   /home/haron/.config/urxvt/perl
-URxvt*.perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,url-picker,osc--clipboard,resize-font,vtwheel
+URxvt*.perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard,resize-font,vtwheel
 URxvt*.iso14755:                   false
 URxvt*.iso14755_52:                false
 URxvt*.keysym.Control-Shift-C:     perl:clipboard:copy
