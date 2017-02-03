@@ -194,7 +194,7 @@ source $HOME/scripts/my_zhs_plugins/my_aliases.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/extract.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/pk.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/git-prompt.plugin.zsh
-source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/scripts/my_zhs_plugins/zsh-autosuggestions.plugin.zsh
 
  
 # aliases
