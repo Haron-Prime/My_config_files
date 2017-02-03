@@ -128,7 +128,7 @@ if [ -f /usr/bin/grc ]; then
   alias wdiff="grc --colour=auto wdiff"
   alias last='grc --colour=auto last'
   alias who='grc --colour=auto who'
-  alias cvs="grc --colour=auto cvs"
+  # alias cvs="grc --colour=auto cvs"
   alias mount="grc --colour=auto mount"
   alias mtr="grc --colour=auto mtr"
   alias ps="grc --colour=auto ps"
@@ -166,7 +166,7 @@ if [ -f /usr/bin/grc ]; then
   alias uptime='grc --colour=auto uptime'
   alias w='grc --colour=auto w'
   alias getfacl='grc --colour=auto getfacl'
-  alias showmount='grc --colour=auto showmount'
+  # alias showmount='grc --colour=auto showmount'
 
   alias logc="grc --colour=auto cat"
   alias logt="grc --colour=auto tail"
