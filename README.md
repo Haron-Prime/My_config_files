@@ -13,7 +13,7 @@ My config awesome wm, xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh et
 ![](/screenshots/herbstluftwm-1.png?raw=true)
 ![](/screenshots/herbstluftwm-3.png?raw=true)
 
-#### License - © 2016 WTFPL - http://www.wtfpl.net/ 
+#### License - © 2017 WTFPL - http://www.wtfpl.net/ 
 
 ```
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
