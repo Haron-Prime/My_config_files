@@ -1,9 +1,9 @@
 Xft.dpi:                           96
-Xft.autohint:                      0
+Xft.autohint:                      false
 Xft.lcdfilter:                     lcddefault
 Xft.hintstyle:                     hintsfull
-Xft.hinting:                       1
-Xft.antialias:                     1
+Xft.hinting:                       true
+Xft.antialias:                     true
 Xft.rgba:                          rgb!
 
 Xcursor.theme:                     Oxygen Black
@@ -35,7 +35,7 @@ Xcursor.size:                      22
 *color6:                           #0AA
 *color7:                           #FFF
 *color8:                           #151515
-*color9:                           #F88
+*color9:                           #F99
 *color10:                          #80FF80
 *color11:                          #FF8
 *color12:                          #9CF
@@ -51,7 +51,7 @@ Xcursor.size:                      22
 *saveLines:                       999
 *background:                      #151515
 *foreground:                      #BBB
-*colorUL:                         #59B
+*colorUL:                         #6AC
 *cursorColor:                     #F00
 *shading:                         75
 *mouseWheelScrollPage:            false
