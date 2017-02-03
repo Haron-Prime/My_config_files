@@ -37,6 +37,6 @@ perWindowLayoutD &
 compton -b &
 urxvtd -q -f -o &
 pcmanfm -d &
-feh --bg-center /home/haron/Pictures/Walpapers/i3wm.png &
+feh --bg-center /home/haron/wall/i3wm.png &
 python3 /home/haron/lib/gis-weather/gis-weather.py &
 exec i3
