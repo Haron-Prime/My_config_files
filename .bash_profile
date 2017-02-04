@@ -27,9 +27,11 @@ export LESS_TERMCAP_us=$'\033[01;32m'
 # export GPG_AGENT_INFO  # the env file does not contain the export statement
 # export SSH_AUTH_SOCK   # enable gpg-agent for ssh
 
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
 export LANG=ru_UA.UTF-8
 export MM_CHARSET=UTF-8
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export FT2_SUBPIXEL_HINTING=2
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+export LIBVA_DRIVER_NAME=vdpau
+export VDPAU_DRIVER=nouveau
