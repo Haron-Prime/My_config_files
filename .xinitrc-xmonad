@@ -33,7 +33,7 @@ fi
 /usr/bin/xdg-user-dirs-update &
 setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp &
 xsetroot -cursor_name left_ptr &
-xsetroot -solid '#000000' &
+hsetroot -solid '#000000' &
 # xset s 6999 &
 # xset dpms 6000 6001 6002 &
 # xset m 5/2 0 &
