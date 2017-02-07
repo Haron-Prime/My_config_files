@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Action
-Name=XVim
+Name=SVim
 Icon=pencil
-Profiles=xvim;
+Profiles=svim;
 
-[X-Action-Profile xvim]
-Exec=xvim %f
-MimeTypes=text/plain;
+[X-Action-Profile svim]
+Exec=urxvtc -name vim -e sudo vim %f
+MimeTypes=text/plain;application/x-shellscript;application/x-perl;application/json;application/x-iwork-keynote-sffkey;application/x-theme;application/x-trash;application/x-extension-html;
 SelectionCount==1
