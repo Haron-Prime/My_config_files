@@ -1,9 +1,0 @@
-Amarok may not take its action icons out of the theme. In that case, you could force it to use nouveKDEGray by following these steps:
-
-* Quit Amarok;
-
-* Put the folders "icons" and "images" from this folder into Amarok's settings directory;
-
-* Remove '/var/tmp/kdecache-YOUR_USERNAME/Amarok-pixmaps.kcache'; and
-
-* Recreate the icon cache by choosing another icon set in System Settings > Icons > Icons > Theme, selecting nouveKDEGray again and clicking Apply.
