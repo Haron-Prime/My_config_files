@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Action
+Name=Open as root
+Icon=system-file-manager
+Profiles=on_folder;
+
+[X-Action-Profile on_folder]
+Name=Open as root
+MimeTypes=inode/directory;
+SelectionCount=1
+Schemes=file;
+Exec=gksu pcmanfm %f

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Action
+Name=Svim
+Icon=pencil
+Profiles=svim;
+
+[X-Action-Profile svim]
+Exec=gksu vim %f
+MimeTypes=text/plain;
+SelectionCount==1
