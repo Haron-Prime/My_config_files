@@ -1,0 +1,25 @@
+Installation
+============
+
+*************
+***  KF5  ***
+*************
+Simply put this (extracted) folder in '~/.local/share/icons/' (create the last folder "icons" if it doesn't exist; here '~' is your home), select nouveKDEGray in System Settings > Icons > Icons > Theme and click Apply.
+
+If you update the set, don't forget to recreate the icon cache by choosing another icon set in System Settings > Icons > Icons > Theme, selecting nouveKDEGray again and clicking Apply.
+
+*************
+***  LXQT ***
+*************
+Put the extracted folder in '~/.local/share/icons/' (or '~/.icons/') and select it from Configuration Center > Appearance > Icon theme.
+
+*************
+**  KDE4  ***
+*************
+In KDE4, the icon installation directory was '~/.kde/share/icons/'. In some distros, the KDE settings directory was '~/.kde4/' instead of '~/.kde/'. Select nouveKDEGray in System Settings > Application Appearance > Icons and click Apply.
+
+----------------------------------------
+
+For SMPlayer, see "README.txt" inside the folder "nouveKDEGray-SMPlayer".
+
+For Amarok, see "README" inside the folder "Amarok".
