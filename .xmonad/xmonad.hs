@@ -98,15 +98,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                          0xff69),     spawn "compdown")
     , ((0,                          0xff67),     spawn "gmrun")
     , ((0,                          0xffc9),     scratchPad)                                                                                          --F12
-    -- , ((0         .|. shiftMask,    0xffc9),     spawn "termux")                                                                                      --Shift+F12
     , ((0,                          0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Print
     , ((mod1Mask,                   0xff61),     spawn "scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                     --Alt+Print
-    --, ((mod1Mask,                     0x61),     spawn "xterm")                                                                                       --Alt+A
-    --, ((mod1Mask,                     0x62),     spawn "baobab")                                                                                      --Alt+B
-    --, ((mod1Mask,                     0x63),     spawn "chromium")                                                                                    --Alt+C
     , ((mod1Mask,                     0x64),     spawn "deadbeef")                                                                                    --Alt+D
     , ((mod1Mask,                     0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
-    --, ((mod1Mask,                     0x65),     spawn "urxvtc -name equalizer -e alsamixer -D equal")                                                --Alt+E
     , ((mod1Mask,                     0x66),     spawn "firefox")                                                                                     --Alt+F
     , ((mod1Mask,                     0x67),     spawn "gimp")                                                                                        --Alt+G
     , ((mod1Mask,                     0x68),     spawn "hexchat")                                                                                     --Alt+H
