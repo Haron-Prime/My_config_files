@@ -335,16 +335,16 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "#57",                  awful.client.restore                                                                               ), -- Win+Ctrl+n
     awful.key({ modkey            }, "#33",                  function() menubar.show()                                                                       end), -- Win+p
     awful.key({ "Mod1"            }, "F2",                   function () awful.util.spawn_with_shell("dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")                                                                                                                                        end),
-    awful.key({                   }, "Cancel",               function () awful.util.spawn_with_shell( "compdown" )                                           end),
-    awful.key({                   }, "XF86Reload",           function () awful.util.spawn_with_shell( "compreboot" )                                         end),
-    awful.key({                   }, "XF86Favorites",        function () awful.util.spawn_with_shell("if pgrep -x 'transgui' >/dev/null; then kill -15 $(pgrep -x 'transgui'); else transgui; fi")                                             end),
+    awful.key({                   }, "Cancel",               function () awful.util.spawn_with_shell("compdown" )                                           end),
+    awful.key({                   }, "XF86Reload",           function () awful.util.spawn_with_shell("compreboot" )                                         end),
+    awful.key({                   }, "XF86Favorites",        function () awful.util.spawn_with_shell("if(pidof transgui >/dev/null); then kill $(pidof transgui); else transgui; fi")                                             end),
     awful.key({                   }, "XF86Explorer",         function () awful.util.spawn_with_shell("pcmanfm")                                              end),
     awful.key({"Mod1"             }, "XF86Explorer",         function () awful.util.spawn_with_shell("gksu pcmanfm")                                         end),
     awful.key({                   }, "XF86Mail",             function () awful.util.spawn_with_shell("thunderbird")                                          end),
-    awful.key({                   }, "XF86Calculator",       function () awful.util.spawn_with_shell("if pgrep -x 'galculator' >/dev/null; then kill -15 $(pgrep -x 'galculator'); else galculator; fi")                                           end),
-    awful.key({                   }, "XF86Tools",            function () awful.util.spawn_with_shell("if pgrep -x 'ncmpcpp' >/dev/null; then kill -15 $(pgrep -x 'ncmpcpp'); else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp; fi")                           end),
+    awful.key({                   }, "XF86Calculator",       function () awful.util.spawn_with_shell("if(pidof galculator >/dev/null); then kill $(pidof galculator); else galculator; fi")                                           end),
+    awful.key({                   }, "XF86Tools",            function () awful.util.spawn_with_shell("if(pidof ncmpcpp >/dev/null); then kill $(pidof ncmpcpp); else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp; fi")                           end),
     awful.key({                   }, "XF86HomePage",         function () awful.util.spawn_with_shell("vivaldi-snapshot")                                     end),
-    awful.key({                   }, "XF86Search",           function () awful.util.spawn_with_shell("if pgrep -x 'htop' >/dev/null; then kill -15 $(pgrep -x 'htop'); else urxvtc -name htop -e /usr/bin/htop; fi")                   end),
+    awful.key({                   }, "XF86Search",           function () awful.util.spawn_with_shell("if(pidof htop >/dev/null); then kill $(pidof htop); else urxvtc -name htop -e /usr/bin/htop; fi")                   end),
     awful.key({                   }, "XF86AudioMute",        function () awful.util.spawn(           "/usr/bin/pulseaudio-ctl mute")                         end),
     awful.key({                   }, "XF86AudioLowerVolume", function () awful.util.spawn(           "/usr/bin/pulseaudio-ctl down")                         end),
     awful.key({                   }, "XF86AudioRaiseVolume", function () awful.util.spawn(           "/usr/bin/pulseaudio-ctl up")                           end),
@@ -365,7 +365,7 @@ globalkeys = awful.util.table.join(
     awful.key({ "Mod1"            }, "#25",                  function () awful.util.spawn_with_shell("gksu /usr/bin/pacmanxg")                               end), -- Alt+w
     awful.key({ "Mod1"            }, "#55",                  function () awful.util.spawn_with_shell("xvim")                                                 end), -- Alt+v
     awful.key({ "Mod1"            }, "#58",                  function () awful.util.spawn_with_shell("urxvtc -name mc -e /usr/bin/mc")                       end), -- Alt+m
-    awful.key({ "Mod1"            }, "#39",                  function () awful.util.spawn_with_shell("subl3")                                                end), -- Alt+s
+    awful.key({ "Mod1"            }, "#39",                  function () awful.util.spawn_with_shell("if(pidof subl3 >/dev/null); then kill $(pidof subl3); else subl3; fi")                                                end), -- Alt+s
     awful.key({ "Mod1"            }, "#42",                  function () awful.util.spawn_with_shell("gimp")                                                 end), -- Alt+g
     awful.key({ "Mod1"            }, "#43",                  function () awful.util.spawn_with_shell("/usr/bin/hexchat")                                     end), -- Alt+h
     awful.key({ "Mod1",           }, "#33",                  function () awful.util.spawn_with_shell("env WINEPREFIX='/home/haron/.wine' wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe'")                                                                                                                                          end), -- Alt+p
