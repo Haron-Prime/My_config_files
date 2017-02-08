@@ -85,15 +85,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                      0x1008ff15),     spawn "mpc stop")
     , ((0,                      0x1008ff16),     spawn "mpc prev")
     , ((0,                      0x1008ff17),     spawn "mpc next")
-    , ((0,                      0x1008ff30),     spawn "if pgrep -x 'transgui' >/dev/null; then kill $(pgrep -x 'transgui'); else transgui; fi")
+    , ((0,                      0x1008ff30),     spawn "if(pidof transgui >/dev/null); then kill $(pidof transgui); else transgui; fi")
     , ((0,                      0x1008ff18),     spawn "vivaldi-snapshot")
-    , ((0,                      0x1008ff19),     spawn "if pgrep -x 'thunderbird' >/dev/null; then kill $(pgrep -x 'thunderbird'); else thunderbird; fi")
+    , ((0,                      0x1008ff19),     spawn "if(pidof thunderbird >/dev/null); then kill $(pidof thunderbird); else thunderbird; fi")
     , ((0,                      0x1008ff5d),     spawn "pcmanfm")
     , ((0       .|. shiftMask,  0x1008ff5d),     spawn "gksu pcmanfm")
-    , ((0,                      0x1008ff1d),     spawn "if pgrep -x 'galculator' >/dev/null; then kill $(pgrep -x 'galculator'); else galculator; fi")
+    , ((0,                      0x1008ff1d),     spawn "if(pidof galculator >/dev/null); then kill $(pidof galculator); else galculator; fi")
     , ((0,                      0x1008ff2f),     spawn "i3lock -i /home/haron/wall/starrynight.png")
-    , ((0,                      0x1008ff81),     spawn "if pgrep -x 'ncmpcpp' >/dev/null; then kill $(pgrep -x 'ncmpcpp'); else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp; fi")
-    , ((0,                      0x1008ff1b),     spawn "if pgrep -x 'htop' >/dev/null; then kill $(pgrep -x 'htop'); else urxvtc -name htop -e /usr/bin/htop; fi")
+    , ((0,                      0x1008ff81),     spawn "if(pidof ncmpcpp >/dev/null); then kill $(pidof ncmpcpp); else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp; fi")
+    , ((0,                      0x1008ff1b),     spawn "if(pidof htop >/dev/null); then kill $(pidof htop); else urxvtc -name htop -e /usr/bin/htop; fi")
     , ((0,                      0x1008ff73),     spawn "compreboot")
     , ((0,                          0xff69),     spawn "compdown")
     , ((0,                          0xff67),     spawn "gmrun")
@@ -110,9 +110,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x6d),     spawn "urxvtc -name mc -e mc")                                                                       --Alt+M
     , ((mod1Mask,                     0x6f),     spawn "opera12")                                                                                     --Alt+O
     , ((mod1Mask,                     0x70),     spawn "wine /home/haron/lib/Pro100-5.20-GIV/PRO100.exe")                                             --Alt+P
-    , ((mod1Mask,                     0x71),     spawn "if pgrep -x 'pavucontrol' >/dev/null; then kill $(pgrep -x 'pavucontrol'); else pavucontrol; fi") --Alt+Q
+    , ((mod1Mask,                     0x71),     spawn "if(pidof pavucontrol >/dev/null); then kill $(pidof pavucontrol); else pavucontrol; fi")      --Alt+Q
     , ((mod1Mask,                     0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
-    , ((mod1Mask,                     0x73),     spawn "if pgrep -x 'subl3' >/dev/null; then kill $(pgrep -x 'subl3'); else subl3; fi")               --Alt+S
+    , ((mod1Mask,                     0x73),     spawn "if(pidof subl3 >/dev/null); then kill $(pidof subl3); else subl3; fi")                        --Alt+S
     , ((mod1Mask .|. shiftMask,       0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
     , ((mod1Mask,                     0x74),     spawn "tor-browser")                                                                                 --Alt+T
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
