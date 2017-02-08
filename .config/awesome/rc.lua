@@ -11,6 +11,7 @@ local hotkeys_popup = require("awful.hotkeys_popup").widget
 local vicious = require("vicious")
 local bashets = require("bashets")
 local freedesktop = require("freedesktop")
+local scratch = require("scratch")
 -- local quake = require("quake")
 -- local quakeconsole = {}
 -- for s = 1, screen.count() do
@@ -287,6 +288,10 @@ globalkeys = awful.util.table.join(
     --awful.key({                   }, "XF86Forward",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape",                awful.tag.history.restore                                                                         ),
 
+    awful.key({                   }, "F11",                   function () scratch.pad.toggle() end),
+
+    awful.key({                   }, "F12",                   function () scratch.drop("urxvtc", "bottom", nil, nil, 0.33) end),
+
 
     awful.key({ modkey,           }, "#44",                                                                                                                        -- Win+j
         function ()
@@ -368,6 +373,7 @@ globalkeys = awful.util.table.join(
 )
 
 clientkeys = awful.util.table.join(
+	awful.key({                   }, "F10",                  function (c) scratch.pad.set(c, 0.60, 0.60, true)                                               end),
     awful.key({ modkey,           }, "#41",                  function (c) c.fullscreen = not c.fullscreen                                                    end), -- Win+f
     awful.key({ modkey, "Shift"   }, "#54",                  function (c) c:kill()                                                                           end), -- Win+Shift+c
     awful.key({ modkey, "Control" }, "space",                awful.client.floating.toggle                                                                       ),
