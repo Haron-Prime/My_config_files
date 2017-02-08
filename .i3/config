@@ -201,8 +201,8 @@ bindsym $mod+BackSpace       workspace back_and_forth
 
 bindsym Cancel               exec --no-startup-id compdown
 bindsym XF86Reload           exec --no-startup-id compreboot
-bindsym XF86Search           exec --no-startup-id "if pgrep -x 'htop' >/dev/null; then kill -15 $(pgrep -x 'htop'); else urxvtc -name htop -e htop; fi" 
-bindsym XF86Tools            exec --no-startup-id "if pgrep -x 'ncmpcpp' >/dev/null; then kill -15 $(pgrep -x 'ncmpcpp'); else urxvtc -name ncmpcpp -e ncmpcpp; fi"
+bindsym XF86Search           exec --no-startup-id "if(pidof htop >/dev/null); then kill $(pidof htop); else urxvtc -name htop -e htop; fi" 
+bindsym XF86Tools            exec --no-startup-id "if(pidof ncmpcpp >/dev/null); then kill $(pidof ncmpcpp); else urxvtc -name ncmpcpp -e ncmpcpp; fi"
 bindsym XF86AudioMute        exec --no-startup-id "pulseaudio-ctl mute"
 # bindsym XF86AudioMute        exec --no-startup-id "amixer set Master toggle"
 bindsym XF86AudioLowerVolume exec --no-startup-id "pulseaudio-ctl down"
@@ -214,11 +214,11 @@ bindsym $mod+0x60            exec --no-startup-id "mpc toggle"
 bindsym XF86AudioStop        exec --no-startup-id "mpc stop"
 bindsym XF86AudioPrev        exec --no-startup-id "mpc prev"
 bindsym XF86AudioNext        exec --no-startup-id "mpc next"
-bindsym XF86Favorites        exec --no-startup-id "if pgrep -x 'transgui' >/dev/null; then kill -15 $(pgrep -x 'transgui'); else transgui; fi" 
+bindsym XF86Favorites        exec --no-startup-id "if(pidof transgui >/dev/null); then kill $(pidof transgui); else transgui; fi" 
 bindsym XF86HomePage         exec --no-startup-id vivaldi-snapshot
 bindsym XF86Mail             exec --no-startup-id thunderbird
 bindsym XF86Explorer         exec --no-startup-id pcmanfm
-bindsym XF86Calculator       exec --no-startup-id "if pgrep -x 'galculator' >/dev/null; then kill -15 $(pgrep -x 'galculator'); else galculator; fi"
+bindsym XF86Calculator       exec --no-startup-id "if(pidof galculator >/dev/null); then kill $(pidof galculator); else galculator; fi"
 bindsym XF86Sleep            exec --no-startup-id i3lock
 bindsym Menu                 exec --no-startup-id gmrun
 
@@ -232,7 +232,7 @@ bindsym Mod1+m               exec --no-startup-id "urxvtc -name mc -e mc"
 bindsym Mod1+v               exec --no-startup-id "urxvtc -name xvim -e vim"
 bindsym Mod1+r               exec --no-startup-id "urxvtc -name ranger -e ranger"
 bindsym Mod1+p               exec --no-startup-id "wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe'"
-bindsym Mod1+s               exec --no-startup-id subl3
+bindsym Mod1+s               exec --no-startup-id "if(pidof subl3 >/dev/null); then kill $(pidof subl3); else subl3; fi"
 bindsym Mod1+Shift+s         exec --no-startup-id "gksu subl3"
 bindsym Mod1+t               exec --no-startup-id telegram-desktop
 bindsym Mod1+w               exec --no-startup-id "gksu pacmanxg"
