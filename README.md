@@ -12,6 +12,7 @@ My config awesome wm, xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh et
 ![](/screenshots/sway2.png?raw=true)
 ![](/screenshots/herbstluftwm-1.png?raw=true)
 ![](/screenshots/herbstluftwm-3.png?raw=true)
+![](/screenshots/ncmpcpp.png?raw=true)
 
 #### License - © 2017 WTFPL - http://www.wtfpl.net/ 
 
