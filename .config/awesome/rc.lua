@@ -335,8 +335,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "#57",                  awful.client.restore                                                                               ), -- Win+Ctrl+n
     awful.key({ modkey            }, "#33",                  function() menubar.show()                                                                       end), -- Win+p
     awful.key({ "Mod1"            }, "F2",                   function () awful.util.spawn_with_shell("dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")                                                                                                                                        end),
-    awful.key({                   }, "Cancel",               function () awful.util.spawn_with_shell("compdown" )                                           end),
-    awful.key({                   }, "XF86Reload",           function () awful.util.spawn_with_shell("compreboot" )                                         end),
+    awful.key({                   }, "Cancel",               function () awful.util.spawn_with_shell("compdown")                                             end),
+    awful.key({                   }, "XF86Reload",           function () awful.util.spawn_with_shell("compreboot")                                           end),
     awful.key({                   }, "XF86Favorites",        function () awful.util.spawn_with_shell("if(pidof transgui >/dev/null); then kill $(pidof transgui); else transgui; fi")                                             end),
     awful.key({                   }, "XF86Explorer",         function () awful.util.spawn_with_shell("pcmanfm")                                              end),
     awful.key({"Mod1"             }, "XF86Explorer",         function () awful.util.spawn_with_shell("gksu pcmanfm")                                         end),
