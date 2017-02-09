@@ -5,20 +5,20 @@ system_encoding = UTF8
 enable_window_title = no
 
 # Visualizer
-# visualizer_fifo_path = "/tmp/mpd.fifo"
-# visualizer_output_name = "FIFO"
-# visualizer_sync_interval = "30"
-# visualizer_in_stereo = "yes"
-# visualizer_type = "wave_filled"
-# visualizer_color = 246,245,244,243,242,241,240,239,238,237,236,235
-# visualizer_look = "|○"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "FIFO"
+visualizer_sync_interval = "30"
+visualizer_in_stereo = "yes"
+visualizer_type = "wave_filled"
+visualizer_color = 246,245,244,243,242,241,240,239,238,237,236,235
+visualizer_look = "|○"
 
 # Columns
-song_columns_list_format = "(3f)[239]{} (20)[cyan]{a} (40)[cyan]{t} (40)[cyan]{b} (12f)[243]{y} (8f)[243]{l}"
-song_list_format = "{$7 %a$9 $8│$9 $8%t$9 }|{ $8%f$9}$R{$7%b $7}"
+song_columns_list_format = "(3f)[239]{} (15)[cyan]{a} (45)[cyan]{t} (40)[cyan]{b} (12f)[243]{y} (10f)[243]{l}"
+song_list_format = "{$7 %a$9 $8-$9 $8%t$9 }|{ $8%f$9}$R{$7%b $7}"
 song_status_format = "{{$3%a$9}  {$8"%t"$9}  {$3%b   %y$9}}"
 song_library_format = "{%n $8-$9 }{%t}|{%f}"
-now_playing_prefix = "$8$b > "
+now_playing_prefix = "$7$b > "
 browser_playlist_prefix = "playlist"
 selected_item_prefix = "$7"
 selected_item_suffix = "$9"
