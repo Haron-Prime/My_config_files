@@ -11,8 +11,9 @@ visualizer_sync_interval = "30"
 visualizer_in_stereo = "yes"
 visualizer_type = "wave_filled"
 visualizer_color = 246,245,244,243,242,241,240,239,238,237,236,235
-visualizer_look = "|○"
-# visualizer_look = ●▮
+# visualizer_look = "|○"
+visualizer_look = "●▮"
+
 
 # Columns
 song_columns_list_format = "(3f)[239]{} (15)[cyan]{a} (45)[cyan]{t} (40)[cyan]{b} (8f)[243]{yr } (8f)[243]{lr }"
