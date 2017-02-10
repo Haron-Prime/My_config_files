@@ -17,7 +17,7 @@ visualizer_look = "|○"
 
 # Columns
 song_columns_list_format = "(3f)[239]{} (15)[cyan]{a} (45)[cyan]{t} (40)[cyan]{b} (8f)[81]{yr } (8f)[81]{lr }"
-song_list_format = "{$(45) %a  $9  $7%t$9 }|{ $(45)%f$9}$R{$7%b $7}"
+song_list_format = "{$(81) %a  $9  $7%t$9 }|{ $(81)%f$9}$R{$7%b $7}"
 song_status_format = "{{$7%a}  {$b%t$/b}  {%b}  {$b%y$/b$9}}"
 song_library_format = "{%n  --  }{%t}|{%f}"
 now_playing_prefix = "$7$b > "
@@ -65,7 +65,7 @@ mouse_list_scroll_whole_page = "no"
 external_editor = "vim"
 use_console_editor = "yes"
 colors_enabled = "yes"
-empty_tag_color = 45
+empty_tag_color = 80
 header_window_color = "cyan"
 state_line_color = 246
 state_flags_color = 246
