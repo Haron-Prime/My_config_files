@@ -25,12 +25,12 @@ class Haron(ColorScheme):
                 attr = normal
             if context.empty or context.error:
                 fg = 235
-                bg = 196
+                bg = 45
             if context.border:
                 fg = default
             if context.media:
                 if context.image:
-                    fg = 143
+                    fg = 107
                 else:
                     fg = 107
             if context.container:
@@ -43,11 +43,11 @@ class Haron(ColorScheme):
                 fg = 64
                 attr |= bold
             if context.socket:
-                fg = 143
+                fg = 107
                 bg = 230
                 attr |= bold
             if context.fifo:
-                fg = 143
+                fg = 107
                 bg = 230
                 attr |= bold
             if context.device:
@@ -55,7 +55,7 @@ class Haron(ColorScheme):
                 bg = 230
                 attr |= bold
             if context.link:
-                fg = context.good and 39 or 160
+                fg = context.good and 38 or 160
                 attr |= bold
                 if context.bad:
                     bg = 235
@@ -93,9 +93,9 @@ class Haron(ColorScheme):
                 fg = 30
             elif context.tab:
                 fg = context.good and 47 or 30
-                bg = 239
+                bg = 238
             elif context.link:
-                fg = 39
+                fg = 38
 
         elif context.in_statusbar:
             if context.permissions:
