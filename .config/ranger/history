@@ -1,5 +1,4 @@
  
-delete
 git pull
 shell git pull
 shell mv ./OFT.JPG ~/tozen
@@ -15,3 +14,5 @@ cd .config
 cd
 cd Video/Fantasy/Harry Potter_[nnm-club]/
 cd /home/haron/Video/Fantasy/Harry Potter_[nnm-club]
+rename bin
+delete

@@ -32,7 +32,7 @@ class Haron(ColorScheme):
                 if context.image:
                     fg = 143
                 else:
-                    fg = 166
+                    fg = 107
             if context.container:
                 fg = 71
             if context.directory:
@@ -55,7 +55,7 @@ class Haron(ColorScheme):
                 bg = 230
                 attr |= bold
             if context.link:
-                fg = context.good and 80 or 160
+                fg = context.good and 39 or 160
                 attr |= bold
                 if context.bad:
                     bg = 235
@@ -86,7 +86,7 @@ class Haron(ColorScheme):
         elif context.in_titlebar:
             attr |= bold
             if context.hostname:
-                fg = context.bad and 16 or 255
+                fg = context.bad and 16 or 45
                 if context.bad:
                     bg = 166
             elif context.directory:
@@ -95,7 +95,7 @@ class Haron(ColorScheme):
                 fg = context.good and 47 or 30
                 bg = 239
             elif context.link:
-                fg = cyan
+                fg = 39
 
         elif context.in_statusbar:
             if context.permissions:
