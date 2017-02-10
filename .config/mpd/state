@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
 state: play
-current: 64
-time: 4.051000
+current: 0
+time: 4.191000
 random: 0
 repeat: 0
 single: 0
@@ -12,75 +12,119 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Foreign/Claus Zundel/Sacred Spirit/1994 - Chants And Dances Of The Native Americans/01. How The West Was Lost (Intro & Prelude).mp3
-1:Foreign/Claus Zundel/Sacred Spirit/1994 - Chants And Dances Of The Native Americans/02. Winter Ceremony (Tor-Cheney-Nahana).mp3
-2:Foreign/Claus Zundel/Sacred Spirit/1994 - Chants And Dances Of The Native Americans/03. The Counterclockwise Circle Dance (Ly-O-Lay Ale Loya).mp3
-3:Foreign/Claus Zundel/Sacred Spirit/1994 - Chants And Dances Of The Native Americans/04. Celebrate Wild Rice (Ya-Na-Hana).mp3
-4:Foreign/Claus Zundel/Sacred Spirit/1994 - Chants And Dances Of The Native Americans/05. The Cradlesong (Dawa).mp3
-5:Foreign/Claus Zundel/Sacred Spirit/1994 - Chants And Dances Of The Native Americans/06. Advice For The Young (Gitchi-Manidoo).mp3
-6:Foreign/Claus Zundel/Sacred Spirit/1994 - Chants And Dances Of The Native Americans/07. Wishes Of Happiness & Prosperity (Yea-Noha).mp3
-7:Foreign/Claus Zundel/Sacred Spirit/1994 - Chants And Dances Of The Native Americans/08. Elevation (Ta-Was-Ne).mp3
-8:Foreign/Claus Zundel/Sacred Spirit/1994 - Chants And Dances Of The Native Americans/09. Intertribal Song To Stop The Rain (Heya-Hee).mp3
-9:Foreign/Claus Zundel/Sacred Spirit/1994 - Chants And Dances Of The Native Americans/10. Heal The Soul (Shamanic Chant #5).mp3
-10:Foreign/Claus Zundel/Sacred Spirit/1994 - Chants And Dances Of The Native Americans/11. Brandishing The Tomahawk (Yo-Hey-O-Hee).mp3
-11:Foreign/Claus Zundel/Sacred Spirit/1995 - Sacred Spirit (Dance Remixes)/01. Yo-Hey-O-Hee (Dawa Girl Mix).mp3
-12:Foreign/Claus Zundel/Sacred Spirit/1995 - Sacred Spirit (Dance Remixes)/02. Ly-O-Lay Ale Loya (Utah Saints Remix).mp3
-13:Foreign/Claus Zundel/Sacred Spirit/1995 - Sacred Spirit (Dance Remixes)/03. Ya-Na-Hana (Dreadzone Mix).mp3
-14:Foreign/Claus Zundel/Sacred Spirit/1995 - Sacred Spirit (Dance Remixes)/04. Gitchi-Manidoo (Geronimo Lessons Part 1 and 2).mp3
-15:Foreign/Claus Zundel/Sacred Spirit/1995 - Sacred Spirit (Dance Remixes)/05. Yeha-Noha (Totem Grid Mix).mp3
-16:Foreign/Claus Zundel/Sacred Spirit/1995 - Sacred Spirit (Dance Remixes)/06. Tor-Cheney-Nahana (CJ's Freestyle Sabotage).mp3
-17:Foreign/Claus Zundel/Sacred Spirit/1995 - Sacred Spirit (Dance Remixes)/07. Ta-Was-Ne (Less Is More).mp3
-18:Foreign/Claus Zundel/Sacred Spirit/1995 - Sacred Spirit (Dance Remixes)/08. Heya-Hee (Dubbery).mp3
-19:Foreign/Claus Zundel/Sacred Spirit/1995 - Sacred Spirit (Dance Remixes)/09. Dawa (Underdog Mix).mp3
-20:Foreign/Claus Zundel/Sacred Spirit/1995 - Sacred Spirit (Dance Remixes)/10. Shamanic Chant #5 (In Trees Did They Dance Mix).mp3
-21:Foreign/Claus Zundel/Sacred Spirit/1995 - Sacred Spirit (Dance Remixes)/11. Tor-Cheney-Naha (Howie B Left Foot Mix).mp3
-22:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/01. Intro.mp3
-23:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/02. Culture Clash.mp3
-24:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/03. Lay Down.mp3
-25:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/04. On The Road.mp3
-26:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/05. Legends.mp3
-27:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/06. No More Cotton, II. Interlude. To Be A Slave.mp3
-28:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/07. The Sun Won't Talk No More.mp3
-29:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/08. Black Progress.mp3
-30:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/09. Roots.mp3
-31:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/10. Babes In The Juke House.mp3
-32:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/11. Brownswille, Tennesse (Instrumental), II. Interlude. To Be A Slave 2.mp3
-33:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/12. Slow And Easy.mp3
-34:Foreign/Claus Zundel/Sacred Spirit/1997 - Volume 2. Culture Clash (Indigo Spirit)/13. Sonnet XVIII.mp3
-35:Foreign/Claus Zundel/Sacred Spirit/2000 - More Chants And Dances Of Native Americans/01. Intro. Gods & Heroes.mp3
-36:Foreign/Claus Zundel/Sacred Spirit/2000 - More Chants And Dances Of Native Americans/02. Looking Far North.mp3
-37:Foreign/Claus Zundel/Sacred Spirit/2000 - More Chants And Dances Of Native Americans/03. Dela Dela.mp3
-38:Foreign/Claus Zundel/Sacred Spirit/2000 - More Chants And Dances Of Native Americans/04. Land Of Promise.mp3
-39:Foreign/Claus Zundel/Sacred Spirit/2000 - More Chants And Dances Of Native Americans/05. The State Of Grace.mp3
-40:Foreign/Claus Zundel/Sacred Spirit/2000 - More Chants And Dances Of Native Americans/06. Yane-Heja-Hee.mp3
-41:Foreign/Claus Zundel/Sacred Spirit/2000 - More Chants And Dances Of Native Americans/07. A-La-Ke.mp3
-42:Foreign/Claus Zundel/Sacred Spirit/2000 - More Chants And Dances Of Native Americans/08. May You Walk In Sunshine.mp3
-43:Foreign/Claus Zundel/Sacred Spirit/2000 - More Chants And Dances Of Native Americans/09. The Spirit.mp3
-44:Foreign/Claus Zundel/Sacred Spirit/2000 - More Chants And Dances Of Native Americans/10. O-Loa-Ki-Lee.mp3
-45:Foreign/Claus Zundel/Sacred Spirit/2000 - More Chants And Dances Of Native Americans/11. That Noble Dream.mp3
-46:Foreign/Claus Zundel/Sacred Spirit/2000 - More Chants And Dances Of Native Americans/12. The Sad Eyed Chief.mp3
-47:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 8. Jazzy Chill Out (feat. Eric Jan Harmsen)/01. You're Gonna Love.mp3
-48:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 8. Jazzy Chill Out (feat. Eric Jan Harmsen)/02. Bad Luck.mp3
-49:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 8. Jazzy Chill Out (feat. Eric Jan Harmsen)/03. Da Cool.mp3
-50:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 8. Jazzy Chill Out (feat. Eric Jan Harmsen)/04. The Roots.mp3
-51:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 8. Jazzy Chill Out (feat. Eric Jan Harmsen)/05. A New Dawn.mp3
-52:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 8. Jazzy Chill Out (feat. Eric Jan Harmsen)/06. Last Nite.mp3
-53:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 8. Jazzy Chill Out (feat. Eric Jan Harmsen)/07. The Last Unicorn (Edit).mp3
-54:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 8. Jazzy Chill Out (feat. Eric Jan Harmsen)/08. Love Comes My Way.mp3
-55:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 8. Jazzy Chill Out (feat. Eric Jan Harmsen)/09. The Sun (featuring Dave Jeffs).mp3
-56:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 8. Jazzy Chill Out (feat. Eric Jan Harmsen)/10. Chillin'.mp3
-57:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 8. Jazzy Chill Out (feat. Eric Jan Harmsen)/11. Some Like It Easy.mp3
-58:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 8. Jazzy Chill Out (feat. Eric Jan Harmsen)/12. That 'Rive Gauche' Vibe.mp3
-59:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 9. Bluesy Chill Out (feat. Dave 'Butterknife' Jeffs)/01. Driftin'.mp3
-60:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 9. Bluesy Chill Out (feat. Dave 'Butterknife' Jeffs)/02. This Earth.mp3
-61:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 9. Bluesy Chill Out (feat. Dave 'Butterknife' Jeffs)/03. (Interlude) The Wide Open.mp3
-62:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 9. Bluesy Chill Out (feat. Dave 'Butterknife' Jeffs)/04. Black Rain.mp3
-63:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 9. Bluesy Chill Out (feat. Dave 'Butterknife' Jeffs)/05. Love Is Blind.mp3
-64:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 9. Bluesy Chill Out (feat. Dave 'Butterknife' Jeffs)/06. Down In Louisiana.mp3
-65:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 9. Bluesy Chill Out (feat. Dave 'Butterknife' Jeffs)/07. (Interlude) The Loneliness Of The Slide Guitar.mp3
-66:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 9. Bluesy Chill Out (feat. Dave 'Butterknife' Jeffs)/08. That's Right.mp3
-67:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 9. Bluesy Chill Out (feat. Dave 'Butterknife' Jeffs)/09. My Mother Told Me.mp3
-68:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 9. Bluesy Chill Out (feat. Dave 'Butterknife' Jeffs)/10. Oh Yeah.mp3
-69:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 9. Bluesy Chill Out (feat. Dave 'Butterknife' Jeffs)/11. Wasteland.mp3
-70:Foreign/Claus Zundel/Sacred Spirit/2003 - Volume 9. Bluesy Chill Out (feat. Dave 'Butterknife' Jeffs)/12. Why.mp3
+0:Foreign/100% Relax hits/Jason - Tyrello - What the memories say.mp3
+1:Foreign/100% Relax hits/Ingo Pickhan - Bali chill.mp3
+2:Foreign/100% Relax hits/Alexander Hitzler - Goa jam.mp3
+3:Foreign/100% Relax hits/Eric del Mar - Isla margherita.mp3
+4:Foreign/100% Relax hits/Mahoroba - Des moment.mp3
+5:Foreign/100% Relax hits/Mahoroba - Unearthly.mp3
+6:Foreign/100% Relax hits/Alexander Hitzler - Gran Canaria sunset session.mp3
+7:Foreign/100% Relax hits/Mahoroba - Le monde.mp3
+8:Foreign/100% Relax hits/ason Tyrello - Rain sunday.mp3
+9:Foreign/100% Relax hits/Skyway - Jamo.mp3
+10:Foreign/100% Relax hits/Mahoroba - Les Paysages.mp3
+11:Foreign/100% Relax hits/Skyway-Chanted Minds.mp3
+12:Foreign/100% Relax hits/Skyway - Its A Pleasure.mp3
+13:Foreign/100% Relax hits/Rank1-Airwave (Sunset Chillout Remix).mp3
+14:Foreign/100% Relax hits/Sharon_tully-eallin_life.mp3
+15:Foreign/100% Relax hits/Schiller - Hill out.mp3
+16:Foreign/100% Relax hits/Schiller Mit Heppner] Dream Of You (Chillout Mix).mp3
+17:Foreign/100% Relax hits/Envio touched by the sun -Rusch and_Elusives chill out mix.mp3
+18:Foreign/100% Relax hits/Envio-Touched By The Sun (Envios Sunrise Mix).mp3
+19:Foreign/100% Relax hits/Vision II-The ocean.mp3
+20:Foreign/100% Relax hits/Klaus Schultze-Floating.mp3
+21:Foreign/100% Relax hits/Blank & Jones - Watching The Waves (Ambient Remix).mp3
+22:Foreign/100% Relax hits/Relaxing dreams-dance of the elves.mp3
+23:Foreign/100% Relax hits/Sarah Mclaclan - Angel (Dusted Remix.mp3
+24:Foreign/100% Relax hits/Conjure One - Center of the Sun (Solar Stone's Chilled Out Remix).mp3
+25:Foreign/100% Relax hits/Sarah McLlaclan - Angel.mp3
+26:Foreign/100% Relax hits/Conjure one center of the sun(Solar Stones-chilled_out_remix-ds.mp3
+27:Foreign/100% Relax hits/Blank & Jones - The hardest heart.mp3
+28:Foreign/100% Relax hits/Mike Oldfield - Jungle Gardenia.mp3
+29:Foreign/100% Relax hits/Schiller & Heppner - Dream of You (Chillout Mix).mp3
+30:Foreign/100% Relax hits/Jason Tyrello - Da sun is gone at copa.mp3
+31:Foreign/100% Relax hits/Nacho Sotomayor- Abolut.mp3
+32:Foreign/100% Relax hits/Moby-Whispering mind.mp3
+33:Foreign/100% Relax hits/Paul Oakenfold - Bunkka-Southern Sun (Solar Stone Chill Out Mix).mp3
+34:Foreign/100% Relax hits/Kinobe - Slip into something more comfortable.mp3
+35:Foreign/100% Relax hits/Lemon Jelly-Elements.mp3
+36:Foreign/100% Relax hits/Mauro Picotto - Goodbye.mp3
+37:Foreign/100% Relax hits/ATB - Ecstasy (original airplay mix).mp3
+38:Foreign/100% Relax hits/Pet Shop boys-Home & Dry-ambient-mix-house.mp3
+39:Foreign/100% Relax hits/Blank & Jones - Breezin'.mp3
+40:Foreign/100% Relax hits/Mahoroba - Basic dreams.mp3
+41:Foreign/100% Relax hits/M.I.K.E. - Turn Out The Lights (Chillout Mix).mp3
+42:Foreign/100% Relax hits/Dj Tiesto - Close to you-(feat._jan_johnston).mp3
+43:Foreign/100% Relax hits/Blank & Jones - Beyond Time (Ambient Mix).mp3
+44:Foreign/100% Relax hits/Blank & Jones-Unknown_Treasure - Claudia Brucken.mp3
+45:Foreign/100% Relax hits/Vargo-Get back to serenity-(beach_mix).mp3
+46:Foreign/100% Relax hits/The Voice Of Enigma Medley (Razormaid).mp3
+47:Foreign/100% Relax hits/Giant Leap-The Way You Dream (feat. Michael Stipe & Asha Bhosle).mp3
+48:Foreign/100% Relax hits/Masters & Nickson - Out There (Christian Rush Remix).mp3
+49:Foreign/100% Relax hits/Plastyc Buddha   Rhodes Royce.mp3
+50:Foreign/100% Relax hits/Blank&Jones - Desire (Ambient Mix).mp3
+51:Foreign/100% Relax hits/Blank & Jones - Le Grand Bleu (Ambient Mix).mp3
+52:Foreign/100% Relax hits/Hypnotic - Share your dreams.mp3
+53:Foreign/100% Relax hits/Enigma - Boum Boum.mp3
+54:Foreign/100% Relax hits/Loveletter - Once there was a girl.mp3
+55:Foreign/100% Relax hits/The KLF-Madrugada Eternavvudhqix.mp3
+56:Foreign/100% Relax hits/Solar Stone - Seven Cities (Ambient Dub).mp3
+57:Foreign/100% Relax hits/DAB - The Blues.mp3
+58:Foreign/100% Relax hits/Enigma - Total eclipse of the moon.mp3
+59:Foreign/100% Relax hits/Skyway - Mercury.mp3
+60:Foreign/100% Relax hits/Nacho Sotomayor-Cafe del Mar.mp3
+61:Foreign/100% Relax hits/Blank And Jones - Flaming (June Elles).mp3
+62:Foreign/100% Relax hits/Deep Ambient Instrumental.mp3
+63:Foreign/100% Relax hits/Nacho Satomayor - Cafe Del Mar.mp3
+64:Foreign/100% Relax hits/Enigma - Look of today.mp3
+65:Foreign/100% Relax hits/Julee Cruise Falling.mp3
+66:Foreign/100% Relax hits/Bent - I love my man.mp3
+67:Foreign/100% Relax hits/Delerium-flatlands.mp3
+68:Foreign/100% Relax hits/Together we will conquer.mp3
+69:Foreign/100% Relax hits/Blank & Jones-Relax.mp3
+70:Foreign/100% Relax hits/Enigma - In the shadow in the light.mp3
+71:Foreign/100% Relax hits/Code14 - No Limites.mp3
+72:Foreign/100% Relax hits/The KLF-08-3AM Somewhere Out Of Beaumont.mp3
+73:Foreign/100% Relax hits/Moby _ Go (In Dub Mix).mp3
+74:Foreign/100% Relax hits/Carlos Santana - Dance Of The Rainbow Serpent.mp3
+75:Foreign/100% Relax hits/Tricky - My Mermaid.mp3
+76:Foreign/100% Relax hits/Amillionsons - Misti Blu.mp3
+77:Foreign/100% Relax hits/Sarah Mclachlan - Angel.mp3
+78:Foreign/100% Relax hits/Sebastian m.w. - Karens ballade.mp3
+79:Foreign/100% Relax hits/S.W.-Sweet Lullabies.mp3
+80:Foreign/100% Relax hits/Mahoroba - World colours.mp3
+81:Foreign/100% Relax hits/Mahoroba-Le Monde2.mp3
+82:Foreign/100% Relax hits/Mahoroba-Jouer du piano-.mp3
+83:Foreign/100% Relax hits/Pulsar-Bleu carpe noctem.mp3
+84:Foreign/100% Relax hits/Bent-Swollen.mp3
+85:Foreign/100% Relax hits/Moodswings - Redemption Song.mp3
+86:Foreign/100% Relax hits/Groove Armada - A Private Interlude (Kinobe Remix) - www.impactmp3.org.mp3
+87:Foreign/100% Relax hits/Pet Shop Boys - Love comes quickly (Blank & Jones mix).mp3
+88:Foreign/100% Relax hits/Enigma-Following the sun.mp3
+89:Foreign/100% Relax hits/Mahoroba-Enter the underworld-(cool_meditation_mix).mp3
+90:Foreign/100% Relax hits/House chill Dubtribe Sound System - Do It Now.mp3
+91:Foreign/100% Relax hits/Lemon Jelly-His Majesty King Raam.mp3
+92:Foreign/100% Relax hits/Blank And Jones--Secrets And Lies.mp3
+93:Foreign/100% Relax hits/Cyborg - Sounds.mp3
+94:Foreign/100% Relax hits/Phobos-Edge of forever.mp3
+95:Foreign/100% Relax hits/Blank And Jones - Desire (ambient Mix)- Fsp.mp3
+96:Foreign/100% Relax hits/Vargo - The Moment (Original Mix).mp3
+97:Foreign/100% Relax hits/Beat Production-88 - Heartbeat.mp3
+98:Foreign/100% Relax hits/Jason Tyrello -  Lost in paradise.mp3
+99:Foreign/100% Relax hits/Moodswings-Into the blue.mp3
+100:Foreign/100% Relax hits/Lemon Jelly-In The Bath.mp3
+101:Foreign/100% Relax hits/Let U Go (Schiller remix) [ATB].mp3
+102:Foreign/100% Relax hits/Dj Orikidea Beautiful (ambient mix).mp3
+103:Foreign/100% Relax hits/Conjure One - Sleep (Solarstone afterhours mix).mp3
+104:Foreign/100% Relax hits/The Lonely Shepherdndbrcrtb.mp3
+105:Foreign/100% Relax hits/Blank & Jones - Driftin'.mp3
+106:Foreign/100% Relax hits/Smash - Supermode.mp3
+107:Foreign/100% Relax hits/Solar Stone - The Calling (Chilled Mix).mp3
+108:Foreign/100% Relax hits/Blank & Jones feat. Anne Clark-The Hardest Heart (Ambient Mix).mp3
+109:Foreign/100% Relax hits/Moodswings-State Of Indep.mp3
+110:Foreign/100% Relax hits/Chris_coco-hazy_lazy_(afterlife_mix)-rns.mp3
+111:Foreign/100% Relax hits/Dubtribe Sound System-Do it now.mp3
+112:Foreign/100% Relax hits/Ambient Guitars.mp3
+113:Foreign/100% Relax hits/Libra - Calling your name (Solar Stone chillout mix)-the legacy club_mix-ipz.mp3
+114:Foreign/100% Relax hits/Deep Forest - Forest Hymn (Long Ambient Vers.mp3
 playlist_end

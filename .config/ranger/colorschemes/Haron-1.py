@@ -36,7 +36,7 @@ class Haron(ColorScheme):
             if context.container:
                 fg = 94
             if context.directory:
-                fg = 30
+                fg = 24
             elif context.executable and not \
                     any((context.media, context.container,
                         context.fifo, context.socket)):
@@ -55,7 +55,7 @@ class Haron(ColorScheme):
                 bg = 230
                 attr |= bold
             if context.link:
-                fg = context.good and 31 or 160
+                fg = context.good and 30 or 160
                 attr |= bold
                 if context.bad:
                     bg = 235
