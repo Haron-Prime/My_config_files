@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 # This file is custom clorscheme of ranger, the console file manager.
-# License: WTFPL
+# License: WTFPL © 2017  http://www.wtfpl.net/
 # Author: Haron Prime
 
 from ranger.gui.colorscheme import ColorScheme
