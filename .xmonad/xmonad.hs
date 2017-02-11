@@ -12,13 +12,14 @@ import qualified Data.ByteString as B
 -- Actions
 import XMonad.Actions.CycleWS
 import XMonad.Actions.FloatSnap
-import XMonad.Actions.FloatKeys
-import XMonad.Actions.OnScreen
-import XMonad.Actions.Promote
-import XMonad.Actions.SpawnOn
-import XMonad.Actions.SwapWorkspaces
+-- import XMonad.Actions.FloatKeys
+-- import XMonad.Actions.OnScreen
+-- import XMonad.Actions.Promote
+-- import XMonad.Actions.SpawnOn
+-- import XMonad.Actions.SwapWorkspaces
 import XMonad.Actions.UpdateFocus
 -- import XMonad.Actions.WindowGo
+-- import XMonad.Actions.GridSelect
 
 -- Hooks
 import XMonad.Hooks.DynamicLog
@@ -71,6 +72,16 @@ myFocusedBorderColor = "#9df"
 myFont               = "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 scratchPad = scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 
+-- gsconfig2 colorizer = (buildDefaultGSConfig myColorizer) { gs_cellheight = 25, gs_cellwidth = 150 }
+
+-- myColorizer = colorRangeFromClassName
+--                      (0x00,0x87,0xFF)            -- lowest inactive bg
+--                      (0x87,0x87,0x87)            -- highest inactive bg
+--                      (0x90,0xC0,0xE0)            -- active bg
+--                      (0x25,0x25,0x25)            -- inactive fg
+--                      (0xFF,0x00,0x00)            -- active fg
+
+
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
@@ -112,7 +123,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x70),     spawn "wine /home/haron/lib/Pro100-5.20-GIV/PRO100.exe")                                             --Alt+P
     , ((mod1Mask,                     0x71),     spawn "if(pidof pavucontrol >/dev/null); then kill $(pidof pavucontrol); else pavucontrol; fi")      --Alt+Q
     , ((mod1Mask,                     0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
-    , ((mod1Mask,                     0x73),     spawn "if(pidof subl3 >/dev/null); then kill $(pidof subl3); else subl3; fi")                        --Alt+S
+    , ((mod1Mask,                     0x73),     spawn "subl3")                                                                                       --Alt+S
     , ((mod1Mask .|. shiftMask,       0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
     , ((mod1Mask,                     0x74),     spawn "tor-browser")                                                                                 --Alt+T
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
@@ -147,6 +158,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                    xK_period),     sendMessage (IncMasterN (-1)))                                                                       --Win+Period
     , ((modm,                         0x62),     sendMessage ToggleStruts)                                                                            --Win+B
     , ((modm     .|. shiftMask,       0x71),     io (exitWith ExitSuccess))                                                                           --Win+Shift+Q
+    -- ,((modm,                          0x73),     goToSelected  $ gsconfig2 myColorizer)
+    -- ,((modm, xK_p), spawnSelected defaultGSConfig)
     ]
     ++
 
