@@ -5,6 +5,7 @@ import Data.Ratio ((%))
 import Foreign.C (CChar)
 import System.Exit
 import System.IO
+import XMonad.Config.Desktop
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 import qualified Data.ByteString as B
@@ -153,8 +154,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                    xK_period),     sendMessage (IncMasterN (-1)))                                                                       --Mod4+Period
     , ((modm,                         0x62),     sendMessage ToggleStruts)                                                                            --Mod4+B
     , ((modm     .|. shiftMask,       0x71),     io (exitWith ExitSuccess))                                                                           --Mod4+Shift+Q
-    , ((modm,                         0x73),     goToSelected  defaultGSConfig { gs_cellheight = 30, gs_cellwidth = 155 })                            --Mod4+S
-    , ((modm,                         0x61),     spawnSelected defaultGSConfig { gs_cellheight = 30, gs_cellwidth = 155 } [
+    , ((modm,                         0x73),     goToSelected  def { gs_cellheight = 30, gs_cellwidth = 155 })                            --Mod4+S
+    , ((modm,                         0x61),     spawnSelected def { gs_cellheight = 30, gs_cellwidth = 155 } [
                                                                                                                            "PRO100-5"
                                                                                                                           ,"2D-Place"
                                                                                                                           ,"wps"
@@ -223,7 +224,7 @@ myIMLayout = withIM (1%7) psi Grid
       psi   = And (ClassName "psi") (Role "main")
 
 -- XP
-myXPConfig = defaultXPConfig {
+myXPConfig = def {
           font              = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
         , bgColor           = "#151515"
         , fgColor           = "#959595"
@@ -353,7 +354,7 @@ main = do
 encodeCChar :: B.ByteString -> [CChar]
 encodeCChar = map fromIntegral . B.unpack
 
-myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen = Focused } defaultConfig {
+myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen = Focused } def {
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
         borderWidth        = myBorderWidth,
@@ -364,7 +365,7 @@ myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen =
         keys               = myKeys,
         mouseBindings      = myMouseBindings,
         layoutHook         = avoidStruts $ myLayout,
-        manageHook         = manageHook defaultConfig <+> manageDocks <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos ,
+        manageHook         = manageHook def <+> manageDocks <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos ,
         handleEventHook    = myEventHook,
         logHook            = myLogHook >>= xmonadPropLog,
         startupHook        = myStartupHook
