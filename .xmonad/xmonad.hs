@@ -125,7 +125,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Mod1+W
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart && killall xmobar && xmobar")                          --Mod4+Q
     , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Mod4+X
-    -- , ((modm,                         0x70),     spawn "gmrun")                                                                                       --Wim+P
+    -- , ((modm,                         0x70),     spawn "gmrun")                                                                                       --Mod4+P
     , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Mod4+Shift+Enter
 
     , ((mod1Mask,                   0xffbe),     manPrompt myXPConfig)                                                                                --Mod1+F1
