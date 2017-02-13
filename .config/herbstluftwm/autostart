@@ -165,7 +165,7 @@ hc keybind Mod1-h                  spawn hexchat
 hc keybind Mod1-i                  spawn 2D-Place
 hc keybind Mod1-l                  spawn cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard
 hc keybind Mod1-m                  spawn urxvtc -name mc -e mc
-hc keybind Mod1-p                  spawn wine /home/haron/lib/Pro100-5.20-GIV/PRO100.exe
+hc keybind Mod1-p                  spawn PRO100-5
 hc keybind Mod1-q                  spawn pavucontrol
 hc keybind Mod1-r                  spawn urxvtc -name ranger -e ranger
 hc keybind Mod1-s                  spawn subl3

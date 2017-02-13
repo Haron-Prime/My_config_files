@@ -368,7 +368,7 @@ globalkeys = awful.util.table.join(
     awful.key({ "Mod1"            }, "#39",                  function () awful.util.spawn_with_shell("subl3")                                                end), -- Alt+s
     awful.key({ "Mod1"            }, "#42",                  function () awful.util.spawn_with_shell("gimp")                                                 end), -- Alt+g
     awful.key({ "Mod1"            }, "#43",                  function () awful.util.spawn_with_shell("/usr/bin/hexchat")                                     end), -- Alt+h
-    awful.key({ "Mod1",           }, "#33",                  function () awful.util.spawn_with_shell("env WINEPREFIX='/home/haron/.wine' wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe'")                                                                                                                                          end), -- Alt+p
+    awful.key({ "Mod1",           }, "#33",                  function () awful.util.spawn_with_shell("PRO100-5")                                                                                                                                                      end), -- Alt+p
     awful.key({ "Mod1"            }, "#46",                  function () awful.util.spawn_with_shell("cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")                                                                                                                                                     end) -- Alt+l
 )
 

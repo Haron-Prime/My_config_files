@@ -231,8 +231,8 @@ bindsym Mod1+l               exec --no-startup-id "cat /home/haron/Documents/las
 bindsym Mod1+m               exec --no-startup-id "urxvtc -name mc -e mc"
 bindsym Mod1+v               exec --no-startup-id "urxvtc -name xvim -e vim"
 bindsym Mod1+r               exec --no-startup-id "urxvtc -name ranger -e ranger"
-bindsym Mod1+p               exec --no-startup-id "wine '/home/haron/lib/Pro100-5.20-GIV/PRO100.exe'"
-bindsym Mod1+s               exec --no-startup-id "if(pidof subl3 >/dev/null); then kill $(pidof subl3); else subl3; fi"
+bindsym Mod1+p               exec --no-startup-id PRO100-5
+bindsym Mod1+s               exec --no-startup-id subl3
 bindsym Mod1+Shift+s         exec --no-startup-id "gksu subl3"
 bindsym Mod1+t               exec --no-startup-id telegram-desktop
 bindsym Mod1+w               exec --no-startup-id "gksu pacmanxg"
