@@ -155,7 +155,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                    xK_period),     sendMessage (IncMasterN (-1)))                                                                       --Mod4+Period
     , ((modm,                         0x62),     sendMessage ToggleStruts)                                                                            --Mod4+B
     , ((modm     .|. shiftMask,       0x71),     io (exitWith ExitSuccess))                                                                           --Mod4+Shift+Q
-    , ((modm,                         0x73),     goToSelected  def { gs_cellheight = 30, gs_cellwidth = 155 })                            --Mod4+S
+    , ((modm,                         0x73),     sendMessage MirrorShrink)                                                                            --Mod4+S
+    , ((modm,                         0x7a),     sendMessage MirrorExpand)                                                                            --Mod4+Z
+    , ((modm,                         0x76),     goToSelected  def { gs_cellheight = 30, gs_cellwidth = 155 })                                        --Mod4+W
     , ((modm,                         0x61),     spawnSelected def { gs_cellheight = 30, gs_cellwidth = 155 } [
                                                                                                                            "PRO100-5"
                                                                                                                           ,"2D-Place"
@@ -171,8 +173,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
                                                                                                                           ,"vlc"
                                                                                                                           ,"heroes3"
                                                                                                                           ])                          --Mod4+A
-    , ((modm,               xK_v), sendMessage MirrorShrink)
-    , ((modm,               xK_z), sendMessage MirrorExpand)
+
 
     ]
     ++
