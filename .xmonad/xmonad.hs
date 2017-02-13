@@ -36,6 +36,7 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Spacing
 import XMonad.Layout.MouseResizableTile
+import XMonad.Layout.ResizableTile
 -- import XMonad.Layout.TwoPane
 -- import XMonad.Layout.Tabbed
 import qualified XMonad.Layout.ToggleLayouts as Tog
@@ -170,6 +171,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
                                                                                                                           ,"vlc"
                                                                                                                           ,"heroes3"
                                                                                                                           ])                          --Mod4+A
+    , ((modm,               xK_v), sendMessage MirrorShrink)
+    , ((modm,               xK_z), sendMessage MirrorExpand)
 
     ]
     ++
@@ -199,18 +202,18 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout =  avoidStruts
             $ Tog.toggleLayouts (noBorders Full) 
             $ smartBorders
-            $ onWorkspace "W"  (Full  ||| tiled ||| Mirror tiled ||| mouseResizableTile)
+            $ onWorkspace "W"  (Full  ||| ResizableTall 1 (3/100) (1/2) [] ||| Mirror tiled ||| mouseResizableTile)
             $ onWorkspace "M"  (mouseResizableTile ||| Full)
-            $ onWorkspace "E"  (Mirror tiled ||| mouseResizableTile ||| Full) 
-            $ onWorkspace "F"  (Mirror tiled ||| mouseResizableTile ||| Full)
-            $ onWorkspace "S"  (Full  ||| mouseResizableTile ||| Mirror tiled)
+            $ onWorkspace "E"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full) 
+            $ onWorkspace "F"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
+            $ onWorkspace "S"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
             $ onWorkspace "V"  (Full  ||| mouseResizableTile)
-            $ onWorkspace "P"  (Full  ||| mouseResizableTile ||| Grid)
+            $ onWorkspace "P"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
             $ onWorkspace "J"  (Full  ||| Grid)
             $ onWorkspace "T"  (Full  ||| mouseResizableTile)
-            $ onWorkspace "X"  (tiled ||| Grid ||| Full)
+            $ onWorkspace "X"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
             $ onWorkspace "XI" (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-            $ onWorkspace "XII"(Grid  ||| mouseResizableTile ||| Mirror tiled)
+            $ onWorkspace "XII"(ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
             $ tiled ||| Mirror tiled  ||| Full
   where
     tiled   = Tall nmaster delta ratio
