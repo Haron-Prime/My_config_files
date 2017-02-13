@@ -46,5 +46,5 @@ pcmanfm -d &
 # feh --bg-scale /home/haron/Pictures/Walpapers/hs-2005-01-a-full_jpg.jpg &
 feh --bg-scale /home/haron/wall/starrynight.png &
 stalonetray &
-python3 /home/haron/lib/gis-weather/gis-weather.py &
+python3 /home/haron/.local/lib/gis-weather/gis-weather.py &
 exec xmonad

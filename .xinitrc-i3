@@ -43,5 +43,5 @@ compton -b &
 urxvtd -q -f -o &
 pcmanfm -d &
 feh --bg-center /home/haron/wall/i3wm.png &
-python3 /home/haron/lib/gis-weather/gis-weather.py &
+python3 /home/haron/.local/lib/gis-weather/gis-weather.py &
 exec i3
