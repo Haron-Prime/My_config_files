@@ -61,7 +61,7 @@ myBorderWidth        = 1
 myModMask            = mod4Mask
 myWorkspaces         :: [String]
 myWorkspaces         = [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"] 
-myNormalBorderColor  = "#151515"
+myNormalBorderColor  = "#454545"
 myFocusedBorderColor = "#9df"
 myFont               = "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 scratchPad = scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
