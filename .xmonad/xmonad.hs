@@ -56,8 +56,10 @@ import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
 import XMonad.Util.SpawnOnce
 import XMonad.Util.WorkspaceCompare
 
+browserClass         = "Vivaldi-snapshot"
 myBrowser            = "vivaldi-snapshot"
 myTerminal           = "urxvtc"
+terminalClass        = "URxvt"
 myShell              = "zsh"
 myFocusFollowsMouse  :: Bool
 myFocusFollowsMouse  = True
@@ -136,7 +138,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                   0xffbe),     manPrompt myXPConfig)                                                                                --Mod1+F1
     , ((mod1Mask,                   0xffbf),     shellPrompt myXPConfig)                                                                              --Mod1+F2
     , ((mod1Mask,                   0xffc0),     runOrRaisePrompt myXPConfig)                                                                         --Mod1+F3
-    , ((mod1Mask,                   0xffc1),     spawn "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'") --Mod1+F4
+    -- , ((mod1Mask,                   0xffc1),     spawn "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'") --Mod1+F4
     , ((modm,                       xK_Tab),     windows W.focusDown)                                                                                 --Mod4+Tab
     , ((mod1Mask,                   xK_Tab),     windows W.focusMaster)                                                                               --Mod1+Tab
     , ((modm,                         0x78),     kill)                                                                                                --Mod4+X
@@ -160,7 +162,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,       0x71),     io (exitWith ExitSuccess))                                                                           --Mod4+Shift+Q
     , ((modm,                         0x73),     sendMessage MirrorShrink)                                                                            --Mod4+S
     , ((modm,                         0x7a),     sendMessage MirrorExpand)                                                                            --Mod4+Z
-    , ((modm,                         0x76),     goToSelected  def { gs_cellheight = 30, gs_cellwidth = 155 })                                        --Mod4+W
+    , ((modm,                         0x76),     goToSelected  def { gs_cellheight = 30, gs_cellwidth = 155 })                                        --Mod4+V
     , ((modm,                         0x61),     spawnSelected def { gs_cellheight = 30, gs_cellwidth = 155 } [
                                                                                                                            "PRO100-5"
                                                                                                                           ,"2D-Place"
@@ -176,7 +178,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
                                                                                                                           ,"vlc"
                                                                                                                           ,"heroes3"
                                                                                                                           ])                          --Mod4+A
-
 
     ]
     ++
