@@ -10,6 +10,7 @@ import qualified Data.Map        as M
 import qualified Data.ByteString as B
 
 -- Actions
+import XMonad.Actions.CycleSelectedLayouts
 import XMonad.Actions.CycleWS
 import XMonad.Actions.FloatSnap
 import XMonad.Actions.UpdateFocus
@@ -32,7 +33,7 @@ import XMonad.Hooks.XPropManage
 -- Layouts
 import XMonad.Layout.Grid
 import XMonad.Layout.IM
-import XMonad.Layout.LayoutCombinators
+import XMonad.Layout.LayoutCombinators ((|||))
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Spacing
@@ -139,6 +140,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                   0xffbf),     shellPrompt myXPConfig)                                                                              --Mod1+F2
     , ((mod1Mask,                   0xffc0),     runOrRaisePrompt myXPConfig)                                                                         --Mod1+F3
     -- , ((mod1Mask,                   0xffc1),     spawn "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'") --Mod1+F4
+    , ((modm,                      xK_Down),     windows W.focusDown)                                                                                 --Mod4+Down
+    , ((modm,                        xK_Up),     windows W.focusUp)                                                                                   --Mod4+Up
     , ((modm,                       xK_Tab),     windows W.focusDown)                                                                                 --Mod4+Tab
     , ((mod1Mask,                   xK_Tab),     windows W.focusMaster)                                                                               --Mod1+Tab
     , ((modm,                         0x78),     kill)                                                                                                --Mod4+X
@@ -147,6 +150,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                         0x6e),     refresh)                                                                                             --Mod4+N
     , ((modm,                    xK_Escape),     toggleWS' ["NSP"])                                                                                   --Mod4+Escape
     , ((modm,                       0xff08),     toggleWS' ["NSP"])                                                                                   --Mod4+Backspace
+    , ((modm,                     xK_Right),     nextWS)                                                                                              --Mod4+Right
+    , ((modm,                      xK_Left),     prevWS)                                                                                              --Mod4+Left
+    , ((modm     .|. shiftMask,   xK_Right),     shiftToNext)                                                                                         --Mod4+Shift+Right
+    , ((modm     .|. shiftMask,    xK_Left),     shiftToPrev)                                                                                         --Mod4+Shift+Left
     , ((modm,                         0x6a),     windows W.focusDown)                                                                                 --Mod4+J
     , ((modm,                         0x6b),     windows W.focusUp)                                                                                   --Mod4+K
     , ((modm,                         0x6d),     windows W.focusMaster)                                                                               --Mod4+M
