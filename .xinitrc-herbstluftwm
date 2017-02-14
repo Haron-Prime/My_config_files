@@ -14,5 +14,6 @@ numlockx &
 perWindowLayoutD &
 compton -b &
 urxvtd -q -f -o &
-pcmanfm -d --desktop-pref /home/haron/Pictures/Walpapers/404-wallpaper-not-found-700x442.jpg &
+pcmanfm -d &
+feh --bg-scale /home/haron/Pictures/Walpapers/404-wallpaper-not-found-700x442.jpg &
 exec herbstluftwm --locked
