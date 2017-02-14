@@ -107,6 +107,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                          0xff67),     spawn "gmrun")
     , ((0,                          0xffc9),     scratchPad)                                                                                          --F12
     , ((0,                          0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Print
+    , ((0        .|. shiftMask,     0xff61),     spawn "scrot -u -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                     --Shift+Print
     , ((mod1Mask,                   0xff61),     spawn "scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                     --Alt+Print
     , ((mod1Mask,                     0x61),     spawn "shutter")                                                                                     --Alt+A
     , ((mod1Mask,                     0x64),     spawn "deadbeef")                                                                                    --Alt+D
