@@ -1,6 +1,6 @@
 Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
        , additionalFonts = ["xft:Terminus:size=12:weight=bold:antialias=true:hinting=true","xft:Terminus Re33:size=4:antialias=true:hinting=true"] 
-       -- , borderColor = "#151515"
+       , borderColor = "#151515"
        , border = NoBorder
        , bgColor = "#151515"
        , fgColor = "#959595"

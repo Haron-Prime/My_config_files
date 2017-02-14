@@ -11,6 +11,7 @@ import qualified Data.ByteString as B
 
 -- Actions
 import XMonad.Actions.CycleSelectedLayouts
+import XMonad.Actions.CycleWindows
 import XMonad.Actions.CycleWS
 import XMonad.Actions.FloatSnap
 import XMonad.Actions.UpdateFocus
@@ -55,6 +56,7 @@ import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
 import XMonad.Util.SpawnOnce
+import XMonad.Util.WindowProperties
 import XMonad.Util.WorkspaceCompare
 
 browserClass         = "Vivaldi-snapshot"
@@ -72,17 +74,6 @@ myNormalBorderColor  = "#454545"
 myFocusedBorderColor = "#9df"
 myFont               = "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 scratchPad = scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
-
--- gsconfig1 = defaultGSConfig { gs_cellheight = 30, gs_cellwidth = 100 }
--- gsconfig2 colorizer = (buildDefaultGSConfig myColorizer) { gs_cellheight = 25, gs_cellwidth = 150 }
-
--- myColorizer = colorRangeFromClassName
---                      (0x00,0x87,0xFF)            -- lowest inactive bg
---                      (0x87,0x87,0x87)            -- highest inactive bg
---                      (0x90,0xC0,0xE0)            -- active bg
---                      (0x25,0x25,0x25)            -- inactive fg
---                      (0xFF,0x00,0x00)            -- active fg
-
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -144,6 +135,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                        xK_Up),     windows W.focusUp)                                                                                   --Mod4+Up
     , ((modm,                       xK_Tab),     windows W.focusDown)                                                                                 --Mod4+Tab
     , ((mod1Mask,                   xK_Tab),     windows W.focusMaster)                                                                               --Mod1+Tab
+    , ((mod1Mask,                xK_Escape),     rotOpposite)                                                                                         --Mod1+Escape
     , ((modm,                         0x78),     kill)                                                                                                --Mod4+X
     , ((modm,                     xK_space),     sendMessage NextLayout)                                                                              --Mod4+Space
     , ((modm     .|. shiftMask,   xK_space),     setLayout $ XMonad.layoutHook conf)                                                                  --Mod4+Shift+Space
