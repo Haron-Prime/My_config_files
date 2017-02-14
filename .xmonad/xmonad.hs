@@ -132,11 +132,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                   0xffbf),     shellPrompt myXPConfig)                                                                              --Mod1+F2
     , ((mod1Mask,                   0xffc0),     runOrRaisePrompt myXPConfig)                                                                         --Mod1+F3
     -- , ((mod1Mask,                   0xffc1),     spawn "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'") --Mod1+F4
-    , ((modm,                      xK_Down),     windows W.focusDown)                                                                                 --Mod4+Down
-    , ((modm,                        xK_Up),     windows W.focusUp)                                                                                   --Mod4+Up
-    -- , ((modm,                       xK_Tab),     windows W.focusDown)                                                                                 --Mod4+Tab
     , ((mod1Mask,                   xK_Tab),     windows W.focusMaster)                                                                               --Mod1+Tab
-    , ((mod1Mask,                xK_Escape),     rotOpposite)                                                                                         --Mod1+Escape
+    , ((modm,                       xK_Tab),     rotOpposite)                                                                                         --Mod4+Tab
     , ((modm,                         0x78),     kill)                                                                                                --Mod4+X
     , ((modm,                     xK_space),     sendMessage NextLayout)                                                                              --Mod4+Space
     , ((modm     .|. shiftMask,   xK_space),     setLayout $ XMonad.layoutHook conf)                                                                  --Mod4+Shift+Space
@@ -148,11 +145,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,   xK_Right),     shiftToNext)                                                                                         --Mod4+Shift+Right
     , ((modm     .|. shiftMask,    xK_Left),     shiftToPrev)                                                                                         --Mod4+Shift+Left
     , ((modm,                         0x6a),     windows W.focusDown)                                                                                 --Mod4+J
+    , ((modm,                      xK_Down),     windows W.focusDown)                                                                                 --Mod4+Down
     , ((modm,                         0x6b),     windows W.focusUp)                                                                                   --Mod4+K
+    , ((modm,                        xK_Up),     windows W.focusUp)                                                                                   --Mod4+Up
     , ((modm,                         0x6d),     windows W.focusMaster)                                                                               --Mod4+M
     , ((modm,                    xK_Return),     windows W.swapMaster)                                                                                --Mod4+Enter
     , ((modm     .|. shiftMask,       0x6a),     windows W.swapDown)                                                                                  --Mod4+Shift+J
+    , ((modm     .|. shiftMask,    xK_Down),     windows W.swapDown)                                                                                  --Mod4+Shift+Down
     , ((modm     .|. shiftMask,       0x6b),     windows W.swapUp)                                                                                    --Mod4+Shift+K
+    , ((modm     .|. shiftMask,      xK_Up),     windows W.swapUp)                                                                                    --Mod4+Shift+K
     , ((modm,                         0x68),     sendMessage Shrink)                                                                                  --Mod4+H
     , ((modm,                         0x6c),     sendMessage Expand)                                                                                  --Mod4+L
     , ((modm,                         0x74),     withFocused $ windows . W.sink)                                                                      --Mod4+T
