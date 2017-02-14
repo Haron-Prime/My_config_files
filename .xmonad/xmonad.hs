@@ -60,8 +60,8 @@ import XMonad.Util.SpawnOnce
 import XMonad.Util.WindowProperties
 import XMonad.Util.WorkspaceCompare
 
-browserClass         = "Vivaldi-snapshot"
 myBrowser            = "vivaldi-snapshot"
+browserClass         = "Vivaldi-snapshot"
 myTerminal           = "urxvtc"
 terminalClass        = "URxvt"
 myShell              = "zsh"
@@ -134,7 +134,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((mod1Mask,                   0xffc1),     spawn "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'") --Mod1+F4
     , ((modm,                      xK_Down),     windows W.focusDown)                                                                                 --Mod4+Down
     , ((modm,                        xK_Up),     windows W.focusUp)                                                                                   --Mod4+Up
-    , ((modm,                       xK_Tab),     windows W.focusDown)                                                                                 --Mod4+Tab
+    -- , ((modm,                       xK_Tab),     windows W.focusDown)                                                                                 --Mod4+Tab
     , ((mod1Mask,                   xK_Tab),     windows W.focusMaster)                                                                               --Mod1+Tab
     , ((mod1Mask,                xK_Escape),     rotOpposite)                                                                                         --Mod1+Escape
     , ((modm,                         0x78),     kill)                                                                                                --Mod4+X
@@ -143,8 +143,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                         0x6e),     refresh)                                                                                             --Mod4+N
     , ((modm,                    xK_Escape),     toggleWS' ["NSP"])                                                                                   --Mod4+Escape
     , ((modm,                 xK_BackSpace),     toggleWS' ["NSP"])                                                                                   --Mod4+Backspace
-    , ((modm,                     xK_Right),     DO.moveTo Next HiddenNonEmptyWS)                                                                                              --Mod4+Right
-    , ((modm,                      xK_Left),     DO.moveTo Prev HiddenNonEmptyWS)                                                                                              --Mod4+Left
+    , ((modm,                     xK_Right),     DO.moveTo Next HiddenNonEmptyWS)                                                                     --Mod4+Right
+    , ((modm,                      xK_Left),     DO.moveTo Prev HiddenNonEmptyWS)                                                                     --Mod4+Left
     , ((modm     .|. shiftMask,   xK_Right),     shiftToNext)                                                                                         --Mod4+Shift+Right
     , ((modm     .|. shiftMask,    xK_Left),     shiftToPrev)                                                                                         --Mod4+Shift+Left
     , ((modm,                         0x6a),     windows W.focusDown)                                                                                 --Mod4+J
@@ -160,9 +160,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                    xK_period),     sendMessage (IncMasterN (-1)))                                                                       --Mod4+Period
     , ((modm,                         0x62),     sendMessage ToggleStruts)                                                                            --Mod4+B
     , ((modm     .|. shiftMask,       0x71),     io (exitWith ExitSuccess))                                                                           --Mod4+Shift+Q
-    , ((modm,                         0x73),     sendMessage MirrorShrink)                                                                            --Mod4+S
-    , ((modm,                         0x7a),     sendMessage MirrorExpand)                                                                            --Mod4+Z
-    , ((modm,                         0x76),     goToSelected  def { gs_cellheight = 30, gs_cellwidth = 155 })                                        --Mod4+V
+    , ((mod1Mask,                  xK_Down),     sendMessage MirrorShrink)                                                                            --Mod1+Down
+    , ((mod1Mask,                    xK_Up),     sendMessage MirrorExpand)                                                                            --Mod1+Up
+    , ((modm,                         0x73),     goToSelected  def { gs_cellheight = 30, gs_cellwidth = 155 })                                        --Mod4+S
     , ((modm,                         0x61),     spawnSelected def { gs_cellheight = 30, gs_cellwidth = 155 } [
                                                                                                                            "PRO100-5"
                                                                                                                           ,"2D-Place"
