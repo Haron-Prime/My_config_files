@@ -8,9 +8,10 @@ import System.IO
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 import qualified Data.ByteString as B
+import qualified XMonad.Actions.DynamicWorkspaceOrder as DO
 
 -- Actions
-import XMonad.Actions.CycleSelectedLayouts
+-- import XMonad.Actions.CycleSelectedLayouts
 import XMonad.Actions.CycleWindows
 import XMonad.Actions.CycleWS
 import XMonad.Actions.FloatSnap
@@ -142,8 +143,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                         0x6e),     refresh)                                                                                             --Mod4+N
     , ((modm,                    xK_Escape),     toggleWS' ["NSP"])                                                                                   --Mod4+Escape
     , ((modm,                 xK_BackSpace),     toggleWS' ["NSP"])                                                                                   --Mod4+Backspace
-    , ((modm,                     xK_Right),     nextWS)                                                                                              --Mod4+Right
-    , ((modm,                      xK_Left),     prevWS)                                                                                              --Mod4+Left
+    , ((modm,                     xK_Right),     DO.moveTo Next HiddenNonEmptyWS)                                                                                              --Mod4+Right
+    , ((modm,                      xK_Left),     DO.moveTo Prev HiddenNonEmptyWS)                                                                                              --Mod4+Left
     , ((modm     .|. shiftMask,   xK_Right),     shiftToNext)                                                                                         --Mod4+Shift+Right
     , ((modm     .|. shiftMask,    xK_Left),     shiftToPrev)                                                                                         --Mod4+Shift+Left
     , ((modm,                         0x6a),     windows W.focusDown)                                                                                 --Mod4+J
@@ -326,6 +327,7 @@ myLogHook = do
         -- , ppTitle           = xmobarColor "#959595" "" . shorten 38
         , ppTitle           = (\str -> "")
         -- , ppTitle           = xmobarColor "#959595" ""
+        -- , ppSort            = DO.getSortByOrder
         }
 
 -- Startup hook
