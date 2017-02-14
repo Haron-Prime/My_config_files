@@ -141,7 +141,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,   xK_space),     setLayout $ XMonad.layoutHook conf)                                                                  --Mod4+Shift+Space
     , ((modm,                         0x6e),     refresh)                                                                                             --Mod4+N
     , ((modm,                    xK_Escape),     toggleWS' ["NSP"])                                                                                   --Mod4+Escape
-    , ((modm,                       0xff08),     toggleWS' ["NSP"])                                                                                   --Mod4+Backspace
+    , ((modm,                 xK_BackSpace),     toggleWS' ["NSP"])                                                                                   --Mod4+Backspace
     , ((modm,                     xK_Right),     nextWS)                                                                                              --Mod4+Right
     , ((modm,                      xK_Left),     prevWS)                                                                                              --Mod4+Left
     , ((modm     .|. shiftMask,   xK_Right),     shiftToNext)                                                                                         --Mod4+Shift+Right
