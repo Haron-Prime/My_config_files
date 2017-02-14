@@ -18,7 +18,6 @@ numlockx &
 perWindowLayoutD &
 compton -b &
 urxvtd -q -f -o &
-pcmanfm -d &
-feh --bg-center /home/haron/wall/i3wm.png &
+pcmanfm -d --desktop-pref /home/haron/wall/i3wm.png &
 python3 /home/haron/.local/lib/gis-weather/gis-weather.py &
 exec i3
