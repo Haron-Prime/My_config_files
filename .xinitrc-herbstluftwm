@@ -1,13 +1,4 @@
 #!/bin/sh
-export LANG=ru_UA.UTF-8
-export MM_CHARSET=UTF-8
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-export FT2_SUBPIXEL_HINTING=2
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
-export LIBVA_DRIVER_NAME=vdpau
-export VDPAU_DRIVER=nouveau
-
 if [ -d /etc/X11/xinit/xinitrc.d ]; then
  for f in /etc/X11/xinit/xinitrc.d/?*; do
    [ -x "$f" ] && . "$f"
@@ -15,35 +6,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
  unset f
 fi
 
-# sysresources=/etc/X11/xinit/.Xresources
-# userresources=$HOME/.Xresources
-
-# if [ -f $sysresources ]; then
-#     xrdb -merge $sysresources
-# fi
-
-# if [ -f "$userresources" ]; then
-#     xrdb -merge "$userresources"
-# fi
-
-# if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
-#     eval "$(dbus-launch --sh-syntax --exit-with-session)"
-# fi
-
 /usr/bin/xdg-user-dirs-update &
 setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp &
 xsetroot -cursor_name left_ptr &
 hsetroot -solid '#000000' &
-# xset s 6999 &
-# xset dpms 6000 6001 6002 &
-# xset m 5/2 0 &
 numlockx &
 perWindowLayoutD &
 compton -b &
 urxvtd -q -f -o &
 pcmanfm -d &
 feh --bg-scale /home/haron/Pictures/Walpapers/404-wallpaper-not-found-700x442.jpg &
-# /usr/bin/trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --widthtype request --width 1 --transparent true --alpha 1 --tint 0x000000 --height 20 --expand true &
-# stalonetray &
-# python3 /home/haron/.local/lib/gis-weather/gis-weather.py &
 exec herbstluftwm --locked
