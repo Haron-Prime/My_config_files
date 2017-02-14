@@ -5,7 +5,7 @@ import Data.Ratio ((%))
 import Foreign.C (CChar)
 import System.Exit
 import System.IO
-import XMonad.Config.Desktop
+-- import XMonad.Config.Desktop
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 import qualified Data.ByteString as B

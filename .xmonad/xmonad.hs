@@ -5,7 +5,6 @@ import Data.Ratio ((%))
 import Foreign.C (CChar)
 import System.Exit
 import System.IO
--- import XMonad.Config.Desktop
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 import qualified Data.ByteString as B
@@ -18,6 +17,7 @@ import XMonad.Actions.GridSelect
 import XMonad.Actions.WorkspaceNames
 
 -- Hooks
+import XMonad.Hooks.CurrentWorkspaceOnTop
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.InsertPosition
@@ -27,6 +27,7 @@ import XMonad.Hooks.Place
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceByPos
 import XMonad.Hooks.UrgencyHook hiding (Never)
+import XMonad.Hooks.XPropManage
 
 -- Layouts
 import XMonad.Layout.Grid
@@ -52,6 +53,8 @@ import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
+import XMonad.Util.SpawnOnce
+import XMonad.Util.WorkspaceCompare
 
 myBrowser            = "vivaldi-snapshot"
 myTerminal           = "urxvtc"
@@ -295,7 +298,7 @@ myManageHook = composeAll . concat $
     myEdit    = ["Subl3","Et","Wps","Wpp","Acroread","FoxitReader"]
     myFile    = ["Pcmanfm","Thunar"]
     mySystem  = ["pacmanxg","systemdx","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap","Xfce4-power-manager-settings"]
-    myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","PornTime","Easytag"]
+    myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","Easytag"]
     myPic     = ["Gimp","Gimp-2.8","Inkscape"]
     myWork    = ["Wine"]
     myTorrent = ["Tixati","Transgui","Transmission-gtk","Transmission-remote-gtk"]
@@ -313,10 +316,12 @@ myManageHook = composeAll . concat $
     role      = stringProperty "WM_WINDOW_ROLE"
 
 -- Event handling
-myEventHook = fullscreenEventHook <+> docksEventHook
+myEventHook = fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove
  
 -- Status bars and logging.
-myLogHook = dynamicLogString $ xmobarPP {
+myLogHook = do
+    currentWorkspaceOnTop
+    dynamicLogString $ xmobarPP {
           ppCurrent         = xmobarColor "#9fdfff" ""
         -- , ppTitle           = xmobarColor "#959595" "" . shorten 38
         , ppTitle           = (\str -> "")
