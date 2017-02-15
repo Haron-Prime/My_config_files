@@ -44,7 +44,7 @@ import XMonad.Layout.Spacing
 import XMonad.Layout.MouseResizableTile
 import XMonad.Layout.ResizableTile
 -- import XMonad.Layout.TwoPane
--- import XMonad.Layout.Tabbed
+import XMonad.Layout.Tabbed
 import qualified XMonad.Layout.ToggleLayouts as Tog
 
 -- Prompts
@@ -219,18 +219,18 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     ]
 
 -- Layouts:
-myLayout =  avoidStruts
+myLayoutHook =  avoidStruts
             $ Tog.toggleLayouts (noBorders Full) 
             $ smartBorders
-            $ onWorkspace "W"  (Full  ||| ResizableTall 1 (3/100) (1/2) [] ||| Mirror tiled ||| mouseResizableTile)
+            $ onWorkspace "W"  (Full ||| ResizableTall 1 (3/100) (1/2) [] ||| Mirror tiled ||| mouseResizableTile)
             $ onWorkspace "M"  (mouseResizableTile ||| Full)
             $ onWorkspace "E"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full) 
             $ onWorkspace "F"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
             $ onWorkspace "S"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
-            $ onWorkspace "V"  (Full  ||| mouseResizableTile)
+            $ onWorkspace "V"  (Full ||| tabbed shrinkText myTabConfig ||| mouseResizableTile)
             $ onWorkspace "P"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
-            $ onWorkspace "J"  (Full  ||| Grid)
-            $ onWorkspace "T"  (Full  ||| mouseResizableTile)
+            $ onWorkspace "J"  (Full ||| tabbed shrinkText myTabConfig ||| Grid)
+            $ onWorkspace "T"  (Full ||| tabbed shrinkText myTabConfig ||| mouseResizableTile)
             $ onWorkspace "X"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
             $ onWorkspace "XI" (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
             $ onWorkspace "XII"(ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
@@ -245,6 +245,19 @@ myLayout =  avoidStruts
 myIMLayout = withIM (1%7) psi Grid
     where
       psi   = And (ClassName "psi") (Role "main")
+
+-- Tabs:
+myTabConfig = def {
+          activeColor         = "#151515"
+        , inactiveColor       = "#151515"
+        , activeBorderColor   = "#151515"
+        , inactiveBorderColor = "#151515"
+        , activeTextColor     = "#9df"
+        , inactiveTextColor   = "#555"
+        , fontName            = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
+        , decoHeight          = 18
+    }
+
 
 -- XP
 myXPConfig = def {
@@ -393,7 +406,7 @@ myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen =
         focusedBorderColor = myFocusedBorderColor,
         keys               = myKeys,
         mouseBindings      = myMouseBindings,
-        layoutHook         = avoidStruts $ myLayout,
+        layoutHook         = avoidStruts $ myLayoutHook,
         manageHook         = floatNextHook <+> manageHook def <+> manageDocks <+> myManageHook <+> dynamicMasterHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos ,
         handleEventHook    = myEventHook,
         logHook            = myLogHook >>= xmonadPropLog,
