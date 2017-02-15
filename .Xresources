@@ -78,6 +78,7 @@ Xcursor.size:                      22
 *VT100*colorULMode:               on
 *VT100*colorBDMode:               off
 *VT100.titeInhibit:               off
+*VT100.translations:              #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
 *VT100.geometry:                  80x32
 *SimpleMenu*background:           #353535
 *SimpleMenu*foreground:           #AAA
