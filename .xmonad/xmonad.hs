@@ -21,6 +21,7 @@ import XMonad.Actions.WorkspaceNames
 
 -- Hooks
 import XMonad.Hooks.CurrentWorkspaceOnTop
+import XMonad.Hooks.DynamicHooks
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.InsertPosition
@@ -337,6 +338,7 @@ myLogHook = do
     currentWorkspaceOnTop
     dynamicLogString $ xmobarPP {
           ppCurrent         = xmobarColor "#9fdfff" ""
+        , ppUrgent          = xmobarColor "#ff6500" ""
         -- , ppTitle           = xmobarColor "#959595" "" . shorten 38
         , ppTitle           = (\str -> "")
         -- , ppTitle           = xmobarColor "#959595" ""
@@ -389,7 +391,7 @@ myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen =
         keys               = myKeys,
         mouseBindings      = myMouseBindings,
         layoutHook         = avoidStruts $ myLayout,
-        manageHook         = manageHook def <+> manageDocks <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos ,
+        manageHook         = manageHook def <+> manageDocks <+> myManageHook <+> dynamicMasterHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos ,
         handleEventHook    = myEventHook,
         logHook            = myLogHook >>= xmonadPropLog,
         startupHook        = myStartupHook
