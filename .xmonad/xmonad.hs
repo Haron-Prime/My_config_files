@@ -279,25 +279,27 @@ myManageHook = composeAll . concat $
 
     -- , [title     =? "LibreOffice" --> doF (W.shift "E")]
 
-    , [currentWs =? "W"           --> insertPosition Below Newer]
+    , [currentWs =? "W"              --> insertPosition Below Newer]
 
-    , [currentWs =? "M"           --> insertPosition Below Newer]
+    , [currentWs =? "M"              --> insertPosition Below Newer]
 
-    , [currentWs =? "E"           --> insertPosition Below Newer]
+    , [currentWs =? "E"              --> insertPosition Below Newer]
 
-    , [currentWs =? "F"           --> insertPosition Below Newer]
+    , [currentWs =? "F"              --> insertPosition Below Newer]
 
-    , [currentWs =? "T"           --> insertPosition Below Newer]
+    , [currentWs =? "T"              --> insertPosition Below Newer]
 
-    , [currentWs =? "X"           --> insertPosition Below Newer]
+    , [currentWs =? "X"              --> insertPosition Below Newer]
 
-    , [currentWs =? "XII"         --> insertPosition Below Newer]
+    , [currentWs =? "XII"            --> insertPosition Below Newer]
 
-    , [resource  =? "stalonetray" --> doIgnore]
+    , [resource  =? "stalonetray"    --> doIgnore]
 
-    , [isDialog                   --> doCenterFloat]
+    , [className =? "Gis-weather.py" --> doIgnore]
 
-    , [isFullscreen               --> doFullFloat]
+    , [isDialog                      --> doCenterFloat]
+
+    , [isFullscreen                  --> doFullFloat]
 
     , [transience']
 
@@ -320,7 +322,7 @@ myManageHook = composeAll . concat $
 
     -- CenterFloat
 
-    myFloatC  = ["Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","Gis-weather.py","feh"]
+    myFloatC  = ["Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh"]
     myFloatA  = ["lxappearance","xarchiver","gmrun"]
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
