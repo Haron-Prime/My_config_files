@@ -24,6 +24,7 @@ import XMonad.Hooks.CurrentWorkspaceOnTop
 import XMonad.Hooks.DynamicHooks
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.FloatNext
 import XMonad.Hooks.InsertPosition
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
@@ -164,6 +165,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,    xK_Down),     windows W.swapDown)                                                                                  --Win+Shift+Down
     , ((modm     .|. shiftMask,       0x6b),     windows W.swapUp)                                                                                    --Win+Shift+K
     , ((modm     .|. shiftMask,      xK_Up),     windows W.swapUp)                                                                                    --Win+Shift+K
+    , ((modm,                         0x65),     toggleFloatNext)                                                                                     --Win+E
+    , ((modm,                         0x72),     toggleFloatAllNew)                                                                                   --Win+R
     , ((modm,                         0x68),     sendMessage Shrink)                                                                                  --Win+H
     , ((modm,                         0x6c),     sendMessage Expand)                                                                                  --Win+L
     , ((modm,                         0x74),     withFocused $ windows . W.sink)                                                                      --Win+T
@@ -324,7 +327,7 @@ myManageHook = composeAll . concat $
     -- CenterFloat
 
     myFloatC  = ["Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh"]
-    myFloatA  = ["lxappearance","xarchiver","gmrun"]
+    myFloatA  = ["lxappearance","xarchiver","gmrun","Update"]
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
 
@@ -391,7 +394,7 @@ myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen =
         keys               = myKeys,
         mouseBindings      = myMouseBindings,
         layoutHook         = avoidStruts $ myLayout,
-        manageHook         = manageHook def <+> manageDocks <+> myManageHook <+> dynamicMasterHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos ,
+        manageHook         = floatNextHook <+> manageHook def <+> manageDocks <+> myManageHook <+> dynamicMasterHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos ,
         handleEventHook    = myEventHook,
         logHook            = myLogHook >>= xmonadPropLog,
         startupHook        = myStartupHook
