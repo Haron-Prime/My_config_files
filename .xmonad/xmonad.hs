@@ -131,6 +131,21 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
     -- , ((modm,                         0x70),     spawn "gmrun")                                                                                       --Win+P
     , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
+    , ((modm,                         0x61),     spawnSelected def { gs_cellheight = 30, gs_cellwidth = 155 } [
+                                                                                                                           "PRO100-5"
+                                                                                                                          ,"2D-Place"
+                                                                                                                          ,"wps"
+                                                                                                                          ,"soffice"
+                                                                                                                          ,"tixati"
+                                                                                                                          ,"gsmartcontrol"
+                                                                                                                          ,"systemdx"
+                                                                                                                          ,"systemadm"
+                                                                                                                          ,"lxappearance"
+                                                                                                                          ,"telegram-desktop"
+                                                                                                                          ,"TV"
+                                                                                                                          ,"vlc"
+                                                                                                                          ,"heroes3"
+                                                                                                                          ])                          --Win+A
 
     --Prompt management
 
@@ -174,23 +189,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,       0x71),     io (exitWith ExitSuccess))                                                                           --Win+Shift+Q
     , ((mod1Mask,                  xK_Down),     sendMessage MirrorShrink)                                                                            --Alt+Down
     , ((mod1Mask,                    xK_Up),     sendMessage MirrorExpand)                                                                            --Alt+Up
-
-    , ((modm,                         0x73),     goToSelected  def { gs_cellheight = 30, gs_cellwidth = 155 })                                        --Win+S
-    , ((modm,                         0x61),     spawnSelected def { gs_cellheight = 30, gs_cellwidth = 155 } [
-                                                                                                                           "PRO100-5"
-                                                                                                                          ,"2D-Place"
-                                                                                                                          ,"wps"
-                                                                                                                          ,"soffice"
-                                                                                                                          ,"tixati"
-                                                                                                                          ,"gsmartcontrol"
-                                                                                                                          ,"systemdx"
-                                                                                                                          ,"systemadm"
-                                                                                                                          ,"lxappearance"
-                                                                                                                          ,"telegram-desktop"
-                                                                                                                          ,"TV"
-                                                                                                                          ,"vlc"
-                                                                                                                          ,"heroes3"
-                                                                                                                          ])                          --Win+A
+    -- , ((modm,                         0x73),     goToSelected  def { gs_cellheight = 30, gs_cellwidth = 155 })                                        --Win+S
 
     ]
     ++
