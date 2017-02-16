@@ -11,7 +11,6 @@ import qualified Data.ByteString as B
 import qualified XMonad.Actions.DynamicWorkspaceOrder as DO
 
 -- Actions
--- import XMonad.Actions.CycleSelectedLayouts
 import XMonad.Actions.CycleWindows
 import XMonad.Actions.CycleWS
 import XMonad.Actions.FloatSnap
@@ -24,7 +23,6 @@ import XMonad.Hooks.CurrentWorkspaceOnTop
 import XMonad.Hooks.DynamicHooks
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
--- import XMonad.Hooks.FloatNext
 import XMonad.Hooks.InsertPosition
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
@@ -83,11 +81,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --Applications management
 
       ((0,                      0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up")
-      --((0,                      0x1008ff13),     spawn "amixer set Master 5%+")
     , ((0,                      0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down")
-    --, ((0,                      0x1008ff11),     spawn "amixer set Master 5%-")
     , ((0,                      0x1008ff12),     spawn "/usr/bin/pulseaudio-ctl mute")
-    --, ((0,                      0x1008ff12),     spawn "amixer set Master toggle")
     , ((modm,                         0x60),     spawn "mpc toggle")
     , ((0,                      0x1008ff14),     spawn "mpc toggle")
     , ((0,                      0x1008ff15),     spawn "mpc stop")
@@ -115,21 +110,17 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x66),     spawn "firefox")                                                                                     --Alt+F
     , ((mod1Mask,                     0x67),     spawn "gimp")                                                                                        --Alt+G
     , ((mod1Mask,                     0x68),     spawn "hexchat")                                                                                     --Alt+H
-    -- , ((mod1Mask,                     0x69),     spawn "2D-Place")                                                                                    --Alt+I
     , ((mod1Mask,                     0x6c),     spawn "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")              --Alt+L
     , ((mod1Mask,                     0x6d),     spawn "urxvtc -name mc -e mc")                                                                       --Alt+M
     , ((mod1Mask,                     0x6f),     spawn "opera12")                                                                                     --Alt+O
-    -- , ((mod1Mask,                     0x70),     spawn "PRO100-5")                                                                                    --Alt+P
     , ((mod1Mask,                     0x71),     spawn "if(pidof pavucontrol >/dev/null); then kill $(pidof pavucontrol); else pavucontrol; fi")      --Alt+Q
     , ((mod1Mask,                     0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
     , ((mod1Mask,                     0x73),     spawn "subl3")                                                                                       --Alt+S
     , ((mod1Mask .|. shiftMask,       0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
     , ((mod1Mask,                     0x74),     spawn "tor-browser")                                                                                 --Alt+T
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
-    -- , ((mod1Mask,                     0x77),     spawn "gksu pacmanxg")                                                                               --Alt+W
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart && killall xmobar && xmobar")                          --Win+Q
     , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
-    -- , ((modm,                         0x70),     spawn "gmrun")                                                                                       --Win+P
     , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
     , ((modm,                         0x61),     spawnSelected def { gs_cellheight = 30, gs_cellwidth = 155 } [
                                                                                                                            "PRO100-5"
@@ -152,7 +143,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                   0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
     , ((mod1Mask,                   0xffbf),     shellPrompt myXPConfig)                                                                              --Alt+F2
     , ((mod1Mask,                   0xffc0),     runOrRaisePrompt myXPConfig)                                                                         --Alt+F3
-    -- , ((mod1Mask,                   0xffc1),     spawn "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'") --Alt+F4
 
     --Windows and WS management
 
@@ -178,8 +168,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,    xK_Down),     windows W.swapDown)                                                                                  --Win+Shift+Down
     , ((modm     .|. shiftMask,       0x6b),     windows W.swapUp)                                                                                    --Win+Shift+K
     , ((modm     .|. shiftMask,      xK_Up),     windows W.swapUp)                                                                                    --Win+Shift+K
-    -- , ((modm,                         0x65),     toggleFloatNext)                                                                                     --Win+E
-    -- , ((modm,                         0x72),     toggleFloatAllNew)                                                                                   --Win+R
     , ((modm,                         0x68),     sendMessage Shrink)                                                                                  --Win+H
     , ((modm,                         0x6c),     sendMessage Expand)                                                                                  --Win+L
     , ((modm,                         0x74),     withFocused $ windows . W.sink)                                                                      --Win+T
@@ -189,8 +177,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,       0x71),     io (exitWith ExitSuccess))                                                                           --Win+Shift+Q
     , ((mod1Mask,                  xK_Down),     sendMessage MirrorShrink)                                                                            --Alt+Down
     , ((mod1Mask,                    xK_Up),     sendMessage MirrorExpand)                                                                            --Alt+Up
-    -- , ((modm,                         0x73),     goToSelected  def { gs_cellheight = 30, gs_cellwidth = 155 })                                        --Win+S
-
     ]
     ++
 
@@ -339,10 +325,7 @@ myLogHook = do
     dynamicLogString $ xmobarPP {
           ppCurrent         = xmobarColor "#9fdfff" ""
         , ppUrgent          = xmobarColor "#ff6500" ""
-        -- , ppTitle           = xmobarColor "#959595" "" . shorten 38
         , ppTitle           = (\str -> "")
-        -- , ppTitle           = xmobarColor "#959595" ""
-        -- , ppSort            = DO.getSortByOrder
         }
 
 -- Startup hook
@@ -350,16 +333,10 @@ myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D"
 
 mynameScratchpads = [ NS "ncmpcpp" "urxvtc -name ncmpcpp -e ncmpcpp" (appName =? "ncmpcpp") (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                 , NS "htop" "urxvtc -name htop -e htop" (appName =? "htop") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-                -- , NS "mc" "urxvtc -name mc -e mc" (appName =? "mc") (customFloating $ W.RationalRect 0.02 0.02 0.96 0.96)
                 , NS "gpick" "gpick" (appName =? "gpick") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                -- , NS "ranger" "urxvtc -name ranger -e ranger" (appName =? "ranger") (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-                -- , NS "equaliser" "urxvtc -name equaliser -e alsamixer -D equal" (appName =? "equaliser") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                 , NS "pavucontrol" "pavucontrol" (appName =? "pavucontrol") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                -- , NS "feh" "feh" (className =? "feh") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                 , NS "Mirage" "mirage" (className =? "Mirage") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                 , NS "font-manager" "font-manager" (className =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                -- , NS "Telegram" "telegram" (className =? "Telegram") (customFloating $ W.RationalRect 0.8 0.02 0.2 0.98)
-                -- , NS "page-info" "page-info " (stringProperty "WM_WINDOW_ROLE" =? "page-info") (customFloating $ W.RationalRect 0.15 0.15 0.7 0.7)
                 , NS "Organizer" "Organizer" (stringProperty "WM_WINDOW_ROLE" =? "Organizer") (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                 ]
 
