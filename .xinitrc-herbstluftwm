@@ -10,6 +10,8 @@ fi
 setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp &
 xsetroot -cursor_name left_ptr &
 hsetroot -solid '#000000' &
+xset -dpms &
+xset m 5/2 0 &
 numlockx &
 perWindowLayoutD &
 compton -b &
