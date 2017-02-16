@@ -185,18 +185,18 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayoutHook =  avoidStruts
             $ Tog.toggleLayouts (noBorders Full) 
             $ smartBorders
-            $ onWorkspace "W"  (Full ||| Mirror tiled ||| mouseResizableTile)
-            $ onWorkspace "M"  (mouseResizableTile ||| Full)
-            $ onWorkspace "E"  (mouseResizableTile ||| Mirror tiled ||| Full) 
-            $ onWorkspace "F"  (mouseResizableTile ||| Mirror tiled ||| Full)
-            $ onWorkspace "S"  (mouseResizableTile ||| Mirror tiled ||| Full)
+            $ onWorkspace "W"  (Full ||| mouseResizableTile ||| Mirror tiled)
+            $ onWorkspace "M"  (mouseResizableTile ||| Mirror tiled ||| Full)
+            $ onWorkspace "E"  (Mirror tiled ||| mouseResizableTile ||| Full) 
+            $ onWorkspace "F"  (Mirror tiled ||| mouseResizableTile ||| Full)
+            $ onWorkspace "S"  (Mirror tiled ||| mouseResizableTile ||| Full)
             $ onWorkspace "V"  (Full ||| mouseResizableTile)
-            $ onWorkspace "P"  (mouseResizableTile ||| Mirror tiled ||| Full)
+            $ onWorkspace "P"  (Mirror tiled ||| mouseResizableTile ||| Full)
             $ onWorkspace "J"  (Full ||| Grid)
             $ onWorkspace "T"  (Full ||| mouseResizableTile)
-            $ onWorkspace "X"  (mouseResizableTile ||| Mirror tiled ||| Full)
+            $ onWorkspace "X"  (Mirror tiled ||| mouseResizableTile ||| Full)
             $ onWorkspace "XI" (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-            $ onWorkspace "XII"(mouseResizableTile ||| Mirror tiled ||| Full)
+            $ onWorkspace "XII"(Mirror tiled ||| mouseResizableTile ||| Full)
             $ tiled ||| Mirror tiled  ||| Full
   where
     tiled   = Tall nmaster delta ratio
