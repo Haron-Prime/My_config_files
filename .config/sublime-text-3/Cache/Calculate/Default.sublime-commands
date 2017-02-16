@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Calculate",
+        "command": "calculate"
+    },
+    {
+        "caption": "Count from 1",
+        "command": "calculate_count"
+    }
+]

@@ -1,0 +1,52 @@
+[
+    { "caption": "-" },
+    {
+        "caption": "FTPSync",
+        "children": [
+            {
+                "caption": "Check this file",
+                "command": "ftp_sync_check_current"
+            },
+            {
+                "caption": "Upload this file",
+                "command": "ftp_sync_current"
+            },
+            {
+                "caption": "Download this file",
+                "command": "ftp_sync_down_current"
+            },
+            {
+                "caption": "Rename this file",
+                "command": "ftp_sync_rename_current"
+            },
+            {
+                "caption": "-"
+            },
+            {
+                "caption": "Browse",
+                "command": "ftp_sync_browse"
+            },
+            {
+                "caption": "Browse from last path",
+                "command": "ftp_sync_browse_last"
+            },
+            {
+                "caption": "-"
+            },
+            {
+                "caption": "Open README (Github)",
+                "command": "ftp_sync_url_readme"
+            },
+            {
+                "caption": "Report issue / suggestion (Github)",
+                "command": "ftp_sync_url_report"
+            },
+            {
+                "caption": "Support FTPSync development",
+                "command": "ftp_sync_url_donate"
+            }
+
+        ]
+    },
+    { "caption": "-" }
+]

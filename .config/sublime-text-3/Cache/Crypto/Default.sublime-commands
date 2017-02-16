@@ -1,0 +1,10 @@
+[{
+  "caption": "Crypto::Encrypt",
+  "command": "aes_crypt", 
+  "args": { "enc": true }
+},
+{
+  "caption": "Crypto::Decrypt",
+  "command": "aes_crypt", 
+  "args": {"enc": false }
+}]

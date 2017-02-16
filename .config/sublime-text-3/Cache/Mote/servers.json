@@ -1,0 +1,19 @@
+{
+    "SERVER_NICKNAME":{
+        "connection_string": "saved_putty_session_name",
+        "idle_recursive": true
+    },
+    "SERVER_NICKNAME2":{
+        "connection_string": "USERNAME@HOSTNAME_OR_IP",
+        "password":"MYPASSWORD",
+        "idle_recursive": false,
+        "default_path": "iniital/path/to/open/to"
+    },
+    "SERVER_NICKNAME3":{
+        "connection_string": "USERNAME@HOSTNAME_OR_IP",
+        "password":"MYPASSWORD",
+        "private_key":"C:\\PATH\\TO\\PRIVATE\\KEY.ppk",
+        "idle_recursive": false,
+        "default_path": "iniital/path/to/open/to"
+    }
+}

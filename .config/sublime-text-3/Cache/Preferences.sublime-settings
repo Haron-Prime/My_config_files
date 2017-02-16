@@ -1,0 +1,12 @@
+{
+	"color_scheme": "Packages/User/Theme - Phoenix/Color Scheme/Tomorrow-Night.tmTheme",
+	"font_face": "Terminus Re33",
+	"font_size": 12,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"show_encoding": true,
+	"word_wrap": true
+}

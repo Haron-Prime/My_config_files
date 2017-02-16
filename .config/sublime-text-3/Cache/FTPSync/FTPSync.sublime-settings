@@ -1,0 +1,81 @@
+{
+	"debug": true,
+	"debug_verbose": true,
+	"connection_timeout": 100,
+	"time_format": "%Y-%m-%d %H:%M",
+	"download_on_open_delay": 5000,
+	"keep_alive_interval": 5,
+	"max_threads": 4,
+	"debug_threads": false,
+
+	"system_notifications": true,
+
+	"browse_open_on_download": true,
+	"browse_display_permission": false,
+	"browse_timestamp_format": "%Y-%m-%d %H:%M",
+
+	"project_defaults_name": "default",
+	"project_defaults": {
+		"username": null,
+		"password": "",
+		"private_key": null,
+		"private_key_pass": null,
+		"path": "/",
+
+		"encoding": "auto",
+		"tls": false,
+		"passive": true,
+		"use_tempfile": true,
+		"upload_on_save": true,
+		"port": 21,
+		"timeout": 30,
+		"ignore": null,
+		"overwrite_newer_prevention": true,
+		"download_on_open": false,
+		"upload_delay": 0,
+		"default_folder_permissions": "755",
+		"default_local_permissions": "auto",
+		"default_upload_permissions": null,
+		"always_sync_local_permissions": true,
+		"time_offset": 0,
+		"set_remote_lastmodified": true,
+
+		"after_save_watch": null,
+
+		"debug_extras": {
+			"print_list_result": false,
+			"dump_config_load": false,
+			"print_ensure_folders": false,
+			"debug_remote_paths": false,
+			"after_save_watch": false,
+			"debug_get_local_path": false,
+			"debug_mfmt": false,
+			"debug_put_error": false
+		}
+	},
+
+	"ignore": "ftpsync\\.settings|\\.gitignore|\\.git|Sublime Text 2/Packages",
+	"ascii_extensions": [
+	    "txt","ini","xml","nfo","cgi","cfg","conf","bat","sh","inc","sfv","srt",
+	    "htaccess",
+	    "md5","sha","gitignore","pub","ppk",
+	    "html","htm","xhtml","dhtml","phtml","mht",
+	    "tpl","twig","latte",
+	    "css","scss","sass","less","styl",
+	    "js","json","coffee","dart","ts",
+	    "php","php3","php4","php5",
+	    "asp","aspx",
+	    "py","py3",
+	    "c","h","cc","ccp","hpp",
+	    "rb","java","lua","cs","scala","hx","sql",
+	    "settings","sublime-menu","sublime-commands","sublime-project","sublime-settings","sublime-workspace","sublime-keymap"
+	],
+	"binary_extensions": [
+	    "raw","exe","mpi",
+	    "pdf","psd","ai","doc","xls","docx","xlsx",
+	    "7z","zip","rar","tar","gz","gzip","ace",
+	    "bmp","jpg","jpeg","ico","png","gif","tiff","pic","tga",
+	    "wmv","avi","mkv","mp4","mpg","mpeg",
+	    "wav","mp3","ac3","flac","3gp"
+	]
+}
