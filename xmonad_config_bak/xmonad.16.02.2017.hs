@@ -15,10 +15,12 @@ import XMonad.Actions.CycleWindows
 import XMonad.Actions.CycleWS
 import XMonad.Actions.FloatSnap
 import XMonad.Actions.UpdateFocus
+import XMonad.Actions.GridSelect
 import XMonad.Actions.WorkspaceNames
 
 -- Hooks
 import XMonad.Hooks.CurrentWorkspaceOnTop
+import XMonad.Hooks.DynamicHooks
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.InsertPosition
@@ -38,6 +40,7 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Spacing
 import XMonad.Layout.MouseResizableTile
+import XMonad.Layout.ResizableTile
 import qualified XMonad.Layout.ToggleLayouts as Tog
 
 -- Prompts
@@ -87,7 +90,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                      0x1008ff17),     spawn "mpc next")
     , ((0,                      0x1008ff30),     spawn "if(pidof transgui >/dev/null); then kill $(pidof transgui); else transgui; fi")
     , ((0,                      0x1008ff18),     spawn "vivaldi-snapshot")
-    , ((0,                      0x1008ff19),     spawn "thunderbird")
+    , ((0,                      0x1008ff19),     spawn "if(pidof thunderbird >/dev/null); then kill $(pidof thunderbird); else thunderbird; fi")
     , ((0,                      0x1008ff5d),     spawn "pcmanfm")
     , ((0       .|. shiftMask,  0x1008ff5d),     spawn "gksu pcmanfm")
     , ((0,                      0x1008ff1d),     spawn "if(pidof galculator >/dev/null); then kill $(pidof galculator); else galculator; fi")
@@ -119,6 +122,22 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart && killall xmobar && xmobar")                          --Win+Q
     , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
     , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
+    , ((modm,                         0x61),     spawnSelected def { gs_cellheight = 30, gs_cellwidth = 155 } [
+                                                                                                                           "PRO100-5"
+                                                                                                                          ,"2D-Place"
+                                                                                                                          ,"wps"
+                                                                                                                          ,"soffice"
+                                                                                                                          ,"tixati"
+                                                                                                                          ,"gsmartcontrol"
+                                                                                                                          ,"systemdx"
+                                                                                                                          ,"systemadm"
+                                                                                                                          ,"pavucontrol"
+                                                                                                                          ,"lxappearance"
+                                                                                                                          ,"telegram-desktop"
+                                                                                                                          ,"TV"
+                                                                                                                          ,"vlc"
+                                                                                                                          ,"heroes3"
+                                                                                                                          ])                          --Win+A
 
     --Prompt management
 
@@ -157,6 +176,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                    xK_period),     sendMessage (IncMasterN (-1)))                                                                       --Win+Period
     , ((modm,                         0x62),     sendMessage ToggleStruts)                                                                            --Win+B
     , ((modm     .|. shiftMask,       0x71),     io (exitWith ExitSuccess))                                                                           --Win+Shift+Q
+    , ((mod1Mask,                  xK_Down),     sendMessage MirrorShrink)                                                                            --Alt+Down
+    , ((mod1Mask,                    xK_Up),     sendMessage MirrorExpand)                                                                            --Alt+Up
     ]
     ++
 
@@ -185,18 +206,18 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayoutHook =  avoidStruts
             $ Tog.toggleLayouts (noBorders Full) 
             $ smartBorders
-            $ onWorkspace "W"  (Full ||| Mirror tiled ||| mouseResizableTile)
+            $ onWorkspace "W"  (Full ||| ResizableTall 1 (3/100) (1/2) [] ||| Mirror tiled ||| mouseResizableTile)
             $ onWorkspace "M"  (mouseResizableTile ||| Full)
-            $ onWorkspace "E"  (mouseResizableTile ||| Mirror tiled ||| Full) 
-            $ onWorkspace "F"  (mouseResizableTile ||| Mirror tiled ||| Full)
-            $ onWorkspace "S"  (mouseResizableTile ||| Mirror tiled ||| Full)
+            $ onWorkspace "E"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full) 
+            $ onWorkspace "F"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
+            $ onWorkspace "S"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
             $ onWorkspace "V"  (Full ||| mouseResizableTile)
-            $ onWorkspace "P"  (mouseResizableTile ||| Mirror tiled ||| Full)
+            $ onWorkspace "P"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
             $ onWorkspace "J"  (Full ||| Grid)
             $ onWorkspace "T"  (Full ||| mouseResizableTile)
-            $ onWorkspace "X"  (mouseResizableTile ||| Mirror tiled ||| Full)
+            $ onWorkspace "X"  (ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
             $ onWorkspace "XI" (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-            $ onWorkspace "XII"(mouseResizableTile ||| Mirror tiled ||| Full)
+            $ onWorkspace "XII"(ResizableTall 1 (3/100) (1/2) [] ||| mouseResizableTile ||| Mirror tiled ||| Full)
             $ tiled ||| Mirror tiled  ||| Full
   where
     tiled   = Tall nmaster delta ratio
@@ -278,7 +299,7 @@ myManageHook = composeAll . concat $
     myMail    = ["Thunderbird"]
     myEdit    = ["Subl3","Et","Wps","Wpp","Acroread","FoxitReader"]
     myFile    = ["Pcmanfm","Thunar"]
-    mySystem  = ["pacmanxg","systemdx","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap"]
+    mySystem  = ["pacmanxg","systemdx","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap","Xfce4-power-manager-settings"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","Easytag"]
     myPic     = ["Gimp","Gimp-2.8","Inkscape"]
     myWork    = ["Wine"]
@@ -348,7 +369,7 @@ myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen =
         keys               = myKeys,
         mouseBindings      = myMouseBindings,
         layoutHook         = avoidStruts $ myLayoutHook,
-        manageHook         = manageHook def <+> manageDocks <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos ,
+        manageHook         = manageHook def <+> manageDocks <+> myManageHook <+> dynamicMasterHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos ,
         handleEventHook    = myEventHook,
         logHook            = myLogHook >>= xmonadPropLog,
         startupHook        = myStartupHook
