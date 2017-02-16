@@ -1,0 +1,40 @@
+[
+	{
+		"id": "preferences",
+		"children":
+		[
+			{
+				"id": "package-settings",
+				"children":
+				[
+					{
+						"caption": "Sound",
+						"children":
+						[
+							{
+								"command": "open_file", "args":
+								{
+									"file": "${packages}/Sound/Sound.sublime-settings"
+								},
+								"caption": "Settings - Default"
+							},
+							{
+								"command": "open_file", "args":
+								{
+									"file": "${packages}/User/Sound.sublime-settings"
+								},
+								"caption": "Settings - User"
+							},
+							{ "caption": "-" },
+							{ "caption": "Toggle sound",       "command": "toggle_sound" },
+							{ "caption": "Change soundset",    "command": "change_soundset" },
+							{ "caption": "Install soundset",   "command": "install_soundset" },
+							{ "caption": "Uninstall soundset", "command": "uninstall_soundset" },
+							{ "caption": "Add soundset",       "command": "open_dir", "args": {"dir": "$packages/Sound/sounds"} }
+						]
+					}
+				]
+			}
+		]
+	}
+]

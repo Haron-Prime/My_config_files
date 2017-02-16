@@ -1,0 +1,13 @@
+{
+	"extensions":
+	[
+		"bash",
+		"zsh",
+		"sh",
+		"config",
+		"conf",
+		"x-uptime",
+		"cpu-freq",
+		"nnm"
+	]
+}

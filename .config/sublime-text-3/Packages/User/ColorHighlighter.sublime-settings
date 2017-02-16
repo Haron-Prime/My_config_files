@@ -1,0 +1,24 @@
+{
+	"enabled": false,
+	"file_exts":
+	[
+		".css",
+		".sass",
+		".scss",
+		".less",
+		".styl",
+		".html",
+		".js",
+		".sublime-settings",
+		".tmTheme",
+		".stTheme",
+		".erb",
+		".haml",
+		".back",
+		".py",
+		".md",
+		".conf"
+	],
+	"ha_style": "disabled",
+	"style": "disabled"
+}

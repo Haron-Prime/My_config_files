@@ -1,0 +1,31 @@
+Thank you for your installing.
+
+=====Supported Platforms=====
+We support all platforms 'osx', 'linux' and 'windows' on ST3.
+ST2, 'osx' and 'linux' only and ST2 version Build 2091(29 July 2011) or more newer are not supported.
+sorry.
+
+=====How to use=====
+Now, you are cording with sounds.
+Default, we plays sound when...
+
++ any key was pressed (modify)
++ new file was created
++ file was opened
++ file was saved
++ file was closed
++ file was duplicated (File menu > New view into File)
+
+=====Command List=====
+These commands can select from Command Palette.
+
++ Toggle sound:       Play/Mute sound
++ Change soundset:    Change active soundset
++ Install soundset:   Install new soundsets (Check https://github.com/airtoxin/Sublime-SoundSets)
++ Uninstall soundset: Remove installed soundsets
++ Add soundset:       Add custom sounds manualy
+
+=====Custom Sounds=====
+You can customize playing sounds by replace file. (only supports wav file now)
+Replace wav file on Preference > Package Settings > Sound > Open sounds > soundset name > event_name directory.
+If you put some files in a event_name directory, this plugin randomly choice a file and play on each event triggered.

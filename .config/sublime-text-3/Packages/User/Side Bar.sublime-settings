@@ -1,0 +1,9 @@
+{
+	"statusbar_modified_time": true,
+	"statusbar_modified_time_format": "%A %b %d %H:%M:%S %Y",
+	"statusbar_file_size": true,
+	//if installed in a default location maybe this works.
+	"default_browser": "firefox", //one of this list: firefox, aurora, chrome, canary, chromium, opera, safari
+	"disable_send_to_trash": false,
+	"use_powershell": true
+}

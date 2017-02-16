@@ -1,0 +1,31 @@
+[
+  // Default Patch
+  // ==========================================================================
+
+  // Sidebar File Icons
+  // --------------------------------------------------------------------------
+
+  // Default
+
+  {
+    "class": "icon_file_type",
+    "layer0.opacity": 0.75,
+    "content_margin": [8, 8]
+  },
+
+  // Hovered
+
+  {
+    "class": "icon_file_type",
+    "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+    "layer0.opacity": 0.5
+  },
+
+  // Selected
+
+  {
+    "class": "icon_file_type",
+    "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+    "layer0.opacity": 1.0
+  }
+]

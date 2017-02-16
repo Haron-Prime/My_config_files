@@ -1,0 +1,1 @@
+{"version": "1.2.3", "sublime_text": ">=3000", "platforms": ["linux"], "description": "Sublime-Text plugin to play event sounds", "url": "https://github.com/airtoxin/Sublime-Sound", "dependencies": []}

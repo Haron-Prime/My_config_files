@@ -1,0 +1,6 @@
+[
+	{ "caption": "Sound: Install soundset", "command": "install_soundset" },
+	{ "caption": "Sound: Uninstall soundset", "command": "uninstall_soundset" },
+	{ "caption": "Sound: Change soundset", "command": "change_soundset" },
+	{ "caption": "Sound: Toggle sound", "command": "toggle_sound" }
+]

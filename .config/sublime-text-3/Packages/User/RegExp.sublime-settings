@@ -1,0 +1,7 @@
+{
+	"extensions":
+	[
+		"vnstat",
+		"iptables"
+	]
+}

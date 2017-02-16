@@ -1,0 +1,85 @@
+{
+	"folders":
+	[
+		{
+			"path": "/usr/share/oh-my-zsh"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/usr/share/applications"
+		},
+		{
+			"path": "/home/haron/xmonad"
+		},
+		{
+			"path": "/home/haron/tmp"
+		},
+		{
+			"path": "/home/haron/scripts/my_zhs_plugins"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/haron/scripts"
+		},
+		{
+			"path": "/home/haron/lib/sway"
+		},
+		{
+			"path": "/home/haron/git/My_config_files/xmonad_config_bak"
+		},
+		{
+			"path": "/home/haron/git/My_config_files/.config/awesome"
+		},
+		{
+			"path": "/home/haron/git"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/haron/bin"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/haron/applications"
+		},
+		{
+			"path": "/home/haron/.xmonad"
+		},
+		{
+			"path": "/home/haron/.xmobar"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/haron/.oh-my-zsh"
+		},
+		{
+			"path": "/home/haron/.local/bin"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/haron/.kde4/share/templates"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/haron/.kde4/share/kde4/services/ServiceMenus"
+		},
+		{
+			"path": "/home/haron/.i3"
+		},
+		{
+			"path": "/home/haron/.grc"
+		},
+		{
+			"path": "/home/haron/.config/sway"
+		},
+		{
+			"path": "/home/haron/.config/awesome/scratch"
+		},
+		{
+			"path": "/home/haron/.config/awesome"
+		},
+		{
+			"path": "/etc/skel"
+		}
+	],
+	"swap_append_load": true
+}

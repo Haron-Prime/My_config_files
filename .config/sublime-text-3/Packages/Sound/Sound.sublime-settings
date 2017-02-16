@@ -1,0 +1,5 @@
+{
+    "volume": 100, // osx only
+    "min_span": 100, // millisecond
+    "soundset": "Default"
+}

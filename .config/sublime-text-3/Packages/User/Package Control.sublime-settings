@@ -1,0 +1,57 @@
+{
+	"bootstrapped": true,
+	"channels":
+	[
+		"https://packagecontrol.io/channel_v3.json"
+	],
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"Alignment",
+		"All Autocomplete",
+		"ApplySyntax",
+		"BracketGuard",
+		"BracketHighlighter",
+		"Calculate",
+		"Clickable URLs",
+		"Color Highlighter",
+		"Configify",
+		"Conky.tmLanguage",
+		"Dictionaries",
+		"Emmet",
+		"FileBrowser",
+		"Generic Config",
+		"Git",
+		"Github Tools",
+		"Google Search",
+		"HTML Extended",
+		"HTML5",
+		"HTMLAttributes",
+		"Image2Base64",
+		"INI",
+		"Inline Google Translate",
+		"M3U Syntax",
+		"Open Folder",
+		"OpenInBrowser",
+		"Package Control",
+		"package_control_channel",
+		"SendToPasteBin",
+		"SFTP",
+		"SideBarEnhancements",
+		"SideBarFolders",
+		"Sound",
+		"SSH Config",
+		"Terminal",
+		"Theme - Asphalt",
+		"Theme - DC",
+		"Theme - Phoenix",
+		"Theme - Soda",
+		"VimL"
+	],
+	"repositories":
+	[
+	]
+}
