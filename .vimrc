@@ -226,7 +226,7 @@ Plugin 'groenewege/vim-less'
 " Plugin 'guns/xterm-color-table.vim'
 " Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 " Plugin 'vim-scripts/Tabstuff'
-Plugin 'lpenz/vimcommander'
+" Plugin 'lpenz/vimcommander'
 
 "My settings
 
@@ -336,7 +336,7 @@ nnoremap  <space>      za
 map       <C-C>        gcc
 nmap      <S-T>        :ToggleWord<CR>
 " nmap      <S-S>        :source $HOME/.vimrc<CR>
-map       <S-A>        :IndentLinesToggle<CR>
+" map       <S-A>        :IndentLinesToggle<CR>
 nmap      <S-S>        :SessionSave<CR>
 nmap      <S-X>        :SessionSaveAs<CR>
 nmap      <S-C>        yy:silent .w !xclip&lt;<CR>
