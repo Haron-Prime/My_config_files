@@ -237,7 +237,7 @@ set showmatch
 set list lcs=tab:>-,space:.
 set showcmd 
 
-color antares
+color evening
 
 let Tlist_Compact_Format = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
