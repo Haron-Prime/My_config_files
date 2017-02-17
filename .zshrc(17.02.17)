@@ -18,6 +18,8 @@ case "$TERM" in
   'screen') TERM=screen-256color;;
   'Eterm') TERM=Eterm-256color;;
 esac
+# export TERM='xterm-256color'
+# [ -n "$XTERM_VERSION" ] && transset-df -a >/dev/null
 
 export MANOPT="-L ru"
 
@@ -68,6 +70,10 @@ function precmd() {
 function preexec() {
   title "$1" "$USER@%m" "%35<...<%~"
 }
+
+# If not running interactively, do not do anything
+# [[ $- != *i* ]] && return
+# [[ -z "$TMUX" ]] && exec mux default
 
 setopt menucomplete
 zstyle ':completion:*' use-compctl false
@@ -122,6 +128,7 @@ if [ -f /usr/bin/grc ]; then
   alias wdiff="grc --colour=auto wdiff"
   alias last='grc --colour=auto last'
   alias who='grc --colour=auto who'
+  # alias cvs="grc --colour=auto cvs"
   alias mount="grc --colour=auto mount"
   alias mtr="grc --colour=auto mtr"
   alias ps="grc --colour=auto ps"
@@ -144,6 +151,7 @@ if [ -f /usr/bin/grc ]; then
   alias free='grc --colour=auto free'
 
   alias journalctl='grc --colour=auto journalctl'
+  # alias systemctl='grc --colour=auto systemctl'
   alias sysctl='grc --colour=auto sysctl'
   alias tcpdump='grc --colour=auto tcpdump'
   alias tune2fs='grc --colour=auto tune2fs'
@@ -158,6 +166,7 @@ if [ -f /usr/bin/grc ]; then
   alias uptime='grc --colour=auto uptime'
   alias w='grc --colour=auto w'
   alias getfacl='grc --colour=auto getfacl'
+  # alias showmount='grc --colour=auto showmount'
 
   alias logc="grc --colour=auto cat"
   alias logt="grc --colour=auto tail"
@@ -169,10 +178,12 @@ fi
 [[ -a $(whence -p pacman-color) ]] && compdef _pacman pacman-color=pacman
 
 # active plugins
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/oh-my-zsh/plugins/archlinux/archlinux.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/autojump/autojump.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/command-not-found/command-not-found.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/cp/cp.plugin.zsh
+# source /usr/share/oh-my-zsh/plugins/github/github.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/rsync/rsync.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/web-search/web-search.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/history-substring-search/history-substring-search.zsh
@@ -184,6 +195,7 @@ source $HOME/scripts/my_zhs_plugins/extract.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/pk.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/git-prompt.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/zsh-autosuggestions.plugin.zsh
+# source /home/haron/git/zaw/zaw.plugin.zsh
 
  
 # aliases
@@ -262,9 +274,43 @@ man() {
              man "$@"
 }
 
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# DIRSTACKFILE=$HOME/.zsh/cache-dirs/dirs"
+# if [[ -f $DIRSTACKFILE  ]] && [[ $#dirstack -eq 0  ]]; then
+#      dirstack=( ${(f)"$(< $DIRSTACKFILE)"}  )
+# 	   [[ -d $dirstack[1]  ]] && cd $dirstack[1]
+#	fi
+#	chpwd() {
+#	     print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
+#
+#	}
+
 DIRSTACKSIZE=20
 
 setopt autopushd pushdsilent pushdtohome
+
+# extract () {
+#   if [ -f $1 ] ; then
+#     case $1 in
+#       *.tar.bz2) tar xvjf $1   ;;
+#       *.tar.gz)  tar xvzf $1   ;;
+#       *.tar.xz)  tar xvfJ $1   ;;
+#       *.bz2)     bunzip2 $1    ;;
+#       *.rar)     unrar x $1    ;;
+#       *.gz)      gunzip $1     ;;
+#       *.tar)     tar xvf $1    ;;
+#       *.tbz2)    tar xvjf $1   ;;
+#       *.tgz)     tar xvzf $1   ;;
+#       *.zip)     unzip $1      ;;
+#       *.Z)       uncompress $1 ;;
+#       *.7z)      7z x $1       ;;
+#       *)         echo "'$1' cannot be extracted via >extract<" ;;
+#     esac
+#   else
+#     echo "'$1' is not a valid file"
+#   fi
+# }
 
 if [ -f $HOME/scripts/s-completion.bash ]; then
     . $HOME/scripts/s-completion.bash
