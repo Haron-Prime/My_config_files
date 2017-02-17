@@ -19,6 +19,16 @@ case "$TERM" in
   'Eterm') TERM=Eterm-256color;;
 esac
 
+export LC_CTYPE="en_US.utf8"
+export LANG=ru_UA.UTF-8
+export MM_CHARSET=UTF-8
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:$HOME/.local/bin
+export PAGER="less"
+export EDITOR="vim"
+export ARCHFLAGS="arch x86_64"
+export BROWSER="vivaldi-snapshot"
+export MAIL="thunderbird"
+export OOO_FORCE_DESKTOP="xmonad"
 export MANOPT="-L ru"
 
 setopt appendhistory autocd extendedglob nomatch
@@ -185,7 +195,6 @@ source $HOME/scripts/my_zhs_plugins/pk.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/git-prompt.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/zsh-autosuggestions.plugin.zsh
 
- 
 # aliases
 alias ls="ls -la --classify --color=auto"
 alias grep='grep --colour=auto'
@@ -201,7 +210,6 @@ alias -s {odt,doc,sxw,rtf}=libreoffice
 alias -s {png,gif,jpg,jpeg}=feh
 alias -s text=vim
 
- 
 ##Set some keybindings
 #################################################
 bindkey '^[[A' up-line-or-search                # up arrow for back-history-search
@@ -215,16 +223,6 @@ bindkey '\e[4~' end-of-line                     # end
 bindkey '\e[5~' up-line-or-history              # page-up
 bindkey '\e[6~' down-line-or-history            # page-down
 #################################################
- 
-export LC_CTYPE="en_US.utf8"
-export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
-export PAGER="less"
-export EDITOR="vim"
-export ARCHFLAGS="arch x86_64"
-export BROWSER="vivaldi-snapshot"
-export MAIL="thunderbird"
-export OOO_FORCE_DESKTOP="xmonad"
-
 
 #  History
 export HISTFILE=$HOME/.zsh_history 

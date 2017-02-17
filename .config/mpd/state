@@ -1,9 +1,7 @@
 sw_volume: 100
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
-state: pause
-current: 309
-time: 217.582000
+state: stop
 random: 0
 repeat: 0
 single: 0
@@ -323,5 +321,4 @@ playlist_begin
 308:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/20. Do Ya.mp3
 309:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/21. 10538 Overture.mp3
 310:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/22. Roll Over Beethoven.mp3
-311:Foreign/ELO/Best Ballads/14 Дорожка 14.mp3
 playlist_end
