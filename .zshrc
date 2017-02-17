@@ -20,9 +20,9 @@ case "$TERM" in
 esac
 
 export LC_CTYPE="en_US.utf8"
-export LANG=ru_UA.UTF-8
-export MM_CHARSET=UTF-8
-export PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:$HOME/.local/bin
+export LANG="ru_UA.UTF-8"
+export MM_CHARSET="UTF-8"
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:$HOME/.local/bin"
 export PAGER="less"
 export EDITOR="vim"
 export ARCHFLAGS="arch x86_64"
