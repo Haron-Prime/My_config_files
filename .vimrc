@@ -226,6 +226,7 @@ Plugin 'groenewege/vim-less'
 " Plugin 'guns/xterm-color-table.vim'
 " Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 " Plugin 'vim-scripts/Tabstuff'
+Plugin 'lpenz/vimcommander'
 
 "My settings
 
@@ -328,6 +329,7 @@ vmap      <F9>         <Plug>(openbrowser-open)
 nmap      <F10>        <Plug>(openbrowser-search)
 vmap      <F10>        <Plug>(openbrowser-search)
 nmap      <F11>        :SessionList<CR>
+" noremap <silent> <F11> :cal VimCommanderToggle()<CR>
 map       <S-Insert>   <MiddleMouse>
 map!      <S-Insert>   <MiddleMouse>
 nnoremap  <space>      za
@@ -337,5 +339,5 @@ nmap      <S-T>        :ToggleWord<CR>
 map       <S-A>        :IndentLinesToggle<CR>
 nmap      <S-S>        :SessionSave<CR>
 nmap      <S-X>        :SessionSaveAs<CR>
-nmap      cv           yy:silent .w !xclip&lt;<CR>
+nmap      <S-C>        yy:silent .w !xclip&lt;<CR>
 vmap      c            y:silent '<,'> w !xclip&lt;<CR>
