@@ -224,8 +224,9 @@ bindsym Menu                 exec --no-startup-id gmrun
 
 bindsym $mod+F12             exec --no-startup-id "urxvtc -name guake"
 bindsym Mod1+F2              exec --no-startup-id "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'"
-bindsym Print                exec --no-startup-id "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
-bindsym Mod1+Print           exec --no-startup-id "scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+bindsym Print                exec --no-startup-id "scrot -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+bindsym Mod1+Print           exec --no-startup-id "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+bindsym Shift+Print          exec --no-startup-id "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 bindsym Mod1+g               exec --no-startup-id gimp
 bindsym Mod1+l               exec --no-startup-id "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard"
 bindsym Mod1+m               exec --no-startup-id "urxvtc -name mc -e mc"

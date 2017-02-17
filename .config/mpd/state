@@ -1,7 +1,9 @@
 sw_volume: 100
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
-state: stop
+state: play
+current: 5
+time: 4.032000
 random: 0
 repeat: 0
 single: 0
@@ -10,315 +12,49 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Foreign/ELO/Best Ballads/01 Дорожка 1.mp3
-1:Foreign/ELO/Best Ballads/02 Дорожка 2.mp3
-2:Foreign/ELO/Best Ballads/03 Дорожка 3.mp3
-3:Foreign/ELO/Best Ballads/04 Дорожка 4.mp3
-4:Foreign/ELO/Best Ballads/05 Дорожка 5.mp3
-5:Foreign/ELO/Best Ballads/06 Дорожка 6.mp3
-6:Foreign/ELO/Best Ballads/07 Дорожка 7.mp3
-7:Foreign/ELO/Best Ballads/08 Дорожка 8.mp3
-8:Foreign/ELO/Best Ballads/09 Дорожка 9.mp3
-9:Foreign/ELO/Best Ballads/10 Дорожка 10.mp3
-10:Foreign/ELO/Best Ballads/11 Дорожка 11.mp3
-11:Foreign/ELO/Best Ballads/12 Дорожка 12.mp3
-12:Foreign/ELO/Best Ballads/13 Дорожка 13.mp3
-13:Foreign/ELO/Best Ballads/14 Дорожка 14.mp3
-14:Foreign/ELO/Best Ballads/15 Дорожка 15.mp3
-15:Foreign/ELO/Best Ballads/16 Дорожка 16.mp3
-16:Foreign/ELO/Best Ballads/17 Дорожка 17.mp3
-17:Foreign/ELO/CD-1/01-No Answer 1971/01-10538 Overture.mp3
-18:Foreign/ELO/CD-1/01-No Answer 1971/02-Look At Me Now.mp3
-19:Foreign/ELO/CD-1/01-No Answer 1971/03-Nellie Takes Her Bow.mp3
-20:Foreign/ELO/CD-1/01-No Answer 1971/04-Battle Of Marston Moor.mp3
-21:Foreign/ELO/CD-1/01-No Answer 1971/05-1st Movement.mp3
-22:Foreign/ELO/CD-1/01-No Answer 1971/06-Mr. Radio.mp3
-23:Foreign/ELO/CD-1/01-No Answer 1971/07-Manhattan Rumble (49th Street Massacre).mp3
-24:Foreign/ELO/CD-1/01-No Answer 1971/08-Queen Of The Hours.mp3
-25:Foreign/ELO/CD-1/01-No Answer 1971/09-Whisper in the Night .mp3
-26:Foreign/ELO/CD-1/02-Electric Light Orchestra II 1973/01-In England Town (Boogie #2).mp3
-27:Foreign/ELO/CD-1/02-Electric Light Orchestra II 1973/02-Mama.mp3
-28:Foreign/ELO/CD-1/02-Electric Light Orchestra II 1973/03-Roll Over Beethoven.mp3
-29:Foreign/ELO/CD-1/02-Electric Light Orchestra II 1973/04-From The Sun To The World (Boogie #1).mp3
-30:Foreign/ELO/CD-1/02-Electric Light Orchestra II 1973/05-Kuiama.mp3
-31:Foreign/ELO/CD-1/03-On The Third Day 1973/01-Ocean Breakup - King Of The Universe.mp3
-32:Foreign/ELO/CD-1/03-On The Third Day 1973/02-Bluebird Is Dead.mp3
-33:Foreign/ELO/CD-1/03-On The Third Day 1973/03-Oh No Not Susan.mp3
-34:Foreign/ELO/CD-1/03-On The Third Day 1973/04-New World Rising - Ocean Breakup Reprise.mp3
-35:Foreign/ELO/CD-1/03-On The Third Day 1973/05-Showdown.mp3
-36:Foreign/ELO/CD-1/03-On The Third Day 1973/06-Daybreaker.mp3
-37:Foreign/ELO/CD-1/03-On The Third Day 1973/07-Ma-Ma-Ma Belle.mp3
-38:Foreign/ELO/CD-1/03-On The Third Day 1973/08-Dreaming Of 4000.mp3
-39:Foreign/ELO/CD-1/03-On The Third Day 1973/09-In The Hall Of The Mountain King.mp3
-40:Foreign/ELO/CD-1/04-Eldorado 1974/01-Eldorado Overture.mp3
-41:Foreign/ELO/CD-1/04-Eldorado 1974/02-Can't Get It Out Of My Head.mp3
-42:Foreign/ELO/CD-1/04-Eldorado 1974/03-Boy Blue.mp3
-43:Foreign/ELO/CD-1/04-Eldorado 1974/04-Laredo Tornado.mp3
-44:Foreign/ELO/CD-1/04-Eldorado 1974/05-Poorboy (The Greenwood).mp3
-45:Foreign/ELO/CD-1/04-Eldorado 1974/06-Mister Kingdom.mp3
-46:Foreign/ELO/CD-1/04-Eldorado 1974/07-Nobody's Child.mp3
-47:Foreign/ELO/CD-1/04-Eldorado 1974/08-Illusions In G Major.mp3
-48:Foreign/ELO/CD-1/04-Eldorado 1974/09-Eldorado.mp3
-49:Foreign/ELO/CD-1/04-Eldorado 1974/10-Eldorado - Finale.mp3
-50:Foreign/ELO/CD-1/05-The Night the Lights Went On (In Long Beach) 1974/01-Daybreaker.mp3
-51:Foreign/ELO/CD-1/05-The Night the Lights Went On (In Long Beach) 1974/02-Showdown.mp3
-52:Foreign/ELO/CD-1/05-The Night the Lights Went On (In Long Beach) 1974/03-Day Tripper.mp3
-53:Foreign/ELO/CD-1/05-The Night the Lights Went On (In Long Beach) 1974/04-10538 Overture.mp3
-54:Foreign/ELO/CD-1/05-The Night the Lights Went On (In Long Beach) 1974/05-Mik's Solo-Orange Blossom Special.mp3
-55:Foreign/ELO/CD-1/05-The Night the Lights Went On (In Long Beach) 1974/06-In the Hall of the Mountain King-Great Balls of Fire.mp3
-56:Foreign/ELO/CD-1/05-The Night the Lights Went On (In Long Beach) 1974/07-Roll over Beethoven.mp3
-57:Foreign/ELO/CD-1/06-Face The Music 1975/01-Fire On High.mp3
-58:Foreign/ELO/CD-1/06-Face The Music 1975/02-Waterfall.mp3
-59:Foreign/ELO/CD-1/06-Face The Music 1975/03-Evil Woman.mp3
-60:Foreign/ELO/CD-1/06-Face The Music 1975/04-Nightrider.mp3
-61:Foreign/ELO/CD-1/06-Face The Music 1975/05-Poker.mp3
-62:Foreign/ELO/CD-1/06-Face The Music 1975/06-Strange Magic.mp3
-63:Foreign/ELO/CD-1/06-Face The Music 1975/07-Down Home Town.mp3
-64:Foreign/ELO/CD-1/06-Face The Music 1975/08-One Summer Dream.mp3
-65:Foreign/ELO/CD-1/07-A New World Records 1976/01-Tightrope.mp3
-66:Foreign/ELO/CD-1/07-A New World Records 1976/02-Telephone Line.mp3
-67:Foreign/ELO/CD-1/07-A New World Records 1976/03-Rockaria!.mp3
-68:Foreign/ELO/CD-1/07-A New World Records 1976/04-Mission (A World Record).mp3
-69:Foreign/ELO/CD-1/07-A New World Records 1976/05-So Fine.mp3
-70:Foreign/ELO/CD-1/07-A New World Records 1976/06-Livin' Thing.mp3
-71:Foreign/ELO/CD-1/07-A New World Records 1976/07-Above The Clouds.mp3
-72:Foreign/ELO/CD-1/07-A New World Records 1976/08-Do Ya.mp3
-73:Foreign/ELO/CD-1/07-A New World Records 1976/09-Shangri-La.mp3
-74:Foreign/ELO/CD-1/08-Out Of The Blue 1977/01-Turn To Stone.mp3
-75:Foreign/ELO/CD-1/08-Out Of The Blue 1977/02-It's Over.mp3
-76:Foreign/ELO/CD-1/08-Out Of The Blue 1977/03-Sweet Talkin' Woman.mp3
-77:Foreign/ELO/CD-1/08-Out Of The Blue 1977/04-Across The Border.mp3
-78:Foreign/ELO/CD-1/08-Out Of The Blue 1977/05-Night In The City.mp3
-79:Foreign/ELO/CD-1/08-Out Of The Blue 1977/06-Starlight.mp3
-80:Foreign/ELO/CD-1/08-Out Of The Blue 1977/07-Jungle.mp3
-81:Foreign/ELO/CD-1/08-Out Of The Blue 1977/08-Believe Me Now.mp3
-82:Foreign/ELO/CD-1/08-Out Of The Blue 1977/09-Steppin' Out.mp3
-83:Foreign/ELO/CD-1/08-Out Of The Blue 1977/10-Standin' In The Rain.mp3
-84:Foreign/ELO/CD-1/08-Out Of The Blue 1977/11-Big Wheels.mp3
-85:Foreign/ELO/CD-1/08-Out Of The Blue 1977/12-Summer And Lightning.mp3
-86:Foreign/ELO/CD-1/08-Out Of The Blue 1977/13-Mr. Blue Sky.mp3
-87:Foreign/ELO/CD-1/08-Out Of The Blue 1977/14-Sweet Is The Night.mp3
-88:Foreign/ELO/CD-1/08-Out Of The Blue 1977/15-The Whale.mp3
-89:Foreign/ELO/CD-1/08-Out Of The Blue 1977/16-Birmingham Blues.mp3
-90:Foreign/ELO/CD-1/08-Out Of The Blue 1977/17-Wild West Hero.mp3
-91:Foreign/ELO/CD-1/09-Eldorado Live in Osaka Japan 1978 (CD1) 1978/01-Fire on High.mp3
-92:Foreign/ELO/CD-1/09-Eldorado Live in Osaka Japan 1978 (CD1) 1978/02-Night In The City.mp3
-93:Foreign/ELO/CD-1/09-Eldorado Live in Osaka Japan 1978 (CD1) 1978/03-Turn To Stone.mp3
-94:Foreign/ELO/CD-1/09-Eldorado Live in Osaka Japan 1978 (CD1) 1978/04-Eldorado Overture.mp3
-95:Foreign/ELO/CD-1/09-Eldorado Live in Osaka Japan 1978 (CD1) 1978/05-Cello Solo.mp3
-96:Foreign/ELO/CD-1/09-Eldorado Live in Osaka Japan 1978 (CD1) 1978/06-Tightrope.mp3
-97:Foreign/ELO/CD-1/09-Eldorado Live in Osaka Japan 1978 (CD1) 1978/07-Telephone Line.mp3
-98:Foreign/ELO/CD-1/09-Eldorado Live in Osaka Japan 1978 (CD1) 1978/08-Rockaria!.mp3
-99:Foreign/ELO/CD-1/09-Eldorado Live in Osaka Japan 1978 (CD1) 1978/09-Violin Solo.mp3
-100:Foreign/ELO/CD-1/10-Eldorado Live in Osaka Japan 1978 (CD2) 1978/01-Strange Magic.mp3
-101:Foreign/ELO/CD-1/10-Eldorado Live in Osaka Japan 1978 (CD2) 1978/02-Showdown.mp3
-102:Foreign/ELO/CD-1/10-Eldorado Live in Osaka Japan 1978 (CD2) 1978/03-Sweet Talkin' Woman.mp3
-103:Foreign/ELO/CD-1/10-Eldorado Live in Osaka Japan 1978 (CD2) 1978/04-Evil Woman.mp3
-104:Foreign/ELO/CD-1/10-Eldorado Live in Osaka Japan 1978 (CD2) 1978/05-Livin' Thing.mp3
-105:Foreign/ELO/CD-1/10-Eldorado Live in Osaka Japan 1978 (CD2) 1978/06-Do Ya.mp3
-106:Foreign/ELO/CD-1/10-Eldorado Live in Osaka Japan 1978 (CD2) 1978/07-Ma-Ma-Ma- Belle.mp3
-107:Foreign/ELO/CD-1/10-Eldorado Live in Osaka Japan 1978 (CD2) 1978/08-Roll Over Beethoven.mp3
-108:Foreign/ELO/CD-1/11-Discovery 1979/01-Shine a Little Love.mp3
-109:Foreign/ELO/CD-1/11-Discovery 1979/02-Confusion.mp3
-110:Foreign/ELO/CD-1/11-Discovery 1979/03-Need Her Love.mp3
-111:Foreign/ELO/CD-1/11-Discovery 1979/04-The Diary of Horace Wimp.mp3
-112:Foreign/ELO/CD-1/11-Discovery 1979/05-Last Train to London.mp3
-113:Foreign/ELO/CD-1/11-Discovery 1979/06-Midnight Blue.mp3
-114:Foreign/ELO/CD-1/11-Discovery 1979/07-On the Run.mp3
-115:Foreign/ELO/CD-1/11-Discovery 1979/08-Wishing.mp3
-116:Foreign/ELO/CD-1/11-Discovery 1979/09-Don't Bring Me Down.mp3
-117:Foreign/ELO/CD-2/01-Electric Light Orchestra/01-Xanadu 1980/01-Magic.mp3
-118:Foreign/ELO/CD-2/01-Electric Light Orchestra/01-Xanadu 1980/02-Suddenly.mp3
-119:Foreign/ELO/CD-2/01-Electric Light Orchestra/01-Xanadu 1980/03-Dancin.mp3
-120:Foreign/ELO/CD-2/01-Electric Light Orchestra/01-Xanadu 1980/04-Suspend In Time.mp3
-121:Foreign/ELO/CD-2/01-Electric Light Orchestra/01-Xanadu 1980/05-Whenever You're Away From Me.mp3
-122:Foreign/ELO/CD-2/01-Electric Light Orchestra/01-Xanadu 1980/06-I'm Alive.mp3
-123:Foreign/ELO/CD-2/01-Electric Light Orchestra/01-Xanadu 1980/07-The Fall.mp3
-124:Foreign/ELO/CD-2/01-Electric Light Orchestra/01-Xanadu 1980/08-Don't Walk Away.mp3
-125:Foreign/ELO/CD-2/01-Electric Light Orchestra/01-Xanadu 1980/09-All Over The World.mp3
-126:Foreign/ELO/CD-2/01-Electric Light Orchestra/01-Xanadu 1980/10-Xanadu.mp3
-127:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/01-Prologue.mp3
-128:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/02-Twilgight.mp3
-129:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/03-Yours Truly, 2095.mp3
-130:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/04-Ticket To The Moon.mp3
-131:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/05-The Way Life's meant To Be.mp3
-132:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/06-Another Heart Breaks.mp3
-133:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/07-Rain Is Falling.mp3
-134:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/08-From The End Of The World.mp3
-135:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/09-The Lights Go Down.mp3
-136:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/10-Here Is The News.mp3
-137:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/11-21st Century Man.mp3
-138:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/12-Hold On Tide.mp3
-139:Foreign/ELO/CD-2/01-Electric Light Orchestra/02-Time 1981/13-Epilogue.mp3
-140:Foreign/ELO/CD-2/01-Electric Light Orchestra/03-Secret Messages 1983/01-Secret Messages.mp3
-141:Foreign/ELO/CD-2/01-Electric Light Orchestra/03-Secret Messages 1983/02-Loser Gone Wild.mp3
-142:Foreign/ELO/CD-2/01-Electric Light Orchestra/03-Secret Messages 1983/03-Bluebird.mp3
-143:Foreign/ELO/CD-2/01-Electric Light Orchestra/03-Secret Messages 1983/04-Take Me On And On.mp3
-144:Foreign/ELO/CD-2/01-Electric Light Orchestra/03-Secret Messages 1983/05-Time After Time.mp3
-145:Foreign/ELO/CD-2/01-Electric Light Orchestra/03-Secret Messages 1983/06-Four Little Diamonds.mp3
-146:Foreign/ELO/CD-2/01-Electric Light Orchestra/03-Secret Messages 1983/07-Stranger.mp3
-147:Foreign/ELO/CD-2/01-Electric Light Orchestra/03-Secret Messages 1983/08-Danger Ahead.mp3
-148:Foreign/ELO/CD-2/01-Electric Light Orchestra/03-Secret Messages 1983/09-Letter From Spain.mp3
-149:Foreign/ELO/CD-2/01-Electric Light Orchestra/03-Secret Messages 1983/10-Train Of Gold.mp3
-150:Foreign/ELO/CD-2/01-Electric Light Orchestra/03-Secret Messages 1983/11-Rock 'N' Roll Is King.mp3
-151:Foreign/ELO/CD-2/01-Electric Light Orchestra/04-Balance Of Power 1986/01-Heaven Only Knows.mp3
-152:Foreign/ELO/CD-2/01-Electric Light Orchestra/04-Balance Of Power 1986/02-So Serious.mp3
-153:Foreign/ELO/CD-2/01-Electric Light Orchestra/04-Balance Of Power 1986/03-Getting To The Point.mp3
-154:Foreign/ELO/CD-2/01-Electric Light Orchestra/04-Balance Of Power 1986/04-Secret Lives.mp3
-155:Foreign/ELO/CD-2/01-Electric Light Orchestra/04-Balance Of Power 1986/05-Is It Alright.mp3
-156:Foreign/ELO/CD-2/01-Electric Light Orchestra/04-Balance Of Power 1986/06-Sorrow About To Fall.mp3
-157:Foreign/ELO/CD-2/01-Electric Light Orchestra/04-Balance Of Power 1986/07-Without Someone.mp3
-158:Foreign/ELO/CD-2/01-Electric Light Orchestra/04-Balance Of Power 1986/08-Calling America.mp3
-159:Foreign/ELO/CD-2/01-Electric Light Orchestra/04-Balance Of Power 1986/09-Endless Lies.mp3
-160:Foreign/ELO/CD-2/01-Electric Light Orchestra/04-Balance Of Power 1986/10-Send It.mp3
-161:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/15-Roll Over Beethoven.mp3
-162:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/01-Intro - Tony Curtis.mp3
-163:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/02-Standin' in the Rain.mp3
-164:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/03-Night in the City.mp3
-165:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/04-Turn to Stone.mp3
-166:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/05-Tightrope.mp3
-167:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/06-Telephone Line.mp3
-168:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/07-Rockaria!.mp3
-169:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/08-Wild West Hero.mp3
-170:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/09-Showdown.mp3
-171:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/10-Bev Bevan talks.mp3
-172:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/11-Sweet Talkin' Woman.mp3
-173:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/12-Mr Blue Sky.mp3
-174:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/13-Do Ya.mp3
-175:Foreign/ELO/CD-2/01-Electric Light Orchestra/05-Live at Wembley'78 1988/14-Livin' Thing.mp3
-176:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/01-Alright.mp3
-177:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/02-Moment In Paradise.mp3
-178:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/03-State Of Mind.mp3
-179:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/04-Just For Love.mp3
-180:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/05-Stranger On A Quiet Street.mp3
-181:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/06-In My Own Time.mp3
-182:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/07-Easy Money.mp3
-183:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/08-It Really Doesn't Matter.mp3
-184:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/09-Ordinary Dream.mp3
-185:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/10-A Long Time Gone.mp3
-186:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/11-Melting In The Sun.mp3
-187:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/12-All She Wanted.mp3
-188:Foreign/ELO/CD-2/01-Electric Light Orchestra/06-Zoom 2001/13-Lonesome Lullaby.mp3
-189:Foreign/ELO/CD-2/02-Electric Light Orchestra II/01-Electric Light Orchestra Part II 1991/01-Hello.mp3
-190:Foreign/ELO/CD-2/02-Electric Light Orchestra II/01-Electric Light Orchestra Part II 1991/02-Honest Men.mp3
-191:Foreign/ELO/CD-2/02-Electric Light Orchestra II/01-Electric Light Orchestra Part II 1991/03-Every Night.mp3
-192:Foreign/ELO/CD-2/02-Electric Light Orchestra II/01-Electric Light Orchestra Part II 1991/04-Once Upon A Time.mp3
-193:Foreign/ELO/CD-2/02-Electric Light Orchestra II/01-Electric Light Orchestra Part II 1991/05-HeartBreaker.mp3
-194:Foreign/ELO/CD-2/02-Electric Light Orchestra II/01-Electric Light Orchestra Part II 1991/06-Thousand Eyes.mp3
-195:Foreign/ELO/CD-2/02-Electric Light Orchestra II/01-Electric Light Orchestra Part II 1991/07-For The Love Of A Woman.mp3
-196:Foreign/ELO/CD-2/02-Electric Light Orchestra II/01-Electric Light Orchestra Part II 1991/08-Kiss Me Red.mp3
-197:Foreign/ELO/CD-2/02-Electric Light Orchestra II/01-Electric Light Orchestra Part II 1991/09-Heart Of Hearts.mp3
-198:Foreign/ELO/CD-2/02-Electric Light Orchestra II/01-Electric Light Orchestra Part II 1991/10-Easy Street.mp3
-199:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/01-Moment Of Truth.mp3
-200:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/02-Breakin4 Down The Walls.mp3
-201:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/03-Power Of Million Lights.mp3
-202:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/04-Interlude 3.mp3
-203:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/05-One More Tomorrow.mp3
-204:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/06-Don't Wanna.mp3
-205:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/07-Voices.mp3
-206:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/08-Interlude 2.mp3
-207:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/09-Vixen.mp3
-208:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/10-The Fox.mp3
-209:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/11-Love Or Money.mp3
-210:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/12-Blue Violin.mp3
-211:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/13-Whiskey Girls.mp3
-212:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/14-Interlude 1.mp3
-213:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/15-Twist Of The Knife.mp3
-214:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/16-So Glad You Said Goodbye.mp3
-215:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/17-Underture.mp3
-216:Foreign/ELO/CD-2/02-Electric Light Orchestra II/02-Moment Of Truth 1994/18-The Leaving.mp3
-217:Foreign/ELO/CD-2/03-B-Sides & Unreleased/01-Afterglow 1990/01-Julie Don't Live Here.mp3
-218:Foreign/ELO/CD-2/03-B-Sides & Unreleased/01-Afterglow 1990/04-Hello My Old Friend.mp3
-219:Foreign/ELO/CD-2/03-B-Sides & Unreleased/01-Afterglow 1990/05-Mandalay.mp3
-220:Foreign/ELO/CD-2/03-B-Sides & Unreleased/01-Afterglow 1990/06-Buildings Have Eyes.mp3
-221:Foreign/ELO/CD-2/03-B-Sides & Unreleased/01-Afterglow 1990/07-A Matter Of Fact.mp3
-222:Foreign/ELO/CD-2/03-B-Sides & Unreleased/01-Afterglow 1990/09-Destination Unknow.mp3
-223:Foreign/ELO/CD-2/03-B-Sides & Unreleased/01-Afterglow 1990/02-When Time Stood Still.mp3
-224:Foreign/ELO/CD-2/03-B-Sides & Unreleased/01-Afterglow 1990/03-The Bouncer.mp3
-225:Foreign/ELO/CD-2/03-B-Sides & Unreleased/01-Afterglow 1990/08-No Way Out.mp3
-226:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/01-Tony Curtis - Intro (Live).mp3
-227:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/02-Electric Light Orchestra - Rockaria!.mp3
-228:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/03-Electric Light Orchestra - Telephone Line.mp3
-229:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/04-Wizzard - Are You ready To Rock.mp3
-230:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/05-Bev Bevan - Let There Be Drums.mp3
-231:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/06-The Move - Fie Brigade.mp3
-232:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/07-Rick Price - Top Ten Record.mp3
-233:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/08-Rick Wakeman with Roy Wood - Custer's Last Stand.mp3
-234:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/09-Denny Laine - In Time.mp3
-235:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/10-Carl Wayne with Choral Union - Someday.mp3
-236:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/11-Violinski - Clog Dance.mp3
-237:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/12-Tandy Morgan - Under The Blue Asteroid.mp3
-238:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/13-Roy Wood - Any Old Time Will Do.mp3
-239:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/14-Electric Light Orchestra - Evil Woman.mp3
-240:Foreign/ELO/CD-2/03-B-Sides & Unreleased/02-Friends And Relatives (CD1) 1999/15-Electric Light Orchestra - Do Ya.mp3
-241:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/01-Electric Light Orchestra - Mr. Blue Sky (Live).mp3
-242:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/02-Electric Light Orchestra - Livin' Thing (Live).mp3
-243:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/03-The Move - Flowers In The Rain.mp3
-244:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/04-Wizzard - Rock 'n' Roll Winter (Loony's Tune).mp3
-245:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/05-Rick Price - Bitter Sweet.mp3
-246:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/06-Tandy Morgan - Pictures In My Pillow.mp3
-247:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/07-Bev Bevan - Heavy Head.mp3
-248:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/08-Carl Wayne With Choral Union - Miss You Nights.mp3
-249:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/09-Denny Laine - Eternal Quest.mp3
-250:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/10-Tandy Morgan - Ria.mp3
-251:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/11-Roy Wood - Oh What A Shame.mp3
-252:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/12-The Move - Blackberry Way.mp3
-253:Foreign/ELO/CD-2/03-B-Sides & Unreleased/03-Friends and Relatives (CD2) 1999/13-Electric Light Orchestra - Roll Over Beethoven (Live).mp3
-254:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_01_-_Baby_I_Apologize_1973.mp3
-255:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_02_-_Drum_Dreams_1980.mp3
-256:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_03_-_Julie_Dont_Live_Here_1981.mp3
-257:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_04_-_When_Time_Stood_Still_1981.mp3
-258:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_05_-_After_All_1983.mp3
-259:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_06_-_Time_After_Time_1983.mp3
-260:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_07_-_Hello_My_Old_Friend_1983.mp3
-261:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_08_-_Buildings_Have_Eyes_1983.mp3
-262:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_09_-_Mandalay_1983.mp3
-263:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_10_-_Bouncer_1983.mp3
-264:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_11_-_No_Way_Out_1983.mp3
-265:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_12_-_Caught_In_A_Trap_1986.mp3
-266:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_13_-_A_Matter_Of_Fact_1986.mp3
-267:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_14_-_A_Matter_Of_Fact_Alternative_Lyric_1986.mp3
-268:Foreign/ELO/CD-2/1995-Singles And Rarities/Electric_Light_Orchestra_-_15_-_Destination_Unknown_1986.mp3
-269:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/01. Alright.mp3
-270:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/02. Turn To Stone.mp3
-271:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/03. Twilight.mp3
-272:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/04. Secret Messages.mp3
-273:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/05. Ticket To The Moon.mp3
-274:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/06. Evil Woman.mp3
-275:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/07. Livin' Thing.mp3
-276:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/08. Just For Love.mp3
-277:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/09. Xanadu [New Version].mp3
-278:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/10. Love Changes All.mp3
-279:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/11. Ordinary Dream.mp3
-280:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/12. Last Train To London.mp3
-281:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/13. Now You're Gone.mp3
-282:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/14. Moment In Paradise.mp3
-283:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/15. Four Little Diamonds.mp3
-284:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/16. Strange Magic.mp3
-285:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/17. Showdown.mp3
-286:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/18. Telephone Line.mp3
-287:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/19. Don't Bring Me Down.mp3
-288:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 1/20. Mr. Blue Sky.mp3
-289:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/01. Helpless.mp3
-290:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/02. Sweet Talkin' Woman.mp3
-291:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/03. Shine A Little Love.mp3
-292:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/04. A Long Time Gone.mp3
-293:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/05. So Serious.mp3
-294:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/06. All Over The World.mp3
-295:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/07. I'm Alive.mp3
-296:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/08. Calling America.mp3
-297:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/09. Can't Get It Out Of My Head.mp3
-298:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/10. The Diary Of Horace Wimp.mp3
-299:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/11. Confusion.mp3
-300:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/12. Melting In The Sun.mp3
-301:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/13. Every Little Thing.mp3
-302:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/14. Stranger On A Quiet Street.mp3
-303:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/15. Don't Say Goodbye.mp3
-304:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/16. It Really Doesn't Matter.mp3
-305:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/17. Great Balls Of Fire.mp3
-306:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/18. Rock & Roll Is King.mp3
-307:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/19. Hold On Tight.mp3
-308:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/20. Do Ya.mp3
-309:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/21. 10538 Overture.mp3
-310:Foreign/ELO/Electric Light Orchestra - Crossover Prog (2008)/CD 2/22. Roll Over Beethoven.mp3
+0:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/01. Speak To Me - Breathe.m4a
+1:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/02. On The Run.m4a
+2:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/03. Time.m4a
+3:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/04. The Great Gig In The Sky.m4a
+4:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/05. Money.m4a
+5:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/06. Us And Them.m4a
+6:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/07. Any Colour You Like.m4a
+7:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/08. Brain Damage.m4a
+8:Foreign/Pink Floyd [Vinyl]/1973 - The Dark Side of the Moon/09. Eclipse.m4a
+9:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/01. Shine On You Crazy Diamond (Part 1-5).m4a
+10:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/02. Welcome To The Machine.m4a
+11:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/03. Have A Cigar.m4a
+12:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/04. Wish You Were Here.m4a
+13:Foreign/Pink Floyd [Vinyl]/1975 - Wish You Were Here/05. Shine On You Crazy Diamond (Part 6-9).m4a
+14:Foreign/Pink Floyd [Vinyl]/1977 - Animals/01. Pigs on the Wing (Part 1).m4a
+15:Foreign/Pink Floyd [Vinyl]/1977 - Animals/02. Dogs.m4a
+16:Foreign/Pink Floyd [Vinyl]/1977 - Animals/03. Pigs (Three Different Ones).m4a
+17:Foreign/Pink Floyd [Vinyl]/1977 - Animals/04. Sheep.m4a
+18:Foreign/Pink Floyd [Vinyl]/1977 - Animals/05. Pigs on the Wing (Part 2).m4a
+19:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/01. In The Flesh.m4a
+20:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/02. The Thin Ice.m4a
+21:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/03. Another Brick In The Wall (Part 1).m4a
+22:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/04. The Happiest Days Of Our Lives.m4a
+23:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/05. Another Brick In The Wall (Part 2).m4a
+24:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/06. Mother.m4a
+25:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/07. Goodbye Blue Sky.m4a
+26:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/08. Empty Spaces.m4a
+27:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/09. Young Lust.m4a
+28:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/10. One of My Turns.m4a
+29:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/11. Don't Leave Me Now.m4a
+30:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/12. Another Brick In The Wall (Part 3).m4a
+31:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 1/13. Goodbye Cruel World.m4a
+32:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/01. Hey You.m4a
+33:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/02. Is There Anybody Out There.m4a
+34:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/03. Nobody Home.m4a
+35:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/04. Vera.m4a
+36:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/05. Bring The Boys Back Home.m4a
+37:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/06. Comfortably Numb.m4a
+38:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/07. The Show Must Go On.m4a
+39:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/08. In The Flesh.m4a
+40:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/09. Run Like Hell.m4a
+41:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/10. Waiting For The Worms.m4a
+42:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/11. Stop.m4a
+43:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/12. The Trial.m4a
+44:Foreign/Pink Floyd [Vinyl]/1979 - The Wall/LP 2/13. Outside The Wall.m4a
 playlist_end

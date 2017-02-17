@@ -357,8 +357,8 @@ globalkeys = awful.util.table.join(
     -- awful.key({                   }, "XF86Sleep",            function () awful.util.spawn(           "slock")                                                end),
     -- awful.key({                   }, "XF86Sleep",            function () awful.util.spawn(           "xautolock --locknow")                                  end),
     -- awful.key({                   }, "Cancel",               function () awful.util.spawn(           "/home/haron/bin/awst")                                 end),
-    awful.key({                   }, "Print",                function () awful.util.spawn(           "scrot -e 'mv $f ~/Screenshots/ 2>/dev/null'")          end),
-    awful.key({ "Mod1"            }, "Print",                function () awful.util.spawn(           "scrot -s -e 'mv $f ~/Screenshots/ 2>/dev/null'")       end),
+    awful.key({                   }, "Print",                function () awful.util.spawn_with_shell("scrot -e 'mv $f ~/Screenshots/ 2>/dev/null'")          end),
+    awful.key({ "Mod1"            }, "Print",                function () awful.util.spawn_with_shell("scrot -s -e 'mv $f ~/Screenshots/ 2>/dev/null'")       end),
     awful.key({                   }, "Menu",                 function () awful.util.spawn_with_shell("gmrun")                                                end),
     awful.key({ "Mod1"            }, "#40",                  function () awful.util.spawn_with_shell("deadbeef")                                             end), -- Alt+d
     awful.key({ "Mod1"            }, "#41",                  function () awful.util.spawn_with_shell("firefox")                                              end), -- Alt+f

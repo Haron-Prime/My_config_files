@@ -152,8 +152,9 @@ hc keybind XF86Calculator          spawn galculator
 hc keybind XF86Sleep               spawn slock
 hc keybind Menu                    spawn gmrun
 
-hc keybind Print                   spawn scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'
-hc keybind Mod1-Print              spawn scrot -s -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'
+hc keybind Print                   spawn scrot -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'
+hc keybind Mod1-Print              spawn scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'
+hc keybind Shift_R-Print           spawn scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'
 
 hc keybind Mod1-F2                 spawn dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'
 
