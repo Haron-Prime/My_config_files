@@ -1,7 +1,7 @@
 
 {
     // If you want exceptions reraised so you can see them in the console, change this to true.
-    "reraise_exceptions": false,
+    "reraise_exceptions": true,
 
     // If you want to have a syntax applied when new files are created, set new_file_syntax to the name of the syntax to use.
     // The format is exactly the same as "name" in the rules below. For example, if you want to have a new file use

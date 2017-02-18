@@ -20,5 +20,5 @@
 		".conf"
 	],
 	"ha_style": "disabled",
-	"style": "disabled"
+	"style": "text"
 }

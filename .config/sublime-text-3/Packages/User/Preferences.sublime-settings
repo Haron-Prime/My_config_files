@@ -27,11 +27,11 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
+		"ApplySyntax",
 		"Color Highlighter",
 		"Configify",
 		"FileBrowser",
 		"Git",
-		"Github Tools",
 		"Google Search",
 		"Image2Base64",
 		"Inline Google Translate",
