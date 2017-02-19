@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/haron/.gtkrc-2.0.mine"
-gtk-theme-name="oomox-haron-dark2"
+gtk-theme-name="oomox-HD1"
 gtk-icon-theme-name="nouveGnomeGray"
 gtk-font-name="SonyEricssonLogo 11"
 gtk-cursor-theme-name="oxy-black"

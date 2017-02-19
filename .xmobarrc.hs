@@ -23,11 +23,8 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     , Run Com "Net_all" [] "" 50
                     , Run Cpu ["-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>%","-L","25","-H","75","--normal","yellow","--high","#ff6500"] 10
                     , Run Com "TCPU" [] "" 10
-                    -- , Run Com "cpu-freq" [] "" 100
                     , Run Com "TMB" [] "" 10
                     , Run Com "TGPU" [] "" 10
-                    -- , Run Com "fan1" [] "" 30
-                    -- , Run Com "fan2" [] "" 30
                     , Run Memory ["-t", "<fc=#cccccc>RAM:</fc><fn=2> </fn><usedratio>%","-L","50","-H","85","--normal","yellow","--high","#ff6500"] 50
                     , Run Com "ROM" [] "" 100
                     , Run Com "xmuptime" [] "" 600

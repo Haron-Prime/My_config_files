@@ -2,8 +2,8 @@ sw_volume: 100
 audio_device_state:1:pulse audio
 audio_device_state:1:my_fifo
 state: play
-current: 25
-time: 4.063000
+current: 6
+time: 4.214000
 random: 0
 repeat: 0
 single: 0
@@ -12,95 +12,187 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/01 The Voice Of Enigma.m4a
-1:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/02 Principles Of Lust [(A) Sadeness,.m4a
-2:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/03 Callas Went Away.m4a
-3:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/04 Mea Culpa.m4a
-4:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/05 The Voice & The Snake.m4a
-5:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/06 Knocking On Forbidden Doors.m4a
-6:Foreign/Enigma (alac)/Альбомы/1990 - MCMXC A.D_/07 Back To The Rivers Of Belief [(A).m4a
-7:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/01 Second Chapter.m4a
-8:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/02 The Eyes Of Truth.m4a
-9:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/03 Return To Innocence.m4a
-10:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/04 I Love You ... I'll Kill You.m4a
-11:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/05 Silent Warrior.m4a
-12:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/06 The Dream Of The Dolphin.m4a
-13:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/07 Age Of Loneliness (Carly's Song).m4a
-14:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/08 Out From The Deep.m4a
-15:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/09 The Cross Of Changes.m4a
-16:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/10 Return To Innocence [Long & Alive.m4a
-17:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/11 Age Of Loneliness (Enigmatic Club.m4a
-18:Foreign/Enigma (alac)/Альбомы/1993 - The Cross Of Changes/12 The Eyes Of Truth (The Götterdämm.m4a
-19:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/01 Le Roi Est Mort, Vive Le Roi!.m4a
-20:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/02 Morphing Thru Time.m4a
-21:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/03 Third Of Its Kind.m4a
-22:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/04 Beyond The Invisible.m4a
-23:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/05 Why! ....m4a
-24:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/06 Shadows In Silence.m4a
-25:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/07 The Child In Us.m4a
-26:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/08 T.N.T. For The Brain.m4a
-27:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/09 Almost Full Moon.m4a
-28:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/10 The Roundabout.m4a
-29:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/11 Prism Of Life.m4a
-30:Foreign/Enigma (alac)/Альбомы/1996 - Le Roi Est Mort, Vive Le Roi!/12 Odyssey Of The Mind.m4a
-31:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/01 - The Gate.m4a
-32:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/02 - Push the Limits.m4a
-33:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/03 - Gravity of Love.m4a
-34:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/04 - Smell of Desire.m4a
-35:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/05 - Modern Crusaders.m4a
-36:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/06 - Traces (Light and Weight).m4a
-37:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/07 - The Screen Behind the Mirror.m4a
-38:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/08 - Endless Quest.m4a
-39:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/09 - Camera Obscura.m4a
-40:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/10 - Between Mind & Heart.m4a
-41:Foreign/Enigma (alac)/Альбомы/2000 - The Screen Behind the Mirror/11 - Silence Must Be Heard.m4a
-42:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/01 From East To West.m4a
-43:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/02 Voyageur.m4a
-44:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/03 Incognito.m4a
-45:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/04 Page Of Cups.m4a
-46:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/05 Boum-Boum.m4a
-47:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/06 Total Eclipse Of The Moon.m4a
-48:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/07 Look Of Today.m4a
-49:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/08 In The Shadow, In The Light.m4a
-50:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/09 Weightless.m4a
-51:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/10 The Piano.m4a
-52:Foreign/Enigma (alac)/Альбомы/2003 - Voyageur/11 Following The Sun.m4a
-53:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/01 Hello & Welcome (The Single).m4a
-54:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/02 The Child In Us.m4a
-55:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/03 Age Of Loneliness.m4a
-56:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/04 Eyes Of Truth.m4a
-57:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/05 Rivers Of Belief.m4a
-58:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/06 Endless Quest.m4a
-59:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/07 Sadeness PT 1.m4a
-60:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/08 Voyageur.m4a
-61:Foreign/Enigma (alac)/Альбомы/2005 - The Dusted Variations (15 Years After - The Bonus CD)/09 Beyond The Invisible.m4a
-62:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/01 Eppur Si Muove.m4a
-63:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/02 Feel Me Heaven.m4a
-64:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/03 Dreaming Of Andromeda.m4a
-65:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/04 Dancing With Mephisto.m4a
-66:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/05 Northern Lights.m4a
-67:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/06 Invisible Love.m4a
-68:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/07 Message From 10.m4a
-69:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/08 Hello And Welcome.m4a
-70:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/09 20.000 Miles Over The Sea.m4a
-71:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/10 Sitting On The Moon.m4a
-72:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/11 The Alchemist.m4a
-73:Foreign/Enigma (alac)/Альбомы/2006 - A Posteriori/12 Goodbye Milky Way.m4a
-74:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/01 Encounters.m4a
-75:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/02 Seven Lives.m4a
-76:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/03 Touchness.m4a
-77:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/04 The Same Parents.m4a
-78:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/05 Fata Morgana (Instrumental).m4a
-79:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/06 Hell's Heaven.m4a
-80:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/07 La Puerta Del Cielo.m4a
-81:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/08 Distorted Love.m4a
-82:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/09 Ja T'aime Till My Dying Day.m4a
-83:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/10 Deja Vu (Instrumental).m4a
-84:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/11 Between Generations.m4a
-85:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD1/12 The Language Of Sound.m4a
-86:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD2/2-01 Superficial.m4a
-87:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD2/2-02 We Are Nature.m4a
-88:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD2/2-03 Downtown Silence.m4a
-89:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD2/2-04 Sunrise.m4a
-90:Foreign/Enigma (alac)/Альбомы/2008 - Seven Lives Many Faces/CD2/2-05 The Language Of Sound (Slow Edi.m4a
+0:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/01. Триллипут.mp3
+1:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/02. Кошка, чашка, муха и лапоть.mp3
+2:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/03. Том ждет.mp3
+3:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/04. Настасья.mp3
+4:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/05. Элизобарра-торр.mp3
+5:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/06. Моя звезда.mp3
+6:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/07. Вот тогда, любовь моя.mp3
+7:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/08. Запасные сны.mp3
+8:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/09. Десять шагов.mp3
+9:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/10. Лабрадор-Гибралтар.mp3
+10:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/11. Берег.mp3
+11:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/12. Венера.mp3
+12:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/13. Песня о песне.mp3
+13:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/14. Бибигон-II.mp3
+14:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/15. Скважина.mp3
+15:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/16. Вертолет.mp3
+16:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/17. Звезда поэта.mp3
+17:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/18. В генеральный час уборки.mp3
+18:Russian/Бутусов/+ Сборники/2002 - Большая Российская Музыкальная Энциклопедия/19. Черный пудель.mp3
+19:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/01. Человек идущий домой.mp3
+20:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/02. Гибралтар-Лабрадор.mp3
+21:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/03. Берег.mp3
+22:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/04. Квазифольклорная зомбическая.mp3
+23:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/05. Бибигон-209.mp3
+24:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/06. Кошка, чашка, муха и лапоть.mp3
+25:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/07. Ударная любовь.mp3
+26:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/08. Антарктида.mp3
+27:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/09. Настасья.mp3
+28:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/10. На лианах.mp3
+29:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/11. Ерема в ответе.mp3
+30:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/12. Триллипут.mp3
+31:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/13. Хлоп-хлоп.mp3
+32:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/14. Вот тогда любовь моя.mp3
+33:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/15. Венера.mp3
+34:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/16. Элизобарра-торр.mp3
+35:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/17. Дух назойливый.mp3
+36:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/18. В.С.О.С..mp3
+37:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/19. Звездочка.mp3
+38:Russian/Бутусов/+ Сборники/2004 - Русские звёзды/20. Звезда по имени солнце.mp3
+39:Russian/Бутусов/+ Сборники/2005 - Избраное/01. Мера.mp3
+40:Russian/Бутусов/+ Сборники/2005 - Избраное/02. Гибралтар - Лабрадор.mp3
+41:Russian/Бутусов/+ Сборники/2005 - Избраное/03. Белые пятна.mp3
+42:Russian/Бутусов/+ Сборники/2005 - Избраное/04. Настасья.mp3
+43:Russian/Бутусов/+ Сборники/2005 - Избраное/05. Моя звезда.mp3
+44:Russian/Бутусов/+ Сборники/2005 - Избраное/06. Песня идущего домой.mp3
+45:Russian/Бутусов/+ Сборники/2005 - Избраное/07. Триллипут.mp3
+46:Russian/Бутусов/+ Сборники/2005 - Избраное/08. Ерема в ответе.mp3
+47:Russian/Бутусов/+ Сборники/2005 - Избраное/09. Кошка, чашка, муха и лапоть.mp3
+48:Russian/Бутусов/+ Сборники/2005 - Избраное/10. Девушка по городу.mp3
+49:Russian/Бутусов/+ Сборники/2005 - Избраное/11. Вот тогда любовь моя.mp3
+50:Russian/Бутусов/+ Сборники/2005 - Избраное/12. Из реки.mp3
+51:Russian/Бутусов/+ Сборники/2005 - Избраное/13. Ударная любовь.mp3
+52:Russian/Бутусов/+ Сборники/2005 - Избраное/14. Элизобарраторр.mp3
+53:Russian/Бутусов/+ Сборники/2005 - Избраное/15. Колесницегонитель.mp3
+54:Russian/Бутусов/+ Сборники/2005 - Избраное/16. Юпитер на страже.mp3
+55:Russian/Бутусов/+ Сборники/2005 - Избраное/17. Эхолов.mp3
+56:Russian/Бутусов/+ Сборники/2005 - Избраное/18. Настасья (с участием Пелагеи).mp3
+57:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/01. Песня идущего домой.mp3
+58:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/02. Девушка по городу.mp3
+59:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/03. Я покидаю землю.mp3
+60:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/04. Белые пятна.mp3
+61:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/05. Берег.mp3
+62:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/06. Бибигон II.mp3
+63:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/07. В.С.О.С..mp3
+64:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/08. Песня о песне.mp3
+65:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/09. Настасья.mp3
+66:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/10. Ударная любовь.mp3
+67:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/11. Чудеса небесны.mp3
+68:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/12. Во сне.mp3
+69:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/13. Гибралтар-Лабрадор.mp3
+70:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/14. Колесницегонитель.mp3
+71:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/15. Эхолов.mp3
+72:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/16. Сердце Эллина.mp3
+73:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/17. Вот тогда любовь моя.mp3
+74:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/18. Странглия.mp3
+75:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/19. Мера.mp3
+76:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/20. Триллипут.mp3
+77:Russian/Бутусов/+ Сборники/2006 - Лучшие песни. Новая коллекция/21. Элизобарра-Торр.mp3
+78:Russian/Бутусов/+ Синглы/2000 - Настасья/01. Настасья.mp3
+79:Russian/Бутусов/+ Синглы/2000 - Настасья/02. Том.mp3
+80:Russian/Бутусов/+ Синглы/2000 - Настасья/03. Гибралтар-Лабрадор.mp3
+81:Russian/Бутусов/+ Синглы/2000 - Настасья/04. Настасья (Версия).mp3
+82:Russian/Бутусов/+ Синглы/2000 - Настасья/05. Гибралтар-Лабрадор (Ремикс).mp3
+83:Russian/Бутусов/1985 - Степ Мост/01. Мечта.mp3
+84:Russian/Бутусов/1985 - Степ Мост/02. Меткий стрелок.mp3
+85:Russian/Бутусов/1985 - Степ Мост/03. Карандаш по стеклу.mp3
+86:Russian/Бутусов/1985 - Степ Мост/04. Посвящение 'N'.mp3
+87:Russian/Бутусов/1985 - Степ Мост/05. Защити.mp3
+88:Russian/Бутусов/1985 - Степ Мост/06. Окна друзей.mp3
+89:Russian/Бутусов/1985 - Степ Мост/07. Заповедник духа.mp3
+90:Russian/Бутусов/1985 - Степ Мост/08. Завтра будет солнце.mp3
+91:Russian/Бутусов/1985 - Степ Мост/09. Bonus - Аэропорт.mp3
+92:Russian/Бутусов/1985 - Степ Мост/10. Bonus - Птицелов.mp3
+93:Russian/Бутусов/1985 - Степ Мост/11. Bonus - Золотое кольцо.mp3
+94:Russian/Бутусов/1985 - Степ Мост/12. Bonus - Rock-n-Roll под облака.mp3
+95:Russian/Бутусов/1985 - Степ Мост/13. Bonus - Название в прошлом.mp3
+96:Russian/Бутусов/1997 - НезаконНоРожденный/01. Дума об Уйме студиозуса Вагнер.mp3
+97:Russian/Бутусов/1997 - НезаконНоРожденный/02. Дух Назойливый.mp3
+98:Russian/Бутусов/1997 - НезаконНоРожденный/03. Швайнехунде.mp3
+99:Russian/Бутусов/1997 - НезаконНоРожденный/04. Квазифольклорная Зомбическая.mp3
+100:Russian/Бутусов/1997 - НезаконНоРожденный/05. В генеральный час уборки.mp3
+101:Russian/Бутусов/1997 - НезаконНоРожденный/06. Пещерный гимн Пернатого Змея.mp3
+102:Russian/Бутусов/1997 - НезаконНоРожденный/07. Моление о тишине Золотой Рыбки.mp3
+103:Russian/Бутусов/1997 - НезаконНоРожденный/08. In vitro.mp3
+104:Russian/Бутусов/1997 - НезаконНоРожденный/09. Вассар и Масса.mp3
+105:Russian/Бутусов/1997 - НезаконНоРожденный/10. Заговор против Херочувствия.mp3
+106:Russian/Бутусов/1997 - НезаконНоРожденный/11. История Кентавра и Всадницы.mp3
+107:Russian/Бутусов/1997 - НезаконНоРожденный/12. Чёрный пудель.mp3
+108:Russian/Бутусов/1997 - НезаконНоРожденный/13. Письмо Махатме.mp3
+109:Russian/Бутусов/1998 - Овалы (сольник Бутусова)/01. Звездочка.mp3
+110:Russian/Бутусов/1998 - Овалы (сольник Бутусова)/02. Вертолет.mp3
+111:Russian/Бутусов/1998 - Овалы (сольник Бутусова)/03. Птица-паровоз.mp3
+112:Russian/Бутусов/1998 - Овалы (сольник Бутусова)/04. Песня о песне.mp3
+113:Russian/Бутусов/1998 - Овалы (сольник Бутусова)/05. Скважина.mp3
+114:Russian/Бутусов/1998 - Овалы (сольник Бутусова)/06. Звезда поэта.mp3
+115:Russian/Бутусов/1998 - Овалы (сольник Бутусова)/07. Берег.mp3
+116:Russian/Бутусов/1998 - Овалы (сольник Бутусова)/08. Три поросера.mp3
+117:Russian/Бутусов/1998 - Овалы (сольник Бутусова)/09. Бибигон-2.mp3
+118:Russian/Бутусов/1998 - Овалы (сольник Бутусова)/10. Венера.mp3
+119:Russian/Бутусов/1998 - Овалы (сольник Бутусова)/11. В.С.О.С..mp3
+120:Russian/Бутусов/1998 - Овалы (сольник Бутусова)/12. Конь.mp3
+121:Russian/Бутусов/2000 - Э.Л.И.З.О.Б.А.Р.Р.А - Т.О.Р.Р/01. Десять шагов.mp3
+122:Russian/Бутусов/2000 - Э.Л.И.З.О.Б.А.Р.Р.А - Т.О.Р.Р/02. Том ждёт.mp3
+123:Russian/Бутусов/2000 - Э.Л.И.З.О.Б.А.Р.Р.А - Т.О.Р.Р/03. Кошка, чашка, муха и лапоть.mp3
+124:Russian/Бутусов/2000 - Э.Л.И.З.О.Б.А.Р.Р.А - Т.О.Р.Р/04. Триллипут.mp3
+125:Russian/Бутусов/2000 - Э.Л.И.З.О.Б.А.Р.Р.А - Т.О.Р.Р/05. Моя звезда.mp3
+126:Russian/Бутусов/2000 - Э.Л.И.З.О.Б.А.Р.Р.А - Т.О.Р.Р/06. Вот тогда любовь моя.mp3
+127:Russian/Бутусов/2000 - Э.Л.И.З.О.Б.А.Р.Р.А - Т.О.Р.Р/07. Настасья.mp3
+128:Russian/Бутусов/2000 - Э.Л.И.З.О.Б.А.Р.Р.А - Т.О.Р.Р/08. Патри-Парти.mp3
+129:Russian/Бутусов/2000 - Э.Л.И.З.О.Б.А.Р.Р.А - Т.О.Р.Р/09. Запасные сны.mp3
+130:Russian/Бутусов/2000 - Э.Л.И.З.О.Б.А.Р.Р.А - Т.О.Р.Р/10. Элизобарра-Торр.mp3
+131:Russian/Бутусов/2001 - Звездный Падл/01. Антарктида.mp3
+132:Russian/Бутусов/2001 - Звездный Падл/02. На лианах.mp3
+133:Russian/Бутусов/2001 - Звездный Падл/03. В подводных лесах.mp3
+134:Russian/Бутусов/2001 - Звездный Падл/04. Брунгильда.mp3
+135:Russian/Бутусов/2001 - Звездный Падл/05. Гамбург.mp3
+136:Russian/Бутусов/2001 - Звездный Падл/06. Куклы мадам Манделип.mp3
+137:Russian/Бутусов/2001 - Звездный Падл/07. Женщина в метро.mp3
+138:Russian/Бутусов/2001 - Звездный Падл/08. Мама научи....mp3
+139:Russian/Бутусов/2001 - Звездный Падл/09. Мауна Лоа.mp3
+140:Russian/Бутусов/2001 - Звездный Падл/10. Собака Баскервилей.mp3
+141:Russian/Бутусов/2001 - Звездный Падл/11. Утопленник.mp3
+142:Russian/Бутусов/2001 - Звездный Падл/12. Кони Йото.mp3
+143:Russian/Бутусов/2002 - Тихие игры/01. Intra.mp3
+144:Russian/Бутусов/2002 - Тихие игры/02. Тихие игры.mp3
+145:Russian/Бутусов/2002 - Тихие игры/03. На берегу безымянной реки.mp3
+146:Russian/Бутусов/2002 - Тихие игры/04. Все кто нес.mp3
+147:Russian/Бутусов/2002 - Тихие игры/05. Синоптики.mp3
+148:Russian/Бутусов/2002 - Тихие игры/06. К Элоизе.mp3
+149:Russian/Бутусов/2002 - Тихие игры/07. Берег.mp3
+150:Russian/Бутусов/2002 - Тихие игры/08. Песня о песне.mp3
+151:Russian/Бутусов/2002 - Тихие игры/09. Звездочка.mp3
+152:Russian/Бутусов/2002 - Тихие игры/10. Гибралтар.mp3
+153:Russian/Бутусов/2002 - Тихие игры/11. Настасья.mp3
+154:Russian/Бутусов/2002 - Тихие игры/12. Моя звезда.mp3
+155:Russian/Бутусов/2002 - Тихие игры/13. Прощальное письмо.mp3
+156:Russian/Бутусов/2002 - Тихие игры/14. Синоптики II.mp3
+157:Russian/Бутусов/2002 - Тихие игры/15. Праздник общей беды.mp3
+158:Russian/Бутусов/2002 - Тихие игры/16. Хлоп-хлоп.mp3
+159:Russian/Бутусов/2002 - Тихие игры/17. One more kiss.mp3
+160:Russian/Бутусов/2002 - Тихие игры/18. Kontra.mp3
+161:Russian/Бутусов/2008 - Модель Для Сборки/01. Фея (Знаки).mp3
+162:Russian/Бутусов/2008 - Модель Для Сборки/02. Не Остановиться (Che Francisco).mp3
+163:Russian/Бутусов/2008 - Модель Для Сборки/03. Собаки (Ракетобиль).mp3
+164:Russian/Бутусов/2008 - Модель Для Сборки/04. Головокружение (Чехов).mp3
+165:Russian/Бутусов/2008 - Модель Для Сборки/05. Незаметно (Чебоза).mp3
+166:Russian/Бутусов/2008 - Модель Для Сборки/06. Город (Шарма Гаральдович).mp3
+167:Russian/Бутусов/2008 - Модель Для Сборки/07. Солнце (Магнитная Аномалия).mp3
+168:Russian/Бутусов/2008 - Модель Для Сборки/08. Будь Как Будда (Капитан Грей).mp3
+169:Russian/Бутусов/2008 - Модель Для Сборки/09. Люблю-Прощай (Торба-На-Круче).mp3
+170:Russian/Бутусов/2008 - Модель Для Сборки/10. Выключи Компьютер,Детка (ОливеRТвист).mp3
+171:Russian/Бутусов/2008 - Модель Для Сборки/11. Бесконечность (Евгегений Артюнов).mp3
+172:Russian/Бутусов/2008 - Модель Для Сборки (демо)/01. Фея (Znaki).mp3
+173:Russian/Бутусов/2008 - Модель Для Сборки (демо)/02. Головокружение (Чехов).mp3
+174:Russian/Бутусов/2008 - Модель Для Сборки (демо)/03. Незаметно (Чебоза).mp3
+175:Russian/Бутусов/2008 - Модель Для Сборки (демо)/04. Люблю-Прощай (Торба-на-Круче).mp3
+176:Russian/Бутусов/2008 - Модель Для Сборки (демо)/05. Солнце (Магнитная Аномалия).mp3
+177:Russian/Бутусов/2008 - Модель Для Сборки (демо)/06. Город (Гарольдович).mp3
+178:Russian/Бутусов/2008 - Модель Для Сборки (демо)/07. Не остановиться (Che Francisco).mp3
+179:Russian/Бутусов/2008 - Модель Для Сборки (демо)/08. Будь как Будда (Капитан Грей).mp3
+180:Russian/Бутусов/2008 - Модель Для Сборки (демо)/09. Собаки (Ракетобиль).mp3
+181:Russian/Бутусов/2008 - Модель Для Сборки (демо)/10. Выключи компьютер, детка (Оливертвист).mp3
+182:Russian/Бутусов/2008 - Модель Для Сборки (демо)/11. Бесконечность.mp3
 playlist_end

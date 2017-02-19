@@ -45,6 +45,7 @@ import XMonad.Prompt
 import XMonad.Prompt.Man
 import XMonad.Prompt.RunOrRaise
 import XMonad.Prompt.Shell
+import XMonad.Prompt.Ssh
 
 -- Utils
 import XMonad.Util.Scratchpad
@@ -125,6 +126,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                   0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
     , ((mod1Mask,                   0xffbf),     shellPrompt myXPConfig)                                                                              --Alt+F2
     , ((mod1Mask,                   0xffc0),     runOrRaisePrompt myXPConfig)                                                                         --Alt+F3
+    , ((mod1Mask,                   0xffc1),     sshPrompt myXPConfig)                                                                                --Alt+F4
 
     --Windows and WS management
 
