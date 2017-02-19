@@ -25,10 +25,25 @@
 			"path": "/home/haron/lib/sway"
 		},
 		{
+			"path": "/home/haron/git/Nightly_telegram_mod"
+		},
+		{
 			"path": "/home/haron/git/My_config_files/xmonad_config_bak"
 		},
 		{
 			"path": "/home/haron/git/My_config_files/.config/awesome"
+		},
+		{
+			"path": "/home/haron/git/My_config_files"
+		},
+		{
+			"path": "/home/haron/git/evening_vim"
+		},
+		{
+			"path": "/home/haron/git/Dark-style-for-forum.ubuntu.ru"
+		},
+		{
+			"path": "/home/haron/git/antares"
 		},
 		{
 			"path": "/home/haron/git"
