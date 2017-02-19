@@ -119,7 +119,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart && killall xmobar && xmobar")                          --Win+Q
     , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
-    , ((modm     .|. shiftMask,  xK_Return),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
+    , ((modm     .|. shiftMask,     0xff0d),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
 
     --Prompt management
 
@@ -130,33 +130,33 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     --Windows and WS management
 
-    , ((mod1Mask,                   xK_Tab),     windows W.focusMaster)                                                                               --Alt+Tab
-    , ((modm,                       xK_Tab),     rotOpposite)                                                                                         --Win+Tab
+    , ((mod1Mask,                   0xff09),     windows W.focusMaster)                                                                               --Alt+Tab
+    , ((modm,                       0xff09),     rotOpposite)                                                                                         --Win+Tab
     , ((modm,                         0x78),     kill)                                                                                                --Win+X
-    , ((modm,                     xK_space),     sendMessage NextLayout)                                                                              --Win+Space
-    , ((modm     .|. shiftMask,   xK_space),     setLayout $ XMonad.layoutHook conf)                                                                  --Win+Shift+Space
+    , ((modm,                         0x20),     sendMessage NextLayout)                                                                              --Win+Space
+    , ((modm     .|. shiftMask,       0x20),     setLayout $ XMonad.layoutHook conf)                                                                  --Win+Shift+Space
     , ((modm,                         0x6e),     refresh)                                                                                             --Win+N
-    , ((modm,                    xK_Escape),     toggleWS' ["NSP"])                                                                                   --Win+Escape
-    , ((modm,                 xK_BackSpace),     toggleWS' ["NSP"])                                                                                   --Win+Backspace
-    , ((modm,                     xK_Right),     DO.moveTo Next HiddenNonEmptyWS)                                                                     --Win+Right
-    , ((modm,                      xK_Left),     DO.moveTo Prev HiddenNonEmptyWS)                                                                     --Win+Left
-    , ((modm     .|. shiftMask,   xK_Right),     shiftToNext)                                                                                         --Win+Shift+Right
-    , ((modm     .|. shiftMask,    xK_Left),     shiftToPrev)                                                                                         --Win+Shift+Left
+    , ((modm,                       0xff1b),     toggleWS' ["NSP"])                                                                                   --Win+Escape
+    , ((modm,                       0xff08),     toggleWS' ["NSP"])                                                                                   --Win+Backspace
+    , ((modm,                       0xff53),     DO.moveTo Next HiddenNonEmptyWS)                                                                     --Win+Right
+    , ((modm,                       0xff51),     DO.moveTo Prev HiddenNonEmptyWS)                                                                     --Win+Left
+    , ((modm     .|. shiftMask,     0xff53),     shiftToNext)                                                                                         --Win+Shift+Right
+    , ((modm     .|. shiftMask,     0xff51),     shiftToPrev)                                                                                         --Win+Shift+Left
     , ((modm,                         0x6a),     windows W.focusDown)                                                                                 --Win+J
-    , ((modm,                      xK_Down),     windows W.focusDown)                                                                                 --Win+Down
+    , ((modm,                       0xff54),     windows W.focusDown)                                                                                 --Win+Down
     , ((modm,                         0x6b),     windows W.focusUp)                                                                                   --Win+K
-    , ((modm,                        xK_Up),     windows W.focusUp)                                                                                   --Win+Up
+    , ((modm,                       0xff52),     windows W.focusUp)                                                                                   --Win+Up
     , ((modm,                         0x6d),     windows W.focusMaster)                                                                               --Win+M
-    , ((modm,                    xK_Return),     windows W.swapMaster)                                                                                --Win+Enter
+    , ((modm,                       0xff0d),     windows W.swapMaster)                                                                                --Win+Enter
     , ((modm     .|. shiftMask,       0x6a),     windows W.swapDown)                                                                                  --Win+Shift+J
-    , ((modm     .|. shiftMask,    xK_Down),     windows W.swapDown)                                                                                  --Win+Shift+Down
+    , ((modm     .|. shiftMask,     0xff54),     windows W.swapDown)                                                                                  --Win+Shift+Down
     , ((modm     .|. shiftMask,       0x6b),     windows W.swapUp)                                                                                    --Win+Shift+K
-    , ((modm     .|. shiftMask,      xK_Up),     windows W.swapUp)                                                                                    --Win+Shift+K
+    , ((modm     .|. shiftMask,     0xff52),     windows W.swapUp)                                                                                    --Win+Shift+K
     , ((modm,                         0x68),     sendMessage Shrink)                                                                                  --Win+H
     , ((modm,                         0x6c),     sendMessage Expand)                                                                                  --Win+L
     , ((modm,                         0x74),     withFocused $ windows . W.sink)                                                                      --Win+T
-    , ((modm,                     xK_comma),     sendMessage (IncMasterN 1))                                                                          --Win+Comma
-    , ((modm,                    xK_period),     sendMessage (IncMasterN (-1)))                                                                       --Win+Period
+    , ((modm,                         0x2c),     sendMessage (IncMasterN 1))                                                                          --Win+Comma
+    , ((modm,                         0x2e),     sendMessage (IncMasterN (-1)))                                                                       --Win+Period
     , ((modm,                         0x62),     sendMessage ToggleStruts)                                                                            --Win+B
     , ((modm     .|. shiftMask,       0x71),     io (exitWith ExitSuccess))                                                                           --Win+Shift+Q
     ]
