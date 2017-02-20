@@ -1,0 +1,64 @@
+Config
+   { font = "xft:Inconsolata:size=12"
+   , additionalFonts = []        -- default: []
+   , borderColor = "white"
+   , border = NoBorder
+   , bgColor = "black"
+   , fgColor = "white"
+   , alpha = 255                 -- default: 255
+   , position = TopSize C 100 26
+   , textOffset = -1             -- default: -1
+   , iconOffset = -1             -- default: -1
+   , lowerOnStart = True
+   , pickBroadest = False        -- default: False
+   , persistent = True
+   , hideOnStart = False
+   , iconRoot = "/home/dino/.xmonad/resources"  -- default: "."
+   , allDesktops = True          -- default: True
+   , overrideRedirect = False    -- default: True
+   , commands =
+      [ Run BatteryP ["BAT0"]
+         [ "-t", "<acstatus><left>%, <timeleft> rem"
+         , "-L", "20", "-l", "red"
+         , "--"
+         , "-O", "<icon=battery-plug-icon_24.xpm/>"
+         , "-i", "<icon=battery-plug-icon_24.xpm/>"
+         , "-o", "<icon=battery-full-icon_24.xpm/>"
+         , "-m", "white"
+         , "-p", "green"  -- This appears to not be working on my X1 Carbon
+         ] 600
+      , Run CoreTemp
+         [ "-t", "<icon=thermometer-icon_24.xpm/><core0>°C"
+         , "-H", "60", "-h", "red"
+         , "-L", "40", "-l", "lightblue"
+         , "-n", "white"
+         ] 50
+      , Run Date
+         "<icon=calendar-clock-icon_24.xpm/> <fc=#ee9a00>%Y-%b-%0d %a %H:%M:%S</fc>"
+         "date" 10
+      , Run DiskU
+         [ ("/", "<icon=harddisk-icon_24.xpm/> <usedp>% used, <free> free") ]
+         [] 20
+      , Run DynNetwork
+         [ "-t", "<icon=network-icon_24.xpm/> <dev> <icon=actions-arrow-down-icon_24.xpm/><rx>KB <icon=actions-arrow-up-icon_24.xpm/><tx>KB"
+         ] 10
+      , Run Memory
+         [ "-t", "<icon=memory-icon_24.xpm/> <usedratio>% used, <available>M free"] 10
+      , Run MultiCpu
+         [ "-t", "<icon=gnome_cpu_24.xpm/> % <total0> <total1> <total2> <total3>"
+         , "-p", "3"
+         , "-H", "50", "-h", "red"
+         , "-L", "3"
+         , "-n", "green"
+         ] 10
+      , Run Weather "KRDU"
+         [ "-t", "KRDU: <tempF>°F <icon=drop-icon_24.xpm/><rh>%"
+         , "-L", "34", "-H", "93"
+         , "--normal", "green", "--high", "red", "--low", "lightblue"
+         ] 36000
+      ]
+   , sepChar = "%"
+   , alignSep = "}{"
+
+   , template = "%multicpu% . %coretemp% . %memory% . %disku% }{ %dynnetwork% . %battery% . <icon=sun-rain-icon_24.xpm/> %KRDU% . %date%"
+   }

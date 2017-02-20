@@ -13,7 +13,7 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
        , pickBroadest = False
        , persistent = False
        , hideOnStart = False
-       , iconRoot = "/home/haron/.xmonad/resources"
+       , iconRoot = "."
        , allDesktops = True
        , overrideRedirect = True
        , commands = [ Run XMonadLog
