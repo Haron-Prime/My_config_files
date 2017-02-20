@@ -95,8 +95,8 @@ end
 --                                   { "Run", "dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'", beautiful.run_icon},
 --                                   { " " },
 --                                   { " Exit", awesome.quit, beautiful.logout_icon},
---                                   { " Reboot", function()  awful.util.spawn_with_shell("systemctl reboot") end, beautiful.reboot_icon},
---                                   { " Power off", function()  awful.util.spawn_with_shell("systemctl poweroff") end, beautiful.shutdown_icon},
+--                                   { " Reboot", function()  awful.spawn.with_shell("systemctl reboot") end, beautiful.reboot_icon},
+--                                   { " Power off", function()  awful.spawn.with_shell("systemctl poweroff") end, beautiful.shutdown_icon},
 --                            }
 --                         })
 mymainmenu = freedesktop.menu.build({
@@ -107,8 +107,8 @@ mymainmenu = freedesktop.menu.build({
     { " Restart", function() awesome.restart() end, beautiful.reboot_icon},
     { " Exit", function() awesome.quit() end, beautiful.logout_icon},
     { " " },
-    { " Reboot", function()  awful.util.spawn_with_shell("systemctl reboot") end, beautiful.reboot_icon},
-    { " Power off", function()  awful.util.spawn_with_shell("systemctl poweroff") end, beautiful.shutdown_icon},
+    { " Reboot", function()  awful.spawn.with_shell("systemctl reboot") end, beautiful.reboot_icon},
+    { " Power off", function()  awful.spawn.with_shell("systemctl poweroff") end, beautiful.shutdown_icon},
   }
 })
 
@@ -334,17 +334,17 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "space",                function () awful.layout.inc(layouts, -1)                                                       end),
     awful.key({ modkey, "Control" }, "#57",                  awful.client.restore                                                                               ), -- Win+Ctrl+n
     awful.key({ modkey            }, "#33",                  function() menubar.show()                                                                       end), -- Win+p
-    awful.key({ "Mod1"            }, "F2",                   function () awful.util.spawn_with_shell("dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")                                                                                                                                        end),
-    awful.key({                   }, "Cancel",               function () awful.util.spawn_with_shell("compdown")                                             end),
-    awful.key({                   }, "XF86Reload",           function () awful.util.spawn_with_shell("compreboot")                                           end),
-    awful.key({                   }, "XF86Favorites",        function () awful.util.spawn_with_shell("if pgrep -x 'transgui' >/dev/null; then kill $(pgrep -x 'transgui'); else transgui; fi")                                             end),
-    awful.key({                   }, "XF86Explorer",         function () awful.util.spawn_with_shell("pcmanfm")                                              end),
-    awful.key({"Mod1"             }, "XF86Explorer",         function () awful.util.spawn_with_shell("gksu pcmanfm")                                         end),
-    awful.key({                   }, "XF86Mail",             function () awful.util.spawn_with_shell("thunderbird")                                          end),
-    awful.key({                   }, "XF86Calculator",       function () awful.util.spawn_with_shell("if pgrep -x 'galculator >/dev/null; then kill $(pgrep -x 'galculator'); else galculator; fi")                                           end),
-    awful.key({                   }, "XF86Tools",            function () awful.util.spawn_with_shell("if pgrep -x 'ncmpcpp' >/dev/null; then kill $(pgrep -x 'ncmpcpp'); else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp; fi")                           end),
-    awful.key({                   }, "XF86HomePage",         function () awful.util.spawn_with_shell("vivaldi-snapshot")                                     end),
-    awful.key({                   }, "XF86Search",           function () awful.util.spawn_with_shell("if pgrep -x 'htop' >/dev/null; then kill $(pgrep -x 'htop'); else urxvtc -name htop -e /usr/bin/htop; fi")                   end),
+    awful.key({ "Mod1"            }, "F2",                   function () awful.spawn.with_shell("dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'")                                                                                                                                        end),
+    awful.key({                   }, "Cancel",               function () awful.spawn.with_shell("compdown")                                             end),
+    awful.key({                   }, "XF86Reload",           function () awful.spawn.with_shell("compreboot")                                           end),
+    awful.key({                   }, "XF86Favorites",        function () awful.spawn.with_shell("if pgrep -x 'transgui' >/dev/null; then kill $(pgrep -x 'transgui'); else transgui; fi")                                             end),
+    awful.key({                   }, "XF86Explorer",         function () awful.spawn.with_shell("pcmanfm")                                              end),
+    awful.key({"Mod1"             }, "XF86Explorer",         function () awful.spawn.with_shell("gksu pcmanfm")                                         end),
+    awful.key({                   }, "XF86Mail",             function () awful.spawn.with_shell("thunderbird")                                          end),
+    awful.key({                   }, "XF86Calculator",       function () awful.spawn.with_shell("if pgrep -x 'galculator >/dev/null; then kill $(pgrep -x 'galculator'); else galculator; fi")                                           end),
+    awful.key({                   }, "XF86Tools",            function () awful.spawn.with_shell("if pgrep -x 'ncmpcpp' >/dev/null; then kill $(pgrep -x 'ncmpcpp'); else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp; fi")                           end),
+    awful.key({                   }, "XF86HomePage",         function () awful.spawn.with_shell("vivaldi-snapshot")                                     end),
+    awful.key({                   }, "XF86Search",           function () awful.spawn.with_shell("if pgrep -x 'htop' >/dev/null; then kill $(pgrep -x 'htop'); else urxvtc -name htop -e /usr/bin/htop; fi")                   end),
     awful.key({                   }, "XF86AudioMute",        function () awful.util.spawn(           "/usr/bin/pulseaudio-ctl mute")                         end),
     awful.key({                   }, "XF86AudioLowerVolume", function () awful.util.spawn(           "/usr/bin/pulseaudio-ctl down")                         end),
     awful.key({                   }, "XF86AudioRaiseVolume", function () awful.util.spawn(           "/usr/bin/pulseaudio-ctl up")                           end),
@@ -357,19 +357,19 @@ globalkeys = awful.util.table.join(
     -- awful.key({                   }, "XF86Sleep",            function () awful.util.spawn(           "slock")                                                end),
     -- awful.key({                   }, "XF86Sleep",            function () awful.util.spawn(           "xautolock --locknow")                                  end),
     -- awful.key({                   }, "Cancel",               function () awful.util.spawn(           "/home/haron/bin/awst")                                 end),
-    awful.key({                   }, "Print",                function () awful.util.spawn_with_shell("scrot -e 'mv $f ~/Screenshots/ 2>/dev/null'")          end),
-    awful.key({ "Mod1"            }, "Print",                function () awful.util.spawn_with_shell("scrot -s -e 'mv $f ~/Screenshots/ 2>/dev/null'")       end),
-    awful.key({                   }, "Menu",                 function () awful.util.spawn_with_shell("gmrun")                                                end),
-    awful.key({ "Mod1"            }, "#40",                  function () awful.util.spawn_with_shell("deadbeef")                                             end), -- Alt+d
-    awful.key({ "Mod1"            }, "#41",                  function () awful.util.spawn_with_shell("firefox")                                              end), -- Alt+f
-    awful.key({ "Mod1"            }, "#25",                  function () awful.util.spawn_with_shell("gksu /usr/bin/pacmanxg")                               end), -- Alt+w
-    awful.key({ "Mod1"            }, "#55",                  function () awful.util.spawn_with_shell("xvim")                                                 end), -- Alt+v
-    awful.key({ "Mod1"            }, "#58",                  function () awful.util.spawn_with_shell("urxvtc -name mc -e /usr/bin/mc")                       end), -- Alt+m
-    awful.key({ "Mod1"            }, "#39",                  function () awful.util.spawn_with_shell("subl3")                                                end), -- Alt+s
-    awful.key({ "Mod1"            }, "#42",                  function () awful.util.spawn_with_shell("gimp")                                                 end), -- Alt+g
-    awful.key({ "Mod1"            }, "#43",                  function () awful.util.spawn_with_shell("/usr/bin/hexchat")                                     end), -- Alt+h
-    awful.key({ "Mod1",           }, "#33",                  function () awful.util.spawn_with_shell("PRO100-5")                                                                                                                                                      end), -- Alt+p
-    awful.key({ "Mod1"            }, "#46",                  function () awful.util.spawn_with_shell("cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")                                                                                                                                                     end) -- Alt+l
+    awful.key({                   }, "Print",                function () awful.spawn.with_shell("scrot -e 'mv $f ~/Screenshots/ 2>/dev/null'")          end),
+    awful.key({ "Mod1"            }, "Print",                function () awful.spawn.with_shell("scrot -s -e 'mv $f ~/Screenshots/ 2>/dev/null'")       end),
+    awful.key({                   }, "Menu",                 function () awful.spawn.with_shell("gmrun")                                                end),
+    awful.key({ "Mod1"            }, "#40",                  function () awful.spawn.with_shell("deadbeef")                                             end), -- Alt+d
+    awful.key({ "Mod1"            }, "#41",                  function () awful.spawn.with_shell("firefox")                                              end), -- Alt+f
+    awful.key({ "Mod1"            }, "#25",                  function () awful.spawn.with_shell("gksu /usr/bin/pacmanxg")                               end), -- Alt+w
+    awful.key({ "Mod1"            }, "#55",                  function () awful.spawn.with_shell("xvim")                                                 end), -- Alt+v
+    awful.key({ "Mod1"            }, "#58",                  function () awful.spawn.with_shell("urxvtc -name mc -e /usr/bin/mc")                       end), -- Alt+m
+    awful.key({ "Mod1"            }, "#39",                  function () awful.spawn.with_shell("subl3")                                                end), -- Alt+s
+    awful.key({ "Mod1"            }, "#42",                  function () awful.spawn.with_shell("gimp")                                                 end), -- Alt+g
+    awful.key({ "Mod1"            }, "#43",                  function () awful.spawn.with_shell("/usr/bin/hexchat")                                     end), -- Alt+h
+    awful.key({ "Mod1",           }, "#33",                  function () awful.spawn.with_shell("PRO100-5")                                                                                                                                                      end), -- Alt+p
+    awful.key({ "Mod1"            }, "#46",                  function () awful.spawn.with_shell("cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")                                                                                                                                                     end) -- Alt+l
 )
 
 clientkeys = awful.util.table.join(
@@ -564,7 +564,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 function autostart(cmd, delay)
     delay = delay or 0
-    awful.util.spawn_with_shell("pgrep -u $USER -x -f '" .. cmd .. "' || ( sleep " .. delay .. " && " .. cmd .. " )")
+    awful.spawn.with_shell("pgrep -u $USER -x -f '" .. cmd .. "' || ( sleep " .. delay .. " && " .. cmd .. " )")
 end
 
 local dex_output = io.popen("dex -ade Awesome")
