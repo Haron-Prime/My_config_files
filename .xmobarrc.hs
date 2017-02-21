@@ -33,8 +33,9 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     , Run Com "xmdate" [] "" 10
                     , Run Com "xmtime" [] "" 10
                     , Run Com "myweather" [] "" 600
+                    , Run Com "UPD" [] "" 36000
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog% }{ <<fc=#85b5d5><</fc><fc=#95d5f5><</fc><fc=#85b5d5><</fc>< %enp3s0%  <fc=#cccccc>Traf:</fc><fn=2> </fn>%Net_in%<fn=2> </fn><fc=green>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn>%Net_out%  <fc=#cccccc>Σ:</fc><fn=2> </fn>%Net_all%  %cpu% %TCPU%  <fc=#cccccc>MB:</fc><fn=2> </fn>%TMB%  <fc=#cccccc>GPU:</fc><fn=2> </fn>%TGPU%  %memory%  <fc=#cccccc>ROM:</fc><fn=2> </fn>%ROM%  <fc=#cccccc>Up:</fc><fn=2> </fn>%xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#cccccc>%xmtime%</fc>  <fn=1><fc=#95d5f5>%myweather%</fc></fn>"
+       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog% }{ <<fc=#85b5d5><</fc><fc=#95d5f5><</fc><fc=#85b5d5><</fc>< <fc=#cccccc>Upd:</fc><fn=2> </fn>%UPD%  %enp3s0%  <fc=#cccccc>Traf:</fc><fn=2> </fn>%Net_in%<fn=2> </fn><fc=green>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn>%Net_out%  <fc=#cccccc>Σ:</fc><fn=2> </fn>%Net_all%  %cpu% %TCPU%  <fc=#cccccc>MB:</fc><fn=2> </fn>%TMB%  <fc=#cccccc>GPU:</fc><fn=2> </fn>%TGPU%  %memory%  <fc=#cccccc>ROM:</fc><fn=2> </fn>%ROM%  <fc=#cccccc>Up:</fc><fn=2> </fn>%xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#cccccc>%xmtime%</fc>  <fn=1><fc=#95d5f5>%myweather%</fc></fn>"
        }
