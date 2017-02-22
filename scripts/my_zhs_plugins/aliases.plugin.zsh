@@ -1,3 +1,4 @@
+#!/bin/zsh
 # my aliases
 alias x='exit'
 alias ipt='iptables -L -vn'
