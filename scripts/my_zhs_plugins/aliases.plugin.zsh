@@ -17,13 +17,6 @@ alias nstat="netstat -atpn"
 alias fonts='fc-cache -fv ~/.fonts && sudo fc-cache -fv'
 alias wget='wget -c --progress=bar'
 alias nano='nano -w'
-alias mv='nocorrect mv -i'
-alias cp='nocorrect cp -iR'
-alias rm='nocorrect rm -i'
-alias rmr='nocorrect rm -iR'
-alias rmf='nocorrect rm -if'
-alias rmrf='nocorrect rm -fR'
-alias mkdir='nocorrect mkdir'
 alias dirf='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
 alias ttmux='tmuxinator default'
 alias tmuxa='tmux attach'
@@ -113,6 +106,52 @@ if [ -f /usr/bin/grc ]; then
   alias warn="grc -c conf.warn cat"
 fi
 
+# глобальные альясы zsh
+# global aliases
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g CA="2>&1 | cat -A"
+alias -g C='| wc -l'
+alias -g D="DISPLAY=:0.0"
+alias -g DN=/dev/null
+alias -g ED="export DISPLAY=:0.0"
+alias -g EG='|& egrep'
+alias -g EH='|& head'
+alias -g EL='|& less'
+alias -g ELS='|& less -S'
+alias -g ETL='|& tail -20'
+alias -g ET='|& tail'
+alias -g F=' | fmt -'
+alias -g G='| egrep'
+alias -g H='| head'
+alias -g HL='|& head -20'
+alias -g Sk="*~(*.bz2|*.gz|*.tgz|*.zip|*.z)"
+alias -g LL="2>&1 | less"
+alias -g L="| less"
+alias -g LS='| less -S'
+alias -g MM='| most'
+alias -g M='| more'
+alias -g NE="2> /dev/null"
+alias -g NS='| sort -n'
+alias -g NUL="> /dev/null 2>&1"
+alias -g PIPE='|'
+alias -g R=' > /c/aaa/tee.txt '
+alias -g RNS='| sort -nr'
+alias -g S='| sort'
+alias -g TL='| tail -20'
+alias -g T='| tail'
+alias -g US='| sort -u'
+alias -g VM='/var/log/messages'
+alias -g X0G='| xargs -0 egrep'
+alias -g X0='| xargs -0'
+alias -g XG='| xargs egrep'
+alias -g X='| xargs'
+alias -g g="| grep"
+alias -g l="| less"
+alias -g C='| wc -l'
+
+# другие альясы
 # other aliases
 alias ls="ls -la --classify --color=auto"
 alias grep='grep --colour=auto'
@@ -122,6 +161,14 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias li='ls -ial'
+
+alias mv='nocorrect mv -i'
+alias cp='nocorrect cp -iR'
+alias rm='nocorrect rm -i'
+alias rmr='nocorrect rm -iR'
+alias rmf='nocorrect rm -if'
+alias rmrf='nocorrect rm -fR'
+alias mkdir='nocorrect mkdir'
 
 alias -s {avi,mpeg,mpg,mov,m2v,mkv}=mpv
 alias -s {odt,doc,sxw,rtf}=libreoffice
