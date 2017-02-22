@@ -133,6 +133,7 @@ source /usr/share/oh-my-zsh/plugins/web-search/web-search.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/history-substring-search/history-substring-search.zsh
 source /usr/share/oh-my-zsh/plugins/zsh_reload/zsh_reload.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/colorize/colorize.plugin.zsh
+source $HOME/scripts/my_zhs_plugins/action.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/aliases.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/git-prompt.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/zsh-autosuggestions.plugin.zsh
