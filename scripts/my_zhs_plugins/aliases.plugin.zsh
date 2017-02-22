@@ -1,9 +1,12 @@
 #!/bin/zsh
+# Author Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/ 
+
+# мои альясы
 # my aliases
 alias x='exit'
 alias ipt='iptables -L -vn'
 alias dump='sudo screendump > ~/output.txt'
-# alias radio='~/scripts/radio'
 # alias gmx='mount https://storage-file-eu.gmx.com'
 alias st='subl3'
 alias sst='sudo subl3'
@@ -12,8 +15,6 @@ alias nstat="netstat -atpn"
 alias fonts='fc-cache -fv ~/.fonts && sudo fc-cache -fv'
 alias wget='wget -c --progress=bar'
 alias nano='nano -w'
-# alias df='df -h'
-# alias du='du -h'
 alias mv='nocorrect mv -i'
 alias cp='nocorrect cp -iR'
 alias rm='nocorrect rm -i'
@@ -32,8 +33,6 @@ alias bzip='tar -cvjf'
 alias sctl='systemctl'
 alias jctl='journalctl'
 alias jctlc='sudo journalctl --vacuum-size=20000'
-# alias jctlb='journalctl -b | grcat conf.journal'
-# alias jctlf='journalctl -f | grcat conf.journal'
 alias jctlb='journalctl -b'
 alias jctlf='journalctl -f'
 alias rein='sudo renice -5 $(pidof -s Xorg)'
@@ -101,6 +100,7 @@ pk () {
 
 } 
 
+# цветной вывод с помощью grc
 # usage grc
 if [ -f /usr/bin/grc ]; then
   alias configure='grc --colour=auto configure'
