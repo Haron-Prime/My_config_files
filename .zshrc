@@ -1,4 +1,6 @@
 # Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/ 
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit promptinit zfinit
