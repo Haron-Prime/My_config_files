@@ -47,6 +47,7 @@ alias giti='git add -i'
 alias gitc='git commit -m "Update"'
 alias gitp='git push'
 alias gits='git status'
+alias gitl='git log'
 
 
 # цветной вывод с помощью grc
