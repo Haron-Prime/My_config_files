@@ -132,13 +132,9 @@ source /usr/share/oh-my-zsh/plugins/history-substring-search/history-substring-s
 source /usr/share/oh-my-zsh/plugins/zsh_reload/zsh_reload.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/colorize/colorize.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/global_aliases.plugin.zsh
-source $HOME/scripts/my_zhs_plugins/my_aliases.plugin.zsh
-source $HOME/scripts/my_zhs_plugins/extract.plugin.zsh
-source $HOME/scripts/my_zhs_plugins/pk.plugin.zsh
+source $HOME/scripts/my_zhs_plugins/aliases.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/git-prompt.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/zsh-autosuggestions.plugin.zsh
-source $HOME/scripts/my_zhs_plugins/conf_grc.plugin.zsh
-source $HOME/scripts/my_zhs_plugins/other_aliases.plugin.zsh
 
 ##Set some keybindings
 #################################################
