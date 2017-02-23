@@ -305,6 +305,7 @@ myLogHook = do
 
 -- Startup hook
 myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
+
 onScr :: ScreenId -> (WorkspaceId -> WindowSet -> WindowSet) -> WorkspaceId -> X ()
 onScr n f i = screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 
@@ -330,7 +331,14 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     l = 1 - w   -- distance from left edge
 
 main = do
+    spawn "numlockx"
+    spawn "perWindowLayoutD"
+    spawn "compton -b &"
+    spawn "urxvtd -q -f -o"
+    spawn "pcmanfm -d"
     spawn "feh --bg-scale /home/haron/wall/starrynight.png"
+    spawn "stalonetray"
+    spawn "python3 /home/haron/.local/lib/gis-weather/gis-weather.py"
     xmonad =<< xmobar myConfig
 encodeCChar :: B.ByteString -> [CChar]
 encodeCChar = map fromIntegral . B.unpack

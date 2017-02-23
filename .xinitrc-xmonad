@@ -16,12 +16,4 @@ xsetroot -cursor_name left_ptr &
 xset -dpms &
 xset m 5/2 0 &
 hsetroot -solid '#000000' &
-numlockx &
-perWindowLayoutD &
-compton -b &
-urxvtd -q -f -o &
-pcmanfm -d &
-stalonetray &
-# feh --bg-scale /home/haron/wall/starrynight.png &
-python3 /home/haron/.local/lib/gis-weather/gis-weather.py &
 exec xmonad
