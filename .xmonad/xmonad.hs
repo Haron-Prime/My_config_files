@@ -230,36 +230,30 @@ myXPConfig = def {
 myManageHook :: ManageHook
 myManageHook = composeAll . concat $
     [ 
-      [className =? c             --> doF (W.shift "W")   <+> viewShift ("W")   | c <- myWeb]
-    , [className =? c             --> doF (W.shift "M")   <+> viewShift ("M")   | c <- myMail]
-    , [className =? c             --> doF (W.shift "E")   <+> viewShift ("E")   | c <- myEdit]
-    , [className =? c             --> doF (W.shift "F")   <+> viewShift ("F")   | c <- myFile]
-    , [className =? c             --> doF (W.shift "S")   <+> viewShift ("S")   | c <- mySystem]
-    , [className =? c             --> doF (W.shift "V")   <+> viewShift ("V")   | c <- myVideo]
-    , [className =? c             --> doF (W.shift "P")   <+> viewShift ("P")   | c <- myPic]
-    , [className =? c             --> doF (W.shift "J")   <+> viewShift ("J")   | c <- myWork]
-    , [className =? c             --> doF (W.shift "T")   <+> viewShift ("T")   | c <- myTorrent]
-    , [className =? c             --> doF (W.shift "X")   <+> viewShift ("X")   | c <- myVM]
-    , [className =? c             --> doF (W.shift "XI")  <+> viewShift ("XI")  | c <- myIM]
-    , [appName   =? c             --> doF (W.shift "XII") <+> viewShift ("XII") | c <- myTerm]
+      [className =? c                --> doF (W.shift "W")   <+> viewShift ("W")   | c <- myWeb]
+    , [className =? c                --> doF (W.shift "M")   <+> viewShift ("M")   | c <- myMail]
+    , [className =? c                --> doF (W.shift "E")   <+> viewShift ("E")   | c <- myEdit]
+    , [className =? c                --> doF (W.shift "F")   <+> viewShift ("F")   | c <- myFile]
+    , [className =? c                --> doF (W.shift "S")   <+> viewShift ("S")   | c <- mySystem]
+    , [className =? c                --> doF (W.shift "V")   <+> viewShift ("V")   | c <- myVideo]
+    , [className =? c                --> doF (W.shift "P")   <+> viewShift ("P")   | c <- myPic]
+    , [className =? c                --> doF (W.shift "J")   <+> viewShift ("J")   | c <- myWork]
+    , [className =? c                --> doF (W.shift "T")   <+> viewShift ("T")   | c <- myTorrent]
+    , [className =? c                --> doF (W.shift "X")   <+> viewShift ("X")   | c <- myVM]
+    , [className =? c                --> doF (W.shift "XI")  <+> viewShift ("XI")  | c <- myIM]
+    , [appName   =? c                --> doF (W.shift "XII") <+> viewShift ("XII") | c <- myTerm]
 
-    , [className =? c             --> doCenterFloat                             | c <- myFloatC]
-    , [appName   =? a             --> doCenterFloat                             | a <- myFloatA]
-    , [title     =? t             --> doCenterFloat                             | t <- myFloatT]
-    , [role      =? r             --> doCenterFloat                             | r <- myFloatR]
+    , [className =? c                --> doCenterFloat                             | c <- myFloatC]
+    , [appName   =? a                --> doCenterFloat                             | a <- myFloatA]
+    , [title     =? t                --> doCenterFloat                             | t <- myFloatT]
+    , [role      =? r                --> doCenterFloat                             | r <- myFloatR]
 
     , [currentWs =? "W"              --> insertPosition Below Newer]
-
     , [currentWs =? "M"              --> insertPosition Below Newer]
-
     , [currentWs =? "E"              --> insertPosition Below Newer]
-
     , [currentWs =? "F"              --> insertPosition Below Newer]
-
     , [currentWs =? "T"              --> insertPosition Below Newer]
-
     , [currentWs =? "X"              --> insertPosition Below Newer]
-
     , [currentWs =? "XII"            --> insertPosition Below Newer]
 
     , [resource  =? "stalonetray"    --> doIgnore]
@@ -279,7 +273,7 @@ myManageHook = composeAll . concat $
     myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
     myMail    = ["Thunderbird"]
     myEdit    = ["Subl3","Et","Wps","Wpp","Acroread","FoxitReader"]
-    myFile    = ["Pcmanfm","Thunar"]
+    myFile    = ["Pcmanfm"]
     mySystem  = ["pacmanxg","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","Easytag"]
     myPic     = ["Gimp","Gimp-2.8","Inkscape"]
