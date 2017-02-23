@@ -20,9 +20,8 @@ numlockx &
 perWindowLayoutD &
 compton -b &
 urxvtd -q -f -o &
-
 pcmanfm -d &
-feh --bg-scale /home/haron/wall/starrynight.png &
 stalonetray &
+feh --bg-scale /home/haron/wall/starrynight.png &
 python3 /home/haron/.local/lib/gis-weather/gis-weather.py &
 exec xmonad
