@@ -1,3 +1,6 @@
+-- Author - Haron Prime
+-- License - © 2017 WTFPL - http://www.wtfpl.net/
+
 -- Base
 import XMonad hiding ( (|||) )
 import Control.Monad (liftM2)
