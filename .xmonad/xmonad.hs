@@ -119,7 +119,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                     0x74),     spawn "tor-browser")                                                                                 --Alt+T
     , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
     , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart && killall xmobar && xmobar")                          --Win+Q
-    , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
+    -- , ((modm,                         0x78),     spawn "killall xmobar && xmobar")                                                                    --Win+X
     , ((modm     .|. shiftMask,     0xff0d),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
 
     --Prompt management
@@ -207,10 +207,10 @@ myLayoutHook =  avoidStruts
     ratio   = 0.5
     delta   = 0.01
  
--- IMLayout
-myIMLayout = withIM (1%7) psi Grid
-    where
-      psi   = And (ClassName "psi") (Role "main")
+    -- IMLayout
+    myIMLayout = withIM (1%7) psi Grid
+        where
+          psi   = And (ClassName "psi") (Role "main")
 
 -- XP
 myXPConfig = def {
@@ -256,9 +256,8 @@ myManageHook = composeAll . concat $
     , [currentWs =? "X"              --> insertPosition Below Newer]
     , [currentWs =? "XII"            --> insertPosition Below Newer]
 
-    , [resource  =? "stalonetray"    --> doIgnore]
-
     , [className =? "Gis-weather.py" --> doIgnore]
+    , [resource  =? "stalonetray"    --> doIgnore]
 
     , [isDialog                      --> doCenterFloat]
 
@@ -272,7 +271,7 @@ myManageHook = composeAll . concat $
     where
     myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
     myMail    = ["Thunderbird"]
-    myEdit    = ["Subl3","Et","Wps","Wpp","Acroread","FoxitReader"]
+    myEdit    = ["Subl3","Et","Wps","Wpp","FoxitReader"]
     myFile    = ["Pcmanfm"]
     mySystem  = ["pacmanxg","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","Easytag"]
@@ -285,7 +284,7 @@ myManageHook = composeAll . concat $
 
     -- CenterFloat
 
-    myFloatC  = ["Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh"]
+    myFloatC  = ["Xmessage","Gxmessage","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh"]
     myFloatA  = ["lxappearance","xarchiver","gmrun","Update"]
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
