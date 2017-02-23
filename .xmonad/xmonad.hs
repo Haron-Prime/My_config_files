@@ -81,7 +81,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
 
     --Applications management
-
       ((0,                      0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up")
     , ((0,                      0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down")
     , ((0,                      0x1008ff12),     spawn "/usr/bin/pulseaudio-ctl mute")
@@ -125,14 +124,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,     0xff0d),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
 
     --Prompt management
-
     , ((mod1Mask,                   0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
     , ((mod1Mask,                   0xffbf),     shellPrompt myXPConfig)                                                                              --Alt+F2
     , ((mod1Mask,                   0xffc0),     runOrRaisePrompt myXPConfig)                                                                         --Alt+F3
     , ((mod1Mask,                   0xffc1),     sshPrompt myXPConfig)                                                                                --Alt+F4
 
     --Windows and WS management
-
     , ((modm,                       0xff09),     rotOpposite)                                                                                         --Win+Tab
     , ((modm,                         0x78),     kill)                                                                                                --Win+X
     , ((modm,                         0x20),     sendMessage NextLayout)                                                                              --Win+Space
@@ -169,7 +166,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1, xK_2, xK_3, xK_4, xK_5, xK_6, xK_7, xK_8, xK_9, xK_0, xK_minus, xK_equal]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
     ++
- 
+
     [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
         | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
@@ -208,7 +205,7 @@ myLayoutHook =  avoidStruts
     nmaster = 1
     ratio   = 0.5
     delta   = 0.01
- 
+
     -- IMLayout
     myIMLayout = withIM (1%7) psi Grid
         where
@@ -285,7 +282,6 @@ myManageHook = composeAll . concat $
     myTerm    = ["term","TMUX","termux"]
 
     -- CenterFloat
-
     myFloatC  = ["Xmessage","Gxmessage","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh"]
     myFloatA  = ["lxappearance","xarchiver","gmrun","Update"]
     myFloatT  = ["Software Update"]
@@ -310,20 +306,20 @@ myLogHook = do
 -- Startup hook
 myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
 
+-- nameScratchpad
 mynameScratchpads = [ NS "ncmpcpp" "urxvtc -name ncmpcpp -e ncmpcpp" (appName =? "ncmpcpp") (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                , NS "htop" "urxvtc -name htop -e htop" (appName =? "htop") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-                , NS "gpick" "gpick" (appName =? "gpick") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                , NS "pavucontrol" "pavucontrol" (appName =? "pavucontrol") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                , NS "Mirage" "mirage" (className =? "Mirage") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-                , NS "font-manager" "font-manager" (className =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                , NS "Organizer" "Organizer" (stringProperty "WM_WINDOW_ROLE" =? "Organizer") (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-                ]
+                    , NS "htop" "urxvtc -name htop -e htop" (appName =? "htop") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+                    , NS "gpick" "gpick" (appName =? "gpick") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+                    , NS "pavucontrol" "pavucontrol" (appName =? "pavucontrol") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+                    , NS "Mirage" "mirage" (className =? "Mirage") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+                    , NS "font-manager" "font-manager" (className =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+                    , NS "Organizer" "Organizer" (stringProperty "WM_WINDOW_ROLE" =? "Organizer") (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+                    ]
 
 onScr :: ScreenId -> (WorkspaceId -> WindowSet -> WindowSet) -> WorkspaceId -> X ()
 onScr n f i = screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 
 -- Scratchpad
---
 manageScratchPad :: ManageHook
 manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
 
