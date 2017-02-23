@@ -131,7 +131,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     --Windows and WS management
 
-    , ((mod1Mask,                   0xff09),     windows W.focusMaster)                                                                               --Alt+Tab
     , ((modm,                       0xff09),     rotOpposite)                                                                                         --Win+Tab
     , ((modm,                         0x78),     kill)                                                                                                --Win+X
     , ((modm,                         0x20),     sendMessage NextLayout)                                                                              --Win+Space
@@ -148,6 +147,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                         0x6b),     windows W.focusUp)                                                                                   --Win+K
     , ((modm,                       0xff52),     windows W.focusUp)                                                                                   --Win+Up
     , ((modm,                         0x6d),     windows W.focusMaster)                                                                               --Win+M
+    , ((mod1Mask,                   0xff09),     windows W.focusMaster)                                                                               --Alt+Tab
     , ((modm,                       0xff0d),     windows W.swapMaster)                                                                                --Win+Enter
     , ((modm     .|. shiftMask,       0x6a),     windows W.swapDown)                                                                                  --Win+Shift+J
     , ((modm     .|. shiftMask,     0xff54),     windows W.swapDown)                                                                                  --Win+Shift+Down
