@@ -142,7 +142,7 @@ permission_mode=true
 torben_fj_mode=false
 quick_search_mode=2
 
-select_flags=6
+select_flags=7
 
 simple_swap=false
 

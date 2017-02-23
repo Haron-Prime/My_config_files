@@ -233,7 +233,7 @@ myManageHook :: ManageHook
 myManageHook = composeAll . concat $
     [ 
       [className =? c                --> doF (W.shift "W")   <+> viewShift ("W")   | c <- myWeb]
-    , [className =? c                --> doF (W.shift "M")   <+> viewShift ("M")   | c <- myMail]
+    , [className =? c                --> doF (W.shift "M")                         | c <- myMail]
     , [className =? c                --> doF (W.shift "E")   <+> viewShift ("E")   | c <- myEdit]
     , [className =? c                --> doF (W.shift "F")   <+> viewShift ("F")   | c <- myFile]
     , [className =? c                --> doF (W.shift "S")   <+> viewShift ("S")   | c <- mySystem]
