@@ -1,6 +1,6 @@
 #!/bin/sh
 upd1=`checkupdates | wc -l`
-if [ $upd1 -gt 0 ]; then echo '<fc=#ff6500>'$upd1'</fc>'
+if [ $upd1 -gt 0 ]; then echo '<fn=1><fc=#ff6500>'$upd1'</fc></fn>'
 else echo $upd1
 fi
 exit 0

@@ -1,6 +1,6 @@
 -- Base
 import XMonad hiding ( (|||) )
-import Control.Monad
+import Control.Monad (liftM2)
 import Data.Ratio ((%))
 import Foreign.C (CChar)
 import System.Exit
@@ -8,7 +8,7 @@ import System.IO
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 import qualified Data.ByteString as B
-import qualified XMonad.Actions.DynamicWorkspaceOrder as DO
+import qualified XMonad.StackSet as W
 
 -- Actions
 import XMonad.Actions.CycleWindows
@@ -16,6 +16,7 @@ import XMonad.Actions.CycleWS
 import XMonad.Actions.FloatSnap
 import XMonad.Actions.UpdateFocus
 import XMonad.Actions.WorkspaceNames
+import qualified XMonad.Actions.DynamicWorkspaceOrder as DO
 
 -- Hooks
 import XMonad.Hooks.CurrentWorkspaceOnTop
@@ -226,27 +227,26 @@ myXPConfig = def {
     }
 
 -- Windows rules:
+myManageHook :: ManageHook
 myManageHook = composeAll . concat $
     [ 
-      [className =? c             --> doF (W.shift "W")            | c <- myWeb]
-    , [className =? c             --> doF (W.shift "M")            | c <- myMail]
-    , [className =? c             --> doF (W.shift "E")            | c <- myEdit]
-    , [className =? c             --> doF (W.shift "F")            | c <- myFile]
-    , [className =? c             --> doF (W.shift "S")            | c <- mySystem]
-    , [className =? c             --> doF (W.shift "V")            | c <- myVideo]
-    , [className =? c             --> doF (W.shift "P")            | c <- myPic]
-    , [className =? c             --> doF (W.shift "J")            | c <- myWork]
-    , [className =? c             --> doF (W.shift "T")            | c <- myTorrent]
-    , [className =? c             --> doF (W.shift "X")            | c <- myVM]
-    , [className =? c             --> doF (W.shift "XI")           | c <- myIM]
-    , [appName   =? c             --> doF (W.shift "XII")          | c <- myTerm]
+      [className =? c             --> doF (W.shift "W")   <+> viewShift ("W")   | c <- myWeb]
+    , [className =? c             --> doF (W.shift "M")   <+> viewShift ("M")   | c <- myMail]
+    , [className =? c             --> doF (W.shift "E")   <+> viewShift ("E")   | c <- myEdit]
+    , [className =? c             --> doF (W.shift "F")   <+> viewShift ("F")   | c <- myFile]
+    , [className =? c             --> doF (W.shift "S")   <+> viewShift ("S")   | c <- mySystem]
+    , [className =? c             --> doF (W.shift "V")   <+> viewShift ("V")   | c <- myVideo]
+    , [className =? c             --> doF (W.shift "P")   <+> viewShift ("P")   | c <- myPic]
+    , [className =? c             --> doF (W.shift "J")   <+> viewShift ("J")   | c <- myWork]
+    , [className =? c             --> doF (W.shift "T")   <+> viewShift ("T")   | c <- myTorrent]
+    , [className =? c             --> doF (W.shift "X")   <+> viewShift ("X")   | c <- myVM]
+    , [className =? c             --> doF (W.shift "XI")  <+> viewShift ("XI")  | c <- myIM]
+    , [appName   =? c             --> doF (W.shift "XII") <+> viewShift ("XII") | c <- myTerm]
 
-    , [className =? c             --> doCenterFloat                | c <- myFloatC]
-    , [appName   =? a             --> doCenterFloat                | a <- myFloatA]
-    , [title     =? t             --> doCenterFloat                | t <- myFloatT]
-    , [role      =? r             --> doCenterFloat                | r <- myFloatR]
-
-    -- , [title     =? "LibreOffice" --> doF (W.shift "E")]
+    , [className =? c             --> doCenterFloat                             | c <- myFloatC]
+    , [appName   =? a             --> doCenterFloat                             | a <- myFloatA]
+    , [title     =? t             --> doCenterFloat                             | t <- myFloatT]
+    , [role      =? r             --> doCenterFloat                             | r <- myFloatR]
 
     , [currentWs =? "W"              --> insertPosition Below Newer]
 
@@ -280,13 +280,13 @@ myManageHook = composeAll . concat $
     myMail    = ["Thunderbird"]
     myEdit    = ["Subl3","Et","Wps","Wpp","Acroread","FoxitReader"]
     myFile    = ["Pcmanfm","Thunar"]
-    mySystem  = ["pacmanxg","systemdx","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap"]
+    mySystem  = ["pacmanxg","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","Easytag"]
     myPic     = ["Gimp","Gimp-2.8","Inkscape"]
     myWork    = ["Wine"]
     myTorrent = ["Tixati","Transgui","Transmission-gtk","Transmission-remote-gtk"]
     myVM      = ["VirtualBox"]
-    myIM      = ["Hexchat","psi","Psi","Viber","Telegram"]
+    myIM      = ["Hexchat","psi","Psi","Viber","TelegramDesktop"]
     myTerm    = ["term","TMUX","termux"]
 
     -- CenterFloat
@@ -297,6 +297,8 @@ myManageHook = composeAll . concat $
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
 
     role      = stringProperty "WM_WINDOW_ROLE"
+
+    viewShift = doF . liftM2 (.) W.greedyView W.shift
 
 -- Event handling
 myEventHook = fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove
@@ -311,7 +313,7 @@ myLogHook = do
         }
 
 -- Startup hook
-myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D"
+myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
 
 mynameScratchpads = [ NS "ncmpcpp" "urxvtc -name ncmpcpp -e ncmpcpp" (appName =? "ncmpcpp") (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                 , NS "htop" "urxvtc -name htop -e htop" (appName =? "htop") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
@@ -321,6 +323,9 @@ mynameScratchpads = [ NS "ncmpcpp" "urxvtc -name ncmpcpp -e ncmpcpp" (appName =?
                 , NS "font-manager" "font-manager" (className =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                 , NS "Organizer" "Organizer" (stringProperty "WM_WINDOW_ROLE" =? "Organizer") (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                 ]
+
+onScr :: ScreenId -> (WorkspaceId -> WindowSet -> WindowSet) -> WorkspaceId -> X ()
+onScr n f i = screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 
 -- Scratchpad
 --
