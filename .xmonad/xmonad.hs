@@ -347,7 +347,7 @@ myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen =
         focusedBorderColor = myFocusedBorderColor,
         keys               = myKeys,
         mouseBindings      = myMouseBindings,
-        layoutHook         = avoidStruts $ myLayoutHook,
+        layoutHook         = myLayoutHook,
         manageHook         = manageHook def <+> manageDocks <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos ,
         handleEventHook    = myEventHook,
         logHook            = myLogHook >>= xmonadPropLog,
