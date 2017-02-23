@@ -335,6 +335,7 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     l = 1 - w   -- distance from left edge
  
 main = do
+    spawn "feh --bg-scale /home/haron/wall/starrynight.png"
     xmonad =<< xmobar myConfig
 encodeCChar :: B.ByteString -> [CChar]
 encodeCChar = map fromIntegral . B.unpack

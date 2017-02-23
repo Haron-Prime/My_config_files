@@ -22,6 +22,6 @@ compton -b &
 urxvtd -q -f -o &
 pcmanfm -d &
 stalonetray &
-feh --bg-scale /home/haron/wall/starrynight.png &
+# feh --bg-scale /home/haron/wall/starrynight.png &
 python3 /home/haron/.local/lib/gis-weather/gis-weather.py &
 exec xmonad
