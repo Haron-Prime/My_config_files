@@ -331,6 +331,12 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     l = 1 - w   -- distance from left edge
 
 main = do
+    spawn "/usr/bin/xdg-user-dirs-update"
+    spawn "setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp"
+    spawn "xsetroot -cursor_name left_ptr"
+    spawn "xset -dpms"
+    spawn "xset m 5/2 0"
+    spawn "hsetroot -solid '#000000'"
     spawn "numlockx"
     spawn "perWindowLayoutD"
     spawn "compton -b &"
