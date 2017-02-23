@@ -5,7 +5,7 @@
 import XMonad hiding ( (|||) )
 import Control.Monad (liftM2)
 import Data.Ratio ((%))
-import Foreign.C (CChar)
+-- import Foreign.C (CChar)
 import System.Exit
 import System.IO
 import qualified XMonad.StackSet as W
@@ -346,8 +346,8 @@ main = do
     spawn "stalonetray"
     spawn "python3 /home/haron/.local/lib/gis-weather/gis-weather.py"
     xmonad =<< xmobar myConfig
-encodeCChar :: B.ByteString -> [CChar]
-encodeCChar = map fromIntegral . B.unpack
+-- encodeCChar :: B.ByteString -> [CChar]
+-- encodeCChar = map fromIntegral . B.unpack
 
 myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen = Focused } def {
         terminal           = myTerminal,
