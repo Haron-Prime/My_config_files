@@ -305,6 +305,8 @@ myLogHook = do
 
 -- Startup hook
 myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
+onScr :: ScreenId -> (WorkspaceId -> WindowSet -> WindowSet) -> WorkspaceId -> X ()
+onScr n f i = screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 
 -- nameScratchpad
 mynameScratchpads = [ NS "ncmpcpp" "urxvtc -name ncmpcpp -e ncmpcpp" (appName =? "ncmpcpp") (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
@@ -316,9 +318,6 @@ mynameScratchpads = [ NS "ncmpcpp" "urxvtc -name ncmpcpp -e ncmpcpp" (appName =?
                     , NS "Organizer" "Organizer" (stringProperty "WM_WINDOW_ROLE" =? "Organizer") (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     ]
 
-onScr :: ScreenId -> (WorkspaceId -> WindowSet -> WindowSet) -> WorkspaceId -> X ()
-onScr n f i = screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
-
 -- Scratchpad
 manageScratchPad :: ManageHook
 manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
@@ -329,7 +328,7 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     w = 1       -- terminal width
     t = 1 - h   -- distance from top edge
     l = 1 - w   -- distance from left edge
- 
+
 main = do
     spawn "feh --bg-scale /home/haron/wall/starrynight.png"
     xmonad =<< xmobar myConfig
