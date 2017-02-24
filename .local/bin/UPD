@@ -1,6 +1,6 @@
 #!/bin/sh
 upd1=`checkupdates | wc -l`
 if [ $upd1 -gt 0 ]; then echo '<fn=1><fc=#ff6500>'$upd1 'pkg</fc></fn>'
-else echo 'missing'
+else echo 'nothing'
 fi
 exit 0
