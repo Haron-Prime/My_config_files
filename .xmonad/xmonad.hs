@@ -31,7 +31,6 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.Place
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceByPos
--- import XMonad.Hooks.UrgencyHook hiding (Never)
 import XMonad.Hooks.XPropManage
 
 -- Layouts
@@ -299,7 +298,6 @@ myLogHook = do
     currentWorkspaceOnTop
     dynamicLogString $ xmobarPP {
           ppCurrent         = xmobarColor "#9fdfff" ""
-        -- , ppUrgent          = xmobarColor "#ff6500" ""
         , ppTitle           = (\str -> "")
         }
 
