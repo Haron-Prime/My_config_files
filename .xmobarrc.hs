@@ -2,7 +2,7 @@
 -- License - © 2017 WTFPL - http://www.wtfpl.net/
 
 Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
-       , additionalFonts = ["xft:Terminus:size=12:weight=bold:antialias=true:hinting=true","xft:Terminus Re33:size=4:antialias=true:hinting=true"] 
+       , additionalFonts = ["xft:Terminus:size=12:weight=bold:antialias=true:hinting=true","xft:Terminus Re33:size=4"] 
        , borderColor = "#151515"
        , border = NoBorder
        , bgColor = "#151515"
