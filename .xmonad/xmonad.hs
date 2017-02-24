@@ -349,7 +349,7 @@ main = do
 encodeCChar :: B.ByteString -> [CChar]
 encodeCChar = map fromIntegral . B.unpack
 
-myConfig = ewmh def {
+myConfig = ewmh $ def {
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
         borderWidth        = myBorderWidth,
