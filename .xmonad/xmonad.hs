@@ -5,7 +5,7 @@
 import XMonad hiding ( (|||) )
 import Control.Monad (liftM2)
 import Data.Ratio ((%))
--- import Foreign.C (CChar)
+import Foreign.C (CChar)
 import System.Exit
 import System.IO
 import qualified XMonad.StackSet as W
@@ -31,7 +31,7 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.Place
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceByPos
-import XMonad.Hooks.UrgencyHook hiding (Never)
+-- import XMonad.Hooks.UrgencyHook hiding (Never)
 import XMonad.Hooks.XPropManage
 
 -- Layouts
@@ -299,7 +299,7 @@ myLogHook = do
     currentWorkspaceOnTop
     dynamicLogString $ xmobarPP {
           ppCurrent         = xmobarColor "#9fdfff" ""
-        , ppUrgent          = xmobarColor "#ff6500" ""
+        -- , ppUrgent          = xmobarColor "#ff6500" ""
         , ppTitle           = (\str -> "")
         }
 
@@ -346,10 +346,10 @@ main = do
     spawn "stalonetray"
     spawn "python3 /home/haron/.local/lib/gis-weather/gis-weather.py"
     xmonad =<< xmobar myConfig
--- encodeCChar :: B.ByteString -> [CChar]
--- encodeCChar = map fromIntegral . B.unpack
+encodeCChar :: B.ByteString -> [CChar]
+encodeCChar = map fromIntegral . B.unpack
 
-myConfig = ewmh $ withUrgencyHookC  NoUrgencyHook urgencyConfig { suppressWhen = Focused } def {
+myConfig = ewmh def {
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
         borderWidth        = myBorderWidth,
