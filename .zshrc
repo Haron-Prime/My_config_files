@@ -29,7 +29,7 @@ export PAGER="less"
 export EDITOR="vim"
 export ARCHFLAGS="arch x86_64"
 export BROWSER="vivaldi-snapshot"
-export MAIL="thunderbird"
+export MAIL="thunderbird-45"
 export OOO_FORCE_DESKTOP="xmonad"
 export MANOPT="-L ru"
 
@@ -84,7 +84,7 @@ function preexec() {
 setopt menucomplete
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' menu select=1 _complete _ignored _approximate
-zstyle ':completion:*' use-cache on
+zstyle ':completion:*' use-cache true
 zstyle ':completion:*' cache-path $HOME/.zsh/cache
 zstyle ':completion:*' insert-tab false
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
