@@ -36,7 +36,7 @@ Config { font = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                     , Run Com "xmdate" [] "" 10
                     , Run Com "xmtime" [] "" 10
                     , Run Com "myweather" [] "" 600
-                    , Run Com "UPD" [] "" 3000
+                    , Run Com "UPD" [] "" 600
                     ]
        , sepChar = "%"
        , alignSep = "}{"
