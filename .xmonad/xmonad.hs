@@ -73,7 +73,7 @@ myWorkspaces         = [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI
 myNormalBorderColor  = "#454545"
 myFocusedBorderColor = "#9df"
 myFont               = "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
-scratchPad = scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
+scratchPad           = scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -304,8 +304,6 @@ myLogHook = do
 
 -- Startup hook
 myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
-
-onScr :: ScreenId -> (WorkspaceId -> WindowSet -> WindowSet) -> WorkspaceId -> X ()
 onScr n f i = screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 
 -- nameScratchpad
@@ -323,7 +321,6 @@ manageScratchPad :: ManageHook
 manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
 
   where
-
     h = 0.333   -- terminal height
     w = 1       -- terminal width
     t = 1 - h   -- distance from top edge
@@ -345,6 +342,7 @@ main = do
     spawn "stalonetray"
     spawn "python3 /home/haron/.local/lib/gis-weather/gis-weather.py"
     xmonad =<< xmobar myConfig
+
 encodeCChar :: B.ByteString -> [CChar]
 encodeCChar = map fromIntegral . B.unpack
 
