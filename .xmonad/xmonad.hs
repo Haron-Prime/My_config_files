@@ -90,7 +90,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                      0x1008ff17),     spawn "mpc next")
     , ((0,                      0x1008ff30),     spawn "if(pidof transgui >/dev/null); then kill $(pidof transgui); else transgui; fi")
     , ((0,                      0x1008ff18),     spawn "vivaldi-snapshot")
-    , ((0,                      0x1008ff19),     spawn "thunderbird-45")
+    , ((0,                      0x1008ff19),     spawn "thunderbird")
     , ((0,                      0x1008ff5d),     spawn "pcmanfm")
     , ((0       .|. shiftMask,  0x1008ff5d),     spawn "gksu pcmanfm")
     , ((0,                      0x1008ff1d),     spawn "if(pidof galculator >/dev/null); then kill $(pidof galculator); else galculator; fi")
