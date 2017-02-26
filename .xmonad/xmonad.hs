@@ -80,85 +80,85 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
 
     --Applications management
-      ((0,                      0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up")
-    , ((0,                      0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down")
-    , ((0,                      0x1008ff12),     spawn "/usr/bin/pulseaudio-ctl mute")
-    , ((modm,                         0x60),     spawn "mpc toggle")
-    , ((0,                      0x1008ff14),     spawn "mpc toggle")
-    , ((0,                      0x1008ff15),     spawn "mpc stop")
-    , ((0,                      0x1008ff16),     spawn "mpc prev")
-    , ((0,                      0x1008ff17),     spawn "mpc next")
-    , ((0,                      0x1008ff30),     spawn "if(pidof transgui >/dev/null); then kill $(pidof transgui); else transgui; fi")
-    , ((0,                      0x1008ff18),     spawn "vivaldi-snapshot")
-    , ((0,                      0x1008ff19),     spawn "thunderbird")
-    , ((0,                      0x1008ff5d),     spawn "pcmanfm")
-    , ((0       .|. shiftMask,  0x1008ff5d),     spawn "gksu pcmanfm")
-    , ((0,                      0x1008ff1d),     spawn "if(pidof galculator >/dev/null); then kill $(pidof galculator); else galculator; fi")
-    , ((0,                      0x1008ff2f),     spawn "i3lock -i /home/haron/wall/starrynight.png")
-    , ((0,                      0x1008ff81),     spawn "if(pidof ncmpcpp >/dev/null); then kill $(pidof ncmpcpp); else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp; fi")
-    , ((0,                      0x1008ff1b),     spawn "if(pidof htop >/dev/null); then kill $(pidof htop); else urxvtc -name htop -e /usr/bin/htop; fi")
-    , ((0,                      0x1008ff73),     spawn "compreboot")
-    , ((0,                          0xff69),     spawn "compdown")
-    , ((0,                          0xff67),     spawn "gmrun")
-    , ((0,                          0xffc9),     scratchPad)                                                                                          --F12
-    , ((0,                          0xff61),     spawn "scrot -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                 --Print
-    , ((0        .|. shiftMask,     0xff61),     spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                              --Shift+Print
-    , ((mod1Mask,                   0xff61),     spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                              --Alt+Print
-    , ((0        .|. controlMask,   0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Ctrl+Print
-    , ((mod1Mask,                     0x61),     spawn "shutter")                                                                                     --Alt+A
-    , ((mod1Mask,                     0x64),     spawn "deadbeef")                                                                                    --Alt+D
-    , ((mod1Mask,                     0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
-    , ((mod1Mask,                     0x66),     spawn "firefox")                                                                                     --Alt+F
-    , ((mod1Mask,                     0x67),     spawn "gimp")                                                                                        --Alt+G
-    , ((mod1Mask,                     0x68),     spawn "hexchat")                                                                                     --Alt+H
-    , ((mod1Mask,                     0x6c),     spawn "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")              --Alt+L
-    , ((mod1Mask,                     0x6d),     spawn "urxvtc -name mc -e mc")                                                                       --Alt+M
-    , ((mod1Mask,                     0x6f),     spawn "opera12")                                                                                     --Alt+O
-    , ((mod1Mask,                     0x71),     spawn "sleep 1 && xset dpms force off")                                                              --Alt+Q
-    , ((mod1Mask,                     0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
-    , ((mod1Mask,                     0x73),     spawn "subl3")                                                                                       --Alt+S
-    , ((mod1Mask .|. shiftMask,       0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
-    , ((mod1Mask,                     0x74),     spawn "tor-browser")                                                                                 --Alt+T
-    , ((mod1Mask,                     0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
-    , ((modm,                         0x71),     spawn "xmonad --recompile && xmonad --restart && killall xmobar && xmobar")                          --Win+Q
-    , ((modm     .|. shiftMask,     0xff0d),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
+      ((0,                         0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up")
+    , ((0,                         0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down")
+    , ((0,                         0x1008ff12),     spawn "/usr/bin/pulseaudio-ctl mute")
+    , ((modm,                            0x60),     spawn "mpc toggle")
+    , ((0,                         0x1008ff14),     spawn "mpc toggle")
+    , ((0,                         0x1008ff15),     spawn "mpc stop")
+    , ((0,                         0x1008ff16),     spawn "mpc prev")
+    , ((0,                         0x1008ff17),     spawn "mpc next")
+    , ((0,                         0x1008ff30),     spawn "if(pidof transgui >/dev/null); then kill $(pidof transgui); else transgui; fi")
+    , ((0,                         0x1008ff18),     spawn "vivaldi-snapshot")
+    , ((0,                         0x1008ff19),     spawn "thunderbird")
+    , ((0,                         0x1008ff5d),     spawn "pcmanfm")
+    , ((0       .|. shiftMask,     0x1008ff5d),     spawn "gksu pcmanfm")
+    , ((0,                         0x1008ff1d),     spawn "if(pidof galculator >/dev/null); then kill $(pidof galculator); else galculator; fi")
+    , ((0,                         0x1008ff2f),     spawn "i3lock -i /home/haron/wall/starrynight.png")
+    , ((0,                         0x1008ff81),     spawn "if(pidof ncmpcpp >/dev/null); then kill $(pidof ncmpcpp); else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp; fi")
+    , ((0,                         0x1008ff1b),     spawn "if(pidof htop >/dev/null); then kill $(pidof htop); else urxvtc -name htop -e /usr/bin/htop; fi")
+    , ((0,                         0x1008ff73),     spawn "compreboot")
+    , ((0,                             0xff69),     spawn "compdown")
+    , ((0,                             0xff67),     spawn "gmrun")
+    , ((0,                             0xffc9),     scratchPad)                                                                                          --F12
+    , ((0,                             0xff61),     spawn "scrot -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                 --Print
+    , ((0        .|. shiftMask,        0xff61),     spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                              --Shift+Print
+    , ((mod1Mask,                      0xff61),     spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                              --Alt+Print
+    , ((0        .|. controlMask,      0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Ctrl+Print
+    , ((mod1Mask,                        0x61),     spawn "shutter")                                                                                     --Alt+A
+    , ((mod1Mask,                        0x64),     spawn "deadbeef")                                                                                    --Alt+D
+    , ((mod1Mask,                        0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
+    , ((mod1Mask,                        0x66),     spawn "firefox")                                                                                     --Alt+F
+    , ((mod1Mask,                        0x67),     spawn "gimp")                                                                                        --Alt+G
+    , ((mod1Mask,                        0x68),     spawn "hexchat")                                                                                     --Alt+H
+    , ((mod1Mask,                        0x6c),     spawn "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")              --Alt+L
+    , ((mod1Mask,                        0x6d),     spawn "urxvtc -name mc -e mc")                                                                       --Alt+M
+    , ((mod1Mask,                        0x6f),     spawn "opera12")                                                                                     --Alt+O
+    , ((mod1Mask,                        0x71),     spawn "sleep 1 && xset dpms force off")                                                              --Alt+Q
+    , ((mod1Mask,                        0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
+    , ((mod1Mask,                        0x73),     spawn "subl3")                                                                                       --Alt+S
+    , ((mod1Mask .|. shiftMask,          0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
+    , ((mod1Mask,                        0x74),     spawn "tor-browser")                                                                                 --Alt+T
+    , ((mod1Mask,                        0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
+    , ((modm,                            0x71),     spawn "xmonad --recompile && xmonad --restart && killall xmobar && xmobar")                          --Win+Q
+    , ((modm     .|. shiftMask,        0xff0d),     spawn $ XMonad.terminal conf)                                                                        --Win+Shift+Enter
 
     --Prompt management
-    , ((mod1Mask,                   0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
-    , ((mod1Mask,                   0xffbf),     shellPrompt myXPConfig)                                                                              --Alt+F2
-    , ((mod1Mask,                   0xffc0),     runOrRaisePrompt myXPConfig)                                                                         --Alt+F3
-    , ((mod1Mask,                   0xffc1),     sshPrompt myXPConfig)                                                                                --Alt+F4
+    , ((mod1Mask,                      0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
+    , ((mod1Mask,                      0xffbf),     shellPrompt myXPConfig)                                                                              --Alt+F2
+    , ((mod1Mask,                      0xffc0),     runOrRaisePrompt myXPConfig)                                                                         --Alt+F3
+    , ((mod1Mask,                      0xffc1),     sshPrompt myXPConfig)                                                                                --Alt+F4
 
     --Windows and WS management
-    , ((modm,                       0xff09),     rotOpposite)                                                                                         --Win+Tab
-    , ((modm,                         0x78),     kill)                                                                                                --Win+X
-    , ((modm,                         0x20),     sendMessage NextLayout)                                                                              --Win+Space
-    , ((modm     .|. shiftMask,       0x20),     setLayout $ XMonad.layoutHook conf)                                                                  --Win+Shift+Space
-    , ((modm,                         0x6e),     refresh)                                                                                             --Win+N
-    , ((modm,                       0xff1b),     toggleWS' ["NSP"])                                                                                   --Win+Escape
-    , ((modm,                       0xff08),     toggleWS' ["NSP"])                                                                                   --Win+Backspace
-    , ((modm,                       0xff53),     DO.moveTo Next HiddenNonEmptyWS)                                                                     --Win+Right
-    , ((modm,                       0xff51),     DO.moveTo Prev HiddenNonEmptyWS)                                                                     --Win+Left
-    , ((modm     .|. shiftMask,     0xff53),     shiftToNext)                                                                                         --Win+Shift+Right
-    , ((modm     .|. shiftMask,     0xff51),     shiftToPrev)                                                                                         --Win+Shift+Left
-    , ((modm,                         0x6a),     windows W.focusDown)                                                                                 --Win+J
-    , ((modm,                       0xff54),     windows W.focusDown)                                                                                 --Win+Down
-    , ((modm,                         0x6b),     windows W.focusUp)                                                                                   --Win+K
-    , ((modm,                       0xff52),     windows W.focusUp)                                                                                   --Win+Up
-    , ((modm,                         0x6d),     windows W.focusMaster)                                                                               --Win+M
-    , ((mod1Mask,                   0xff09),     windows W.focusMaster)                                                                               --Alt+Tab
-    , ((modm,                       0xff0d),     windows W.swapMaster)                                                                                --Win+Enter
-    , ((modm     .|. shiftMask,       0x6a),     windows W.swapDown)                                                                                  --Win+Shift+J
-    , ((modm     .|. shiftMask,     0xff54),     windows W.swapDown)                                                                                  --Win+Shift+Down
-    , ((modm     .|. shiftMask,       0x6b),     windows W.swapUp)                                                                                    --Win+Shift+K
-    , ((modm     .|. shiftMask,     0xff52),     windows W.swapUp)                                                                                    --Win+Shift+K
-    , ((modm,                         0x68),     sendMessage Shrink)                                                                                  --Win+H
-    , ((modm,                         0x6c),     sendMessage Expand)                                                                                  --Win+L
-    , ((modm,                         0x74),     withFocused $ windows . W.sink)                                                                      --Win+T
-    , ((modm,                         0x2c),     sendMessage (IncMasterN 1))                                                                          --Win+Comma
-    , ((modm,                         0x2e),     sendMessage (IncMasterN (-1)))                                                                       --Win+Period
-    , ((modm,                         0x62),     sendMessage ToggleStruts)                                                                            --Win+B
-    , ((modm     .|. shiftMask,       0x71),     io (exitWith ExitSuccess))                                                                           --Win+Shift+Q
+    , ((modm,                          0xff09),     rotOpposite)                                                                                         --Win+Tab
+    , ((modm,                            0x78),     kill)                                                                                                --Win+X
+    , ((modm,                            0x20),     sendMessage NextLayout)                                                                              --Win+Space
+    , ((modm     .|. shiftMask,          0x20),     setLayout $ XMonad.layoutHook conf)                                                                  --Win+Shift+Space
+    , ((modm,                            0x6e),     refresh)                                                                                             --Win+N
+    , ((modm,                          0xff1b),     toggleWS' ["NSP"])                                                                                   --Win+Escape
+    , ((modm,                          0xff08),     toggleWS' ["NSP"])                                                                                   --Win+Backspace
+    , ((modm,                          0xff53),     DO.moveTo Next HiddenNonEmptyWS)                                                                     --Win+Right
+    , ((modm,                          0xff51),     DO.moveTo Prev HiddenNonEmptyWS)                                                                     --Win+Left
+    , ((modm     .|. shiftMask,        0xff53),     shiftToNext)                                                                                         --Win+Shift+Right
+    , ((modm     .|. shiftMask,        0xff51),     shiftToPrev)                                                                                         --Win+Shift+Left
+    , ((modm,                            0x6a),     windows W.focusDown)                                                                                 --Win+J
+    , ((modm,                          0xff54),     windows W.focusDown)                                                                                 --Win+Down
+    , ((modm,                            0x6b),     windows W.focusUp)                                                                                   --Win+K
+    , ((modm,                          0xff52),     windows W.focusUp)                                                                                   --Win+Up
+    , ((modm,                            0x6d),     windows W.focusMaster)                                                                               --Win+M
+    , ((mod1Mask,                      0xff09),     windows W.focusMaster)                                                                               --Alt+Tab
+    , ((modm,                          0xff0d),     windows W.swapMaster)                                                                                --Win+Enter
+    , ((modm     .|. shiftMask,          0x6a),     windows W.swapDown)                                                                                  --Win+Shift+J
+    , ((modm     .|. shiftMask,        0xff54),     windows W.swapDown)                                                                                  --Win+Shift+Down
+    , ((modm     .|. shiftMask,          0x6b),     windows W.swapUp)                                                                                    --Win+Shift+K
+    , ((modm     .|. shiftMask,        0xff52),     windows W.swapUp)                                                                                    --Win+Shift+K
+    , ((modm,                            0x68),     sendMessage Shrink)                                                                                  --Win+H
+    , ((modm,                            0x6c),     sendMessage Expand)                                                                                  --Win+L
+    , ((modm,                            0x74),     withFocused $ windows . W.sink)                                                                      --Win+T
+    , ((modm,                            0x2c),     sendMessage (IncMasterN 1))                                                                          --Win+Comma
+    , ((modm,                            0x2e),     sendMessage (IncMasterN (-1)))                                                                       --Win+Period
+    , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                            --Win+B
+    , ((modm     .|. shiftMask,          0x71),     io (exitWith ExitSuccess))                                                                           --Win+Shift+Q
     ]
     ++
 
