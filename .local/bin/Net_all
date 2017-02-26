@@ -1,3 +1,6 @@
 #!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
 vnstat | grep total | grep TiB | awk '{print $8$9}'
 exit 0

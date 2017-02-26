@@ -1,4 +1,7 @@
 #!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
 temp1=`sensors | grep Board | tr -s \  | cut -d \  -f 3 | cut -c 2-3`
 temp2=`sensors | grep Board | tr -s \  | cut -d \  -f 3`
 if [ $temp1 -gt 59 ]; then echo '<fc=#ff6500>'$temp2'</fc>'

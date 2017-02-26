@@ -1,4 +1,7 @@
 #!/bin/sh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
 upd1=`checkupdates | wc -l`
 if [ $upd1 -gt 0 ]; then echo '<fc=#cccccc>  Update:</fc><fn=2> </fn><fn=1><fc=#ff6500>'$upd1'<fn=2> </fn>pkg</fc></fn>'
 fi

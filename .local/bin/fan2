@@ -1,3 +1,6 @@
 #!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
 sensors | grep 'fan1' | awk '{print $2,$3}' | tail -n 1
 exit 0

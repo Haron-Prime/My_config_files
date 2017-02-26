@@ -1,4 +1,7 @@
 #!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
 DATA=`date "+%d.%m.%Y"`
 DAY=`date "+%A"`
 if [[ $DAY = "Суббота" ]]; then echo '<fc=#ffab00>'$DAY'</fc>' $DATA

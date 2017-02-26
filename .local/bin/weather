@@ -1,3 +1,6 @@
-#!/bin/sh
+#!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
 cat /home/haron/.config/gis-weather/cur_temp
 exit 0

@@ -1,4 +1,7 @@
 #!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
 zenity  --question --text "Вы действительно желаете выключить компьтер?"
 if [ $? = 0 ]
 	then systemctl --user stop transmission && systemctl poweroff

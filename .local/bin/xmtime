@@ -1,3 +1,6 @@
 #!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
 date "+%H:%M:%S"
 exit 0
