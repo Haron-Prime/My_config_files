@@ -59,21 +59,22 @@ import XMonad.Util.SpawnOnce
 import XMonad.Util.WindowProperties
 import XMonad.Util.WorkspaceCompare
 
-myBrowser            = "vivaldi-snapshot"
-browserClass         = "Vivaldi-snapshot"
-myTerminal           = "urxvtc"
-terminalClass        = "URxvt"
-myShell              = "zsh"
+myBrowser            =  "vivaldi-snapshot"
+browserClass         =  "Vivaldi-snapshot"
+myTerminal           =  "urxvtc"
+terminalClass        =  "URxvt"
+myShell              =  "zsh"
 myFocusFollowsMouse  :: Bool
-myFocusFollowsMouse  = True
-myBorderWidth        = 1
-myModMask            = mod4Mask
+myFocusFollowsMouse  =  True
+myBorderWidth        =  1
+myModMask            =  mod4Mask
 myWorkspaces         :: [String]
-myWorkspaces         = [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"] 
-myNormalBorderColor  = "#454545"
-myFocusedBorderColor = "#9df"
-myFont               = "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
-scratchPad           = scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
+myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"] 
+myNormalBorderColor  =  "#454545"
+myFocusedBorderColor =  "#9df"
+myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
+scratchPad           =  scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
+role                 =  stringProperty "WM_WINDOW_ROLE"
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -185,45 +186,45 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 
 -- Layouts:
 myLayoutHook =  avoidStruts
-            $ Tog.toggleLayouts (noBorders Full) 
-            $ smartBorders
-            $ onWorkspace "W"  (Full ||| mouseResizableTile ||| Mirror tiled)
-            $ onWorkspace "M"  (mouseResizableTile ||| Mirror tiled ||| Full)
-            $ onWorkspace "E"  (Mirror tiled ||| mouseResizableTile ||| Full) 
-            $ onWorkspace "F"  (Mirror tiled ||| mouseResizableTile ||| Full)
-            $ onWorkspace "S"  (Mirror tiled ||| mouseResizableTile ||| Full)
-            $ onWorkspace "V"  (Full ||| mouseResizableTile)
-            $ onWorkspace "P"  (Mirror tiled ||| mouseResizableTile ||| Full)
-            $ onWorkspace "J"  (Full ||| Grid)
-            $ onWorkspace "T"  (Full ||| mouseResizableTile)
-            $ onWorkspace "X"  (Mirror tiled ||| mouseResizableTile ||| Full)
-            $ onWorkspace "XI" (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-            $ onWorkspace "XII"(Mirror tiled ||| mouseResizableTile ||| Full)
-            $ tiled ||| Mirror tiled  ||| Full
-  where
-    tiled   = Tall nmaster delta ratio
-    nmaster = 1
-    ratio   = 0.5
-    delta   = 0.01
+                $ Tog.toggleLayouts (noBorders Full) 
+                $ smartBorders
+                $ onWorkspace  "W"    (Full               ||| mouseResizableTile ||| Mirror tiled)
+                $ onWorkspace  "M"    (mouseResizableTile ||| Mirror tiled       ||| Full)
+                $ onWorkspace  "E"    (Mirror tiled       ||| mouseResizableTile ||| Full) 
+                $ onWorkspace  "F"    (Mirror tiled       ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "S"    (Mirror tiled       ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "V"    (Full               ||| mouseResizableTile)
+                $ onWorkspace  "P"    (Mirror tiled       ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "J"    (Full               ||| Grid)
+                $ onWorkspace  "T"    (Full               ||| mouseResizableTile)
+                $ onWorkspace  "X"    (Mirror tiled       ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
+                $ onWorkspace  "XII"  (Mirror tiled       ||| mouseResizableTile ||| Full)
+                $ tiled ||| Mirror tiled  ||| Full
+                where
+                  tiled   = Tall nmaster delta ratio
+                  nmaster = 1
+                  ratio   = 0.5
+                  delta   = 0.01
 
-    -- IMLayout
-    myIMLayout = withIM (1%7) psi Grid
-        where
-          psi   = And (ClassName "psi") (Role "main")
+                  -- IMLayout
+                  myIMLayout = withIM (1%7) psi Grid
+                      where
+                        psi   = And (ClassName "psi") (Role "main")
 
 -- XP
 myXPConfig = def {
-          font              = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
-        , bgColor           = "#151515"
-        , fgColor           = "#959595"
-        , bgHLight          = "#151515"
-        , fgHLight          = "#9df"
-        , promptBorderWidth = 0
-        , position          = Top
-        , height            = 20
-        , alwaysHighlight   = True
-        , historySize       = 100
-    }
+                   font              = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
+                 , bgColor           = "#151515"
+                 , fgColor           = "#959595"
+                 , bgHLight          = "#151515"
+                 , fgHLight          = "#9df"
+                 , promptBorderWidth = 0
+                 , position          = Top
+                 , height            = 20
+                 , alwaysHighlight   = True
+                 , historySize       = 100
+                 }
 
 -- Windows rules:
 myManageHook :: ManageHook
@@ -287,8 +288,6 @@ myManageHook = composeAll . concat $
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
 
-    role      = stringProperty "WM_WINDOW_ROLE"
-
     viewShift = doF . liftM2 (.) W.greedyView W.shift
 
 -- Event handling
@@ -296,24 +295,26 @@ myEventHook = fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove
  
 -- Status bars and logging.
 myLogHook = do
-    currentWorkspaceOnTop
-    dynamicLogString $ xmobarPP {
-          ppCurrent         = xmobarColor "#9fdfff" ""
-        , ppTitle           = (\str -> "")
-        }
+            currentWorkspaceOnTop
+            dynamicLogString $ xmobarPP {
+                                          ppCurrent         = xmobarColor "#9fdfff" ""
+                                        , ppTitle           = (\str -> "")
+                                        }
 
 -- Startup hook
 myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
-onScr n f i = screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
+onScr n f i   = screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 
 -- nameScratchpad
-mynameScratchpads = [ NS "ncmpcpp" "urxvtc -name ncmpcpp -e ncmpcpp" (appName =? "ncmpcpp") (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                    , NS "htop" "urxvtc -name htop -e htop" (appName =? "htop") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-                    , NS "gpick" "gpick" (appName =? "gpick") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                    , NS "pavucontrol" "pavucontrol" (appName =? "pavucontrol") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                    , NS "Mirage" "mirage" (className =? "Mirage") (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-                    , NS "font-manager" "font-manager" (className =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                    , NS "Organizer" "Organizer" (stringProperty "WM_WINDOW_ROLE" =? "Organizer") (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+mynameScratchpads = [ NS "ncmpcpp"      "urxvtc -name ncmpcpp -e ncmpcpp" (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+                    , NS "htop"         "urxvtc -name htop -e htop"       (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+                    , NS "gpick"        "gpick"                           (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+                    , NS "pavucontrol"  "pavucontrol"                     (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+
+                    , NS "Mirage"       "mirage"                          (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+                    , NS "font-manager" "font-manager"                    (className  =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+
+                    , NS "Organizer"    "Organizer"                       (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     ]
 
 -- Scratchpad
@@ -327,38 +328,39 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     l = 1 - w   -- distance from left edge
 
 main = do
-    spawn "/usr/bin/xdg-user-dirs-update"
-    spawn "setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp"
-    spawn "xsetroot -cursor_name left_ptr"
-    spawn "xset -dpms"
-    spawn "xset m 5/2 0"
-    spawn "hsetroot -solid '#000000'"
-    spawn "numlockx"
-    spawn "perWindowLayoutD"
-    spawn "compton -b &"
-    spawn "urxvtd -q -f -o"
-    spawn "pcmanfm -d"
-    spawn "feh --bg-scale /home/haron/wall/starrynight.png"
-    spawn "stalonetray"
-    spawn "python3 /home/haron/.local/lib/gis-weather/gis-weather.py"
-    xmonad =<< xmobar myConfig
+       spawn "/usr/bin/xdg-user-dirs-update"
+       spawn "setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp"
+       spawn "xsetroot -cursor_name left_ptr"
+       spawn "xset -dpms"
+       spawn "xset m 5/2 0"
+       spawn "hsetroot -solid '#000000'"
+       spawn "numlockx"
+       spawn "perWindowLayoutD"
+       spawn "compton -b &"
+       spawn "urxvtd -q -f -o"
+       spawn "pcmanfm -d"
+       spawn "feh --bg-scale /home/haron/wall/starrynight.png"
+       spawn "stalonetray"
+       spawn "python3 /home/haron/.local/lib/gis-weather/gis-weather.py"
+
+       xmonad =<< xmobar myConfig
 
 encodeCChar :: B.ByteString -> [CChar]
 encodeCChar = map fromIntegral . B.unpack
 
 myConfig = ewmh $ def {
-        terminal           = myTerminal,
-        focusFollowsMouse  = myFocusFollowsMouse,
-        borderWidth        = myBorderWidth,
-        modMask            = myModMask,
-        workspaces         = myWorkspaces,
-        normalBorderColor  = myNormalBorderColor,
-        focusedBorderColor = myFocusedBorderColor,
-        keys               = myKeys,
-        mouseBindings      = myMouseBindings,
-        layoutHook         = myLayoutHook,
-        manageHook         = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos ,
-        handleEventHook    = myEventHook,
-        logHook            = myLogHook >>= xmonadPropLog,
-        startupHook        = myStartupHook
-    }
+           terminal           = myTerminal,
+           focusFollowsMouse  = myFocusFollowsMouse,
+           borderWidth        = myBorderWidth,
+           modMask            = myModMask,
+           workspaces         = myWorkspaces,
+           normalBorderColor  = myNormalBorderColor,
+           focusedBorderColor = myFocusedBorderColor,
+           keys               = myKeys,
+           mouseBindings      = myMouseBindings,
+           layoutHook         = myLayoutHook,
+           manageHook         = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos ,
+           handleEventHook    = myEventHook,
+           logHook            = myLogHook >>= xmonadPropLog,
+           startupHook        = myStartupHook
+           }

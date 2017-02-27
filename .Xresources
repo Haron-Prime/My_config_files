@@ -45,76 +45,76 @@ Xcursor.size:                      22
 
 ! Common parameters
 
-*transparent:                     false
-*cursorBlink:                     true
-*cursorUnderline:                 true
-*saveLines:                       4096
-*background:                      #151515
-*foreground:                      #BBB
-*colorUL:                         #6AC
-*cursorColor:                     #F00
-*shading:                         75
-*mouseWheelScrollPage:            false
-*pointerBlank:                    true
-*pointerColor:                    #656565
-*imLocale:                        en_US.utf8
-*imFont:                          xft:Terminus Re33:size=11:antialias=false:hinting=true
-*utf8Title:                       true
+*transparent:                      false
+*cursorBlink:                      true
+*cursorUnderline:                  true
+*saveLines:                        4096
+*background:                       #151515
+*foreground:                       #BBB
+*colorUL:                          #6AC
+*cursorColor:                      #F00
+*shading:                          75
+*mouseWheelScrollPage:             false
+*pointerBlank:                     true
+*pointerColor:                     #656565
+*imLocale:                         en_US.utf8
+*imFont:                           xft:Terminus Re33:size=11:antialias=false:hinting=true
+*utf8Title:                        true
 
 ! XTerm/UXTerm parameters
 
-*termName:                        xterm-256color
-*locale:                          true
-*metaSendsEscape:                 true
-*renderFont:                      true
-*faceName:                        xft:Terminus Re33:size=11:antialias=false:hinting=true
-*bellIsUrgent:                    true
-*scaleHeight:                     1.01
-*borderWidth:                     0
-*selectToClipboard:               true
-*allowSendEvents:                 false
-*sessionMgt:                      false
-*eightBitInput:                   true
-*VT100*colorULMode:               on
-*VT100*colorBDMode:               off
-*VT100.titeInhibit:               off
-*VT100.translations:              select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
-*VT100.geometry:                  80x32
-*SimpleMenu*background:           #353535
-*SimpleMenu*foreground:           #AAA
-*dynamicColors:                   true
+*termName:                         xterm-256color
+*locale:                           true
+*metaSendsEscape:                  true
+*renderFont:                       true
+*faceName:                         xft:Terminus Re33:size=11:antialias=false:hinting=true
+*bellIsUrgent:                     true
+*scaleHeight:                      1.01
+*borderWidth:                      0
+*selectToClipboard:                true
+*allowSendEvents:                  false
+*sessionMgt:                       false
+*eightBitInput:                    true
+*VT100*colorULMode:                on
+*VT100*colorBDMode:                off
+*VT100.titeInhibit:                off
+*VT100.translations:               select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+*VT100.geometry:                   80x32
+*SimpleMenu*background:            #353535
+*SimpleMenu*foreground:            #AAA
+*dynamicColors:                    true
 
 ! URxvt parameters
 
-URxvt*font:                       xft:Terminus Re33:size=11:antialias=false:hinting=true
-URxvt*boldFont:                   xft:Terminus Re33:size=11:antialias=false:hinting=true
-URxvt*letterSpace:                 -1
-URxvt*scrollBar:                  false
-URxvt*internalBorder:             5
-URxvt*skipBuiltinGlyphs:          true
-URxvt*perl-lib:                   /home/haron/.config/urxvt/perl
-URxvt*perl-ext-common:            default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard,resize-font,vtwheel
-URxvt*iso14755:                   false
-URxvt*iso14755_52:                false
-URxvt*keysym.Control-Shift-C:     perl:clipboard:copy
-URxvt*keysym.Control-Shift-V:     perl:clipboard:paste
-URxvt*keysym.C-Delete:            perl:matcher:last
-URxvt*keysym.M-Delete:            perl:matcher:list
-URxvt*matcher.pattern.0:          (?:https?:\\/\\/|ftp:\\/\\/|rsync:\\/\\/|news:\\/\\/|mailto:|file:\\/\\/|\\bwww\\.)\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\n\(\n\\\([a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\\)| # Allow a pair of matched parentheses\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_+*~]  # exclude some trailing characters (heuristic)\n\)+
-URxvt*matcher.button:             1
-URxvt*url-select.launcher:        /usr/bin/xdg-open
-URxvt*url-launcher:               /usr/bin/xdg-open
-URxvt*keysym.M-w:                 perl:url-select:select_next
-URxvt*underlineURLs:              true
-URxvt*tabbed.new-button:          no
-URxvt*tabbed.tabbar-fg:           12
-URxvt*tabbed.tabbar-bg:           8
-URxvt*tabbed.tab-fg:              8
-URxvt*tabbed.tab-bg:              12
-URxvt*tabbed.title-fg:            12
-URxvt*tabbed.title-bg:            8
-URxvt*tabbed.autohide:            true
-URxvt*tabbed.reopen-on-close:     yes
-URxvt*urgentOnBell:               true
-URxvt*resize-font.smaller:        C-Down
-URxvt*resize-font.bigger:         C-Up
+URxvt*font:                        xft:Terminus Re33:size=11:antialias=false:hinting=true
+URxvt*boldFont:                    xft:Terminus Re33:size=11:antialias=false:hinting=true
+URxvt*letterSpace:                  -1
+URxvt*scrollBar:                   false
+URxvt*internalBorder:              5
+URxvt*skipBuiltinGlyphs:           true
+URxvt*perl-lib:                    /home/haron/.config/urxvt/perl
+URxvt*perl-ext-common:             default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard,resize-font,vtwheel
+URxvt*iso14755:                    false
+URxvt*iso14755_52:                 false
+URxvt*keysym.Control-Shift-C:      perl:clipboard:copy
+URxvt*keysym.Control-Shift-V:      perl:clipboard:paste
+URxvt*keysym.C-Delete:             perl:matcher:last
+URxvt*keysym.M-Delete:             perl:matcher:list
+URxvt*matcher.pattern.0:           (?:https?:\\/\\/|ftp:\\/\\/|rsync:\\/\\/|news:\\/\\/|mailto:|file:\\/\\/|\\bwww\\.)\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\n\(\n\\\([a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_.+!*\\x27,~#]*\\)| # Allow a pair of matched parentheses\n\[a-zA-Z0-9\\x{0410}-\\x{044F}\\-\\@;\\/?:&=%\\$_+*~]  # exclude some trailing characters (heuristic)\n\)+
+URxvt*matcher.button:              1
+URxvt*url-select.launcher:         /usr/bin/xdg-open
+URxvt*url-launcher:                /usr/bin/xdg-open
+URxvt*keysym.M-w:                  perl:url-select:select_next
+URxvt*underlineURLs:               true
+URxvt*tabbed.new-button:           no
+URxvt*tabbed.tabbar-fg:            12
+URxvt*tabbed.tabbar-bg:            8
+URxvt*tabbed.tab-fg:               8
+URxvt*tabbed.tab-bg:               12
+URxvt*tabbed.title-fg:             12
+URxvt*tabbed.title-bg:             8
+URxvt*tabbed.autohide:             true
+URxvt*tabbed.reopen-on-close:      yes
+URxvt*urgentOnBell:                true
+URxvt*resize-font.smaller:         C-Down
+URxvt*resize-font.bigger:          C-Up
