@@ -3,21 +3,31 @@
 My config awesome wm, xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh etc
 
 #### Some screenshots 
-XMonad
+# XMonad
+
 ![](/screenshots/xmonad-1.png?raw=true)
 ![](/screenshots/xmonad-2.png?raw=true)
-i3wm
+
+# i3wm
+
 ![](/screenshots/i3wm-1.png?raw=true)
 ![](/screenshots/i3wm-2.png?raw=true)
-sway
+
+# sway
+
 ![](/screenshots/sway1.png?raw=true)
 ![](/screenshots/sway2.png?raw=true)
-herbstluftwm
+
+# herbstluftwm
 ![](/screenshots/herbstluftwm-1.png?raw=true)
 ![](/screenshots/herbstluftwm-3.png?raw=true)
-ncmpcpp
+
+# ncmpcpp
+
 ![](/screenshots/ncmpcpp.png?raw=true)
-ranger
+
+# ranger
+
 ![](/screenshots/ranger.png?raw=true)
 
 #### License - © 2017 WTFPL - http://www.wtfpl.net/ 
