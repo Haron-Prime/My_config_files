@@ -64,17 +64,16 @@ browserClass         =  "Vivaldi-snapshot"
 myTerminal           =  "urxvtc"
 terminalClass        =  "URxvt"
 myShell              =  "zsh"
-myFocusFollowsMouse  :: Bool
 myFocusFollowsMouse  =  True
 myBorderWidth        =  1
 myModMask            =  mod4Mask
-myWorkspaces         :: [String]
 myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"] 
 myNormalBorderColor  =  "#454545"
 myFocusedBorderColor =  "#9df"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 scratchPad           =  scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 role                 =  stringProperty "WM_WINDOW_ROLE"
+encodeCChar          =  map fromIntegral . B.unpack
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -226,7 +225,6 @@ myXPConfig = def {
                  }
 
 -- Windows rules:
-myManageHook :: ManageHook
 myManageHook = composeAll . concat $
     [ 
       [className =? c                --> doF (W.shift "W")   <+> viewShift ("W")   | c <- myWeb]
@@ -300,10 +298,6 @@ myLogHook = do
                                         , ppTitle           = (\str -> "")
                                         }
 
--- Startup hook
-myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
-onScr n f i   = screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
-
 -- nameScratchpad
 mynameScratchpads = [ NS "ncmpcpp"      "urxvtc -name ncmpcpp -e ncmpcpp" (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                     , NS "htop"         "urxvtc -name htop -e htop"       (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
@@ -317,14 +311,16 @@ mynameScratchpads = [ NS "ncmpcpp"      "urxvtc -name ncmpcpp -e ncmpcpp" (appNa
                     ]
 
 -- Scratchpad
-manageScratchPad :: ManageHook
 manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
-
   where
     h = 0.333   -- terminal height
     w = 1       -- terminal width
     t = 1 - h   -- distance from top edge
     l = 1 - w   -- distance from left edge
+
+-- Startup hook
+myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
+onScr n f i   = screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 
 main = do
        spawn "/usr/bin/xdg-user-dirs-update"
@@ -343,9 +339,6 @@ main = do
        spawn "python3 /home/haron/.local/lib/gis-weather/gis-weather.py"
 
        xmonad =<< xmobar myConfig
-
-encodeCChar :: B.ByteString -> [CChar]
-encodeCChar = map fromIntegral . B.unpack
 
 myConfig = ewmh $ def {
                        terminal           = myTerminal
