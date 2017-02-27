@@ -21,6 +21,7 @@ Config {
        , overrideRedirect = True
        , commands         = [
                               Run XMonadLog
+                            , Run Com       "UPD-v2" [] "" 600
                             , Run Network   "enp3s0" ["-S", "True", "-d", "1", "-t", "<fc=#cccccc>Net:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Com       "Net_in" [] "" 50
                             , Run Com       "Net_out" [] "" 50
@@ -36,7 +37,6 @@ Config {
                             , Run Com       "xmdate" [] "" 10
                             , Run Com       "xmtime" [] "" 10
                             , Run Com       "myweather" [] "" 600
-                            , Run Com       "UPD-v2" [] "" 600
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
