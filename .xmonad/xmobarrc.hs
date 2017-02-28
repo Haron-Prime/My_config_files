@@ -10,7 +10,7 @@ Config {
        , fgColor          = "#959595"
        , alpha            = 1
        , position         = TopP 1 54
-       , textOffset       = 15
+       , textOffset       = 14
        , iconOffset       = 8
        , lowerOnStart     = True
        , pickBroadest     = False

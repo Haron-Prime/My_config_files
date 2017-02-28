@@ -68,8 +68,8 @@ myFocusFollowsMouse  =  True
 myBorderWidth        =  1
 myModMask            =  mod4Mask
 myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"] 
-myNormalBorderColor  =  "#454545"
-myFocusedBorderColor =  "#9df"
+myNormalBorderColor  =  "#555555"
+myFocusedBorderColor =  "#95d5f5"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 scratchPad           =  scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 role                 =  stringProperty "WM_WINDOW_ROLE"
