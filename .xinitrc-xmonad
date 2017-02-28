@@ -9,5 +9,19 @@ fi
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
      eval "$(dbus-launch --sh-syntax --exit-with-session)"
  fi
- 
+
+/usr/bin/xdg-user-dirs-update &
+setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp &
+xsetroot -cursor_name left_ptr &
+xset -dpms &
+xset m 5/2 0 &
+hsetroot -solid '#000000' &
+numlockx &
+perWindowLayoutD &
+compton -b &
+urxvtd -q -f -o &
+pcmanfm -d &
+feh --bg-scale /home/haron/wall/starrynight.png &
+stalonetray &
+python3 /home/haron/.local/lib/gis-weather/gis-weather.py &
 exec xmonad

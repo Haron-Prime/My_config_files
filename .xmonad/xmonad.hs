@@ -323,21 +323,6 @@ myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 
 onScr n f i   = screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 
 main = do
-       spawn "/usr/bin/xdg-user-dirs-update"
-       spawn "setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp"
-       spawn "xsetroot -cursor_name left_ptr"
-       spawn "xset -dpms"
-       spawn "xset m 5/2 0"
-       spawn "hsetroot -solid '#000000'"
-       spawn "numlockx"
-       spawn "perWindowLayoutD"
-       spawn "compton -b &"
-       spawn "urxvtd -q -f -o"
-       spawn "pcmanfm -d"
-       spawn "feh --bg-scale /home/haron/wall/starrynight.png"
-       spawn "stalonetray"
-       spawn "python3 /home/haron/.local/lib/gis-weather/gis-weather.py"
-
        xmonad =<< xmobar myConfig
 
 myConfig = ewmh $ def {
