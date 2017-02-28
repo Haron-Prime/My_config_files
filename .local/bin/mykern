@@ -1,0 +1,7 @@
+#!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
+KERN=`uname -r`
+echo '<fc=#95d5f5>'$KERN'</fc>'
+exit 0

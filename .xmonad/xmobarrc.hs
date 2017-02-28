@@ -10,8 +10,8 @@ Config {
        , fgColor          = "#959595"
        , alpha            = 1
        , position         = TopP 1 54
-       , textOffset       = -1
-       , iconOffset       = -1
+       , textOffset       = 15
+       , iconOffset       = 8
        , lowerOnStart     = True
        , pickBroadest     = False
        , persistent       = False
@@ -40,5 +40,5 @@ Config {
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog% }{ <<fc=#85b5d5><</fc><fc=#95d5f5><</fc><fc=#85b5d5><</fc><%UPD-v2%  %enp3s0%  <fc=#cccccc>Traf:</fc><fn=2> </fn>%Net_in%<fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn>%Net_out%  %cpu% %TCPU%  <fc=#cccccc>MB:</fc><fn=2> </fn>%TMB%  <fc=#cccccc>GPU:</fc><fn=2> </fn>%TGPU%  %memory%  <fc=#cccccc>ROM:</fc><fn=2> </fn>%ROM%  <fc=#cccccc>Up:</fc><fn=2> </fn>%xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#cccccc>%xmtime%</fc>  <fn=1><fc=#95d5f5>%myweather%</fc></fn>"
+       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%  }{  <<fc=#85b5d5><</fc><fc=#95d5f5><</fc><fc=#85b5d5><</fc><%UPD-v2%  %enp3s0%  <fc=#cccccc>Traf:</fc><fn=2> </fn>%Net_in%<fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn>%Net_out%  %cpu% %TCPU%  <fc=#cccccc>MB:</fc><fn=2> </fn>%TMB%  <fc=#cccccc>GPU:</fc><fn=2> </fn>%TGPU%  %memory%  <fc=#cccccc>ROM:</fc><fn=2> </fn>%ROM%  <fc=#cccccc>Up:</fc><fn=2> </fn>%xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#cccccc>%xmtime%</fc>  <fn=1><fc=#95d5f5>%myweather%</fc></fn>"
        }
