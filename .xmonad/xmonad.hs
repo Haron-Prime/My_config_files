@@ -74,6 +74,7 @@ myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=tru
 scratchPad           =  scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
+onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -159,25 +160,22 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                            --Win+B
     , ((modm     .|. shiftMask,          0x71),     io (exitWith ExitSuccess))                                                                           --Win+Shift+Q
     ]
-    ++
 
+    ++
     [((m .|. modm, k), windows $ f i)
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1, xK_2, xK_3, xK_4, xK_5, xK_6, xK_7, xK_8, xK_9, xK_0, xK_minus, xK_equal]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
-    ++
 
+    ++
     [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
         | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 -- Mouse bindings: default actions bound to mouse events
 myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
- 
     [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w
                                        >> windows W.shiftMaster))
- 
     , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))
- 
     , ((modm, button3), (\w -> focus w >> mouseResizeWindow w
                                        >> windows W.shiftMaster))
     ]
@@ -210,13 +208,13 @@ myLayoutHook =  avoidStruts
                       where
                         psi   = And (ClassName "psi") (Role "main")
 
--- XP
+-- Prompts
 myXPConfig = def {
                    font              = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
                  , bgColor           = "#151515"
                  , fgColor           = "#959595"
                  , bgHLight          = "#151515"
-                 , fgHLight          = "#9df"
+                 , fgHLight          = "#95d5f5"
                  , promptBorderWidth = 0
                  , position          = Top
                  , height            = 20
@@ -318,9 +316,8 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     t = 1 - h   -- distance from top edge
     l = 1 - w   -- distance from left edge
 
--- Startup hook
-myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
-onScr n f i   = screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
+-- StartupHook
+myStartupHook        =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
 
 main = do
        xmonad =<< xmobar myConfig
