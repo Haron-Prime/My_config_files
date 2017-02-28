@@ -11,7 +11,7 @@ import System.IO
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 import qualified Data.ByteString as B
-import qualified XMonad.StackSet as W
+-- import qualified XMonad.StackSet as W
 
 -- Actions
 import XMonad.Actions.CycleWindows
@@ -53,11 +53,11 @@ import XMonad.Prompt.Ssh
 -- Utils
 import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
-import XMonad.Util.Run(spawnPipe)
+-- import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
-import XMonad.Util.SpawnOnce
-import XMonad.Util.WindowProperties
-import XMonad.Util.WorkspaceCompare
+-- import XMonad.Util.SpawnOnce
+-- import XMonad.Util.WindowProperties
+-- import XMonad.Util.WorkspaceCompare
 
 myBrowser            =  "vivaldi-snapshot"
 browserClass         =  "Vivaldi-snapshot"
