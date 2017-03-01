@@ -1,0 +1,6 @@
+#!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
+echo '><fc=#85b5d5>></fc><fc=#95d5f5>></fc><fc=#85b5d5>></fc>>'
+exit 0

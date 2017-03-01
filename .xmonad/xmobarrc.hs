@@ -21,9 +21,9 @@ Config {
        , overrideRedirect = True
        , commands         = [
                               Run XMonadLog
-                            , Run Com        "arrows" [] "" 0
+                            , Run Com        "arrows-revers" [] "" 0
                             , Run Com        "UPD-v2" [] "" 600
-                            , Run DynNetwork  ["-S","True","-d","1","-t","<fc=#cccccc>Net:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
+                            , Run DynNetwork  ["-S","True","-d","1","-t","<fc=#cccccc><dev>:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Com        "Net_in" [] "" 50
                             , Run Com        "Net_out" [] "" 50
                             , Run Cpu         ["-S","True","-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>","-L","25","-H","75","--normal","#ffff00","--high","#ff6500"] 10
@@ -41,5 +41,5 @@ Config {
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%  }{  %arrows%%UPD-v2%  %dynnetwork%  <fc=#cccccc>Traf:</fc><fn=2> </fn>%Net_in%<fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn>%Net_out%  %cpu% %TCPU%  <fc=#cccccc>MB:</fc><fn=2> </fn>%TMB%  <fc=#cccccc>GPU:</fc><fn=2> </fn>%TGPU%  %memory%  <fc=#cccccc>ROM:</fc><fn=2> </fn>%ROM%  <fc=#cccccc>Up:</fc><fn=2> </fn>%xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#cccccc>%xmtime%</fc>  <fn=1><fc=#95d5f5>%myweather%</fc></fn>"
+       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%  %arrows-revers%  }{%UPD-v2%  %dynnetwork% %Net_in%<fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn>%Net_out%  %cpu% %TCPU%  <fc=#cccccc>MB:</fc><fn=2> </fn>%TMB%  <fc=#cccccc>GPU:</fc><fn=2> </fn>%TGPU%  %memory%  <fc=#cccccc>ROM:</fc><fn=2> </fn>%ROM%  <fc=#cccccc>Up:</fc><fn=2> </fn>%xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#cccccc>%xmtime%</fc>  <fn=1><fc=#95d5f5>%myweather%</fc></fn>"
        }
