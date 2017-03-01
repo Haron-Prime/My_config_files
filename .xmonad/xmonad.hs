@@ -22,7 +22,6 @@ import XMonad.Actions.WorkspaceNames
 import qualified XMonad.Actions.DynamicWorkspaceOrder as DO
 
 -- Hooks
--- import XMonad.Hooks.CurrentWorkspaceOnTop
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.InsertPosition
@@ -53,11 +52,7 @@ import XMonad.Prompt.Ssh
 -- Utils
 import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
--- import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
--- import XMonad.Util.SpawnOnce
--- import XMonad.Util.WindowProperties
--- import XMonad.Util.WorkspaceCompare
 
 myBrowser            =  "vivaldi-snapshot"
 browserClass         =  "Vivaldi-snapshot"
@@ -93,7 +88,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff18),     spawn "vivaldi-snapshot")
     , ((0,                         0x1008ff19),     spawn "thunderbird")
     , ((0,                         0x1008ff5d),     spawn "pcmanfm")
-    , ((0       .|. shiftMask,     0x1008ff5d),     spawn "gksu pcmanfm")
+    , ((0        .|. shiftMask,    0x1008ff5d),     spawn "gksu pcmanfm")
     , ((0,                         0x1008ff1d),     spawn "if(pidof galculator >/dev/null); then kill $(pidof galculator); else galculator; fi")
     , ((0,                         0x1008ff2f),     spawn "i3lock -i /home/haron/wall/starrynight.png")
     , ((0,                         0x1008ff81),     spawn "if(pidof ncmpcpp >/dev/null); then kill $(pidof ncmpcpp); else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp; fi")
@@ -290,7 +285,6 @@ myEventHook = fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove
  
 -- Status bars and logging.
 myLogHook = do
-            -- currentWorkspaceOnTop
             dynamicLogString $ xmobarPP {
                                           ppCurrent         = xmobarColor "#9fdfff" ""
                                         , ppTitle           = (\str -> "")

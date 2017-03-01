@@ -23,14 +23,14 @@ Config {
                               Run XMonadLog
                             , Run Com       "arrows" [] "" 0
                             , Run Com       "UPD-v2" [] "" 600
-                            , Run Network   "enp3s0" ["-S", "True", "-d", "1", "-t", "<fc=#cccccc>Net:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
+                            , Run Network   "enp3s0" ["-S","True","-d","1","-t","<fc=#cccccc>Net:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Com       "Net_in" [] "" 50
                             , Run Com       "Net_out" [] "" 50
-                            , Run Cpu        ["-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>%","-L","25","-H","75","--normal","#ffff00","--high","#ff6500"] 10
+                            , Run MultiCpu   ["-S","True","-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>","-L","25","-H","75","--normal","#ffff00","--high","#ff6500"] 10
                             , Run Com       "TCPU" [] "" 10
                             , Run Com       "TMB" [] "" 10
                             , Run Com       "TGPU" [] "" 10
-                            , Run Memory     ["-t", "<fc=#cccccc>RAM:</fc><fn=2> </fn><usedratio>%","-L","50","-H","85","--normal","#ffff00","--high","#ff6500"] 50
+                            , Run Memory     ["-S","True","-t","<fc=#cccccc>RAM:</fc><fn=2> </fn><usedratio>","-L","50","-H","85","--normal","#ffff00","--high","#ff6500"] 50
                             , Run Com       "ROM" [] "" 100
                             , Run Com       "xmuptime" [] "" 100
                             , Run Com       "XVol" [] "" 10
@@ -41,5 +41,5 @@ Config {
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%  }{  %arrows%%UPD-v2%  %enp3s0%  <fc=#cccccc>Traf:</fc><fn=2> </fn>%Net_in%<fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn>%Net_out%  %cpu% %TCPU%  <fc=#cccccc>MB:</fc><fn=2> </fn>%TMB%  <fc=#cccccc>GPU:</fc><fn=2> </fn>%TGPU%  %memory%  <fc=#cccccc>ROM:</fc><fn=2> </fn>%ROM%  <fc=#cccccc>Up:</fc><fn=2> </fn>%xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#cccccc>%xmtime%</fc>  <fn=1><fc=#95d5f5>%myweather%</fc></fn>"
+       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%  }{  %arrows%%UPD-v2%  %enp3s0%  <fc=#cccccc>Traf:</fc><fn=2> </fn>%Net_in%<fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn>%Net_out%  %multicpu% %TCPU%  <fc=#cccccc>MB:</fc><fn=2> </fn>%TMB%  <fc=#cccccc>GPU:</fc><fn=2> </fn>%TGPU%  %memory%  <fc=#cccccc>ROM:</fc><fn=2> </fn>%ROM%  <fc=#cccccc>Up:</fc><fn=2> </fn>%xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#cccccc>%xmtime%</fc>  <fn=1><fc=#95d5f5>%myweather%</fc></fn>"
        }
