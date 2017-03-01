@@ -2,5 +2,6 @@
 # Author - Haron Prime
 # License - © 2017 WTFPL - http://www.wtfpl.net/
 
-cat /home/haron/.config/gis-weather/cur_temp
+TEMP=`cat /home/haron/.config/gis-weather/cur_temp`
+echo '<fn=1><fc=#95d5f5>'$TEMP'</fc></fn>'
 exit 0

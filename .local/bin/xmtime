@@ -2,5 +2,6 @@
 # Author - Haron Prime
 # License - © 2017 WTFPL - http://www.wtfpl.net/
 
-date "+%H:%M:%S"
+TIME=`date "+%H:%M:%S"`
+echo '<fc=#cccccc>'$TIME'</fc>'
 exit 0

@@ -39,5 +39,5 @@ Config {
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{%UPD-v2%  %dynnetwork%  %traf%  %cpu% %TCPU%  %TMB%  %TGPU%  %memory%  %ROM%  %xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  <fc=#cccccc>%xmtime%</fc>  <fn=1><fc=#95d5f5>%myweather%</fc></fn>"
+       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{%UPD-v2%  %dynnetwork%  %traf%  %cpu% %TCPU%  %TMB%  %TGPU%  %memory%  %ROM%  %xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  %xmtime%  %myweather%"
        }
