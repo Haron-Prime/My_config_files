@@ -32,12 +32,12 @@ Config {
                             , Run Com        "ROM" [] "" 100
                             , Run Com        "xmuptime" [] "" 100
                             , Run Com        "XVol" [] "" 10
-                            , Run Kbd         [("us", "<fc=#95d5f5>EN</fc>"), ("ru", "<fc=#ff6500>RU</fc>")]
+                            , Run Kbd         [("us", "<fn=1><fc=#95d5f5>EN</fc></fn>"), ("ru", "<fn=1><fc=#ff6500>RU</fc></fn>")]
                             , Run Com        "xmdate" [] "" 10
                             , Run Com        "xmtime" [] "" 10
                             , Run Com        "myweather" [] "" 100
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{%UPD-v2%  %dynnetwork%  %traf%  %cpu% %TCPU%  %TMB%  %TGPU%  %memory%  %ROM%  %xmuptime%  <fc=#cccccc>Vol:</fc><fn=2> </fn>%XVol%  <fn=1>%kbd%</fn>  %xmdate%  %xmtime%  %myweather%"
+       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{%UPD-v2%  %dynnetwork%  %traf%  %cpu% %TCPU%  %TMB%  %TGPU%  %memory%  %ROM%  %xmuptime%  %XVol%  %kbd%  %xmdate%  %xmtime%  %myweather%"
        }

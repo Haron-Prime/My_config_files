@@ -32,4 +32,5 @@ format() {
   perl -ne "$perl_filter"
 }
 
-volume | format
+VOL=`volume | format`
+echo '<fc=#cccccc>Vol:</fc><fn=2> </fn>'$VOL
