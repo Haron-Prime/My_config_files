@@ -2,5 +2,6 @@
 # Author - Haron Prime
 # License - © 2017 WTFPL - http://www.wtfpl.net/
 
-uptime | cut -d , -f 1 | awk '{print $3 $4}' 
+MYUP=`uptime | cut -d , -f 1 | awk '{print $3 $4}'`
+echo '<fc=#cccccc>Up:</fc><fn=2> </fn>'$MYUP 
 exit 0
