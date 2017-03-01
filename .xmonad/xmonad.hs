@@ -22,7 +22,7 @@ import XMonad.Actions.WorkspaceNames
 import qualified XMonad.Actions.DynamicWorkspaceOrder as DO
 
 -- Hooks
-import XMonad.Hooks.CurrentWorkspaceOnTop
+-- import XMonad.Hooks.CurrentWorkspaceOnTop
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.InsertPosition
@@ -290,7 +290,7 @@ myEventHook = fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove
  
 -- Status bars and logging.
 myLogHook = do
-            currentWorkspaceOnTop
+            -- currentWorkspaceOnTop
             dynamicLogString $ xmobarPP {
                                           ppCurrent         = xmobarColor "#9fdfff" ""
                                         , ppTitle           = (\str -> "")
