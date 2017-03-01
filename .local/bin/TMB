@@ -4,8 +4,8 @@
 
 temp1=`sensors | grep Board | tr -s \  | cut -d \  -f 3 | cut -c 2-3`
 temp2=`sensors | grep Board | tr -s \  | cut -d \  -f 3`
-if [ $temp1 -gt 59 ]; then echo '<fc=#ff6500>'$temp2'</fc>'
-elif [ $temp1 -gt 44 ]; then echo '<fc=#ffff00>'$temp2'</fc>'
-else echo $temp2
+if [ $temp1 -gt 59 ]; then echo '<fc=#cccccc>MB:</fc><fn=2> </fn><fc=#ff6500>'$temp2'</fc>'
+elif [ $temp1 -gt 44 ]; then echo '<fc=#cccccc>MB:</fc><fn=2> </fn><fc=#ffff00>'$temp2'</fc>'
+else echo '<fc=#cccccc>MB:</fc><fn=2> </fn>'$temp2
 fi
 exit 0

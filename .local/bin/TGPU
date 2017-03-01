@@ -4,8 +4,8 @@
 
 temp1=`sensors | grep temp1 | tail -1 | tr -s \  | cut -d \  -f 2 | cut -c 2-3`
 temp2=`sensors | grep temp1 | tail -1 | tr -s \  | cut -d \  -f 2`
-if [ $temp1 -gt 64 ]; then echo '<fc=#ff6500>'$temp2'</fc>'
-elif [ $temp1 -gt 49 ]; then echo '<fc=#ffff00>'$temp2'</fc>'
-else echo $temp2
+if [ $temp1 -gt 64 ]; then echo '<fc=#cccccc>GPU:</fc><fn=2> </fn><fc=#ff6500>'$temp2'</fc>'
+elif [ $temp1 -gt 49 ]; then echo '<fc=#cccccc>GPU:</fc><fn=2> </fn><fc=#ffff00>'$temp2'</fc>'
+else echo '<fc=#cccccc>GPU:</fc><fn=2> </fn>'$temp2
 fi
 exit 0
