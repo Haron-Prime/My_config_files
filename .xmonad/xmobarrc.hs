@@ -38,5 +38,5 @@ Config {
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{<action=urxvtc -name update -e yaourt -Syua>%XMUpdate%</action>  <action=ip addr | tail -4 | xargs -0 notify-send -t 0>%dynnetwork%</action>  <action=vnstat | xargs -0 notify-send -t 0>%XMTraf%</action>  <action=urxvt -name htop -e htop>%cpu% %TCPU%</action>  %TMB%  %TGPU%  <action=free | xargs -0 notify-send -t 0>%memory%</action>  <action=df -h | xargs -0 notify-send -t 0>%ROM%</action>  <action=last -n 15 | xargs -0 notify-send -t 0>%XMUptime%</action>  <action=/usr/bin/pulseaudio-ctl mute>%XMVol%</action>  %kbd%  <action=`xclock`>%XMTime%</action>  <action=cal | xargs -0 notify-send -t 0>%XMWeather%</action>"
+       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{<action=urxvtc -name update -e yaourt -Syua>%XMUpdate%</action>  <action=XMVnstat-h>%dynnetwork%</action>  <action=XMVnstat>%XMTraf%</action>  <action=XMHtop>%cpu% %TCPU%</action>  %TMB%  %TGPU%  <action=XMFree>%memory%</action>  <action=XMdf-h>%ROM%</action>  <action=XMLast>%XMUptime%</action>  <action=/usr/bin/pulseaudio-ctl mute>%XMVol%</action>  %kbd%  <action=XMCal>%XMTime%</action>  <action=`XMXClock`>%XMWeather%</action>"
        }

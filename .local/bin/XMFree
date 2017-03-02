@@ -1,0 +1,6 @@
+#!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
+if (pidof dunst >/dev/null); then kill $(pidof dunst); else free | xargs -0 notify-send -t 0; fi
+exit 0
