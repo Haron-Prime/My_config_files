@@ -21,23 +21,22 @@ Config {
        , overrideRedirect = True
        , commands         = [
                               Run XMonadLog
-                            , Run Com        "UPD-v2" [] "" 600
+                            , Run Com        "XMUpdate" [] "" 600
                             , Run DynNetwork  ["-S","True","-d","1","-t","<fc=#cccccc><dev>:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
-                            , Run Com        "traf" [] "" 50
+                            , Run Com        "XMTraf" [] "" 50
                             , Run Cpu         ["-S","True","-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>","-L","25","-H","75","--normal","#ffff00","--high","#ff6500"] 10
                             , Run Com        "TCPU" [] "" 10
                             , Run Com        "TMB" [] "" 10
                             , Run Com        "TGPU" [] "" 10
                             , Run Memory      ["-S","True","-t","<fc=#cccccc>RAM:</fc><fn=2> </fn><usedratio>","-L","50","-H","85","--normal","#ffff00","--high","#ff6500"] 50
                             , Run Com        "ROM" [] "" 100
-                            , Run Com        "xmuptime" [] "" 100
-                            , Run Com        "XVol" [] "" 10
+                            , Run Com        "XMUptime" [] "" 100
+                            , Run Com        "XMVol" [] "" 10
                             , Run Kbd         [("us", "<fn=1><fc=#95d5f5>EN</fc></fn>"), ("ru", "<fn=1><fc=#ff6500>RU</fc></fn>")]
-                            , Run Com        "xmdate" [] "" 10
-                            , Run Com        "xmtime" [] "" 10
-                            , Run Com        "myweather" [] "" 100
+                            , Run Com        "XMTime" [] "" 10
+                            , Run Com        "XMWeather" [] "" 100
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{%UPD-v2%  %dynnetwork%  %traf%  %cpu% %TCPU%  %TMB%  %TGPU%  %memory%  %ROM%  %xmuptime%  %XVol%  %kbd%  %xmdate%  %xmtime%  %myweather%"
+       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{%XMUpdate%  %dynnetwork%  %XMTraf%  %cpu% %TCPU%  %TMB%  %TGPU%  %memory%  %ROM%  %XMUptime%  %XMVol%  %kbd%  %XMTime%  %XMWeather%"
        }
