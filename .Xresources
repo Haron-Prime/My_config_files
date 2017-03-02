@@ -118,3 +118,12 @@ URxvt*tabbed.reopen-on-close:      yes
 URxvt*urgentOnBell:                true
 URxvt*resize-font.smaller:         C-Down
 URxvt*resize-font.bigger:          C-Up
+
+XClock*width:                      720
+XClock*height:                     720
+XClock*update:                     1
+XClock*hourColor:                  cyan
+XClock*minuteColor:                cyan
+XClock*secondColor:                #ff6500
+XClock*majorColor:                 #ff6500
+XClock*minorColor:                 cyan

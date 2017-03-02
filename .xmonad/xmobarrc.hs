@@ -38,5 +38,5 @@ Config {
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{%XMUpdate%  %dynnetwork%  %XMTraf%  %cpu% %TCPU%  %TMB%  %TGPU%  %memory%  %ROM%  %XMUptime%  %XMVol%  %kbd%  %XMTime%  %XMWeather%"
+       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{%XMUpdate%  %dynnetwork%  %XMTraf%  %cpu% %TCPU%  %TMB%  %TGPU%  %memory%  %ROM%  %XMUptime%  %XMVol%  %kbd%  <action=`xclock`>%XMTime%</action>  <action=cal | xargs -0 notify-send -t 0>%XMWeather%</action>"
        }
