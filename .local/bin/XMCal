@@ -2,5 +2,7 @@
 # Author - Haron Prime
 # License - © 2017 WTFPL - http://www.wtfpl.net/
 
-if (pidof dunst >/dev/null); then kill $(pidof dunst); else cal | xargs -0 notify-send -t 0; fi
+if (pidof dunst >/dev/null); then kill $(pidof dunst)
+else cal | xargs -0 notify-send -t 0
+fi
 exit 0
