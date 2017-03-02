@@ -38,5 +38,5 @@ Config {
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{%XMUpdate%  %dynnetwork%  %XMTraf%  <action=urxvt -name htop -e htop>%cpu% %TCPU%</action>  %TMB%  %TGPU%  %memory%  %ROM%  %XMUptime%  %XMVol%  %kbd%  <action=`xclock`>%XMTime%</action>  <action=cal | xargs -0 notify-send -t 0>%XMWeather%</action>"
+       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{%XMUpdate%  %dynnetwork%  <action=vnstat | xargs -0 notify-send -t 0>%XMTraf%</action>  <action=urxvt -name htop -e htop>%cpu% %TCPU%</action>  %TMB%  %TGPU%  <action=free | xargs -0 notify-send -t 0>%memory%</action>  <action=df -h | xargs -0 notify-send -t 0>%ROM%</action>  %XMUptime%  %XMVol%  %kbd%  <action=`xclock`>%XMTime%</action>  <action=cal | xargs -0 notify-send -t 0>%XMWeather%</action>"
        }
