@@ -38,5 +38,5 @@ Config {
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{<action=urxvtc -name update -e yaourt -Syua>%XMUpdate%</action>  <action=XMVnstat-h>%dynnetwork%</action>  <action=XMVnstat>%XMTraf%</action>  <action=XMHtop>%cpu% %TCPU%</action>  %TMB%  %TGPU%  <action=XMFree>%memory%</action>  <action=XMdf-h>%ROM%</action>  <action=XMLast>%XMUptime%</action>  <action=/usr/bin/pulseaudio-ctl mute>%XMVol%</action>  %kbd%  <action=XMCal>%XMTime%</action>  <action=`XMXClock`>%XMWeather%</action>"
+       , template = "<icon=arch-mono-16x16.xpm/> %XMonadLog%}{<action=urxvtc -name update -e yaourt -Syua>%XMUpdate%</action>  <action=XMVnstat-h>%dynnetwork%</action>  <action=XMVnstat>%XMTraf%</action>  <action=XMHtop>%cpu% %TCPU%</action>  <action=XMSensors>%TMB%  %TGPU%</action>  <action=XMFree>%memory%</action>  <action=XMdf-h>%ROM%</action>  <action=XMLast>%XMUptime%</action>  <action=/usr/bin/pulseaudio-ctl mute>%XMVol%</action>  %kbd%  <action=XMCal>%XMTime%</action>  <action=`XMXClock`>%XMWeather%</action>"
        }
