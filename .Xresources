@@ -119,8 +119,8 @@ URxvt*urgentOnBell:                true
 URxvt*resize-font.smaller:         C-Down
 URxvt*resize-font.bigger:          C-Up
 
-XClock*width:                      720
-XClock*height:                     720
+XClock*width:                      540
+XClock*height:                     540
 XClock*update:                     1
 XClock*hourColor:                  cyan
 XClock*minuteColor:                cyan
