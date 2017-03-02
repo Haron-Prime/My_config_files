@@ -48,19 +48,22 @@ context = ctrl+shift+period
 frame_color = "#AAAAAA"
 foreground = "#AAAAAA"
 background = "#252525"
-background = "#2B313C"
-timeout = 4
+#background = "#2B313C"
+transparency = 10
+timeout = 6
 
 [urgency_normal]
 frame_color = "#95D5F5"
 foreground = "#95D5F5"
 background = "#252525"
 #background = "#2B313C"
-timeout = 6
+transparency = 10
+timeout = 8
 
 [urgency_critical]
 frame_color = "#FF6500"
 foreground = "#FF6500"
 background = "#252525"
 #background = "#2B313C"
-timeout = 8
+transparency = 10
+timeout = 10
