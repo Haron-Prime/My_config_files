@@ -23,6 +23,10 @@ My config awesome wm, xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh et
 ![](/screenshots/herbstluftwm-1.png?raw=true)
 ![](/screenshots/herbstluftwm-3.png?raw=true)
 
+#### mc
+
+![](/screenshots/mc.png?raw=true)
+
 #### ncmpcpp
 
 ![](/screenshots/ncmpcpp.png?raw=true)
