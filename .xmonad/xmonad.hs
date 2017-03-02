@@ -295,7 +295,7 @@ mynameScratchpads = [ NS "ncmpcpp"      "urxvtc -name ncmpcpp -e ncmpcpp"     (a
                     , NS "htop"         "urxvtc -name htop -e htop"           (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                     , NS "gpick"        "gpick"                               (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "pavucontrol"  "pavucontrol"                         (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                    , NS "update"       "urxvtc -name update -e yaourt -Syua" (appName    =? "update")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+                    , NS "update"       "urxvtc -name update -e yaourt -Syua" (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
 
                     , NS "Mirage"       "mirage"                              (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                     , NS "font-manager" "font-manager"                        (className  =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
