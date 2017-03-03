@@ -19,7 +19,7 @@
 	"fallback_encoding": "Cyrillic (Windows 1251)",
 	"find_selected_text": true,
 	"font_face": "Terminus Re33",
-	"font_size": 13,
+	"font_size": 12,
 	"gpu_window_buffer": true,
 	"gutter": true,
 	"highlight_line": true,
