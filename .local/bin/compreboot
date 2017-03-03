@@ -2,7 +2,7 @@
 # Author - Haron Prime
 # License - © 2017 WTFPL - http://www.wtfpl.net/
 
-zenity  --question --text "Вы действительно желаете перезагрузить компьтер?"
+zenity  --question --text "You really want to restart your computer?"
 if [ $? = 0 ]
 	then systemctl --user stop transmission && systemctl reboot
 fi
