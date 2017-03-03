@@ -1,0 +1,8 @@
+#!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
+if (pidof ncmpcpp >/dev/null); then kill $(pidof ncmpcpp)
+else urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp
+fi
+exit 0
