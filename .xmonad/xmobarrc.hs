@@ -11,7 +11,7 @@ Config {
        , alpha            = 1
        , position         = TopP 1 54
        , textOffset       = 14
-       , iconOffset       = 8
+       , iconOffset       = -1
        , lowerOnStart     = True
        , pickBroadest     = False
        , persistent       = False
@@ -39,5 +39,5 @@ Config {
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<action=`i3lock -i /home/haron/wall/starrynight.png` button=1><icon=arch-mono-16x16.xpm/>%XMNull%</action> %XMonadLog%}{<action=urxvtc -name update -e yaourt -Syua>%XMUpdate%</action>  <action=`XMVnstat-h` button=1><action=`XMVnstat-d` button=3>%dynnetwork%</action></action>  <action=`XMVnstat` button=1><action=`XMVnstat-m` button=3>%XMTraf%</action></action>  <action=XMHtop>%cpu% %TCPU%</action>  <action=XMSensors>%TMB%  %TGPU%</action>  <action=XMFree>%memory%</action>  <action=XMdf-h>%ROM%</action>  <action=XMLast>%XMUptime%</action>  <action=`/usr/bin/pulseaudio-ctl up` button=5><action=`/usr/bin/pulseaudio-ctl down` button=4><action=`/usr/bin/pulseaudio-ctl mute` button=1>%XMVol%</action></action></action>  <action=`xdotool key Mode_switch`>%kbd%</action>  <action=`XMCal` button=1><action=`XMXClock` button=3>%XMTime%</action></action>  %XMWeather%"
+       , template = "<action=`i3lock -i /home/haron/wall/starrynight.png` button=1><action=`compdown` button=2><action=`compreboot` button=3><icon=arch-mono-16x16.xpm/>%XMNull%</action></action></action> %XMonadLog%}{<action=urxvtc -name update -e yaourt -Syua>%XMUpdate%</action>  <action=`XMVnstat-h` button=1><action=`XMVnstat-d` button=3>%dynnetwork%</action></action>  <action=`XMVnstat` button=1><action=`XMVnstat-m` button=3>%XMTraf%</action></action>  <action=XMHtop>%cpu% %TCPU%</action>  <action=XMSensors>%TMB%  %TGPU%</action>  <action=XMFree>%memory%</action>  <action=XMdf-h>%ROM%</action>  <action=XMLast>%XMUptime%</action>  <action=`/usr/bin/pulseaudio-ctl up` button=5><action=`/usr/bin/pulseaudio-ctl down` button=4><action=`/usr/bin/pulseaudio-ctl mute` button=1>%XMVol%</action></action></action>  <action=`xdotool key Mode_switch`>%kbd%</action>  <action=`XMCal` button=1><action=`XMXClock` button=3>%XMTime%</action></action>  %XMWeather%"
        }
