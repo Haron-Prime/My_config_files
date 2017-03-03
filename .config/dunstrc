@@ -1,5 +1,5 @@
 [global]
-font = Terminus 12
+font = Terminus Re33 12
 allow_markup = yes
 plain_text = no
 format = "<b>%s</b>\n%b"
@@ -14,7 +14,7 @@ stack_duplicates = yes
 hide_duplicates_count = yes
 geometry = "0x0-5+24"
 shrink = no
-transparency = 10
+transparency = 30
 idle_threshold = 0
 monitor = 0
 follow = none
@@ -29,7 +29,7 @@ separator_color = frame
 startup_notification = false
 dmenu = /usr/bin/dmenu -p dunst:
 browser = /usr/bin/vivaldi-snapshot
-icon_position = off
+icon_position = left
 max_icon_size = 80
 icon_folders = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
 
@@ -48,22 +48,21 @@ context = ctrl+shift+period
 frame_color = "#AAAAAA"
 foreground = "#AAAAAA"
 background = "#252525"
-#background = "#2B313C"
-transparency = 10
+# background = "#2B313C"
 timeout = 6
 
 [urgency_normal]
 frame_color = "#95D5F5"
 foreground = "#95D5F5"
 background = "#252525"
-#background = "#2B313C"
-transparency = 10
+# background = "#2B313C"
 timeout = 8
+icon = /home/haron/.icons/nouveGnomeGray/24x24/status/gtk-info.png
 
 [urgency_critical]
 frame_color = "#FF6500"
 foreground = "#FF6500"
 background = "#252525"
-#background = "#2B313C"
-transparency = 10
+# background = "#2B313C"
 timeout = 10
+icon = /home/haron/.icons/nouveGnomeGray/24x24/status/dialog-warning.png

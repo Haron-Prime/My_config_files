@@ -92,7 +92,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff1d),     spawn "if (pidof galculator >/dev/null); then kill $(pidof galculator); else galculator; fi")
     , ((0,                         0x1008ff2f),     spawn "i3lock -i /home/haron/wall/starrynight.png")
     , ((0,                         0x1008ff81),     spawn "XMncmpcpp")
-    , ((0,                         0x1008ff1b),     spawn "if (pidof htop >/dev/null); then kill $(pidof htop); else urxvtc -name htop -e /usr/bin/htop; fi")
+    , ((0,                         0x1008ff1b),     spawn "XMHtop")
     , ((0,                         0x1008ff73),     spawn "compreboot")
     , ((0,                             0xff69),     spawn "compdown")
     , ((0,                             0xff67),     spawn "gmrun")
