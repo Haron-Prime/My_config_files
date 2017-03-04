@@ -7,6 +7,5 @@ while `pgrep yaourt >/dev/null`
 do 
 	sleep 1
 done
-killall xmobar
-xmobar
+xmonad --restart
 exit 0
