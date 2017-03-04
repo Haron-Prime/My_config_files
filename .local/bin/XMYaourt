@@ -1,0 +1,12 @@
+#!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
+urxvtc -name update -e yaourt -Syua &&
+while `pgrep yaourt >/dev/null`
+do 
+	sleep 1
+done
+killall xmobar
+xmobar
+exit 0
