@@ -5,7 +5,7 @@
 urxvtc -name update -e yaourt -Syua &&
 while `pgrep yaourt >/dev/null`
 do 
-	sleep 1
+    sleep 1
 done
-xmonad --restart
+echo > /tmp/pipe
 exit 0
