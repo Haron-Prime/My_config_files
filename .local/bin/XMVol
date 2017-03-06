@@ -33,4 +33,4 @@ format() {
 }
 
 VOL=`volume | format`
-echo '<fc=#cccccc>Vol:</fc><fn=2> </fn>'$VOL
+echo '<fc=#cccccc>Vol:</fc><fn=2> </fn>'$VOL > /tmp/vol
