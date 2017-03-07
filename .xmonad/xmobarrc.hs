@@ -22,7 +22,7 @@ Config {
        , commands         = [
                               Run XMonadLog
                             , Run Com        "XMNull" [] "" 0
-                            , Run Com        "XMUpdate" [] "" 600
+                            , Run Com        "XMUpdate" [] "" 3000
                             , Run PipeReader "/tmp/upd" "Update"
                             , Run DynNetwork ["-S","True","-d","1","-t","<fc=#cccccc><dev>:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Com        "XMTraf" [] "" 50

@@ -146,7 +146,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,          0x6a),     windows W.swapDown)                                                                                  --Win+Shift+J
     , ((modm     .|. shiftMask,        0xff54),     windows W.swapDown)                                                                                  --Win+Shift+Down
     , ((modm     .|. shiftMask,          0x6b),     windows W.swapUp)                                                                                    --Win+Shift+K
-    , ((modm     .|. shiftMask,        0xff52),     windows W.swapUp)                                                                                    --Win+Shift+K
+    , ((modm     .|. shiftMask,        0xff52),     windows W.swapUp)                                                                                    --Win+Shift+Up
     , ((modm,                            0x68),     sendMessage Shrink)                                                                                  --Win+H
     , ((modm,                            0x6c),     sendMessage Expand)                                                                                  --Win+L
     , ((modm,                            0x74),     withFocused $ windows . W.sink)                                                                      --Win+T
