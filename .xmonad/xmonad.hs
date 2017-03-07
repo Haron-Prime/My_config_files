@@ -273,7 +273,7 @@ myManageHook = composeAll . concat $
     myTerm    = ["term","TMUX","termux"]
 
     -- CenterFloat
-    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gsimplecal"]
+    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh"]
     myFloatA  = ["lxappearance","xarchiver","gmrun","Update"]
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
@@ -299,6 +299,7 @@ mynameScratchpads = [ NS "ncmpcpp"      "urxvtc -name ncmpcpp -e ncmpcpp"     (a
 
                     , NS "Mirage"       "mirage"                              (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                     , NS "font-manager" "font-manager"                        (className  =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+                    , NS "Gsimplecal"   "Gsimplecal"                          (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
 
                     , NS "Organizer"    "Organizer"                           (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     ]
