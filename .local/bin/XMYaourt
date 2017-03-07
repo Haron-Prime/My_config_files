@@ -7,5 +7,5 @@ while `pgrep yaourt >/dev/null`
 do 
     sleep 1
 done
-echo > /tmp/pipe
+echo > /tmp/upd
 exit 0
