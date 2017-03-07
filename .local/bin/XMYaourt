@@ -7,5 +7,6 @@ while `pgrep yaourt >/dev/null`
 do 
     sleep 1
 done
-echo > /tmp/upd
+echo > /tmp/upd &
+notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "      <u>YAOURT</u>" "Обновление завершено"
 exit 0

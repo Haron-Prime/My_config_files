@@ -9,7 +9,7 @@ Config {
        , bgColor          = "#151515"
        , fgColor          = "#959595"
        , alpha            = 1
-       , position         = TopP 1 54
+       , position         = TopP 0 54
        , textOffset       = 14
        , iconOffset       = -1
        , lowerOnStart     = True
