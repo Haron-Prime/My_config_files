@@ -3,6 +3,6 @@
 # License - © 2017 WTFPL - http://www.wtfpl.net/
 
 if (pidof dunst >/dev/null); then kill $(pidof dunst)
-else ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head | xargs -0 notify-send -t 0
+else ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 5 | column -t | xargs -0 notify-send -t 0
 fi
 exit 0
