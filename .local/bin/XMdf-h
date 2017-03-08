@@ -3,6 +3,6 @@
 # License - © 2017 WTFPL - http://www.wtfpl.net/
 
 if (pidof dunst >/dev/null); then kill $(pidof dunst)
-else df -h | xargs -0 notify-send -t 0
+else df -h | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/devices/drive-harddisk.png" -t 0
 fi
 exit 0
