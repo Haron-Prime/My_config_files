@@ -1,0 +1,28 @@
+#!/bin/zsh
+
+function pack_upd {
+    if [[ -z $CHECKUPDATES_DB ]]; then
+        CHECKUPDATES_DB="${TMPDIR:-/tmp}/checkup-db-${USER}/"
+    fi
+    trap 'rm -f $CHECKUPDATES_DB/db.lck' INT TERM EXIT
+    DBPath="${DBPath:-/var/lib/pacman/}"
+    eval $(awk -F' *= *' '$1 ~ /DBPath/ { print $1 "=" $2 }' /etc/pacman.conf)
+    mkdir -p "$CHECKUPDATES_DB"
+    ln -s "${DBPath}/local" "$CHECKUPDATES_DB" &> /dev/null
+    fakeroot -- pacman -Sy --dbpath "$CHECKUPDATES_DB" --logfile /dev/null &> /dev/null
+}
+
+ign=`cat /etc/pacman.conf | grep -e '^Ignore'| awk ' { print $3} '`
+
+function pack_count {
+    pack_upd
+    yaourt -Qqua | grep -v $ign | wc -l
+}
+
+function pack_name {
+    pack_upd
+    yaourt -Qqua | grep -v $ign
+}
+
+"$1"
+exit
