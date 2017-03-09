@@ -16,7 +16,6 @@ import qualified Data.ByteString as B
 -- Actions
 import XMonad.Actions.CycleWindows
 import XMonad.Actions.CycleWS
--- import XMonad.Actions.FloatSnap
 import XMonad.Actions.UpdateFocus
 import XMonad.Actions.WorkspaceNames
 import qualified XMonad.Actions.DynamicWorkspaceOrder as DO
