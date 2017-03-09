@@ -263,14 +263,14 @@ myManageHook = composeAll . concat $
     myMail    = ["Thunderbird"]
     myEdit    = ["Subl3","Et","Wps","Wpp","FoxitReader"]
     myFile    = ["Pcmanfm"]
-    mySystem  = ["pacmanxg","GParted","Sysinfo","PkgBrowser","Systemadm","Tk","Zenmap"]
-    myVideo   = ["mpv","Vlc","Sopcast-player.py","Cheese","Easytag"]
+    mySystem  = ["pacmanxg","GParted","Sysinfo","Tk"]
+    myVideo   = ["mpv","Vlc","Sopcast-player.py","Easytag"]
     myPic     = ["Gimp","Gimp-2.8","Inkscape"]
     myWork    = ["Wine"]
     myTorrent = ["Tixati","Transgui","Transmission-gtk","Transmission-remote-gtk"]
     myVM      = ["VirtualBox"]
     myIM      = ["Hexchat","psi","Psi","Viber","TelegramDesktop"]
-    myTerm    = ["term","TMUX","termux"]
+    myTerm    = []
 
     -- CenterFloat
     myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh"]
