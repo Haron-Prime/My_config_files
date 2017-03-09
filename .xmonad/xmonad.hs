@@ -185,7 +185,7 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "S"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
                 $ onWorkspace  "V"    (Full                     ||| mouseResizableTile)
                 $ onWorkspace  "P"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "J"    (Full                     ||| Grid)
+                $ onWorkspace  "J"    (spacing 1 $ Grid)
                 $ onWorkspace  "T"    (Full                     ||| mouseResizableTile)
                 $ onWorkspace  "X"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
                 $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
