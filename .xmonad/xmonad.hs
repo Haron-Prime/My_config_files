@@ -179,18 +179,18 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayoutHook =  avoidStruts
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
-                $ onWorkspace  "W"    (Full               ||| mouseResizableTile ||| Mirror tiled)
-                $ onWorkspace  "M"    (mouseResizableTile ||| Mirror tiled       ||| Full)
-                $ onWorkspace  "E"    (Mirror tiled       ||| mouseResizableTile ||| Full) 
-                $ onWorkspace  "F"    (Mirror tiled       ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "S"    (Mirror tiled       ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "V"    (Full               ||| mouseResizableTile)
-                $ onWorkspace  "P"    (Mirror tiled       ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "J"    (Full               ||| Grid)
-                $ onWorkspace  "T"    (Full               ||| mouseResizableTile)
-                $ onWorkspace  "X"    (Mirror tiled       ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "W"    (Full                          ||| mouseResizableTile ||| Mirror tiled)
+                $ onWorkspace  "M"    (mouseResizableTile            ||| Mirror tiled       ||| Full)
+                $ onWorkspace  "E"    (smartSpacing 2 $ Mirror tiled ||| mouseResizableTile ||| Full) 
+                $ onWorkspace  "F"    (smartSpacing 2 $ Mirror tiled ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "S"    (smartSpacing 2 $ Mirror tiled ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "V"    (Full                          ||| mouseResizableTile)
+                $ onWorkspace  "P"    (smartSpacing 2 $ Mirror tiled ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "J"    (Full                          ||| Grid)
+                $ onWorkspace  "T"    (Full                          ||| mouseResizableTile)
+                $ onWorkspace  "X"    (smartSpacing 2 $ Mirror tiled ||| mouseResizableTile ||| Full)
                 $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-                $ onWorkspace  "XII"  (Mirror tiled       ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "XII"  (smartSpacing 2 $ Mirror tiled ||| mouseResizableTile ||| Full)
                 $ tiled ||| Mirror tiled  ||| Full
                 where
                   tiled   = Tall nmaster delta ratio
@@ -287,7 +287,9 @@ myEventHook = fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove
 myLogHook = do
             dynamicLogString $ xmobarPP {
                                           ppCurrent         = xmobarColor "#9fdfff" ""
+                                        , ppUrgent          = xmobarColor "#ff6500" ""
                                         , ppTitle           = (\str -> "")
+                                        , ppLayout          = (\str -> "")
                                         }
 
 -- nameScratchpad
