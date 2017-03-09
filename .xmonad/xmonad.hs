@@ -280,7 +280,7 @@ myManageHook = composeAll . concat $
     viewShift = doF . liftM2 (.) W.greedyView W.shift
 
 -- Event handling
-myEventHook = fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove
+myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove
  
 -- Status bars and logging.
 myLogHook = do
