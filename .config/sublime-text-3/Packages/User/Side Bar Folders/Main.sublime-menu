@@ -54,6 +54,7 @@
 					{ "command": "side_bar_folders_load", "args":{ "index": 32 }},
 					{ "command": "side_bar_folders_load", "args":{ "index": 33 }},
 					{ "command": "side_bar_folders_load", "args":{ "index": 34 }},
+					{ "command": "side_bar_folders_load", "args":{ "index": 35 }},
 				]
 			},
 			// Folder history goes here
@@ -93,6 +94,7 @@
 			{ "command": "side_bar_folders_load", "args":{ "index": 32, "append": true }},
 			{ "command": "side_bar_folders_load", "args":{ "index": 33, "append": true }},
 			{ "command": "side_bar_folders_load", "args":{ "index": 34, "append": true }},
+			{ "command": "side_bar_folders_load", "args":{ "index": 35, "append": true }},
 			{ "caption": "-" , "id": "options" },
 			{ "command": "side_bar_folders_audit_all", "caption": "Clear Missing Folders"},
 			{ "caption": "-" , "id": "end" }
