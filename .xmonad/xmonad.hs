@@ -11,7 +11,7 @@ import System.IO
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 import qualified Data.ByteString as B
--- import qualified XMonad.StackSet as W
+
 
 -- Actions
 import XMonad.Actions.CycleWindows
@@ -59,13 +59,13 @@ browserClass         =  "Vivaldi-snapshot"
 myTerminal           =  "urxvtc"
 terminalClass        =  "URxvt"
 myShell              =  "zsh"
-myFocusFollowsMouse  =  True
-myBorderWidth        =  1
 myModMask            =  mod4Mask
-myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"] 
+myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
+myBorderWidth        =  1
 myNormalBorderColor  =  "#555555"
 myFocusedBorderColor =  "#95d5f5"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
+myFocusFollowsMouse  =  True
 scratchPad           =  scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
@@ -179,18 +179,18 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayoutHook =  avoidStruts
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
-                $ onWorkspace  "W"    (Full                          ||| mouseResizableTile ||| Mirror tiled)
-                $ onWorkspace  "M"    (mouseResizableTile            ||| Mirror tiled       ||| Full)
-                $ onWorkspace  "E"    (smartSpacing 2 $ Mirror tiled ||| mouseResizableTile ||| Full) 
-                $ onWorkspace  "F"    (smartSpacing 2 $ Mirror tiled ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "S"    (smartSpacing 2 $ Mirror tiled ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "V"    (Full                          ||| mouseResizableTile)
-                $ onWorkspace  "P"    (smartSpacing 2 $ Mirror tiled ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "J"    (Full                          ||| Grid)
-                $ onWorkspace  "T"    (Full                          ||| mouseResizableTile)
-                $ onWorkspace  "X"    (smartSpacing 2 $ Mirror tiled ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "W"    (Full                     ||| mouseResizableTile ||| Mirror tiled)
+                $ onWorkspace  "M"    (mouseResizableTile       ||| Mirror tiled       ||| Full)
+                $ onWorkspace  "E"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full) 
+                $ onWorkspace  "F"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "S"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "V"    (Full                     ||| mouseResizableTile)
+                $ onWorkspace  "P"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "J"    (Full                     ||| Grid)
+                $ onWorkspace  "T"    (Full                     ||| mouseResizableTile)
+                $ onWorkspace  "X"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
                 $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-                $ onWorkspace  "XII"  (smartSpacing 2 $ Mirror tiled ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "XII"  (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
                 $ tiled ||| Mirror tiled  ||| Full
                 where
                   tiled   = Tall nmaster delta ratio
