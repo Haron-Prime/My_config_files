@@ -12,7 +12,6 @@ import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 import qualified Data.ByteString as B
 
-
 -- Actions
 import XMonad.Actions.CycleWindows
 import XMonad.Actions.CycleWS
@@ -53,6 +52,7 @@ import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
 
+-- Variables
 myBrowser            =  "vivaldi-snapshot"
 browserClass         =  "Vivaldi-snapshot"
 myTerminal           =  "urxvtc"
@@ -178,21 +178,21 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayoutHook =  avoidStruts
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
-                $ onWorkspace  "W"    (Full                     ||| mouseResizableTile ||| Mirror tiled)
-                $ onWorkspace  "M"    (mouseResizableTile       ||| Mirror tiled       ||| Full)
-                $ onWorkspace  "E"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full) 
-                $ onWorkspace  "F"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "S"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "V"    (Full                     ||| mouseResizableTile)
-                $ onWorkspace  "P"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "W"    (Full               ||| mouseResizableTile ||| Mirror tiled)
+                $ onWorkspace  "M"    (mouseResizableTile ||| Mirror tiled       ||| Full)
+                $ onWorkspace  "E"    (Mirror tiled       ||| mouseResizableTile ||| Full) 
+                $ onWorkspace  "F"    (Mirror tiled       ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "S"    (Mirror tiled       ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "V"    (Full               ||| mouseResizableTile)
+                $ onWorkspace  "P"    (Mirror tiled       ||| mouseResizableTile ||| Full)
                 $ onWorkspace  "J"    (spacing 1 $ Grid)
-                $ onWorkspace  "T"    (Full                     ||| mouseResizableTile)
-                $ onWorkspace  "X"    (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "T"    (Full               ||| mouseResizableTile)
+                $ onWorkspace  "X"    (Mirror tiled       ||| mouseResizableTile ||| Full)
                 $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-                $ onWorkspace  "XII"  (spacing 1 $ Mirror tiled ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "XII"  (Mirror tiled       ||| mouseResizableTile ||| Full)
                 $ tiled ||| Mirror tiled  ||| Full
                 where
-                  tiled   = Tall nmaster delta ratio
+                  tiled   = spacing 1 $ Tall nmaster delta ratio
                   nmaster = 1
                   ratio   = 0.5
                   delta   = 0.01
