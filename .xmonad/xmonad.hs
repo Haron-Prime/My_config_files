@@ -66,10 +66,10 @@ myNormalBorderColor  =  "#555555"
 myFocusedBorderColor =  "#95d5f5"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
-scratchPad           =  scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
+scratchPad           =  scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
