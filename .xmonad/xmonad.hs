@@ -29,7 +29,7 @@ import XMonad.Hooks.Place
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceByPos
 import XMonad.Hooks.XPropManage
-import XMonad.Hooks.FloatNext
+import XMonad.Hooks.FloatNext (floatNextHook, toggleFloatNext, toggleFloatAllNew)
 
 -- Layouts
 import XMonad.Layout.Grid
