@@ -29,6 +29,7 @@ import XMonad.Hooks.Place
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceByPos
 import XMonad.Hooks.XPropManage
+import XMonad.Hooks.FloatNext
 
 -- Layouts
 import XMonad.Layout.Grid
@@ -330,8 +331,8 @@ myConfig = ewmh $ def {
                       ,keys               = myKeys
                       ,mouseBindings      = myMouseBindings
                       ,layoutHook         = myLayoutHook
-                      ,manageHook         = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
+                      ,manageHook         = floatNextHook <+> manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
                       ,handleEventHook    = myEventHook
                       ,logHook            = myLogHook >>= xmonadPropLog
-                      ,startupHook        = myStartupHook
+                      ,startupHook        = myStartupHook 
                       }
