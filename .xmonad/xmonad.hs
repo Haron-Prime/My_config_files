@@ -305,6 +305,8 @@ mynameScratchpads = [ NS "ncmpcpp"      "urxvtc -name ncmpcpp -e ncmpcpp"     (a
                     , NS "Gsimplecal"   "Gsimplecal"                          (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
 
                     , NS "Organizer"    "Organizer"                           (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+                    , NS "Msgcompose"   "Msgcompose"                          (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+                    , NS "addressbook"  "addressbook"                         (role       =? "addressbook")  (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     ]
 
 -- Scratchpad
