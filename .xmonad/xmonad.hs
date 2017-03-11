@@ -187,9 +187,10 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "V"    (Full               ||| mouseResizableTile)
                 $ onWorkspace  "P"    (Mirror tiled       ||| mouseResizableTile ||| Full)
                 $ onWorkspace  "J"    (spacing 1 $ Grid)
-                $ onWorkspace  "T"    (Full               ||| mouseResizableTile)
+                $ onWorkspace  "T"    (Full               ||| mouseResizableTile ||| Mirror tiled)
                 $ onWorkspace  "X"    (Mirror tiled       ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
+                $ onWorkspace  "XI"   (Mirror tiled       ||| mouseResizableTile ||| Full)
+                -- $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
                 $ onWorkspace  "XII"  (Mirror tiled       ||| mouseResizableTile ||| Full)
                 $ tiled ||| Mirror tiled  ||| Full
                 where
@@ -199,9 +200,9 @@ myLayoutHook =  avoidStruts
                   delta   = 0.01
 
                   -- IMLayout
-                  myIMLayout = withIM (1%7) psi Grid
-                      where
-                        psi   = And (ClassName "psi") (Role "main")
+                  -- myIMLayout = withIM (1%7) psi Grid
+                  --     where
+                  --       psi   = And (ClassName "psi") (Role "main")
 
 -- Prompts
 myXPConfig = def {
