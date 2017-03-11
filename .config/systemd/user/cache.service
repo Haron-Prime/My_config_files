@@ -6,7 +6,6 @@ Type=oneshot
 RemainAfterExit=true
 
 ExecStert=-/usr/bin/touch /tmp/.null
-ExacStart=-/usr/bin/mkfifo /tmp/upd
 ExecStart=-/usr/bin/mkdir -m 0700 -p /tmp/%u
 ExecStart=-/usr/bin/mkdir /tmp/%u/.cache
 ExecStart=-/usr/bin/mkdir /tmp/%u/.acestream_cache
