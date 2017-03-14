@@ -26,12 +26,12 @@ Config {
                             , Run PipeReader "/tmp/upd" "Update"
                             , Run DynNetwork ["-S","True","-d","1","-t","<fc=#cccccc><dev>:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Com        "XMTraf" [] "" 50
-                            , Run Cpu        ["-S","True","-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>","-L","25","-H","75","--normal","#ffff00","--high","#ff6500"] 10
+                            , Run Cpu        ["-S","True","-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>","-L","35","-H","75","--normal","#ffff00","--high","#ff6500"] 10
                             , Run Com        "TCPU" [] "" 10
                             , Run Com        "XMCpu-freq" [] "" 0
                             , Run Com        "TMB" [] "" 10
                             , Run Com        "TGPU" [] "" 10
-                            , Run Memory     ["-S","True","-t","<fc=#cccccc>RAM:</fc><fn=2> </fn><usedratio>","-L","50","-H","85","--normal","#ffff00","--high","#ff6500"] 50
+                            , Run Memory     ["-S","True","-t","<fc=#cccccc>RAM:</fc><fn=2> </fn><usedratio>","-L","75","-H","90","--normal","#ffff00","--high","#ff6500"] 50
                             , Run Com        "XMRom" [] "" 100
                             , Run Com        "XMUptime" [] "" 100
                             , Run Com        "XMVol" [] "" 10
