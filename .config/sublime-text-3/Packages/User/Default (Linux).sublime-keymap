@@ -1,4 +1,3 @@
 [
-	{ "keys": ["f3"], "command": "open_terminal" },
-	{ "keys": ["f4"], "command": "open_terminal_project_folder" }
+	{ "keys": ["ctrl+shift+t"], "command": "open_terminal" },
 ]

@@ -25,6 +25,7 @@ import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.InsertPosition
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.Minimize
 import XMonad.Hooks.Place
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceByPos
@@ -35,6 +36,7 @@ import XMonad.Hooks.FloatNext (floatNextHook, toggleFloatNext, toggleFloatAllNew
 import XMonad.Layout.Grid
 import XMonad.Layout.IM
 import XMonad.Layout.LayoutCombinators ((|||))
+import XMonad.Layout.Minimize
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Spacing
@@ -154,6 +156,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x2e),     sendMessage (IncMasterN (-1)))                                                                       --Mod4+Period
     , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                            --Mod4+B
     , ((modm     .|. shiftMask,          0x71),     io (exitWith ExitSuccess))                                                                           --Mod4+Shift+Q
+    , ((modm,                            0x7a),     withFocused minimizeWindow)                                                                          --Mod4+Z
+    , ((modm     .|. shiftMask,          0x7a),     sendMessage RestoreNextMinimizedWin)                                                                 --Mod4+Shift+Z
     ]
 
     ++
@@ -177,6 +181,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 
 -- Layouts:
 myLayoutHook =  avoidStruts
+                $ minimize
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
                 $ onWorkspace  "W"    (Full               ||| mouseResizableTile ||| Mirror tiled)
@@ -282,7 +287,7 @@ myManageHook = composeAll . concat $
     viewShift = doF . liftM2 (.) W.greedyView W.shift
 
 -- Event handling
-myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
+myEventHook = minimizeEventHook <+> handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
  
 -- Status bars and logging.
 myLogHook = do
