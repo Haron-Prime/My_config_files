@@ -26,7 +26,7 @@ Config {
                             , Run PipeReader "/tmp/upd" "Update"
                             , Run DynNetwork ["-S","True","-d","1","-t","<fc=#cccccc><dev>:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Com        "XMTraf" [] "" 50
-                            , Run Cpu        ["-S","True","-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>","-L","35","-H","75","--normal","#ffff00","--high","#ff6500"] 10
+                            , Run Cpu        ["-S","True","-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>","-L","33","-H","66","--normal","#ffff00","--high","#ff6500"] 10
                             , Run Com        "TCPU" [] "" 10
                             , Run Com        "XMCpu-freq" [] "" 0
                             , Run Com        "TMB" [] "" 10

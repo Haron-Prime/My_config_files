@@ -157,7 +157,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                            --Mod4+B
     , ((modm     .|. shiftMask,          0x71),     io (exitWith ExitSuccess))                                                                           --Mod4+Shift+Q
     , ((modm,                            0x7a),     withFocused minimizeWindow)                                                                          --Mod4+Z
-    , ((modm     .|. shiftMask,          0x7a),     sendMessage RestoreNextMinimizedWin)                                                                 --Mod4+Shift+Z
+    , ((modm,                            0x61),     sendMessage RestoreNextMinimizedWin)                                                                 --Mod4+A
     ]
 
     ++
@@ -193,10 +193,10 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "P"    (Mirror tiled       ||| mouseResizableTile ||| Full)
                 $ onWorkspace  "J"    (spacing 1 $ Grid)
                 $ onWorkspace  "T"    (Full               ||| mouseResizableTile ||| Mirror tiled)
-                $ onWorkspace  "X"    (Mirror tiled       ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "XI"   (Mirror tiled       ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "X"    (spacing 1 $ Grid)
+                $ onWorkspace  "XI"   (spacing 1 $ Grid)
                 -- $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-                $ onWorkspace  "XII"  (Mirror tiled       ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "XII"  (spacing 1 $ Grid)
                 $ tiled ||| Mirror tiled  ||| Full
                 where
                   tiled   = spacing 1 $ Tall nmaster delta ratio
