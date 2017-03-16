@@ -191,12 +191,12 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "S"    (Mirror tiled       ||| mouseResizableTile ||| Full)
                 $ onWorkspace  "V"    (Full               ||| mouseResizableTile)
                 $ onWorkspace  "P"    (Mirror tiled       ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "J"    (spacing 1 $ Grid)
+                $ onWorkspace  "J"    (spacing 1 $ Grid   ||| tiled)
                 $ onWorkspace  "T"    (Full               ||| mouseResizableTile ||| Mirror tiled)
-                $ onWorkspace  "X"    (spacing 1 $ Grid)
-                $ onWorkspace  "XI"   (spacing 1 $ Grid)
+                $ onWorkspace  "X"    (spacing 1 $ Grid   ||| tiled)
+                $ onWorkspace  "XI"   (spacing 1 $ Grid   ||| tiled)
                 -- $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-                $ onWorkspace  "XII"  (spacing 1 $ Grid)
+                $ onWorkspace  "XII"  (spacing 1 $ Grid   ||| tiled)
                 $ tiled ||| Mirror tiled  ||| Full
                 where
                   tiled   = spacing 1 $ Tall nmaster delta ratio

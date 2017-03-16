@@ -4,6 +4,6 @@
 
 zenity  --question --text "You really want to restart your computer?"
 if [ $? = 0 ]
-	then systemctl --user stop {transmission,mpd,psd,cache} && systemctl reboot
+	then systemctl reboot
 fi
 exit 0
