@@ -17,8 +17,11 @@
 		".back",
 		".py",
 		".md",
-		".conf"
+		".conf",
+		".hs"
 	],
-	"ha_style": "disabled",
+	"ha_icons": true,
+	"ha_style": "text",
+	"icons": false,
 	"style": "text"
 }

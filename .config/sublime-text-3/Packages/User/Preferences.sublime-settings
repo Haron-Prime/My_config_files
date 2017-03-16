@@ -28,6 +28,7 @@
 	"ignored_packages":
 	[
 		"ApplySyntax",
+		"AutoSetSyntax",
 		"Color Highlighter",
 		"Configify",
 		"FileBrowser",
@@ -36,6 +37,7 @@
 		"Inline Google Translate",
 		"SendToPasteBin",
 		"SFTP",
+		"SyntaxHighlighter Reloaded Color Scheme",
 		"Theme - Asphalt",
 		"Theme - DC",
 		"Theme - Default",
