@@ -121,9 +121,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x71),     spawn "xmonad --recompile && xmonad --restart && killall xmobar && xmobar")                          --Mod4+Q
     , ((modm     .|. shiftMask,        0xff0d),     spawn $ XMonad.terminal conf)                                                                        --Mod4+Shift+Enter
 
-    --Menu
-    , ((0        .|. controlMask,      0xffc9),     spawn "menu.sh")                                                                                     --Ctrl+F12
-
     --Prompt management
     , ((mod1Mask,                      0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
     , ((mod1Mask,                      0xffbf),     shellPrompt myXPConfig)                                                                              --Alt+F2
