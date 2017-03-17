@@ -1,22 +1,24 @@
 #!/bin/zsh
 
-category=$(echo -e "Development\nGraphics\nMedia\nNetwork\nOffice\nWork\nTools\nSettings\nLogout" | dmenu -i -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12' -p Category)
+category=$(echo -e "Development\nGraphics\nMedia\nNetwork\nGames\nOffice\nWork\nTools\nSettings\nLogout" | dmenu -i -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12' -p Category)
 
 case $category in
 
-        Development) proglist="Meld\nSublime-text-3\nXVim" ;;
+        Development) proglist="Meld\nSublime-text-3\nXVim\nXMicro" ;;
 
         Graphics) proglist="Gimp\nGpick\nInkscape\nMirage" ;;
 
-        Media) proglist="Vlc\nSopcast-player\nDeadBeef\nEasyTags" ;;
+        Media) proglist="Vlc\nSopcast-player\nDeadBeef\nEasyTags\nPulseAudio" ;;
 
-        Network) proglist="Vivaldi-snapshot\nFirefox\nThunderbird\nTransGUI\nTransmission-daemon\nTixati\nHexchat\nViber\nZenmap" ;;
+        Network) proglist="Vivaldi-snapshot\nFirefox\nThunderbird\nTransGUI\nTransmission-daemon\nTixati\nHexchat\nTelegram\nViber\nZenmap" ;;
+
+        Games) proglist="HMM3\nStarMade" ;;
 
         Office) proglist="LibreOffice\nFoxitReader" ;;
 
         Work) proglist="PRO100\n2D-Place" ;;
 
-        Tools) proglist="Shutter\nSystemadm\nCryptkeeper\nGparted\nGSmartControl\nPacmanXG" ;;
+        Tools) proglist="Shutter\nHtop\nMC\nRanger\nSystemadm\nCryptkeeper\nGparted\nGSmartControl\nPacmanXG" ;;
 
         Settings) proglist="LXAppearance\nQt4-config\nOomox\nDconf-editor" ;;
 
@@ -29,6 +31,7 @@ case $program in
         Meld) meld ;;
         Sublime-text-3) subl3 ;;
         XVim) xvim ;;
+        XMicro) xmicro ;;
 # Graphics
         Gimp) gimp-2.8 ;;
         Gpick) gpick ;;
@@ -39,16 +42,21 @@ case $program in
         Sopcast-player) sopcast-player ;;
         DeadBeef) deadbeef ;;
         EasyTag) easytag ;;
+        PulseAudio) pavucontrol ;;
 # Network
         Vivaldi-snapshot) vivaldi-snapshot ;;
         Firefox) firefox ;;
         Thunderbird) thunderbird ;;
         Hexchat) hexchat ;;
+        Telegram) xdg-open https://web.telegram.org/#/im ;;
         Viber) viber ;;
         Transmission-daemon) transd ;;
         TransGUI) transgui ;;
         Tixati) tixati ;;
-        Zenmap) zenmap ;;
+        Zenmap) gksu zenmap ;;
+# Games
+        HMM3) heroes3 ;;
+        SarMade) starmade ;;
 # Office
         LibreOffice) soffice ;;
         FoxitReader) FoxitReader ;;
@@ -57,10 +65,13 @@ case $program in
         2D-Place) 2D-Place ;;
 # Tools
         Shutter) shutter ;;
+        Htop) urxvtc -name htop -e htop ;;
+        MC) urxvtc -name mc -e mc ;;
+        Ranger) urxvtc -name ranger -e ranger ;;
         Systemadm) systemadm ;;
         Cryptkeeper) cryptkeeper ;;
         Gparted) gksu gparted ;;
-        GsmartControl) gsmartcontrol ;;
+        GSmartControl) gksu gsmartcontrol ;;
         PacmanXG) ssx pacmanxg ;;
 # Settings
         LXAppearance) lxappearance ;;
