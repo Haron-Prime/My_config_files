@@ -78,7 +78,7 @@ Xcursor.size:                      22
 *VT100*colorULMode:                on
 *VT100*colorBDMode:                off
 *VT100.titeInhibit:                off
-*VT100.translations:               select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0), #override \n Shift <Key>Home: scroll-back(1000) \n Shift <Key>End: scroll-forw(1000)
+*VT100.translations:               select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0), #override \n Shift <Key>Home: scroll-back(4096) \n Shift <Key>End: scroll-forw(4096)
 *VT100.geometry:                   80x32
 *SimpleMenu*background:            #353535
 *SimpleMenu*foreground:            #AAA
@@ -96,8 +96,8 @@ URxvt*perl-lib:                    /home/haron/.config/urxvt/perl
 URxvt*perl-ext-common:             default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard,resize-font,vtwheel
 URxvt*iso14755:                    false
 URxvt*iso14755_52:                 false
-URxvt*keysym.Shift-Home:           command:\033]720;1000\007
-URxvt*keysym.Shift-End:            command:\033]721;1000\007
+URxvt*keysym.Shift-Home:           command:\033]720;4096\007
+URxvt*keysym.Shift-End:            command:\033]721;4096\007
 URxvt*keysym.Control-Shift-C:      perl:clipboard:copy
 URxvt*keysym.Control-Shift-V:      perl:clipboard:paste
 URxvt*keysym.C-Delete:             perl:matcher:last
@@ -120,6 +120,8 @@ URxvt*tabbed.reopen-on-close:      yes
 URxvt*urgentOnBell:                true
 URxvt*resize-font.smaller:         C-Down
 URxvt*resize-font.bigger:          C-Up
+
+! XClock parametrs
 
 XClock*width:                      540
 XClock*height:                     540

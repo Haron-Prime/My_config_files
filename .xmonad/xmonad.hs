@@ -13,6 +13,7 @@ import qualified Data.Map        as M
 import qualified Data.ByteString as B
 
 -- Actions
+-- import XMonad.Actions.CycleRecentWS
 import XMonad.Actions.CycleWindows
 import XMonad.Actions.CycleWS
 import XMonad.Actions.UpdateFocus
@@ -119,6 +120,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
     , ((modm,                            0x71),     spawn "xmonad --recompile && xmonad --restart && killall xmobar && xmobar")                          --Mod4+Q
     , ((modm     .|. shiftMask,        0xff0d),     spawn $ XMonad.terminal conf)                                                                        --Mod4+Shift+Enter
+
+    --Menu
+    , ((0        .|. controlMask,      0xffc9),     spawn "menu.sh")                                                                                     --Ctrl+F12
 
     --Prompt management
     , ((mod1Mask,                      0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
@@ -267,7 +271,7 @@ myManageHook = composeAll . concat $
     where
     myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
     myMail    = ["Thunderbird"]
-    myEdit    = ["Subl3","Et","Wps","Wpp","FoxitReader"]
+    myEdit    = ["Subl3","Meld","Et","Wps","Wpp","FoxitReader"]
     myFile    = ["Pcmanfm"]
     mySystem  = ["pacmanxg","GParted","Sysinfo","Tk"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Easytag"]
