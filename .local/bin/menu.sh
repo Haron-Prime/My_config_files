@@ -4,7 +4,7 @@ category=$(echo -e "Files\nDevelopment\nGraphics\nMedia\nNetwork\nGames\nOffice\
 
 case $category in
 
-        Files) proglist="/\nHome\nMCF\nDocuments\nDownloads\nMusic\nPictures\nProjects\nPublic\nTemplates\nVideo" ;;
+        Files) proglist="/\netc\nusr\nvar\ntmp\n\nhome\nbin\nlib\ngit\nDocuments\nDownloads\nMusic\nPictures\nProjects\nVideo" ;;
 
         Development) proglist="Meld\nSublime-text-3\nXVim\nXMicro" ;;
 
@@ -31,15 +31,19 @@ program=$(echo -e "$proglist" | dmenu -i -sb '#333' -nf '#999' -sf '#9df' -fn 'T
 case $program in
 # Files
         /) xdg-open / ;;
-        Home) xdg-open ~/ ;;
-        MCF) xdg-open ~/git/My_config_files ;;
+        etc) xdg-open /etc ;;
+        usr) xdg-open /usr ;;
+        var) xdg-open /var ;;
+        tmp) xdg-open /tmp ;;
+        home) xdg-open ~/ ;;
+        bin) xdg-open ~/.local/bin ;;
+        lib) xdg-open ~/.local/lib ;;
+        git) xdg-open ~/git ;;
         Documents) xdg-open ~/Documents ;;
         Downloads) xdg-open ~/Downloads ;;
         Music) xdg-open ~/Music ;;
         Pictures) xdg-open ~/Pictures ;;
         Projects) xdg-open ~/Projects ;;
-        Public) xdg-open ~/Public ;;
-        Templates) xdg-open ~/Templates ;;
         Video) xdg-open ~/Video ;;
 # Development
         Meld) meld ;;
