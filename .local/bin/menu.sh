@@ -1,8 +1,10 @@
 #!/bin/zsh
 
-category=$(echo -e "Development\nGraphics\nMedia\nNetwork\nGames\nOffice\nWork\nTools\nSettings\nLogout" | dmenu -i -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12' -p Category)
+category=$(echo -e "Files\nDevelopment\nGraphics\nMedia\nNetwork\nGames\nOffice\nWork\nTools\nSettings\nLogout" | dmenu -i -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12' -p Category)
 
 case $category in
+
+        Files) proglist="/\nHome\nMCF\nDocuments\nDownloads\nMusic\nPictures\nProjects\nPublic\nTemplates\nVideo" ;;
 
         Development) proglist="Meld\nSublime-text-3\nXVim\nXMicro" ;;
 
@@ -27,6 +29,18 @@ esac
 
 program=$(echo -e "$proglist" | dmenu -i -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12' -p $category)
 case $program in
+# Files
+        /) xdg-open / ;;
+        Home) xdg-open ~/ ;;
+        MCF) xdg-open ~/git/My_config_files ;;
+        Documents) xdg-open ~/Documents ;;
+        Downloads) xdg-open ~/Downloads ;;
+        Music) xdg-open ~/Music ;;
+        Pictures) xdg-open ~/Pictures ;;
+        Projects) xdg-open ~/Projects ;;
+        Public) xdg-open ~/Public ;;
+        Templates) xdg-open ~/Templates ;;
+        Video) xdg-open ~/Video ;;
 # Development
         Meld) meld ;;
         Sublime-text-3) subl3 ;;
