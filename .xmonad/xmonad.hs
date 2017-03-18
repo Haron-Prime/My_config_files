@@ -50,6 +50,9 @@ import XMonad.Prompt.Man
 import XMonad.Prompt.RunOrRaise
 import XMonad.Prompt.Shell
 import XMonad.Prompt.Ssh
+import XMonad.Prompt.AppendFile
+import XMonad.Prompt.Layout
+import XMonad.Prompt.XMonad
 
 -- Utils
 import XMonad.Util.Scratchpad
@@ -126,9 +129,16 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     --Prompt management
     , ((mod1Mask,                      0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
-    , ((mod1Mask,                      0xffbf),     shellPrompt myXPConfig)                                                                              --Alt+F2
-    , ((mod1Mask,                      0xffc0),     runOrRaisePrompt myXPConfig)                                                                         --Alt+F3
+    , ((mod1Mask,                      0xffbf),     runOrRaisePrompt myXPConfig)                                                                         --Alt+F2
+    , ((mod1Mask,                      0xffc0),     shellPrompt myXPConfig)                                                                              --Alt+F3
     , ((mod1Mask,                      0xffc1),     sshPrompt myXPConfig)                                                                                --Alt+F4
+    , ((mod1Mask,                      0xffc2),     do 
+                                                      spawn ("date>>"++"/home/haron/NOTES")
+                                                      appendFilePrompt myXPConfig "/home/haron/NOTES"
+                                                      )                                                                                                  --Alt+F5
+    , ((mod1Mask,                      0xffc3),     layoutPrompt myXPConfig)                                                                             --Alt+F6
+    , ((mod1Mask,                      0xffc4),     xmonadPrompt myXPConfig)
+
 
     --Windows and WS management
     , ((modm,                          0xff09),     rotOpposite)                                                                                         --Mod4+Tab
@@ -273,7 +283,7 @@ myManageHook = composeAll . concat $
     myMail    = ["Thunderbird"]
     myEdit    = ["Subl3","Meld","Et","Wps","Wpp","FoxitReader"]
     myFile    = ["Pcmanfm"]
-    mySystem  = ["pacmanxg","GParted","Sysinfo","Tk","Syatemadm","Zenmap"]
+    mySystem  = ["pacmanxg","GParted","Sysinfo","Tk","Systemadm","Zenmap"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Easytag"]
     myPic     = ["Gimp","Gimp-2.8","Inkscape"]
     myWork    = ["Wine"]
