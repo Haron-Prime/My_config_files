@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-category=$(echo -e "Bookmarks\nDevelopment\nGraphics\nMedia\nNetwork\nGames\nOffice\nWork\nTools\nSettings\nLogout" | dmenu -i -sb '#252525' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12' -p Category)
+category=$(echo -e "Bookmarks\nDevelopment\nGraphics\nMedia\nNetwork\nGames\nOffice\nWork\nTools\nSettings\nLogout" | dmenu -i -sb '#252525' -nf '#959595' -sf '#9df' -fn 'Terminus Re33:size=12' -p Category:)
 
 case $category in
 
@@ -27,7 +27,7 @@ case $category in
         Logout) proglist="XKill\nReboot\nPoweroff" ;;
 esac
 
-program=$(echo -e "$proglist" | dmenu -i -sb '#252525' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12' -p $category)
+program=$(echo -e "$proglist" | dmenu -i -sb '#252525' -nf '#959595' -sf '#9df' -fn 'Terminus Re33:size=12' -p $category)
 case $program in
 # Bookmarks
         /) xdg-open / ;;
