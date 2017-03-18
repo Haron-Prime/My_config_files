@@ -1,4 +1,6 @@
 #!/bin/zsh
+# Modified - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
 
 category=$(echo -e "Bookmarks\nDevelopment\nGraphics\nMedia\nNetwork\nGames\nOffice\nWork\nTools\nSettings\nLogout" | dmenu -i -sb '#252525' -nf '#959595' -sf '#9df' -fn 'Terminus Re33:size=12' -p Category:)
 
