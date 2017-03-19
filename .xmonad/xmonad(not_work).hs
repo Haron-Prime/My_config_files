@@ -32,7 +32,6 @@ import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceByPos
 import XMonad.Hooks.XPropManage
 import XMonad.Hooks.FloatNext (floatNextHook, toggleFloatNext, toggleFloatAllNew)
-import XMonad.Hooks.UrgencyHook hiding (Never)
 
 -- Layouts
 import XMonad.Layout.Grid
@@ -58,6 +57,7 @@ import XMonad.Prompt.Layout
 import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
+import XMonad.Util.Run(spawnPipe)
 
 -- Variables
 myBrowser            =  "vivaldi-snapshot"
@@ -66,7 +66,14 @@ myTerminal           =  "urxvtc"
 terminalClass        =  "URxvt"
 myShell              =  "zsh"
 myModMask            =  mod4Mask
-myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
+xmobarEscape = concatMap doubleLts
+    where doubleLts '<' = "<<"
+          doubleLts x   = [x]
+myWorkspaces         =  clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
+    where                                                                       
+           clickable l = [ "<action=xdotool key alt+" ++ show (n) ++ ">" ++ ws ++ "</action>" |
+                               (i,ws) <- zip [1..12] l,                                        
+                              let n = i ]
 myBorderWidth        =  1
 myNormalBorderColor  =  "#555555"
 myFocusedBorderColor =  "#95d5f5"
@@ -303,13 +310,12 @@ myManageHook = composeAll . concat $
 myEventHook = minimizeEventHook <+> handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
  
 -- Status bars and logging.
-myLogHook = do
-            dynamicLogString $ xmobarPP {
-                                          ppCurrent         = xmobarColor "#9fdfff" "" . pad
-                                        , ppUrgent          = xmobarColor "#ff6500" "" . pad . wrap "<" ">"
-                                        , ppTitle           = (\str -> "")
-                                        , ppLayout          = (\str -> "")
-                                        }
+-- myLogHook h = dynamicLogWithPP $ xmobarPP { ppOutput = hPutStrLn xmproc
+--                                         , ppCurrent         = xmobarColor "#9fdfff" "" . pad
+--                                         , ppUrgent          = xmobarColor "#ff6500" ""
+--                                         , ppTitle           = (\str -> "")
+--                                         , ppLayout          = (\str -> "")
+--                                         }
 
 -- nameScratchpad
 mynameScratchpads = [ NS "ncmpcpp"      "urxvtc -name ncmpcpp -e ncmpcpp"     (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
@@ -339,9 +345,8 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
 myStartupHook        =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
 
 main = do
-       xmonad =<< xmobar myConfig
-
-myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
+       xmproc <- spawnPipe "xmobar /home/haron/.xmobarrc"
+       xmonad $ ewmh $ def {
                        terminal           = myTerminal
                       ,focusFollowsMouse  = myFocusFollowsMouse
                       ,borderWidth        = myBorderWidth
@@ -354,6 +359,11 @@ myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                       ,layoutHook         = myLayoutHook
                       ,manageHook         = floatNextHook <+> manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
                       ,handleEventHook    = myEventHook
-                      ,logHook            = myLogHook >>= xmonadPropLog
+                      ,logHook            = dynamicLogWithPP $ xmobarPP { ppOutput = hPutStrLn xmproc
+                                                                        , ppCurrent         = xmobarColor "#9fdfff" "" . pad
+                                                                        , ppUrgent          = xmobarColor "#ff6500" "" . pad
+                                                                        , ppTitle           = (\str -> "")
+                                                                        , ppLayout          = (\str -> "")
+                                                                        }
                       ,startupHook        = myStartupHook 
                       }
