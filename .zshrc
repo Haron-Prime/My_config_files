@@ -50,7 +50,9 @@ zle -N self-insert url-quote-magic
  else
      export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n@%m %B%{$fg[blue]%}%l %{$fg[red]%}%? %{$fg[blue]%}%h %b%{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%} %*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
  fi
- export RPROMPT="$GIT_PROMPT%{$reset_color%}"
+ export RPROMPT='$(git_super_status)'
+
+ # export RPROMPT="$GIT_PROMPT%{$reset_color%}"
 
 # format titles for screen and rxvt
 function title() {
@@ -137,6 +139,7 @@ source $HOME/scripts/my_zhs_plugins/action.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/aliases.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/git-prompt.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/zsh-autosuggestions.plugin.zsh
+# source $HOME/git/zsh-git-prompt/zshrc.sh
 
 ##Set some keybindings
 #################################################
