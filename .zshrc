@@ -50,9 +50,9 @@ zle -N self-insert url-quote-magic
  else
      export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n@%m %{$fg_bold[blue]%}%l %{$fg[red]%}%? %{$fg[blue]%}%h %b%{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%} %*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
  fi
- export RPROMPT='$(git_super_status)'
+ # export RPROMPT='$(git_super_status)'
 
- # export RPROMPT="$GIT_PROMPT%{$reset_color%}"
+ export RPROMPT="$GIT_PROMPT%{$reset_color%}"
 
 # format titles for screen and rxvt
 function title() {
