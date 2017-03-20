@@ -82,8 +82,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
 
     --Applications management
-      ((0,                         0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up")
-    , ((0,                         0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down")
+      ((0,                         0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up 5")
+    , ((0,                         0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down 5")
     , ((0,                         0x1008ff12),     spawn "/usr/bin/pulseaudio-ctl mute")
     , ((modm,                            0x60),     spawn "mpc toggle")
     , ((0,                         0x1008ff14),     spawn "mpc toggle")
@@ -291,7 +291,7 @@ myManageHook = composeAll . concat $
     myTerm    = []
 
     -- CenterFloat
-    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh"]
+    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor"]
     myFloatA  = ["lxappearance","xarchiver","gmrun","Update"]
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]

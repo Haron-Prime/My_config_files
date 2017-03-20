@@ -4,8 +4,8 @@
 		<stringvalue></stringvalue>
 	</entry>
 	<entry name="enabled" mtime="1443730657" type="bool" value="true"/>
-	<entry name="name0" mtime="1443730657" type="string">
-		<stringvalue>module-combine</stringvalue>
+	<entry name="name0" mtime="1490033625" type="string">
+		<stringvalue>module-combine-sink</stringvalue>
 	</entry>
 	<entry name="locked" mtime="1443730657" type="bool" value="false"/>
 </gconf>
