@@ -33,6 +33,7 @@ import XMonad.Hooks.WorkspaceByPos
 import XMonad.Hooks.XPropManage
 import XMonad.Hooks.FloatNext (floatNextHook, toggleFloatNext, toggleFloatAllNew)
 import XMonad.Hooks.UrgencyHook hiding (Never)
+import XMonad.Hooks.CurrentWorkspaceOnTop
 
 -- Layouts
 import XMonad.Layout.Grid
@@ -136,7 +137,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
                                                       spawn ("date>>"++"/home/haron/NOTES")
                                                       appendFilePrompt myXPConfig "/home/haron/NOTES"
                                                       )                                                                                                  --Alt+F5
-    , ((mod1Mask,                      0xffc3),     layoutPrompt myXPConfig)                                                                             --Alt+F6
+    -- , ((mod1Mask,                      0xffc3),     layoutPrompt myXPConfig)                                                                             --Alt+F6
 
 
     --Windows and WS management
@@ -197,19 +198,19 @@ myLayoutHook =  avoidStruts
                 $ minimize
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
-                $ onWorkspace  "W"    (Full               ||| mouseResizableTile ||| Mirror tiled)
-                $ onWorkspace  "M"    (mouseResizableTile ||| Mirror tiled       ||| Full)
-                $ onWorkspace  "E"    (Mirror tiled       ||| mouseResizableTile ||| Full) 
-                $ onWorkspace  "F"    (Mirror tiled       ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "S"    (Mirror tiled       ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "V"    (Full               ||| mouseResizableTile)
-                $ onWorkspace  "P"    (Mirror tiled       ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "J"    (spacing 1 $ Grid   ||| tiled)
-                $ onWorkspace  "T"    (Full               ||| mouseResizableTile ||| Mirror tiled)
-                $ onWorkspace  "X"    (spacing 1 $ Grid   ||| tiled)
-                $ onWorkspace  "XI"   (spacing 1 $ Grid   ||| tiled)
+                $ onWorkspace  "W"    (Full                           ||| mouseResizableTile ||| Mirror tiled)
+                $ onWorkspace  "M"    (mouseResizableTile             ||| Mirror tiled       ||| Full)
+                $ onWorkspace  "E"    (Mirror tiled                   ||| mouseResizableTile ||| Full) 
+                $ onWorkspace  "F"    (Mirror tiled                   ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "S"    (Mirror tiled                   ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "V"    (Full                           ||| mouseResizableTile)
+                $ onWorkspace  "P"    (Mirror tiled                   ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "J"    (spacing 1 $ GridRatio (16/10)  ||| tiled)
+                $ onWorkspace  "T"    (Full                           ||| mouseResizableTile ||| Mirror tiled)
+                $ onWorkspace  "X"    (spacing 1 $ GridRatio (16/10)  ||| tiled)
+                $ onWorkspace  "XI"   (spacing 1 $ GridRatio (16/10)  ||| tiled)
                 -- $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-                $ onWorkspace  "XII"  (spacing 1 $ Grid   ||| tiled)
+                $ onWorkspace  "XII"  (spacing 1 $ GridRatio (16/10)  ||| tiled)
                 $ tiled ||| Mirror tiled  ||| Full
                 where
                   tiled   = spacing 1 $ Tall nmaster delta ratio
@@ -304,6 +305,7 @@ myEventHook = minimizeEventHook <+> handleEventHook def <+> fullscreenEventHook 
  
 -- Status bars and logging.
 myLogHook = do
+            currentWorkspaceOnTop
             dynamicLogString $ xmobarPP {
                                           ppCurrent         = xmobarColor "#9fdfff" "" . pad
                                         , ppUrgent          = xmobarColor "#ff6500" "" . pad . wrap "<" ">"
