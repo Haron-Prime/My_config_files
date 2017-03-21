@@ -119,6 +119,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x6e),     spawn "N1")                                                                                          --Alt+N
     , ((mod1Mask .|. shiftMask,          0x6e),     spawn "N2")                                                                                          --Alt+Shift+N
     , ((mod1Mask .|. controlMask,        0x6e),     spawn "urxvtc -name Notes -e vim ~/Notes")                                                           --Alt+Ctrl+N
+    , ((modm     .|. shiftMask,          0x6e),     spawn "SaveNote")                                                                                    --Mod4+Shift+N
     , ((mod1Mask,                        0x6f),     spawn "opera12")                                                                                     --Alt+O
     , ((mod1Mask,                        0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
     , ((mod1Mask,                        0x73),     spawn "subl3")                                                                                       --Alt+S

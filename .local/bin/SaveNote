@@ -1,0 +1,6 @@
+#!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
+xclip -o >> ~/MyNotes/$(date '+%d.%m.%Y-%H:%M:%S')
+exit 0
