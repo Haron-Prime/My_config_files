@@ -106,7 +106,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                             0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Print
     , ((0        .|. shiftMask,        0xff61),     spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                              --Shift+Print
     , ((mod1Mask,                      0xff61),     spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                              --Alt+Print
-    , ((0        .|. controlMask,      0xff61),     spawn "scrot -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                 --Ctrl+Print
+    -- , ((0        .|. controlMask,      0xff61),     spawn "scrot -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                 --Ctrl+Print
     , ((mod1Mask,                        0x61),     spawn "shutter")                                                                                     --Alt+A
     , ((mod1Mask,                        0x64),     spawn "deadbeef")                                                                                    --Alt+D
     , ((mod1Mask,                        0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
@@ -118,6 +118,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((mod1Mask,                        0x6e),     spawn "notes")                                                                                       --Alt+N
     , ((mod1Mask,                        0x6e),     spawn "N1")                                                                                          --Alt+N
     , ((mod1Mask .|. shiftMask,          0x6e),     spawn "N2")                                                                                          --Alt+Shift+N
+    , ((mod1Mask .|. controlMask,        0x6e),     spawn "urxvtc -name Notes -e vim ~/Notes")                                                           --Alt+Ctrl+N
     , ((mod1Mask,                        0x6f),     spawn "opera12")                                                                                     --Alt+O
     , ((mod1Mask,                        0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
     , ((mod1Mask,                        0x73),     spawn "subl3")                                                                                       --Alt+S
