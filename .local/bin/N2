@@ -1,0 +1,9 @@
+#!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
+echo >> ~/Notes &&
+date '+%d.%m.%Yг. %H:%M:%S' >> ~/Notes &&
+xclip -o -selection clipboard >> ~/Notes &&
+echo >> ~/Notes
+exit 0
