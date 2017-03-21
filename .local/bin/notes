@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+_file=~/notes
+[ ! -f $_file.gz ] && touch $_file && gzip $_file
+gunzip $_file
+_note=`cat $_file | dmenu -l 15 -i -sb '#252525' -nf '#959595' -sf '#9df' -fn 'Terminus Re33:size=12' -p NOTE:`
+while [[ -n "$_note" ]]; do
+if [[ -z `grep "^$_note$" $_file` ]]
+	then _date="-`date +%d.%m.%Y`-"
+	[[ -z `grep "^$_date$" $_file` ]] && _note="$_date\n$_note"
+	echo -e "`date +%R` $_note" >> $_file
+	else sed -i /^$_note$/d $_file
+fi
+_note=`cat $_file | dmenu -l 15 -i -sb '#252525' -nf '#959595' -sf '#9df' -fn 'Terminus Re33:size=12' -p NOTE:`
+done
+gzip $_file
