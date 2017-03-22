@@ -123,7 +123,7 @@ load-module module-systemd-login
 # .endif
 
 ### Enable positioned event sounds
-load-module module-position-event-sounds
+# load-module module-position-event-sounds
 
 ### Cork music/video streams when a phone stream is active
 # load-module module-role-cork
@@ -132,12 +132,12 @@ load-module module-position-event-sounds
 ### on demand. module-filter-heuristics tries to determine what filters
 ### make sense, and module-filter-apply does the heavy-lifting of
 ### loading modules and rerouting streams.
-load-module module-filter-heuristics
-load-module module-filter-apply
+# load-module module-filter-heuristics
+# load-module module-filter-apply
 
 ### Make some devices default
 #set-default-sink output
 #set-default-source input
 
 # load-module module-equalizer-sink
-load-module module-dbus-protocol
+# load-module module-dbus-protocol
