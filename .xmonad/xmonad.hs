@@ -115,7 +115,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x68),     spawn "hexchat")                                                                                     --Alt+H
     , ((mod1Mask,                        0x6c),     spawn "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")              --Alt+L
     , ((mod1Mask,                        0x6d),     spawn "urxvtc -name mc -e mc")                                                                       --Alt+M
-    , ((mod1Mask,                        0x6e),     spawn "N1")                                                                                          --Alt+N
+    , ((mod1Mask,                        0x6e),     spawn "XMNotes")                                                                                     --Alt+N
     , ((mod1Mask .|. controlMask,        0x6e),     spawn "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTreeToggle")                                   --Alt+Ctrl+N
     , ((mod1Mask,                        0x6f),     spawn "opera12")                                                                                     --Alt+O
     , ((mod1Mask,                        0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
