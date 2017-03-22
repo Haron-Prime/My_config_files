@@ -3,13 +3,12 @@
 # License - © 2017 WTFPL - http://www.wtfpl.net/
 
 D1=$HOME/MyNotes/$(date '+%Y')
-D2=$HOME/MyNotes/$(date '+%Y')/$(date '+%m')
-D3=$HOME/MyNotes/$(date '+%Y')/$(date '+%m')/$(date '+%d')
-F1=$HOME/MyNotes/$(date '+%Y')/$(date '+%m')/$(date '+%d')/$(date '+%H:%M:%S')
+D2=$D1/$(date '+%m')
+D3=$D2/$(date '+%d')
+F1=$D3/$(date '+%H:%M:%S')
 
 if [[ ! -d $D1 ]] ; then mkdir $D1; fi
 if [[ ! -d $D2 ]] ; then mkdir $D2; fi
 if [[ ! -d $D3 ]] ; then mkdir $D3; fi
-if [[ ! -f $F1 ]] ; then touch $F1; fi
 xclip -o >> $F1
 exit 0
