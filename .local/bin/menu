@@ -2,13 +2,15 @@
 # Modified - Haron Prime
 # License - © 2017 WTFPL - http://www.wtfpl.net/
 
-category=$(echo -e "Bookmarks\nDevelopment\nGraphics\nMedia\nNetwork\nGames\nOffice\nWork\nTools\nSettings\nLogout" | dmenu -i -sb '#252525' -nf '#959595' -sf '#9df' -fn 'Terminus Re33:size=12' -p Category:)
+category=$(echo -e "Notes\nBookmarks\nDevelopment\nGraphics\nMedia\nNetwork\nGames\nOffice\nWork\nTools\nSettings\nLogout" | dmenu -i -sb '#252525' -nf '#959595' -sf '#9df' -fn 'Terminus Re33:size=12' -p Category:)
 
 case $category in
 
+        Notes) urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree ;;
+
         Bookmarks) proglist="/\netc\nusr\nvar\ntmp\nhome\nbin\nlib\ngit\nDocuments\nDownloads\nMusic\nPictures\nProjects\nVideo" ;;
 
-        Development) proglist="Meld\nSublime-text-3\nXVim\nXMicro\nNote" ;;
+        Development) proglist="Meld\nSublime-text-3\nXVim\nXMicro" ;;
 
         Graphics) proglist="Gimp\nGpick\nInkscape\nMirage" ;;
 
@@ -52,7 +54,6 @@ case $program in
         Sublime-text-3) subl3 ;;
         XVim) xvim ;;
         XMicro) xmicro ;;
-        Note) urxvtc -name Notes -cd ~/MyNotes -e vim -c :NERDTreeToggle ;;
 # Graphics
         Gimp) gimp-2.8 ;;
         Gpick) gpick ;;

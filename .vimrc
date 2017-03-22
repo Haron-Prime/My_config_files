@@ -310,6 +310,11 @@ let g:ycm_filetype_specific_completion_to_disable = {
 
 let g:NumberToggleTrigger="<S-M>"
 
+"autocmd vimenter * NERDTree
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+
 "My keybinding
 
 "inoremap { {<CR>}<Esc>O
