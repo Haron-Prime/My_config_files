@@ -314,23 +314,23 @@ myLogHook = do
                                         }
 
 -- nameScratchpad
-mynameScratchpads = [ NS "ncmpcpp"      "urxvtc -name ncmpcpp -e ncmpcpp"     (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                    , NS "htop"         "urxvtc -name htop -e htop"           (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-                    , NS "gpick"        "gpick"                               (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                    , NS "pavucontrol"  "pavucontrol"                         (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                    , NS "update"       "urxvtc -name update -e yaourt -Syua" (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                    , NS "Notes"        "urxvtc -name Notes -e vim ~/Notes"   (appName    =? "Notes")        (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+mynameScratchpads = [ NS "ncmpcpp"      "urxvtc -name ncmpcpp -e ncmpcpp"                            (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+                    , NS "htop"         "urxvtc -name htop -e htop"                                  (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+                    , NS "gpick"        "gpick"                                                      (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+                    , NS "pavucontrol"  "pavucontrol"                                                (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+                    , NS "update"       "urxvtc -name update -e yaourt -Syua"                        (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+                    , NS "Notes"        "urxvtc -name Notes -cd ~/MyNotes -e vim -c :NERDTreeToggle" (appName    =? "Notes")        (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
 
-                    , NS "Mirage"       "mirage"                              (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-                    , NS "font-manager" "font-manager"                        (className  =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                    , NS "Gsimplecal"   "Gsimplecal"                          (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
+                    , NS "Mirage"       "mirage"                                                     (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+                    , NS "font-manager" "font-manager"                                               (className  =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+                    , NS "Gsimplecal"   "Gsimplecal"                                                 (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
 
-                    , NS "Organizer"    "Organizer"                           (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-                    , NS "Msgcompose"   "Msgcompose"                          (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-                    , NS "addressbook"  "addressbook"                         (role       =? "addressbook")  (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+                    , NS "Organizer"    "Organizer"                                                  (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+                    , NS "Msgcompose"   "Msgcompose"                                                 (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+                    , NS "addressbook"  "addressbook"                                                (role       =? "addressbook")  (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     ]
 
--- Scratchpad
+-- Scratchpad                       
 manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
   where
     h = 0.333   -- terminal height
