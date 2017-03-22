@@ -4,10 +4,12 @@
 
 D1=$HOME/MyNotes/$(date '+%Y')
 D2=$HOME/MyNotes/$(date '+%Y')/$(date '+%m')
-F1=$HOME/MyNotes/$(date '+%Y')/$(date '+%m')/$(date '+%d')
+D3=$HOME/MyNotes/$(date '+%Y')/$(date '+%m')/$(date '+%d')
+F1=$HOME/MyNotes/$(date '+%Y')/$(date '+%m')/$(date '+%d')/$(date '+%H:%M:%S')
 
 if [[ ! -d $D1 ]] ; then mkdir $D1; fi
 if [[ ! -d $D2 ]] ; then mkdir $D2; fi
+if [[ ! -d $D3 ]] ; then mkdir $D3; fi
 if [[ ! -f $F1 ]] ; then touch $F1; fi
-date '+%H:%M:%S' >> $F1 & xclip -o >> $F1 & echo '\n\n'-----'\n' >> $F1
+xclip -o >> $F1
 exit 0
