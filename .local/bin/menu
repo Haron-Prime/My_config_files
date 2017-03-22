@@ -8,7 +8,7 @@ case $category in
 
         Bookmarks) proglist="/\netc\nusr\nvar\ntmp\nhome\nbin\nlib\ngit\nDocuments\nDownloads\nMusic\nPictures\nProjects\nVideo" ;;
 
-        Development) proglist="Meld\nSublime-text-3\nXVim\nXMicro" ;;
+        Development) proglist="Meld\nSublime-text-3\nXVim\nXMicro\nNote" ;;
 
         Graphics) proglist="Gimp\nGpick\nInkscape\nMirage" ;;
 
@@ -52,6 +52,7 @@ case $program in
         Sublime-text-3) subl3 ;;
         XVim) xvim ;;
         XMicro) xmicro ;;
+        Note) urxvtc -name Notes -cd ~/MyNotes -e vim -c :NERDTreeToggle ;;
 # Graphics
         Gimp) gimp-2.8 ;;
         Gpick) gpick ;;
