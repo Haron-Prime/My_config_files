@@ -9,5 +9,5 @@ F1=$HOME/MyNotes/$(date '+%Y')/$(date '+%m')/$(date '+%d')
 if [[ ! -d $D1 ]] ; then mkdir $D1; fi
 if [[ ! -d $D2 ]] ; then mkdir $D2; fi
 if [[ ! -f $F1 ]] ; then touch $F1; fi
-echo '\n\n'-----'\n' >> $F1 & date '+%H:%M:%S' >> $F1 & xclip -o >> $F1
+date '+%H:%M:%S' >> $F1 & xclip -o >> $F1 & echo '\n\n'-----'\n' >> $F1
 exit 0
