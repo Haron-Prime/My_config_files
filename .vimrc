@@ -14,6 +14,7 @@ else
   set undofile		" keep an undo file (undo changes after closing)
 endif
 
+set shell=sh
 set backupcopy=auto 
 set swapfile
 set swapsync=fsync
@@ -312,8 +313,8 @@ let g:ycm_filetype_specific_completion_to_disable = {
 let g:NumberToggleTrigger="<S-M>"
 
 "autocmd vimenter * NERDTree
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+"let g:NERDTreeDirArrowExpandable = '▸'
+"let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeShowIgnoredStatus = 1
 
 
@@ -326,6 +327,7 @@ imap      <F3>         <Esc>:wq<CR>
 imap      <F4>         <Esc>:w<CR>
 nmap      <F4>         :w<CR>
 map       <F5>         :NERDTreeToggle<CR>
+nmap      <S-Z>        :NERDTreeFocus<CR>
 nnoremap  <F6>         :GundoToggle<CR>
 nmap      <F7>         :r! xclip -o<CR>
 imap      <F7>         <Esc>:r! xclip -o<CR>
