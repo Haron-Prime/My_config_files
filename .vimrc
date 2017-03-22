@@ -206,6 +206,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'vim-scripts/netrw.vim'
 " Plugin 'vim-scripts/sudo.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tomtom/tcomment_vim'
 " Plugin 'vim-scripts/toggle_words.vim'
@@ -313,6 +314,7 @@ let g:NumberToggleTrigger="<S-M>"
 "autocmd vimenter * NERDTree
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeShowIgnoredStatus = 1
 
 
 "My keybinding
