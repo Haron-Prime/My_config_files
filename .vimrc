@@ -14,7 +14,7 @@ else
   set undofile		" keep an undo file (undo changes after closing)
 endif
 
-set shell=sh
+set shell=zsh
 set backupcopy=auto 
 set swapfile
 set swapsync=fsync
