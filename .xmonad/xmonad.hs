@@ -13,7 +13,6 @@ import qualified Data.Map        as M
 import qualified Data.ByteString as B
 
 -- Actions
--- import XMonad.Actions.CycleRecentWS
 import XMonad.Actions.CycleWindows
 import XMonad.Actions.CycleWS
 import XMonad.Actions.UpdateFocus
@@ -108,7 +107,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                             0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Print
     , ((0        .|. shiftMask,        0xff61),     spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                              --Shift+Print
     , ((mod1Mask,                      0xff61),     spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                              --Alt+Print
-    -- , ((0        .|. controlMask,      0xff61),     spawn "scrot -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                 --Ctrl+Print
     , ((mod1Mask,                        0x61),     spawn "shutter")                                                                                     --Alt+A
     , ((mod1Mask,                        0x64),     spawn "deadbeef")                                                                                    --Alt+D
     , ((mod1Mask,                        0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
