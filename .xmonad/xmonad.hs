@@ -76,6 +76,7 @@ role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 scratchPad           =  scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
+myMRTL               =  mouseResizableTile{draggerType = FixedDragger 1 1}
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -198,15 +199,15 @@ myLayoutHook =  avoidStruts
                 $ minimize
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
-                $ onWorkspace  "W"    (Full                           ||| mouseResizableTile ||| Mirror tiled)
-                $ onWorkspace  "M"    (mouseResizableTile             ||| Mirror tiled       ||| Full)
-                $ onWorkspace  "E"    (Mirror tiled                   ||| mouseResizableTile ||| Full) 
-                $ onWorkspace  "F"    (Mirror tiled                   ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "S"    (Mirror tiled                   ||| mouseResizableTile ||| Full)
-                $ onWorkspace  "V"    (Full                           ||| mouseResizableTile)
-                $ onWorkspace  "P"    (Mirror tiled                   ||| mouseResizableTile ||| Full)
+                $ onWorkspace  "W"    (Full                           ||| myMRTL        ||| Mirror tiled)
+                $ onWorkspace  "M"    (myMRTL                         ||| Mirror tiled  ||| Full)
+                $ onWorkspace  "E"    (Mirror tiled                   ||| myMRTL        ||| Full) 
+                $ onWorkspace  "F"    (Mirror tiled                   ||| myMRTL        ||| Full)
+                $ onWorkspace  "S"    (Mirror tiled                   ||| myMRTL        ||| Full)
+                $ onWorkspace  "V"    (Full                           ||| myMRTL)
+                $ onWorkspace  "P"    (Mirror tiled                   ||| myMRTL        ||| Full)
                 $ onWorkspace  "J"    (spacing 1 $ GridRatio (16/10)  ||| tiled)
-                $ onWorkspace  "T"    (Full                           ||| mouseResizableTile ||| Mirror tiled)
+                $ onWorkspace  "T"    (Full                           ||| myMRTL        ||| Mirror tiled)
                 $ onWorkspace  "X"    (spacing 1 $ GridRatio (16/10)  ||| tiled)
                 $ onWorkspace  "XI"   (spacing 1 $ GridRatio (16/10)  ||| tiled)
                 -- $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
