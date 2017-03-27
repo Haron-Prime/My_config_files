@@ -52,7 +52,6 @@ import XMonad.Prompt.Man
 import XMonad.Prompt.RunOrRaise
 import XMonad.Prompt.Shell
 import XMonad.Prompt.Ssh
-import XMonad.Prompt.AppendFile
 
 -- Utils
 import XMonad.Util.Scratchpad
@@ -137,11 +136,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                      0xffbf),     runOrRaisePrompt myXPConfig)                                                                         --Alt+F2
     , ((mod1Mask,                      0xffc0),     shellPrompt myXPConfig)                                                                              --Alt+F3
     , ((mod1Mask,                      0xffc1),     sshPrompt myXPConfig)                                                                                --Alt+F4
-    , ((mod1Mask,                      0xffc2),     do 
-                                                      spawn ("date>>"++"/home/haron/NOTES")
-                                                      appendFilePrompt myXPConfig "/home/haron/NOTES"
-                                                      )                                                                                                  --Alt+F5
-
 
     --Windows and WS management
     , ((modm,                          0xff09),     rotOpposite)                                                                                         --Mod4+Tab
