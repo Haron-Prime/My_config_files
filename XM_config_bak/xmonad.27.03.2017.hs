@@ -212,6 +212,7 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "T"    (Full    ||| myMRTL  ||| myMMRTL)
                 $ onWorkspace  "X"    (mySGR   ||| myMRTL)
                 $ onWorkspace  "XI"   (mySGR   ||| myMRTL)
+                -- $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
                 $ onWorkspace  "XII"  (mySGR   ||| myMRTL)
                 $ tiled ||| Mirror tiled  ||| Full
                 where
@@ -220,6 +221,10 @@ myLayoutHook =  avoidStruts
                   ratio   = 0.5
                   delta   = 0.01
 
+                  -- IMLayout
+                  -- myIMLayout = withIM (1%7) psi Grid
+                  --     where
+                  --       psi   = And (ClassName "psi") (Role "main")
 
 -- Prompts
 myXPConfig = def {
