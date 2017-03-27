@@ -77,6 +77,8 @@ encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 scratchPad           =  scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 myMRTL               =  mouseResizableTile{draggerType = FixedDragger 1 1}
+myMMRTL              =  mouseResizableTile{isMirrored = True, draggerType = FixedDragger 1 1}
+mySGR                =  spacing 1 $ GridRatio (16/10)
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -199,19 +201,19 @@ myLayoutHook =  avoidStruts
                 $ minimize
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
-                $ onWorkspace  "W"    (Full                           ||| myMRTL        ||| Mirror tiled)
-                $ onWorkspace  "M"    (myMRTL                         ||| Mirror tiled  ||| Full)
-                $ onWorkspace  "E"    (Mirror tiled                   ||| myMRTL        ||| Full) 
-                $ onWorkspace  "F"    (Mirror tiled                   ||| myMRTL        ||| Full)
-                $ onWorkspace  "S"    (Mirror tiled                   ||| myMRTL        ||| Full)
-                $ onWorkspace  "V"    (Full                           ||| myMRTL)
-                $ onWorkspace  "P"    (Mirror tiled                   ||| myMRTL        ||| Full)
-                $ onWorkspace  "J"    (spacing 1 $ GridRatio (16/10)  ||| tiled)
-                $ onWorkspace  "T"    (Full                           ||| myMRTL        ||| Mirror tiled)
-                $ onWorkspace  "X"    (spacing 1 $ GridRatio (16/10)  ||| tiled)
-                $ onWorkspace  "XI"   (spacing 1 $ GridRatio (16/10)  ||| tiled)
+                $ onWorkspace  "W"    (Full    ||| myMRTL  ||| myMMRTL)
+                $ onWorkspace  "M"    (myMRTL  ||| myMMRTL ||| Full)
+                $ onWorkspace  "E"    (myMMRTL ||| myMRTL  ||| Full) 
+                $ onWorkspace  "F"    (myMMRTL ||| myMRTL  ||| Full)
+                $ onWorkspace  "S"    (myMMRTL ||| myMRTL  ||| Full)
+                $ onWorkspace  "V"    (Full    ||| myMRTL)
+                $ onWorkspace  "P"    (myMMRTL ||| myMRTL  ||| Full)
+                $ onWorkspace  "J"    (mySGR   ||| myMRTL)
+                $ onWorkspace  "T"    (Full    ||| myMRTL  ||| myMMRTL)
+                $ onWorkspace  "X"    (mySGR   ||| tiled)
+                $ onWorkspace  "XI"   (mySGR   ||| tiled)
                 -- $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-                $ onWorkspace  "XII"  (spacing 1 $ GridRatio (16/10)  ||| tiled)
+                $ onWorkspace  "XII"  (mySGR   ||| tiled)
                 $ tiled ||| Mirror tiled  ||| Full
                 where
                   tiled   = spacing 1 $ Tall nmaster delta ratio
