@@ -210,10 +210,10 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "P"    (myMMRTL ||| myMRTL  ||| Full)
                 $ onWorkspace  "J"    (mySGR   ||| myMRTL)
                 $ onWorkspace  "T"    (Full    ||| myMRTL  ||| myMMRTL)
-                $ onWorkspace  "X"    (mySGR   ||| tiled)
-                $ onWorkspace  "XI"   (mySGR   ||| tiled)
+                $ onWorkspace  "X"    (mySGR   ||| myMRTL)
+                $ onWorkspace  "XI"   (mySGR   ||| myMRTL)
                 -- $ onWorkspace  "XI"   (smartSpacing 2 $ withIM 0.17 (ClassName "psi") (GridRatio 1))
-                $ onWorkspace  "XII"  (mySGR   ||| tiled)
+                $ onWorkspace  "XII"  (mySGR   ||| myMRTL)
                 $ tiled ||| Mirror tiled  ||| Full
                 where
                   tiled   = spacing 1 $ Tall nmaster delta ratio
