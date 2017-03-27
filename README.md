@@ -8,7 +8,7 @@ My config awesome wm, xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh et
 
 ![](/screenshots/xmonad-1.png?raw=true)
 ![](/screenshots/xmonad-2.png?raw=true)
-![](/screenshots/xmonad-2.png?raw=true)
+![](/screenshots/xmonad-3.png?raw=true)
 
 #### i3wm
 
