@@ -135,29 +135,33 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                      0xffc0),     shellPrompt myXPConfig)                                                                              --Alt+F3
     , ((mod1Mask,                      0xffc1),     sshPrompt myXPConfig)                                                                                --Alt+F4
 
-    --Windows and WS management
+    --WS management
     , ((modm,                            0x20),     sendMessage NextLayout)                                                                              --Mod4+Space
     , ((modm     .|. shiftMask,          0x20),     setLayout $ XMonad.layoutHook conf)                                                                  --Mod4+Shift+Space
     , ((modm,                            0x6e),     refresh)                                                                                             --Mod4+N
     , ((modm,                          0xff1b),     toggleWS' ["NSP"])                                                                                   --Mod4+Escape
     , ((modm,                          0xff08),     toggleWS' ["NSP"])                                                                                   --Mod4+Backspace
-    , ((modm,                          0xff53),     DO.moveTo Next HiddenNonEmptyWS)                                                                     --Mod4+Right
-    , ((modm,                          0xff51),     DO.moveTo Prev HiddenNonEmptyWS)                                                                     --Mod4+Left
-    , ((modm     .|. shiftMask,        0xff53),     shiftToNext)                                                                                         --Mod4+Shift+Right
-    , ((modm     .|. shiftMask,        0xff51),     shiftToPrev)                                                                                         --Mod4+Shift+Left
+    , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                            --Mod4+B
+    , ((modm,                            0x78),     kill)                                                                                                --Mod4+X
+    , ((modm     .|. shiftMask,          0x71),     io (exitWith ExitSuccess))                                                                           --Mod4+Shift+Q
+
+    --Windows management
+    , ((modm,                            0x60),     rotOpposite)                                                                                         --Mod4+grave
+    , ((modm,                          0xff09),     cycleRecentWindows [0xffeb] 0xff09 0x77)                                                             --Mod4+Tab
     , ((modm,                            0x6a),     windows W.focusDown)                                                                                 --Mod4+J
     , ((modm,                          0xff54),     windows W.focusDown)                                                                                 --Mod4+Down
     , ((modm,                            0x6b),     windows W.focusUp)                                                                                   --Mod4+K
     , ((modm,                          0xff52),     windows W.focusUp)                                                                                   --Mod4+Up
     , ((modm,                            0x6d),     windows W.focusMaster)                                                                               --Mod4+M
-    -- , ((mod1Mask,                      0xff09),     windows W.focusMaster)                                                                               --Alt+Tab
     , ((modm,                          0xff0d),     windows W.swapMaster)                                                                                --Mod4+Enter
     , ((modm     .|. shiftMask,          0x6a),     windows W.swapDown)                                                                                  --Mod4+Shift+J
     , ((modm     .|. shiftMask,        0xff54),     windows W.swapDown)                                                                                  --Mod4+Shift+Down
     , ((modm     .|. shiftMask,          0x6b),     windows W.swapUp)                                                                                    --Mod4+Shift+K
     , ((modm     .|. shiftMask,        0xff52),     windows W.swapUp)                                                                                    --Mod4+Shift+Up
-    , ((modm,                            0x60),     rotOpposite)                                                                                         --Mod4+grave
-    , ((modm,                          0xff09),     cycleRecentWindows [0xffeb] 0xff09 0x77)                                                             --Mod4+Tab
+    , ((modm,                          0xff53),     DO.moveTo Next HiddenNonEmptyWS)                                                                     --Mod4+Right
+    , ((modm,                          0xff51),     DO.moveTo Prev HiddenNonEmptyWS)                                                                     --Mod4+Left
+    , ((modm     .|. shiftMask,        0xff53),     shiftToNext)                                                                                         --Mod4+Shift+Right
+    , ((modm     .|. shiftMask,        0xff51),     shiftToPrev)                                                                                         --Mod4+Shift+Left
     , ((modm,                            0x7a),     withFocused minimizeWindow)                                                                          --Mod4+Z
     , ((modm,                            0x61),     sendMessage RestoreNextMinimizedWin)                                                                 --Mod4+A
     , ((modm,                            0x68),     sendMessage Shrink)                                                                                  --Mod4+H
@@ -165,9 +169,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x74),     withFocused $ windows . W.sink)                                                                      --Mod4+T
     , ((modm,                            0x2c),     sendMessage (IncMasterN 1))                                                                          --Mod4+Comma
     , ((modm,                            0x2e),     sendMessage (IncMasterN (-1)))                                                                       --Mod4+Period
-    , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                            --Mod4+B
-    , ((modm,                            0x78),     kill)                                                                                                --Mod4+X
-    , ((modm     .|. shiftMask,          0x71),     io (exitWith ExitSuccess))                                                                           --Mod4+Shift+Q
+    -- , ((mod1Mask,                      0xff09),     windows W.focusMaster)                                                                               --Alt+Tab
     ]
 
     ++
