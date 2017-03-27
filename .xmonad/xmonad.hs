@@ -72,13 +72,13 @@ myNormalBorderColor  =  "#555555"
 myFocusedBorderColor =  "#95d5f5"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
+myMRTL               =  mouseResizableTile{draggerType = FixedDragger 1 1}
+myMMRTL              =  mouseResizableTile{isMirrored = True, draggerType = FixedDragger 1 1}
+mySGRL               =  spacing 1 $ GridRatio (16/10)
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 scratchPad           =  scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
-myMRTL               =  mouseResizableTile{draggerType = FixedDragger 1 1}
-myMMRTL              =  mouseResizableTile{isMirrored = True, draggerType = FixedDragger 1 1}
-mySGR                =  spacing 1 $ GridRatio (16/10)
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -208,11 +208,11 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "S"    (myMMRTL ||| myMRTL  ||| Full)
                 $ onWorkspace  "V"    (Full    ||| myMRTL)
                 $ onWorkspace  "P"    (myMMRTL ||| myMRTL  ||| Full)
-                $ onWorkspace  "J"    (mySGR   ||| myMRTL)
+                $ onWorkspace  "J"    (mySGRL   ||| myMRTL)
                 $ onWorkspace  "T"    (Full    ||| myMRTL  ||| myMMRTL)
-                $ onWorkspace  "X"    (mySGR   ||| myMRTL)
-                $ onWorkspace  "XI"   (mySGR   ||| myMRTL)
-                $ onWorkspace  "XII"  (mySGR   ||| myMRTL)
+                $ onWorkspace  "X"    (mySGRL   ||| myMRTL)
+                $ onWorkspace  "XI"   (mySGRL   ||| myMRTL)
+                $ onWorkspace  "XII"  (mySGRL   ||| myMRTL)
                 $ tiled ||| Mirror tiled  ||| Full
                 where
                   tiled   = spacing 1 $ Tall nmaster delta ratio
