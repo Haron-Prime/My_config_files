@@ -16,7 +16,6 @@ import qualified Data.ByteString as B
 import XMonad.Actions.CycleWindows
 import XMonad.Actions.CycleWS
 import XMonad.Actions.UpdateFocus
-import XMonad.Actions.WorkspaceNames
 import qualified XMonad.Actions.DynamicWorkspaceOrder as DO
 
 -- Hooks
@@ -36,7 +35,6 @@ import XMonad.Hooks.CurrentWorkspaceOnTop
 
 -- Layouts
 import XMonad.Layout.Grid
-import XMonad.Layout.IM
 import XMonad.Layout.LayoutCombinators ((|||))
 import XMonad.Layout.Minimize
 import XMonad.Layout.NoBorders
