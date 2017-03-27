@@ -86,7 +86,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
       ((0,                         0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up 5")
     , ((0,                         0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down 5")
     , ((0,                         0x1008ff12),     spawn "/usr/bin/pulseaudio-ctl mute")
-    , ((modm,                            0x60),     spawn "mpc toggle")
+    , ((mod1Mask,                        0x60),     spawn "mpc toggle")
     , ((0,                         0x1008ff14),     spawn "mpc toggle")
     , ((0,                         0x1008ff15),     spawn "mpc stop")
     , ((0,                         0x1008ff16),     spawn "mpc prev")
@@ -136,8 +136,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                      0xffc1),     sshPrompt myXPConfig)                                                                                --Alt+F4
 
     --Windows and WS management
-    , ((modm,                          0xff09),     rotOpposite)                                                                                         --Mod4+Tab
-    , ((modm,                            0x78),     kill)                                                                                                --Mod4+X
+    , ((modm,                            0x60),     rotOpposite)                                                                                         --Mod4+grave
+    , ((modm,                          0xff09),     cycleRecentWindows [0xffeb] 0xff09 0x77)                                                             --Mod4+Tab
     , ((modm,                            0x20),     sendMessage NextLayout)                                                                              --Mod4+Space
     , ((modm     .|. shiftMask,          0x20),     setLayout $ XMonad.layoutHook conf)                                                                  --Mod4+Shift+Space
     , ((modm,                            0x6e),     refresh)                                                                                             --Mod4+N
@@ -167,6 +167,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,          0x71),     io (exitWith ExitSuccess))                                                                           --Mod4+Shift+Q
     , ((modm,                            0x7a),     withFocused minimizeWindow)                                                                          --Mod4+Z
     , ((modm,                            0x61),     sendMessage RestoreNextMinimizedWin)                                                                 --Mod4+A
+    , ((modm,                            0x78),     kill)                                                                                                --Mod4+X
     ]
 
     ++
