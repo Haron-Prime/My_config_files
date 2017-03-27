@@ -136,11 +136,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                      0xffc1),     sshPrompt myXPConfig)                                                                                --Alt+F4
 
     --WS management
+    , ((mod1Mask,                      0xff09),     nextWS)                                                                                              --Alt+Tab
+    , ((mod1Mask,                      0xff1b),     prevWS)                                                                                              --Alt+Escape
+    , ((modm,                          0xff1b),     toggleWS' ["NSP"])                                                                                   --Mod4+Escape
+    , ((modm,                          0xff08),     toggleWS' ["NSP"])                                                                                   --Mod4+Backspace
     , ((modm,                            0x20),     sendMessage NextLayout)                                                                              --Mod4+Space
     , ((modm     .|. shiftMask,          0x20),     setLayout $ XMonad.layoutHook conf)                                                                  --Mod4+Shift+Space
     , ((modm,                            0x6e),     refresh)                                                                                             --Mod4+N
-    , ((modm,                          0xff1b),     toggleWS' ["NSP"])                                                                                   --Mod4+Escape
-    , ((modm,                          0xff08),     toggleWS' ["NSP"])                                                                                   --Mod4+Backspace
     , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                            --Mod4+B
     , ((modm,                            0x78),     kill)                                                                                                --Mod4+X
     , ((modm     .|. shiftMask,          0x71),     io (exitWith ExitSuccess))                                                                           --Mod4+Shift+Q
@@ -169,7 +171,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x74),     withFocused $ windows . W.sink)                                                                      --Mod4+T
     , ((modm,                            0x2c),     sendMessage (IncMasterN 1))                                                                          --Mod4+Comma
     , ((modm,                            0x2e),     sendMessage (IncMasterN (-1)))                                                                       --Mod4+Period
-    -- , ((mod1Mask,                      0xff09),     windows W.focusMaster)                                                                               --Alt+Tab
     ]
 
     ++
