@@ -93,7 +93,11 @@ Xmessage.form.message.Scroll:      WhenNeeded
 
 URxvt*font:                        xft:Terminus Re33:size=11:antialias=false:hinting=true
 URxvt*boldFont:                    xft:Terminus Re33:weight=bold:size=11:antialias=false:hinting=true
-URxvt*letterSpace:                  -1
+URxvt*lineSpace:                   0
+URxvt*letterSpace:                 -1
+URxvt*fading:                      40
+URxvt*shading:                     100
+URxvt.transparent:                 false
 URxvt*scrollBar:                   false
 URxvt*internalBorder:              5
 URxvt*skipBuiltinGlyphs:           true
