@@ -11,6 +11,9 @@ Xft.rgba:                          rgb
 Xcursor.theme:                     Oxygen Black
 Xcursor.size:                      22
 
+Xmessage*defaultButton:            okay
+Xmessage.form.message.Scroll:      WhenNeeded
+
 ! color0                           black
 ! color1                           red (тёмно-красный)
 ! color2                           green (тёмно-зелёный)
