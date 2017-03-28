@@ -36,12 +36,14 @@ import XMonad.Hooks.CurrentWorkspaceOnTop
 -- Layouts
 import XMonad.Layout.Grid
 import XMonad.Layout.LayoutCombinators ((|||))
-import XMonad.Layout.Minimize
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
-import XMonad.Layout.Spacing
-import XMonad.Layout.MouseResizableTile
 import qualified XMonad.Layout.ToggleLayouts as Tog
+import XMonad.Layout.Spacing
+import XMonad.Layout.Minimize
+import XMonad.Layout.FixedColumn
+import XMonad.Layout.Grid
+import XMonad.Layout.MouseResizableTile
 
 -- Prompts
 import XMonad.Prompt
@@ -68,9 +70,10 @@ myNormalBorderColor  =  "#555555"
 myFocusedBorderColor =  "#95d5f5"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
-myMRTL               =  mouseResizableTile{draggerType = FixedDragger 1 1}
-myMMRTL              =  mouseResizableTile{isMirrored = True, draggerType = FixedDragger 1 1}
+myMRTL               =  mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.05, draggerType = FixedDragger 2 2}
+myMMRTL              =  mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True}
 mySGRL               =  spacing 1 $ GridRatio (16/10)
+mySFCL               =  spacing 1 $ FixedColumn 1 20 80 10
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
@@ -202,11 +205,11 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "S"    (myMMRTL  ||| myMRTL  ||| Full)
                 $ onWorkspace  "V"    (Full     ||| myMRTL)
                 $ onWorkspace  "P"    (myMMRTL  ||| myMRTL  ||| Full)
-                $ onWorkspace  "J"    (mySGRL   ||| myMRTL)
+                $ onWorkspace  "J"    (mySGRL   ||| myMRTL  ||| mySFCL)
                 $ onWorkspace  "T"    (Full     ||| myMRTL  ||| myMMRTL)
-                $ onWorkspace  "X"    (mySGRL   ||| myMRTL)
-                $ onWorkspace  "XI"   (mySGRL   ||| myMRTL)
-                $ onWorkspace  "XII"  (mySGRL   ||| myMRTL)
+                $ onWorkspace  "X"    (mySGRL   ||| myMRTL  ||| mySFCL)
+                $ onWorkspace  "XI"   (mySGRL   ||| myMRTL  ||| mySFCL)
+                $ onWorkspace  "XII"  (mySGRL   ||| myMRTL  ||| mySFCL)
                 $ tiled ||| Mirror tiled  ||| Full
                 where
                   tiled   = spacing 1 $ Tall nmaster delta ratio
