@@ -6,7 +6,7 @@ Xft.embolden:                      false
 Xft.render:                        true
 Xft.hinting:                       true
 Xft.antialias:                     true
-Xft.rgba:                          rgb!
+Xft.rgba:                          rgb
 
 Xcursor.theme:                     Oxygen Black
 Xcursor.size:                      22
