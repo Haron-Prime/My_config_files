@@ -206,7 +206,7 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "V"    (Full     ||| myMRTL)
                 $ onWorkspace  "P"    (myMMRTL  ||| myMRTL  ||| Full)
                 $ onWorkspace  "J"    (mySGRL   ||| myMRTL  ||| mySFCL)
-                $ onWorkspace  "T"    (Full     ||| myMRTL  ||| myMMRTL)
+                $ onWorkspace  "T"    (Full     ||| myMRTL)
                 $ onWorkspace  "X"    (mySGRL   ||| myMRTL  ||| mySFCL)
                 $ onWorkspace  "XI"   (mySGRL   ||| myMRTL  ||| mySFCL)
                 $ onWorkspace  "XII"  (mySGRL   ||| myMRTL  ||| mySFCL)
