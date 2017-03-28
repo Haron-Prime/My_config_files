@@ -78,6 +78,7 @@ mySFCL               =  spacing 1 $ FixedColumn 1 20 80 10
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
+viewShift            =  doF . liftM2 (.) W.greedyView W.shift
 scratchPad           =  scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
 
 -- Key bindings.
@@ -218,7 +219,6 @@ myLayoutHook =  avoidStruts
                   ratio   = 0.5
                   delta   = 0.01
 
-
 -- Prompts
 myXPConfig = def {
                    font              = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
@@ -293,8 +293,6 @@ myManageHook = composeAll . concat $
     myFloatA  = ["lxappearance","xarchiver","gmrun","Update"]
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
-
-    viewShift = doF . liftM2 (.) W.greedyView W.shift
 
 -- Event handling
 myEventHook = minimizeEventHook <+> handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
