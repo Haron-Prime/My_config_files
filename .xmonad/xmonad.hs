@@ -40,6 +40,7 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import qualified XMonad.Layout.ToggleLayouts as Tog
 import XMonad.Layout.Spacing
+import XMonad.Layout.Master
 import XMonad.Layout.Minimize
 import XMonad.Layout.FixedColumn
 import XMonad.Layout.Grid
@@ -72,7 +73,7 @@ myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=tru
 myFocusFollowsMouse  =  True
 myMRTL               =  mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.05, draggerType = FixedDragger 2 2}
 myMMRTL              =  mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True}
-mySGRL               =  spacing 1 $ GridRatio (16/10)
+mySGRL               =  spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10)
 mySFCL               =  spacing 1 $ FixedColumn 1 20 80 10
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
