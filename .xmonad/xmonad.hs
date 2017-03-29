@@ -45,6 +45,7 @@ import XMonad.Layout.Minimize
 import XMonad.Layout.FixedColumn
 import XMonad.Layout.Grid
 import XMonad.Layout.MouseResizableTile
+import XMonad.Layout.ResizableTile
 
 -- Prompts
 import XMonad.Prompt
@@ -75,12 +76,8 @@ myMRTL               =  mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.0
 myMMRTL              =  mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True}
 mySGRL               =  spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10)
 mySFCL               =  spacing 1 $ FixedColumn 1 20 80 10
-mySL                 =  tiled ||| Mirror tiled ||| Full
-                        where
-                        tiled   = spacing 1 $ Tall nmaster delta ratio
-                        nmaster = 1
-                        ratio   = 0.5
-                        delta   = 0.01
+myBL                 =  tiled ||| Mirror tiled ||| Full
+tiled                =  spacing 1 $ ResizableTall  1 (3/100) (1/2) []
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
@@ -176,7 +173,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x7a),     withFocused minimizeWindow)                                                                          --Mod4+Z
     , ((modm,                            0x61),     sendMessage RestoreNextMinimizedWin)                                                                 --Mod4+A
     , ((modm,                            0x68),     sendMessage Shrink)                                                                                  --Mod4+H
+    , ((modm     .|. controlMask,        0x68),     sendMessage MirrorShrink)                                                                            --Mod4+Ctrl+H
     , ((modm,                            0x6c),     sendMessage Expand)                                                                                  --Mod4+L
+    , ((modm     .|. controlMask,        0x6c),     sendMessage MirrorExpand)                                                                            --Mod4+Ctrl+L
     , ((modm,                            0x74),     withFocused $ windows . W.sink)                                                                      --Mod4+T
     , ((modm,                            0x2c),     sendMessage (IncMasterN 1))                                                                          --Mod4+Comma
     , ((modm,                            0x2e),     sendMessage (IncMasterN (-1)))                                                                       --Mod4+Period
@@ -218,7 +217,7 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "X"    (mySGRL   ||| myMRTL  ||| mySFCL)
                 $ onWorkspace  "XI"   (mySGRL   ||| myMRTL  ||| mySFCL)
                 $ onWorkspace  "XII"  (mySGRL   ||| myMRTL  ||| mySFCL)
-                $ mySL
+                $ myBL
 
 -- Prompts
 myXPConfig = def {
