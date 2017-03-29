@@ -75,7 +75,7 @@ myMRTL               =  mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.0
 myMMRTL              =  mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True}
 mySGRL               =  spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10)
 mySFCL               =  spacing 1 $ FixedColumn 1 20 80 10
-mySL                 =  tiled ||| Mirror tiled  ||| Full
+mySL                 =  tiled ||| Mirror tiled ||| Full
                         where
                         tiled   = spacing 1 $ Tall nmaster delta ratio
                         nmaster = 1
@@ -211,10 +211,10 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "E"    (myMMRTL  ||| myMRTL  ||| Full) 
                 $ onWorkspace  "F"    (myMMRTL  ||| myMRTL  ||| Full)
                 $ onWorkspace  "S"    (myMMRTL  ||| myMRTL  ||| Full)
-                $ onWorkspace  "V"    (Full     ||| myMRTL)
+                $ onWorkspace  "V"    (Full     ||| myMRTL  ||| myMMRTL)
                 $ onWorkspace  "P"    (myMMRTL  ||| myMRTL  ||| Full)
                 $ onWorkspace  "J"    (mySGRL   ||| myMRTL  ||| mySFCL)
-                $ onWorkspace  "T"    (Full     ||| myMRTL)
+                $ onWorkspace  "T"    (Full     ||| myMRTL  ||| myMMRTL)
                 $ onWorkspace  "X"    (mySGRL   ||| myMRTL  ||| mySFCL)
                 $ onWorkspace  "XI"   (mySGRL   ||| myMRTL  ||| mySFCL)
                 $ onWorkspace  "XII"  (mySGRL   ||| myMRTL  ||| mySFCL)
