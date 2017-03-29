@@ -109,76 +109,76 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff73),     spawn "compreboot")
     , ((0,                             0xff69),     spawn "compdown")
     , ((0,                             0xff67),     spawn "gmrun")
-    , ((0,                             0xffc9),     scratchPad)                                                                                          --F12
-    , ((0,                             0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                                        --Print
-    , ((0        .|. shiftMask,        0xff61),     spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                              --Shift+Print
-    , ((mod1Mask,                      0xff61),     spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                              --Alt+Print
-    , ((mod1Mask,                        0x61),     spawn "shutter")                                                                                     --Alt+A
-    , ((mod1Mask,                        0x64),     spawn "deadbeef")                                                                                    --Alt+D
-    , ((mod1Mask,                        0x65),     spawn "pulseaudio-equalizer-gtk")                                                                    --Alt+E
-    , ((mod1Mask,                        0x66),     spawn "firefox")                                                                                     --Alt+F
-    , ((mod1Mask,                        0x67),     spawn "gimp")                                                                                        --Alt+G
-    , ((mod1Mask,                        0x68),     spawn "hexchat")                                                                                     --Alt+H
-    , ((mod1Mask,                        0x6c),     spawn "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")              --Alt+L
-    , ((mod1Mask,                        0x6d),     spawn "urxvtc -name mc -e mc")                                                                       --Alt+M
-    , ((mod1Mask,                        0x6e),     spawn "XMNotes")                                                                                     --Alt+N
-    , ((mod1Mask .|. controlMask,        0x6e),     spawn "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree")                                         --Alt+Ctrl+N
-    , ((mod1Mask,                        0x6f),     spawn "opera12")                                                                                     --Alt+O
-    , ((mod1Mask,                        0x72),     spawn "urxvtc -name ranger -e ranger")                                                               --Alt+R
-    , ((mod1Mask,                        0x73),     spawn "subl3")                                                                                       --Alt+S
-    , ((mod1Mask .|. shiftMask,          0x73),     spawn "gksu subl3")                                                                                  --Alt+Shift+S
-    , ((mod1Mask,                        0x74),     spawn "tor-browser")                                                                                 --Alt+T
-    , ((mod1Mask,                        0x76),     spawn "urxvtc -name vim -e vim")                                                                     --Alt+V
-    , ((modm,                            0x71),     spawn "xmonad --recompile && xmonad --restart && killall xmobar && xmobar")                          --Mod4+Q
-    , ((modm     .|. shiftMask,        0xff0d),     spawn $ XMonad.terminal conf)                                                                        --Mod4+Shift+Enter
+    , ((0,                             0xffc9),     scratchPad)                                                                                --F12
+    , ((0,                             0xff61),     spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                              --Print
+    , ((0        .|. shiftMask,        0xff61),     spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                    --Shift+Print
+    , ((mod1Mask,                      0xff61),     spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")                    --Alt+Print
+    , ((mod1Mask,                        0x61),     spawn "shutter")                                                                           --Alt+A
+    , ((mod1Mask,                        0x64),     spawn "deadbeef")                                                                          --Alt+D
+    , ((mod1Mask,                        0x65),     spawn "pulseaudio-equalizer-gtk")                                                          --Alt+E
+    , ((mod1Mask,                        0x66),     spawn "firefox")                                                                           --Alt+F
+    , ((mod1Mask,                        0x67),     spawn "gimp")                                                                              --Alt+G
+    , ((mod1Mask,                        0x68),     spawn "hexchat")                                                                           --Alt+H
+    , ((mod1Mask,                        0x6c),     spawn "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")    --Alt+L
+    , ((mod1Mask,                        0x6d),     spawn "urxvtc -name mc -e mc")                                                             --Alt+M
+    , ((mod1Mask,                        0x6e),     spawn "XMNotes")                                                                           --Alt+N
+    , ((mod1Mask .|. controlMask,        0x6e),     spawn "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree")                               --Alt+Ctrl+N
+    , ((mod1Mask,                        0x6f),     spawn "opera12")                                                                           --Alt+O
+    , ((mod1Mask,                        0x72),     spawn "urxvtc -name ranger -e ranger")                                                     --Alt+R
+    , ((mod1Mask,                        0x73),     spawn "subl3")                                                                             --Alt+S
+    , ((mod1Mask .|. shiftMask,          0x73),     spawn "gksu subl3")                                                                        --Alt+Shift+S
+    , ((mod1Mask,                        0x74),     spawn "tor-browser")                                                                       --Alt+T
+    , ((mod1Mask,                        0x76),     spawn "urxvtc -name vim -e vim")                                                           --Alt+V
+    , ((modm,                            0x71),     spawn "xmonad --recompile && xmonad --restart && killall xmobar && xmobar")                --Mod4+Q
+    , ((modm     .|. shiftMask,        0xff0d),     spawn $ XMonad.terminal conf)                                                              --Mod4+Shift+Enter
 
     --Menu
-    , ((modm,                           0xff67),    spawn "menu")                                                                                        --Mod4+Menu
+    , ((modm,                           0xff67),    spawn "menu")                                                                              --Mod4+Menu
 
     --Prompt management
-    , ((mod1Mask,                      0xffbe),     manPrompt myXPConfig)                                                                                --Alt+F1
-    , ((mod1Mask,                      0xffbf),     runOrRaisePrompt myXPConfig)                                                                         --Alt+F2
-    , ((mod1Mask,                      0xffc0),     shellPrompt myXPConfig)                                                                              --Alt+F3
-    , ((mod1Mask,                      0xffc1),     sshPrompt myXPConfig)                                                                                --Alt+F4
+    , ((mod1Mask,                      0xffbe),     manPrompt myXPConfig)                                                                      --Alt+F1
+    , ((mod1Mask,                      0xffbf),     runOrRaisePrompt myXPConfig)                                                               --Alt+F2
+    , ((mod1Mask,                      0xffc0),     shellPrompt myXPConfig)                                                                    --Alt+F3
+    , ((mod1Mask,                      0xffc1),     sshPrompt myXPConfig)                                                                      --Alt+F4
 
     --WS management
-    , ((mod1Mask,                      0xff09),     nextWS)                                                                                              --Alt+Tab
-    , ((mod1Mask,                      0xff1b),     prevWS)                                                                                              --Alt+Escape
-    , ((modm,                          0xff1b),     toggleWS' ["NSP"])                                                                                   --Mod4+Escape
-    , ((modm,                          0xff08),     toggleWS' ["NSP"])                                                                                   --Mod4+Backspace
-    , ((modm,                            0x20),     sendMessage NextLayout)                                                                              --Mod4+Space
-    , ((modm     .|. shiftMask,          0x20),     setLayout $ XMonad.layoutHook conf)                                                                  --Mod4+Shift+Space
-    , ((modm,                            0x6e),     refresh)                                                                                             --Mod4+N
-    , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                            --Mod4+B
-    , ((modm,                            0x78),     kill)                                                                                                --Mod4+X
-    , ((modm     .|. shiftMask,          0x71),     io (exitWith ExitSuccess))                                                                           --Mod4+Shift+Q
-    , ((modm,                            0x68),     sendMessage Shrink)                                                                                  --Mod4+H
-    , ((modm     .|. controlMask,        0x68),     sendMessage MirrorShrink)                                                                            --Mod4+Ctrl+H
-    , ((modm,                            0x6c),     sendMessage Expand)                                                                                  --Mod4+L
-    , ((modm     .|. controlMask,        0x6c),     sendMessage MirrorExpand)                                                                            --Mod4+Ctrl+L
-    , ((modm,                            0x74),     withFocused $ windows . W.sink)                                                                      --Mod4+T
-    , ((modm,                            0x2c),     sendMessage (IncMasterN 1))                                                                          --Mod4+Comma
-    , ((modm,                            0x2e),     sendMessage (IncMasterN (-1)))                                                                       --Mod4+Period
+    , ((mod1Mask,                      0xff09),     nextWS)                                                                                    --Alt+Tab
+    , ((mod1Mask,                      0xff1b),     prevWS)                                                                                    --Alt+Escape
+    , ((modm,                          0xff1b),     toggleWS' ["NSP"])                                                                         --Mod4+Escape
+    , ((modm,                          0xff08),     toggleWS' ["NSP"])                                                                         --Mod4+Backspace
+    , ((modm,                            0x20),     sendMessage NextLayout)                                                                    --Mod4+Space
+    , ((modm     .|. shiftMask,          0x20),     setLayout $ XMonad.layoutHook conf)                                                        --Mod4+Shift+Space
+    , ((modm,                            0x6e),     refresh)                                                                                   --Mod4+N
+    , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                  --Mod4+B
+    , ((modm,                            0x78),     kill)                                                                                      --Mod4+X
+    , ((modm     .|. shiftMask,          0x71),     io (exitWith ExitSuccess))                                                                 --Mod4+Shift+Q
+    , ((modm,                            0x68),     sendMessage Shrink)                                                                        --Mod4+H
+    , ((modm     .|. controlMask,        0x68),     sendMessage MirrorShrink)                                                                  --Mod4+Ctrl+H
+    , ((modm,                            0x6c),     sendMessage Expand)                                                                        --Mod4+L
+    , ((modm     .|. controlMask,        0x6c),     sendMessage MirrorExpand)                                                                  --Mod4+Ctrl+L
+    , ((modm,                            0x74),     withFocused $ windows . W.sink)                                                            --Mod4+T
+    , ((modm,                            0x2c),     sendMessage (IncMasterN 1))                                                                --Mod4+Comma
+    , ((modm,                            0x2e),     sendMessage (IncMasterN (-1)))                                                             --Mod4+Period
 
     --Windows management
-    , ((modm,                            0x60),     rotOpposite)                                                                                         --Mod4+grave
-    , ((modm,                          0xff09),     cycleRecentWindows [0xffeb] 0xff09 0x77)                                                             --Mod4+Tab
-    , ((modm,                            0x6a),     windows W.focusDown)                                                                                 --Mod4+J
-    , ((modm,                          0xff54),     windows W.focusDown)                                                                                 --Mod4+Down
-    , ((modm,                            0x6b),     windows W.focusUp)                                                                                   --Mod4+K
-    , ((modm,                          0xff52),     windows W.focusUp)                                                                                   --Mod4+Up
-    , ((modm,                            0x6d),     windows W.focusMaster)                                                                               --Mod4+M
-    , ((modm,                          0xff0d),     windows W.swapMaster)                                                                                --Mod4+Enter
-    , ((modm     .|. shiftMask,          0x6a),     windows W.swapDown)                                                                                  --Mod4+Shift+J
-    , ((modm     .|. shiftMask,        0xff54),     windows W.swapDown)                                                                                  --Mod4+Shift+Down
-    , ((modm     .|. shiftMask,          0x6b),     windows W.swapUp)                                                                                    --Mod4+Shift+K
-    , ((modm     .|. shiftMask,        0xff52),     windows W.swapUp)                                                                                    --Mod4+Shift+Up
-    , ((modm,                          0xff53),     DO.moveTo Next HiddenNonEmptyWS)                                                                     --Mod4+Right
-    , ((modm,                          0xff51),     DO.moveTo Prev HiddenNonEmptyWS)                                                                     --Mod4+Left
-    , ((modm     .|. shiftMask,        0xff53),     shiftToNext)                                                                                         --Mod4+Shift+Right
-    , ((modm     .|. shiftMask,        0xff51),     shiftToPrev)                                                                                         --Mod4+Shift+Left
-    , ((modm,                            0x7a),     withFocused minimizeWindow)                                                                          --Mod4+Z
-    , ((modm,                            0x61),     sendMessage RestoreNextMinimizedWin)                                                                 --Mod4+A
+    , ((modm,                            0x60),     rotOpposite)                                                                               --Mod4+grave
+    , ((modm,                          0xff09),     cycleRecentWindows [0xffeb] 0xff09 0x77)                                                   --Mod4+Tab
+    , ((modm,                            0x6a),     windows W.focusDown)                                                                       --Mod4+J
+    , ((modm,                          0xff54),     windows W.focusDown)                                                                       --Mod4+Down
+    , ((modm,                            0x6b),     windows W.focusUp)                                                                         --Mod4+K
+    , ((modm,                          0xff52),     windows W.focusUp)                                                                         --Mod4+Up
+    , ((modm,                            0x6d),     windows W.focusMaster)                                                                     --Mod4+M
+    , ((modm,                          0xff0d),     windows W.swapMaster)                                                                      --Mod4+Enter
+    , ((modm     .|. shiftMask,          0x6a),     windows W.swapDown)                                                                        --Mod4+Shift+J
+    , ((modm     .|. shiftMask,        0xff54),     windows W.swapDown)                                                                        --Mod4+Shift+Down
+    , ((modm     .|. shiftMask,          0x6b),     windows W.swapUp)                                                                          --Mod4+Shift+K
+    , ((modm     .|. shiftMask,        0xff52),     windows W.swapUp)                                                                          --Mod4+Shift+Up
+    , ((modm,                          0xff53),     DO.moveTo Next HiddenNonEmptyWS)                                                           --Mod4+Right
+    , ((modm,                          0xff51),     DO.moveTo Prev HiddenNonEmptyWS)                                                           --Mod4+Left
+    , ((modm     .|. shiftMask,        0xff53),     shiftToNext)                                                                               --Mod4+Shift+Right
+    , ((modm     .|. shiftMask,        0xff51),     shiftToPrev)                                                                               --Mod4+Shift+Left
+    , ((modm,                            0x7a),     withFocused minimizeWindow)                                                                --Mod4+Z
+    , ((modm,                            0x61),     sendMessage RestoreNextMinimizedWin)                                                       --Mod4+A
     ]
 
     ++
@@ -335,9 +335,6 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
 -- StartupHook
 myStartupHook        =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
 
-main = do
-       xmonad =<< xmobar myConfig
-
 myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                        terminal           = myTerminal
                       ,focusFollowsMouse  = myFocusFollowsMouse
@@ -354,3 +351,6 @@ myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                       ,logHook            = myLogHook >>= xmonadPropLog
                       ,startupHook        = myStartupHook 
                       }
+
+main = do
+       xmonad =<< xmobar myConfig
