@@ -59,7 +59,7 @@ import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
 
--- Variables
+-- myOptions
 myBrowser            =  "vivaldi-snapshot"
 browserClass         =  "Vivaldi-snapshot"
 myTerminal           =  "urxvtc"
@@ -74,9 +74,9 @@ myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=tru
 myFocusFollowsMouse  =  True
 myTL                 =  mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.05, draggerType = FixedDragger 2 2}
 myMTL                =  mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True}
-myGL                 =  spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10)
+myGL                 =  spacing 1 $ multimastered 2 0.05 (1/3) $ GridRatio (16/10)
 myFCL                =  spacing 1 $ FixedColumn 1 20 80 10
-myRTL                =  spacing 1 $ ResizableTall  1 (3/100) (1/2) []
+myRTL                =  spacing 1 $ ResizableTall 1 0.05 (1/2) []
 myBL                 =  myRTL ||| Mirror myRTL ||| Full
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
@@ -205,18 +205,18 @@ myLayoutHook =  avoidStruts
                 $ minimize
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
-                $ onWorkspace  "W"    (Full   ||| myTL  ||| myMTL)
-                $ onWorkspace  "M"    (myTL   ||| myMTL ||| Full)
-                $ onWorkspace  "E"    (myMTL  ||| myTL  ||| Full) 
-                $ onWorkspace  "F"    (myMTL  ||| myTL  ||| Full)
-                $ onWorkspace  "S"    (myMTL  ||| myTL  ||| Full)
-                $ onWorkspace  "V"    (Full   ||| myTL  ||| myMTL)
-                $ onWorkspace  "P"    (myMTL  ||| myTL  ||| Full)
-                $ onWorkspace  "J"    (myGL   ||| myTL  ||| myFCL )
-                $ onWorkspace  "T"    (Full   ||| myTL  ||| myMTL)
-                $ onWorkspace  "X"    (myGL   ||| myTL  ||| myFCL )
-                $ onWorkspace  "XI"   (myGL   ||| myTL  ||| myFCL )
-                $ onWorkspace  "XII"  (myGL   ||| myTL  ||| myFCL )
+                $ onWorkspace  "W"    (Full  ||| myTL  ||| myMTL)
+                $ onWorkspace  "M"    (myTL  ||| myMTL ||| Full)
+                $ onWorkspace  "E"    (myMTL ||| myTL  ||| Full) 
+                $ onWorkspace  "F"    (myMTL ||| myTL  ||| Full)
+                $ onWorkspace  "S"    (myMTL ||| myTL  ||| Full)
+                $ onWorkspace  "V"    (Full  ||| myTL  ||| myMTL)
+                $ onWorkspace  "P"    (myMTL ||| myTL  ||| Full)
+                $ onWorkspace  "J"    (myGL  ||| myTL  ||| myFCL)
+                $ onWorkspace  "T"    (myTL  ||| myTL  ||| Full)
+                $ onWorkspace  "X"    (myGL  ||| myTL  ||| myFCL)
+                $ onWorkspace  "XI"   (myGL  ||| myTL  ||| myFCL)
+                $ onWorkspace  "XII"  (myGL  ||| myTL  ||| myFCL)
                 $ myBL
 
 -- Prompts
