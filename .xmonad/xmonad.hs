@@ -72,10 +72,10 @@ myNormalBorderColor  =  "#555555"
 myFocusedBorderColor =  "#95d5f5"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
-myMRTL               =  mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.05, draggerType = FixedDragger 2 2}
-myMMRTL              =  mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True}
-mySGRL               =  spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10)
-mySFCL               =  spacing 1 $ FixedColumn 1 20 80 10
+myTL                 =  mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.05, draggerType = FixedDragger 2 2}
+myMTL                =  mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True}
+myGL                 =  spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10)
+myFCL                =  spacing 1 $ FixedColumn 1 20 80 10
 myBL                 =  tiled ||| Mirror tiled ||| Full
 tiled                =  spacing 1 $ ResizableTall  1 (3/100) (1/2) []
 role                 =  stringProperty "WM_WINDOW_ROLE"
@@ -205,18 +205,18 @@ myLayoutHook =  avoidStruts
                 $ minimize
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
-                $ onWorkspace  "W"    (Full     ||| myMRTL  ||| myMMRTL)
-                $ onWorkspace  "M"    (myMRTL   ||| myMMRTL ||| Full)
-                $ onWorkspace  "E"    (myMMRTL  ||| myMRTL  ||| Full) 
-                $ onWorkspace  "F"    (myMMRTL  ||| myMRTL  ||| Full)
-                $ onWorkspace  "S"    (myMMRTL  ||| myMRTL  ||| Full)
-                $ onWorkspace  "V"    (Full     ||| myMRTL  ||| myMMRTL)
-                $ onWorkspace  "P"    (myMMRTL  ||| myMRTL  ||| Full)
-                $ onWorkspace  "J"    (mySGRL   ||| myMRTL  ||| mySFCL)
-                $ onWorkspace  "T"    (Full     ||| myMRTL  ||| myMMRTL)
-                $ onWorkspace  "X"    (mySGRL   ||| myMRTL  ||| mySFCL)
-                $ onWorkspace  "XI"   (mySGRL   ||| myMRTL  ||| mySFCL)
-                $ onWorkspace  "XII"  (mySGRL   ||| myMRTL  ||| mySFCL)
+                $ onWorkspace  "W"    (Full   ||| myTL  ||| myMTL)
+                $ onWorkspace  "M"    (myTL   ||| myMTL ||| Full)
+                $ onWorkspace  "E"    (myMTL  ||| myTL  ||| Full) 
+                $ onWorkspace  "F"    (myMTL  ||| myTL  ||| Full)
+                $ onWorkspace  "S"    (myMTL  ||| myTL  ||| Full)
+                $ onWorkspace  "V"    (Full   ||| myTL  ||| myMTL)
+                $ onWorkspace  "P"    (myMTL  ||| myTL  ||| Full)
+                $ onWorkspace  "J"    (myGL   ||| myTL  ||| myFCL )
+                $ onWorkspace  "T"    (Full   ||| myTL  ||| myMTL)
+                $ onWorkspace  "X"    (myGL   ||| myTL  ||| myFCL )
+                $ onWorkspace  "XI"   (myGL   ||| myTL  ||| myFCL )
+                $ onWorkspace  "XII"  (myGL   ||| myTL  ||| myFCL )
                 $ myBL
 
 -- Prompts
