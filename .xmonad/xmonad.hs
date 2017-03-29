@@ -76,8 +76,8 @@ myTL                 =  mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.0
 myMTL                =  mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True}
 myGL                 =  spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10)
 myFCL                =  spacing 1 $ FixedColumn 1 20 80 10
-myBL                 =  tiled ||| Mirror tiled ||| Full
-tiled                =  spacing 1 $ ResizableTall  1 (3/100) (1/2) []
+myBL                 =  myTiled ||| Mirror myTiled ||| Full
+myTiled              =  spacing 1 $ ResizableTall  1 (3/100) (1/2) []
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
