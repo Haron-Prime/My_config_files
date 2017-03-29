@@ -152,6 +152,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                            --Mod4+B
     , ((modm,                            0x78),     kill)                                                                                                --Mod4+X
     , ((modm     .|. shiftMask,          0x71),     io (exitWith ExitSuccess))                                                                           --Mod4+Shift+Q
+    , ((modm,                            0x68),     sendMessage Shrink)                                                                                  --Mod4+H
+    , ((modm     .|. controlMask,        0x68),     sendMessage MirrorShrink)                                                                            --Mod4+Ctrl+H
+    , ((modm,                            0x6c),     sendMessage Expand)                                                                                  --Mod4+L
+    , ((modm     .|. controlMask,        0x6c),     sendMessage MirrorExpand)                                                                            --Mod4+Ctrl+L
+    , ((modm,                            0x74),     withFocused $ windows . W.sink)                                                                      --Mod4+T
+    , ((modm,                            0x2c),     sendMessage (IncMasterN 1))                                                                          --Mod4+Comma
+    , ((modm,                            0x2e),     sendMessage (IncMasterN (-1)))                                                                       --Mod4+Period
 
     --Windows management
     , ((modm,                            0x60),     rotOpposite)                                                                                         --Mod4+grave
@@ -172,13 +179,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,        0xff51),     shiftToPrev)                                                                                         --Mod4+Shift+Left
     , ((modm,                            0x7a),     withFocused minimizeWindow)                                                                          --Mod4+Z
     , ((modm,                            0x61),     sendMessage RestoreNextMinimizedWin)                                                                 --Mod4+A
-    , ((modm,                            0x68),     sendMessage Shrink)                                                                                  --Mod4+H
-    , ((modm     .|. controlMask,        0x68),     sendMessage MirrorShrink)                                                                            --Mod4+Ctrl+H
-    , ((modm,                            0x6c),     sendMessage Expand)                                                                                  --Mod4+L
-    , ((modm     .|. controlMask,        0x6c),     sendMessage MirrorExpand)                                                                            --Mod4+Ctrl+L
-    , ((modm,                            0x74),     withFocused $ windows . W.sink)                                                                      --Mod4+T
-    , ((modm,                            0x2c),     sendMessage (IncMasterN 1))                                                                          --Mod4+Comma
-    , ((modm,                            0x2e),     sendMessage (IncMasterN (-1)))                                                                       --Mod4+Period
     ]
 
     ++
