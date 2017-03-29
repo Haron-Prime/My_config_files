@@ -75,6 +75,12 @@ myMRTL               =  mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.0
 myMMRTL              =  mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True}
 mySGRL               =  spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10)
 mySFCL               =  spacing 1 $ FixedColumn 1 20 80 10
+mySL                 =  tiled ||| Mirror tiled  ||| Full
+                        where
+                        tiled   = spacing 1 $ Tall nmaster delta ratio
+                        nmaster = 1
+                        ratio   = 0.5
+                        delta   = 0.01
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
@@ -212,12 +218,7 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "X"    (mySGRL   ||| myMRTL  ||| mySFCL)
                 $ onWorkspace  "XI"   (mySGRL   ||| myMRTL  ||| mySFCL)
                 $ onWorkspace  "XII"  (mySGRL   ||| myMRTL  ||| mySFCL)
-                $ tiled ||| Mirror tiled  ||| Full
-                where
-                  tiled   = spacing 1 $ Tall nmaster delta ratio
-                  nmaster = 1
-                  ratio   = 0.5
-                  delta   = 0.01
+                $ mySL
 
 -- Prompts
 myXPConfig = def {
