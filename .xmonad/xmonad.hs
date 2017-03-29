@@ -86,7 +86,7 @@ role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 viewShift            =  doF . liftM2 (.) W.greedyView W.shift
-scratchPad           =  scratchpadSpawnActionTerminal "urxvtc -name scratchpad"
+scratchPad           =  scratchpadSpawnActionTerminal myTerminal
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -102,7 +102,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff16),     spawn "mpc prev")
     , ((0,                         0x1008ff17),     spawn "mpc next")
     , ((0,                         0x1008ff30),     spawn "if (pidof transgui >/dev/null); then kill $(pidof transgui); else transgui; fi")
-    , ((0,                         0x1008ff18),     spawn "vivaldi-snapshot")
+    , ((0,                         0x1008ff18),     spawn myBrowser)
     , ((0,                         0x1008ff19),     spawn "thunderbird")
     , ((0,                         0x1008ff5d),     spawn "pcmanfm")
     , ((0        .|. shiftMask,    0x1008ff5d),     spawn "gksu pcmanfm")

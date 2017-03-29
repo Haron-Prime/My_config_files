@@ -1,0 +1,5 @@
+#!/usr/bin/pulseaudio -nF
+
+load-module module-udev-detect
+load-module module-native-protocol-unix
+load-module module-systemd-login
