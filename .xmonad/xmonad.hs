@@ -51,7 +51,6 @@ import XMonad.Layout.ResizableTile
 import XMonad.Prompt
 import XMonad.Prompt.Man
 import XMonad.Prompt.RunOrRaise
-import XMonad.Prompt.Shell
 import XMonad.Prompt.Ssh
 
 -- Utils
@@ -69,8 +68,13 @@ myModMask            =  mod4Mask
 myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
 myBorderWidth        =  1
 myNormalBorderColor  =  "#555555"
-myFocusedBorderColor =  "#95d5f5"
+myFocusedBorderColor =  myHLColor
+myHLColor            =  "#95d5f5"
+myUrgColor           =  "#ff6500"
+myBgColor            =  "#151515"
+myFgColor            =  "#959595"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
+myMonospaceFont      =  "xft:Terminus Re33:size=12:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
 myTL                 =  mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.05, draggerType = FixedDragger 2 2}
 myMTL                =  mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True}
@@ -138,8 +142,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --Prompt management
     , ((mod1Mask,                      0xffbe),     manPrompt myXPConfig)                                                                      --Alt+F1
     , ((mod1Mask,                      0xffbf),     runOrRaisePrompt myXPConfig)                                                               --Alt+F2
-    , ((mod1Mask,                      0xffc0),     shellPrompt myXPConfig)                                                                    --Alt+F3
-    , ((mod1Mask,                      0xffc1),     sshPrompt myXPConfig)                                                                      --Alt+F4
+    , ((mod1Mask,                      0xffc0),     sshPrompt myXPConfig)                                                                      --Alt+F3
 
     --WS management
     , ((mod1Mask,                      0xff09),     nextWS)                                                                                    --Alt+Tab
@@ -221,11 +224,11 @@ myLayoutHook =  avoidStruts
 
 -- Prompts
 myXPConfig = def {
-                   font              = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
-                 , bgColor           = "#151515"
-                 , fgColor           = "#959595"
-                 , bgHLight          = "#151515"
-                 , fgHLight          = "#95d5f5"
+                   font              = myMonospaceFont
+                 , bgColor           = myBgColor
+                 , fgColor           = myFgColor
+                 , bgHLight          = myBgColor
+                 , fgHLight          = myHLColor
                  , promptBorderWidth = 0
                  , position          = Top
                  , height            = 20
@@ -301,8 +304,8 @@ myEventHook = minimizeEventHook <+> handleEventHook def <+> fullscreenEventHook 
 myLogHook = do
             currentWorkspaceOnTop
             dynamicLogString $ xmobarPP {
-                                          ppCurrent         = xmobarColor "#9fdfff" "" . pad
-                                        , ppUrgent          = xmobarColor "#ff6500" "" . pad . wrap "<" ">"
+                                          ppCurrent         = xmobarColor myHLColor "" . pad
+                                        , ppUrgent          = xmobarColor myUrgColor "" . pad . wrap "<" ">"
                                         , ppTitle           = (\str -> "")
                                         , ppLayout          = (\str -> "")
                                         }
