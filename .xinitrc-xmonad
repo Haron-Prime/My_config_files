@@ -18,7 +18,6 @@ xset m 5/2 0 &
 hsetroot -solid '#000000' &
 numlockx &
 perWindowLayoutD &
-mkfifo /tmp/upd &
 compton -b &
 urxvtd -q -f -o &
 pcmanfm -d &
