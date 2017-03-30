@@ -92,7 +92,6 @@ scratchPad           =  scratchpadSpawnActionTerminal myTerminal
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
-
     --Applications management
       ((0,                         0x1008ff13),     spawn "/usr/bin/pulseaudio-ctl up 5")
     , ((0,                         0x1008ff11),     spawn "/usr/bin/pulseaudio-ctl down 5")
