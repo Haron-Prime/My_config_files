@@ -83,7 +83,7 @@ myMTL                =  windowNavigation (mouseResizableTile{masterFrac = 2/3, f
 myGL                 =  windowNavigation (spacing 1 $ multimastered 2 0.05 (1/3) $ GridRatio (16/10))
 myFCL                =  windowNavigation (spacing 1 $ FixedColumn 1 20 80 10)
 myRTL                =  windowNavigation (spacing 1 $ ResizableTall 1 0.05 (1/2) [])
-myBL                 =  windowNavigation myRTL ||| Mirror myRTL ||| Full
+myBL                 =  myRTL ||| Mirror myRTL ||| Full
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
@@ -155,7 +155,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,          0x20),     setLayout $ XMonad.layoutHook conf)                                                        --Mod4+Shift+Space
     , ((modm,                            0x6e),     refresh)                                                                                   --Mod4+N
     , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                  --Mod4+B
-    , ((modm,                            0x78),     kill)                                                                                      --Mod4+X
     , ((modm     .|. shiftMask,          0x71),     io (exitWith ExitSuccess))                                                                 --Mod4+Shift+Q
     , ((modm,                            0x68),     sendMessage Shrink)                                                                        --Mod4+H
     , ((modm     .|. controlMask,        0x68),     sendMessage MirrorShrink)                                                                  --Mod4+Ctrl+H
@@ -186,6 +185,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. controlMask,      0xff51),     DO.moveTo Prev HiddenNonEmptyWS)                                                           --Mod4+Ctrl+Left
     , ((modm,                            0x7a),     withFocused minimizeWindow)                                                                --Mod4+Z
     , ((modm,                            0x61),     sendMessage RestoreNextMinimizedWin)                                                       --Mod4+A
+    , ((modm,                            0x78),     kill)                                                                                      --Mod4+X
     -- , ((modm     .|. shiftMask,        0xff53),     shiftToNext)                                                                               --Mod4+Shift+Right
     -- , ((modm     .|. shiftMask,        0xff51),     shiftToPrev)                                                                               --Mod4+Shift+Left
     ]
