@@ -46,6 +46,8 @@ import XMonad.Layout.FixedColumn
 import XMonad.Layout.Grid
 import XMonad.Layout.MouseResizableTile
 import XMonad.Layout.ResizableTile
+import XMonad.Layout.WindowNavigation
+
 
 -- Prompts
 import XMonad.Prompt
@@ -76,12 +78,12 @@ myFgColor            =  "#959595"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 myMonospaceFont      =  "xft:Terminus Re33:size=12:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
-myTL                 =  mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.05, draggerType = FixedDragger 2 2}
-myMTL                =  mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True}
-myGL                 =  spacing 1 $ multimastered 2 0.05 (1/3) $ GridRatio (16/10)
-myFCL                =  spacing 1 $ FixedColumn 1 20 80 10
-myRTL                =  spacing 1 $ ResizableTall 1 0.05 (1/2) []
-myBL                 =  myRTL ||| Mirror myRTL ||| Full
+myTL                 =  windowNavigation (mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.05, draggerType = FixedDragger 2 2})
+myMTL                =  windowNavigation (mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True})
+myGL                 =  windowNavigation (spacing 1 $ multimastered 2 0.05 (1/3) $ GridRatio (16/10))
+myFCL                =  windowNavigation (spacing 1 $ FixedColumn 1 20 80 10)
+myRTL                =  windowNavigation (spacing 1 $ ResizableTall 1 0.05 (1/2) [])
+myBL                 =  windowNavigation myRTL ||| Mirror myRTL ||| Full
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
@@ -166,22 +168,26 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --Windows management
     , ((modm,                            0x60),     rotOpposite)                                                                               --Mod4+grave
     , ((modm,                          0xff09),     cycleRecentWindows [0xffeb] 0xff09 0x77)                                                   --Mod4+Tab
+    , ((modm,                          0xff53),     sendMessage $ Go R)                                                                        --Mod4+Right
+    , ((modm,                          0xff51),     sendMessage $ Go L)                                                                        --Mod4+Left
+    , ((modm,                          0xff52),     sendMessage $ Go U)                                                                        --Mod4+Up
+    , ((modm,                          0xff54),     sendMessage $ Go D)                                                                        --Mod4+Down
+    , ((modm     .|. shiftMask,        0xff53),     sendMessage $ Swap R)                                                                      --Mod4+Shift+Right
+    , ((modm     .|. shiftMask,        0xff51),     sendMessage $ Swap L)                                                                      --Mod4+Shift+Left
+    , ((modm     .|. shiftMask,        0xff52),     sendMessage $ Swap U)                                                                      --Mod4+Shift+Up
+    , ((modm     .|. shiftMask,        0xff54),     sendMessage $ Swap D)                                                                      --Mod4+Shift+Down
     , ((modm,                            0x6a),     windows W.focusDown)                                                                       --Mod4+J
-    , ((modm,                          0xff54),     windows W.focusDown)                                                                       --Mod4+Down
     , ((modm,                            0x6b),     windows W.focusUp)                                                                         --Mod4+K
-    , ((modm,                          0xff52),     windows W.focusUp)                                                                         --Mod4+Up
     , ((modm,                            0x6d),     windows W.focusMaster)                                                                     --Mod4+M
     , ((modm,                          0xff0d),     windows W.swapMaster)                                                                      --Mod4+Enter
     , ((modm     .|. shiftMask,          0x6a),     windows W.swapDown)                                                                        --Mod4+Shift+J
-    , ((modm     .|. shiftMask,        0xff54),     windows W.swapDown)                                                                        --Mod4+Shift+Down
     , ((modm     .|. shiftMask,          0x6b),     windows W.swapUp)                                                                          --Mod4+Shift+K
-    , ((modm     .|. shiftMask,        0xff52),     windows W.swapUp)                                                                          --Mod4+Shift+Up
-    , ((modm,                          0xff53),     DO.moveTo Next HiddenNonEmptyWS)                                                           --Mod4+Right
-    , ((modm,                          0xff51),     DO.moveTo Prev HiddenNonEmptyWS)                                                           --Mod4+Left
-    , ((modm     .|. shiftMask,        0xff53),     shiftToNext)                                                                               --Mod4+Shift+Right
-    , ((modm     .|. shiftMask,        0xff51),     shiftToPrev)                                                                               --Mod4+Shift+Left
+    , ((modm     .|. controlMask,      0xff53),     DO.moveTo Next HiddenNonEmptyWS)                                                           --Mod4+Ctrl+Right
+    , ((modm     .|. controlMask,      0xff51),     DO.moveTo Prev HiddenNonEmptyWS)                                                           --Mod4+Ctrl+Left
     , ((modm,                            0x7a),     withFocused minimizeWindow)                                                                --Mod4+Z
     , ((modm,                            0x61),     sendMessage RestoreNextMinimizedWin)                                                       --Mod4+A
+    -- , ((modm     .|. shiftMask,        0xff53),     shiftToNext)                                                                               --Mod4+Shift+Right
+    -- , ((modm     .|. shiftMask,        0xff51),     shiftToPrev)                                                                               --Mod4+Shift+Left
     ]
 
     ++

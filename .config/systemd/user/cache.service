@@ -5,10 +5,11 @@ Description=Create cache in /tmp/%u
 Type=oneshot
 RemainAfterExit=true
 
-ExecStert=-/usr/bin/touch /tmp/.null
+ExecStart=-/usr/bin/touch /tmp/.null
 ExecStart=-/usr/bin/mkdir -m 0700 -p /tmp/%u
 ExecStart=-/usr/bin/mkdir /tmp/%u/.cache
 ExecStart=-/usr/bin/mkdir /tmp/%u/.acestream_cache
+ExecStart=-/usr/bin/mkdir /tmp/%u/Cache
 ExecStart=-/usr/bin/mkdir /tmp/Downloads
 ExecStart=-/usr/bin/rm -r %h/.cache
 ExecStart=-/usr/bin/ln -s /tmp/%u/.cache %h/.cache
