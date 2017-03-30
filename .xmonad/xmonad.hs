@@ -34,7 +34,6 @@ import XMonad.Hooks.UrgencyHook hiding (Never)
 import XMonad.Hooks.CurrentWorkspaceOnTop
 
 -- Layouts
-import XMonad.Layout.Grid
 import XMonad.Layout.LayoutCombinators ((|||))
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
