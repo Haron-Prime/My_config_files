@@ -148,8 +148,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --WS management
     , ((mod1Mask,                      0xff09),     nextWS)                                                                                    --Alt+Tab
     , ((mod1Mask,                      0xff1b),     prevWS)                                                                                    --Alt+Escape
-    , ((modm     .|. controlMask,      0xff53),     DO.moveTo Next HiddenNonEmptyWS)                                                           --Mod4+Ctrl+Right
-    , ((modm     .|. controlMask,      0xff51),     DO.moveTo Prev HiddenNonEmptyWS)                                                           --Mod4+Ctrl+Left
+    , ((mod1Mask .|. controlMask,      0xff53),     DO.moveTo Next HiddenNonEmptyWS)                                                           --Alt+Ctrl+Right
+    , ((mod1Mask .|. controlMask,      0xff51),     DO.moveTo Prev HiddenNonEmptyWS)                                                           --Alt+Ctrl+Left
     , ((modm,                          0xff1b),     toggleWS' ["NSP"])                                                                         --Mod4+Escape
     , ((modm,                          0xff08),     toggleWS' ["NSP"])                                                                         --Mod4+Backspace
     , ((modm,                            0x20),     sendMessage NextLayout)                                                                    --Mod4+Space
@@ -176,6 +176,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,        0xff51),     sendMessage $ Swap L)                                                                      --Mod4+Shift+Left
     , ((modm     .|. shiftMask,        0xff52),     sendMessage $ Swap U)                                                                      --Mod4+Shift+Up
     , ((modm     .|. shiftMask,        0xff54),     sendMessage $ Swap D)                                                                      --Mod4+Shift+Down
+    , ((modm     .|. controlMask,      0xff53),     shiftToNext)                                                                               --Mod4+Ctrl+Right
+    , ((modm     .|. controlMask,      0xff51),     shiftToPrev)                                                                               --Mod4+Ctrl+Left
     , ((modm,                            0x6a),     windows W.focusDown)                                                                       --Mod4+J
     , ((modm,                            0x6b),     windows W.focusUp)                                                                         --Mod4+K
     , ((modm,                            0x6d),     windows W.focusMaster)                                                                     --Mod4+M
@@ -185,8 +187,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x7a),     withFocused minimizeWindow)                                                                --Mod4+Z
     , ((modm,                            0x61),     sendMessage RestoreNextMinimizedWin)                                                       --Mod4+A
     , ((modm,                            0x78),     kill)                                                                                      --Mod4+X
-    -- , ((modm     .|. shiftMask,        0xff53),     shiftToNext)                                                                               --Mod4+Shift+Right
-    -- , ((modm     .|. shiftMask,        0xff51),     shiftToPrev)                                                                               --Mod4+Shift+Left
     ]
 
     ++
