@@ -47,7 +47,6 @@ import XMonad.Layout.MouseResizableTile
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.WindowNavigation
 
-
 -- Prompts
 import XMonad.Prompt
 import XMonad.Prompt.Man
@@ -310,8 +309,7 @@ myLogHook = do
             dynamicLogString $ xmobarPP {
                                           ppCurrent         = xmobarColor myHLColor ""
                                         , ppUrgent          = xmobarColor myUrgColor "" . pad . wrap "<" ">"
-                                        , ppTitle           = (\str -> "")
-                                        , ppLayout          = (\str -> "")
+                                        , ppOrder           = \(ws:_:t:_) -> [ws]
                                         }
 
 -- nameScratchpad
