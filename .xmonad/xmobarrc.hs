@@ -23,7 +23,7 @@ Config {
                               Run XMonadLog
                             , Run Com        "XMNull" [] "" 0
                             , Run Com        "XMUpdate" [] "" 3000
-                            , Run PipeReader "/tmp/upd" "Update"
+                            , Run PipeReader "/tmp/haron/upd" "Update"
                             , Run DynNetwork ["-S","True","-d","1","-t","<fc=#cccccc><dev>:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Com        "XMTraf" [] "" 50
                             , Run Cpu        ["-S","True","-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>","-L","33","-H","66","--normal","#ffff00","--high","#ff6500"] 10
