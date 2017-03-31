@@ -76,8 +76,8 @@ myFgColor            =  "#959595"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 myMonospaceFont      =  "xft:Terminus Re33:size=12:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
-myTL                 =  windowNavigation (mouseResizableTile{masterFrac = 1/2, fracIncrement = (1/100), draggerType = FixedDragger 2 2})
-myMTL                =  windowNavigation (mouseResizableTile{masterFrac = 2/3, fracIncrement = (1/100), draggerType = FixedDragger 2 2, isMirrored = True})
+myTL                 =  windowNavigation (mouseResizableTile{masterFrac = 1/2, fracIncrement = (1/100), draggerType = FixedDragger 2 6})
+myMTL                =  windowNavigation (mouseResizableTile{masterFrac = 2/3, fracIncrement = (1/100), draggerType = FixedDragger 2 6, isMirrored = True})
 myGL                 =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 myFCL                =  windowNavigation (spacing 1 $ FixedColumn 1 20 80 10)
 myRTL1               =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
