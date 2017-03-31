@@ -76,12 +76,12 @@ myFgColor            =  "#959595"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 myMonospaceFont      =  "xft:Terminus Re33:size=12:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
-myTL                 =  windowNavigation (mouseResizableTile{masterFrac = 1/2, fracIncrement = 0.05, draggerType = FixedDragger 2 2})
-myMTL                =  windowNavigation (mouseResizableTile{masterFrac = 2/3, fracIncrement = 0.05, draggerType = FixedDragger 2 2, isMirrored = True})
-myGL                 =  windowNavigation (spacing 1 $ multimastered 2 0.05 (1/3) $ GridRatio (16/10))
+myTL                 =  windowNavigation (mouseResizableTile{masterFrac = 1/2, fracIncrement = (1/100), draggerType = FixedDragger 2 2})
+myMTL                =  windowNavigation (mouseResizableTile{masterFrac = 2/3, fracIncrement = (1/100), draggerType = FixedDragger 2 2, isMirrored = True})
+myGL                 =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 myFCL                =  windowNavigation (spacing 1 $ FixedColumn 1 20 80 10)
-myRTL1               =  windowNavigation (spacing 1 $ ResizableTall 1 0.05 (1/2) [])
-myRTL2               =  windowNavigation (spacing 1 $ ResizableTall 2 0.05 (2/3) [])
+myRTL1               =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
+myRTL2               =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
 myMRTL1              =  Mirror myRTL1
 myMRTL2              =  Mirror myRTL2
 myBL                 =  myRTL1 ||| myRTL2 ||| myMRTL1 ||| myMRTL2 ||| Full
@@ -159,6 +159,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                  --Mod4+B
     , ((modm,                            0x68),     sendMessage Shrink)                                                                        --Mod4+H
     , ((modm     .|. shiftMask,          0x68),     sendMessage MirrorShrink)                                                                  --Mod4+Shift+H
+    , ((modm,                            0x75),     sendMessage ShrinkSlave)                                                                   --Mod4+U
+    , ((modm,                            0x69),     sendMessage ExpandSlave)                                                                   --Mod4+I
     , ((modm,                            0x6c),     sendMessage Expand)                                                                        --Mod4+L
     , ((modm     .|. shiftMask,          0x6c),     sendMessage MirrorExpand)                                                                  --Mod4+Shift+L
     , ((modm,                            0x74),     withFocused $ windows . W.sink)                                                            --Mod4+T
@@ -317,13 +319,13 @@ myLogHook = do
 
 -- nameScratchpad
 mynameScratchpads = [ NS "ncmpcpp"      "urxvtc -name ncmpcpp -e ncmpcpp"                            (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                    , NS "htop"         "urxvtc -name htop -e htop"                                  (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+                    , NS "htop"         "urxvtc -name htop -e htop"                                  (appName    =? "htop")         (customFloating $ W.RationalRect (1/100) (1/100) 0.9 0.9)
                     , NS "gpick"        "gpick"                                                      (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "pavucontrol"  "pavucontrol"                                                (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "update"       "urxvtc -name update -e yaourt -Syua"                        (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                     , NS "Notes"        "urxvtc -name Notes -cd ~/MyNotes -e vim -c :NERDTreeToggle" (appName    =? "Notes")        (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
 
-                    , NS "Mirage"       "mirage"                                                     (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+                    , NS "Mirage"       "mirage"                                                     (className  =? "Mirage")       (customFloating $ W.RationalRect (1/100) (1/100) 0.9 0.9)
                     , NS "font-manager" "font-manager"                                               (className  =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "Gsimplecal"   "Gsimplecal"                                                 (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
 
