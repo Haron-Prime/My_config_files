@@ -53,7 +53,7 @@ Xmessage*form.message.Scroll:      WhenNeeded
 *transparent:                      false
 *lineSpace:                        0
 *letterSpace:                      -1
-*fading:                           30
+! *fading:                           30
 *cursorBlink:                      true
 *cursorUnderline:                  true
 *saveLines:                        4096
