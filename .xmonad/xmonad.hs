@@ -82,8 +82,8 @@ myGL                 =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1
 myFCL                =  windowNavigation (spacing 1 $ FixedColumn 1 20 80 10)
 myRTL1               =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
 myRTL2               =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
-myMRTL1              =  Mirror myRTL1
-myMRTL2              =  Mirror myRTL2
+myMRTL1              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
+myMRTL2              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
 myBL                 =  myRTL1 ||| myRTL2 ||| myMRTL1 ||| myMRTL2 ||| Full
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
@@ -159,10 +159,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x62),     sendMessage ToggleStruts)                                                                  --Mod4+B
     , ((modm,                            0x68),     sendMessage Shrink)                                                                        --Mod4+H
     , ((modm     .|. shiftMask,          0x68),     sendMessage MirrorShrink)                                                                  --Mod4+Shift+H
-    , ((modm,                            0x75),     sendMessage ShrinkSlave)                                                                   --Mod4+U
-    , ((modm,                            0x69),     sendMessage ExpandSlave)                                                                   --Mod4+I
     , ((modm,                            0x6c),     sendMessage Expand)                                                                        --Mod4+L
     , ((modm     .|. shiftMask,          0x6c),     sendMessage MirrorExpand)                                                                  --Mod4+Shift+L
+    , ((modm,                            0x75),     sendMessage ShrinkSlave)                                                                   --Mod4+U
+    , ((modm,                            0x69),     sendMessage ExpandSlave)                                                                   --Mod4+I
     , ((modm,                            0x74),     withFocused $ windows . W.sink)                                                            --Mod4+T
     , ((modm,                            0x2c),     sendMessage (IncMasterN 1))                                                                --Mod4+Comma
     , ((modm,                            0x2e),     sendMessage (IncMasterN (-1)))                                                             --Mod4+Period
@@ -225,9 +225,9 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "P"    (myMTL ||| myTL  ||| Full)
                 $ onWorkspace  "J"    (myGL  ||| myTL  ||| myFCL)
                 $ onWorkspace  "T"    (myTL  ||| myMTL ||| Full)
-                $ onWorkspace  "X"    (myGL  ||| myTL  ||| myFCL)
-                $ onWorkspace  "XI"   (myGL  ||| myTL  ||| myFCL)
-                $ onWorkspace  "XII"  (myGL  ||| myTL  ||| myFCL)
+                -- $ onWorkspace  "X"    (myGL  ||| myTL  ||| myFCL)
+                -- $ onWorkspace  "XI"   (myGL  ||| myTL  ||| myFCL)
+                -- $ onWorkspace  "XII"  (myGL  ||| myTL  ||| myFCL)
                 $ myBL
 
 -- Prompts
