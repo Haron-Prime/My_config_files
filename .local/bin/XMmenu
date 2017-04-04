@@ -6,7 +6,7 @@ category=$(echo -e "Notes\nBookmarks\nDevelopment\nGraphics\nMedia\nNetwork\nGam
 
 case $category in
 
-        Notes) urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree ;;
+        Notes) XMNotes-r ;;
 
         Bookmarks) proglist="/\netc\nusr\nvar\ntmp\nhome\nbin\nlib\ngit\nDocuments\nDownloads\nMusic\nPictures\nProjects\nVideo" ;;
 
