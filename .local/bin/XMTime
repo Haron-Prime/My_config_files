@@ -5,8 +5,11 @@
 DATA=`date "+%d.%m.%Y"`
 DAY=`date "+%A"`
 TIME=`date "+%H:%M:%S"`
-if [[ $DAY = "Суббота" ]]; then echo '<fc=#ffab00>'$DAY'</fc>' $DATA  '<fc=#cccccc>'$TIME'</fc>'
-elif [[ $DAY = "Воскресенье" ]]; then echo '<fc=#ff6500>'$DAY'</fc>' $DATA  '<fc=#cccccc>'$TIME'</fc>'
-else echo $DAY $DATA  '<fc=#cccccc>'$TIME'</fc>'
+if [[ $DAY = "Суббота" ]]; then 
+    echo '<fc=#ffab00>'$DAY'</fc>' $DATA  '<fc=#cccccc>'$TIME'</fc>'
+elif [[ $DAY = "Воскресенье" ]]; then 
+    echo '<fc=#ff6500>'$DAY'</fc>' $DATA  '<fc=#cccccc>'$TIME'</fc>'
+else 
+    echo $DAY $DATA  '<fc=#cccccc>'$TIME'</fc>'
 fi
 exit 0

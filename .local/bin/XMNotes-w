@@ -8,15 +8,15 @@ D3=$D2/$(date '+%d')
 F1=$D3/$(date '+%H:%M:%S')
 
 if [[ ! -d $D1 ]] ; then 
-	mkdir $D1;
+    mkdir $D1;
 else
-	if [[ ! -d $D2 ]] ; then 
-		mkdir $D2
-	else
-		if [[ ! -d $D3 ]] ; then 
-			mkdir $D3
-		fi
-	fi
+    if [[ ! -d $D2 ]] ; then 
+        mkdir $D2
+    else
+        if [[ ! -d $D3 ]] ; then 
+            mkdir $D3
+        fi
+    fi
 fi
 xclip -o >> $F1
 exit 0

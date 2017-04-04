@@ -4,6 +4,7 @@
 
 if (pidof galculator >/dev/null); then 
     kill $(pidof galculator)
-else galculator
+else 
+    galculator
 fi
 exit 0

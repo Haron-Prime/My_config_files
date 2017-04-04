@@ -4,6 +4,7 @@
 
 if (pidof transgui >/dev/null); then 
     kill $(pidof transgui)
-else transgui
+else 
+    transgui
 fi
 exit 0

@@ -4,9 +4,13 @@
 
 temp1=`sensors | grep temp2 | tr -s \  | cut -d \  -f 2 | cut -c 2-3`
 temp2=`sensors | grep temp2 | tr -s \  | cut -d \  -f 2`
-if [ $temp1 -ge 55 ]; then echo '<fc=#ff6500>'$temp2'</fc>'
-elif [ $temp1 -ge 50 ]; then echo '<fc=#ffad00>'$temp2'</fc>'
-elif [ $temp1 -ge 45 ]; then echo '<fc=#ffff00>'$temp2'</fc>'
-else echo $temp2
+if [ $temp1 -ge 55 ]; then 
+    echo '<fc=#ff6500>'$temp2'</fc>'
+elif [ $temp1 -ge 50 ]; then 
+    echo '<fc=#ffad00>'$temp2'</fc>'
+elif [ $temp1 -ge 45 ]; then 
+    echo '<fc=#ffff00>'$temp2'</fc>'
+else 
+    echo $temp2
 fi
 exit 0

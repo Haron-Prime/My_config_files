@@ -3,7 +3,9 @@
 # License - © 2017 WTFPL - http://www.wtfpl.net/
 
 UPD=`checkupdates | wc -l`
-if [ $UPD -gt 0 ]; then echo '<fc=#cccccc>  Update:</fc><fn=2> </fn><fn=1><fc=#ff6500>'$UPD'<fn=2> </fn>pkg</fc></fn>' > /tmp/haron/upd
-else echo  > /tmp/haron/upd
+if [ $UPD -gt 0 ]; then 
+    echo '<fc=#cccccc>  Update:</fc><fn=2> </fn><fn=1><fc=#ff6500>'$UPD'<fn=2> </fn>pkg</fc></fn>' > /tmp/haron/upd
+else 
+    echo  > /tmp/haron/upd
 fi
 exit 0
