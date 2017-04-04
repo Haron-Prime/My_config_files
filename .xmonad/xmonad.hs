@@ -85,6 +85,7 @@ myRTL2               =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2
 myMRTL1              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
 myMRTL2              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
 myBL                 =  myRTL1 ||| myRTL2 ||| myMRTL1 ||| myMRTL2 ||| Full
+
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
@@ -135,7 +136,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask .|. shiftMask,          0x73),  spawn "gksu subl3")                                                                        --Alt+Shift+S
     , ((mod1Mask,                        0x74),  spawn "tor-browser")                                                                       --Alt+T
     , ((mod1Mask,                        0x76),  spawn "urxvtc -name vim -e vim")                                                           --Alt+V
-    , ((modm,                            0x71),  spawn "xmonad --recompile && xmonad --restart && killall xmobar && xmobar")                --Mod4+Q
+    , ((modm,                            0x71),  spawn "xmonad --recompile && killall xmobar && xmonad --restart")                          --Mod4+Q
     , ((modm     .|. shiftMask,        0xff0d),  spawn $ XMonad.terminal conf)                                                              --Mod4+Shift+Enter
 
     --Menu
@@ -300,33 +301,20 @@ myManageHook = composeAll . concat $
     myTerm    = []
 
     -- CenterFloat
-    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor"]
+    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor","Font-manager"]
     myFloatA  = ["lxappearance","xarchiver","gmrun","Update"]
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
 
--- Event handling
-myEventHook = minimizeEventHook <+> handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
- 
--- Status bars and logging.
-myLogHook = do
-            currentWorkspaceOnTop
-            dynamicLogString $ xmobarPP {
-                                          ppCurrent         = xmobarColor myHLColor ""
-                                        , ppUrgent          = xmobarColor myUrgColor "" . pad . wrap "<" ">"
-                                        , ppOrder           = \(ws:_:t:_) -> [ws]
-                                        }
-
 -- nameScratchpad
 mynameScratchpads = [ NS "XMncmpcpp"    "XMncmpcpp"      (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                    , NS "XMHtop"       "XMHtop"         (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+                    , NS "XMHtop"       "XMHtop"         (appName    =? "htop")         (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     , NS "gpick"        "gpick"          (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "pavucontrol"  "pavucontrol"    (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "XMUpdate"     "XMUpdate"       (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                    , NS "XMNotes-r"    "XMNotes-r"      (appName    =? "Notes")        (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+                    , NS "XMNotes-r"    "XMNotes-r"      (appName    =? "Notes")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
 
                     , NS "Mirage"       "mirage"         (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-                    , NS "font-manager" "font-manager"   (className  =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "Gsimplecal"   "Gsimplecal"     (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
 
                     , NS "Organizer"    "Organizer"      (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
@@ -341,6 +329,18 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     w = 1       -- terminal width
     t = 1 - h   -- distance from top edge
     l = 1 - w   -- distance from left edge
+
+-- Event handling
+myEventHook = minimizeEventHook <+> handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
+ 
+-- Status bars and logging.
+myLogHook = do
+            currentWorkspaceOnTop
+            dynamicLogString $ xmobarPP {
+                                          ppCurrent         = xmobarColor myHLColor ""
+                                        , ppUrgent          = xmobarColor myUrgColor "" . pad . wrap "<" ">"
+                                        , ppOrder           = \(ws:_:t:_) -> [ws]
+                                        }
 
 -- StartupHook
 myStartupHook        =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
