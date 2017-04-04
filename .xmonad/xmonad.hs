@@ -260,7 +260,7 @@ myManageHook = composeAll . concat $
     , [className =? c                --> doF (W.shift "T")   <+> viewShift ("T")   | c <- myTorrent]
     , [className =? c                --> doF (W.shift "X")   <+> viewShift ("X")   | c <- myVM]
     , [className =? c                --> doF (W.shift "XI")  <+> viewShift ("XI")  | c <- myIM]
-    , [appName   =? c                --> doF (W.shift "XII") <+> viewShift ("XII") | c <- myTerm]
+    , [appName   =? a                --> doF (W.shift "XII") <+> viewShift ("XII") | a <- myTerm]
 
     , [className =? c                --> doCenterFloat                             | c <- myFloatC]
     , [appName   =? a                --> doCenterFloat                             | a <- myFloatA]
