@@ -128,7 +128,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x6c),  spawn "cat /home/haron/Documents/last.pass | cut -c 1-24 | xclip -selection clipboard")    --Alt+L
     , ((mod1Mask,                        0x6d),  spawn "urxvtc -name mc -e mc")                                                             --Alt+M
     , ((mod1Mask,                        0x6e),  spawn "XMNotes")                                                                           --Alt+N
-    , ((mod1Mask .|. controlMask,        0x6e),  spawn "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree")                               --Alt+Ctrl+N
+    , ((mod1Mask .|. controlMask,        0x6e),  spawn "Notes")                                                                             --Alt+Ctrl+N
     , ((mod1Mask,                        0x6f),  spawn "opera12")                                                                           --Alt+O
     , ((mod1Mask,                        0x72),  spawn "urxvtc -name ranger -e ranger")                                                     --Alt+R
     , ((mod1Mask,                        0x73),  spawn "subl3")                                                                             --Alt+S
@@ -323,7 +323,7 @@ mynameScratchpads = [ NS "XMncmpcpp"    "XMncmpcpp"      (appName    =? "ncmpcpp
                     , NS "gpick"        "gpick"          (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "pavucontrol"  "pavucontrol"    (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "XMUpdate"     "XMUpdate"       (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                    , NS "XMNotes"      "XMNotes"        (appName    =? "Notes")        (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+                    , NS "Notes"        "Notes"          (appName    =? "Notes")        (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
 
                     , NS "Mirage"       "mirage"         (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                     , NS "font-manager" "font-manager"   (className  =? "Font-manager") (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)

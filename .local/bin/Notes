@@ -1,0 +1,6 @@
+#!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
+urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree
+exit 0
