@@ -33,4 +33,7 @@ format() {
 }
 
 VOL=`volume | format`
-echo '<fc=#cccccc>Vol:</fc><fn=2> </fn>'$VOL
+if [[ $VOL = "MUTE" ]]; then 
+  echo '<fc=#cccccc>Vol:</fc><fn=2> </fn><fc=#ff6500>'$VOL'</fc>'
+else echo '<fc=#cccccc>Vol:</fc><fn=2> </fn>'$VOL
+fi
