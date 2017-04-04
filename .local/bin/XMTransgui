@@ -1,0 +1,9 @@
+#!/bin/zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
+if (pidof transgui >/dev/null); then 
+    kill $(pidof transgui)
+else transgui
+fi
+exit 0
