@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 function pack_upd {
     if [[ -z $CHECKUPDATES_DB ]]; then
