@@ -346,21 +346,21 @@ myLogHook = do
 myStartupHook        =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
 
 myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
-                       terminal           = myTerminal
-                      ,focusFollowsMouse  = myFocusFollowsMouse
-                      ,borderWidth        = myBorderWidth
-                      ,modMask            = myModMask
-                      ,workspaces         = myWorkspaces
-                      ,normalBorderColor  = myNormalBorderColor
-                      ,focusedBorderColor = myFocusedBorderColor
-                      ,keys               = myKeys
-                      ,mouseBindings      = myMouseBindings
-                      ,layoutHook         = myLayoutHook
-                      ,manageHook         = floatNextHook <+> manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
-                      ,handleEventHook    = myEventHook
-                      ,logHook            = myLogHook >>= xmonadPropLog
-                      ,startupHook        = myStartupHook 
-                      }
+                  terminal           = myTerminal
+                 ,focusFollowsMouse  = myFocusFollowsMouse
+                 ,borderWidth        = myBorderWidth
+                 ,modMask            = myModMask
+                 ,workspaces         = myWorkspaces
+                 ,normalBorderColor  = myNormalBorderColor
+                 ,focusedBorderColor = myFocusedBorderColor
+                 ,keys               = myKeys
+                 ,mouseBindings      = myMouseBindings
+                 ,layoutHook         = myLayoutHook
+                 ,manageHook         = floatNextHook <+> manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
+                 ,handleEventHook    = myEventHook
+                 ,logHook            = myLogHook >>= xmonadPropLog
+                 ,startupHook        = myStartupHook 
+                 }
 
 main = do
        xmonad =<< xmobar myConfig
