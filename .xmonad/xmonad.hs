@@ -95,26 +95,26 @@ scratchPad           =  scratchpadSpawnActionTerminal myTerminal
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
     --Applications management
-      ((0,                         0x1008ff13),  spawn "/usr/bin/pulseaudio-ctl up 5")
-    , ((0,                         0x1008ff11),  spawn "/usr/bin/pulseaudio-ctl down 5")
-    , ((0,                         0x1008ff12),  spawn "/usr/bin/pulseaudio-ctl mute")
-    , ((mod1Mask,                        0x60),  spawn "mpc toggle")
-    , ((0,                         0x1008ff14),  spawn "mpc toggle")
-    , ((0,                         0x1008ff15),  spawn "mpc stop")
-    , ((0,                         0x1008ff16),  spawn "mpc prev")
-    , ((0,                         0x1008ff17),  spawn "mpc next")
-    , ((0,                         0x1008ff30),  spawn "XMTransgui")
-    , ((0,                         0x1008ff18),  spawn myBrowser)
-    , ((0,                         0x1008ff19),  spawn "thunderbird")
-    , ((0,                         0x1008ff5d),  spawn "pcmanfm")
-    , ((0        .|. shiftMask,    0x1008ff5d),  spawn "gksu pcmanfm")
-    , ((0,                         0x1008ff1d),  spawn "XMGalculator")
-    , ((0,                         0x1008ff2f),  spawn "i3lock -i /home/haron/wall/starrynight.png")
-    , ((0,                         0x1008ff81),  spawn "XMncmpcpp")
-    , ((0,                         0x1008ff1b),  spawn "XMHtop")
-    , ((0,                         0x1008ff73),  spawn "compreboot")
-    , ((0,                             0xff69),  spawn "compdown")
-    , ((0,                             0xff67),  spawn "gmrun")
+      ((0,                         0x1008ff13),  spawn "/usr/bin/pulseaudio-ctl up 5")                                    --XF86AudioRaiseVolume
+    , ((0,                         0x1008ff11),  spawn "/usr/bin/pulseaudio-ctl down 5")                                  --XF86AudioLowerVolume
+    , ((0,                         0x1008ff12),  spawn "/usr/bin/pulseaudio-ctl mute")                                    --XF86AudioMute
+    , ((mod1Mask,                        0x60),  spawn "mpc toggle")                                                      --Alt+grave
+    , ((0,                         0x1008ff14),  spawn "mpc toggle")                                                      --XF86Play
+    , ((0,                         0x1008ff15),  spawn "mpc stop")                                                        --XF86AudioStop
+    , ((0,                         0x1008ff16),  spawn "mpc prev")                                                        --XF86AudioPrev
+    , ((0,                         0x1008ff17),  spawn "mpc next")                                                        --XF86AudioNext
+    , ((0,                         0x1008ff30),  spawn "XMTransgui")                                                      --XF86Favorites
+    , ((0,                         0x1008ff18),  spawn myBrowser)                                                         --XF86HomePage
+    , ((0,                         0x1008ff19),  spawn "thunderbird")                                                     --XF86Mail
+    , ((0,                         0x1008ff5d),  spawn "pcmanfm")                                                         --XF86Explorer
+    , ((0        .|. shiftMask,    0x1008ff5d),  spawn "gksu pcmanfm")                                                    --Shift+XF86Explorer
+    , ((0,                         0x1008ff1d),  spawn "XMGalculator")                                                    --XF86Calculator
+    , ((0,                         0x1008ff2f),  spawn "i3lock -i /home/haron/wall/starrynight.png")                      --XF86Sleep
+    , ((0,                         0x1008ff81),  spawn "XMncmpcpp")                                                       --XF86Tools
+    , ((0,                         0x1008ff1b),  spawn "XMHtop")                                                          --XF86Search
+    , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
+    , ((0,                             0xff69),  spawn "compdown")                                                        --Cancel
+    , ((0,                             0xff67),  spawn "gmrun")                                                           --Menu
     , ((0,                             0xffc9),  scratchPad)                                                              --F12
     , ((0,                             0xff61),  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")            --Print
     , ((0        .|. shiftMask,        0xff61),  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Shift+Print
