@@ -325,7 +325,7 @@ mynameScratchpads = [ NS "XMncmpcpp"    "XMncmpcpp"      (appName    =? "ncmpcpp
 
 -- Scratchpad                       
 manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
-  where
+    where
     h = 0.333   -- terminal height
     w = 1       -- terminal width
     t = 1 - h   -- distance from top edge
