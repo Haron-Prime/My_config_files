@@ -3,7 +3,7 @@
 
 -- Base
 import XMonad hiding ( (|||) )
-import Control.Monad (liftM2)
+import Control.Monad (liftM2, filterM)
 import Data.Ratio ((%))
 import Foreign.C (CChar)
 import System.Exit
@@ -31,7 +31,6 @@ import XMonad.Hooks.WorkspaceByPos
 import XMonad.Hooks.XPropManage
 import XMonad.Hooks.FloatNext (floatNextHook, toggleFloatNext, toggleFloatAllNew)
 import XMonad.Hooks.UrgencyHook hiding (Never)
-import XMonad.Hooks.CurrentWorkspaceOnTop
 
 -- Layouts
 import XMonad.Layout.LayoutCombinators ((|||))
@@ -307,7 +306,7 @@ myManageHook = composeAll . concat $
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
 
--- nameScratchpad
+-- namedScratchpad
 mynameScratchpads = [ NS "XMncmpcpp"    "XMncmpcpp"      (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                     , NS "XMHtop"       "XMHtop"         (appName    =? "htop")         (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     , NS "gpick"        "gpick"          (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
@@ -336,7 +335,6 @@ myEventHook = minimizeEventHook <+> handleEventHook def <+> fullscreenEventHook 
  
 -- Status bars and logging.
 myLogHook = do
-            currentWorkspaceOnTop
             dynamicLogString $ xmobarPP {
                                           ppCurrent         = xmobarColor myHLColor ""
                                         , ppUrgent          = xmobarColor myUrgColor "" . pad . wrap "<" ">"
