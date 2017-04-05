@@ -24,14 +24,14 @@ Config {
                             , Run Com        "XMNull" [] "" 0
                             , Run Com        "XMUpdate" [] "" 3000
                             , Run PipeReader "/tmp/haron/upd" "Update"
-                            , Run DynNetwork ["-S","True","-d","1","-t","<fc=#cccccc><dev>:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
+                            , Run DynNetwork ["-S","True","-d","2","-t","<fc=#cccccc><dev>:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Com        "XMTraf" [] "" 50
-                            , Run Cpu        ["-S","True","-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>","-L","33","-H","66","--normal","#ffff00","--high","#ff6500"] 10
+                            , Run Cpu        ["-S","True","-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>","-L","33","-H","66","-n","#ffff00","-h","#ff6500"] 10
                             , Run Com        "XMTCpu" [] "" 10
                             , Run Com        "XMCpu-freq" [] "" 0
                             , Run Com        "XMTMB" [] "" 10
                             , Run Com        "XMTGpu" [] "" 10
-                            , Run Memory     ["-S","True","-t","<fc=#cccccc>RAM:</fc><fn=2> </fn><usedratio>","-L","75","-H","90","--normal","#ffff00","--high","#ff6500"] 50
+                            , Run Memory     ["-S","True","-t","<fc=#cccccc>RAM:</fc><fn=2> </fn><usedratio>","-L","75","-H","90","-n","#ffff00","-h","#ff6500"] 50
                             , Run Com        "XMRom" [] "" 100
                             , Run Com        "XMUptime" [] "" 100
                             , Run Com        "XMVol" [] "" 10
