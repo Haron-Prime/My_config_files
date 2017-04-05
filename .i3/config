@@ -248,7 +248,7 @@ bindsym Mod1+i               exec --no-startup-id 2D-Place
 # bindsym Mod1+h               exec --no-startup-id "urxvtc -name vifm -e vifm"
 bindsym Mod1+h               exec --no-startup-id hexchat
 
-assign [class="vivaldi-snapshot|Firefox|Tor Browser"] 1:W
+assign [class="Vivaldi-snapshot|Firefox|Tor Browser"] 1:W
 assign [class="Thunderbird"] 2:M
 assign [class="Subl3|libreoffice-startcenter|Et|Wps|Acroread|FoxitReader"] 3:E
 assign [class="Pcmanfm"] 4:F

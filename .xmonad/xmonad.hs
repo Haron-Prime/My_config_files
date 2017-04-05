@@ -258,9 +258,9 @@ myManageHook = composeAll . concat $
     , [className =? c                --> doF (W.shift "P")   <+> viewShift ("P")   | c <- myPic]
     , [className =? c                --> doF (W.shift "J")   <+> viewShift ("J")   | c <- myWork]
     , [className =? c                --> doF (W.shift "T")   <+> viewShift ("T")   | c <- myTorrent]
-    , [className =? c                --> doF (W.shift "X")   <+> viewShift ("X")   | c <- myVM]
-    , [className =? c                --> doF (W.shift "XI")  <+> viewShift ("XI")  | c <- myIM]
-    , [appName   =? a                --> doF (W.shift "XII") <+> viewShift ("XII") | a <- myTerm]
+    , [className =? c                --> doF (W.shift "X")   <+> viewShift ("X")   | c <- myX]
+    , [className =? c                --> doF (W.shift "XI")  <+> viewShift ("XI")  | c <- myXI]
+    , [appName   =? a                --> doF (W.shift "XII") <+> viewShift ("XII") | a <- myXII]
 
     , [className =? c                --> doCenterFloat                             | c <- myFloatC]
     , [appName   =? a                --> doCenterFloat                             | a <- myFloatA]
@@ -297,9 +297,9 @@ myManageHook = composeAll . concat $
     myPic     = ["Gimp","Gimp-2.8","Inkscape"]
     myWork    = ["Wine"]
     myTorrent = ["Tixati","Transgui","Transmission-gtk","Transmission-remote-gtk"]
-    myVM      = ["VirtualBox"]
-    myIM      = ["Hexchat","psi","Psi","Viber","TelegramDesktop"]
-    myTerm    = []
+    myX       = ["VirtualBox"]
+    myXI      = ["Hexchat","psi","Psi","Viber","TelegramDesktop"]
+    myXII     = []
 
     -- CenterFloat
     myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor","Font-manager"]
