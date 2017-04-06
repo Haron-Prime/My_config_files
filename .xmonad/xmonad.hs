@@ -337,7 +337,7 @@ myEventHook = minimizeEventHook <+> handleEventHook def <+> fullscreenEventHook 
 myLogHook = do
             dynamicLogString $ xmobarPP {
                                           ppCurrent         = xmobarColor myHLColor ""
-                                        , ppUrgent          = xmobarColor myUrgColor "" . pad . wrap "<" ">"
+                                        , ppUrgent          = xmobarColor myUrgColor "" . pad
                                         , ppOrder           = \(ws:_:t:_) -> [ws]
                                         }
 
