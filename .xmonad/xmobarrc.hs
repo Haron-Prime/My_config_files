@@ -38,7 +38,6 @@ Config {
                             , Run Com        "XMVol" [] "" 10
                             , Run Kbd        [("us", "<fn=1><fc=#95d5f5>EN</fc></fn>"), ("ru", "<fn=1><fc=#ff6500>RU</fc></fn>")]
                             , Run Com        "XMTime" [] "" 10
-                            , Run Com        "XMWeather" [] "" 100
                             ]
        , sepChar  = "%"
        , alignSep = "}{"

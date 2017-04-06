@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
+xmonad --recompile &&
+killall xmobar &&
+killall gis-weather &&
+xmonad --restart &&
+python3 ~/.local/lib/gis-weather/gis-weather.py
+exit 0
