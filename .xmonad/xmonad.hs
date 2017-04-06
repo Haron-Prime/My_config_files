@@ -269,7 +269,6 @@ myManageHook = composeAll . concat $
     , [currentWs =? "W"              --> insertPosition Below Newer]
     , [currentWs =? "M"              --> insertPosition Below Newer]
     , [currentWs =? "E"              --> insertPosition Below Newer]
-    , [currentWs =? "F"              --> insertPosition Below Newer]
     , [currentWs =? "T"              --> insertPosition Below Newer]
     , [currentWs =? "X"              --> insertPosition Below Newer]
     , [currentWs =? "XII"            --> insertPosition Below Newer]
