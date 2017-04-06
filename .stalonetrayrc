@@ -7,7 +7,7 @@ max_geometry 3x1-54-10
 kludges force_icons_size
 grow_gravity NE
 icon_gravity NW
-icon_size 20
+icon_size 18
 sticky true
 #window_strut none
 window_type dock
