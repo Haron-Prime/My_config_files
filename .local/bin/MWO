@@ -3,6 +3,6 @@ MW1=$HOME/MW
 MW2=/tmp/$USER/minwin
 F1=`cat $MW1`
 echo $(( $F1 + 1 )) > $MW1 
-echo '<fc=#ff6500><fn=1>'$(( $F1 + 1 ))'</fn></fc> <fc=#959595>minimized window(s)</fc>' > $MW2
+echo '<fc=#ff6500><fn=1>'$(( $F1 + 1 ))'</fn></fc><fc=#959595> MW</fc>' > $MW2
 echo $F1
 exit 0
