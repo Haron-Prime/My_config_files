@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-MW1=$HOME/MW
+MW1=/tmp/$USER/MW
 MW2=/tmp/$USER/minwin
 F1=`cat $MW1`
 echo $(( $F1 + 1 )) > $MW1 

@@ -15,12 +15,11 @@ ExecStart=-/usr/bin/mkfifo /tmp/%u/minwin
 ExecStart=-/usr/bin/mkfifo /tmp/%u/temp
 ExecStart=-/usr/bin/ln -s /tmp/%u/temp %h/.config/gis-weather/cur_temp
 ExecStart=-/usr/bin/touch /tmp/%u/.null
+ExecStart=-/usr/bin/touch /tmp/%u/MW
 ExecStart=-/usr/bin/rm -r %h/.cache
 ExecStart=-/usr/bin/ln -s /tmp/%u/.cache %h/.cache
 
-ExecStop=-/usr/bin/rm -r %h/*
 ExecStop=-/usr/bin/rm -r /tmp/%u
-ExecStop=-/usr/bin/rm -r %h/.config/gis-weather/cur_temp
 ExecStop=-/usr/bin/mkdir %h/.cache
 
 [Install]
