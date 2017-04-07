@@ -2,8 +2,13 @@
 MW1=/tmp/$USER/MW
 MW2=/tmp/$USER/minwin
 F1=`cat $MW1`
-if [[ $F1 -ge 2 ]]
-    then echo $(( $F1 - 1 )) > $MW1 && echo '<fc=#ff6500><fn=1>'$(( $F1 - 1 ))'</fn></fc><fc=#959595> MW</fc>' > $MW2
+F2=$(( $F1 - 1 ))
+if [[ $F2 -eq 1 ]]; then 
+    W="window"
+else W="windows"
+fi
+if [[ $F1 -gt 1 ]]
+    then echo $F2 > $MW1 && echo '<fc=#ff6500><fn=1>'$F2'</fn></fc><fc=#959595>' $W'</fc>' > $MW2
 else echo > $MW1 > $MW2
 fi
 echo $F1
