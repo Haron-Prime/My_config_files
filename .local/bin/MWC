@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+MW1=$HOME/MW
+MW2=/tmp/$USER/minwin
+F1=`cat $MW1`
+
+if [[ $F1 -ge 2 ]]
+    then echo $(( $F1 - 1 )) > $MW1 > $MW2
+else echo > $MW1 > $MW2
+fi
+echo $F1
+exit 0

@@ -188,8 +188,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                          0xff0d),  windows W.swapMaster)                                                    --Mod4+Enter
     , ((modm     .|. shiftMask,          0x6a),  windows W.swapDown)                                                      --Mod4+Shift+J
     , ((modm     .|. shiftMask,          0x6b),  windows W.swapUp)                                                        --Mod4+Shift+K
-    , ((modm,                            0x7a),  withFocused minimizeWindow)                                              --Mod4+Z
-    , ((modm,                            0x61),  sendMessage RestoreNextMinimizedWin)                                     --Mod4+A
+    , ((modm,                            0x7a),  withFocused minimizeWindow <+> spawn "MWO")                           --Mod4+Z
+    , ((modm,                            0x61),  sendMessage RestoreNextMinimizedWin <+> spawn "MWC")                  --Mod4+A
     , ((modm,                            0x78),  kill)                                                                    --Mod4+X
     ]
 
@@ -341,7 +341,7 @@ myLogHook = do
                                         }
 
 -- StartupHook
-myStartupHook        =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W"
+myStartupHook        =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "echo > /tmp/haron/minwin"
 
 myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                   terminal           = myTerminal

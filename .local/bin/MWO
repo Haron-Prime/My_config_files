@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+MW1=$HOME/MW
+MW2=/tmp/$USER/minwin
+F1=`cat $MW1`
+echo $(( $F1 + 1 )) > $MW1 > $MW2
+echo $F1
+exit 0
