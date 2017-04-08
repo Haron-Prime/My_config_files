@@ -114,7 +114,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff77),  namedScratchpadAction mynameScratchpads "XMncmpcpp")                     --XF86Save
     , ((0,                         0x1008ff1b),  namedScratchpadAction mynameScratchpads "XMHtop")                        --XF86Search
     -- , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
-    , ((0,                         0x1008ff46),  spawn "deadbeef")                                                        --XF86Launch6
+    , ((0,                         0x1008ff46),  namedScratchpadAction mynameScratchpads "DeadBeef")                      --XF86Launch6
     , ((0,                         0x1008ff56),  namedScratchpadAction mynameScratchpads "Oblogout")                      --XF86Close
     -- , ((0,                             0xff69),  spawn "compdown")                                                        --Cancel
     , ((0,                             0xff67),  spawn "gmrun")                                                           --Menu
@@ -319,6 +319,7 @@ mynameScratchpads = [ NS "XMncmpcpp"    "XMncmpcpp"      (appName    =? "ncmpcpp
                     , NS "Mirage"       "mirage"         (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                     , NS "Gsimplecal"   "Gsimplecal"     (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
                     , NS "Oblogout"     "oblogout"       (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.3 0.4 0.4 0.2)
+                    , NS "DeadBeef"     "deadbeef"       (className  =? "Deadbeef")     (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
 
                     , NS "Organizer"    "Organizer"      (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     , NS "Msgcompose"   "Msgcompose"     (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
