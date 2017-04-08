@@ -110,20 +110,20 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0        .|. shiftMask,    0x1008ff5d),  spawn "gksu pcmanfm")                                                    --Shift+XF86Explorer
     , ((0,                         0x1008ff1d),  spawn "XMGalculator")                                                    --XF86Calculator
     , ((0,                         0x1008ff2f),  spawn "i3lock -i /home/haron/wall/starrynight.png")                      --XF86Sleep
-    , ((0,                         0x1008ff81),  spawn "XMncmpcpp")                                                       --XF86Tools
-    , ((0,                         0x1008ff77),  spawn "XMncmpcpp")                                                       --XF86Save
-    , ((0,                         0x1008ff1b),  spawn "XMHtop")                                                          --XF86Search
-    , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
-    , ((0,                         0x1008ff46),  spawn "XMNotes-r")                                                       --XF86Launch6
-    , ((0,                         0x1008ff56),  spawn "oblogout")                                                        --XF86Close
-    , ((0,                             0xff69),  spawn "compdown")                                                        --Cancel
+    -- , ((0,                         0x1008ff81),  namedScratchpadAction mynameScratchpads "XMncmpcpp")                     --XF86Tools
+    , ((0,                         0x1008ff77),  namedScratchpadAction mynameScratchpads "XMncmpcpp")                     --XF86Save
+    , ((0,                         0x1008ff1b),  namedScratchpadAction mynameScratchpads "XMHtop")                        --XF86Search
+    -- , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
+    , ((0,                         0x1008ff46),  spawn "deadbeef")                                                        --XF86Launch6
+    , ((0,                         0x1008ff56),  namedScratchpadAction mynameScratchpads "Oblogout")                      --XF86Close
+    -- , ((0,                             0xff69),  spawn "compdown")                                                        --Cancel
     , ((0,                             0xff67),  spawn "gmrun")                                                           --Menu
     , ((0,                             0xffc9),  scratchPad)                                                              --F12
     , ((0,                             0xff61),  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")            --Print
     , ((0        .|. shiftMask,        0xff61),  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Shift+Print
     , ((mod1Mask,                      0xff61),  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Alt+Print
     -- , ((mod1Mask,                        0x61),  spawn "shutter")                                                         --Alt+A
-    , ((mod1Mask,                        0x64),  spawn "deadbeef")                                                        --Alt+D
+    -- , ((mod1Mask,                        0x64),  spawn "deadbeef")                                                        --Alt+D
     , ((mod1Mask,                        0x65),  spawn "pulseaudio-equalizer-gtk")                                        --Alt+E
     , ((mod1Mask,                        0x66),  spawn "firefox")                                                         --Alt+F
     , ((mod1Mask,                        0x67),  spawn "gimp")                                                            --Alt+G
@@ -132,7 +132,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x6d),  spawn "urxvtc -name mc -e mc")                                           --Alt+M
     , ((mod1Mask .|. controlMask,        0x6d),  spawn "urxvtc -name micro -e micro")                                     --Alt+Ctrl+M
     , ((mod1Mask,                        0x6e),  spawn "XMNotes-w")                                                       --Alt+N
-    , ((mod1Mask .|. controlMask,        0x6e),  spawn "XMNotes-r")                                                       --Alt+Ctrl+N
+    , ((mod1Mask .|. controlMask,        0x6e),  namedScratchpadAction mynameScratchpads "XMNotes-r")                     --Alt+Ctrl+N
     , ((mod1Mask,                        0x6f),  spawn "opera12")                                                         --Alt+O
     , ((mod1Mask,                        0x72),  spawn "urxvtc -name ranger -e ranger")                                   --Alt+R
     , ((mod1Mask,                        0x73),  spawn "subl3")                                                           --Alt+S
@@ -318,7 +318,7 @@ mynameScratchpads = [ NS "XMncmpcpp"    "XMncmpcpp"      (appName    =? "ncmpcpp
 
                     , NS "Mirage"       "mirage"         (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                     , NS "Gsimplecal"   "Gsimplecal"     (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
-                    , NS "oblogout"     "oblogout"       (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.3 0.4 0.4 0.2)
+                    , NS "Oblogout"     "oblogout"       (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.3 0.4 0.4 0.2)
 
                     , NS "Organizer"    "Organizer"      (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     , NS "Msgcompose"   "Msgcompose"     (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
