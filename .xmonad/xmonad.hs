@@ -303,7 +303,7 @@ myManageHook = composeAll . concat $
     myXII     = []
 
     -- CenterFloat
-    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor","Font-manager","Oblogout"]
+    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor","Font-manager"]
     myFloatA  = ["lxappearance","xarchiver","gmrun","Update"]
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
@@ -318,6 +318,7 @@ mynameScratchpads = [ NS "XMncmpcpp"    "XMncmpcpp"      (appName    =? "ncmpcpp
 
                     , NS "Mirage"       "mirage"         (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                     , NS "Gsimplecal"   "Gsimplecal"     (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
+                    , NS "oblogout"     "oblogout"       (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.3 0.4 0.4 0.2)
 
                     , NS "Organizer"    "Organizer"      (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     , NS "Msgcompose"   "Msgcompose"     (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
