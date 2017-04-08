@@ -9,5 +9,4 @@ else W="windows"
 fi
 echo $(( $F1 + 1 )) > $MW1 
 echo '<fc=#ff6500><fn=1>'$(( $F1 + 1 ))'</fn></fc><fc=#959595>' $W'</fc>' > $MW2
-echo $F1
 exit 0

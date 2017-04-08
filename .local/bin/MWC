@@ -11,5 +11,4 @@ if [[ $F1 -gt 1 ]]
     then echo $F2 > $MW1 && echo '<fc=#ff6500><fn=1>'$F2'</fn></fc><fc=#959595>' $W'</fc>' > $MW2
 else echo > $MW1 > $MW2
 fi
-echo $F1
 exit 0
