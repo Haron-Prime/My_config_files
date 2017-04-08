@@ -114,8 +114,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff77),  spawn "XMncmpcpp")                                                       --XF86Save
     , ((0,                         0x1008ff1b),  spawn "XMHtop")                                                          --XF86Search
     , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
-    , ((0,                         0x1008ff46),  spawn "compreboot")                                                      --XF86Launch6
-    , ((0,                         0x1008ff56),  spawn "compdown")                                                        --XF86Close
+    , ((0,                         0x1008ff46),  spawn "XMNotes-r")                                                       --XF86Launch6
+    , ((0,                         0x1008ff56),  spawn "oblogout")                                                        --XF86Close
     , ((0,                             0xff69),  spawn "compdown")                                                        --Cancel
     , ((0,                             0xff67),  spawn "gmrun")                                                           --Menu
     , ((0,                             0xffc9),  scratchPad)                                                              --F12
@@ -303,7 +303,7 @@ myManageHook = composeAll . concat $
     myXII     = []
 
     -- CenterFloat
-    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor","Font-manager"]
+    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor","Font-manager","Oblogout"]
     myFloatA  = ["lxappearance","xarchiver","gmrun","Update"]
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
