@@ -100,9 +100,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff12),  spawn "/usr/bin/pulseaudio-ctl mute")                                    --XF86AudioMute
     , ((mod1Mask,                        0x60),  spawn "mpc toggle")                                                      --Alt+grave
     , ((0,                         0x1008ff14),  spawn "mpc toggle")                                                      --XF86Play
-    , ((0,                         0x1008ff15),  spawn "mpc stop")                                                        --XF86AudioStop
-    , ((0,                         0x1008ff16),  spawn "mpc prev")                                                        --XF86AudioPrev
-    , ((0,                         0x1008ff17),  spawn "mpc next")                                                        --XF86AudioNext
+    -- , ((0,                         0x1008ff15),  spawn "mpc stop")                                                        --XF86AudioStop
+    -- , ((0,                         0x1008ff16),  spawn "mpc prev")                                                        --XF86AudioPrev
+    -- , ((0,                         0x1008ff17),  spawn "mpc next")                                                        --XF86AudioNext
     , ((0,                         0x1008ff30),  spawn "XMTransgui")                                                      --XF86Favorites
     , ((0,                         0x1008ff18),  spawn myBrowser)                                                         --XF86HomePage
     , ((0,                         0x1008ff19),  spawn "thunderbird")                                                     --XF86Mail
@@ -311,8 +311,8 @@ myManageHook = composeAll . concat $
 -- namedScratchpad
 mynameScratchpads = [ NS "XMncmpcpp"    "XMncmpcpp"      (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                     , NS "XMHtop"       "XMHtop"         (appName    =? "htop")         (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-                    , NS "gpick"        "gpick"          (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-                    , NS "pavucontrol"  "pavucontrol"    (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+                    , NS "Gpick"        "gpick"          (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+                    , NS "Pavucontrol"  "pavucontrol"    (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "XMUpdate"     "XMUpdate"       (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                     , NS "XMNotes-r"    "XMNotes-r"      (appName    =? "Notes")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
 
