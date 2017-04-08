@@ -63,6 +63,10 @@ browserClass         =  "Vivaldi-snapshot"
 myTerminal           =  "urxvtc"
 terminalClass        =  "URxvt"
 myShell              =  "zsh"
+myFM                 =  "urxvtc -name ranger -e ranger"
+myNotes              =  "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree"
+myHtop               =  "urxvtc -name htop -e htop"
+myPlayer             =  "urxvtc -name ncmpcpp -e ncmpcpp"
 myModMask            =  mod4Mask
 myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
 myBorderWidth        =  1
@@ -111,8 +115,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff1d),  spawn "XMGalculator")                                                    --XF86Calculator
     , ((0,                         0x1008ff2f),  spawn "i3lock -i /home/haron/wall/starrynight.png")                      --XF86Sleep
     -- , ((0,                         0x1008ff81),  namedScratchpadAction mynameScratchpads "XMncmpcpp")                     --XF86Tools
-    , ((0,                         0x1008ff77),  namedScratchpadAction mynameScratchpads "XMncmpcpp")                     --XF86Save
-    , ((0,                         0x1008ff1b),  namedScratchpadAction mynameScratchpads "XMHtop")                        --XF86Search
+    , ((0,                         0x1008ff77),  namedScratchpadAction mynameScratchpads "MyPlayer")                      --XF86Save
+    , ((0,                         0x1008ff1b),  namedScratchpadAction mynameScratchpads "MyHtop")                        --XF86Search
     -- , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
     , ((0,                         0x1008ff46),  namedScratchpadAction mynameScratchpads "DeadBeef")                      --XF86Launch6
     , ((0,                         0x1008ff56),  namedScratchpadAction mynameScratchpads "Oblogout")                      --XF86Close
@@ -132,9 +136,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x6d),  spawn "urxvtc -name mc -e mc")                                           --Alt+M
     , ((mod1Mask .|. controlMask,        0x6d),  spawn "urxvtc -name micro -e micro")                                     --Alt+Ctrl+M
     , ((mod1Mask,                        0x6e),  spawn "XMNotes-w")                                                       --Alt+N
-    , ((mod1Mask .|. controlMask,        0x6e),  namedScratchpadAction mynameScratchpads "XMNotes-r")                     --Alt+Ctrl+N
+    , ((mod1Mask .|. controlMask,        0x6e),  namedScratchpadAction mynameScratchpads "MyNotes")                       --Alt+Ctrl+N
     , ((mod1Mask,                        0x6f),  spawn "opera12")                                                         --Alt+O
-    , ((mod1Mask,                        0x72),  spawn "urxvtc -name ranger -e ranger")                                   --Alt+R
+    , ((mod1Mask,                        0x72),  namedScratchpadAction mynameScratchpads "MyFM")                          --Alt+R
     , ((mod1Mask,                        0x73),  spawn "subl3")                                                           --Alt+S
     , ((mod1Mask .|. shiftMask,          0x73),  spawn "gksu subl3")                                                      --Alt+Shift+S
     , ((mod1Mask,                        0x74),  spawn "tor-browser")                                                     --Alt+T
@@ -309,12 +313,13 @@ myManageHook = composeAll . concat $
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
 
 -- namedScratchpad
-mynameScratchpads = [ NS "XMncmpcpp"    "XMncmpcpp"      (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                    , NS "XMHtop"       "XMHtop"         (appName    =? "htop")         (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+mynameScratchpads = [ NS "MyPlayer"     myPlayer         (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+                    , NS "MyHtop"       myHtop           (appName    =? "htop")         (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     , NS "Gpick"        "gpick"          (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "Pavucontrol"  "pavucontrol"    (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "XMUpdate"     "XMUpdate"       (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                    , NS "XMNotes-r"    "XMNotes-r"      (appName    =? "Notes")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+                    , NS "MyNotes"      myNotes          (appName    =? "Notes")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+                    , NS "MyFM"         myFM             (appName    =? "ranger")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
 
                     , NS "Mirage"       "mirage"         (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
                     , NS "Gsimplecal"   "Gsimplecal"     (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
