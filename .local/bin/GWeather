@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License - © 2017 WTFPL - http://www.wtfpl.net/
+
+notify-send -t 0 -i "/home/haron/.config/gis-weather/cur_icon.png" "$(cat ~/.config/gis-weather/cur_weather)"
+exit 0
