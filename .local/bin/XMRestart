@@ -6,5 +6,4 @@ xmonad --recompile &&
 killall xmobar &&
 killall gis-weather &&
 xmonad --restart &&
-gis-weather &
 exit 0
