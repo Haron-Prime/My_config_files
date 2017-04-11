@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
-cd /home/haron/.config/gis-weather
+cd /home/haron/.config/gis-weather &&
 convert -resize 18x18 cur_icon.png cur_icon_18.png && 
-convert cur_icon_18.png cur_icon.xpm
+convert cur_icon_18.png cur_icon.xpm &&
 rm -f convert cur_icon_18.png
 exit 0
