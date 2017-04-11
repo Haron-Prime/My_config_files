@@ -1,8 +1,8 @@
 decorations none
 transparent true
 dockapp_mode none
-geometry 3x1-1+2
-max_geometry 3x1-54-2
+geometry 1x1-1+2
+max_geometry 3x1-1+2
 #background "#000000"
 kludges force_icons_size
 grow_gravity NE
