@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+echo "<icon=/home/haron/.config/gis-weather/cur_icon.xpm/>"
+exit 0

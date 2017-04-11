@@ -104,9 +104,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff12),  spawn "/usr/bin/pulseaudio-ctl mute")                                    --XF86AudioMute
     , ((mod1Mask,                        0x60),  spawn "mpc toggle")                                                      --Alt+grave
     , ((0,                         0x1008ff14),  spawn "mpc toggle")                                                      --XF86Play
-    -- , ((0,                         0x1008ff15),  spawn "mpc stop")                                                        --XF86AudioStop
-    -- , ((0,                         0x1008ff16),  spawn "mpc prev")                                                        --XF86AudioPrev
-    -- , ((0,                         0x1008ff17),  spawn "mpc next")                                                        --XF86AudioNext
+    , ((0,                         0x1008ff15),  spawn "mpc stop")                                                        --XF86AudioStop
+    , ((0,                         0x1008ff16),  spawn "mpc prev")                                                        --XF86AudioPrev
+    , ((0,                         0x1008ff17),  spawn "mpc next")                                                        --XF86AudioNext
     , ((0,                         0x1008ff30),  spawn "XMTransgui")                                                      --XF86Favorites
     , ((0,                         0x1008ff18),  spawn myBrowser)                                                         --XF86HomePage
     , ((0,                         0x1008ff19),  spawn "thunderbird")                                                     --XF86Mail
@@ -117,10 +117,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((0,                         0x1008ff81),  namedScratchpadAction mynameScratchpads "XMncmpcpp")                     --XF86Tools
     , ((0,                         0x1008ff77),  namedScratchpadAction mynameScratchpads "MyPlayer")                      --XF86Save
     , ((0,                         0x1008ff1b),  namedScratchpadAction mynameScratchpads "MyHtop")                        --XF86Search
-    -- , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
+    , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
     , ((0,                         0x1008ff46),  namedScratchpadAction mynameScratchpads "DeadBeef")                      --XF86Launch6
     , ((0,                         0x1008ff56),  namedScratchpadAction mynameScratchpads "Oblogout")                      --XF86Close
-    -- , ((0,                             0xff69),  spawn "compdown")                                                        --Cancel
+    , ((0,                             0xff69),  spawn "compdown")                                                        --Cancel
     , ((0,                             0xff67),  spawn "gmrun")                                                           --Menu
     , ((0,                             0xffc9),  scratchPad)                                                              --F12
     , ((0,                             0xff61),  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")            --Print
