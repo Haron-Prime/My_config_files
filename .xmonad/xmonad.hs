@@ -342,7 +342,10 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     l = 1 - w   -- distance from left edge
 
 -- Event handling
-myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
+myEventHook = handleEventHook def <+> fullscreenEventHook 
+                                  <+> docksEventHook 
+                                  <+> focusOnMouseMove 
+                                  <+> ewmhDesktopsEventHook
  
 -- Status bars and logging.
 myLogHook = do
@@ -376,7 +379,12 @@ myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                  ,keys               = myKeys
                  ,mouseBindings      = myMouseBindings
                  ,layoutHook         = myLayoutHook
-                 ,manageHook         = floatNextHook <+> manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
+                 ,manageHook         = floatNextHook <+> manageHook def 
+                                                     <+> myManageHook 
+                                                     <+> manageScratchPad 
+                                                     <+> namedScratchpadManageHook mynameScratchpads 
+                                                     <+> placeHook (smart (0.5,0.5)) 
+                                                     <+> workspaceByPos
                  ,handleEventHook    = myEventHook
                  ,logHook            = myLogHook >>= xmonadPropLog
                  ,startupHook        = myStartupHook 
