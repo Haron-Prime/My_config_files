@@ -53,6 +53,7 @@ import XMonad.Prompt.RunOrRaise
 import XMonad.Prompt.Ssh
 
 -- Utils
+import XMonad.Util.SpawnOnce
 import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
@@ -352,7 +353,7 @@ myLogHook = do
                                         }
 
 -- StartupHook
-myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "echo > /tmp/haron/minwin" <+> spawn "gis-weather"
+myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "echo > /tmp/haron/minwin" <+> spawnOnce "compton -b" <+> spawn "gis-weather" <+> spawnOnce "pcmanfm -d" <+> spawnOnce "urxvtd -q -f -o" <+> spawnOnce "perWindowLayoutD"
 
 myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                   terminal           = myTerminal
