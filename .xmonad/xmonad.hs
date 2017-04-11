@@ -356,14 +356,14 @@ myLogHook = do
 myStartupHook  =  return () <+> adjustEventInput 
                             <+> setWMName "LG3D" 
                             <+> onScr 1 W.greedyView "W" 
-                            <+> spawn "echo > /tmp/haron/minwin" 
                             <+> spawnOnce "compton -b" 
                             <+> spawnOnce "pcmanfm -d" 
                             <+> spawnOnce "urxvtd -q -f -o" 
                             <+> spawnOnce "perWindowLayoutD" 
                             <+> spawnOnce "feh --bg-scale /home/haron/wall/starrynight.png" 
                             <+> spawnOnce "stalonetray" 
-                            <+> spawn "gis-weather"
+                            <+> spawn     "echo > /tmp/haron/minwin" 
+                            <+> spawn     "gis-weather"
 
 myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                   terminal           = myTerminal
