@@ -359,12 +359,6 @@ myLogHook = do
 myStartupHook  =  return () <+> adjustEventInput 
                             <+> setWMName "LG3D" 
                             <+> onScr 1 W.greedyView "W" 
-                            <+> spawnOnce "compton -b" 
-                            <+> spawnOnce "pcmanfm -d" 
-                            <+> spawnOnce "urxvtd -q -f -o" 
-                            <+> spawnOnce "perWindowLayoutD" 
-                            <+> spawnOnce "feh --bg-scale /home/haron/wall/starrynight.png" 
-                            <+> spawnOnce "stalonetray" 
                             <+> spawn     "echo > /tmp/haron/minwin" 
                             <+> spawn     "gis-weather"
 
