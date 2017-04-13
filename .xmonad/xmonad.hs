@@ -358,7 +358,7 @@ myLogHook = do
 -- StartupHook
 myStartupHook  =  return () <+> adjustEventInput 
                             <+> setWMName "LG3D" 
-                            <+> onScr 1 W.greedyView "W" 
+                            <+> onScr 1 W.greedyView "W"
                             <+> spawn     "echo > /tmp/haron/minwin" 
                             <+> spawn     "gis-weather"
 
@@ -373,12 +373,7 @@ myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                  ,keys               = myKeys
                  ,mouseBindings      = myMouseBindings
                  ,layoutHook         = myLayoutHook
-                 ,manageHook         = floatNextHook <+> manageHook def 
-                                                     <+> myManageHook 
-                                                     <+> manageScratchPad 
-                                                     <+> namedScratchpadManageHook mynameScratchpads 
-                                                     <+> placeHook (smart (0.5,0.5)) 
-                                                     <+> workspaceByPos
+                 ,manageHook         = floatNextHook <+> manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
                  ,handleEventHook    = myEventHook
                  ,logHook            = myLogHook >>= xmonadPropLog
                  ,startupHook        = myStartupHook 
