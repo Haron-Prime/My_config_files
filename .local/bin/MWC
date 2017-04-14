@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License - © 2017 WTFPL - http://www.wtfpl.net/
+# License © 2017 WTFPL http://www.wtfpl.net/
 
 MW1=/tmp/$USER/MW
 MW2=/tmp/$USER/minwin

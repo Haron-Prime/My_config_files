@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Modified - Haron Prime
-# License - © 2017 WTFPL - http://www.wtfpl.net/
+# License © 2017 WTFPL http://www.wtfpl.net/
 
 MIXER="default"
 [ -n "$(lsmod | grep pulse)" ] && MIXER="pulse"

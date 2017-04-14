@@ -1,4 +1,7 @@
 #!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
 TEXT=`cat $HOME/.config/gis-weather/cur_weather | head -3 | tail -1 | cut -d \> -f 2 | cut -d \< -f 1`
 echo "<fc=#95d5f5>"$TEXT"</fc>"
 exit 0

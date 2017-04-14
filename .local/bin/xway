@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License - © 2017 WTFPL - http://www.wtfpl.net/
+# License © 2017 WTFPL http://www.wtfpl.net/
 
 export XKB_DEFAULT_LAYOUT=us,ru
 export XKB_DEFAULT_OPTIONS=grp:caps_toggle

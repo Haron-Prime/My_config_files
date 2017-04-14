@@ -1,5 +1,5 @@
 -- Author - Haron Prime
--- License - © 2017 WTFPL - http://www.wtfpl.net/
+-- License © 2017 WTFPL http://www.wtfpl.net/
 
 Config {
          font             = "xft:Terminus Re33:size=12:antialias=true:hinting=true"

@@ -1,4 +1,6 @@
 #!/usr/bin/env zsh
+# Modified - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
 
 function pack_upd {
     if [[ -z $CHECKUPDATES_DB ]]; then

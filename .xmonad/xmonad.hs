@@ -1,5 +1,5 @@
 -- Author - Haron Prime
--- License - © 2017 WTFPL - http://www.wtfpl.net/
+-- License © 2017 WTFPL http://www.wtfpl.net/
 
 -- Base
 import XMonad hiding ( (|||) )

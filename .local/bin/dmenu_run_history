@@ -1,4 +1,6 @@
 #!/usr/bin/env zsh
+# Modified - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
 
 cachedir=${XDG_CACHE_HOME:-"$HOME/.cache"}
 if [ -d "$cachedir" ]; then

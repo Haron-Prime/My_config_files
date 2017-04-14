@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License - © 2017 WTFPL - http://www.wtfpl.net/
+# License © 2017 WTFPL http://www.wtfpl.net/
 
 UPD=`checkupdates | wc -l`
 if [ $UPD -gt 0 ]; then 

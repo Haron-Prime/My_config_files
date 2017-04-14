@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License - © 2017 WTFPL - http://www.wtfpl.net/
+# License © 2017 WTFPL http://www.wtfpl.net/
 
 zenity  --question --text "You really want to restart your computer?"
 if [ $? = 0 ]

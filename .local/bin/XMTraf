@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License - © 2017 WTFPL - http://www.wtfpl.net/
+# License © 2017 WTFPL http://www.wtfpl.net/
 
 RX=`vnstat | grep 'today' | awk '{print $2$3}'`
 TX=`vnstat | grep 'today' | awk '{print $5$6}'`

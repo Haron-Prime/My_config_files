@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License - © 2017 WTFPL - http://www.wtfpl.net/
+# License © 2017 WTFPL http://www.wtfpl.net/
 
 temp1=`sensors | grep Board | tr -s \  | cut -d \  -f 3 | cut -c 2-3`
 temp2=`sensors | grep Board | tr -s \  | cut -d \  -f 3`
