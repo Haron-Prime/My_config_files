@@ -53,4 +53,5 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
 0. You just DO WHAT THE FUCK YOU WANT TO.
 
+```
 ![](/screenshots/wtfpl-badge-1.png?raw=true)
