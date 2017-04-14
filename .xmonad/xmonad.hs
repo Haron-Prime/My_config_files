@@ -342,10 +342,7 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     l = 1 - w   -- distance from left edge
 
 -- Event handling
-myEventHook = handleEventHook def <+> fullscreenEventHook 
-                                  <+> docksEventHook 
-                                  <+> focusOnMouseMove 
-                                  <+> ewmhDesktopsEventHook
+myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
  
 -- Status bars and logging.
 myLogHook = do
@@ -356,11 +353,7 @@ myLogHook = do
                                         }
 
 -- StartupHook
-myStartupHook  =  return () <+> adjustEventInput 
-                            <+> setWMName "LG3D" 
-                            <+> onScr 1 W.greedyView "W"
-                            <+> spawn     "echo > /tmp/haron/minwin" 
-                            <+> spawn     "gis-weather"
+myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "echo > /tmp/haron/minwin" <+> spawn "gis-weather"
 
 myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                   terminal           = myTerminal

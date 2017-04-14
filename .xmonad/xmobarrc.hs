@@ -3,7 +3,8 @@
 
 Config {
          font             = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
-       , additionalFonts  = ["xft:Terminus:size=12:weight=bold:antialias=true:hinting=true","xft:Terminus Re33:size=4"] 
+       , additionalFonts  = ["xft:Terminus:size=12:weight=bold:antialias=true:hinting=true","xft:Terminus Re33:size=4"]
+       , iconRoot         = "/home/haron/.xmonad/resources"
        , borderColor      = "#151515"
        , border           = NoBorder
        , bgColor          = "#151515"
@@ -12,13 +13,12 @@ Config {
        , position         = TopP 0 58
        , textOffset       = 15
        , iconOffset       = -1
-       , lowerOnStart     = True
-       , pickBroadest     = True
+       , lowerOnStart     = False
+       , pickBroadest     = False
        , persistent       = False
        , hideOnStart      = False
-       , iconRoot         = "/home/haron/.xmonad/resources"
-       , allDesktops      = True
-       , overrideRedirect = True
+       , allDesktops      = False
+       , overrideRedirect = False
        , commands         = [
                               Run XMonadLog
                             , Run Com        "XMNull" [] "" 0
