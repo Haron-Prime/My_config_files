@@ -53,7 +53,7 @@ import XMonad.Prompt.RunOrRaise
 import XMonad.Prompt.Ssh
 
 -- Utils
-import XMonad.Util.SpawnOnce
+-- import XMonad.Util.SpawnOnce
 import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
