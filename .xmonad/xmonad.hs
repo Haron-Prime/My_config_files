@@ -68,6 +68,7 @@ myFM                 =  "urxvtc -name ranger -e ranger"
 myNotes              =  "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree"
 myHtop               =  "urxvtc -name htop -e htop"
 myPlayer             =  "urxvtc -name ncmpcpp -e ncmpcpp"
+
 myModMask            =  mod4Mask
 myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
 myBorderWidth        =  1
@@ -80,6 +81,7 @@ myFgColor            =  "#959595"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 myMonospaceFont      =  "xft:Terminus Re33:size=12:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
+
 myTL                 =  windowNavigation (mouseResizableTile{masterFrac = (1/2), fracIncrement = (1/100), draggerType = FixedDragger 2 6})
 myMTL                =  windowNavigation (mouseResizableTile{masterFrac = (2/3), fracIncrement = (1/100), draggerType = FixedDragger 2 6, isMirrored = True})
 myGL                 =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
@@ -115,7 +117,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0        .|. shiftMask,    0x1008ff5d),  spawn "gksu pcmanfm")                                                    --Shift+XF86Explorer
     , ((0,                         0x1008ff1d),  spawn "XMGalculator")                                                    --XF86Calculator
     , ((0,                         0x1008ff2f),  spawn "i3lock -i /home/haron/wall/starrynight.png")                      --XF86Sleep
-    -- , ((0,                         0x1008ff81),  namedScratchpadAction mynameScratchpads "XMncmpcpp")                     --XF86Tools
+    -- , ((0,                         0x1008ff81),  namedScratchpadAction mynameScratchpads "MyPlayer")                     --XF86Tools
     , ((0,                         0x1008ff77),  namedScratchpadAction mynameScratchpads "MyPlayer")                      --XF86Save
     , ((0,                         0x1008ff1b),  namedScratchpadAction mynameScratchpads "MyHtop")                        --XF86Search
     , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
