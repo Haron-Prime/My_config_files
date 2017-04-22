@@ -86,7 +86,7 @@ Xmessage*form.message.Scroll:      WhenNeeded
 *VT100*colorULMode:                on
 *VT100*colorBDMode:                off
 *VT100.titeInhibit:                off
-*VT100.translations:               select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0), #override \n Shift <Key>Home: scroll-back(4096) \n Shift <Key>End: scroll-forw(4096)
+! *VT100.translations:               select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0), #override \n Shift <Key>Home: scroll-back(4096) \n Shift <Key>End: scroll-forw(4096)
 *VT100.geometry:                   80x32
 *SimpleMenu*background:            #353535
 *SimpleMenu*foreground:            #AAA
@@ -98,6 +98,7 @@ URxvt*font:                        xft:Terminus Re33:size=11:antialias=false:hin
 URxvt*boldFont:                    xft:Terminus Re33:weight=bold:size=11:antialias=false:hinting=true
 URxvt*scrollBar:                   false
 URxvt*internalBorder:              5
+URxvt*depth:                       32
 URxvt*skipBuiltinGlyphs:           true
 URxvt*perl-lib:                    /home/haron/.config/urxvt/perl
 URxvt*perl-ext-common:             default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard,resize-font,vtwheel
