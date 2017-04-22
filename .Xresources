@@ -1,12 +1,12 @@
-Xft.dpi:                           96
-Xft.autohint:                      false
-Xft.hintstyle:                     hintsfull
-Xft.lcdfilter:                     lcddefault
-Xft.embolden:                      false
-Xft.render:                        true
-Xft.hinting:                       true
-Xft.antialias:                     true
-Xft.rgba:                          rgb
+Xft*dpi:                           96
+Xft*autohint:                      true
+Xft*hintstyle:                     hintsfull
+Xft*lcdfilter:                     lcddefault
+Xft*embolden:                      false
+Xft*render:                        true
+Xft*hinting:                       true
+Xft*antialias:                     true
+Xft*rgba:                          rgb
 
 *Font:                             xft:SonyEricssonLogo:size=11:antialias=true:hinting=true
 
@@ -73,26 +73,31 @@ Xmessage*form.message.Scroll:      WhenNeeded
 
 ! XTerm/UXTerm parameters
 
-*termName:                         xterm-256color
-*locale:                           true
-*metaSendsEscape:                  true
-*renderFont:                       true
-*faceName:                         xft:Terminus Re33:size=11:antialias=false:hinting=true
-*bellIsUrgent:                     true
-*scaleHeight:                      1.01
-*borderWidth:                      0
-*selectToClipboard:                true
-*allowSendEvents:                  false
-*sessionMgt:                       false
-*eightBitInput:                    true
-*VT100*colorULMode:                on
-*VT100*colorBDMode:                off
-*VT100.titeInhibit:                off
-! *VT100.translations:               select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0), #override \n Shift <Key>Home: scroll-back(4096) \n Shift <Key>End: scroll-forw(4096)
-*VT100.geometry:                   80x32
-*SimpleMenu*background:            #353535
-*SimpleMenu*foreground:            #AAA
-*dynamicColors:                    true
+*xterm*termName:                   xterm-256color
+*xterm*locale:                     true
+*xterm*utf8:                       2
+*xterm*metaSendsEscape:            true
+*xterm*renderFont:                 true
+*xterm*faceName:                   xft:Terminus Re33:size=11:antialias=false:hinting=true
+*xterm*bellIsUrgent:               true
+*xterm*scaleHeight:                1.01
+*xterm*borderWidth:                0
+*xterm*selectToClipboard:          true
+*xterm*allowSendEvents:            false
+*xterm*sessionMgt:                 false
+*xterm*VT100*colorULMode:          on
+*xterm*VT100*colorBDMode:          off
+*xterm*VT100.titeInhibit:          off
+*xterm*VT100.translations:         #override \n Shift <Key>Home: scroll-back(4096) \n Shift <Key>End: scroll-forw(4096)
+*xterm*VT100.geometry:             80x32
+*xterm*SimpleMenu*background:      #353535
+*xterm*SimpleMenu*foreground:      #AAA
+*xterm*dynamicColors:              true
+*xterm*eightBitInput:              true
+*xterm*eightBitControl:            false
+*xterm*eightBitOutput:             true
+*xterm*trimSelection:              true
+*xterm*charClass:                  33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
 
 ! URxvt parameters
 
