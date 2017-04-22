@@ -8,44 +8,46 @@ Xft.hinting:                       true
 Xft.antialias:                     true
 Xft.rgba:                          rgb
 
+*Font:                             xft:SonyEricssonLogo:size=11:antialias=true:hinting=true
+
 Xcursor.theme:                     Oxygen Black
 Xcursor.size:                      22
 
 Xmessage*defaultButton:            okay
 Xmessage*form.message.Scroll:      WhenNeeded
 
-! color0                           black
-! color1                           red (тёмно-красный)
-! color2                           green (тёмно-зелёный)
-! color3                           yellow (тёмно-жёлтый)
-! color4                           blue (тёмно-синий)
-! color5                           purple (фиолетовый)
-! color6                           cyan (бирюзовый)
-! color7                           white
-! color8                           darkgray
-! color9                           red (тёмно-розовый)
-! color10                          green (светло-зелёный)
-! color11                          yellow (светло-жёлтый)
-! color12                          blue (голубой)
-! color13                          purple (сиреневый)
-! color14                          cyan (светло-бирюзовый)
-! color15                          gray
+! Colors
 
+! color0/color8                    black/darkgray
 *color0:                           #000
-*color1:                           #C00000
-*color2:                           #00C000
-*color3:                           #C0C000
-*color4:                           #0C00C0
-*color5:                           #A0A
-*color6:                           #0AA
-*color7:                           #FFF
 *color8:                           #151515
+
+! color1/color9                    red (тёмно-красный/тёмно-розовый)
+*color1:                           #C00000
 *color9:                           #F88
+
+! color2/color10                   green (тёмно-зелёный/светло-зелёный)
+*color2:                           #00C000
 *color10:                          #80FF80
+
+! color3/color11                   yellow (тёмно-жёлтый/светло-жёлтый)
+*color3:                           #C0C000
 *color11:                          #FF8
+
+! color4/color12                   blue (тёмно-синий/голубой)
+*color4:                           #0C00C0
 *color12:                          #9CF
+
+! color5/color13                   purple (фиолетовый/сиреневый)
+*color5:                           #A0A
 *color13:                          #B14CC2
+
+! color6/color14                   cyan (бирюзовый/светло-бирюзовый)
+*color6:                           #0AA
 *color14:                          #9FF
+
+! color7/color15                   white/gray
+*color7:                           #FFF
 *color15:                          #757575
 
 ! Common parameters
