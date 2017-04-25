@@ -115,7 +115,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff19),  spawn "thunderbird")                                                     --XF86Mail
     , ((0,                         0x1008ff5d),  spawn "pcmanfm")                                                         --XF86Explorer
     , ((0,                         0x1008ff33),  spawn "pcmanfm")                                                         --XF86MyComputer
-    , ((0        .|. shiftMask,    0x1008ff5d),  spawn "gksu pcmanfm")                                                    --Shift+XF86Explorer
+    -- , ((0        .|. shiftMask,    0x1008ff5d),  spawn "gksu pcmanfm")                                                    --Shift+XF86Explorer
     , ((0,                         0x1008ff1d),  spawn "XMGalculator")                                                    --XF86Calculator
     , ((0,                         0x1008ff2f),  spawn "i3lock -i /home/haron/wall/starrynight.png")                      --XF86Sleep
     , ((0,                         0x1008ff81),  namedScratchpadAction mynameScratchpads "MyPlayer")                      --XF86Tools
@@ -144,7 +144,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x6f),  spawn "opera12")                                                         --Alt+O
     , ((mod1Mask,                        0x72),  namedScratchpadAction mynameScratchpads "MyFM")                          --Alt+R
     , ((mod1Mask,                        0x73),  spawn "subl3")                                                           --Alt+S
-    , ((mod1Mask .|. shiftMask,          0x73),  spawn "gksu subl3")                                                      --Alt+Shift+S
+    -- , ((mod1Mask .|. shiftMask,          0x73),  spawn "gksu subl3")                                                      --Alt+Shift+S
     , ((mod1Mask,                        0x74),  spawn "tor-browser")                                                     --Alt+T
     , ((mod1Mask,                        0x76),  spawn "urxvtc -name vim -e vim")                                         --Alt+V
     , ((mod1Mask,                        0x77),  spawn "GWeather")                                                        --Alt+W

@@ -42,14 +42,12 @@ bindkey -e
 autoload colors; colors
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
- 
-# prompt (if running screen, show window #)
 
- if [ x$WINDOW != x ]; then
+if [ x$WINDOW != x ]; then
      export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n@%m %{$fg_bold[blue]%}%l %{$fg[red]%}%? %{$fg[blue]%}%h %b%{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%} %*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
- else
+else
      export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n@%m %{$fg_bold[blue]%}%l %{$fg[red]%}%? %{$fg[blue]%}%h %b%{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%} %*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
- fi
+fi
  # export RPROMPT='$(git_super_status)'
 
  export RPROMPT="$GIT_PROMPT%{$reset_color%}"
