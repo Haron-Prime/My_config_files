@@ -1,3 +1,4 @@
+keycode     165     (keysym 0x1008ff33, XF86MyComputer)
 keycode     166     (keysym 0x1008ff26, XF86Back)
 keycode     167     (keysym 0x1008ff27, XF86Forward)
 keycode             (keysym 0xff69,     Cancel)
