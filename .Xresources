@@ -1,3 +1,6 @@
+! Author - Haron Prime
+! License © 2017 WTFPL http://www.wtfpl.net/
+
 Xft*dpi:                           96
 Xft*autohint:                      true
 Xft*hintstyle:                     hintsfull
@@ -136,7 +139,7 @@ URxvt*urgentOnBell:                true
 URxvt*resize-font.smaller:         C-Down
 URxvt*resize-font.bigger:          C-Up
 
-! XClock parametrs
+! XClock parameters
 
 XClock*width:                      540
 XClock*height:                     540
