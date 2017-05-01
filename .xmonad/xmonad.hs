@@ -142,6 +142,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x6e),  spawn "XMNotes-w")                                                       --Alt+N
     , ((mod1Mask .|. controlMask,        0x6e),  namedScratchpadAction mynameScratchpads "MyNotes")                       --Alt+Ctrl+N
     , ((mod1Mask,                        0x6f),  spawn "opera12")                                                         --Alt+O
+    , ((mod1Mask,                        0x71),  namedScratchpadAction mynameScratchpads "Oblogout")                      --Alt+Q
     , ((mod1Mask,                        0x72),  namedScratchpadAction mynameScratchpads "MyFM")                          --Alt+R
     , ((mod1Mask,                        0x73),  spawn "subl3")                                                           --Alt+S
     -- , ((mod1Mask .|. shiftMask,          0x73),  spawn "gksu subl3")                                                      --Alt+Shift+S
