@@ -131,16 +131,17 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                      0xff61),  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Alt+Print
     -- , ((mod1Mask,                        0x61),  spawn "shutter")                                                         --Alt+A
     -- , ((mod1Mask,                        0x64),  spawn "deadbeef")                                                        --Alt+D
-    , ((mod1Mask,                        0x65),  spawn "pulseaudio-equalizer-gtk")                                        --Alt+E
+    -- , ((mod1Mask,                        0x65),  spawn "pulseaudio-equalizer-gtk")                                        --Alt+E
     , ((mod1Mask,                        0x66),  spawn "firefox")                                                         --Alt+F
     , ((mod1Mask,                        0x67),  spawn "gimp")                                                            --Alt+G
     , ((mod1Mask,                        0x68),  spawn "hexchat")                                                         --Alt+H
     , ((mod1Mask,                        0x6c),  spawn "XMLPass")                                                         --Alt+L
     , ((mod1Mask,                        0x6d),  spawn "urxvtc -name mc -e mc")                                           --Alt+M
-    , ((mod1Mask .|. controlMask,        0x6d),  spawn "urxvtc -name micro -e micro")                                     --Alt+Ctrl+M
+    -- , ((mod1Mask .|. controlMask,        0x6d),  spawn "urxvtc -name micro -e micro")                                     --Alt+Ctrl+M
     , ((mod1Mask,                        0x6e),  spawn "XMNotes-w")                                                       --Alt+N
     , ((mod1Mask .|. controlMask,        0x6e),  namedScratchpadAction mynameScratchpads "MyNotes")                       --Alt+Ctrl+N
     , ((mod1Mask,                        0x6f),  spawn "opera12")                                                         --Alt+O
+    , ((mod1Mask,                        0x70),  namedScratchpadAction mynameScratchpads "MyPlayer")                      --Alt+P
     , ((mod1Mask,                        0x71),  namedScratchpadAction mynameScratchpads "Oblogout")                      --Alt+Q
     , ((mod1Mask,                        0x72),  namedScratchpadAction mynameScratchpads "MyFM")                          --Alt+R
     , ((mod1Mask,                        0x73),  spawn "subl3")                                                           --Alt+S
@@ -148,7 +149,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x76),  spawn "urxvtc -name vim -e vim")                                         --Alt+V
     , ((mod1Mask,                        0x77),  spawn "GWeather")                                                        --Alt+W
     , ((modm,                            0x71),  spawn "XMRestart")                                                       --Mod4+Q
-    , ((modm     .|. shiftMask,        0xff0d),  spawn $ XMonad.terminal conf)                                            --Mod4+Shift+Enter
+    , ((modm     .|. shiftMask,        0xff0d),  spawn $ XMonad.terminal conf)                                            --Mod4+Shift+Return
 
     --Menu
     , ((modm,                          0xff67),  spawn "XMMenu")                                                          --Mod4+Menu
@@ -196,7 +197,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x6a),  windows W.focusDown)                                                     --Mod4+J
     , ((modm,                            0x6b),  windows W.focusUp)                                                       --Mod4+K
     , ((modm,                            0x6d),  windows W.focusMaster)                                                   --Mod4+M
-    , ((modm,                          0xff0d),  windows W.swapMaster)                                                    --Mod4+Enter
+    , ((modm,                          0xff0d),  windows W.swapMaster)                                                    --Mod4+Return
     , ((modm     .|. shiftMask,          0x6a),  windows W.swapDown)                                                      --Mod4+Shift+J
     , ((modm     .|. shiftMask,          0x6b),  windows W.swapUp)                                                        --Mod4+Shift+K
     , ((modm,                            0x7a),  withFocused minimizeWindow <+> spawn "MWO")                              --Mod4+Z
