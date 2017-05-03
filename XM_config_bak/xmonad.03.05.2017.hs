@@ -24,6 +24,7 @@ import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.InsertPosition
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
+-- import XMonad.Hooks.Minimize
 import XMonad.Hooks.Place
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceByPos
@@ -112,21 +113,31 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff30),  spawn "XMTransgui")                                                      --XF86Favorites
     , ((0,                         0x1008ff18),  spawn myBrowser)                                                         --XF86HomePage
     , ((0,                         0x1008ff19),  spawn "thunderbird")                                                     --XF86Mail
+    -- , ((0,                         0x1008ff5d),  spawn "pcmanfm")                                                         --XF86Explorer
     , ((0,                         0x1008ff33),  spawn "pcmanfm")                                                         --XF86MyComputer
     , ((0,                         0x1008ff1d),  spawn "XMGalculator")                                                    --XF86Calculator
+    -- , ((0,                         0x1008ff2f),  spawn "i3lock -i /home/haron/wall/starrynight.png")                      --XF86Sleep
+    -- , ((0,                         0x1008ff81),  namedScratchpadAction mynameScratchpads "MyPlayer")                      --XF86Tools
+    -- , ((0,                         0x1008ff77),  namedScratchpadAction mynameScratchpads "MyPlayer")                      --XF86Save
     , ((0,                         0x1008ff1b),  namedScratchpadAction mynameScratchpads "MyHtop")                        --XF86Search
     , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
+    -- , ((0,                         0x1008ff46),  namedScratchpadAction mynameScratchpads "DeadBeef")                      --XF86Launch6
+    -- , ((0,                         0x1008ff56),  namedScratchpadAction mynameScratchpads "Oblogout")                      --XF86Close
     , ((0,                             0xff69),  spawn "compdown")                                                        --Cancel
     , ((0,                             0xff67),  spawn "gmrun")                                                           --Menu
     , ((0,                             0xffc9),  scratchPad)                                                              --F12
     , ((0,                             0xff61),  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")            --Print
     , ((0        .|. shiftMask,        0xff61),  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Shift+Print
     , ((mod1Mask,                      0xff61),  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Alt+Print
+    -- , ((mod1Mask,                        0x61),  spawn "shutter")                                                         --Alt+A
+    -- , ((mod1Mask,                        0x64),  spawn "deadbeef")                                                        --Alt+D
+    -- , ((mod1Mask,                        0x65),  spawn "pulseaudio-equalizer-gtk")                                        --Alt+E
     , ((mod1Mask,                        0x66),  spawn "firefox")                                                         --Alt+F
     , ((mod1Mask,                        0x67),  spawn "gimp")                                                            --Alt+G
     , ((mod1Mask,                        0x68),  spawn "hexchat")                                                         --Alt+H
     , ((mod1Mask,                        0x6c),  spawn "XMLPass")                                                         --Alt+L
     , ((mod1Mask,                        0x6d),  spawn "urxvtc -name mc -e mc")                                           --Alt+M
+    -- , ((mod1Mask .|. controlMask,        0x6d),  spawn "urxvtc -name micro -e micro")                                     --Alt+Ctrl+M
     , ((mod1Mask,                        0x6e),  spawn "XMNotes-w")                                                       --Alt+N
     , ((mod1Mask .|. controlMask,        0x6e),  namedScratchpadAction mynameScratchpads "MyNotes")                       --Alt+Ctrl+N
     , ((mod1Mask,                        0x6f),  spawn "opera12")                                                         --Alt+O
