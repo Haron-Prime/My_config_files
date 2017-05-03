@@ -5,9 +5,10 @@
 DATA=`date "+%d.%m.%Y"`
 DAY=`date "+%A"`
 TIME=`date "+%H:%M:%S"`
+TZ=`date +%:::z`
 case $DAY in
-    Суббота     ) echo '<fc=#ffab00>'$DAY'</fc>' $DATA  '<fc=#cccccc>'$TIME'</fc>' ;;
-    Воскресенье ) echo '<fc=#ff6500>'$DAY'</fc>' $DATA  '<fc=#cccccc>'$TIME'</fc>' ;;
-    *           ) echo $DAY $DATA  '<fc=#cccccc>'$TIME'</fc>'
+    Суббота     ) echo '<fc=#ffab00>'$DAY'</fc>' $DATA  '<fc=#cccccc>'$TIME 'UTC'$TZ'</fc>' ;;
+    Воскресенье ) echo '<fc=#ff6500>'$DAY'</fc>' $DATA  '<fc=#cccccc>'$TIME 'UTC'$TZ'</fc>' ;;
+    *           ) echo $DAY $DATA  '<fc=#cccccc>'$TIME 'UTC'$TZ'</fc>'
 esac
 exit 0
