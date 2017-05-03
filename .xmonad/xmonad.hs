@@ -52,7 +52,6 @@ import XMonad.Prompt.RunOrRaise
 import XMonad.Prompt.Ssh
 
 -- Utils
--- import XMonad.Util.SpawnOnce
 import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
@@ -67,6 +66,8 @@ myFM                 =  "urxvtc -name ranger -e ranger"
 myNotes              =  "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree"
 myHtop               =  "urxvtc -name htop -e htop"
 myPlayer             =  "urxvtc -name ncmpcpp -e ncmpcpp"
+myEditor             =  "urxvtc -name vim -e vim"
+myQuakeTerminal      =  scratchpadSpawnActionTerminal myTerminal
 
 myModMask            =  mod4Mask
 myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
@@ -95,7 +96,6 @@ role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 viewShift            =  doF . liftM2 (.) W.greedyView W.shift
-scratchPad           =  scratchpadSpawnActionTerminal myTerminal
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -118,7 +118,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
     , ((0,                             0xff69),  spawn "compdown")                                                        --Cancel
     , ((0,                             0xff67),  spawn "gmrun")                                                           --Menu
-    , ((0,                             0xffc9),  scratchPad)                                                              --F12
+    , ((0,                             0xffc9),  myQuakeTerminal)                                                         --F12
     , ((0,                             0xff61),  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")            --Print
     , ((0        .|. shiftMask,        0xff61),  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Shift+Print
     , ((mod1Mask,                      0xff61),  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Alt+Print
@@ -135,7 +135,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x72),  namedScratchpadAction mynameScratchpads "MyFM")                          --Alt+R
     , ((mod1Mask,                        0x73),  spawn "subl3")                                                           --Alt+S
     , ((mod1Mask,                        0x74),  spawn "tor-browser")                                                     --Alt+T
-    , ((mod1Mask,                        0x76),  spawn "urxvtc -name vim -e vim")                                         --Alt+V
+    , ((mod1Mask,                        0x76),  spawn myEditor)                                                          --Alt+V
     , ((mod1Mask,                        0x77),  spawn "GWeather")                                                        --Alt+W
     , ((modm,                            0x71),  spawn "XMRestart")                                                       --Mod4+Q
     , ((modm     .|. shiftMask,        0xff0d),  spawn $ XMonad.terminal conf)                                            --Mod4+Shift+Return
