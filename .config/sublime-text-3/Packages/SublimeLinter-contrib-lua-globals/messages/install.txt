@@ -1,0 +1,10 @@
+SublimeLinter-contrib-lua-globals
+-------------------------------
+This linter plugin for SublimeLinter provides an interface to lua-globals.
+
+** IMPORTANT! **
+
+Before this plugin will activate, you *must*
+follow the installation instructions here:
+
+https://github.com/Sinaloit/SublimeLinter-contrib-lua-globals

@@ -3,7 +3,7 @@
 #
 # path=(~/.local/bin $path)
 # typeset -U path
-PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:$HOME/.local/bin"
+PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:$HOME/.local/bin:$HOME/.cabal/bin"
 SHELL="/bin/zsh"
 
 [[ -f ~/.zshrc ]] && . ~/.zshrc

@@ -9,7 +9,7 @@
 	"auto_match_enabled": true,
 	"bold_folder_labels": true,
 	"caret_extra_width": 1,
-	"color_scheme": "Packages/Theme - Phoenix/Color Scheme/Tomorrow-Night.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Tomorrow-Night (SL).tmTheme",
 	"detect_indentation": true,
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"drag_text": true,
