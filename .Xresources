@@ -26,7 +26,7 @@ Xmessage*form.message.Scroll:      WhenNeeded
 *color8:                           #151515
 
 ! color1/color9                    red (тёмно-красный/тёмно-розовый)
-*color1:                           #C00000
+*color1:                           #FF6500
 *color9:                           #F88
 
 ! color2/color10                   green (тёмно-зелёный/светло-зелёный)
@@ -146,6 +146,6 @@ XClock*height:                     540
 XClock*update:                     1
 XClock*hourColor:                  cyan
 XClock*minuteColor:                cyan
-XClock*secondColor:                #ff6500
-XClock*majorColor:                 #ff6500
+XClock*secondColor:                red
+XClock*majorColor:                 red
 XClock*minorColor:                 cyan
