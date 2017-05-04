@@ -1,5 +1,6 @@
+#!/usr/bin/env sh
 PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:$HOME/.local/bin:$HOME/.cabal/bin"
-SHELL="/bin/zsh"
+SHELL="/bin/sh"
 
 export LANG=ru_UA.UTF-8
 export MM_CHARSET=UTF-8

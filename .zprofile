@@ -1,4 +1,4 @@
-#
+#!/usr/bin/env zsh
 # ~/.zprofile
 #
 # path=(~/.local/bin $path)

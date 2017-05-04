@@ -28,7 +28,6 @@ import XMonad.Hooks.Place
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceByPos
 import XMonad.Hooks.XPropManage
-import XMonad.Hooks.FloatNext (floatNextHook, toggleFloatNext, toggleFloatAllNew)
 import XMonad.Hooks.UrgencyHook hiding (Never)
 
 -- Layouts
@@ -358,7 +357,7 @@ myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                  ,keys               = myKeys
                  ,mouseBindings      = myMouseBindings
                  ,layoutHook         = myLayoutHook
-                 ,manageHook         = floatNextHook <+> manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
+                 ,manageHook         = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
                  ,handleEventHook    = myEventHook
                  ,logHook            = myLogHook >>= xmonadPropLog
                  ,startupHook        = myStartupHook 
