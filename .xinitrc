@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 export LANG=ru_UA.UTF-8
 export MM_CHARSET=UTF-8
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
