@@ -2,7 +2,7 @@
 
 ## Attention!!!
 
-All files and configs in this repository are a backup copy of the original files of my OS.
+All files and configs in this repository are a backup copy of the original files of my OS.\n
 They are not a model or a guide.
 You take full responsibility for using them in your OS.
 
