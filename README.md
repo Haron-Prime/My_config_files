@@ -1,12 +1,14 @@
 # My configs xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh, system configs etc
 
+
 ## Attention!!!
 
 All files and configs in this repository are a backup copy of the original files of my OS.
 
 They are not a model or a guide.
 
-You take full responsibility for using them in your OS.
+You take full responsibility for the consequences of using them in your OS
+
 
 ## Some screenshots 
 
