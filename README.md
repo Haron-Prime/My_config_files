@@ -1,7 +1,6 @@
 # My configs xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh, system configs etc
 
-
-## Attention!!!
+#### Attention!!!
 
 ```
 All files and configs in this repository are a backup copy of the original files of my OS.
