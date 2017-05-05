@@ -1,6 +1,4 @@
-# My_config_files
-
-My config xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh etc
+# My config xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh, system config etc
 
 ## Attetion!
 
