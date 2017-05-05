@@ -1,4 +1,4 @@
-# My config xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh, system config etc
+# My configs xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh, system configs etc
 
 ## Attetion!!!
 
