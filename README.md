@@ -7,7 +7,7 @@ All files and configs in this repository are a backup copy of the original files
 
 They are not a model or a guide.
 
-You take full responsibility for the consequences of using them in your OS
+You take full responsibility for the consequences of using them in your OS.
 
 
 ## Some screenshots 
