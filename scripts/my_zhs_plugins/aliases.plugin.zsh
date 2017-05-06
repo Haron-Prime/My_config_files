@@ -123,8 +123,7 @@ if [ -f /usr/bin/grc ]; then
   alias showmount="grc --colour=auto showmount"
   alias ulimit="grc --colour=auto ulimit"
   alias vmstat="grc --colour=auto vmstat"
-
-  alias warn="grc -c conf.warn cat"
+  # alias warn="grc -c conf.warn cat"
 
 fi
 
