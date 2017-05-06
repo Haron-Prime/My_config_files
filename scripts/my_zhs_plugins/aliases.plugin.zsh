@@ -90,6 +90,7 @@ if [ -f /usr/bin/grc ]; then
   alias free='grc --colour=auto free'
   alias journalctl='grc --colour=auto journalctl'
   alias sysctl='grc --colour=auto sysctl'
+  alias systemctl='grc --colour=auto systemctl'
   alias tcpdump='grc --colour=auto tcpdump'
   alias tune2fs='grc --colour=auto tune2fs'
   alias lsmod='grc --colour=auto lsmod'
