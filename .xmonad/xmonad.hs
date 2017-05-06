@@ -122,7 +122,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0        .|. shiftMask,        0xff61),  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Shift+Print
     , ((mod1Mask,                      0xff61),  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Alt+Print
     , ((mod1Mask,                        0x66),  spawn "firefox")                                                         --Alt+F
-    , ((mod1Mask,                        0x67),  spawn "gimp")                                                            --Alt+G
+    , ((mod1Mask,                        0x67),  spawn "gitkraken")                                                       --Alt+G
+    , ((mod1Mask .|. controlMask,        0x67),  spawn "gimp")                                                            --Alt+Ctrl+G
     , ((mod1Mask,                        0x68),  spawn "hexchat")                                                         --Alt+H
     , ((mod1Mask,                        0x6c),  spawn "XMLPass")                                                         --Alt+L
     , ((mod1Mask,                        0x6d),  spawn "urxvtc -name mc -e mc")                                           --Alt+M
@@ -288,7 +289,7 @@ myManageHook = composeAll . concat $
     where
     myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
     myMail    = ["Thunderbird"]
-    myEdit    = ["Subl3","Meld","Et","Wps","Wpp","FoxitReader"]
+    myEdit    = ["Subl3","GitKraken","Meld","Et","Wps","Wpp","FoxitReader"]
     myFile    = ["Pcmanfm"]
     mySystem  = ["pacmanxg","GParted","Sysinfo","Tk","Systemadm","Zenmap"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Easytag"]
