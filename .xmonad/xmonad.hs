@@ -289,7 +289,7 @@ myManageHook = composeAll . concat $
     where
     myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
     myMail    = ["Thunderbird"]
-    myEdit    = ["Subl3","GitKraken","Gitg","Meld","Et","Wps","Wpp","FoxitReader"]
+    myEdit    = ["Subl3","GitKraken","Gitg","SWT","Meld","Et","Wps","Wpp","FoxitReader"]
     myFile    = ["Pcmanfm"]
     mySystem  = ["pacmanxg","GParted","Sysinfo","Tk","Systemadm","Zenmap"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Easytag"]
