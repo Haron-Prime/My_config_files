@@ -54,6 +54,7 @@
 		"SublimeLinter",
 		"SublimeLinter-contrib-htmlhint",
 		"SublimeLinter-contrib-lua-globals",
+		"SublimeLinter-contrib-mdl",
 		"SublimeLinter-contrib-perl",
 		"SublimeLinter-csslint",
 		"SublimeLinter-ghc",
