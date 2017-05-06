@@ -36,7 +36,7 @@ alias svim='sudo vim'
 alias cclean='yaourt -Sc'
 alias pclean='sudo pacman -Rns $(pacman -Qtdq)'
 alias pacfs='pacman -Fs'
-alias ss='s -b vivaldi-snapshot'
+alias sv='s -b vivaldi-snapshot'
 alias asl='acestream-launcher --player mpv'
 alias xx='startx ~/.xinitrc-xmonad'
 alias xh='startx ~/.xinitrc-herbstluftwm'
@@ -85,6 +85,7 @@ if [ -f /usr/bin/grc ]; then
   alias lsblk='grc --colour=auto lsblk'
   alias blkid='grc --colour=auto blkid'
   alias iostat='grc --colour=auto iostat'
+  alias iostat_sar="grc --colour=auto iostat_sar"
   alias sar='grc --colour=auto sar'
   alias free='grc --colour=auto free'
   alias journalctl='grc --colour=auto journalctl'
@@ -105,8 +106,26 @@ if [ -f /usr/bin/grc ]; then
   alias logc="grc --colour=auto cat"
   alias logt="grc --colour=auto tail"
   alias logh="grc --colour=auto head"
+  alias ant="grc --colour=auto ant"
+  alias fdisk="grc --colour=auto fdisk"
+  alias findmnt="grc --colour=auto findmnt"
+  alias id="grc --colour=auto id"
+  alias ip="grc --colour=auto ip"
+  alias ipaddr="grc --colour=auto ipaddr"
+  alias ipneighbor="grc --colour=auto ipneighbor"
+  alias iproute="grc --colour=auto iproute"
+  alias lsof="grc --colour=auto lsof"
+  alias mvn="grc --colour=auto mvn"
+  alias pv="grc --colour=auto pv"
+  alias semanageboolean="grc --colour=auto semanageboolean"
+  alias semanagefcontext="grc --colour=auto semanagefcontext"
+  alias semanageuser="grc --colour=auto semanageuser"
+  alias showmount="grc --colour=auto showmount"
+  alias ulimit="grc --colour=auto ulimit"
+  alias vmstat="grc --colour=auto vmstat"
 
   alias warn="grc -c conf.warn cat"
+
 fi
 
 # глобальные альясы zsh
