@@ -229,7 +229,7 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "T"    (myTL  ||| myMTL ||| Full)
                 $ onWorkspace  "X"    (myTL  ||| myMTL ||| myGL ||| myFCL)
                 $ onWorkspace  "XI"   (myTL  ||| myMTL ||| myGL ||| myFCL)
-                $ onWorkspace  "XII"  (myTL  ||| myMTL ||| myGL ||| myFCL)
+                $ onWorkspace  "XII"  (myMTL ||| myTL  ||| myGL ||| myFCL)
                 $ myBL
 
 -- Prompts
@@ -260,7 +260,7 @@ myManageHook = composeAll . concat $
     , [className =? c                --> doF (W.shift "T")   <+> viewShift ("T")   | c <- myTorrent]
     , [className =? c                --> doF (W.shift "X")                         | c <- myX]
     , [className =? c                --> doF (W.shift "XI")  <+> viewShift ("XI")  | c <- myXI]
-    , [appName   =? a                --> doF (W.shift "XII") <+> viewShift ("XII") | a <- myXII]
+    , [className =? c                --> doF (W.shift "XII") <+> viewShift ("XII") | c <- myXII]
 
     , [className =? c                --> doCenterFloat                             | c <- myFloatC]
     , [appName   =? a                --> doCenterFloat                             | a <- myFloatA]

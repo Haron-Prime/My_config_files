@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="application/xml">
+  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
+  <glob pattern="*.hxa"/>
+  <glob pattern="*.hxc"/>
+  <glob pattern="*.hxe"/>
+  <glob pattern="*.hxf"/>
+  <glob pattern="*.hxk"/>
+  <glob pattern="*.hxt"/>
+  <glob pattern="*.hxv"/>
+  <comment>Microsoft Help Virtual Topic Definition File</comment>
+</mime-type>

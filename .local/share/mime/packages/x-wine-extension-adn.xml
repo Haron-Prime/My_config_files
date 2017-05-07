@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-wine-extension-adn">
+    <glob pattern="*.adn"/>
+    <comment>Microsoft Office Access Blank Project Template</comment>
+  </mime-type>
+</mime-info>
