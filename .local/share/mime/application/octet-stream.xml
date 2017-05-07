@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="application/octet-stream">
+  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
+  <glob pattern="*.hxd"/>
+  <glob pattern="*.hxh"/>
+  <glob pattern="*.hxi"/>
+  <glob pattern="*.hxq"/>
+  <glob pattern="*.hxr"/>
+  <glob pattern="*.hxs"/>
+  <glob pattern="*.hxw"/>
+  <comment>Microsoft Help Attribute Definition File</comment>
+</mime-type>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="application/msaccess">
+  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
+  <glob pattern="*.accda"/>
+  <glob pattern="*.accdb"/>
+  <glob pattern="*.accdc"/>
+  <glob pattern="*.accde"/>
+  <glob pattern="*.accdr"/>
+  <glob pattern="*.accdt"/>
+  <glob pattern="*.ade"/>
+  <glob pattern="*.adp"/>
+  <glob pattern="*.mda"/>
+  <glob pattern="*.mde"/>
+  <comment>Microsoft Office Access MDE Database</comment>
+</mime-type>
