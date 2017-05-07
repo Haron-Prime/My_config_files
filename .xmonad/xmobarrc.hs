@@ -3,7 +3,7 @@
 
 Config {
          font             = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
-       , additionalFonts  = ["xft:Terminus:size=12:weight=bold:antialias=true:hinting=true","xft:Terminus Re33:size=4"]
+       , additionalFonts  = ["xft:Terminus (TTF):size=12:weight=bold:antialias=true:hinting=true","xft:Terminus Re33:size=4"]
        , iconRoot         = "/home/haron/.xmonad/resources"
        , borderColor      = "#151515"
        , border           = NoBorder
@@ -39,9 +39,9 @@ Config {
                             , Run Com        "XMVol" [] "" 10
                             , Run Kbd        [("us", "<fn=1><fc=#95d5f5>EN</fc></fn>"), ("ru", "<fn=1><fc=#ff6500>RU</fc></fn>")]
                             , Run Com        "XMTime" [] "" 10
-                            -- , Run Com        "XMCond" [] "" 60
+                            , Run Com        "XMCond" [] "" 60
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<action=`oblogout` button=1><icon=arch-mono-16x16.xpm/>%XMNull%</action> %XMonadLog%  %MW%}{<action=XMYaourt>%Update%%XMUpdate%</action>  <action=`XMVnstat-h` button=1><action=`XMVnstat-d` button=3>%dynnetwork%</action></action>  <action=`XMVnstat` button=1><action=`XMVnstat-m` button=3>%XMTraf%</action></action>  <action=`XMTop-cpu` button=1><action=`XMHtop` button=3>%multicpu% %XMTCpu% %XMCpu-freq%MHz</action></action>  <action=`XMSensors` button=13>%XMTMB%  %XMTGpu%</action>  <action=`XMTop-mem` button=1><action=`XMFree` button=3>%memory%</action></action>  <action=`XMdf-h` button=1><action=`XMblkid` button=3>%XMRom%</action></action>  %XMUptime%  <action=`/usr/bin/pulseaudio-ctl up` button=5><action=`/usr/bin/pulseaudio-ctl down` button=4><action=`/usr/bin/pulseaudio-ctl mute` button=1><action=`XMncmpcpp` button=2><action=`mpc toggle` button=3>%XMVol%</action></action></action></action></action>  %kbd%  <action=`XMGSimplecal` button=1><action=`XMCal` button=3>%XMTime%</action></action>  <action=`XMAccuWeather` button=1><action=`XMGismeteo` button=3><fn=1><fc=#95d5f5>%Cur_temp%</fc></fn></action></action>"
+       , template = "<action=`oblogout` button=1><icon=arch-mono-16x16.xpm/>%XMNull%</action> %XMonadLog%  %MW%}{<action=XMYaourt>%Update%%XMUpdate%</action>  <action=`XMVnstat-h` button=1><action=`XMVnstat-d` button=3>%dynnetwork%</action></action>  <action=`XMVnstat` button=1><action=`XMVnstat-m` button=3>%XMTraf%</action></action>  <action=`XMTop-cpu` button=1><action=`XMHtop` button=3>%multicpu% %XMTCpu% %XMCpu-freq%MHz</action></action>  <action=`XMSensors` button=13>%XMTMB%  %XMTGpu%</action>  <action=`XMTop-mem` button=1><action=`XMFree` button=3>%memory%</action></action>  <action=`XMdf-h` button=1><action=`XMblkid` button=3>%XMRom%</action></action>  %XMUptime%  <action=`/usr/bin/pulseaudio-ctl up` button=5><action=`/usr/bin/pulseaudio-ctl down` button=4><action=`/usr/bin/pulseaudio-ctl mute` button=1><action=`XMncmpcpp` button=2><action=`mpc toggle` button=3>%XMVol%</action></action></action></action></action>  %kbd%  <action=`XMGSimplecal` button=1><action=`XMCal` button=3>%XMTime%</action></action>  <action=`XMAccuWeather` button=1><action=`XMGismeteo` button=3><fc=#95d5f5>%XMCond% <fn=1>%Cur_temp%</fn></fc></action></action>"
        }
