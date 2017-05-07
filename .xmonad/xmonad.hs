@@ -229,7 +229,7 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "T"    (myTL  ||| myMTL ||| Full)
                 $ onWorkspace  "X"    (myTL  ||| myMTL ||| myGL ||| myFCL)
                 $ onWorkspace  "XI"   (myTL  ||| myMTL ||| myGL ||| myFCL)
-                $ onWorkspace  "XII"  (myTL  ||| myMTL ||| myGL ||| myFCL)
+                $ onWorkspace  "XII"  (myMTL ||| myTL  ||| myGL ||| myFCL)
                 $ myBL
 
 -- Prompts
