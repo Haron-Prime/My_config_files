@@ -134,7 +134,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x71),  namedScratchpadAction mynameScratchpads "Oblogout")                      --Alt+Q
     , ((mod1Mask,                        0x72),  namedScratchpadAction mynameScratchpads "MyFM")                          --Alt+R
     , ((mod1Mask,                        0x73),  spawn "subl3")                                                           --Alt+S
-    , ((mod1Mask,                        0x74),  spawn "tor-browser")                                                     --Alt+T
+    -- , ((mod1Mask,                        0x74),  spawn "tor-browser")                                                     --Alt+T
     , ((mod1Mask,                        0x76),  spawn myEditor)                                                          --Alt+V
     , ((mod1Mask,                        0x77),  spawn "GWeather")                                                        --Alt+W
     , ((modm,                            0x71),  spawn "XMRestart")                                                       --Mod4+Q
@@ -228,7 +228,7 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace  "J"    (myGL  ||| myTL  ||| myFCL)
                 $ onWorkspace  "T"    (myTL  ||| myMTL ||| Full)
                 $ onWorkspace  "X"    (myTL  ||| myMTL ||| myGL ||| myFCL)
-                $ onWorkspace  "XI"   (myTL  ||| myMTL ||| myGL ||| myFCL)
+                $ onWorkspace  "XI"   (myGL  ||| myFCL)
                 $ onWorkspace  "XII"  (myMTL ||| myTL)
                 $ myBL
 
