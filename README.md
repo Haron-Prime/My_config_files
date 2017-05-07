@@ -6,6 +6,8 @@
 All files and configs in this repository are a backup copy of the original files of my OS.
 They are not a model or a guide.
 You take full responsibility for the consequences of using them in your OS.
+
+All files in the "develop" branch are for testing purposes only.
 ```
 
 ## Some screenshots 
