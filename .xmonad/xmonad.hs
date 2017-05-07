@@ -258,7 +258,7 @@ myManageHook = composeAll . concat $
     , [className =? c                --> doF (W.shift "P")   <+> viewShift ("P")   | c <- myPic]
     , [className =? c                --> doF (W.shift "J")   <+> viewShift ("J")   | c <- myWork]
     , [className =? c                --> doF (W.shift "T")   <+> viewShift ("T")   | c <- myTorrent]
-    , [className =? c                --> doF (W.shift "X")   <+> viewShift ("X")   | c <- myX]
+    , [className =? c                --> doF (W.shift "X")                         | c <- myX]
     , [className =? c                --> doF (W.shift "XI")  <+> viewShift ("XI")  | c <- myXI]
     , [appName   =? a                --> doF (W.shift "XII") <+> viewShift ("XII") | a <- myXII]
 
@@ -289,16 +289,16 @@ myManageHook = composeAll . concat $
     where
     myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
     myMail    = ["Thunderbird"]
-    myEdit    = ["Subl3","GitKraken","Gitg","SWT","Meld","Et","Wps","Wpp","FoxitReader"]
+    myEdit    = ["Subl3","Meld","Et","Wps","Wpp","FoxitReader"]
     myFile    = ["Pcmanfm"]
     mySystem  = ["pacmanxg","GParted","Sysinfo","Tk","Systemadm","Zenmap"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Easytag"]
     myPic     = ["Gimp","Gimp-2.8","Inkscape"]
     myWork    = ["Wine"]
     myTorrent = ["Tixati","Transgui","Transmission-gtk","Transmission-remote-gtk"]
-    myX       = ["VirtualBox"]
+    myX       = ["Gitg","Gitk","SWT"]
     myXI      = ["Hexchat","psi","Psi","Viber","TelegramDesktop"]
-    myXII     = []
+    myXII     = ["GitKraken"]
 
     -- CenterFloat
     myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor","Font-manager"]
