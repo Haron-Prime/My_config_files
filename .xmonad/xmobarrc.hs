@@ -10,7 +10,8 @@ Config {
        , bgColor          = "#151515"
        , fgColor          = "#959595"
        , alpha            = 0
-       , position         = TopP 0 58
+       -- , position         = TopP 0 58
+       , position         = Top
        , textOffset       = 15
        , iconOffset       = -1
        , lowerOnStart     = False
@@ -43,5 +44,5 @@ Config {
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<action=`oblogout` button=1><icon=arch-mono-16x16.xpm/>%XMNull%</action> %XMonadLog%  %MW%}{<action=XMYaourt>%Update%%XMUpdate%</action>  <action=`XMVnstat-h` button=1><action=`XMVnstat-d` button=3>%dynnetwork%</action></action>  <action=`XMVnstat` button=1><action=`XMVnstat-m` button=3>%XMTraf%</action></action>  <action=`XMTop-cpu` button=1><action=`XMHtop` button=3>%multicpu% %XMTCpu% %XMCpu-freq%MHz</action></action>  <action=`XMSensors` button=13>%XMTMB%  %XMTGpu%</action>  <action=`XMTop-mem` button=1><action=`XMFree` button=3>%memory%</action></action>  <action=`XMdf-h` button=1><action=`XMblkid` button=3>%XMRom%</action></action>  %XMUptime%  <action=`/usr/bin/pulseaudio-ctl up` button=5><action=`/usr/bin/pulseaudio-ctl down` button=4><action=`/usr/bin/pulseaudio-ctl mute` button=1><action=`XMncmpcpp` button=2><action=`mpc toggle` button=3>%XMVol%</action></action></action></action></action>  %kbd%  <action=`XMGSimplecal` button=1><action=`XMCal` button=3>%XMTime%</action></action>  <action=`XMAccuWeather` button=1><action=`XMGismeteo` button=3><fc=#95d5f5>%XMCond% <fn=1>%Cur_temp%</fn></fc></action></action>"
+       , template = "<action=`oblogout` button=1><icon=arch-mono-16x16.xpm/>%XMNull%</action> %XMonadLog%  %MW%}{<action=XMYaourt>%Update%%XMUpdate%</action>  <action=`XMVnstat-h` button=1><action=`XMVnstat-d` button=3>%dynnetwork%</action></action>  <action=`XMVnstat` button=1><action=`XMVnstat-m` button=3>%XMTraf%</action></action>  <action=`XMTop-cpu` button=1><action=`XMHtop` button=3>%multicpu% %XMTCpu% %XMCpu-freq%MHz</action></action>  <action=`XMSensors` button=13>%XMTMB%  %XMTGpu%</action>  <action=`XMTop-mem` button=1><action=`XMFree` button=3>%memory%</action></action>  <action=`XMdf-h` button=1><action=`XMblkid` button=3>%XMRom%</action></action>  %XMUptime%  <action=`/usr/bin/pulseaudio-ctl up` button=5><action=`/usr/bin/pulseaudio-ctl down` button=4><action=`/usr/bin/pulseaudio-ctl mute` button=1><action=`XMncmpcpp` button=2><action=`mpc toggle` button=3>%XMVol%</action></action></action></action></action>  %kbd%  <action=`XMGSimplecal` button=1><action=`XMCal` button=3>%XMTime%</action></action>  <action=`XMAccuWeather` button=1><action=`XMGismeteo` button=3><fc=#95d5f5>%XMCond% <fn=1>%Cur_temp%</fn></fc></action></action> "
        }
