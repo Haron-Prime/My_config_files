@@ -2,12 +2,40 @@
 
 \.config/sublime-text-3/Packages/User/Package Control\.last-run
 
-\.config/sublime-text-3/Packages/User/Package Control\.cache/01524fae79697630d0454ba3fabd9414\.info
+\.config/sublime-text-3/Packages/User/Package Control\.cache/*\.info
 
-\.config/sublime-text-3/Packages/User/Package Control\.cache/01524fae79697630d0454ba3fabd9414
+\.config/sublime-text-3/Packages/User/Package Control\.cache/*
 
 \.config/gtk-2\.0/gtkfilechooser\.ini
 
 \.config/mpv/watch_later/
 
 \.config/gtk-3\.0/bookmarks
+
+\.xmonad/history
+
+\.xmonad/prompt-history
+
+\.xmonad/resources
+
+\.xmonad/xmonad-x86_64-linux
+
+\.xmonad/xmonad\.errors
+
+\.xmonad/xmonad\.hi
+
+\.xmonad/xmonad\.state
+
+\.config/mpd/log
+
+\.config/mpd/pid
+
+\.config/mpd/state
+
+*.tdb
+
+\.config/pulse/791c132f45cd4e6889abbef2f4fe7663-default-sink
+
+\.config/pulse/791c132f45cd4e6889abbef2f4fe7663-default-source
+
+\.config/pulse/cookie
