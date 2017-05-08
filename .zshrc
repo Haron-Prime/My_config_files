@@ -50,7 +50,7 @@ else
 fi
  # export RPROMPT='$(git_super_status)'
 
- export RPROMPT="$GIT_PROMPT%{$reset_color%}"
+ # export RPROMPT="$GIT_PROMPT%{$reset_color%}"
 
 # format titles for screen and rxvt
 function title() {
