@@ -7,7 +7,7 @@ All files and configs in this repository are a backup copy of the original files
 They are not a model or a guide.
 You take full responsibility for the consequences of using them in your OS.
 
-All files in the "develop" branch are for testing purposes only.
+The "develop" branch are for testing purposes only.
 ```
 
 ## Some screenshots 
@@ -46,7 +46,7 @@ All files in the "develop" branch are for testing purposes only.
 
 ![](/screenshots/ranger.png?raw=true)
 
-#### License - © 2017 WTFPL - http://www.wtfpl.net/ 
+### License - © 2017 WTFPL - http://www.wtfpl.net/ 
 
 ```
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
