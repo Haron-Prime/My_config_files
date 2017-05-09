@@ -1,0 +1,10 @@
+[Unit]
+Description=zshistory synchrinize timer
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+Unit=zshist.service
+
+[Install]
+WantedBy=timers.target
