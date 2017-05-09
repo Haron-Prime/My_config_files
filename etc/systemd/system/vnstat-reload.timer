@@ -1,0 +1,10 @@
+[Unit]
+Description=vnstat reload timer
+
+[Timer]
+OnBootSec=1sec
+OnUnitActiveSec=1min
+Unit=vnstat-reload.service
+
+[Install]
+WantedBy=timers.target

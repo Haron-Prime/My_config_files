@@ -1,0 +1,10 @@
+[Unit]
+Description=vnstat-reload service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/vnstat -u -i enp3s0
+ExecReload=/bin/kill -s HUP $MAINPID
+
+[Install]
+WantedBy=default.target
