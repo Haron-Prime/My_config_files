@@ -1,0 +1,9 @@
+[Unit]
+Description=sysctl reload timer
+
+[Timer]
+OnBootSec=10
+Unit=sysctl-reload.service
+
+[Install]
+WantedBy=timers.target

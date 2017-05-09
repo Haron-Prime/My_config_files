@@ -2,8 +2,8 @@
 Description=vnstat reload timer
 
 [Timer]
-OnBootSec=1sec
-OnUnitActiveSec=1min
+OnBootSec=1
+OnUnitActiveSec=59
 Unit=vnstat-reload.service
 
 [Install]

@@ -2,8 +2,8 @@
 Description=zshistory synchrinize timer
 
 [Timer]
-OnBootSec=1min
-OnUnitActiveSec=1min
+OnBootSec=1
+OnUnitActiveSec=59
 Unit=zshist.service
 
 [Install]

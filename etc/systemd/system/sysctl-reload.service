@@ -1,10 +1,10 @@
 [Unit]
-Description=zshistory synchronize service
+Description=sysctl-reload service
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=/home/haron/.local/bin/zshist
+ExecStart=/usr/bin/sysctl --system
 ExecReload=/bin/kill -s HUP $MAINPID
 
 [Install]

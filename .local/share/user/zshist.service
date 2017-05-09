@@ -1,5 +1,5 @@
 [Unit]
-Description=zshistory synchrinize service
+Description=zshistory synchronize service
 After=network.target
 
 [Service]
