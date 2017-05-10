@@ -1,4 +1,5 @@
 # GNOME image viewer: https://wiki.gnome.org/Apps/EyeOfGnome/
-NAME=eog    TYPE=IMAGE_VIEW
-NAME=feh    TYPE=IMAGE_VIEW
-NAME=mirage TYPE=IMAGE_VIEW
+NAME=eog      TYPE=IMAGE_VIEW
+NAME=feh      TYPE=IMAGE_VIEW
+NAME=mirage   TYPE=IMAGE_VIEW
+NAME=shotwell TYPE=IMAGE_VIEW
