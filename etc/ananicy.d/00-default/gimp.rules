@@ -1,0 +1,2 @@
+# GNU Image Manipulation Program: https://www.gimp.org/
+NAME=gimp TYPE=LowLatency_RT  NICE=-10 IOCLASS=realtime

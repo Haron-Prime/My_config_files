@@ -1,0 +1,5 @@
+# Torrent client: https://www.transmissionbt.com
+NAME=transmission-daemon TYPE=BG_CPUIO
+NAME=transmission-qt     TYPE=BG_CPUIO
+NAME=transmission-gtk    TYPE=BG_CPUIO
+NAME=transgui            TYPE=BG_CPUIO
