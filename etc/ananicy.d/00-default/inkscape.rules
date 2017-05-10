@@ -1,0 +1,1 @@
+NAME=inkscape TYPE=LowLatency_RT  NICE=-10 IOCLASS=realtime
