@@ -308,7 +308,7 @@ myManageHook = composeAll . concat $
 
 -- namedScratchpad
 mynameScratchpads = [ NS "MyPlayer"     myPlayer         (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-                    , NS "MyHtop"       myHtop           (appName    =? "htop")         (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+                    , NS "MyHtop"       myHtop           (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
                     , NS "Gpick"        "gpick"          (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "Pavucontrol"  "pavucontrol"    (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "XMUpdate"     "XMUpdate"       (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
