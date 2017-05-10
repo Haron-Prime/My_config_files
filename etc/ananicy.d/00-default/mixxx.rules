@@ -1,0 +1,2 @@
+# A digital DJ interface: http://www.mixxx.org/
+NAME=mixxx TYPE=LowLatency_RT
