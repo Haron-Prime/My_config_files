@@ -46,6 +46,10 @@ The "develop" branch are for testing purposes only.
 
 ![](/screenshots/ranger.png?raw=true)
 
+#### htop
+
+![](/screenshots/htop.png?raw=true)
+
 ### License - © 2017 WTFPL - http://www.wtfpl.net/ 
 
 ```
