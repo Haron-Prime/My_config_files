@@ -1,0 +1,2 @@
+NAME=pacman TYPE=LowLatency_RT
+NAME=yaourt TYPE=LowLatency_RT
