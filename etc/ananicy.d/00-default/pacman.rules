@@ -1,4 +1,0 @@
-# https://www.archlinux.org/pacman
-# https://github.com/archlinuxfr/yaourt
-NAME=pacman TYPE=LowLatency_RT
-NAME=yaourt TYPE=LowLatency_RT
