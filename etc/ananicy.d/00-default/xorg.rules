@@ -1,1 +1,1 @@
-NAME=Xorg NICE=-5
+NAME=Xorg TYPE=LowLatency_RT
