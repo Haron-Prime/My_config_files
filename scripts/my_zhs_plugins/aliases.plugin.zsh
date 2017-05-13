@@ -50,6 +50,7 @@ alias gitc='git commit -m "Update"'
 alias gitp='git push'
 alias gits='git status'
 alias gitl='git log'
+alias mysync='rsync -ruo --exclude ".git" --progress /home/haron/git/My_config_files /home/haron/git/BitBuket/my_config_files'
 
 
 # цветной вывод с помощью grc
