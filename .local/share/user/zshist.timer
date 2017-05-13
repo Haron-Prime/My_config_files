@@ -1,5 +1,5 @@
 [Unit]
-Description=zshistory synchrinize timer
+Description=zshistory synchronize timer
 
 [Timer]
 OnBootSec=1
