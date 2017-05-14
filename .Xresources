@@ -27,7 +27,7 @@ Xmessage*form.message.Scroll:      WhenNeeded
 
 ! color1/color9                    red (тёмно-красный/тёмно-розовый)
 *color1:                           #FF6500
-*color9:                           #F88
+*color9:                           #FF8080
 
 ! color2/color10                   green (тёмно-зелёный/светло-зелёный)
 *color2:                           #00C000
@@ -35,11 +35,11 @@ Xmessage*form.message.Scroll:      WhenNeeded
 
 ! color3/color11                   yellow (тёмно-жёлтый/светло-жёлтый)
 *color3:                           #C0C000
-*color11:                          #FF8
+*color11:                          #FFFF80
 
 ! color4/color12                   blue (тёмно-синий/голубой)
 *color4:                           #0C00C0
-*color12:                          #9CF
+*color12:                          #95C5FF
 
 ! color5/color13                   purple (фиолетовый/сиреневый)
 *color5:                           #A0A
