@@ -1,6 +1,5 @@
 [Unit]
 Description=zshistory synchronize service
-After=network.target
 
 [Service]
 Type=simple
