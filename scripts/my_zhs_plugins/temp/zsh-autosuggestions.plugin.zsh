@@ -1,1 +1,0 @@
-/home/haron/scripts/my_zhs_plugins/zsh-autosuggestions.zsh
