@@ -8,7 +8,7 @@ case $category in
 
         Bookmarks) proglist="/\netc\nusr\nvar\ntmp\nhome\nbin\nlib\ngit\nDocuments\nDownloads\nMusic\nPictures\nProjects\nVideo" ;;
 
-        Development) proglist="Meld\nSublime-text-3\nXVim\nXMicro" ;;
+        Development) proglist="Atom\nMeld\nSublime-text-3\nXVim\nXMicro" ;;
 
         Graphics) proglist="Gimp\nGpick\nInkscape\nMirage" ;;
 
@@ -48,6 +48,7 @@ case $program in
         Projects) xdg-open ~/Projects ;;
         Video) xdg-open ~/Video ;;
 # Development
+        Atom) atom-beta ;;
         Meld) meld ;;
         Sublime-text-3) subl3 ;;
         XVim) xvim ;;
