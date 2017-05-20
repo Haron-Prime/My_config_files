@@ -121,6 +121,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                             0xff61),  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")            --Print
     , ((0        .|. shiftMask,        0xff61),  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Shift+Print
     , ((mod1Mask,                      0xff61),  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Alt+Print
+    , ((mod1Mask,                        0x61),  spawn "atom-beta")                                                       --Alt+A
     , ((mod1Mask,                        0x66),  spawn "firefox")                                                         --Alt+F
     , ((mod1Mask,                        0x67),  spawn "gitkraken")                                                       --Alt+G
     , ((mod1Mask .|. controlMask,        0x67),  spawn "gimp")                                                            --Alt+Ctrl+G
@@ -289,7 +290,7 @@ myManageHook = composeAll . concat $
     where
     myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
     myMail    = ["Thunderbird"]
-    myEdit    = ["Subl3","Meld","Et","Wps","Wpp","FoxitReader"]
+    myEdit    = ["Subl3","Atom","Meld","Et","Wps","Wpp","FoxitReader"]
     myFile    = ["Pcmanfm"]
     mySystem  = ["pacmanxg","GParted","Sysinfo","Tk","Systemadm","Zenmap"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Easytag"]
