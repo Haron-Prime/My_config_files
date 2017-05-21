@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+DATA=`date "+%d.%m.%Y"`
+DAY=`date "+%A"`
+TIME=`date "+%H:%M:%S"`
+TZ=`date +%:::z`
+case $DAY in
+    Суббота     ) echo '<fc=#ffab00>'$DAY'</fc>' $DATA'  <fc=#cccccc>'$TIME'</fc>  UTC'$TZ ;;
+    Воскресенье ) echo '<fc=#ff6500>'$DAY'</fc>' $DATA'  <fc=#cccccc>'$TIME'</fc>  UTC'$TZ ;;
+    *           ) echo $DAY $DATA'  <fc=#cccccc>'$TIME'</fc>  UTC'$TZ
+esac
+exit 0
