@@ -66,7 +66,7 @@ myNotes              =  "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree"
 myHtop               =  "urxvtc -name htop -e htop"
 myPlayer             =  "urxvtc -name ncmpcpp -e ncmpcpp"
 myEditor             =  "urxvtc -name vim -e vim"
-myQuakeTerminal      =  scratchpadSpawnActionTerminal myTerminal
+myQSTerminal      =  scratchpadSpawnActionTerminal myTerminal
 
 myModMask            =  mod4Mask
 myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
@@ -117,7 +117,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
     , ((0,                             0xff69),  spawn "compdown")                                                        --Cancel
     , ((0,                             0xff67),  spawn "gmrun")                                                           --Menu
-    , ((0,                             0xffc9),  myQuakeTerminal)                                                         --F12
+    , ((0,                             0xffc9),  myQSTerminal)                                                         --F12
     , ((0,                             0xff61),  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")            --Print
     , ((0        .|. shiftMask,        0xff61),  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Shift+Print
     , ((mod1Mask,                      0xff61),  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Alt+Print

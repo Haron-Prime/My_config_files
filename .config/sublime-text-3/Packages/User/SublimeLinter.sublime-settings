@@ -5,7 +5,7 @@
         "error_color": "FF6500",
         "gutter_theme": "Packages/SublimeLinter/gutter-themes/Koloria/Koloria.gutter-theme",
         "gutter_theme_excludes": [],
-        "lint_mode": "background",
+        "lint_mode": "manual",
         "linters": {
             "csslint": {
                 "@disable": false,
