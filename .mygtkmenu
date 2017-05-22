@@ -1,0 +1,302 @@
+menupos = 5 25
+iconsize = 24
+
+separator
+
+submenu = Bookmarks
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+
+    item = /
+    cmd  = xdg-open /
+    icon = 
+
+    item = /etc
+    cmd  = xdg-open /etc
+    icon = 
+
+    item = /opt
+    cmd  = xdg-open /opt
+    icon = 
+
+    item = /usr
+    cmd  = xdg-open /usr
+    icon = 
+
+    item = /var
+    cmd  = xdg-open /var
+    icon = 
+
+    item = /tmp
+    cmd  = xdg-open /tmp
+    icon = 
+
+    item = Home
+    cmd  = xdg-open /home/haron
+    icon = 
+
+    item = Documents
+    cmd  = xdg-open /home/haron/Documents
+    icon = 
+
+    item = Downloads
+    cmd  = xdg-open /home/haron/Downloads
+    icon = 
+
+    item = Dropbox
+    cmd  = xdg-open /home/haron/Dropbox
+    icon = 
+
+    item = Git
+    cmd  = xdg-open /home/haron/git
+    icon = 
+
+    item = Music
+    cmd  = xdg-open /home/haron/Music
+    icon = 
+
+    item = Pictures
+    cmd  = xdg-open /home/haron/Pictures
+    icon = 
+
+    item = Public
+    cmd  = xdg-open /home/haron/Public
+    icon = 
+
+    item = Templates
+    cmd  = xdg-open /home/haron/Templates
+    icon = 
+
+    item = Video
+    cmd  = xdg-open /home/haron/Video
+    icon = 
+
+submenu = Network
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-internet.png
+
+    item = Vivaldi
+    cmd  = vivaldi-snapshot
+    icon = 
+
+    item = Thunderbird
+    cmd  = thunderbird
+    icon = 
+
+    item = Firefox
+    cmd  = firefox
+    icon = 
+
+    item = Hexchat
+    cmd  = hexchat
+    icon = 
+
+    item = Telegram
+    cmd  = xdg-open https://web.telegram.org/#/im
+    icon = 
+
+    item = Viber
+    cmd  = viber
+    icon = 
+
+    item = Transmission-daemon
+    cmd  = transd
+    icon = 
+
+    item = TransGUI
+    cmd  = transgui
+    icon = 
+
+    item = Tixati
+    cmd  = tixati
+    icon = 
+
+    item = Zenmap
+    cmd  = gksu zenmap
+    icon = 
+
+submenu = Media
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-multimedia.png
+
+    item = DeadBeef
+    cmd  = deadbeef
+    icon = 
+
+    item = Vlc
+    cmd  = vlc
+    icon = 
+
+    item = Sopcast-player
+    cmd  = sopcast-player
+    icon = 
+
+    item = EasyTag
+    cmd  = easytag
+    icon = 
+
+    item = PulseAudio
+    cmd  = pavucontrol
+    icon = 
+
+submenu = Graphics
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-graphics.png
+
+    item = Shutter
+    cmd  = shutter
+    icon = 
+
+    item = Gimp
+    cmd  = gimp
+    icon = 
+
+    item = Inkscape
+    cmd  = inkscape
+    icon = 
+
+    item = Gpick
+    cmd  = gpick
+    icon = 
+
+    item = Mirage
+    cmd  = mirage
+    icon = 
+
+submenu = Games
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-games.png
+
+    item = HMM3
+    cmd = heroes3
+    icon = 
+
+    item = StarMade
+    cmd  = starmade
+    icon = 
+
+submenu = Development
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-development.png
+
+    item = Sublime text 3
+    cmd  = subl3
+    icon = 
+
+    item = XVim
+    cmd  = xvim
+    icon = 
+
+    item = XMicro
+    cmd  = xmicro
+    icon = 
+
+    item = Meld
+    cmd  = meld
+    icon = 
+
+submenu = Office
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-office.png
+
+    item = Libre Office
+    cmd  = soffice
+    icon = 
+
+    item = FoxitReader
+    cmd  = FoxitReader
+    icon = 
+
+submenu = Work
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-engineering.png
+
+    item = PRO100-5
+    cmd  = PRO100-5
+    icon = 
+
+    item = 2D-Place
+    cmd  = 2D-Place
+    icon = 
+
+submenu = Tools
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-utilities.png
+
+    item = Htop
+    cmd  = urxvtc -name htop -e htop
+    icon = 
+
+    item = MC
+    cmd  = urxvtc -name mc -e mc
+    icon = 
+
+    item = Ranger
+    cmd  = urxvtc -name ranger -e ranger
+    icon = 
+
+    item = Systemadm
+    cmd  = systemadm
+    icon = 
+
+    item = CryptKeeper
+    cmd  = cryptkeeper
+    icon = 
+
+    item = Gparted
+    cmd  = gksu gparted
+    icon = 
+
+    item = GSmartControl
+    cmd  = gksu gsmartcontrol
+    icon = 
+
+    item = PacmanXG
+    cmd  = ssx pacmanxg
+    icon = 
+
+submenu = Settings
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-system.png
+
+    item = LXAppearance
+    cmd  = lxappearance
+    icon = 
+
+    item = Qt4-config
+    cmd  = qtconfig-qt4
+    icon = 
+
+    item = OOMOX
+    cmd  = oomox-gui
+    icon = 
+
+    item = Dconf-editor
+    cmd  = dconf-editor
+    icon = 
+
+    item = Gconf-editor
+    cmd  = gconf-editor
+    icon = 
+
+separator
+
+item = 
+cmd  = 
+icon = 
+
+item = _XMMenu
+cmd  = XMMenu
+icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/preferences-other.png
+
+item = 
+cmd  = 
+icon = 
+
+separator
+
+item = XKill
+cmd  = xkill
+icon = /home/haron/.icons/nouveGnomeGray/24x24/actions/gtk-quit.png
+
+item = Lock
+cmd  = i3lock -i /home/haron/wall/starrynight.png
+icon = /home/haron/.icons/nouveGnomeGray/24x24/actions/system-lock-screen.png
+
+item = Reboot
+cmd  = compreboot
+icon = /home/haron/.icons/nouveGnomeGray/24x24/actions/view-refresh.png
+
+item = Shutdown
+cmd  = compdown
+icon = /home/haron/.icons/nouveGnomeGray/24x24/actions/gtk-quit.png
