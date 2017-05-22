@@ -77,7 +77,7 @@ case $program in
         Zenmap) gksu zenmap ;;
 # Games
         HMM3) heroes3 ;;
-        SarMade) starmade ;;
+        StarMade) starmade ;;
 # Office
         LibreOffice) soffice ;;
         FoxitReader) FoxitReader ;;
