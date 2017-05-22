@@ -286,7 +286,7 @@ icon =
 separator
 
 item = XKill
-cmd  = xkill
+cmd  = killx
 icon = /home/haron/.icons/nouveGnomeGray/24x24/actions/gtk-quit.png
 
 item = Lock
