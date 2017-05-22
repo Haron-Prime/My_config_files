@@ -50,6 +50,10 @@ submenu = Bookmarks
     cmd  = xdg-open /home/haron/git
     icon = 
 
+    item = MCF
+    cmd  = xdg-open /home/haron/git/My_config_files
+    icon = 
+
     item = Music
     cmd  = xdg-open /home/haron/Music
     icon = 
