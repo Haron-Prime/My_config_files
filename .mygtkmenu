@@ -73,7 +73,7 @@ submenu = Bookmarks
 submenu = Network
     icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-internet.png
 
-    item = Vivaldi
+    item = _Vivaldi
     cmd  = vivaldi-snapshot
     icon = 
 
@@ -84,6 +84,10 @@ submenu = Network
     item = Firefox
     cmd  = firefox
     icon = 
+
+    item = Links
+    cmd  = links
+    icon =
 
     item = Hexchat
     cmd  = hexchat
@@ -96,6 +100,10 @@ submenu = Network
     item = Viber
     cmd  = viber
     icon = 
+
+    item = Transmission
+    cmd  = transmission-gtk
+    icon =
 
     item = Transmission-daemon
     cmd  = transd
@@ -113,8 +121,16 @@ submenu = Network
     cmd  = gksu zenmap
     icon = 
 
+    item = Dropbox
+    cmd  = dropboxd
+    icon = 
+
 submenu = Media
     icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-multimedia.png
+
+    item = MPV
+    cmd  = mpv --player-operation-mode=pseudo-gui -- %U
+    icon = 
 
     item = DeadBeef
     cmd  = deadbeef
@@ -126,6 +142,10 @@ submenu = Media
 
     item = Sopcast-player
     cmd  = sopcast-player
+    icon = 
+
+    item = Simple Screen Recorder
+    cmd  = simplescreenrecorder
     icon = 
 
     item = EasyTag
@@ -189,11 +209,51 @@ submenu = Development
     cmd  = meld
     icon = 
 
+    item = GitKraken
+    cmd  = gitkraken
+    icon = 
+
 submenu = Office
     icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-office.png
 
     item = Libre Office
     cmd  = soffice
+    icon = 
+
+    item = LO Calc
+    cmd  = libreoffice --calc
+    icon = 
+
+    item = LO Writer
+    cmd  = libreoffice --writer
+    icon = 
+
+    item = LO Impress
+    cmd  = libreoffice --impress
+    icon = 
+
+    item = LO Draw
+    cmd  = libreoffice --draw
+    icon = 
+
+    item = LO Base
+    cmd  = libreoffice --base
+    icon = 
+
+    item = LO Math
+    cmd  = libreoffice --math
+    icon = 
+
+    item = WPS Spreadsheets
+    cmd  = /usr/bin/et %f
+    icon = 
+
+    item = WPS Writer
+    cmd  = /usr/bin/wps %f
+    icon = 
+
+    item = WPS Presentation
+    cmd  = /usr/bin/wpp %f
     icon = 
 
     item = FoxitReader
@@ -213,6 +273,10 @@ submenu = Work
 
 submenu = Tools
     icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-utilities.png
+
+    item = Galculator
+    cmd  = galculator
+    icon = 
 
     item = Htop
     cmd  = urxvtc -name htop -e htop
@@ -246,11 +310,31 @@ submenu = Tools
     cmd  = ssx pacmanxg
     icon = 
 
+    item = Xarchiver
+    cmd  = xarchiver %f
+    icon = 
+
+    item = FileRoller
+    cmd  = file-roller %U
+    icon = 
+
+    item = Font Manager
+    cmd  = font-manager %u
+    icon = 
+
+    item = Font Viewer
+    cmd  = /usr/libexec/font-manager/font-viewer %u
+    icon = 
+
 submenu = Settings
     icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-system.png
 
     item = LXAppearance
     cmd  = lxappearance
+    icon = 
+
+    item = Icon Browser
+    cmd  = gtk3-icon-browser
     icon = 
 
     item = Qt4-config
@@ -261,6 +345,14 @@ submenu = Settings
     cmd  = oomox-gui
     icon = 
 
+    item = Preferred Applications
+    cmd  = libfm-pref-apps
+    icon = 
+
+    item = Privilege granting
+    cmd  = gksu-properties
+    icon = 
+
     item = Dconf-editor
     cmd  = dconf-editor
     icon = 
@@ -269,25 +361,17 @@ submenu = Settings
     cmd  = gconf-editor
     icon = 
 
-separator
-
 item = 
-cmd  = 
+cmd  = false
 icon = 
-
-item = _XMMenu
-cmd  = XMMenu
-icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/preferences-other.png
-
-item = 
-cmd  = 
-icon = 
-
-separator
 
 item = XKill
 cmd  = killx
-icon = /home/haron/.icons/nouveGnomeGray/24x24/actions/gtk-quit.png
+icon = /home/haron/.icons/nouveGnomeGray/24x24/actions/gtk-cancel.png
+
+item = 
+cmd  = false
+icon = 
 
 item = Lock
 cmd  = i3lock -i /home/haron/wall/starrynight.png
