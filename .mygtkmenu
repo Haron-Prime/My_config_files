@@ -8,86 +8,87 @@ submenu = Bookmarks
 
     item = /
     cmd  = xdg-open /
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/archlinux-logo.png
 
     item = /etc
     cmd  = xdg-open /etc
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder.png
 
     item = /opt
     cmd  = xdg-open /opt
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder.png
 
     item = /usr
     cmd  = xdg-open /usr
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder.png
 
     item = /var
     cmd  = xdg-open /var
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder.png
 
     item = /tmp
     cmd  = xdg-open /tmp
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder.png
 
     item = Home
     cmd  = xdg-open /home/haron
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder_home.png
 
     item = Documents
     cmd  = xdg-open /home/haron/Documents
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder-documents.png
 
     item = Downloads
     cmd  = xdg-open /home/haron/Downloads
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder-download.png
 
     item = Dropbox
     cmd  = xdg-open /home/haron/Dropbox
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/Extra/folder_vbox.png
 
     item = Git
     cmd  = xdg-open /home/haron/git
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/Extra/folder_web.png
 
     item = MCF
     cmd  = xdg-open /home/haron/git/My_config_files
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/Extra/folder_config.png
 
     item = Music
     cmd  = xdg-open /home/haron/Music
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder-music.png
 
     item = Pictures
     cmd  = xdg-open /home/haron/Pictures
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder-pictures.png
 
     item = Public
     cmd  = xdg-open /home/haron/Public
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder-publicshare.png
 
     item = Templates
     cmd  = xdg-open /home/haron/Templates
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder-templates.png
 
     item = Video
     cmd  = xdg-open /home/haron/Video
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/folder-videos.png
+
 
 submenu = Network
     icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-internet.png
 
     item = _Vivaldi
     cmd  = vivaldi-snapshot
-    icon = 
+    icon = /usr/share/icons/hicolor/24x24/apps/vivaldi-snapshot.png
 
     item = Thunderbird
     cmd  = thunderbird
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/thunderbird.png
 
     item = Firefox
     cmd  = firefox
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/firefox.png
 
     item = Links
     cmd  = links
@@ -107,15 +108,15 @@ submenu = Network
 
     item = Transmission
     cmd  = transmission-gtk
-    icon =
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/transmission.png
 
     item = Transmission-daemon
     cmd  = transd
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/transmission.png
 
     item = TransGUI
     cmd  = transgui
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/transmission.png
 
     item = Tixati
     cmd  = tixati
@@ -127,7 +128,8 @@ submenu = Network
 
     item = Dropbox
     cmd  = dropboxd
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/dropbox.png
+
 
 submenu = Media
     icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-multimedia.png
@@ -138,11 +140,11 @@ submenu = Media
 
     item = DeadBeef
     cmd  = deadbeef
-    icon = 
+    icon = /home/haron/pics/deadbeef-grey.png
 
     item = Vlc
     cmd  = vlc
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/vlc.png
 
     item = Sopcast-player
     cmd  = sopcast-player
@@ -154,26 +156,26 @@ submenu = Media
 
     item = EasyTag
     cmd  = easytag
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/mimetypes/application-xspf+xml.png
 
     item = PulseAudio
     cmd  = pavucontrol
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/status/audio-volume-high.png
 
 submenu = Graphics
     icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-graphics.png
 
     item = Shutter
     cmd  = shutter
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/shutter.png
 
     item = Gimp
     cmd  = gimp
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/gimp.png
 
     item = Inkscape
     cmd  = inkscape
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/inkscape.png
 
     item = Gpick
     cmd  = gpick
@@ -203,7 +205,7 @@ submenu = Development
 
     item = XVim
     cmd  = xvim
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/vim.png
 
     item = XMicro
     cmd  = xmicro
@@ -211,7 +213,7 @@ submenu = Development
 
     item = Meld
     cmd  = meld
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/meld.png
 
     item = GitKraken
     cmd  = gitkraken
@@ -222,120 +224,120 @@ submenu = Office
 
     item = Libre Office
     cmd  = soffice
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/libreoffice-startcenter.png
 
     item = LO Calc
     cmd  = libreoffice --calc
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/libreoffice-calc.png
 
     item = LO Writer
     cmd  = libreoffice --writer
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/libreoffice-writer.png
 
     item = LO Impress
     cmd  = libreoffice --impress
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/libreoffice-impress.png
 
     item = LO Draw
     cmd  = libreoffice --draw
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/libreoffice-draw.png
 
     item = LO Base
     cmd  = libreoffice --base
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/libreoffice-base.png
 
     item = LO Math
     cmd  = libreoffice --math
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/libreoffice-math.png
 
     item = WPS Spreadsheets
     cmd  = /usr/bin/et %f
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/mimetypes/application-vnd.oasis.opendocument.spreadsheet.png
 
     item = WPS Writer
     cmd  = /usr/bin/wps %f
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/mimetypes/application-vnd.oasis.opendocument.text.png
 
     item = WPS Presentation
     cmd  = /usr/bin/wpp %f
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/mimetypes/application-vnd.oasis.opendocument.presentation.png
 
     item = FoxitReader
     cmd  = FoxitReader
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/mimetypes/gnome-mime-application-pdf.png
 
 submenu = Work
     icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-engineering.png
 
     item = PRO100-5
     cmd  = PRO100-5
-    icon = 
+    icon = /home/haron/pics/075.png
 
     item = 2D-Place
     cmd  = 2D-Place
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/devices/input-dialpad.png
 
 submenu = Tools
     icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-utilities.png
 
     item = Galculator
     cmd  = galculator
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/accessories-calculator.png
 
     item = Htop
     cmd  = urxvtc -name htop -e htop
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/preferences-desktop.png
 
     item = MC
     cmd  = urxvtc -name mc -e mc
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/system-file-manager.png
 
     item = Ranger
     cmd  = urxvtc -name ranger -e ranger
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/system-file-manager.png
 
     item = Systemadm
     cmd  = systemadm
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/preferences-system.png
 
     item = CryptKeeper
     cmd  = cryptkeeper
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/Extra/folder_special.png
 
     item = Gparted
     cmd  = gksu gparted
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/gparted.png
 
     item = GSmartControl
     cmd  = gksu gsmartcontrol
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/gsmartcontrol.png
 
     item = PacmanXG
     cmd  = ssx pacmanxg
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/places/archlinux-logo.png
 
     item = Xarchiver
     cmd  = xarchiver %f
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/mimetypes/package-x-generic.png
 
     item = FileRoller
     cmd  = file-roller %U
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/file-roller.png
 
     item = Font Manager
     cmd  = font-manager %u
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/preferences-desktop-font.png
 
     item = Font Viewer
     cmd  = /usr/libexec/font-manager/font-viewer %u
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/preferences-desktop-font.png
 
 submenu = Settings
     icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/applications-system.png
 
     item = LXAppearance
     cmd  = lxappearance
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/preferences-color.png
 
     item = Icon Browser
     cmd  = gtk3-icon-browser
@@ -347,7 +349,7 @@ submenu = Settings
 
     item = OOMOX
     cmd  = oomox-gui
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/categories/preferences-desktop-personal.png
 
     item = Preferred Applications
     cmd  = libfm-pref-apps
@@ -359,7 +361,7 @@ submenu = Settings
 
     item = Dconf-editor
     cmd  = dconf-editor
-    icon = 
+    icon = /home/haron/.icons/nouveGnomeGray/24x24/apps/dconf-editor.png
 
     item = Gconf-editor
     cmd  = gconf-editor
