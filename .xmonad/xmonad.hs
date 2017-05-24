@@ -142,7 +142,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,        0xff0d),  spawn $ XMonad.terminal conf)                                            --Mod4+Shift+Return
 
     --Menu
-    , ((mod1Mask,                        0x63),  spawn "mygtkmenu .mygtkmenu")                                            --Alt+C
+    , ((mod1Mask,                        0x63),  spawn "mygtkmenu .menurc")                                               --Alt+C
 
     --Prompt management
     , ((mod1Mask,                      0xffbe),  manPrompt myXPConfig)                                                    --Alt+F1
