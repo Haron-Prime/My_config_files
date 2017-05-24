@@ -209,7 +209,7 @@ submenu = Development
 
     item = XMicro
     cmd  = xmicro
-    icon = /usr/share/icons/nouveGnomeGray/24x24/apps/accessories-text-editor.png
+    icon = /home/haron/.icons/My_icons/micro.png
 
     item = Meld
     cmd  = meld
