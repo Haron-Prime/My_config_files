@@ -15,9 +15,10 @@ The "develop" branch are for testing purposes only.
 #### XMonad
 
 ![](/screenshots/xmonad-1.png?raw=true)
-![](/screenshots/xmonad-1a.png?raw=true)
+![](/screenshots/xmonad-2.png?raw=true)
 ![](/screenshots/xmonad-2.png?raw=true)
 ![](/screenshots/xmonad-3.png?raw=true)
+![](/screenshots/xmonad-4.png?raw=true)
 ![](/screenshots/xmonad-4.png?raw=true)
 
 #### i3wm
