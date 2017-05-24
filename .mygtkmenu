@@ -92,15 +92,15 @@ submenu = Network
 
     item = Links
     cmd  = links
-    icon = /home/haron/.icons/links.png
+    icon = /home/haron/.icons/My_icons/links.png
 
     item = Hexchat
     cmd  = hexchat
-    icon = /home/haron/.icons/hexchat.png
+    icon = /home/haron/.icons/My_icons/hexchat.png
 
     item = Telegram
     cmd  = xdg-open https://web.telegram.org/#/im
-    icon = /home/haron/.icons/telegram-minimal-logo.png
+    icon = /home/haron/.icons/My_icons/telegram-minimal-logo.png
 
     item = Viber
     cmd  = viber
@@ -120,7 +120,7 @@ submenu = Network
 
     item = Tixati
     cmd  = tixati
-    icon = /home/haron/.icons/tixati.png
+    icon = /home/haron/.icons/My_icons/tixati.png
 
     item = Zenmap
     cmd  = gksu zenmap
@@ -136,7 +136,7 @@ submenu = Media
 
     item = MPV
     cmd  = mpv --player-operation-mode=pseudo-gui -- %U
-    icon = /home/haron/.icons/mpv.png
+    icon = /home/haron/.icons/My_icons/mpv.png
 
     item = DeadBeef
     cmd  = deadbeef
@@ -148,11 +148,11 @@ submenu = Media
 
     item = Sopcast-player
     cmd  = sopcast-player
-    icon = /home/haron/.icons/sopcast-player-icon.png
+    icon = /home/haron/.icons/My_icons/sopcast-player-icon.png
 
     item = Simple Screen Recorder
     cmd  = simplescreenrecorder
-    icon = /home/haron/.icons/ssr.png
+    icon = /home/haron/.icons/My_icons/ssr.png
 
     item = EasyTag
     cmd  = easytag
