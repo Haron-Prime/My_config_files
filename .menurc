@@ -82,13 +82,13 @@ submenu = Network
     cmd  = vivaldi-snapshot
     icon = /usr/share/icons/hicolor/24x24/apps/vivaldi-snapshot.png
 
-    item = Thunderbird
-    cmd  = thunderbird
-    icon = /usr/share/icons/nouveGnomeGray/24x24/apps/thunderbird.png
-
     item = Firefox
     cmd  = firefox
     icon = /usr/share/icons/nouveGnomeGray/24x24/apps/firefox.png
+
+    item = Thunderbird
+    cmd  = thunderbird
+    icon = /usr/share/icons/nouveGnomeGray/24x24/apps/thunderbird.png
 
     item = Links
     cmd  = links
@@ -201,7 +201,7 @@ submenu = Development
 
     item = Sublime text 3
     cmd  = subl3
-    icon = 
+    icon = /home/haron/.icons/My_icons/sublime-text.png
 
     item = XVim
     cmd  = xvim
@@ -209,7 +209,7 @@ submenu = Development
 
     item = XMicro
     cmd  = xmicro
-    icon = 
+    icon = /home/haron/.icons/My_icons/micro.png
 
     item = Meld
     cmd  = meld
@@ -217,7 +217,7 @@ submenu = Development
 
     item = GitKraken
     cmd  = gitkraken
-    icon = 
+    icon = /home/haron/.icons/My_icons/gitkraken.png
 
 submenu = Office
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/applications-office.png
