@@ -71,7 +71,7 @@ Xmessage*form.message.Scroll:      WhenNeeded
 *pointerBlank:                     true
 *pointerColor:                     #656565
 *imLocale:                         en_US.utf8
-*imFont:                           xft:Terminus Re33:size=11:antialias=false:hinting=true
+*imFont:                           xft:Terminus Re33:size=12:antialias=false:hinting=true
 *utf8Title:                        true
 
 ! XTerm/UXTerm parameters
