@@ -18,6 +18,10 @@ submenu = Bookmarks
     cmd  = xdg-open /opt
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
+    item = /tmp
+    cmd  = xdg-open /tmp
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
     item = /usr
     cmd  = xdg-open /usr
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
@@ -26,13 +30,13 @@ submenu = Bookmarks
     cmd  = xdg-open /var
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
-    item = /tmp
-    cmd  = xdg-open /tmp
-    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
-
     item = Home
     cmd  = xdg-open /home/haron
     icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder_home.png
+
+    item = bin
+    cmd  = xdg-open /home/haron/.local/bin
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
     item = Documents
     cmd  = xdg-open /home/haron/Documents
@@ -46,9 +50,13 @@ submenu = Bookmarks
     cmd  = xdg-open /home/haron/Dropbox
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_vbox.png
 
-    item = Git
+    item = git
     cmd  = xdg-open /home/haron/git
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
+
+    item = lib
+    cmd  = xdg-open /home/haron/.local/lib
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
     item = MCF
     cmd  = xdg-open /home/haron/git/My_config_files
@@ -66,6 +74,14 @@ submenu = Bookmarks
     cmd  = xdg-open /home/haron/Public
     icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-publicshare.png
 
+    item = Screenshots
+    cmd  = xdg-open /home/haron/Pictures/Screenshots
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-pictures.png
+
+    item = scripts
+    cmd  = xdg-open /home/haron/scripts
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
     item = Templates
     cmd  = xdg-open /home/haron/Templates
     icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-templates.png
@@ -73,7 +89,6 @@ submenu = Bookmarks
     item = Video
     cmd  = xdg-open /home/haron/Video
     icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
-
 
 submenu = Network
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/applications-internet.png
