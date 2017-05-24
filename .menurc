@@ -100,7 +100,7 @@ submenu = Network
 
     item = Telegram
     cmd  = xdg-open https://web.telegram.org/#/im
-    icon = /home/haron/.icons/My_icons/telegram-minimal-logo.png
+    icon = /home/haron/.icons/My_icons/telegram.png
 
     item = Viber
     cmd  = viber
@@ -148,7 +148,7 @@ submenu = Media
 
     item = Sopcast-player
     cmd  = sopcast-player
-    icon = /home/haron/.icons/My_icons/sopcast-player-icon.png
+    icon = /home/haron/.icons/My_icons/sopcast-player.png
 
     item = Simple Screen Recorder
     cmd  = simplescreenrecorder
