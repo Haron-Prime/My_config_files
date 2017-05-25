@@ -281,6 +281,10 @@ submenu = Office
     cmd  = FoxitReader
     icon = /usr/share/icons/nouveGnomeGray/24x24/mimetypes/gnome-mime-application-pdf.png
 
+    item = CherryTree
+    cmd  = cherrytree
+    icon = /usr/share/icons/nouveGnomeGray/24x24/apps/cherrytree.png
+
 submenu = Work
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/applications-engineering.png
 

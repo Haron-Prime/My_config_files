@@ -122,6 +122,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0        .|. shiftMask,        0xff61),  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Shift+Print
     , ((mod1Mask,                      0xff61),  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Alt+Print
     , ((mod1Mask,                        0x61),  spawn "atom-beta")                                                       --Alt+A
+    , ((mod1Mask,                        0x63),  spawn "cherrytree")                                                      --Alt+C
     , ((mod1Mask,                        0x66),  spawn "firefox")                                                         --Alt+F
     , ((mod1Mask,                        0x67),  spawn "gitkraken")                                                       --Alt+G
     , ((mod1Mask .|. controlMask,        0x67),  spawn "gimp")                                                            --Alt+Ctrl+G
@@ -138,11 +139,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((mod1Mask,                        0x74),  spawn "tor-browser")                                                     --Alt+T
     , ((mod1Mask,                        0x76),  spawn myEditor)                                                          --Alt+V
     , ((mod1Mask,                        0x77),  spawn "GWeather")                                                        --Alt+W
+    , ((mod1Mask,                        0x7a),  spawn "zim")                                                             --Alt+Z
     , ((modm,                            0x71),  spawn "XMRestart")                                                       --Mod4+Q
     , ((modm     .|. shiftMask,        0xff0d),  spawn $ XMonad.terminal conf)                                            --Mod4+Shift+Return
 
     --Menu
-    , ((mod1Mask,                        0x63),  spawn "mygtkmenu .menurc")                                               --Alt+C
+    , ((mod1Mask,                        0x78),  spawn "mygtkmenu .menurc")                                               --Alt+X
 
     --Prompt management
     , ((mod1Mask,                      0xffbe),  manPrompt myXPConfig)                                                    --Alt+F1
@@ -290,7 +292,7 @@ myManageHook = composeAll . concat $
     where
     myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
     myMail    = ["Thunderbird"]
-    myEdit    = ["Subl3","Atom","Meld","Et","Wps","Wpp","FoxitReader"]
+    myEdit    = ["Subl3","Atom","Meld","Et","Wps","Wpp","FoxitReader","Zim","Cherrytree"]
     myFile    = ["Pcmanfm"]
     mySystem  = ["pacmanxg","GParted","Sysinfo","Tk","Systemadm","Zenmap"]
     myVideo   = ["mpv","Vlc","Sopcast-player.py","Easytag"]
