@@ -121,7 +121,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                             0xff61),  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")            --Print
     , ((0        .|. shiftMask,        0xff61),  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Shift+Print
     , ((mod1Mask,                      0xff61),  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Alt+Print
-    , ((mod1Mask,                        0x61),  spawn "atom-beta")                                                       --Alt+A
+    -- , ((mod1Mask,                        0x61),  spawn "atom-beta")                                                       --Alt+A
     , ((mod1Mask,                        0x63),  spawn "cherrytree")                                                      --Alt+C
     , ((mod1Mask,                        0x66),  spawn "firefox")                                                         --Alt+F
     , ((mod1Mask,                        0x67),  spawn "gitkraken")                                                       --Alt+G
@@ -144,7 +144,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,        0xff0d),  spawn $ XMonad.terminal conf)                                            --Mod4+Shift+Return
 
     --Menu
-    , ((mod1Mask,                        0x78),  spawn "mygtkmenu .menurc")                                               --Alt+X
+    , ((mod1Mask,                        0x61),  spawn "mygtkmenu .menurc")                                               --Alt+A
 
     --Prompt management
     , ((mod1Mask,                      0xffbe),  manPrompt myXPConfig)                                                    --Alt+F1
