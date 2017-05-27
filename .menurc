@@ -1,8 +1,6 @@
 menupos = 5 25
 iconsize = 24
 
-separator
-
 submenu = Bookmarks
     icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
 
@@ -290,11 +288,11 @@ submenu = Work
 
     item = PRO100-5
     cmd  = PRO100-5
-    icon = /home/haron/pics/075.png
+    icon = /home/haron/.icons/My_icons/075.png
 
     item = 2D-Place
     cmd  = 2D-Place
-    icon = /usr/share/icons/nouveGnomeGray/24x24/devices/input-dialpad.png
+    icon = /usr/share/icons/nouveGnomeGray/24x24/actions/document-page-setup.png
 
 submenu = Tools
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/applications-utilities.png
@@ -386,17 +384,13 @@ submenu = Settings
     cmd  = gconf-editor
     icon = 
 
-item = 
-cmd  = false
-icon = 
+separator
 
 item = XKill
 cmd  = killx
 icon = /usr/share/icons/nouveGnomeGray/24x24/actions/gtk-cancel.png
 
-item = 
-cmd  = false
-icon = 
+separator
 
 item = Lock
 cmd  = i3lock -i /home/haron/wall/starrynight.png
