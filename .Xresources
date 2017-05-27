@@ -3,7 +3,7 @@
 
 Xft*dpi:                           96
 Xft*autohint:                      true
-Xft*hintstyle:                     hintsfull
+Xft*hintstyle:                     hintslight
 Xft*lcdfilter:                     lcddefault
 Xft*embolden:                      false
 Xft*render:                        true
