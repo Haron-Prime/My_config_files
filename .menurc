@@ -192,11 +192,11 @@ submenu = Graphics
 
     item = Gpick
     cmd  = gpick
-    icon = 
+    icon = /home/haron/.icons/My_icons/gpick_icon.png
 
     item = Mirage
     cmd  = mirage
-    icon = 
+    icon = /home/haron/.icons/My_icons/mirage.png
 
 submenu = Games
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/applications-games.png

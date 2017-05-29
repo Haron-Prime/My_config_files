@@ -66,7 +66,7 @@ myNotes              =  "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree"
 myHtop               =  "urxvtc -name htop -e htop"
 myPlayer             =  "urxvtc -name ncmpcpp -e ncmpcpp"
 myEditor             =  "urxvtc -name vim -e vim"
-myQSTerminal      =  scratchpadSpawnActionTerminal myTerminal
+myQSTerminal         =  scratchpadSpawnActionTerminal myTerminal
 
 myModMask            =  mod4Mask
 myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
