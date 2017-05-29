@@ -4,59 +4,75 @@
 
 # мои альясы
 # my aliases
+
 alias x='exit'
-alias ipt='iptables -L -vn'
-alias dump='sudo screendump > ~/output.txt'
-# alias gmx='mount https://storage-file-eu.gmx.com'
-alias nout='ssh haron@192.168.0.11 -p 232'
-alias tv='mpv ~/Video/multinet-play.m3u'
-alias st='subl3'
-alias sst='sudo subl3'
-alias vnspeed='vnstat -l -i enp3s0'
-alias nstat="netstat -atpn"
-alias fonts='fc-cache -fv ~/.fonts && sudo fc-cache -fv'
-alias wget='wget -c --progress=bar'
-alias nano='nano -w'
-alias dirf='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
-alias ttmux='tmuxinator default'
-alias tmuxa='tmux attach'
-# alias mirrorlist='sudo reflector --verbose -l 5 --sort rate --save /etc/pacman.d/mirrorlist'
-alias psc='ps xawf -eo pid,user,cgroup,args'
-alias gzip='tar -cvzf'
-alias bzip='tar -cvjf'
-# alias mfs='sudo mhddfs /media/haron/BKP,/media/haron/Data /mnt/all -o default_permissions,allow_other'
-alias sctl='systemctl'
-alias jctl='journalctl'
-alias jctlc='sudo journalctl --vacuum-size=20000'
-alias jctlb='journalctl -b'
-alias jctlf='journalctl -f'
-alias jctlerr='journalctl -b -p3 g'
-alias rein='sudo renice -5 $(pidof -s Xorg)'
-alias svim='sudo vim'
-alias cclean='yaourt -Sc'
-alias pclean='sudo pacman -Rns $(pacman -Qtdq)'
-# alias pacfs='pacman -Fs'
-alias pacfs='pacman -Qo'
-alias sv='s -b vivaldi-snapshot'
-alias asl='acestream-launcher --player mpv'
+
 alias xx='startx ~/.xinitrc-xmonad'
 alias xh='startx ~/.xinitrc-herbstluftwm'
 alias xi='startx ~/.xinitrc-i3'
 alias xa='startx ~/.xinitrc-awesome'
+
+alias sctl='systemctl'
+alias jctl='journalctl'
+alias jctlb='journalctl -b'
+alias jctlf='journalctl -f'
+alias jctlerr='journalctl -b -p3 g'
+alias jctlc='sudo journalctl --vacuum-size=20000'
+
+alias rein='sudo renice -5 $(pidof -s Xorg)'
+alias dump='sudo screendump > ~/output.txt'
+alias fonts='fc-cache -fv ~/.fonts && sudo fc-cache -fv'
+alias psc='ps xawf -eo pid,user,cgroup,args'
+alias dirf='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
+
+alias st='subl3'
+alias sst='sudo subl3'
+alias nano='nano -w'
+alias svim='sudo vim'
+
+alias ipt='iptables -L -vn'
+alias vnspeed='vnstat -l -i enp3s0'
+alias nstat="netstat -atpn"
+alias nout='ssh haron@192.168.0.11 -p 232'
+
+alias wget='wget -c --progress=bar'
+alias ttmux='tmuxinator default'
+alias tmuxa='tmux attach'
+
+alias tv='mpv ~/Video/multinet-play.m3u'
+alias asl='acestream-launcher --player mpv'
+
+alias gzip='tar -cvzf'
+alias bzip='tar -cvjf'
+
+alias cclean='yaourt -Sc'
+alias pclean='sudo pacman -Rns $(pacman -Qtdq)'
+# alias pacfs='pacman -Fs'
+alias pacfs='pacman -Qo'
+# alias mirrorlist='sudo reflector --verbose -l 5 --sort rate --save /etc/pacman.d/mirrorlist'
+
+alias sv='s -b vivaldi-snapshot'
+
 alias mcf='cd ~/git/My_config_files'
 alias bb='cd ~/git/BitBuket/my_config_files'
-alias gitf='git add --all && git commit -m "Update" && git push'
-alias gita='git add'
-alias giti='git add -i'
-alias gitc='git commit -m "Update"'
-alias gitp='git push'
-alias gitch='git checkout'
-alias gitchd='git checkout develop'
-alias gitchm='git checkout master'
-alias gitm='git merge --no-ff'
-alias gits='git status'
-alias gitl='git log'
 alias gsync='rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/BitBuket/my_config_files'
+
+# alias mfs='sudo mhddfs /media/haron/BKP,/media/haron/Data /mnt/all -o default_permissions,allow_other'
+# alias gmx='mount https://storage-file-eu.gmx.com'
+
+
+# my git aliases
+alias ga='git add'
+alias gi='git add -i'
+alias gc='git commit -m "Update"'
+alias gp='git push'
+alias gf='git add --all && git commit -m "Update" && git push'
+alias gch='git checkout'
+alias gd='git checkout develop'
+alias gm='git checkout master'
+alias gmf='git merge --no-ff'
+alias gl='git log'
+alias gits='git status'
 
 
 # цветной вывод с помощью grc
