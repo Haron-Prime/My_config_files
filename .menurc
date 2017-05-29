@@ -12,6 +12,14 @@ submenu = Bookmarks
     cmd  = xdg-open /etc
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
+    item = /media
+    cmd  = xdg-open /media
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+    item = /mnt
+    cmd  = xdg-open /mnt
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
     item = /opt
     cmd  = xdg-open /opt
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
@@ -27,6 +35,8 @@ submenu = Bookmarks
     item = /var
     cmd  = xdg-open /var
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+    separator
 
     item = Home
     cmd  = xdg-open /home/haron
@@ -358,23 +368,23 @@ submenu = Settings
 
     item = Icon Browser
     cmd  = gtk3-icon-browser
-    icon = 
+    icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop.png
 
     item = Qt4-config
     cmd  = qtconfig-qt4
-    icon = 
+    icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop.png
 
     item = OOMOX
     cmd  = oomox-gui
-    icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop-personal.png
+    icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop.png
 
     item = Preferred Applications
     cmd  = libfm-pref-apps
-    icon = 
+    icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop.png
 
     item = Privilege granting
     cmd  = gksu-properties
-    icon = 
+    icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop-personal.png
 
     item = Dconf-editor
     cmd  = dconf-editor
@@ -382,7 +392,7 @@ submenu = Settings
 
     item = Gconf-editor
     cmd  = gconf-editor
-    icon = 
+    icon = /usr/share/icons/hicolor/24x24/apps/gconf-editor.png
 
 separator
 
