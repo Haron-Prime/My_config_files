@@ -366,6 +366,14 @@ submenu = Settings
     cmd  = lxappearance
     icon = /usr/share/icons/nouveGnomeGray/24x24/apps/preferences-color.png
 
+    item = Dconf-editor
+    cmd  = dconf-editor
+    icon = /usr/share/icons/nouveGnomeGray/24x24/apps/dconf-editor.png
+
+    item = Gconf-editor
+    cmd  = gconf-editor
+    icon = /usr/share/icons/hicolor/24x24/apps/gconf-editor.png
+
     item = Icon Browser
     cmd  = gtk3-icon-browser
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop.png
@@ -385,14 +393,6 @@ submenu = Settings
     item = Privilege granting
     cmd  = gksu-properties
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop-personal.png
-
-    item = Dconf-editor
-    cmd  = dconf-editor
-    icon = /usr/share/icons/nouveGnomeGray/24x24/apps/dconf-editor.png
-
-    item = Gconf-editor
-    cmd  = gconf-editor
-    icon = /usr/share/icons/hicolor/24x24/apps/gconf-editor.png
 
 separator
 
