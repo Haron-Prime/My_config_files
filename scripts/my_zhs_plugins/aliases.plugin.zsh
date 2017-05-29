@@ -4,6 +4,7 @@
 
 # мои альясы
 # my aliases
+
 alias x='exit'
 
 alias xx='startx ~/.xinitrc-xmonad'
@@ -13,10 +14,10 @@ alias xa='startx ~/.xinitrc-awesome'
 
 alias sctl='systemctl'
 alias jctl='journalctl'
-alias jctlc='sudo journalctl --vacuum-size=20000'
 alias jctlb='journalctl -b'
 alias jctlf='journalctl -f'
 alias jctlerr='journalctl -b -p3 g'
+alias jctlc='sudo journalctl --vacuum-size=20000'
 
 alias rein='sudo renice -5 $(pidof -s Xorg)'
 alias dump='sudo screendump > ~/output.txt'
@@ -61,17 +62,17 @@ alias gsync='rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/
 
 
 # my git aliases
-alias gita='git add'
-alias giti='git add -i'
-alias gitc='git commit -m "Update"'
-alias gitp='git push'
-alias gitf='git add --all && git commit -m "Update" && git push'
-alias gitch='git checkout'
-alias gitchd='git checkout develop'
-alias gitchm='git checkout master'
-alias gitm='git merge --no-ff'
+alias ga='git add'
+alias gi='git add -i'
+alias gc='git commit -m "Update"'
+alias gp='git push'
+alias gf='git add --all && git commit -m "Update" && git push'
+alias gch='git checkout'
+alias gd='git checkout develop'
+alias gm='git checkout master'
+alias gm='git merge --no-ff'
+alias gl='git log'
 alias gits='git status'
-alias gitl='git log'
 
 
 # цветной вывод с помощью grc
