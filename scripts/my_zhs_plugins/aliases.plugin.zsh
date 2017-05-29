@@ -70,7 +70,7 @@ alias gf='git add --all && git commit -m "Update" && git push'
 alias gch='git checkout'
 alias gd='git checkout develop'
 alias gm='git checkout master'
-alias gm='git merge --no-ff'
+alias gmf='git merge --no-ff'
 alias gl='git log'
 alias gits='git status'
 
