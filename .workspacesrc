@@ -1,6 +1,10 @@
 menupos = 18 25
 iconsize = 24
 
+item = Toggle WS
+cmd  = xdotool key Super_L+Escape
+icon = /usr/share/icons/nouveGnomeGray/24x24/actions/view-refresh.png
+
 item = Go to ws W
 cmd  = xdotool key Super_L+1
 icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
