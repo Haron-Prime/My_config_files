@@ -1,0 +1,96 @@
+menupos = 5 25
+iconsize = 24
+
+item = /
+cmd  = xdg-open /
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/archlinux-logo.png
+
+item = /etc
+cmd  = xdg-open /etc
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+item = /media
+cmd  = xdg-open /media
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+item = /mnt
+cmd  = xdg-open /mnt
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+item = /opt
+cmd  = xdg-open /opt
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+item = /tmp
+cmd  = xdg-open /tmp
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+item = /usr
+cmd  = xdg-open /usr
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+item = /var
+cmd  = xdg-open /var
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+separator
+
+item = Home
+cmd  = xdg-open /home/haron
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder_home.png
+
+item = bin
+cmd  = xdg-open /home/haron/.local/bin
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+item = Documents
+cmd  = xdg-open /home/haron/Documents
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-documents.png
+
+item = Downloads
+cmd  = xdg-open /home/haron/Downloads
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-download.png
+
+item = Dropbox
+cmd  = xdg-open /home/haron/Dropbox
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_vbox.png
+
+item = git
+cmd  = xdg-open /home/haron/git
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
+
+item = lib
+cmd  = xdg-open /home/haron/.local/lib
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+item = MCF
+cmd  = xdg-open /home/haron/git/My_config_files
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_config.png
+
+item = Music
+cmd  = xdg-open /home/haron/Music
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-music.png
+
+item = Pictures
+cmd  = xdg-open /home/haron/Pictures
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-pictures.png
+
+item = Public
+cmd  = xdg-open /home/haron/Public
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-publicshare.png
+
+item = Screenshots
+cmd  = xdg-open /home/haron/Pictures/Screenshots
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-pictures.png
+
+item = scripts
+cmd  = xdg-open /home/haron/scripts
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+item = Templates
+cmd  = xdg-open /home/haron/Templates
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-templates.png
+
+item = Video
+cmd  = xdg-open /home/haron/Video
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
