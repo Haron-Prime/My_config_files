@@ -92,7 +92,7 @@ icon = /usr/share/icons/nouveGnomeGray/Extra/folder_vbox.png
 submenu = git
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
 
-    item = _git
+    item = git
     cmd  = xdg-open /home/haron/git
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
 
@@ -120,9 +120,24 @@ item = _lib
 cmd  = xdg-open /home/haron/.local/lib
 icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
-item = _Music
-cmd  = xdg-open /home/haron/Music
-icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-music.png
+submenu = Music
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-music.png
+
+    item = Music
+    cmd  = xdg-open /home/haron/Music
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-music.png
+
+    item = Audiobooks
+    cmd  = xdg-open /home/haron/Music/audiobooks
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-music.png
+
+    item = Foreign
+    cmd  = xdg-open /home/haron/Music/Foreign
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-music.png
+
+    item = Russian
+    cmd  = xdg-open /home/haron/Music/Russian
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-music.png
 
 item = _Pictures
 cmd  = xdg-open /home/haron/Pictures
@@ -147,7 +162,7 @@ icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-templates.png
 submenu = Video
     icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
 
-    item = _Video
+    item = Video
     cmd  = xdg-open /home/haron/Video
     icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
 
