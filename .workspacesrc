@@ -1,50 +1,50 @@
-menupos = 25 25
+menupos = 18 25
 iconsize = 24
 
 item = Go to ws W
 cmd  = xdotool key Super_L+1
-icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
 
 item = Go to ws M
 cmd  = xdotool key Super_L+2
-icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
 
 item = Go to ws E
 cmd  = xdotool key Super_L+3
-icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
 
 item = Go to ws F
 cmd  = xdotool key Super_L+4
-icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
 
 item = Go to ws S
 cmd  = xdotool key Super_L+5
-icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
 
 item = Go to ws V
 cmd  = xdotool key Super_L+6
-icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
 
 item = Go to ws P
 cmd  = xdotool key Super_L+7
-icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
 
 item = Go to ws J
 cmd  = xdotool key Super_L+8
-icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
 
 item = Go to ws T
 cmd  = xdotool key Super_L+9
-icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
 
 item = Go to ws X
 cmd  = xdotool key Super_L+0
-icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
 
 item = Go to ws XI
 cmd  = xdotool key Super_L+minus
-icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
 
 item = Go to ws XII
 cmd  = xdotool key Super_L+equal
-icon = /home/haron/.icons/nouveGnomeGray/24x24/places/user-desktop.png
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/user-desktop.png
