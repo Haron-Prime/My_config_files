@@ -5,29 +5,63 @@ item = /
 cmd  = xdg-open /
 icon = /usr/share/icons/nouveGnomeGray/24x24/places/archlinux-logo.png
 
-item = /etc
+item = /_etc
 cmd  = xdg-open /etc
 icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
-item = /media
-cmd  = xdg-open /media
-icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+submenu = /media
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+    item = /media
+    cmd  = xdg-open /media
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+    item = 320G
+    cmd  = xdg-open /media/haron/320G
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+    item = BKP
+    cmd  = xdg-open /media/haron/BKP
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+    item = Data
+    cmd  = xdg-open /media/haron/Data
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
 item = /mnt
 cmd  = xdg-open /mnt
 icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
-item = /opt
+item = /_opt
 cmd  = xdg-open /opt
 icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
-item = /tmp
+item = /_tmp
 cmd  = xdg-open /tmp
 icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
-item = /usr
-cmd  = xdg-open /usr
-icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+submenu = /usr
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+    item = /_usr
+    cmd  = xdg-open /usr
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+    item = /usr/bin
+    cmd  = xdg-open /usr/bin
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+    item = /usr/lib
+    cmd  = xdg-open /usr/lib
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+    item = /usr/local
+    cmd  = xdg-open /usr/local
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+    item = /usr/share
+    cmd  = xdg-open /usr/share
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
 item = /var
 cmd  = xdg-open /var
@@ -35,11 +69,11 @@ icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
 separator
 
-item = Home
+item = _Home
 cmd  = xdg-open /home/haron
 icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder_home.png
 
-item = bin
+item = _bin
 cmd  = xdg-open /home/haron/.local/bin
 icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
@@ -47,7 +81,7 @@ item = Documents
 cmd  = xdg-open /home/haron/Documents
 icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-documents.png
 
-item = Downloads
+item = _Downloads
 cmd  = xdg-open /home/haron/Downloads
 icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-download.png
 
@@ -55,23 +89,42 @@ item = Dropbox
 cmd  = xdg-open /home/haron/Dropbox
 icon = /usr/share/icons/nouveGnomeGray/Extra/folder_vbox.png
 
-item = git
-cmd  = xdg-open /home/haron/git
-icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
+submenu = git
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
 
-item = lib
+    item = _git
+    cmd  = xdg-open /home/haron/git
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
+
+    item = AUR
+    cmd  = xdg-open /home/haron/git/AUR
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
+
+    item = BitBuket
+    cmd  = xdg-open /home/haron/git/BitBuket
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
+
+    item = GitHub-in
+    cmd  = xdg-open /home/haron/git/GitHub-in
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
+
+    item = GitHub-out
+    cmd  = xdg-open /home/haron/git/GitHub-out
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
+
+    item = MCF
+    cmd  = xdg-open /home/haron/git/My_config_files
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
+
+item = _lib
 cmd  = xdg-open /home/haron/.local/lib
 icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
 
-item = MCF
-cmd  = xdg-open /home/haron/git/My_config_files
-icon = /usr/share/icons/nouveGnomeGray/Extra/folder_config.png
-
-item = Music
+item = _Music
 cmd  = xdg-open /home/haron/Music
 icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-music.png
 
-item = Pictures
+item = _Pictures
 cmd  = xdg-open /home/haron/Pictures
 icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-pictures.png
 
@@ -79,7 +132,7 @@ item = Public
 cmd  = xdg-open /home/haron/Public
 icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-publicshare.png
 
-item = Screenshots
+item = _Screenshots
 cmd  = xdg-open /home/haron/Pictures/Screenshots
 icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-pictures.png
 
@@ -91,6 +144,73 @@ item = Templates
 cmd  = xdg-open /home/haron/Templates
 icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-templates.png
 
-item = Video
-cmd  = xdg-open /home/haron/Video
-icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+submenu = Video
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = _Video
+    cmd  = xdg-open /home/haron/Video
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Action
+    cmd  = xdg-open /home/haron/ACTION
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Adventure
+    cmd  = xdg-open /home/haron/Video/Adventure
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Animation
+    cmd  = xdg-open /home/haron/Video/animation
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Comedy
+    cmd  = xdg-open /home/haron/Video/Comedy
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Criminal
+    cmd  = xdg-open /home/haron/Video/Criminal
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Disaster
+    cmd  = xdg-open /home/haron/Video/DISASTER
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Drama
+    cmd  = xdg-open /home/haron/Video/DRAMA
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Family
+    cmd  = xdg-open /home/haron/Video/Family
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Fantastic
+    cmd  = xdg-open /home/haron/Video/FANTASTIC
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Fatasy
+    cmd  = xdg-open /home/haron/Video/Fantasy
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = History
+    cmd  = xdg-open /home/haron/Video/history
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Horror
+    cmd  = xdg-open /home/haron/Video/HOROR
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Mistic
+    cmd  = xdg-open /home/haron/Video/Mistic
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Triller
+    cmd  = xdg-open /home/haron/Video/Triller
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Western
+    cmd  = xdg-open /home/haron/Video/Western
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+    item = Temporary
+    cmd  = xdg-open /home/haron/Video/tmp
+    icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
