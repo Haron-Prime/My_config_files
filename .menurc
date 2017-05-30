@@ -56,7 +56,6 @@ submenu = Network
     cmd  = dropboxd
     icon = /usr/share/icons/nouveGnomeGray/24x24/apps/dropbox.png
 
-
 submenu = Media
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/applications-multimedia.png
 
