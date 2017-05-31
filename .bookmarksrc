@@ -182,7 +182,7 @@ submenu = Video
     icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
 
     item = Action
-    cmd  = xdg-open /home/haron/ACTION
+    cmd  = xdg-open /home/haron/Video/ACTION
     icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
 
     item = Adventure
@@ -244,3 +244,13 @@ submenu = Video
     item = Temporary
     cmd  = xdg-open /home/haron/Video/tmp
     icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
+
+separator
+
+item = Notebook
+cmd  = pcmanfm sftp://haron@192.168.0.11:232/
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-remote.png
+
+item = Netbook
+cmd  = pcmanfm sftp://haron@192.168.0.12/
+icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-remote.png
