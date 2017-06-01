@@ -22,6 +22,7 @@ Config {
        , overrideRedirect = False
        , commands         = [
                               Run XMonadLog
+                            , Run Com        "XMNull" [] "" 0
                             , Run Com        "XMUpdate" [] "" 3000
                             , Run PipeReader "/tmp/haron/upd" "Update"
                             , Run PipeReader "/home/haron/.config/gis-weather/cur_temp" "Cur_temp"
@@ -30,6 +31,7 @@ Config {
                             , Run Com        "XMTraf" [] "" 50
                             , Run MultiCpu   ["-S","True","-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>","-L","33","-H","66","-n","#ffff00","-h","#ff6500"] 10
                             , Run Com        "XMTCpu" [] "" 10
+                            -- , Run Com        "XMCpu-freq" [] "" 0
                             , Run Com        "XMTMB" [] "" 10
                             , Run Com        "XMTGpu" [] "" 10
                             , Run Memory     ["-S","True","-t","<fc=#cccccc>RAM:</fc><fn=2> </fn><usedratio>","-L","75","-H","90","-n","#ffff00","-h","#ff6500"] 50
@@ -39,8 +41,9 @@ Config {
                             , Run Com        "XMVol" [] "" 10
                             , Run Kbd        [("us", "<fn=1><fc=#95d5f5>EN</fc></fn>"), ("ru", "<fn=1><fc=#ff6500>RU</fc></fn>")]
                             , Run Com        "XMTime" [] "" 10
+                            -- , Run Com        "XMCond" [] "" 60
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<action=`mygtkmenu .menurc` button=1><action=`mygtkmenu .bookmarksrc` button=3><icon=arch-mono-16x16.xpm/></action></action> <action=`mygtkmenu .workspacesrc` button=13>%XMonadLog%</action>  %MW%}{<action=XMYaourt>%Update%%XMUpdate%</action>  <action=`XMncmpcpp` button=3><action=`mpc prev` button=1><icon=backward.16x16.xpm/></action><fn=2> </fn><action=`mpc toggle` button=1><icon=start.16x16.xpm/></action><fn=2> </fn><action=`mpc next` button=1><icon=forward.16x16.xpm/></action></action>   <action=`XMVnstat-h` button=1><action=`XMVnstat-d` button=3>%dynnetwork%</action></action>  <action=`XMVnstat` button=1><action=`XMVnstat-m` button=3>%XMTraf%</action></action>  <action=`XMTop-cpu` button=1><action=`XMHtop` button=3>%multicpu% %XMTCpu%</action></action>  <action=`XMSensors` button=13>%XMTMB%  %XMTGpu%</action>  <action=`XMTop-mem` button=1>%memory%</action>  <action=`XMFree` button=1>%swap%</action>  <action=`XMdf-h` button=1><action=`XMblkid` button=3>%XMRom%</action></action>  %XMUptime%  <action=`/usr/bin/pulseaudio-ctl up` button=5><action=`/usr/bin/pulseaudio-ctl down` button=4><action=`/usr/bin/pulseaudio-ctl mute` button=1>%XMVol%</action></action></action>  %kbd%  <action=`XMGSimplecal` button=1><action=`XMCal` button=3>%XMTime%</action></action>  <action=`XMAccuWeather` button=1><action=`XMGismeteo` button=3><action=`GWeather` button=45><fc=#95d5f5><fn=1>%Cur_temp%</fn></fc></action></action></action>  "
+       , template = "<action=`mygtkmenu .menurc` button=1><action=`mygtkmenu .bookmarksrc` button=3><icon=arch-mono-16x16.xpm/>%XMNull%</action></action> <action=`mygtkmenu .workspacesrc` button=13>%XMonadLog%</action>  %MW%}{<action=XMYaourt>%Update%%XMUpdate%</action>  <action=`XMncmpcpp` button=3><action=`mpc prev` button=1><icon=backward.16x16.xpm/>%XMNull%</action><fn=2> </fn><action=`mpc toggle` button=1><icon=start.16x16.xpm/>%XMNull%</action><fn=2> </fn><action=`mpc next` button=1><icon=forward.16x16.xpm/>%XMNull%</action></action>   <action=`XMVnstat-h` button=1><action=`XMVnstat-d` button=3>%dynnetwork%</action></action>  <action=`XMVnstat` button=1><action=`XMVnstat-m` button=3>%XMTraf%</action></action>  <action=`XMTop-cpu` button=1><action=`XMHtop` button=3>%multicpu% %XMTCpu%</action></action>  <action=`XMSensors` button=13>%XMTMB%  %XMTGpu%</action>  <action=`XMTop-mem` button=1>%memory%</action>  <action=`XMFree` button=1>%swap%</action>  <action=`XMdf-h` button=1><action=`XMblkid` button=3>%XMRom%</action></action>  %XMUptime%  <action=`/usr/bin/pulseaudio-ctl up` button=5><action=`/usr/bin/pulseaudio-ctl down` button=4><action=`/usr/bin/pulseaudio-ctl mute` button=1>%XMVol%</action></action></action>  %kbd%  <action=`XMGSimplecal` button=1><action=`XMCal` button=3>%XMTime%</action></action>  <action=`XMAccuWeather` button=1><action=`XMGismeteo` button=3><action=`GWeather` button=45><fc=#95d5f5><fn=1>%Cur_temp%</fn></fc></action></action></action>  "
        }
