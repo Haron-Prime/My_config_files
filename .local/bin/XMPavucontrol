@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+if (pidof pavucontrol >/dev/null); then 
+    kill $(pidof pavucontrol)
+else 
+    pavucontrol
+fi
+exit 0
