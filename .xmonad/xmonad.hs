@@ -119,7 +119,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
     , ((0,                             0xff69),  spawn "compdown")                                                        --Cancel
     , ((0,                             0xff67),  spawn "gmrun")                                                           --Menu
-    , ((0,                             0xffc9),  myQSTerminal)                                                         --F12
+    , ((0,                             0xffc9),  myQSTerminal)                                                            --F12
     , ((0,                             0xff61),  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")            --Print
     , ((0        .|. shiftMask,        0xff61),  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Shift+Print
     , ((mod1Mask,                      0xff61),  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Alt+Print
@@ -133,7 +133,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x6d),  spawn "urxvtc -name mc -e mc")                                           --Alt+M
     , ((mod1Mask,                        0x6e),  spawn "XMNotes-w")                                                       --Alt+N
     , ((mod1Mask .|. controlMask,        0x6e),  namedScratchpadAction mynameScratchpads "MyNotes")                       --Alt+Ctrl+N
-    , ((mod1Mask,                        0x6f),  spawn "opera12")                                                         --Alt+O
+    -- , ((mod1Mask,                        0x6f),  spawn "opera12")                                                         --Alt+O
     , ((mod1Mask,                        0x70),  namedScratchpadAction mynameScratchpads "MyPlayer")                      --Alt+P
     , ((mod1Mask,                        0x71),  namedScratchpadAction mynameScratchpads "Oblogout")                      --Alt+Q
     , ((mod1Mask,                        0x72),  namedScratchpadAction mynameScratchpads "MyFM")                          --Alt+R
@@ -142,7 +142,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x76),  spawn myEditor)                                                          --Alt+V
     , ((mod1Mask,                        0x77),  spawn "GWeather")                                                        --Alt+W
     , ((mod1Mask,                        0x7a),  spawn "zim")                                                             --Alt+Z
-    , ((modm,                            0x71),  spawn "XMRestart")                                                       --Mod4+Q
+    , ((modm,                            0x71),  spawn "XMRR")                                                            --Mod4+Q
     , ((modm     .|. shiftMask,        0xff0d),  spawn $ XMonad.terminal conf)                                            --Mod4+Shift+Return
 
     --Menu
