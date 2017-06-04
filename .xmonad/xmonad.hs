@@ -142,8 +142,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x76),  spawn myEditor)                                                          --Alt+V
     , ((mod1Mask,                        0x77),  spawn "GWeather")                                                        --Alt+W
     , ((mod1Mask,                        0x7a),  spawn "zim")                                                             --Alt+Z
-    , ((modm,                            0x71),  spawn "XMRR")                                                            --Mod4+Q
     , ((modm     .|. shiftMask,        0xff0d),  spawn $ XMonad.terminal conf)                                            --Mod4+Shift+Return
+
+    , ((modm,                            0x63),  spawn "XMR")                                                             --Mod4+C
+    , ((modm,                            0x71),  spawn "XMRR")                                                            --Mod4+Q
+
 
     --Menu
     , ((mod1Mask,                        0x61),  spawn myAppMenu)                                                         --Alt+A
