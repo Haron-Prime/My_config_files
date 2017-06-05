@@ -296,13 +296,9 @@ submenu = Settings
     cmd  = gksu-properties
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop-personal.png
 
-separator
-
-item = XKill
-cmd  = killx
-icon = /usr/share/icons/nouveGnomeGray/24x24/actions/gtk-cancel.png
-
-separator
+item = 
+cmd  = false
+icon =
 
 item = Lock
 cmd  = i3lock -i /home/haron/wall/starrynight.png
