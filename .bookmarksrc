@@ -248,9 +248,9 @@ submenu = Video
 separator
 
 item = Notebook
-cmd  = pcmanfm sftp://haron@192.168.0.11:232/
+cmd  = xdg-open sftp://haron@192.168.0.11:232/
 icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-remote.png
 
 item = Netbook
-cmd  = pcmanfm sftp://haron@192.168.0.12/
+cmd  = xdg-open sftp://haron@192.168.0.12/
 icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-remote.png
