@@ -293,7 +293,7 @@ submenu = Settings
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop.png
 
     item = Privilege granting
-    cmd  = gksudo-properties
+    cmd  = gksu-properties
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop-personal.png
 
 item = 
