@@ -8,7 +8,7 @@ fi
 
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
      eval "$(dbus-launch --sh-syntax --exit-with-session)"
- fi
+fi
 
 /usr/bin/xdg-user-dirs-update &
 setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp grp_led:scroll &

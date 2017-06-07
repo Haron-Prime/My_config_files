@@ -49,7 +49,7 @@ submenu = Network
     icon = /home/haron/.icons/My_icons/tixati.png
 
     item = Zenmap
-    cmd  = gksu zenmap
+    cmd  = gksudo zenmap
     icon = /home/haron/.icons/AwOkenWhite/clear/24x24/apps/zenmap.png
 
     item = Dropbox
@@ -234,11 +234,11 @@ submenu = Tools
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_special.png
 
     item = Gparted
-    cmd  = gksu gparted
+    cmd  = gksudo gparted
     icon = /usr/share/icons/nouveGnomeGray/24x24/apps/gparted.png
 
     item = GSmartControl
-    cmd  = gksu gsmartcontrol
+    cmd  = gksudo gsmartcontrol
     icon = /usr/share/icons/nouveGnomeGray/24x24/apps/gsmartcontrol.png
 
     item = PacmanXG
@@ -293,7 +293,7 @@ submenu = Settings
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop.png
 
     item = Privilege granting
-    cmd  = gksu-properties
+    cmd  = gksudo-properties
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/preferences-desktop-personal.png
 
 item = 
