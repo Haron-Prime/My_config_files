@@ -1,12 +1,11 @@
 [Unit]
-Description=GnuPG private key agent
-IgnoreOnIsolate=true
+Description=GnuPG cryptographic agent and passphrase cache
+Documentation=man:gpg-agent(1)
+Requires=gpg-agent.socket
+After=gpg-agent.socket
+## This is a socket-activated service:
+RefuseManualStart=true
 
 [Service]
-Type=forking
-ExecStart=/usr/bin/gpg-agent --daemon --homedir=%h/.gnupg
-ExecReload=/usr/bin/gpg-connect-agent RELOADAGENT
-Restart=on-abort
-
-[Install]
-WantedBy=default.target
+ExecStart=/usr/bin/gpg-agent --supervised
+ExecReload=/usr/bin/gpgconf --reload gpg-agent
