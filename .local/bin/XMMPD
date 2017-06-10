@@ -1,4 +1,7 @@
-#! /usr/bin/env zsh
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
 ST=`cat /home/haron/.config/mpd/state | grep state | tail -1 | cut -d \  -f 2`
 case $ST in
     play  ) echo "<fc=#00ff00>></fc>" ;;
