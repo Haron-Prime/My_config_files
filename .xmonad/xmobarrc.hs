@@ -3,7 +3,7 @@
 
 Config {
          font             = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
-       , additionalFonts  = ["xft:Terminus (TTF):size=12:weight=bold:antialias=true:hinting=true","xft:Terminus Re33:size=4"]
+       , additionalFonts  = ["xft:Terminus (TTF):size=12:weight=bold:antialias=true:hinting=true","xft:Terminus Re33:size=4","xft:FontAwesome:pixelsize=12"]
        , iconRoot         = "/home/haron/.xmonad/resources"
        , borderColor      = "#151515"
        , border           = NoBorder
@@ -12,7 +12,7 @@ Config {
        , alpha            = 0
        -- , position         = TopP 0 58
        , position         = Top
-       , textOffset       = 15
+       , textOffset       = -1
        , iconOffset       = -1
        , lowerOnStart     = False
        , pickBroadest     = False
@@ -43,5 +43,5 @@ Config {
                             ]
        , sepChar  = "%"
        , alignSep = "}{"
-       , template = "<fn=2> </fn><action=`mygtkmenu .menurc` button=1><action=`mygtkmenu .bookmarksrc` button=3><icon=arch-mono-16x16.xpm/></action></action><action=`xdotool key 0xffeb+0xff1b`>  </action><action=`mygtkmenu .workspacesrc` button=13><action=`xdotool key 0xffe3+0xffe9+0xff51` button=4><action=`xdotool key 0xffe3+0xffe9+0xff53` button=5>%XMonadLog%</action></action></action><action=`xdotool key 0xffeb+0x60`>  </action>%MW%}{<action=XMYaourt>%Update%%XMUpdate%</action>  <action=`XMncmpcpp` button=3><action=`mpc prev` button=1><<</action> <action=`mpc toggle` button=1>%XMMPD%</action> <action=`mpc next` button=1>>></action></action>  <action=`XMVnstat-h` button=1><action=`XMVnstat-d` button=3>%dynnetwork%</action></action>  <action=`XMVnstat` button=1><action=`XMVnstat-m` button=3>%XMTraf%</action></action>  <action=`XMTop-cpu` button=1><action=`XMHtop` button=3>%multicpu% %XMTCpu%</action></action>  <action=`XMSensors` button=13>%XMTMB%  %XMTGpu%</action>  <action=`XMTop-mem` button=1>%memory%</action>  <action=`XMFree` button=1>%swap%</action>  <action=`XMdf-h` button=1><action=`XMblkid` button=3>%XMRom%</action></action>  %XMUptime%  <action=`pulseaudio-ctl up` button=5><action=`pulseaudio-ctl down` button=4><action=`pulseaudio-ctl mute` button=1><action=`XMPavucontrol` button=3>%XMVol%</action></action></action></action>  <action=`xkblayout-state set +1`>%kbd%</action>  <action=`XMGSimplecal` button=1><action=`XMCal` button=3>%XMTime%</action></action>  <action=`XMAccuWeather` button=1><action=`XMGismeteo` button=3><action=`GWeather` button=45><fc=#95d5f5><fn=1>%Cur_temp%</fn></fc></action></action></action>  "
+       , template = "<fn=2> </fn><action=`mygtkmenu .menurc` button=1><action=`mygtkmenu .bookmarksrc` button=3><icon=arch-mono-16x16.xpm/></action></action><action=`xdotool key 0xffeb+0xff1b`>  </action><action=`mygtkmenu .workspacesrc` button=13><action=`xdotool key 0xffe3+0xffe9+0xff51` button=4><action=`xdotool key 0xffe3+0xffe9+0xff53` button=5>%XMonadLog%</action></action></action><action=`xdotool key 0xffeb+0x60`>  </action>%MW%}{<action=XMYaourt>%Update%%XMUpdate%</action>  <action=`XMVnstat-h` button=1><action=`XMVnstat-d` button=3>%dynnetwork%</action></action>  <action=`XMVnstat` button=1><action=`XMVnstat-m` button=3>%XMTraf%</action></action>  <action=`XMTop-cpu` button=1><action=`XMHtop` button=3>%multicpu% %XMTCpu%</action></action>  <action=`XMSensors` button=13>%XMTMB%  %XMTGpu%</action>  <action=`XMTop-mem` button=1>%memory%</action>  <action=`XMFree` button=1>%swap%</action>  <action=`XMdf-h` button=1><action=`XMblkid` button=3>%XMRom%</action></action>  %XMUptime%  <action=`pulseaudio-ctl up` button=5><action=`pulseaudio-ctl down` button=4><action=`pulseaudio-ctl mute` button=1><action=`XMPavucontrol` button=3>%XMVol%</action></action></action></action>  <action=`XMncmpcpp` button=3><action=`mpc prev` button=1><fn=3></fn></action> <action=`mpc toggle` button=1>%XMMPD%</action> <action=`mpc next` button=1><fn=3></fn></action></action>  <action=`xkblayout-state set +1`>%kbd%</action>  <action=`XMGSimplecal` button=1><action=`XMCal` button=3>%XMTime%</action></action>  <action=`XMAccuWeather` button=1><action=`XMGismeteo` button=3><action=`GWeather` button=45><fc=#95d5f5><fn=1>%Cur_temp%</fn></fc></action></action></action>  "
        }
