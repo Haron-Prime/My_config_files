@@ -1,0 +1,8 @@
+#! /usr/bin/env zsh
+ST=`cat /home/haron/.config/mpd/state | grep state | tail -1 | cut -d \  -f 2`
+case $ST in
+    play  ) echo "<fc=#00ff00>></fc>" ;;
+    pause ) echo "<fc=#ffff00>||</fc>" ;;
+    stop  ) echo "<fc=#ff6500>X</fc>" ;;
+esac
+exit 0
