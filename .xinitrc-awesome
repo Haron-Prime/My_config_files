@@ -11,7 +11,7 @@ if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
 fi
 
 /usr/bin/xdg-user-dirs-update &
-setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp &
+# setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp &
 xsetroot -cursor_name left_ptr &
 hsetroot -solid '#000000' &
 xset -dpms &
@@ -21,5 +21,5 @@ perWindowLayoutD &
 compton -b &
 urxvtd -q -f -o &
 pcmanfm -d &
-python3 /home/haron/.local/lib/gis-weather/gis-weather.py &
+# python3 /home/haron/.local/lib/gis-weather/gis-weather.py &
 exec awesome
