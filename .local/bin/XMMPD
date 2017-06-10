@@ -4,8 +4,8 @@
 
 ST=`cat $HOME/.config/mpd/state | grep state | tail -1 | cut -d \  -f 2`
 case $ST in
-    play  ) echo "<fc=#00ff00>></fc>" ;;
-    pause ) echo "<fc=#ffff00>||</fc>" ;;
-    stop  ) echo "<fc=#ff6500>X</fc>" ;;
+    play  ) echo "<fc=#00ff00><fn=1>></fn></fc>" ;;
+    pause ) echo "<fc=#ffff00><fn=1>||</fn></fc>" ;;
+    stop  ) echo "<fc=#ff6500><fn=1>X</fn></fc>" ;;
 esac
 exit 0
