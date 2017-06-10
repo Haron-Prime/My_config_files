@@ -125,6 +125,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                      0xff61),  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'")  --Alt+Print
     -- , ((mod1Mask,                        0x61),  spawn "atom-beta")                                                       --Alt+A
     , ((mod1Mask,                        0x63),  spawn "cherrytree")                                                      --Alt+C
+    , ((mod1Mask,                        0x65),  spawn "pulseaudio-equalizer-gtk")                                        --Alt+E
     , ((mod1Mask,                        0x66),  spawn "firefox")                                                         --Alt+F
     , ((mod1Mask,                        0x67),  spawn "gitkraken")                                                       --Alt+G
     , ((mod1Mask .|. controlMask,        0x67),  spawn "gimp")                                                            --Alt+Ctrl+G
@@ -310,7 +311,7 @@ myManageHook = composeAll . concat $
     myXII     = ["GitKraken"]
 
     -- CenterFloat
-    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor","Font-manager"]
+    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor","Font-manager","Gksu-properties"]
     myFloatA  = ["lxappearance","xarchiver","gmrun","Update"]
     myFloatT  = ["Software Update"]
     myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
