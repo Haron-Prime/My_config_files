@@ -217,7 +217,7 @@ submenu = Video
     cmd  = xdg-open /home/haron/Video/FANTASTIC
     icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
 
-    item = Fatasy
+    item = Fantasy
     cmd  = xdg-open /home/haron/Video/Fantasy
     icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-videos.png
 
