@@ -3,7 +3,7 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 # The script uses the font 'Weather Icons' - https://erikflowers.github.io/weather-icons/
 
-CONDITIONS=`cat ~/.config/gis-weather/cur_weather | sed '13!d' | sed -e :a -e 's/<[^>]*>//g;/</N;//ba' -e 's/^[ ][А-Яа-я]*:[ ]*//'`
+CONDITIONS=`cat ~/.config/gis-weather/cur_weather | sed '14!d' | sed -e :a -e 's/<[^>]*>//g;/</N;//ba' -e 's/^[ ][А-Яа-я]*:[ ]*//'`
 case $CONDITIONS in
     "00.png" ) echo "<fn=4></fn>"     ;;
     "01.png" ) echo "<fn=4></fn>"     ;;
@@ -30,7 +30,7 @@ case $CONDITIONS in
     "22.png" ) echo "<fn=4></fn>"   ;;
     "23.png" ) echo "<fn=4></fn>"   ;;
     "24.png" ) echo "<fn=4></fn>"   ;;
-    "25.png" ) echo "<fn=4></fn>"   ;;
+    "25.png" ) echo "N/A"             ;;
     "26.png" ) echo "<fn=4></fn>"     ;;
     "27.png" ) echo "<fn=4></fn>"   ;;
     "28.png" ) echo "<fn=4></fn>"   ;;
@@ -53,6 +53,5 @@ case $CONDITIONS in
     "45.png" ) echo "<fn=4></fn>"     ;;
     "46.png" ) echo "<fn=4></fn>"     ;;
     "47.png" ) echo "<fn=4></fn>"     ;;
-    *        ) echo "<fn=4></fn>"   ;;
+    *        ) echo "N/A"   ;;
 esac
-exit 0
