@@ -21,6 +21,7 @@
 	"fallback_encoding": "Cyrillic (Windows 1251)",
 	"find_selected_text": true,
 	// "font_face": "Weather Icons",
+	// "font_face": "FontAwesome",
 	"font_face": "Terminus Re33",
 	"font_options": "subpixel_antialias",
 	// "font_size": 11,
