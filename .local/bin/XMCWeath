@@ -1,0 +1,33 @@
+#!/usr/bin/env zsh
+SUNRISE=`cat ~/.config/gis-weather/cur_weather | sed '11!d' | sed -e :a -e 's/<[^>]*>//g;/</N;//ba' -e 's/^[ ][А-Яа-я]*:[ ]*//'`
+SUNSET=`cat ~/.config/gis-weather/cur_weather | sed '12!d' | sed -e :a -e 's/<[^>]*>//g;/</N;//ba' -e 's/^[ ][А-Яа-я]*:[ ]*//'`
+CONDITIONS=`cat ~/.config/gis-weather/cur_weather | sed '3!d' | sed -e :a -e 's/<[^>]*>//g;/</N;//ba' -e 's/^[ ]//'`
+
+if [[ `date -d "$SUNRISE" +%s` -gt `date -d "$real_time" +%s` ]]; then
+    case $CONDITIONS in
+        "Ясно" ) echo "<fn=4></fn>" ;;
+        "Солнечно" ) echo "<fn=4></fn>" ;;
+        "Ясно, облачно c прояснениями" ) echo "<fn=4></fn>" ;;
+        "Облачно c прояснениями"  ) echo "<fn=4></fn>" ;;
+        "Малооблачно" ) echo "<fn=4></fn>" ;;
+        "Переменная облачность" ) echo "<fn=4></fn>" ;;
+        "Значительная облачность" ) echo "<fn=4></fn>" ;;
+        "Дождь" ) echo "<fn=4></fn>" ;;
+        "Ливень или гроза" ) echo "<fn=4></fn>" ;;
+        "Гроза" ) echo "<fn=4></fn>" ;;
+        * ) echo "N/A" ;;
+    esac
+elif [[ `date -d "$SUNSET" +%s` -gt `date -d "$real_time" +%s` ]]; then
+    case $CONDITIONS in
+        "Ясно" ) echo "<fn=4></fn>" ;;
+        "Ясно, облачно c прояснениями" ) echo "<fn=4></fn>" ;;
+        "Малооблачно" ) echo "<fn=4></fn>" ;;
+        "Переменная облачность" ) echo "<fn=4></fn>" ;;
+        "Значительная облачность" ) echo "<fn=4></fn>" ;;
+        "Дождь" ) echo "<fn=4></fn>" ;;
+        "Ливень или гроза" ) echo "<fn=4></fn>" ;;
+        "Гроза" ) echo "<fn=4></fn>" ;;
+        * ) echo "N/A" ;;
+    esac
+fi
+exit 0
