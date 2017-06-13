@@ -1,0 +1,59 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+# The script uses the font 'Weather Icons' - https://erikflowers.github.io/weather-icons/
+
+CONDITIONS=`cat /tmp/haron/weather_icon`
+case $CONDITIONS in
+    "00.png" ) echo "<fn=4></fn>"     ;;
+    "01.png" ) echo "<fn=4></fn>"     ;;
+    "02.png" ) echo "<fn=4></fn>"     ;;
+    "03.png" ) echo "<fn=4></fn>"     ;;
+    "04.png" ) echo "<fn=4></fn>"     ;;
+    "05.png" ) echo "<fn=4></fn>"   ;;
+    "06.png" ) echo "<fn=4></fn>"     ;;
+    "07.png" ) echo "<fn=4></fn>"     ;;
+    "08.png" ) echo "<fn=4></fn>"     ;;
+    "09.png" ) echo "<fn=4></fn>"     ;;
+    "10.png" ) echo "<fn=4></fn>"     ;;
+    "11.png" ) echo "<fn=4></fn>"     ;;
+    "12.png" ) echo "<fn=4></fn>"     ;;
+    "13.png" ) echo "<fn=4></fn>"     ;;
+    "14.png" ) echo "<fn=4></fn>"     ;;
+    "15.png" ) echo "<fn=4></fn>"   ;;
+    "16.png" ) echo "<fn=4></fn>"     ;;
+    "17.png" ) echo "<fn=4></fn>"     ;;
+    "18.png" ) echo "<fn=4></fn>"     ;;
+    "19.png" ) echo "<fn=4></fn>"   ;;
+    "20.png" ) echo "<fn=4></fn>"     ;;
+    "21.png" ) echo "<fn=4></fn>"   ;;
+    "22.png" ) echo "<fn=4></fn>"   ;;
+    "23.png" ) echo "<fn=4></fn>"   ;;
+    "24.png" ) echo "<fn=4></fn>"   ;;
+    "25.png" ) echo ""             ;;
+    "26.png" ) echo "<fn=4></fn>"     ;;
+    "27.png" ) echo "<fn=4></fn>"   ;;
+    "28.png" ) echo "<fn=4></fn>"   ;;
+    "29.png" ) echo "<fn=4></fn>"   ;;
+    "30.png" ) echo "<fn=4></fn>"   ;;
+    "31.png" ) echo "<fn=4></fn>"     ;;
+    "32.png" ) echo "<fn=4></fn>"     ;;
+    "33.png" ) echo "<fn=4></fn>"   ;;
+    "34.png" ) echo "<fn=4></fn>"   ;;
+    "35.png" ) echo "<fn=4></fn>"     ;;
+    "36.png" ) echo "<fn=4></fn>"     ;;
+    "37.png" ) echo "<fn=4></fn>"     ;;
+    "38.png" ) echo "<fn=4></fn>"     ;;
+    "39.png" ) echo "<fn=4></fn>"    ;;
+    "40.png" ) echo "<fn=4></fn>"     ;;
+    "41.png" ) echo "<fn=4></fn>"    ;;
+    "42.png" ) echo "<fn=4></fn>"     ;;
+    "43.png" ) echo "<fn=4></fn>"   ;;
+    "44.png" ) echo "<fn=4></fn>"   ;;
+    "45.png" ) echo "<fn=4></fn>"     ;;
+    "46.png" ) echo "<fn=4></fn>"     ;;
+    "47.png" ) echo "<fn=4></fn>"     ;;
+    *        ) echo ""   ;;
+esac
+
+exit 0

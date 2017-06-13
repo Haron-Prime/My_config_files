@@ -23,5 +23,4 @@ urxvtd -q -f -o &
 pcmanfm -d &
 feh --bg-scale /home/haron/wall/starrynight.png &
 # stalonetray &
-# cond_state &
 exec xmonad
