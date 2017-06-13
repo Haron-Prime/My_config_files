@@ -5,6 +5,6 @@
 if (pidof dunst >/dev/null); then 
     kill $(pidof dunst)
 else 
-    notify-send -t 0 -i "/home/haron/.config/gis-weather/cur_icon.png" "$(cat ~/.config/gis-weather/cur_weather)"
+    notify-send -t 0 -i "/home/haron/.config/gis-weather/cur_icon.png" "$(cat /tmp/haron/condition)"
 fi
 exit 0
