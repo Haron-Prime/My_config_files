@@ -55,7 +55,7 @@ The "develop" branch are for testing purposes only.
 
 ![](/screenshots/herbstluftwm-1.png?raw=true)
 ![](/screenshots/herbstluftwm-3.png?raw=true)
-
+http://www.wtfpl.net
 
 ### License - © 2017 WTFPL - http://www.wtfpl.net/ 
 
@@ -74,4 +74,4 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 0. You just DO WHAT THE FUCK YOU WANT TO.
 
 ```
-![](/screenshots/wtfpl-badge-1.png?raw=true)
+![http://www.wtfpl.net](/screenshots/wtfpl-badge-1.png?raw=true)
