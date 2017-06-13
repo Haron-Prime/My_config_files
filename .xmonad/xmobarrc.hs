@@ -24,10 +24,8 @@ Config {
                               Run XMonadLog
                             , Run Com        "XMUpdate" [] "" 3000
                             , Run PipeReader "/tmp/haron/upd" "Update"
-                            -- , Run PipeReader "/home/haron/.config/gis-weather/cur_temp" "Cur_temp"
                             , Run PipeReader "/tmp/haron/cur_temp" "Cur_temp"
                             , Run PipeReader "/tmp/haron/minwin" "MW"
-                            -- , Run PipeReader "/tmp/haron/weather_icon" "WI"
                             , Run Com        "XMMPD" [] "" 10
                             , Run DynNetwork ["-S","True","-d","2","-t","<fc=#cccccc><dev>:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Com        "XMTraf" [] "" 50
