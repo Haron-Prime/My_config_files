@@ -3,7 +3,6 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 # The script uses the font 'Weather Icons' - https://erikflowers.github.io/weather-icons/
 
-# CONDITIONS=`cat ~/.config/gis-weather/cur_weather | sed '14!d' | sed -e :a -e 's/<[^>]*>//g;/</N;//ba' -e 's/^[ ][А-Яа-я]*:[ ]*//'`
 CONDITIONS=`cat /tmp/haron/weather_icon`
 case $CONDITIONS in
     "00.png" ) echo "<fn=4></fn>"     ;;
