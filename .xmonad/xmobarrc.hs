@@ -10,7 +10,6 @@ Config {
        , bgColor          = "#151515"
        , fgColor          = "#959595"
        , alpha            = 0
-       -- , position         = TopP 0 58
        , position         = Top
        , textOffset       = -1
        , iconOffset       = -1
