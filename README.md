@@ -1,4 +1,4 @@
-# My configs xmonad, xmobar, i3wm, i3blocks, sway, herbstluftwm, zsh, system configs etc
+# My configs xmonad, xmobar etc
 
 ### Attention!!!
 
@@ -25,21 +25,6 @@ The "develop" branch are for testing purposes only.
 
 ![](/screenshots/weather_in_xmobar_and_dunst.png?raw=true)
 
-#### i3wm
-
-![](/screenshots/i3wm-1.png?raw=true)
-![](/screenshots/i3wm-2.png?raw=true)
-
-#### sway
-
-![](/screenshots/sway1.png?raw=true)
-![](/screenshots/sway2.png?raw=true)
-
-#### herbstluftwm
-
-![](/screenshots/herbstluftwm-1.png?raw=true)
-![](/screenshots/herbstluftwm-3.png?raw=true)
-
 #### mc
 
 ![](/screenshots/mc.png?raw=true)
@@ -55,6 +40,22 @@ The "develop" branch are for testing purposes only.
 #### htop
 
 ![](/screenshots/htop.png?raw=true)
+
+#### i3wm
+
+![](/screenshots/i3wm-1.png?raw=true)
+![](/screenshots/i3wm-2.png?raw=true)
+
+#### sway
+
+![](/screenshots/sway1.png?raw=true)
+![](/screenshots/sway2.png?raw=true)
+
+#### herbstluftwm
+
+![](/screenshots/herbstluftwm-1.png?raw=true)
+![](/screenshots/herbstluftwm-3.png?raw=true)
+
 
 ### License - © 2017 WTFPL - http://www.wtfpl.net/ 
 
