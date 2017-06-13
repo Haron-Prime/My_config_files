@@ -12,7 +12,6 @@ ExecStart=-/usr/bin/mkdir /tmp/%u/Cache
 ExecStart=-/usr/bin/mkdir /tmp/%u/Downloads
 ExecStart=-/usr/bin/mkfifo /tmp/%u/upd
 ExecStart=-/usr/bin/mkfifo /tmp/%u/minwin
-ExecStart=-/usr/bin/mkfifo /tmp/%u/weather_icon
 ExecStart=-/usr/bin/touch /tmp/%u/.null
 ExecStart=-/usr/bin/touch /tmp/%u/MW
 ExecStart=-/usr/bin/rm -r %h/.cache
