@@ -5,6 +5,6 @@
 if (pidof dunst >/dev/null); then 
     kill $(pidof dunst)
 else 
-    mpc current | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/status/audio-volume-high.png" -t 0
+    mpc current | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/mimetypes/gnome-mime-audio-x-midi.png" -t 0
 fi
 exit 0
