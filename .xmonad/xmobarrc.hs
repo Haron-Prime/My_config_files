@@ -21,11 +21,10 @@ Config {
        , overrideRedirect = False
        , commands         = [
                               Run XMonadLog
-                            , Run Com        "XMUpdate" [] "" 3000
                             , Run PipeReader "/tmp/haron/upd" "Update"
                             , Run PipeReader "/tmp/haron/cur_temp" "Cur_temp"
                             , Run PipeReader "/tmp/haron/minwin" "MW"
-                            , Run Com        "XMMPD" [] "" 10
+                            , Run Com        "XMUpdate" [] "" 3000
                             , Run DynNetwork ["-S","True","-d","2","-t","<fc=#cccccc><dev>:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#00dd00>↓</fc><fc=#ff6500>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Com        "XMTraf" [] "" 50
                             , Run MultiCpu   ["-S","True","-t","<fc=#cccccc>CPU:</fc><fn=2> </fn><total>","-L","33","-H","66","-n","#ffff00","-h","#ff6500"] 10
@@ -37,6 +36,7 @@ Config {
                             , Run Com        "XMRom" [] "" 100
                             , Run Com        "XMUptime" [] "" 100
                             , Run Com        "XMVol" [] "" 10
+                            , Run Com        "XMMPD" [] "" 10
                             , Run Kbd        [("us", "<fn=1><fc=#95d5f5>EN</fc></fn>"), ("ru", "<fn=1><fc=#ff6500>RU</fc></fn>")]
                             , Run Com        "XMTime" [] "" 10
                             , Run Com        "XMWeatherIcon2" [] "" 600
