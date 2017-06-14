@@ -3,8 +3,8 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 if (pgrep transmission >/dev/null); then 
-    echo  "<fc=#00ff00><fn=3></fn></fc>"
+    echo  "<fn=3><fc=#00ff00></fc></fn>"
 else
-    echo  "<fc=#ff6500><fn=3></fn></fc>"
+    echo  "<fc=#ff6500><fn=3></fn></fc>"
 fi
 exit 0
