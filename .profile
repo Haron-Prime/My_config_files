@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:$HOME/.local/bin:$HOME/.cabal/bin"
+PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/bin/core_perl:$HOME/.local/bin:$HOME/.cabal/bin"
 SHELL="/bin/sh"
 
 export LANG=ru_UA.UTF-8
