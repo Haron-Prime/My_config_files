@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+if (pgrep dropbox >/dev/null); then 
+    echo  "<action=`killall dropbox` button=3><fn=3></fn></action> "
+fi
+exit 0
