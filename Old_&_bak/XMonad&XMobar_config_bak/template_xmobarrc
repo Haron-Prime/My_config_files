@@ -30,7 +30,7 @@ template = "
 
 
     %MW%
-    }{
+    ||
     <action=XMYaourt>
         %Update%
         %XMUpdate%
