@@ -166,9 +166,11 @@ template = "
     </action>
     <action=`mygtkmenu .bookmarksrc` button=13>
         <fc=#cccccc>
+
             <fn=3>
                 
             </fn>
+
         </fc>
     </action>
 
