@@ -6,7 +6,7 @@ template = "
         <icon=arch-mono-16x16.xpm/>
     </action>
 
-    <action=`mygtkmenu .menurc` button=1>
+    <action=`mygtkmenu .menurc` button=13>
         <fn=3>
             
         </fn>
