@@ -166,4 +166,12 @@ template = "
     <action=`killall dropbox` button=3>
         %XMDropbox%
     </action>
+    <action=`xdotool key 0xffeb+0x62` button=13>
+        <fc=#cccccc>
+            <fn=3>
+                
+            </fn>
+        </fc>
+    </action>
+
 "

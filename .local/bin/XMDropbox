@@ -3,6 +3,6 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 if (pgrep dropbox >/dev/null); then 
-    echo  "<fn=3></fn> "
+    echo  " <fn=3></fn> "
 fi
 exit 0
