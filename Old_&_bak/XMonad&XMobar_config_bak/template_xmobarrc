@@ -7,11 +7,9 @@ template = "
     </action>
 
     <action=`mygtkmenu .menurc` button=1>
-        <action=`mygtkmenu .bookmarksrc` button=3>
-            <fn=3>
-                
-            </fn>
-        </action>
+        <fn=3>
+            
+        </fn>
     </action>
 
     <action=`mygtkmenu .workspacesrc` button=13>
@@ -166,7 +164,7 @@ template = "
     <action=`killall dropbox` button=3>
         %XMDropbox%
     </action>
-    <action=`xdotool key 0xffeb+0x62` button=13>
+    <action=`mygtkmenu .bookmarksrc` button=13>
         <fc=#cccccc>
             <fn=3>
                 
