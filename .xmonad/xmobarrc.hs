@@ -15,7 +15,7 @@ Config {
        , iconOffset       = -1
        , lowerOnStart     = True
        , pickBroadest     = False
-       , persistent       = True
+       , persistent       = False
        , hideOnStart      = False
        , allDesktops      = False
        , overrideRedirect = True
