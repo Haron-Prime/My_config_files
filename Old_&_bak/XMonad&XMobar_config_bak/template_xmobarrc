@@ -2,7 +2,7 @@ template = "
     <fn=2>
 
     </fn>
-    <action=`XMSceenfetch` button=13>
+    <action=`XMScreenfetch` button=13>
         <icon=arch-mono-16x16.xpm/>
     </action>
 
