@@ -161,11 +161,6 @@ template = "
             </fc>
         </action>
     </action>
-
-
-    <action=`killall dropbox` button=3>
-        %XMDropbox%
-    </action>
     <action=`mygtkmenu .bookmarksrc` button=13>
         <fc=#cccccc>
 
