@@ -2,20 +2,22 @@ template = "
     <fn=2>
 
     </fn>
-    <action=`xdotool key 0xffeb+0xff1b` button=13>
+    <action=`XMScreenfetch` button=13>
         <icon=arch-mono-16x16.xpm/>
     </action>
 
-    <action=`mygtkmenu .menurc` button=1>
+    <action=`mygtkmenu .menurc` button=13>
         <fn=3>
             
         </fn>
     </action>
 
-    <action=`mygtkmenu .workspacesrc` button=13>
-        <action=`xdotool key 0xffe3+0xffe9+0xff51` button=4>
-            <action=`xdotool key 0xffe3+0xffe9+0xff53` button=5>
-                %XMonadLog%
+    <action=`xdotool key 0xffeb+0xff1b` button=1>
+        <action=`mygtkmenu .workspacesrc` button=3>
+            <action=`xdotool key 0xffe3+0xffe9+0xff51` button=4>
+                <action=`xdotool key 0xffe3+0xffe9+0xff53` button=5>
+                    %XMonadLog%
+                </action>
             </action>
         </action>
     </action>
