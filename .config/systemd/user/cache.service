@@ -11,6 +11,7 @@ ExecStart=-/usr/bin/mkdir /tmp/%u/.acestream_cache
 ExecStart=-/usr/bin/mkdir /tmp/%u/Cache
 ExecStart=-/usr/bin/mkdir /tmp/%u/Downloads
 ExecStart=-/usr/bin/mkfifo /tmp/%u/upd
+ExecStart=-/usr/bin/mkfifo /tmp/%u/wi2
 ExecStart=-/usr/bin/mkfifo /tmp/%u/minwin
 ExecStart=-/usr/bin/touch /tmp/%u/.null
 ExecStart=-/usr/bin/touch /tmp/%u/MW

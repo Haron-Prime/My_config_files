@@ -1,0 +1,5 @@
+[Unit]
+Description=Weather_icon service
+[Service]
+ExecStart=-/home/haron/.local/bin/XMWI
+StandardInput=socket
