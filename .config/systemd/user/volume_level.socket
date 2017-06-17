@@ -1,0 +1,7 @@
+[Unit]
+Description=Volume socket for Volume service
+[Socket]
+ListenStream=/run/user/1000/pulse/cli
+Accept=true
+[Install]
+WantedBy=sockets.target

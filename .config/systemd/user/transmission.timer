@@ -2,7 +2,7 @@
 Description=transmission-daemon start timer
 
 [Timer]
-OnBootSec=300
+OnBootSec=120
 Unit=transmission.service
 
 [Install]
