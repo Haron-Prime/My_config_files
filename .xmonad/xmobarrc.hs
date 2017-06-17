@@ -23,6 +23,7 @@ Config {
                               Run XMonadLog
                             , Run PipeReader "/tmp/haron/upd" "Update"
                             , Run PipeReader "/tmp/haron/minwin" "MW"
+                            -- , Run PipeReader "/tmp/haron/VO" "VO"
                             , Run PipeReader "/tmp/haron/wi_output" "WI"
                             , Run PipeReader "/tmp/haron/cur_temp" "CT"
                             , Run Com        "XMUpdate" [] "" 3000
