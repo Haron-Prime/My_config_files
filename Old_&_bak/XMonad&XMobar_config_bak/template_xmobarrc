@@ -145,9 +145,7 @@ template = "
 
 
     <action=`GWeather` button=13>
-        <fc=#cccccc>
-            %XMWeatherIcon%
-        </fc>
+        %WI%
     </action>
     <fn=2>
 
