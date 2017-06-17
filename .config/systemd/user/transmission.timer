@@ -1,0 +1,9 @@
+[Unit]
+Description=transmission-daemon start timer
+
+[Timer]
+OnBootSec=300
+Unit=transmission.service
+
+[Install]
+WantedBy=timers.target
