@@ -1,0 +1,6 @@
+[Unit]
+Description=Weather_icon Socket
+[Socket]
+ListenFIFO=/tmp/haron/wi_socket
+[Install]
+WantedBy=sockets.target
