@@ -102,9 +102,9 @@ viewShift            =  doF . liftM2 (.) W.greedyView W.shift
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
     --Applications management
-      ((0,                         0x1008ff13),  spawn "/usr/bin/pulseaudio-ctl up 5")                                    --XF86AudioRaiseVolume
-    , ((0,                         0x1008ff11),  spawn "/usr/bin/pulseaudio-ctl down 5")                                  --XF86AudioLowerVolume
-    , ((0,                         0x1008ff12),  spawn "/usr/bin/pulseaudio-ctl mute")                                    --XF86AudioMute
+      ((0,                         0x1008ff13),  spawn "/usr/bin/pulseaudio-ctl up 5 && XMVol2")                                    --XF86AudioRaiseVolume
+    , ((0,                         0x1008ff11),  spawn "/usr/bin/pulseaudio-ctl down 5 && XMVol2")                                  --XF86AudioLowerVolume
+    , ((0,                         0x1008ff12),  spawn "/usr/bin/pulseaudio-ctl mute && XMVol2")                                    --XF86AudioMute
     , ((mod1Mask,                        0x60),  spawn "mpc toggle")                                                      --Alt+grave
     , ((0,                         0x1008ff14),  spawn "mpc toggle")                                                      --XF86Play
     , ((0,                         0x1008ff15),  spawn "mpc stop")                                                        --XF86AudioStop
@@ -355,7 +355,7 @@ myLogHook = do
                                         }
 
 -- StartupHook
-myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "echo > /tmp/haron/minwin" <+> spawn "gis-weather"
+myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "echo > /tmp/haron/minwin" <+> spawn "gis-weather" <+> spawn "XMVol2"
 
 myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                   terminal           = myTerminal
