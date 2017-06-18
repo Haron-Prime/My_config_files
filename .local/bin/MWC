@@ -2,8 +2,8 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-MW1=/tmp/$USER/MW
-MW2=/tmp/$USER/minwin
+MW1=/tmp/$USER/MW1
+MW2=/tmp/$USER/MW2
 F1=`cat $MW1`
 F2=$(( $F1 - 1 ))
 if [[ $F2 -eq 1 ]]; then 

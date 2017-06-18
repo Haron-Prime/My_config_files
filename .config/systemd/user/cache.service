@@ -10,12 +10,12 @@ ExecStart=-/usr/bin/mkdir /tmp/%u/.cache
 ExecStart=-/usr/bin/mkdir /tmp/%u/.acestream_cache
 ExecStart=-/usr/bin/mkdir /tmp/%u/Cache
 ExecStart=-/usr/bin/mkdir /tmp/%u/Downloads
-ExecStart=-/usr/bin/mkfifo /tmp/%u/upd
+ExecStart=-/usr/bin/mkfifo /tmp/%u/UP
 ExecStart=-/usr/bin/mkfifo /tmp/%u/wi_output
 ExecStart=-/usr/bin/mkfifo /tmp/%u/VO
-ExecStart=-/usr/bin/mkfifo /tmp/%u/minwin
+ExecStart=-/usr/bin/mkfifo /tmp/%u/MW2
+ExecStart=-/usr/bin/touch /tmp/%u/MW1
 ExecStart=-/usr/bin/touch /tmp/%u/.null
-ExecStart=-/usr/bin/touch /tmp/%u/MW
 ExecStart=-/usr/bin/rm -r %h/.cache
 ExecStart=-/usr/bin/ln -s /tmp/%u/.cache %h/.cache
 
