@@ -2,10 +2,10 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-ST=`cat $HOME/.config/mpd/state | grep state | tail -1 | cut -d \  -f 2`
+ST=`mpc | grep "\[*\]" | cut -d \  -f 1 | sed -e 's/[^a-z]//g'`
 case $ST in
-    play  ) echo "<fn=3></fn>" ;;
-    pause ) echo "<fn=3></fn>" ;;
-    stop  ) echo "<fn=3></fn>" ;;
+    playing  ) echo "<fn=3></fn>" ;;
+    paused   ) echo "<fn=3></fn>" ;;
+    *        ) echo "<fn=3></fn>" ;;
 esac
 exit 0
