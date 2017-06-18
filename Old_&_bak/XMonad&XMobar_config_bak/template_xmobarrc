@@ -98,9 +98,9 @@ template = "
     </action>
 
 
-    <action=`pulseaudio-ctl up && XMVol2` button=5>
-        <action=`pulseaudio-ctl down && XMVol2` button=4>
-            <action=`pulseaudio-ctl mute && XMVol2` button=1>
+    <action=`XMVolUp` button=5>
+        <action=`XMVolDown` button=4>
+            <action=`XMVolMute` button=1>
                 <action=`XMPavucontrol` button=3>
                     %VO%
                 </action>
