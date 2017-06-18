@@ -355,7 +355,7 @@ myLogHook = do
                                         }
 
 -- StartupHook
-myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "echo > /tmp/haron/minwin" <+> spawn "gis-weather" <+> spawn "XMVol2"
+myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "echo > /tmp/haron/MW2" <+> spawn "gis-weather" <+> spawn "XMVol2"
 
 myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                   terminal           = myTerminal
