@@ -118,7 +118,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff1d),  spawn "XMGalculator")                                                    --XF86Calculator
     , ((0,                         0x1008ff1b),  namedScratchpadAction mynameScratchpads "MyHtop")                        --XF86Search
     , ((0,                         0x1008ff77),  namedScratchpadAction mynameScratchpads "MyPlayer")                      --XF86Save
-    , ((0,                         0x1008ff46),  spawn "GWeather")                                                        --XF86Launch6
+    , ((0,                         0x1008ff46),  spawn "XMR")                                                             --XF86Launch6
     , ((0,                         0x1008ff2f),  spawn "i3lock -i /home/haron/wall/starrynight.png")                      --XF86Sleep
     , ((0,                         0x1008ff56),  namedScratchpadAction mynameScratchpads "Oblogout")                      --XF86Close
     , ((0,                         0x1008ff73),  spawn "compreboot")                                                      --XF86Reload
