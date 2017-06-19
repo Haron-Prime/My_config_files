@@ -37,7 +37,7 @@ Config {
                             , Run Memory     ["-S","True","-t","<fc=#cccccc>RAM:</fc><fn=2> </fn><usedratio>","-L","75","-H","90","-n","#ffff00","-h","#ff6500"] 50
                             , Run Swap       ["-S","True","-t","<usedratio>","-L","50","-H","75","-n","#ffff00","-h","#ff6500"] 50
                             , Run Com        "XMRom" [] "" 100
-                            , Run Com        "XMUptime" [] "" 100
+                            , Run Com        "XMUptime" [] "" 600
                             , Run Com        "XMMPD" [] "" 10
                             , Run Kbd        [("us", "<fn=1><fc=#95d5f5>EN</fc></fn>"), ("ru", "<fn=1><fc=#ff6500>RU</fc></fn>")]
                             , Run Com        "XMTime" [] "" 10
