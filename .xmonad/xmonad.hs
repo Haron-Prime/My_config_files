@@ -113,7 +113,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff30),  spawn "XMTransgui")                                                      --XF86Favorites
     , ((0,                         0x1008ff18),  spawn myBrowser)                                                         --XF86HomePage
     , ((0,                         0x1008ff19),  spawn "thunderbird")                                                     --XF86Mail
-    -- , ((0,                         0x1008ff33),  spawn "pcmanfm")                                                         --XF86MyComputer
+    , ((0,                         0x1008ff33),  spawn "pcmanfm")                                                         --XF86MyComputer
     , ((0,                         0x1008ff5d),  spawn "pcmanfm")                                                         --XF86Explorer
     , ((0,                         0x1008ff1d),  spawn "XMGalculator")                                                    --XF86Calculator
     , ((0,                         0x1008ff1b),  namedScratchpadAction mynameScratchpads "MyHtop")                        --XF86Search
@@ -141,7 +141,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask .|. controlMask,        0x6e),  namedScratchpadAction mynameScratchpads "MyNotes")                       --Alt+Ctrl+N
     -- , ((mod1Mask,                        0x6f),  spawn "opera12")                                                         --Alt+O
     -- , ((mod1Mask,                        0x70),  namedScratchpadAction mynameScratchpads "MyPlayer")                      --Alt+P
-    -- , ((mod1Mask,                        0x71),  namedScratchpadAction mynameScratchpads "Oblogout")                      --Alt+Q
+    , ((mod1Mask,                        0x71),  namedScratchpadAction mynameScratchpads "Oblogout")                      --Alt+Q
     , ((mod1Mask,                        0x72),  namedScratchpadAction mynameScratchpads "MyFM")                          --Alt+R
     , ((mod1Mask,                        0x73),  spawn "subl3")                                                           --Alt+S
     -- , ((mod1Mask,                        0x74),  spawn "tor-browser")                                                     --Alt+T
