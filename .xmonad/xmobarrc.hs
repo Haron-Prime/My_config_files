@@ -3,7 +3,12 @@
 
 Config {
          font             = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
-       , additionalFonts  = ["xft:Terminus (TTF):size=12:weight=bold:antialias=true:hinting=true","xft:Terminus Re33:pixelsize=4","xft:FontAwesome:pixelsize=14","xft:Weather Icons:pixelsize=14"]
+       , additionalFonts  = [
+                             "xft:Terminus (TTF):size=12:weight=bold:antialias=true:hinting=true"
+                            ,"xft:Terminus Re33:pixelsize=4"
+                            ,"xft:FontAwesome:pixelsize=14"
+                            ,"xft:Weather Icons:pixelsize=14"
+                            ]
        , iconRoot         = "/home/haron/.xmonad/resources"
        , borderColor      = "#151515"
        , border           = NoBorder
