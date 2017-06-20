@@ -73,7 +73,7 @@ alias gm='git checkout master'
 alias gmf='git merge --no-ff'
 alias gl='git log'
 alias gits='git status'
-alias gF="gf && gsync && bb && gf && mcf"
+alias GF="gf && gsync && bb && gf && mcf"
 
 
 # цветной вывод с помощью grc
