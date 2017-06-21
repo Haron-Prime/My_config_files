@@ -3,5 +3,5 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 MYUP=`uptime | cut -d , -f 1 | awk '{print $3 $4}'`
-echo '<fc=#cccccc>Up:</fc><fn=2> </fn>'$MYUP 
+echo '<fc=#95d5f5>Up:</fc><fn=2> </fn>'$MYUP 
 exit 0

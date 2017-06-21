@@ -4,10 +4,10 @@
 
 ROM=`df -h | grep -w / | tr -s \  | cut -d \  -f 5 | cut -c 1-2`
 if [ $ROM -gt 84 ]; then 
-    echo '<fc=#cccccc>ROM:</fc><fn=2> </fn><fc=#ff6500>'$ROM'%</fc>'
+    echo '<fc=#95d5f5>ROM:</fc><fn=2> </fn><fc=#ff6500>'$ROM'%</fc>'
 elif [ $ROM -gt 59 ]; then 
-    echo '<fc=#cccccc>ROM:</fc><fn=2> </fn><fc=#ffff00>'$ROM'%</fc>'
+    echo '<fc=#95d5f5>ROM:</fc><fn=2> </fn><fc=#ffff00>'$ROM'%</fc>'
 else 
-    echo '<fc=#cccccc>ROM:</fc><fn=2> </fn>'$ROM'%'
+    echo '<fc=#95d5f5>ROM:</fc><fn=2> </fn>'$ROM'%'
 fi
 exit 0
