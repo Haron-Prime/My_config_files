@@ -3,9 +3,9 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 ROM3=`df -h | grep 320G | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]//'`
-if [ $ROM3 -gt 84 ]; then 
+if [ $ROM3 -ge 90 ]; then 
     echo '<fc=#ff6500>'$ROM3'%</fc>'
-elif [ $ROM3 -gt 59 ]; then 
+elif [ $ROM3 -ge 75 ]; then 
     echo '<fc=#ffff00>'$ROM3'%</fc>'
 else 
     echo $ROM3'%'
