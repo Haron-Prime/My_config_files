@@ -34,7 +34,7 @@ format() {
 
 VOL=`volume | format`
 if [[ $VOL = "MUTE" ]]; then 
-  echo '<fc=#95d5f5>Vol:</fc><fn=2> </fn><fc=#e50>'$VOL'</fc>'
+  echo '<fc=#ccc>Vol:</fc><fn=2> </fn><fc=#e50>'$VOL'</fc>'
 else 
-  echo '<fc=#95d5f5>Vol:</fc><fn=2> </fn>'$VOL
+  echo '<fc=#ccc>Vol:</fc><fn=2> </fn>'$VOL
 fi

@@ -5,16 +5,16 @@
 temp1=`sensors | grep Board | tr -s \  | cut -d \  -f 3 | cut -c 2-3`
 temp2=`sensors | grep Board | tr -s \  | cut -d \  -f 3`
 if [ $temp1 -ge 58 ]; then 
-    echo '<fc=#95d5f5>MB:</fc><fn=2> </fn><fc=#ff6500>'$temp2'</fc>'
+    echo '<fc=#ccc>MB:</fc><fn=2> </fn><fc=#e50>'$temp2'</fc>'
 elif [ $temp1 -ge 54 ]; then 
-    echo '<fc=#95d5f5>MB:</fc><fn=2> </fn><fc=#ffad00>'$temp2'</fc>'
+    echo '<fc=#ccc>MB:</fc><fn=2> </fn><fc=#fa0>'$temp2'</fc>'
 elif [ $temp1 -ge 50 ]; then 
-    echo '<fc=#95d5f5>MB:</fc><fn=2> </fn><fc=#ffff00>'$temp2'</fc>'
+    echo '<fc=#ccc>MB:</fc><fn=2> </fn><fc=#ffff00>'$temp2'</fc>'
 elif [ $temp1 -ge 46 ]; then 
-    echo '<fc=#95d5f5>MB:</fc><fn=2> </fn><fc=#dddd00>'$temp2'</fc>'
+    echo '<fc=#ccc>MB:</fc><fn=2> </fn><fc=#dd0>'$temp2'</fc>'
 elif [ $temp1 -ge 42 ]; then 
-    echo '<fc=#95d5f5>MB:</fc><fn=2> </fn><fc=#bbbb00>'$temp2'</fc>'
+    echo '<fc=#ccc>MB:</fc><fn=2> </fn><fc=#bb0>'$temp2'</fc>'
 else 
-    echo '<fc=#95d5f5>MB:</fc><fn=2> </fn>'$temp2
+    echo '<fc=#ccc>MB:</fc><fn=2> </fn>'$temp2
 fi
 exit 0
