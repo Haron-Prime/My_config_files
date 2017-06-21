@@ -7,10 +7,10 @@
 
 alias x='exit'
 
-alias xx='startx ~/.xinitrc-xmonad'
-alias xh='startx ~/.xinitrc-herbstluftwm'
-alias xi='startx ~/.xinitrc-i3'
-alias xa='startx ~/.xinitrc-awesome'
+alias xx='startx $HOME/.xinitrc-xmonad'
+alias xh='startx $HOME/.xinitrc-herbstluftwm'
+alias xi='startx $HOME/.xinitrc-i3'
+alias xa='startx $HOME/.xinitrc-awesome'
 
 alias sctl='systemctl'
 alias jctl='journalctl'
@@ -20,8 +20,8 @@ alias jctlerr='journalctl -b -p3 g'
 alias jctlc='sudo journalctl --vacuum-size=20000'
 
 alias rein='sudo renice -5 $(pidof -s Xorg)'
-alias dump='sudo screendump > ~/output.txt'
-alias fonts='fc-cache -fv ~/.fonts && sudo fc-cache -fv'
+alias dump='sudo screendump > $HOME/output.txt'
+alias fonts='fc-cache -fv $HOME/.fonts && sudo fc-cache -fv'
 alias psc='ps xawf -eo pid,user,cgroup,args'
 alias dirf='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/|-\1/"'
 
@@ -39,7 +39,7 @@ alias wget='wget -c --progress=bar'
 alias ttmux='tmuxinator default'
 alias tmuxa='tmux attach'
 
-alias tv='mpv ~/Video/multinet-play.m3u'
+alias tv='mpv $HOME/Video/multinet-play.m3u'
 alias asl='acestream-launcher --player mpv'
 
 alias gzip='tar -cvzf'
@@ -53,8 +53,8 @@ alias pacfs='pacman -Qo'
 
 alias sv='s -b vivaldi-snapshot'
 
-alias mcf='cd ~/git/My_config_files'
-alias bb='cd ~/git/BitBuket/my_config_files'
+alias mcf='cd $HOME/git/My_config_files'
+alias bb='cd $HOME/git/BitBuket/my_config_files'
 alias gsync='rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/BitBuket/my_config_files'
 
 # alias mfs='sudo mhddfs /media/haron/BKP,/media/haron/Data /mnt/all -o default_permissions,allow_other'
@@ -73,7 +73,7 @@ alias gm='git checkout master'
 alias gmf='git merge --no-ff'
 alias gl='git log'
 alias gits='git status'
-alias GF="gf && gsync && bb && gf && mcf"
+alias GF='cd $HOME/git/My_config_files && git add --all && git commit -m "Update" && git push && rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/BitBuket/my_config_files && cd $HOME/git/BitBuket/my_config_files && git add --all && git commit -m "Update" && git push && cd $HOME/git/My_config_files'
 
 
 # цветной вывод с помощью grc
