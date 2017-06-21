@@ -175,18 +175,6 @@ submenu = Office
     cmd  = libreoffice --math
     icon = /usr/share/icons/nouveGnomeGray/24x24/apps/libreoffice-math.png
 
-    item = WPS Spreadsheets
-    cmd  = /usr/bin/et %f
-    icon = /usr/share/icons/nouveGnomeGray/24x24/mimetypes/application-vnd.oasis.opendocument.spreadsheet.png
-
-    item = WPS Writer
-    cmd  = /usr/bin/wps %f
-    icon = /usr/share/icons/nouveGnomeGray/24x24/mimetypes/application-vnd.oasis.opendocument.text.png
-
-    item = WPS Presentation
-    cmd  = /usr/bin/wpp %f
-    icon = /usr/share/icons/nouveGnomeGray/24x24/mimetypes/application-vnd.oasis.opendocument.presentation.png
-
     item = FoxitReader
     cmd  = FoxitReader
     icon = /usr/share/icons/nouveGnomeGray/24x24/mimetypes/gnome-mime-application-pdf.png
