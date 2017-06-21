@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+ROM2=`df -h | grep Data | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]//'`
+if [ $ROM2 -gt 84 ]; then 
+    echo '<fc=#ff6500>'$ROM2'%</fc>'
+elif [ $ROM2 -gt 59 ]; then 
+    echo '<fc=#ffff00>'$ROM2'%</fc>'
+else 
+    echo $ROM2'%'
+fi
+exit 0
