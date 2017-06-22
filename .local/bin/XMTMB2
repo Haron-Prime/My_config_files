@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+temp1=`sensors | grep Board | tr -s \  | cut -d \  -f 3 | cut -c 2-3`
+temp2=`sensors | grep Board | tr -s \  | cut -d \  -f 3`
+
+IN=("30" "31" "32" "33" "34" "35" "36" "37" "38" "39" "40" "41" "42" "43" "44" "45" "46" "47" "48" "49" "50" "51" "52" "53" "54" "55" "56" "57" "58" "59" "60" "61" "62" "63" "64" "65" "66" "67" "68" "69" "70" "71" "72" "73" "74" "75")
+OUT=("959595" "9A9A8E" "9F9F87" "A4A480" "A9A979" "AEAE72" "B3B36B" "B8B864" "BDBD5D" "C2C256" "C7C74F" "CCCC48" "D1D141" "D6D63A" "DBDB33" "E0E02C" "E5E525" "EAEA1E" "EFEF17" "F4F410" "F9F909" "F9F209" "F9EB09" "F9E409" "F9DD09" "F9D609" "F9CF09" "F9C809" "F9C109" "F9BA09" "F9B309" "F9AC09" "F9A509" "F99E09" "F99709" "F99009" "F98909" "F98209" "F97B09" "F97409" "F96D09" "F96609" "F95F09" "F95809" "F95109")
+for i in $(seq 0 ${#IN[@]}); do
+    if [[ "$temp1" == "${IN[$i]}" ]]; then
+      echo "<fc=#"${OUT[$i]}">"$temp2"</fc>"
+    fi
+done
+exit 0
