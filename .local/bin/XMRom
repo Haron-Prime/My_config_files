@@ -6,10 +6,12 @@ ROM1=`df -h | grep -w / | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]
 OUT1=`
     if [ $ROM1 -ge 90 ]; then 
         echo '<fc=#e90>'$ROM1'%</fc>'
-    elif [ $ROM1 -ge 75 ]; then 
+    elif [ $ROM1 -ge 80 ]; then 
         echo '<fc=#e90>'$ROM1'%</fc>'
-    elif [ $ROM1 -ge 60 ]; then 
+    elif [ $ROM1 -ge 70 ]; then 
         echo '<fc=#ee0>'$ROM1'%</fc>'
+    elif [ $ROM1 -ge 600 ]; then 
+        echo '<fc=#bb0>'$ROM1'%</fc>'
     else 
         echo ''$ROM1'%'
     fi
@@ -18,10 +20,12 @@ ROM2=`df -h | grep Data | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]
 OUT2=`
     if [ $ROM2 -ge 90 ]; then 
         echo '<fc=#e50>'$ROM2'%</fc>'
-    elif [ $ROM2 -ge 75 ]; then 
+    elif [ $ROM2 -ge 80 ]; then 
         echo '<fc=#e90>'$ROM2'%</fc>'
-    elif [ $ROM1 -ge 60 ]; then 
+    elif [ $ROM2 -ge 70 ]; then 
         echo '<fc=#ee0>'$ROM2'%</fc>'
+    elif [ $ROM2 -ge 600 ]; then 
+        echo '<fc=#bb0>'$ROM2'%</fc>'
     else 
         echo $ROM2'%'
     fi
@@ -30,10 +34,12 @@ ROM3=`df -h | grep 320G | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]
 OUT3=`
     if [ $ROM3 -ge 90 ]; then 
         echo '<fc=#e50>'$ROM3'%</fc>'
-    elif [ $ROM3 -ge 75 ]; then 
+    elif [ $ROM3 -ge 80 ]; then 
         echo '<fc=#e90>'$ROM3'%</fc>'
-    elif [ $ROM1 -ge 60 ]; then 
+    elif [ $ROM3 -ge 70 ]; then 
         echo '<fc=#ee0>'$ROM3'%</fc>'
+    elif [ $ROM3 -ge 600 ]; then 
+        echo '<fc=#bb0>'$ROM3'%</fc>'
     else 
         echo $ROM3'%'
     fi
@@ -42,10 +48,12 @@ ROM4=`df -h | grep BKP | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]/
 OUT4=`
     if [ $ROM4 -ge 90 ]; then 
         echo '<fc=#e50>'$ROM4'%</fc>'
-    elif [ $ROM4 -ge 75 ]; then 
+    elif [ $ROM4 -ge 80 ]; then 
         echo '<fc=#e90>'$ROM4'%</fc>'
-    elif [ $ROM1 -ge 60 ]; then 
+    elif [ $ROM4 -ge 70 ]; then 
         echo '<fc=#ee0>'$ROM4'%</fc>'
+    elif [ $ROM4 -ge 600 ]; then 
+        echo '<fc=#bb0>'$ROM4'%</fc>'
     else 
         echo $ROM4'%'
     fi
