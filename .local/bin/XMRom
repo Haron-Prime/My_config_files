@@ -10,7 +10,7 @@ OUT1=`
         echo '<fc=#e90>'$ROM1'%</fc>'
     elif [ $ROM1 -ge 70 ]; then 
         echo '<fc=#ee0>'$ROM1'%</fc>'
-    elif [ $ROM1 -ge 600 ]; then 
+    elif [ $ROM1 -ge 60 ]; then 
         echo '<fc=#bb0>'$ROM1'%</fc>'
     else 
         echo ''$ROM1'%'
@@ -24,7 +24,7 @@ OUT2=`
         echo '<fc=#e90>'$ROM2'%</fc>'
     elif [ $ROM2 -ge 70 ]; then 
         echo '<fc=#ee0>'$ROM2'%</fc>'
-    elif [ $ROM2 -ge 600 ]; then 
+    elif [ $ROM2 -ge 60 ]; then 
         echo '<fc=#bb0>'$ROM2'%</fc>'
     else 
         echo $ROM2'%'
@@ -38,7 +38,7 @@ OUT3=`
         echo '<fc=#e90>'$ROM3'%</fc>'
     elif [ $ROM3 -ge 70 ]; then 
         echo '<fc=#ee0>'$ROM3'%</fc>'
-    elif [ $ROM3 -ge 600 ]; then 
+    elif [ $ROM3 -ge 60 ]; then 
         echo '<fc=#bb0>'$ROM3'%</fc>'
     else 
         echo $ROM3'%'
@@ -52,7 +52,7 @@ OUT4=`
         echo '<fc=#e90>'$ROM4'%</fc>'
     elif [ $ROM4 -ge 70 ]; then 
         echo '<fc=#ee0>'$ROM4'%</fc>'
-    elif [ $ROM4 -ge 600 ]; then 
+    elif [ $ROM4 -ge 60 ]; then 
         echo '<fc=#bb0>'$ROM4'%</fc>'
     else 
         echo $ROM4'%'
