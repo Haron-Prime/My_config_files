@@ -2,8 +2,8 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-temp1=`sensors | grep Board | tr -s \  | cut -d \  -f 3 | cut -c 2-3`
-temp2=`sensors | grep Board | tr -s \  | cut -d \  -f 3`
+temp1=`sensors | grep temp2 | tr -s \  | cut -d \  -f 2 | cut -c 2-3`
+temp2=`sensors | grep temp2 | tr -s \  | cut -d \  -f 2`
 
 IN=("30" "31" "32" "33" "34" "35" "36" "37" "38" "39" "40" "41" "42" "43" "44" "45" "46" "47" "48" "49" "50" "51" "52" "53" "54" "55" "56" "57" "58" "59" "60" "61" "62" "63" "64" "65" "66" "67" "68" "69" "70" "71" "72" "73" "74" "75" "76" "77")
 OUT=("959595" "9B9B8C" "A1A183" "A7A77A" "ADAD71" "B3B368" "B9B95F" "BFBF56" "C5C54D" "CBCB44" "D1D13B" "D7D732" "DDDD29" "E3E320" "E9E917" "EFEF0E" "F5F505" "FBFB00" "FBF100" "FBE700" "FBDD00" "FBD300" "FBC900" "FBBF00" "FBB500" "FBAB00" "FBA100" "FB9700" "FB8D00" "FB8300" "FB7900" "FB6F00" "FB6500" "FB5B00" "FB5100" "FB4700" "FB3D00" "FB3300" "FB2900" "FB1F00" "FB1500" "FB0B00" "FB0100" "FB0000" "FC0000" "FD0000" "FE0000" "FF0000")
