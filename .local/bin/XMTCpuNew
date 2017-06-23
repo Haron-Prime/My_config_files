@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+temp1=`sensors | grep temp2 | tr -s \  | cut -d \  -f 2 | cut -c 2-3`
+temp2=`sensors | grep temp2 | tr -s \  | cut -d \  -f 2`
+
+IN=("30" "31" "32" "33" "34" "35" "36" "37" "38" "39" "40" "41" "42" "43" "44" "45" "46" "47" "48" "49" "50" "51" "52" "53" "54" "55" "56" "57" "58" "59" "60" "61" "62" "63" "64" "65" "66" "67" "68" "69" "70" "71" "72" "73" "74" "75" "76" "77" "78" "79" "80" "81" "82")
+OUT=("00FF00" "0AFF00" "14FF00" "1EFF00" "28FF00" "32FF00" "3CFF00" "46FF00" "50FF00" "5AFF00" "64FF00" "6EFF00" "78FF00" "82FF00" "8CFF00" "96FF00" "A0FF00" "AAFF00" "B4FF00" "BEFF00" "C8FF00" "D2FF00" "DCFF00" "E6FF00" "F0FF00" "FAFF00" "FFFF00" "FFFA00" "FFF000" "FFE600" "FFDC00" "FFD200" "FFC800" "FFBE00" "FFB400" "FFAA00" "FFA000" "FF9600" "FF8C00" "FF8200" "FF7800" "FF6E00" "FF6400" "FF5A00" "FF5000" "FF4600" "FF3C00" "FF3200" "FF2800" "FF1E00" "FF1400" "FF0A00" "FF0000")
+for i in $(seq 0 ${#IN[@]}); do
+    if [[ "$temp1" == "${IN[$i]}" ]]; then
+      echo "<fc=#"${OUT[$i]}">"$temp2"</fc>"
+    fi
+done
+exit 0
