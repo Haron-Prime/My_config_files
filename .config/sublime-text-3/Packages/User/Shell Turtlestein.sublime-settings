@@ -1,0 +1,9 @@
+{
+    "surround_cmd": ["d2h", ""],
+    "exec_args": {},
+    "cmd_settings": [],
+    "input_widget": {
+        // overridden for silly non-unixy OSes
+        "syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+    }
+}
