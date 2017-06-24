@@ -60,7 +60,8 @@ alias gsync='rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/
 # alias mfs='sudo mhddfs /media/haron/BKP,/media/haron/Data /mnt/all -o default_permissions,allow_other'
 # alias gmx='mount https://storage-file-eu.gmx.com'
 
-alias d2h='printf \\n\#%02X%02X%02X `xclip -o`'
+# alias d2h='printf \\n\#%02X%02X%02X `xclip -o`'
+alias d2hpp='printf \\n\#%02X%02X%02X `xclip -o` | xclip -selection clipboard'
 alias d2hp='printf \#%02X%02X%02X `xclip -o` | xclip -selection clipboard'
 
 # my git aliases
