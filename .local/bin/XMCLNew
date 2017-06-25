@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+PREV_TOTAL=0
+PREV_IDLE=0
 while true; do
   CPU=(`cat /proc/stat | grep '^cpu '`)
   unset CPU[0]
