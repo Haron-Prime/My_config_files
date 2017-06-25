@@ -1,6 +1,0 @@
-[
-  {
-    "caption": "ShellCommand",
-    "command1": "printf \#%02X%02X%02X `xclip -o` | xclip -selection clipboard"
-  }
-]
