@@ -25,7 +25,7 @@ while true; do
   USAGE=`
       for i in $(seq 0 ${#IN[@]}); do
           if [[ "$DIFF_USAGE" == "${IN[$i]}" ]]; then
-            echo -en "<fc=#${OUT[$i]}>$DIFF_USAGE%</fc>"
+            echo "<fc=#${OUT[$i]}>$DIFF_USAGE%</fc>"
           fi
       done
     `
