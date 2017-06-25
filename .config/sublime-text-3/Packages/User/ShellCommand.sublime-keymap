@@ -1,0 +1,58 @@
+[
+  {
+    /**
+     * Emulate Emacs' C-u M-!
+     */
+
+    "keys": ["ctrl+alt+shift+1"],
+    "command": "shell_command",
+    "args": {
+      "target": "point"
+    }
+  },
+  // {
+  //   /**
+  //    * Emulate Emacs' M-!
+  //    */
+
+  //   "keys": ["alt+shift+1"],
+  //   "command": "shell_command"
+  // },
+  {
+    "keys": ["alt+shift+1"],
+    "command": "set_layout",
+    "args": {
+        "cols": [0, 1],
+        "rows": [0, 1],
+        "cells": [[0, 0, 1, 1]]
+     }
+  },
+  {
+    /**
+     * Emulate Emacs' C-u M-|
+     */
+
+    "keys": ["ctrl+alt+shift+\\"],
+    "command": "shell_command_on_region",
+    "args": {
+      "target": "point"
+    }
+  },
+  {
+    /**
+     * Emulate Emacs' M-|
+     */
+
+    "keys": ["alt+shift+\\"],
+    "command": "shell_command_on_region"
+  },
+  {
+    /**
+     * Emulate Emacs' 'g'
+     */
+
+    "keys": ["g"],
+    "command": "shell_command_refresh",
+    "context": [{ "key": "setting.ShellCommand" }]
+  }
+]

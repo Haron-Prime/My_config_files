@@ -1,0 +1,9 @@
+[Unit]
+Description=CPU load calculation service
+
+[Service]
+Type=notify
+ExecStart=-/home/haron/.local/bin/XMCpuLoad
+
+[Install]
+WantedBy=default.target

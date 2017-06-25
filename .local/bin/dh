@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+printf \"\#%02X%02X%02X\"\  `xclip -o` | xclip -selection clipboard | xdotool key Control_L+v
+exit 0
