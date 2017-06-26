@@ -2,12 +2,10 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-while true; do
-    UPD=`checkupdates | wc -l`
-    if [ $UPD -gt 0 ]; then 
-        echo '<fn=3><fc=#e50>  </fc></fn> <fc=#cccccc>Update:</fc><fn=2> </fn><fn=1><fc=#e50>'$UPD'<fn=2> </fn>pkg</fc></fn>' > /tmp/haron/UP
-    else 
-        echo > /tmp/haron/UP
-    fi
-    sleep 300
-done
+
+UPD=`checkupdates | wc -l`
+if [ $UPD -gt 0 ]; then 
+    echo '<fn=3><fc=#e50>  </fc></fn> <fc=#cccccc>Update:</fc><fn=2> </fn><fnfc=#e50>'$UPD'<fn=2> </fn>pkg</fc></fn>' > /tmp/haron/UP
+else 
+    echo > /tmp/haron/UP
+fi
