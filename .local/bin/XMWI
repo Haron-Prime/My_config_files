@@ -8,7 +8,7 @@ II=("00.png" "01.png" "02.png" "03.png" "04.png" "05.png" "06.png" "07.png" "08.
 IO=("" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "")
 for i in $(seq 0 ${#II[@]}); do
     if [[ "$CONDITIONS" == "${II[$i]}" ]]; then
-      echo "<fc=#dddddd><fn=4>${IO[$i]}</fn></fc>" > /tmp/haron/wi_output
+      echo "<fc=#dddddd><fn=4>${IO[$i]}</fn></fc>" > /tmp/haron/WI
     fi
 done
 exit 0
