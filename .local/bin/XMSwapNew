@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+    ALL=`free | grep Swap | awk '{print $2}'`
+    AV=`free | grep Swap | awk '{print $4}'`
+    PRC=`bc -l <<< "$ALL/100"`
+    FREE=`bc <<< "$AV/$PRC"`
+    USED=`bc <<< "100-$FREE"`
+while true; do
+    if [ $USED -gt 50 ] ; then
+          tmp="0$(printf "%x\n" $((255-($USED-50)*5)))"
+          echo "<fc=#ff${tmp: -2}00>$USED%</fc>" > /tmp/haron/SU
+          else tmp="0$(printf "%x\n" $(( 5*$USED )))ff00"
+          echo "<fc=#${tmp: -6}>$USED%</fc>" > /tmp/haron/SU
+    fi
+    sleep 5
+done
