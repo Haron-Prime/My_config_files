@@ -1,0 +1,10 @@
+[Unit]
+Description=ROM status update timer
+
+[Timer]
+OnBootSec=1
+OnUnitActiveSec=30
+Unit=rom.service
+
+[Install]
+WantedBy=timers.target

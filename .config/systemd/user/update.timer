@@ -1,0 +1,10 @@
+[Unit]
+Description=System update timer
+
+[Timer]
+OnBootSec=30
+OnUnitActiveSec=300
+Unit=update.service
+
+[Install]
+WantedBy=timers.target
