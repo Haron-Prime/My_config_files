@@ -25,5 +25,7 @@ feh --bg-scale /home/haron/wall/starrynight.png &
 XMCLNew &
 XMMemNew &
 XMSwapNew &
+XMUpdate &
+XMRomNew &
 # stalonetray &
 exec xmonad

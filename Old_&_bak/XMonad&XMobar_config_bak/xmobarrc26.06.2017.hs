@@ -36,12 +36,17 @@ Config {
                             , Run PipeReader "/tmp/haron/VO" "VO"
                             , Run PipeReader "/tmp/haron/wi_output" "WI"
                             , Run PipeReader "/tmp/haron/CT" "CT"
+                            -- , Run Com        "XMUpdate" [] "" 3000
                             , Run Com        "XMTrans" [] "" 100
                             , Run DynNetwork ["-S","True","-d","2","-t","<fc=#ccc><dev>:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#0e0>↓</fc><fc=#e50>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Com        "XMTraf" [] "" 50
+                            -- , Run MultiCpu   ["-S","True","-t","<fc=#ccc>CPU:</fc><fn=2> </fn><total>","-L","33","-H","66","-n","#ee0","-h","#e50"] 10
                             , Run Com        "XMTCpuNew" [] "" 10
                             , Run Com        "XMTMBNew" [] "" 10
                             , Run Com        "XMTGpuNew" [] "" 10
+                            -- , Run Memory     ["-S","True","-t","<fc=#ccc>MEM:</fc><fn=2> </fn><usedratio>","-L","75","-H","90","-n","#ee0","-h","#e50"] 50
+                            -- , Run Swap       ["-S","True","-t","<usedratio>","-L","50","-H","75","-n","#ee0","-h","#e50"] 50
+                            -- , Run Com        "XMRomNew" [] "" 300
                             , Run Com        "XMUptime" [] "" 600
                             , Run Com        "XMMPD" [] "" 10
                             , Run Kbd        [("us", "<fn=1><fc=#95d5f5>EN</fc></fn>"), ("ru", "<fn=1><fc=#e50>RU</fc></fn>")]
