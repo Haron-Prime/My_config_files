@@ -1,9 +1,12 @@
 #!/usr/bin/env zsh
-    ALL=`free | grep Swap | awk '{print $2}'`
-    AV=`free | grep Swap | awk '{print $4}'`
-    PRC=`bc -l <<< "$ALL/100"`
-    FREE=`bc <<< "$AV/$PRC"`
-    USED=`bc <<< "100-$FREE"`
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+ALL=`free | grep Swap | awk '{print $2}'`
+AV=`free | grep Swap | awk '{print $4}'`
+PRC=`bc -l <<< "$ALL/100"`
+FREE=`bc <<< "$AV/$PRC"`
+USED=`bc <<< "100-$FREE"`
 while true; do
     if [ $USED -gt 50 ] ; then
           tmp="0$(printf "%x\n" $((255-($USED-50)*5)))"

@@ -17,6 +17,7 @@ ExecStart=-/usr/bin/mkfifo /tmp/%u/MW2
 ExecStart=-/usr/bin/mkfifo /tmp/%u/CU
 ExecStart=-/usr/bin/mkfifo /tmp/%u/MU
 ExecStart=-/usr/bin/mkfifo /tmp/%u/SU
+ExecStart=-/usr/bin/mkfifo /tmp/%u/RU
 ExecStart=-/usr/bin/touch /tmp/%u/MW1
 ExecStart=-/usr/bin/touch /tmp/%u/.null
 ExecStart=-/usr/bin/rm -r %h/.cache

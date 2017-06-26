@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
 PREV_TOTAL=0
 PREV_IDLE=0
 while true; do
