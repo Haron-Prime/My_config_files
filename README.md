@@ -21,6 +21,10 @@ The "develop" branch are for testing purposes only.
 ![](/screenshots/xmonad-5.png?raw=true)
 ![](/screenshots/xmonad-6.png?raw=true)
 
+#### Dynamic colors in xmobar
+
+![](/screenshots/dynamic_colors_in_xmobar.png?raw=true)
+
 #### Weather in xmobar and dunst
 
 ![](/screenshots/weather_in_xmobar_and_dunst.png?raw=true)
