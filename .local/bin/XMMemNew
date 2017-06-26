@@ -4,7 +4,7 @@
 
 while true; do
     ALL=`free | grep Mem | awk '{print $2}'`
-    AV=`free | grep Mem | awk '{print $6}'`
+    AV=`free | grep Mem | awk '{print $7}'`
     PRC=`bc -l <<< "$ALL/100"`
     FREE=`bc <<< "$AV/$PRC"`
     USED=`bc <<< "100-$FREE"`
