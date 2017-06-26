@@ -1,0 +1,10 @@
+[Unit]
+Description=ROM status update service
+
+[Service]
+Type=simple
+ExecStart=/home/haron/.local/bin/XMRomNew
+ExecReload=/bin/kill -s HUP $MAINPID
+
+[Install]
+WantedBy=default.target

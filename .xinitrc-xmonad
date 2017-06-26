@@ -28,6 +28,5 @@ XMTGpuNew &
 XMTMBNew &
 XMMemNew &
 XMSwapNew &
-XMRomNew &
 # stalonetray &
 exec xmonad

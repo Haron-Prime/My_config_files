@@ -9,3 +9,4 @@ if [ $UPD -gt 0 ]; then
 else 
     echo > /tmp/haron/UP
 fi
+exit 0
