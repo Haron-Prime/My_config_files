@@ -34,7 +34,7 @@ Config {
                             , Run PipeReader "/tmp/haron/SU" "SU"
                             , Run PipeReader "/tmp/haron/RU" "RU"
                             , Run PipeReader "/tmp/haron/VO" "VO"
-                            , Run PipeReader "/tmp/haron/wi_output" "WI"
+                            , Run PipeReader "/tmp/haron/WI" "WI"
                             , Run PipeReader "/tmp/haron/CT" "CT"
                             , Run Com        "XMTrans" [] "" 100
                             , Run DynNetwork ["-S","True","-d","2","-t","<fc=#ccc><dev>:</fc><fn=2> </fn><rx><fn=2> </fn><fc=#0e0>↓</fc><fc=#e50>↑</fc><fn=2> </fn><tx>"] 10
