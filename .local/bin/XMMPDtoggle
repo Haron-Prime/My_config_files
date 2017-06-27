@@ -2,6 +2,7 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
+mpc toggle
 ST=`mpc | tail -2 | grep "\[*\]" | cut -d \  -f 1 | sed -e 's/[^a-z]//g'`
 case $ST in
     playing  ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
