@@ -44,7 +44,7 @@ Config {
                             , Run Com        "XMTraf" [] "" 50
                             , Run Com        "XMUptime" [] "" 600
                             , Run Com        "XMMPD" [] "" 10
-                            , Run Kbd        [("us", "<fn=1><fc=#95d5f5>EN</fc></fn>"), ("ru", "<fn=1><fc=#e50>RU</fc></fn>")]
+                            , Run Kbd        [("us", "<fn=1><fc=#9df>EN</fc></fn>"), ("ru", "<fn=1><fc=#e50>RU</fc></fn>")]
                             , Run Com        "XMTime" [] "" 10
                             ]
        , sepChar  = "%"
