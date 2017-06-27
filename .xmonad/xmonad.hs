@@ -106,8 +106,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff11),  spawn "XMVolDown")                                                       --XF86AudioLowerVolume
     , ((0,                         0x1008ff12),  spawn "XMVolMute")                                                       --XF86AudioMute
     -- , ((mod1Mask,                        0x60),  spawn "mpc toggle")                                                      --Alt+grave
-    , ((0,                         0x1008ff14),  spawn "mpc toggle")                                                      --XF86Play
-    , ((0,                         0x1008ff15),  spawn "mpc stop")                                                        --XF86AudioStop
+    , ((0,                         0x1008ff14),  spawn "XMMPDtoggle")                                                        --XF86Play
+    , ((0,                         0x1008ff15),  spawn "XMMPDstop")                                                        --XF86AudioStop
     , ((0,                         0x1008ff16),  spawn "mpc prev")                                                        --XF86AudioPrev
     , ((0,                         0x1008ff17),  spawn "mpc next")                                                        --XF86AudioNext
     , ((0,                         0x1008ff30),  spawn "XMTransgui")                                                      --XF86Favorites
@@ -359,7 +359,7 @@ myLogHook = do
                                         }
 
 -- StartupHook
-myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "echo > /tmp/haron/MW2" <+> spawn "gis-weather" <+> spawn "XMVol2" <+> spawn "XMUpdate" <+> spawn "XMRomNew"
+myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "echo > /tmp/haron/MW2" <+> spawn "gis-weather" <+> spawn "XMVol2" <+> spawn "XMUpdate" <+> spawn "XMRomNew" <+> spawn "XMMPD"
 
 myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                   terminal           = myTerminal

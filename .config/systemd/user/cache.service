@@ -21,6 +21,7 @@ ExecStart=-/usr/bin/mkfifo /tmp/%u/TGPU
 ExecStart=-/usr/bin/mkfifo /tmp/%u/MU
 ExecStart=-/usr/bin/mkfifo /tmp/%u/SU
 ExecStart=-/usr/bin/mkfifo /tmp/%u/RU
+ExecStart=-/usr/bin/mkfifo /tmp/%u/PS
 ExecStart=-/usr/bin/touch /tmp/%u/MW1
 ExecStart=-/usr/bin/touch /tmp/%u/.null
 ExecStart=-/usr/bin/rm -r %h/.cache
