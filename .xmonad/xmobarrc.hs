@@ -40,7 +40,7 @@ Config {
                             , Run PipeReader "/tmp/haron/WI"   "WI"
                             , Run PipeReader "/tmp/haron/CT"   "CT"
                             , Run Com        "XMTrans" [] "" 100
-                            , Run DynNetwork ["-S","True","-d","2","-t","<fc=#ccc><fn=3></fn></fc> <fc=#9df><rx></fc><fn=2> </fn><fc=#0e0>↓</fc><fc=#e50>↑</fc><fn=2> </fn><fc=#9df><tx></fc>"] 10
+                            , Run DynNetwork ["-S","True","-d","2","-t","<fc=#ccc><fn=3></fn></fc> <rx><fn=2> </fn><fc=#0e0>↓</fc><fc=#e50>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Com        "XMTraf" [] "" 50
                             , Run Com        "XMUptime" [] "" 600
                             , Run Com        "XMMPD" [] "" 10
