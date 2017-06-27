@@ -7,7 +7,7 @@ Config {
                              "xft:Terminus (TTF):size=12:weight=bold:antialias=true:hinting=true"
                             ,"xft:Terminus Re33:size=4"
                             ,"xft:FontAwesome:pixelsize=14"
-                            ,"xft:Weather Icons:pixelsize=14"
+                            ,"xft:Weather Icons:weight=bold:pixelsize=14"
                             ,"xft:Terminus Re33:size=8"
                             ]
        , iconRoot         = "/home/haron/.xmonad/resources"
@@ -40,11 +40,11 @@ Config {
                             , Run PipeReader "/tmp/haron/WI"   "WI"
                             , Run PipeReader "/tmp/haron/CT"   "CT"
                             , Run Com        "XMTrans" [] "" 100
-                            , Run DynNetwork ["-S","True","-d","2","-t","<fc=#ccc><fn=3></fn></fc> <rx><fn=2> </fn><fc=#0e0>↓</fc><fc=#e50>↑</fc><fn=2> </fn><tx>"] 10
+                            , Run DynNetwork ["-S","True","-d","2","-t","<fc=#ccc><fn=3></fn></fc> <fc=#9df><rx></fc><fn=2> </fn><fc=#0e0>↓</fc><fc=#e50>↑</fc><fn=2> </fn><fc=#9df><tx></fc>"] 10
                             , Run Com        "XMTraf" [] "" 50
                             , Run Com        "XMUptime" [] "" 600
                             , Run Com        "XMMPD" [] "" 10
-                            , Run Kbd        [("us", "<fn=1><fc=#95d5f5>EN</fc></fn>"), ("ru", "<fn=1><fc=#e50>RU</fc></fn>")]
+                            , Run Kbd        [("us", "<fn=1><fc=#9df>EN</fc></fn>"), ("ru", "<fn=1><fc=#e50>RU</fc></fn>")]
                             , Run Com        "XMTime" [] "" 10
                             ]
        , sepChar  = "%"
