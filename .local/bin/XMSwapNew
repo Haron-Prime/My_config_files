@@ -14,5 +14,5 @@ while true; do
           else tmp="0$(printf "%x\n" $(( 5*$USED )))ff00"
           echo "<fc=#${tmp: -6}>$USED%</fc>" > /tmp/haron/SU
     fi
-    sleep 5
+    sleep 10
 done

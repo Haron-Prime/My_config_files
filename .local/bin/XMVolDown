@@ -36,8 +36,8 @@ format() {
 
 VOL=`volume | format`
 if [[ $VOL = "MUTE" ]]; then 
-  echo '<fc=#ccc>Vol:</fc><fn=2> </fn><fc=#e50>'$VOL'</fc>' > /tmp/haron/VO
+  echo '<fc=#ccc><fn=3></fn></fc> <fc=#e50>'$VOL'</fc>' > /tmp/haron/VO
 else 
-  echo '<fc=#ccc>Vol:</fc><fn=2> </fn>'$VOL > /tmp/haron/VO
+  echo '<fc=#ccc><fn=3></fn></fc> '$VOL > /tmp/haron/VO
 fi
 exit 0
