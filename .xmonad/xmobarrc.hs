@@ -7,7 +7,7 @@ Config {
                              "xft:Terminus (TTF):size=12:weight=bold:antialias=true:hinting=true"
                             ,"xft:Terminus Re33:size=4"
                             ,"xft:FontAwesome:pixelsize=14"
-                            ,"xft:Weather Icons:pixelsize=14"
+                            ,"xft:Weather Icons:pixelsize=14:weight=bold"
                             ,"xft:Terminus Re33:size=8"
                             ]
        , iconRoot         = "/home/haron/.xmonad/resources"
