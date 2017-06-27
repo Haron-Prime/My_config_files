@@ -7,12 +7,12 @@ DAY=`date "+%A"`
 TIME=`date "+%H:%M:%S"`
 TZ=`date +%:::z`
 case $DAY in
-    Понедельник ) echo '<fc=#959595>'$DAY'</fc>' '<fc=#9df>'$DATA'</fc> <fc=#ccc>'$TIME'</fc>' ;;
-    Вторник     ) echo '<fc=#aa9977>'$DAY'</fc>' '<fc=#9df>'$DATA'</fc> <fc=#ccc>'$TIME'</fc>' ;;
-    Среда       ) echo '<fc=#bf9d59>'$DAY'</fc>' '<fc=#9df>'$DATA'</fc> <fc=#ccc>'$TIME'</fc>' ;;
-    Четверг     ) echo '<fc=#d4a13b>'$DAY'</fc>' '<fc=#9df>'$DATA'</fc> <fc=#ccc>'$TIME'</fc>' ;;
-    Пятница     ) echo '<fc=#e9a51d>'$DAY'</fc>' '<fc=#9df>'$DATA'</fc> <fc=#ccc>'$TIME'</fc>' ;;
-    Суббота     ) echo '<fc=#ffab00>'$DAY'</fc>' '<fc=#9df>'$DATA'</fc> <fc=#ccc>'$TIME'</fc>' ;;
-    Воскресенье ) echo '<fc=#ff6500>'$DAY'</fc>' '<fc=#9df>'$DATA'</fc> <fc=#ccc>'$TIME'</fc>' ;;
+    Понедельник ) echo '<fc=#959595>'$DAY'</fc>' $DATA '<fc=#ccc>'$TIME'</fc>' ;;
+    Вторник     ) echo '<fc=#aa9977>'$DAY'</fc>' $DATA '<fc=#ccc>'$TIME'</fc>' ;;
+    Среда       ) echo '<fc=#bf9d59>'$DAY'</fc>' $DATA '<fc=#ccc>'$TIME'</fc>' ;;
+    Четверг     ) echo '<fc=#d4a13b>'$DAY'</fc>' $DATA '<fc=#ccc>'$TIME'</fc>' ;;
+    Пятница     ) echo '<fc=#e9a51d>'$DAY'</fc>' $DATA '<fc=#ccc>'$TIME'</fc>' ;;
+    Суббота     ) echo '<fc=#ffab00>'$DAY'</fc>' $DATA '<fc=#ccc>'$TIME'</fc>' ;;
+    Воскресенье ) echo '<fc=#ff6500>'$DAY'</fc>' $DATA '<fc=#ccc>'$TIME'</fc>' ;;
 esac
 exit 0
