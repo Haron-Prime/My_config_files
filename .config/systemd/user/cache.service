@@ -14,6 +14,7 @@ ExecStart=-/usr/bin/mkfifo /tmp/%u/UP
 ExecStart=-/usr/bin/mkfifo /tmp/%u/WI
 ExecStart=-/usr/bin/mkfifo /tmp/%u/VO
 ExecStart=-/usr/bin/mkfifo /tmp/%u/MW2
+ExecStart=-/usr/bin/mkfifo /tmp/%u/TR
 ExecStart=-/usr/bin/mkfifo /tmp/%u/CU
 ExecStart=-/usr/bin/mkfifo /tmp/%u/TCPU
 ExecStart=-/usr/bin/mkfifo /tmp/%u/TMB
