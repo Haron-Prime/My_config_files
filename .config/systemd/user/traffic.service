@@ -1,0 +1,11 @@
+[Unit]
+Description=Network traffic service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/haron/.local/bin/XMTraf
+ExecReload=/bin/kill -s HUP $MAINPID
+
+[Install]
+WantedBy=default.target

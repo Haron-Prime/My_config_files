@@ -1,0 +1,10 @@
+[Unit]
+Description=Network traffic timer
+
+[Timer]
+OnBootSec=1
+OnUnitActiveSec=30
+Unit=traffic.service
+
+[Install]
+WantedBy=timers.target
