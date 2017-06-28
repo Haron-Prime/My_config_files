@@ -1,0 +1,11 @@
+[Unit]
+Description=uptime service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/haron/.local/bin/XMUptime
+ExecReload=/bin/kill -s HUP $MAINPID
+
+[Install]
+WantedBy=default.target

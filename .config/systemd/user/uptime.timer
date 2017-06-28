@@ -1,0 +1,10 @@
+[Unit]
+Description=uptime timer
+
+[Timer]
+OnBootSec=1
+OnUnitActiveSec=59
+Unit=uptime.service
+
+[Install]
+WantedBy=timers.target
