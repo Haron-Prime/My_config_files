@@ -41,5 +41,5 @@ OUT4=`
           echo "<fc=#${tmp: -6}>$ROM4%</fc>"
     fi
 `
-echo $OUT1 $OUT2 $OUT3 $OUT4 > /tmp/haron/RU
+echo $OUT1 $OUT3 $OUT4 $OUT2 > /tmp/haron/RU
 exit 0
