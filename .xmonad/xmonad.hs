@@ -106,10 +106,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff11),  spawn "XMVolDown")                                                       --XF86AudioLowerVolume
     , ((0,                         0x1008ff12),  spawn "XMVolMute")                                                       --XF86AudioMute
     -- , ((mod1Mask,                        0x60),  spawn "mpc toggle")                                                      --Alt+grave
-    , ((0,                         0x1008ff14),  spawn "XMMPDtoggle")                                                        --XF86Play
-    , ((0,                         0x1008ff15),  spawn "XMMPDstop")                                                        --XF86AudioStop
-    , ((0,                         0x1008ff16),  spawn "mpc prev")                                                        --XF86AudioPrev
-    , ((0,                         0x1008ff17),  spawn "mpc next")                                                        --XF86AudioNext
+    , ((0,                         0x1008ff14),  spawn "XMMPCtoggle")                                                     --XF86Play
+    , ((0,                         0x1008ff15),  spawn "XMMPCstop")                                                       --XF86AudioStop
+    , ((0,                         0x1008ff16),  spawn "XMMPCprev")                                                       --XF86AudioPrev
+    , ((0,                         0x1008ff17),  spawn "XMMPCnext")                                                       --XF86AudioNext
     , ((0,                         0x1008ff30),  spawn "XMTransgui")                                                      --XF86Favorites
     , ((0,                         0x1008ff18),  spawn myBrowser)                                                         --XF86HomePage
     , ((0,                         0x1008ff19),  spawn "thunderbird")                                                     --XF86Mail

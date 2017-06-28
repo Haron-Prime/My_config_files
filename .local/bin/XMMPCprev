@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+mpc prev &&
+sleep 1 &&
+mpc | head -1 | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/mimetypes/gnome-mime-audio-x-midi.png" -t 10
+exit 0
