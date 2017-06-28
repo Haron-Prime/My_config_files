@@ -3,7 +3,7 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 mpc stop 
-ST=`mpc | tail -2 | grep "\[*\]" | cut -d \  -f 1 | sed -e 's/[^a-z]//g'`
+ST=`mpc | sed -n 2p | awk '{print $1}' | sed -e 's/[^a-z]//g'`
 case $ST in
     playing  ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
     paused   ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
