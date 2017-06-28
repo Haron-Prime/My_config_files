@@ -42,9 +42,9 @@ Config {
                             , Run PipeReader "/tmp/haron/VO"   "VO"
                             , Run PipeReader "/tmp/haron/WI"   "WI"
                             , Run PipeReader "/tmp/haron/CT"   "CT"
-                            , Run Com        "XMTrans" [] "" 100
                             , Run DynNetwork ["-S","True","-d","2","-t","<fc=#ccc><fn=3></fn></fc> <rx><fn=2> </fn><fc=#0e0>↓</fc><fc=#e50>↑</fc><fn=2> </fn><tx>"] 10
                             , Run Kbd        [("us", "<fn=1><fc=#9df>EN</fc></fn>"), ("ru", "<fn=1><fc=#e50>RU</fc></fn>")]
+                            , Run Com        "XMTrans" [] "" 100
                             , Run Com        "XMTime" [] "" 10
                             ]
        , sepChar  = "%"

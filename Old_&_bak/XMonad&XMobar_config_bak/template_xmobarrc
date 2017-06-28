@@ -50,7 +50,7 @@
 
 <action=`XMVnstat` button=1>
     <action=`XMVnstat-m` button=3>
-        %XMTraf%
+        %TR%
     </action>
 </action>
 
@@ -58,15 +58,25 @@
     <action=`XMHtop` button=3>
         <fc=#ccc>
             <fn=3>
-                
+                
             </fn>
         </fc>
+        <fn=2>
 
+        </fn>
         %CU%
     </action>
 </action>
 
 <action=`XMSensors` button=13>
+    <fc=#ccc>
+        <fn=3>
+            
+        </fn>
+    </fc>
+    <fn=2>
+
+    </fn>
     %TCPU%
 
     %TMB%
@@ -80,7 +90,9 @@
             
         </fn>
     </fc>
+    <fn=2>
 
+    </fn>
     %MU%
 </action>
 
@@ -96,7 +108,7 @@
 
 <action=`XMHtop` button=1>
     <action=`XMinxi` button=3>
-        %XMUptime%
+        %UT%
     </action>
 </action>
 
@@ -120,7 +132,7 @@
 
         <action=`XMMPCtoggle` button=1>
             <action=`XMMPCstop` button=2>
-                %XMMPD%
+                %PS%
             </action>
         </action>
 
@@ -142,11 +154,10 @@
     </action>
 </action>
 
-<action=`GWeather` button=13>
+<action=`XMGWeather` button=13>
     %WI%
 </action>
 <fn=2>
-
 
 </fn>
 <action=`XMAccuWeather` button=1>
