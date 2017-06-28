@@ -3,7 +3,7 @@ Description=Network traffic timer
 
 [Timer]
 OnBootSec=1
-OnUnitActiveSec=30
+OnUnitActiveSec=10
 Unit=traffic.service
 
 [Install]
