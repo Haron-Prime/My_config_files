@@ -112,19 +112,19 @@
 
 <action=`XMMPC` button=45>
     <action=`XMncmpcpp` button=3>
-        <action=`mpc prev` button=1>
+        <action=`XMMPCprev` button=1>
             <fn=3>
                 
             </fn>
         </action>
 
-        <action=`mpc toggle` button=1>
-            <action=`mpc stop` button=2>
+        <action=`XMMPCtoggle` button=1>
+            <action=`XMMPCstop` button=2>
                 %XMMPD%
             </action>
         </action>
 
-        <action=`mpc next` button=1>
+        <action=`XMMPCnext` button=1>
             <fn=3>
                 
             </fn>
