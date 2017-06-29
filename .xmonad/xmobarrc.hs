@@ -29,8 +29,8 @@ Config {
                               Run XMonadLog
                             , Run PipeReader "/tmp/haron/UP"   "UP"
                             , Run PipeReader "/tmp/haron/MW2"  "MW2"
-                            , Run PipeReader "/tmp/haron/TR"   "TR"
                             , Run PipeReader "/tmp/haron/TU"   "TU"
+                            , Run PipeReader "/tmp/haron/TR"   "TR"
                             , Run PipeReader "/tmp/haron/CU"   "CU"
                             , Run PipeReader "/tmp/haron/TCPU" "TCPU"
                             , Run PipeReader "/tmp/haron/TMB"  "TMB"
