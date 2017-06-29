@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/home/haron/.local/bin/zshist
+ExecStart=-/bin/zsh -c 'rm -f $HOME/.zsh_history.bak && cp $HOME/.zsh_history $HOME/.zsh_history.bak'
 ExecReload=/bin/kill -s HUP $MAINPID
 
 [Install]

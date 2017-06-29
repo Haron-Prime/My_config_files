@@ -1,0 +1,8 @@
+{
+	"extensions":
+	[
+		"service",
+		"timer",
+		"socket"
+	]
+}
