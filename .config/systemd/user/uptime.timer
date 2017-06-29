@@ -2,7 +2,7 @@
 Description=uptime timer
 
 [Timer]
-OnBootSec=1
+OnBootSec=30
 OnUnitActiveSec=59
 Unit=uptime.service
 
