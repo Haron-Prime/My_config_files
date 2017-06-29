@@ -5,7 +5,7 @@
 if (pidof mpd >/dev/null); then
     ST=`mpc | sed -n 2p | awk '{print $1}' | sed -e 's/[^a-z]//g'`
     case $ST in
-        playing  ) echo "<fn=3></fn>" > /tmp/haron/PS  && mpc | head -1 | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/mimetypes/gnome-mime-audio-x-midi.png"  ;;
+        playing  ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
         paused   ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
         *        ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
     esac
