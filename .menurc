@@ -241,10 +241,6 @@ submenu = Tools
     cmd  = file-roller %U
     icon = /usr/share/icons/nouveGnomeGray/24x24/apps/file-roller.png
 
-    item = Font Manager
-    cmd  = font-manager %u
-    icon = /usr/share/icons/nouveGnomeGray/24x24/apps/preferences-desktop-font.png
-
     item = Font Viewer
     cmd  = /usr/libexec/font-manager/font-viewer %u
     icon = /usr/share/icons/nouveGnomeGray/24x24/apps/preferences-desktop-font.png
