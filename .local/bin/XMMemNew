@@ -9,9 +9,9 @@ while true; do
     let FREE=`bc <<< "$AV/$PRC"`
     let USED=`bc <<< "100-$FREE"`
     if [ $USED -gt 50 ] ; then
-          tmp="0$(printf "%x\n" $((255-($USED-50)*5)))"
+          tmp="0$(printf '%x\n' $((255-($USED-50)*5)))"
           echo "<fc=#ff${tmp: -2}00>$USED%</fc>" > /tmp/haron/MU
-          else tmp="0$(printf "%x\n" $(( 5*$USED )))ff00"
+          else tmp="0$(printf '%x\n' $(( 5*$USED )))ff00"
           echo "<fc=#${tmp: -6}>$USED%</fc>" > /tmp/haron/MU
     fi
     sleep 1
