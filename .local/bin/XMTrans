@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
+
 while true; do
     if (pgrep transmission >/dev/null); then 
         echo  "<fn=3><fc=#0e0></fc></fn>" > /tmp/haron/TU

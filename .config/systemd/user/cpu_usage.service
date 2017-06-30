@@ -2,7 +2,7 @@
 Description=CPU load calculation service
 
 [Service]
-Type=notify
+Type=simple
 ExecStart=-/home/haron/.local/bin/XMCpuLoad
 
 [Install]
