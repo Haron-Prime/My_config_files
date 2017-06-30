@@ -2,9 +2,13 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-if (pgrep transmission >/dev/null); then 
-    echo  "<fn=3><fc=#0e0></fc></fn>" > /tmp/haron/TU
-else
-    echo  "<fn=3><fc=#e50></fc></fn>" > /tmp/haron/TU
-fi
+while true; do
+    if (pgrep transmission >/dev/null); then 
+        echo  "<fn=3><fc=#0e0></fc></fn>" > /tmp/haron/TU
+        exit 0
+    else
+        echo  "<fn=3><fc=#e50></fc></fn>" > /tmp/haron/TU
+    fi
+    sleep 5
+done
 exit 0

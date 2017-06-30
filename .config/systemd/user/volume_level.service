@@ -1,5 +1,7 @@
 [Unit]
 Description=Volume service
+
 [Service]
+Type=simple
 ExecStart=-/home/haron/.local/bin/XMVol2
 StandardInput=socket
