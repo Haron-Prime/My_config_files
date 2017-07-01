@@ -6,7 +6,9 @@ Type=oneshot
 RemainAfterExit=true
 
 ExecStart=-/usr/bin/mkdir -m 0700 -p /tmp/%u
-ExecStart=-/usr/bin/mkdir /tmp/%u/{.cache,.acestream_cache,Cache,Downloads}
+ExecStart=-/usr/bin/mkdir /tmp/%u/.cache
+ExecStart=-/usr/bin/mkdir /tmp/%u/.acestream_cache
+ExecStart=-/usr/bin/mkdir /tmp/%u/Downloads}
 ExecStart=-/bin/sh -c 'mkfifo /tmp/haron/{CT,CU,MU,MW1,MW2,PS,RU,SU,TCPU,TGPU,TMB,TR,TU,UP,UT,VO,WI} && chmod 770 /tmp/haron/{CT,CU,MU,MW1,MW2,PS,RU,SU,TCPU,TGPU,TMB,TR,TU,UP,UT,VO,WI,wi_data,wi_socket}'
 ExecStart=-/usr/bin/touch /tmp/%u/MW1
 ExecStart=-/usr/bin/rm -r %h/.cache
