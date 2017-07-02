@@ -2,8 +2,8 @@
 Description=System update timer
 
 [Timer]
-OnBootSec=30
-OnUnitActiveSec=300
+OnBootSec=60
+OnUnitActiveSec=60
 Unit=update.service
 
 [Install]
