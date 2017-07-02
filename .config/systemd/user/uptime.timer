@@ -3,7 +3,7 @@ Description=uptime timer
 
 [Timer]
 OnBootSec=30
-OnUnitActiveSec=59
+OnUnitActiveSec=60
 Unit=uptime.service
 
 [Install]

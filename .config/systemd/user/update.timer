@@ -2,7 +2,7 @@
 Description=System update timer
 
 [Timer]
-OnBootSec=30
+OnBootSec=60
 OnUnitActiveSec=300
 Unit=update.service
 
