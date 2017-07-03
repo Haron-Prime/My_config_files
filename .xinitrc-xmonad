@@ -23,6 +23,6 @@ urxvtd -q -f -o &
 pcmanfm -d &
 feh --bg-scale /home/haron/wall/starrynight.png &
 XMCUNew &
-XMTAll &
+XMTempAll &
 XMMemNew &
 exec xmonad
