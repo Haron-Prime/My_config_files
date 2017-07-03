@@ -3,12 +3,19 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 while true; do
-    USED=`bc <<< "100-$(bc <<< "$(free | grep Mem | awk '{print $7}')/$(bc -l <<< "$(free | grep Mem | awk '{print $2}')/100")")"`
-    if [ $USED -gt 50 ] ; then
-          tmp="0$(printf '%x\n' $((255-($USED-50)*5)))"
-          echo "<fc=#ff${tmp: -2}00>$USED%</fc>" > /tmp/haron/MU
-          else tmp="0$(printf '%x\n' $(( 5*$USED )))ff00"
-          echo "<fc=#${tmp: -6}>$USED%</fc>" > /tmp/haron/MU
+    MEM=`bc <<< "100-$(bc <<< "$(free | grep Mem | awk '{print $7}')/$(bc -l <<< "$(free | grep Mem | awk '{print $2}')/100")")"`
+    if [ $MEM -gt 50 ] ; then
+          tmp="0$(printf '%x\n' $((255-($MEM-50)*5)))"
+          echo "<fc=#ff${tmp: -2}00>$MEM%</fc>" > /tmp/haron/MU
+          else tmp="0$(printf '%x\n' $(( 5*$MEM )))ff00"
+          echo "<fc=#${tmp: -6}>$MEM%</fc>" > /tmp/haron/MU
     fi
-    sleep 1
+    SWAP=`bc <<< "100-$(bc <<< "$(free | grep Swap | awk '{print $4}')/$(bc -l <<< "$(free | grep Swap | awk '{print $2}')/100")")"`
+    if [ $SWAP -gt 50 ] ; then
+          tmp="0$(printf '%x\n' $((255-($SWAP-50)*5)))"
+          echo "<fc=#ff${tmp: -2}00>$SWAP%</fc>" > /tmp/haron/SU
+          else tmp="0$(printf '%x\n' $(( 5*$SWAP )))ff00"
+          echo "<fc=#${tmp: -6}>$SWAP%</fc>" > /tmp/haron/SU
+    fi
+    sleep 5
 done
