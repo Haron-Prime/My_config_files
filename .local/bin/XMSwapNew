@@ -3,11 +3,7 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 while true; do
-    ALL=`free | grep Swap | awk '{print $2}'`
-    AV=`free | grep Swap | awk '{print $4}'`
-    PRC=`bc -l <<< "$ALL/100"`
-    FREE=`bc <<< "$AV/$PRC"`
-    USED=`bc <<< "100-$FREE"`
+    USED=`bc <<< "100-$(bc <<< "$(free | grep Swap | awk '{print $4}')/$(bc -l <<< "$(free | grep Swap | awk '{print $2}')/100")")"`
     if [ $USED -gt 50 ] ; then
           tmp="0$(printf '%x\n' $((255-($USED-50)*5)))"
           echo "<fc=#ff${tmp: -2}00>$USED%</fc>" > /tmp/haron/SU
