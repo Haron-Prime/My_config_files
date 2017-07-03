@@ -5,9 +5,7 @@
 while true; do
     ALL=`free | grep Mem | awk '{print $2}'`
     AV=`free | grep Mem | awk '{print $7}'`
-    let PRC=`bc -l <<< "$ALL/100"`
-    let FREE=`bc <<< "$AV/$PRC"`
-    let USED=`bc <<< "100-$FREE"`
+    let USED=`bc <<< "100-$(bc <<< "$AV/$(bc -l <<< "$ALL/100")")"`
     if [ $USED -gt 50 ] ; then
           tmp="0$(printf '%x\n' $((255-($USED-50)*5)))"
           echo "<fc=#ff${tmp: -2}00>$USED%</fc>" > /tmp/haron/MU
