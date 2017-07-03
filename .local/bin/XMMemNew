@@ -3,9 +3,7 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 while true; do
-    ALL=`free | grep Mem | awk '{print $2}'`
-    AV=`free | grep Mem | awk '{print $7}'`
-    let USED=`bc <<< "100-$(bc <<< "$AV/$(bc -l <<< "$ALL/100")")"`
+    USED=`bc <<< "100-$(bc <<< "$(free | grep Mem | awk '{print $7}')/$(bc -l <<< "$(free | grep Mem | awk '{print $2}')/100")")"`
     if [ $USED -gt 50 ] ; then
           tmp="0$(printf '%x\n' $((255-($USED-50)*5)))"
           echo "<fc=#ff${tmp: -2}00>$USED%</fc>" > /tmp/haron/MU
@@ -14,3 +12,4 @@ while true; do
     fi
     sleep 1
 done
+
