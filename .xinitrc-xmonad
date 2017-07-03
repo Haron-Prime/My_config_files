@@ -24,10 +24,5 @@ pcmanfm -d &
 feh --bg-scale /home/haron/wall/starrynight.png &
 XMCUNew &
 XMTAll &
-# XMTCpuNew &
-# XMTGpuNew &
-# XMTMBNew &
 XMMemNew &
-# XMSwapNew &
-# stalonetray &
 exec xmonad
