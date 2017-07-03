@@ -33,8 +33,6 @@ Config {
                             , Run PipeReader "/tmp/haron/TR"   "TR"
                             , Run PipeReader "/tmp/haron/CU"   "CU"
                             , Run PipeReader "/tmp/haron/TEMP" "TEMP"
-                            -- , Run PipeReader "/tmp/haron/MU"   "MU"
-                            -- , Run PipeReader "/tmp/haron/SU"   "SU"
                             , Run PipeReader "/tmp/haron/MEM"  "MEM"
                             , Run PipeReader "/tmp/haron/RU"   "RU"
                             , Run PipeReader "/tmp/haron/UT"   "UT"
