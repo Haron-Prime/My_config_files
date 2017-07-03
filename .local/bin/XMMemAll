@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+while true; do
+    MEM=`bc <<< "100-$(bc <<< "$(free | grep Mem | awk '{print $7}')/$(bc -l <<< "$(free | grep Mem | awk '{print $2}')/100")")"`
+    if [ $MEM -gt 50 ] ; then
+          tmp="0$(printf '%x\n' $((255-($MEM-50)*5)))"
+          MU=`echo "<fc=#ff${tmp: -2}00>$MEM%</fc>"`
+          else tmp="0$(printf '%x\n' $(( 5*$MEM )))ff00"
+          MU=`echo "<fc=#${tmp: -6}>$MEM%</fc>"`
+    fi
+    SWAP=`bc <<< "100-$(bc <<< "$(free | grep Swap | awk '{print $4}')/$(bc -l <<< "$(free | grep Swap | awk '{print $2}')/100")")"`
+    if [ $SWAP -gt 50 ] ; then
+          tmp="0$(printf '%x\n' $((255-($SWAP-50)*5)))"
+          SU=`echo "<fc=#ff${tmp: -2}00>$SWAP%</fc>"`
+          else tmp="0$(printf '%x\n' $(( 5*$SWAP )))ff00"
+          SU=`echo "<fc=#${tmp: -6}>$SWAP%</fc>"`
+    fi
+    echo $MU $SU > /tmp/haron/MEM
+    sleep 5
+done
