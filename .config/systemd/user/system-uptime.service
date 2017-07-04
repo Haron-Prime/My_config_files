@@ -1,8 +1,8 @@
 [Unit]
-Description=uptime service
+Description=System uptime service
 
 [Service]
-Type=oneshot
+Type=simple
 ExecStart=/home/haron/.local/bin/XMUptime
 ExecReload=/bin/kill -s HUP $MAINPID
 
