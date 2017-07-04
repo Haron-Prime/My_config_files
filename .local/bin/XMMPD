@@ -2,12 +2,14 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-if (pidof mpd >/dev/null); then
-    ST=`mpc | sed -n 2p | awk '{print $1}' | sed -e 's/[^a-z]//g'`
-    case $ST in
-        playing  ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
-        paused   ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
-        *        ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
-    esac
-fi
-exit 0
+while true; do
+    if (pidof mpd >/dev/null); then
+        ST=`mpc | sed -n 2p | awk '{print $1}' | sed -e 's/[^a-z]//g'`
+        case $ST in
+            playing  ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
+            paused   ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
+            *        ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
+        esac
+    fi
+    sleep 30
+done

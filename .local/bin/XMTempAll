@@ -15,21 +15,21 @@ while true; do
 
     for i in $(seq 0 ${#IN[@]}); do
         if [[ "$CPU1" == "${IN[$i]}" ]]; then
-          TC=`echo "<fc=#"${OUT[$i]}">"$CPU2"</fc>"`
+          TCPU=`echo "<fc=#"${OUT[$i]}">"$CPU2"</fc>"`
         fi
     done
 
     for i in $(seq 0 ${#IN[@]}); do
         if [[ "$GPU1" == "${IN[$i]}" ]]; then
-          TG=`echo "<fc=#"${OUT[$i]}">"$GPU2"</fc>"`
+          TGPU=`echo "<fc=#"${OUT[$i]}">"$GPU2"</fc>"`
         fi
     done
 
     for i in $(seq 0 ${#IN[@]}); do
         if [[ "$MB1" == "${IN[$i]}" ]]; then
-          TM=`echo "<fc=#"${OUT[$i]}">"$MB2"</fc>"`
+          TMB=`echo "<fc=#"${OUT[$i]}">"$MB2"</fc>"`
         fi
     done
-    echo $TC $TM $TG > /tmp/haron/TEMP
+    echo $TCPU $TMB $TGPU > /tmp/haron/TEMP
     sleep 1
 done

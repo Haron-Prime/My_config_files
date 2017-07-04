@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+inotifywait -m -e modify /home/haron/.config/mpd/state |\
+(
+if (pidof mpd >/dev/null); then
+    ST=`mpc | sed -n 2p | awk '{print $1}' | sed -e 's/[^a-z]//g'`
+    case $ST in
+        playing  ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
+        paused   ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
+        *        ) echo "<fn=3></fn>" > /tmp/haron/PS  ;;
+    esac
+fi
+)
