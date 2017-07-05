@@ -25,5 +25,4 @@ feh --bg-scale /home/haron/wall/starrynight.png &
 XMCUNew &
 XMTempAll &
 XMMemAll &
-XMMPDState &
 exec xmonad
