@@ -2,7 +2,7 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-inotifywait -m -e modify /home/haron/.config/mpd/state |\
+inotifywait -m -e modify /home/haron/.config/mpd |\
 (
 if (pidof mpd >/dev/null); then
     ST=`mpc | sed -n 2p | awk '{print $1}' | sed -e 's/[^a-z]//g'`
