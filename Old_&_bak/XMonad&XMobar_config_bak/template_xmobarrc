@@ -27,7 +27,6 @@
     </fn>
 </action>
 
-
 %MW2%
 ||
 <action=XMYaourt>
@@ -40,11 +39,9 @@
     </action>
 </action>
 
-<action=`xdotool key 0xffeb+0x39` button=1>
-    <action=`xdg-open http://localhost:9091/transmission/web/` button=2>
-        <action=`XMTransgui` button=3>
-            %XMTrans%
-        </action>
+<action=`xdg-open http://localhost:9091/transmission/web/` button=3>
+    <action=`XMTransgui` button=1>
+        %TU%
     </action>
 </action>
 
@@ -58,10 +55,11 @@
     <action=`XMHtop` button=3>
         <fc=#ccc>
             <fn=3>
-                
-            </fn>
+
+            </fn>
         </fc>
         <fn=2>
+
 
         </fn>
         %CU%
@@ -76,28 +74,24 @@
     </fc>
     <fn=2>
 
+
     </fn>
-    %TCPU%
-
-    %TMB%
-
-    %TGPU%
+    %TEMP%
 </action>
 
-<action=`XMTop-mem` button=13>
-    <fc=#ccc>
-        <fn=3>
-            
+<action=`XMTop-mem` button=1>
+    <action=`XMFree` button=3>
+        <fc=#ccc>
+            <fn=3>
+                
+            </fn>
+        </fc>
+        <fn=2>
+
+
         </fn>
-    </fc>
-    <fn=2>
-
-    </fn>
-    %MU%
-</action>
-
-<action=`XMFree` button=13>
-    %SU%
+        %MEM%
+    </action>
 </action>
 
 <action=`XMdf-h` button=1>
