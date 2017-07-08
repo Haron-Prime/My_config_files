@@ -6,7 +6,6 @@ After=network.target
 Type=oneshot
 
 ExecStart=/usr/bin/transmission-daemon --pid-file /home/haron/.run/transmission.pid -f --log-error --config-dir /home/haron/.config/transmission
-ExecStart=/home/haron/.local/bin/XMTrans
 
 ExecReload=/bin/kill -s HUP $MAINPID
 
