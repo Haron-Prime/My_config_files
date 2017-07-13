@@ -22,7 +22,7 @@
 	"find_selected_text": true,
 	"font_face": "Terminus Re33 Nerd",
 	"font_options": "subpixel_antialias",
-	"font_size": 12,
+	"font_size": 11,
 	"gpu_window_buffer": true,
 	"gutter": true,
 	"highlight_line": true,
