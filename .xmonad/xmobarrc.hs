@@ -2,7 +2,7 @@
 -- License © 2017 WTFPL http://www.wtfpl.net/
 
 Config {
-         font             = "xft:Terminus Re33:size=12:antialias=true:hinting=true"
+         font             = "xft:Terminus Re33 Nerd:size=12:antialias=true:hinting=true"
        , additionalFonts  = [
                              "xft:Terminus (TTF):size=12:weight=bold:antialias=true:hinting=true"
                             ,"xft:Terminus Re33:pixelsize=4"

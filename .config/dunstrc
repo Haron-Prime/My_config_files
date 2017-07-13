@@ -1,5 +1,5 @@
 [global]
-font = Terminus Re33 12
+font = Terminus Re33 12 Nerd
 allow_markup = yes
 plain_text = no
 format = "<b>%s</b>\n%b"
