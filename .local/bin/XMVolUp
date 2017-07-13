@@ -41,9 +41,9 @@ if [[ $VOL = "MUTE" ]]; then
 else 
       if [ $VOL2 -gt 50 ] ; then
           tmp="0$(printf "%x\n" $((255-($VOL2-50)*5)))"
-          echo "<fc=#ccc><fn=3></fn></fc> <fc=#ff${tmp: -2}00>$VOL</fc>" > /tmp/haron/VO
+          echo "<fc=#ccc></fc> <fc=#ff${tmp: -2}00>$VOL</fc>" > /tmp/haron/VO
           else tmp="0$(printf "%x\n" $(( 5*$VOL2 )))ff00"
-          echo "<fc=#ccc><fn=3></fn></fc> <fc=#${tmp: -6}>$VOL</fc>" > /tmp/haron/VO
+          echo "<fc=#ccc></fc> <fc=#${tmp: -6}>$VOL</fc>" > /tmp/haron/VO
       fi
 fi
 exit 0
