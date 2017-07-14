@@ -80,7 +80,7 @@ myUrgColor           =  "#ff6500"
 myBgColor            =  "#151515"
 myFgColor            =  "#959595"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
-myMonospaceFont      =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
+myMonospaceFont      =  "xft:Terminus Re33 Nerd:size=12:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
 
 myTL                 =  windowNavigation (mouseResizableTile{masterFrac = (1/2), fracIncrement = (1/100), draggerType = FixedDragger 2 6})
