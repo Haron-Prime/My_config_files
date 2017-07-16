@@ -1,5 +1,5 @@
 [global]
-font = Terminus Re33 12
+font = Terminus Re33 Nerd Bold
 allow_markup = yes
 plain_text = no
 format = "<b>%s</b>\n%b"
@@ -48,14 +48,12 @@ context = ctrl+shift+period
 frame_color = "#AAAAAA"
 foreground = "#AAAAAA"
 background = "#252525"
-# background = "#2B313C"
 timeout = 6
 
 [urgency_normal]
 frame_color = "#95D5F5"
 foreground = "#95D5F5"
 background = "#252525"
-# background = "#2B313C"
 timeout = 8
 icon = /home/haron/.icons/nouveGnomeGray/24x24/status/gtk-info.png
 
@@ -63,6 +61,5 @@ icon = /home/haron/.icons/nouveGnomeGray/24x24/status/gtk-info.png
 frame_color = "#FF6500"
 foreground = "#FF6500"
 background = "#252525"
-# background = "#2B313C"
 timeout = 10
 icon = /home/haron/.icons/nouveGnomeGray/24x24/status/dialog-warning.png
