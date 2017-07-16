@@ -2,12 +2,12 @@
 -- License © 2017 WTFPL http://www.wtfpl.net/
 
 Config {
-         font             = "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
+         font             = "xft:Terminus Re33 Nerd Bold:size=11:antialias=true:hinting=true"
        , additionalFonts  = [
                              "xft:Terminus (TTF):size=12:weight=bold:antialias=true:hinting=true"
                             ,"xft:Terminus Re33:size=4"
                             ,"xft:Weather Icons:weight=bold:pixelsize=14"
-                            ,"xft:SF Square Head:weight=bold:size=12:antialias=true:hinting=true"
+                            ,"xft:SF Square Head:weight=bold:size=11:antialias=true:hinting=true"
                             ,"xft:Reactor Sans:weight=bold:size=8:antialias=true:hinting=true"
                             ]
        , iconRoot         = "/home/haron/.xmonad/resources"
