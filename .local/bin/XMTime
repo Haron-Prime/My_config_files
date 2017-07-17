@@ -7,8 +7,8 @@ DAY=`date "+%A"`
 TIME=`date "+%H:%M:%S"`
 TZ=`date +%:::z`
 case $DAY in
-    Суббота     ) echo '<fc=#ffab00>'$DAY'</fc>' $DATA '<fc=#ccc>'$TIME'</fc>' ;;
-    Воскресенье ) echo '<fc=#ff6500>'$DAY'</fc>' $DATA '<fc=#ccc>'$TIME'</fc>' ;;
-    *           ) echo '<fc=#959595>'$DAY'</fc>' $DATA '<fc=#ccc>'$TIME'</fc>' ;;
+    Суббота     ) echo "<fc=#ffab00>$DAY</fc> $DATA <fc=#ccc>$TIME</fc>" ;;
+    Воскресенье ) echo "<fc=#ff6500>$DAY</fc> $DATA <fc=#ccc>$TIME</fc>" ;;
+    *           ) echo "<fc=#959595>$DAY</fc> $DATA <fc=#ccc>$TIME</fc>" ;;
 esac
 exit 0

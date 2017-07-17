@@ -35,7 +35,7 @@ format() {
 VOL=`volume | format`
 VOL2=`echo $VOL | sed 's/[%]//g'`
 if [[ $VOL = "MUTE" ]]; then 
-  echo '<fc=#ccc><fn=3></fn></fc> <fc=#e50>'$VOL'</fc>' > /tmp/haron/VO
+  echo "<fc=#e50><fn=2> </fn>$VOL</fc>" > /tmp/haron/VO
 else 
       if [ $VOL2 -gt 50 ] ; then
           tmp="0$(printf "%x\n" $((255-($VOL2-50)*5)))"
