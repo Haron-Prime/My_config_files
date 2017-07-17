@@ -3,5 +3,5 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 MYUP=`uptime | cut -d , -f 1 | awk '{print $3 $4}'`
-echo '<fc=#ccc></fc><fn=2>  </fn><fc=#9df>'$MYUP'</fc>' > /tmp/haron/UT
+echo '<fc=#ccc></fc><fn=2> </fn><fc=#9df>'$MYUP'</fc>' > /tmp/haron/UT
 exit 0
