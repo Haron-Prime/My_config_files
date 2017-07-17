@@ -35,13 +35,13 @@ format() {
 VOL=`volume | format`
 VOL2=`echo $VOL | sed 's/[%]//g'`
 if [[ $VOL = "MUTE" ]]; then 
-  echo '<fc=#ccc><fn=3></fn></fc> <fc=#e50>'$VOL'</fc>' > /tmp/haron/VO
+  echo "<fc=#e50><fn=2> </fn>$VOL</fc>" > /tmp/haron/VO
 else 
       if [ $VOL2 -gt 50 ] ; then
           tmp="0$(printf "%x\n" $((255-($VOL2-50)*5)))"
-          echo "<fc=#ccc></fc><fn=2>  </fn><fc=#ff${tmp: -2}00>$VOL</fc>" > /tmp/haron/VO
+          echo "<fc=#ccc></fc><fn=2> </fn><fc=#ff${tmp: -2}00>$VOL</fc>" > /tmp/haron/VO
           else tmp="0$(printf "%x\n" $(( 5*$VOL2 )))ff00"
-          echo "<fc=#ccc></fc><fn=2>  </fn><fc=#${tmp: -6}>$VOL</fc>" > /tmp/haron/VO
+          echo "<fc=#ccc></fc><fn=2> </fn><fc=#${tmp: -6}>$VOL</fc>" > /tmp/haron/VO
       fi
 fi
 exit 0
