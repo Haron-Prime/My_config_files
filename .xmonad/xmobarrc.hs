@@ -42,7 +42,7 @@ Config {
                             , Run PipeReader "/tmp/haron/WI"   "WI"
                             , Run PipeReader "/tmp/haron/CT"   "CT"
                             , Run DynNetwork ["-S","True","-d","2","-t","<fc=#ccc></fc><fn=2> </fn><rx><fn=2> </fn><fc=#0e0></fc><fc=#e50></fc><fn=2> </fn><tx>"] 10
-                            , Run Kbd        [("us", "<fc=#9df></fc>"), ("ru", "<fc=#e50></fc>")]
+                            , Run Kbd        [("us", "<fc=#9df></fc>"), ("ru", "<fc=#e50></fc>")]
                             , Run Com        "XMTime" [] "" 10
                             ]
        , sepChar  = "%"
