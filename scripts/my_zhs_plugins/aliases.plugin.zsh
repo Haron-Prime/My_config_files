@@ -81,6 +81,7 @@ alias gm='git checkout master'
 alias gmf='git merge --no-ff -m "Update"'
 alias GMF='git checkout master && git merge --no-ff -m "Update" develop && git push && git checkout develop'
 alias GF='git add --all && git commit -m "Update" && git push'
+alias GG='mcf && GF && gsync && ggsync && bb && GF && GL && GF && mcf'
 
 
 # цветной вывод с помощью grc
