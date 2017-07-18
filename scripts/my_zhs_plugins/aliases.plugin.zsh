@@ -54,9 +54,9 @@ alias pacfs='pacman -Qo'
 alias sv='s -b vivaldi-snapshot'
 
 alias mcf='cd $HOME/git/My_config_files'
-alias bb='cd $HOME/git/BitBuket/my_config_files'
+alias bb='cd $HOME/git/BitBuket/My_config_files'
 alias GL='cd $HOME/git/GitLab/My_config_files'
-alias gsync='rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/BitBuket/my_config_files'
+alias gsync='rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/BitBuket/'
 alias ggsync='rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/GitLab/'
 
 # alias mfs='sudo mhddfs /media/haron/BKP,/media/haron/Data /mnt/all -o default_permissions,allow_other'
