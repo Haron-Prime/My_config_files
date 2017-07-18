@@ -110,7 +110,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff15),  spawn "XMMPCstop")                                                       --XF86AudioStop
     , ((0,                         0x1008ff16),  spawn "XMMPCprev")                                                       --XF86AudioPrev
     , ((0,                         0x1008ff17),  spawn "XMMPCnext")                                                       --XF86AudioNext
-    , ((0,                         0x1008ff30),  spawn "XMTransgui")                                                      --XF86Favorites
+    , ((0,                         0x1008ff30),  spawn "subl3")                                                      --XF86Favorites
     , ((0,                         0x1008ff18),  spawn myBrowser)                                                         --XF86HomePage
     , ((0,                         0x1008ff19),  spawn "thunderbird")                                                     --XF86Mail
     , ((0,                         0x1008ff33),  spawn "pcmanfm")                                                         --XF86MyComputer
