@@ -110,7 +110,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                         0x1008ff15),  spawn "XMMPCstop")                                                       --XF86AudioStop
     , ((0,                         0x1008ff16),  spawn "XMMPCprev")                                                       --XF86AudioPrev
     , ((0,                         0x1008ff17),  spawn "XMMPCnext")                                                       --XF86AudioNext
-    , ((0,                         0x1008ff30),  spawn "subl3")                                                      --XF86Favorites
+    , ((0,                         0x1008ff30),  spawn "subl3")                                                           --XF86Favorites
     , ((0,                         0x1008ff18),  spawn myBrowser)                                                         --XF86HomePage
     , ((0,                         0x1008ff19),  spawn "thunderbird")                                                     --XF86Mail
     , ((0,                         0x1008ff33),  spawn "pcmanfm")                                                         --XF86MyComputer
@@ -143,7 +143,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((mod1Mask,                        0x70),  namedScratchpadAction mynameScratchpads "MyPlayer")                      --Alt+P
     , ((mod1Mask,                        0x71),  namedScratchpadAction mynameScratchpads "Oblogout")                      --Alt+Q
     , ((mod1Mask,                        0x72),  namedScratchpadAction mynameScratchpads "MyFM")                          --Alt+R
-    , ((mod1Mask,                        0x73),  spawn "subl3")                                                           --Alt+S
+    -- , ((mod1Mask,                        0x73),  spawn "subl3")                                                           --Alt+S
     -- , ((mod1Mask,                        0x74),  spawn "tor-browser")                                                     --Alt+T
     , ((mod1Mask,                        0x76),  spawn myEditor)                                                          --Alt+V
     -- , ((mod1Mask,                        0x77),  spawn "GWeather")                                                        --Alt+W
