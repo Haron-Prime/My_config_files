@@ -26,4 +26,5 @@ XMCUNew &
 XMTempAll &
 XMMemAll &
 XMTrans &
+nettest &
 exec xmonad

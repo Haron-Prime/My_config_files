@@ -1,0 +1,14 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+while true; do
+    ping -c 1 -w 5 8.8.8.8 &>/dev/null
+    
+    if [ $? -ne 0 ] ; then
+       echo "<fc=#6f0></fc>" > /tmp/haron/NT
+    else 
+       echo  "<fc=#0f0></fc>" > /tmp/haron/NT
+    fi
+    sleep 5
+done
