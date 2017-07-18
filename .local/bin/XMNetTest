@@ -3,11 +3,11 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 while true; do
-    STATUS=`ping -c 1 -w 5 8.8.8.8 | sed -n 5p | awk '{print $4}'`
+    STATUS=`ping -c 3 -w 5 8.8.8.8 | sed -n 7p | awk '{print $4}'`
     if [ $STATUS -eq 0 ]; then
         echo  "<fc=#e50></fc>" > /tmp/haron/NT
     else
         echo  "<fc=#0e0></fc>" > /tmp/haron/NT
     fi
-    sleep 10
+    sleep 30
 done
