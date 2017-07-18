@@ -79,7 +79,7 @@ alias gd='git checkout develop'
 alias gm='git checkout master'
 alias gmf='git merge --no-ff -m "Update"'
 alias GMF='git checkout master && git merge --no-ff -m "Update" develop && git push && git checkout develop'
-alias GF='cd $HOME/git/My_config_files && git add --all && git commit -m "Update" && git push && rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/BitBuket/my_config_files && cd $HOME/git/BitBuket/my_config_files && git add --all && git commit -m "Update" && git push && rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/GitLab/ && cd $HOME/git/GitLab/My_config_files && git add --all && git commit -m "Update" && git push && cd $HOME/git/My_config_files'
+alias GF='git add --all && git commit -m "Update" && git push'
 
 
 # цветной вывод с помощью grc
