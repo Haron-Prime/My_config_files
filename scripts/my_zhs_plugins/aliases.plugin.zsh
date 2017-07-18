@@ -55,7 +55,7 @@ alias sv='s -b vivaldi-snapshot'
 
 alias mcf='cd $HOME/git/My_config_files'
 alias bb='cd $HOME/git/BitBuket/My_config_files'
-alias GL='cd $HOME/git/GitLab/My_config_files'
+alias gl='cd $HOME/git/GitLab/My_config_files'
 alias gsync='rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/BitBuket/'
 alias ggsync='rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/GitLab/'
 alias GS='gsync && ggsync'
@@ -68,7 +68,7 @@ alias d2hpp='printf \\n\#%02X%02X%02X `xclip -o` | xclip -selection clipboard'
 alias d2hp='printf \#%02X%02X%02X `xclip -o` | xclip -selection clipboard'
 
 # my git aliases
-alias gl='git log'
+# alias gl='git log'
 alias gits='git status'
 alias ga='git add'
 alias gi='git add -i'
@@ -81,7 +81,7 @@ alias gm='git checkout master'
 alias gmf='git merge --no-ff -m "Update"'
 alias GMF='git checkout master && git merge --no-ff -m "Update" develop && git push && git checkout develop'
 alias GF='git add --all && git commit -m "Update" && git push'
-alias GG='mcf && GF && gsync && ggsync && bb && GF && GL && GF && mcf'
+alias GG='mcf && GF && gsync && bb && GF && ggsync && gl && GF && mcf'
 
 
 # цветной вывод с помощью grc
