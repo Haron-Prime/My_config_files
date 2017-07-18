@@ -2,13 +2,13 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
+echo  "<fc=#ccc></fc>" > /tmp/haron/NT
 while true; do
-    ping -c 1 -w 5 8.8.8.8 &>/dev/null
-    
-    if [ $? -ne 0 ] ; then
-       echo "<fc=#6f0></fc>" > /tmp/haron/NT
-    else 
-       echo  "<fc=#0f0></fc>" > /tmp/haron/NT
+    result=$(ping -c 3 -w 5 8.8.8.8 | sed -n 7p | awk '{print $4}')
+    if [ $result -eq 0 ]; then
+        echo  "<fc=#0f0></fc>" > /tmp/haron/NT
+    else
+        echo  "<fc=#0f0></fc>" > /tmp/haron/NT
     fi
-    sleep 5
+    sleep 30
 done
