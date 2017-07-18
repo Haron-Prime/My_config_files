@@ -55,7 +55,9 @@ alias sv='s -b vivaldi-snapshot'
 
 alias mcf='cd $HOME/git/My_config_files'
 alias bb='cd $HOME/git/BitBuket/my_config_files'
+alias GL='cd $HOME/git/GitLab/My_config_files'
 alias gsync='rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/BitBuket/my_config_files'
+alias ggsync='rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/GitLab/'
 
 # alias mfs='sudo mhddfs /media/haron/BKP,/media/haron/Data /mnt/all -o default_permissions,allow_other'
 # alias gmx='mount https://storage-file-eu.gmx.com'
@@ -77,7 +79,7 @@ alias gd='git checkout develop'
 alias gm='git checkout master'
 alias gmf='git merge --no-ff -m "Update"'
 alias GMF='git checkout master && git merge --no-ff -m "Update" develop && git push && git checkout develop'
-alias GF='cd $HOME/git/My_config_files && git add --all && git commit -m "Update" && git push && rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/BitBuket/my_config_files && cd $HOME/git/BitBuket/my_config_files && git add --all && git commit -m "Update" && git push && cd $HOME/git/My_config_files'
+alias GF='cd $HOME/git/My_config_files && git add --all && git commit -m "Update" && git push && rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/BitBuket/my_config_files && cd $HOME/git/BitBuket/my_config_files && git add --all && git commit -m "Update" && git push && rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/GitLab/ && cd $HOME/git/GitLab/My_config_files && git add --all && git commit -m "Update" && git push && cd $HOME/git/My_config_files'
 
 
 # цветной вывод с помощью grc

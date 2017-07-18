@@ -5,7 +5,7 @@
 
 UPD=`checkupdates | wc -l`
 if [ $UPD -gt 0 ]; then 
-    echo "<fc=#e50>  </fc> <fc=#cccccc>Update:</fc><fn=2> </fn><fn=1><fc=#e50>"$UPD"<fn=2> </fn>pkg</fc></fn>" > /tmp/haron/UP
+    echo "<fc=#e50></fc> <fc=#cccccc>Update:</fc><fn=2> </fn><fc=#e50>"$UPD"<fn=2> </fn>pkg</fc>" > /tmp/haron/UP
 else 
     echo > /tmp/haron/UP
 fi
