@@ -6,7 +6,7 @@ echo  "<fc=#ccc></fc>" > /tmp/haron/NT
 while true; do
     STATUS=$(ping -c 1 -w 5 8.8.8.8 | sed -n 5p | awk '{print $4}')
     if [ $STATUS -eq 0 ]; then
-        echo  "<fc=#0f0></fc>" > /tmp/haron/NT
+        echo  "<fc=#f60></fc>" > /tmp/haron/NT
     else
         echo  "<fc=#0f0></fc>" > /tmp/haron/NT
     fi
