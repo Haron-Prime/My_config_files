@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+DATA=`date "+%d.%m.%Y"`
+DAY=`date "+%A"`
+case $DAY in
+    Суббота     ) echo "<fc=#ffab00> $DAY</fc> $DATA " ;;
+    Воскресенье ) echo "<fc=#ff6500> $DAY</fc> $DATA " ;;
+    *           ) echo "<fc=#959595> $DAY</fc> $DATA " ;;
+esac
+exit 0

@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+STATE=`cat /tmp/haron/STATE`
+if [ $STATE -eq 0 ]; then
+    echo `XMDate` > /tmp/haron/DO
+    echo "1" > /tmp/haron/STATE
+else
+    echo > /tmp/haron/DO
+    echo "0" > /tmp/haron/STATE
+fi
