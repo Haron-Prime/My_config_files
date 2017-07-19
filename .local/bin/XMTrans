@@ -5,10 +5,9 @@
 while true; do
     if (pgrep transmission >/dev/null); then 
         echo  "<fc=#0e0></fc>" > /tmp/haron/TU
-        exit 0
+        sleep 30
     else
         echo  "<fc=#e50></fc>" > /tmp/haron/TU
+        sleep 5
     fi
-    sleep 5
 done
-exit 0
