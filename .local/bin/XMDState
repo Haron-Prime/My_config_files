@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+echo '' > /tmp/haron/DO
+STATE=`cat /tmp/haron/STATE`
+TIME=`XMTime`
+if [ $STATE -eq 0 ]; then
+    echo `XMDate` > /tmp/haron/DO
+    echo "1" > /tmp/haron/STATE
+else
+    echo '' > /tmp/haron/DO
+    echo "0" > /tmp/haron/STATE
+fi
