@@ -2,13 +2,11 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-echo '' > /tmp/haron/DO
 STATE=`cat /tmp/haron/STATE`
-TIME=`XMTime`
 if [ $STATE -eq 0 ]; then
     echo `XMDate` > /tmp/haron/DO
     echo "1" > /tmp/haron/STATE
 else
-    echo '' > /tmp/haron/DO
+    echo > /tmp/haron/DO
     echo "0" > /tmp/haron/STATE
 fi
