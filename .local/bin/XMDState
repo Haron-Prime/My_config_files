@@ -1,4 +1,7 @@
 #!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
 echo '' > /tmp/haron/DO
 STATE=`cat /tmp/haron/STATE`
 TIME=`XMTime`
