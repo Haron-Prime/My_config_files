@@ -41,6 +41,6 @@ while true; do
             echo "<fc=#${tmp: -6}>$ROM4%</fc>"
       fi
   `
-  echo " "$OUT1 $OUT3 $OUT4 $OUT2 > /tmp/haron/RU
+  echo ' <action=`XMdf-h` button=1><action=`XMblkid` button=3>'$OUT1 $OUT3 $OUT4 $OUT2'</action></action>' > /tmp/haron/RU
   sleep 30
 done
