@@ -45,5 +45,5 @@ while true; do
             echo '<fn=2> </fn><fc=#'${tmp: -6}'>'$VOL'</fc>' >  /tmp/haron/VO
         fi
   fi
-  sleep 30
+  sleep 1
 done
