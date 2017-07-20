@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+STATE=`cat /tmp/haron/STATE3`
+if [ $STATE -eq 0 ]; then
+    XMTraf &
+    echo "1" > /tmp/haron/STATE3
+    exit 0
+else
+    kill $(ps axu | grep XMTraf | grep haron | head -1 | awk '{print $2}')
+    echo > /tmp/haron/TR
+    echo "0" > /tmp/haron/STATE3
+    exit 0
+fi
