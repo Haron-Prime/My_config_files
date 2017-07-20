@@ -18,6 +18,11 @@ The "develop" branch are for testing purposes only.
 ![](/screenshots/xmonad-2.png?raw=true)
 ![](/screenshots/xmonad-3.png?raw=true)
 
+#### XMobar
+
+![](/screenshots/xmobar-1.png?raw=true)
+![](/screenshots/xmobar-2.png?raw=true)
+
 #### Weather in xmobar and dunst
 
 ![](/screenshots/weather_in_xmobar_and_dunst.png?raw=true)
