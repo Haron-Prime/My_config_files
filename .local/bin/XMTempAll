@@ -30,6 +30,6 @@ while true; do
           TMB=`echo "<fc=#"${OUT[$i]}">"$MB2"</fc>"`
         fi
     done
-    echo $TCPU $TMB $TGPU > /tmp/haron/TEMP
+    echo '<action=`XMSensors` button=13><fn=2> </fn>'$TCPU $TMB $TGPU'</action>' > /tmp/haron/TEMP
     sleep 1
 done
