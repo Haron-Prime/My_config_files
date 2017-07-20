@@ -20,9 +20,14 @@ The "develop" branch are for testing purposes only.
 
 #### XMobar
 
+![](/screenshots/xmobar-0.png?raw=true)
 ![](/screenshots/xmobar-1.png?raw=true)
 ![](/screenshots/xmobar-2.png?raw=true)
 ![](/screenshots/xmobar-3.png?raw=true)
+![](/screenshots/xmobar-5.png?raw=true)
+![](/screenshots/xmobar-6.png?raw=true)
+![](/screenshots/xmobar-7.png?raw=true)
+![](/screenshots/xmobar-8.png?raw=true)
 ![](/screenshots/xmobar-full.png?raw=true)
 
 #### Weather in xmobar and dunst
