@@ -1,0 +1,18 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+STATE=`cat /tmp/haron/STATE6`
+if [ $STATE -eq 0 ]; then
+    XMMemAll &
+    XMRomNew &
+    echo "1" > /tmp/haron/STATE6
+    exit 0
+else
+    kill $(ps axu | grep XMMemAll | head -1 | awk '{print $2}')
+    kill $(ps axu | grep XMRomNew | head -1 | awk '{print $2}')
+    echo > /tmp/haron/MEM
+    echo > /tmp/haron/RU
+    echo "0" > /tmp/haron/STATE6
+    exit 0
+fi
