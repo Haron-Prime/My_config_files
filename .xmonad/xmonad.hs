@@ -102,9 +102,9 @@ viewShift            =  doF . liftM2 (.) W.greedyView W.shift
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
     --Applications management
-      ((0,                         0x1008ff13),  spawn "XMVolUp")                                                         --XF86AudioRaiseVolume
-    , ((0,                         0x1008ff11),  spawn "XMVolDown")                                                       --XF86AudioLowerVolume
-    , ((0,                         0x1008ff12),  spawn "XMVolMute")                                                       --XF86AudioMute
+      ((0,                         0x1008ff13),  spawn "pulseaudio-ctl up")                                                         --XF86AudioRaiseVolume
+    , ((0,                         0x1008ff11),  spawn "pulseaudio-ctl down")                                                       --XF86AudioLowerVolume
+    , ((0,                         0x1008ff12),  spawn "pulseaudio-ctl mute")                                                       --XF86AudioMute
     -- , ((mod1Mask,                        0x60),  spawn "mpc toggle")                                                      --Alt+grave
     , ((0,                         0x1008ff14),  spawn "XMMPCtoggle")                                                     --XF86Play
     , ((0,                         0x1008ff15),  spawn "XMMPCstop")                                                       --XF86AudioStop
