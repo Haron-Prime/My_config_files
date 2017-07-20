@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+STATE=`cat /tmp/haron/STATE2`
+IN=`vnstat | grep 'today' | awk '{print $2$3}'`
+OUT=`vnstat | grep 'today' | awk '{print $5$6}'`
+if [ $STATE -eq 0 ]; then
+    echo ' <action=`XMVnstat` button=1><action=`XMVnstat-m` button=3>'$IN'<fn=2> </fn><fc=#0e0></fc><fc=#e50></fc><fn=2> </fn>'$OUT'</action></action>' > /tmp/haron/TS
+    echo "1" > /tmp/haron/STATE2
+else
+    echo > /tmp/haron/TS
+    echo "0" > /tmp/haron/STATE2
+fi
+exit 0

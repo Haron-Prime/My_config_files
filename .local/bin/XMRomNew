@@ -2,44 +2,45 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-
-ROM1=`df -h | grep -w / | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]//'`
-OUT1=`
-    if [ $ROM1 -gt 50 ] ; then
-          tmp="0$(printf "%x\n" $((255-($ROM1-50)*5)))"
-          echo "<fc=#ff${tmp: -2}00>$ROM1%</fc>"
-          else tmp="0$(printf "%x\n" $(( 5*$ROM1 )))ff00"
-          echo "<fc=#${tmp: -6}>$ROM1%</fc>"
-    fi
-`
-
-ROM2=`df -h | grep Data | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]//'`
-OUT2=`
-    if [ $ROM2 -gt 50 ] ; then
-          tmp="0$(printf "%x\n" $((255-($ROM2-50)*5)))"
-          echo "<fc=#ff${tmp: -2}00>$ROM2%</fc>"
-          else tmp="0$(printf "%x\n" $(( 5*$ROM2 )))ff00"
-          echo "<fc=#${tmp: -6}>$ROM2%</fc>"
-    fi
-`
-
-ROM3=`df -h | grep 320G | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]//'`
-OUT3=`
-    if [ $ROM3 -gt 50 ] ; then
-          tmp="0$(printf "%x\n" $((255-($ROM3-50)*5)))"
-          echo "<fc=#ff${tmp: -2}00>$ROM3%</fc>"
-          else tmp="0$(printf "%x\n" $(( 5*$ROM3 )))ff00"
-          echo "<fc=#${tmp: -6}>$ROM3%</fc>"
-    fi
-`
-ROM4=`df -h | grep BKP | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]//'`
-OUT4=`
-    if [ $ROM4 -gt 50 ] ; then
-          tmp="0$(printf "%x\n" $((255-($ROM4-50)*5)))"
-          echo "<fc=#ff${tmp: -2}00>$ROM4%</fc>"
-          else tmp="0$(printf "%x\n" $(( 5*$ROM4 )))ff00"
-          echo "<fc=#${tmp: -6}>$ROM4%</fc>"
-    fi
-`
-echo $OUT1 $OUT3 $OUT4 $OUT2 > /tmp/haron/RU
-exit 0
+while true; do
+  ROM1=`df -h | grep -w / | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]//'`
+  OUT1=`
+      if [ $ROM1 -gt 50 ] ; then
+            tmp="0$(printf "%x\n" $((255-($ROM1-50)*5)))"
+            echo "<fc=#ff${tmp: -2}00>$ROM1%</fc>"
+            else tmp="0$(printf "%x\n" $(( 5*$ROM1 )))ff00"
+            echo "<fc=#${tmp: -6}>$ROM1%</fc>"
+      fi
+  `
+  
+  ROM2=`df -h | grep Data | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]//'`
+  OUT2=`
+      if [ $ROM2 -gt 50 ] ; then
+            tmp="0$(printf "%x\n" $((255-($ROM2-50)*5)))"
+            echo "<fc=#ff${tmp: -2}00>$ROM2%</fc>"
+            else tmp="0$(printf "%x\n" $(( 5*$ROM2 )))ff00"
+            echo "<fc=#${tmp: -6}>$ROM2%</fc>"
+      fi
+  `
+  
+  ROM3=`df -h | grep 320G | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]//'`
+  OUT3=`
+      if [ $ROM3 -gt 50 ] ; then
+            tmp="0$(printf "%x\n" $((255-($ROM3-50)*5)))"
+            echo "<fc=#ff${tmp: -2}00>$ROM3%</fc>"
+            else tmp="0$(printf "%x\n" $(( 5*$ROM3 )))ff00"
+            echo "<fc=#${tmp: -6}>$ROM3%</fc>"
+      fi
+  `
+  ROM4=`df -h | grep BKP | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]//'`
+  OUT4=`
+      if [ $ROM4 -gt 50 ] ; then
+            tmp="0$(printf "%x\n" $((255-($ROM4-50)*5)))"
+            echo "<fc=#ff${tmp: -2}00>$ROM4%</fc>"
+            else tmp="0$(printf "%x\n" $(( 5*$ROM4 )))ff00"
+            echo "<fc=#${tmp: -6}>$ROM4%</fc>"
+      fi
+  `
+  echo ' <action=`XMdf-h` button=1><action=`XMblkid` button=3>'$OUT1 $OUT3 $OUT4 $OUT2'</action></action>' > /tmp/haron/RU
+  sleep 30
+done

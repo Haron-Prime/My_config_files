@@ -17,9 +17,9 @@ while true; do
   let "DIFF_USAGE=(1000*($DIFF_TOTAL-$DIFF_IDLE)/$DIFF_TOTAL+5)/10"
   if [ $DIFF_USAGE -gt 50 ] ; then
           tmp="0`printf "%x\n" $((255-($DIFF_USAGE-50)*5))`"
-          echo "<fc=#ff${tmp: -2}00>$DIFF_USAGE%</fc>" > /tmp/haron/CU
+          echo '<action=`XMTop-cpu` button=1><action=`XMHtop` button=3><fn=2> </fn><fc=#ff'${tmp: -2}'00>'$DIFF_USAGE'%</fc></action></action>' > /tmp/haron/CU
           else tmp="0`printf "%x\n" $(( 5*$DIFF_USAGE ))`ff00"
-          echo "<fc=#${tmp: -6}>$DIFF_USAGE%</fc>" > /tmp/haron/CU
+          echo '<action=`XMTop-cpu` button=1><action=`XMHtop` button=3><fn=2> </fn><fc=#'${tmp: -6}'>'$DIFF_USAGE'%</fc></action></action>' > /tmp/haron/CU
   fi
   PREV_TOTAL="$TOTAL"
   PREV_IDLE="$IDLE"

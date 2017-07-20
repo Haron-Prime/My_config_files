@@ -22,9 +22,9 @@ compton -b &
 urxvtd -q -f -o &
 pcmanfm -d &
 feh --bg-scale /home/haron/wall/starrynight.png &
-XMCUNew &
-XMTempAll &
-XMMemAll &
+# XMCUNew &
+# XMTempAll &
+# XMMemAll &
 XMTrans &
 XMNetTest &
 exec xmonad

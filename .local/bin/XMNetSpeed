@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+while true; do
+    ORX=`cat /sys/class/net/enp3s0/statistics/rx_bytes`
+    OTX=`cat /sys/class/net/enp3s0/statistics/tx_bytes`
+    sleep 1
+    NRX=`cat /sys/class/net/enp3s0/statistics/rx_bytes`
+    NTX=`cat /sys/class/net/enp3s0/statistics/tx_bytes`
+    TRX=`echo "scale=2; ($NRX-$ORX)" | bc -l`
+    TTX=`echo "scale=2; ($NTX-$OTX)" | bc -l`
+
+    if [ $TRX -gt 1048576 ]; then
+        RX=`echo "scale=2; ($TRX/1048576)" | bc -l`"MB/s"
+    elif [ $TRX -gt 1024 ]; then
+        RX=`echo "scale=2; ($TRX/1024)" | bc -l`"KB/s"
+    else
+        RX=$TRX"B/s"
+    fi
+
+    if [ $TTX -gt 1048576 ]; then
+        TX=`echo "scale=2; ($TTX/1048576)" | bc -l`"MB/s"
+    elif [ $TTX -gt 1024 ]; then
+        TX=`echo "scale=2; ($TTX/1024)" | bc -l`"KB/s"
+    else
+        TX=$TTX"B/s"
+    fi
+
+    echo ' <action=`XMVnstat-h` button=1><action=`XMVnstat-d` button=3>'$RX'<fn=2> </fn><fc=#0e0></fc><fc=#e50></fc><fn=2> </fn>'$TX'</action></action>' > /tmp/haron/NS
+done

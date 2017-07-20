@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+STATE=`cat /tmp/haron/STATE5`
+if [ $STATE -eq 0 ]; then
+    XMTempAll &
+    echo "1" > /tmp/haron/STATE5
+    exit 0
+else
+    kill $(ps axu | grep XMTempAll | head -1 | awk '{print $2}')
+    echo > /tmp/haron/TEMP
+    echo "0" > /tmp/haron/STATE5
+    exit 0
+fi

@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+STATE=`cat /tmp/haron/STATE7`
+if [ $STATE -eq 0 ]; then
+    XMUptime &
+    echo "1" > /tmp/haron/STATE7
+    exit 0
+else
+    kill $(ps axu | grep XMUptime | head -1 | awk '{print $2}')
+    echo > /tmp/haron/UT
+    echo "0" > /tmp/haron/STATE7
+    exit 0
+fi
