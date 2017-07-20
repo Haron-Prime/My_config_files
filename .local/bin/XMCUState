@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+STATE=`cat /tmp/haron/STATE4`
+if [ $STATE -eq 0 ]; then
+    XMCUNew &
+    echo "1" > /tmp/haron/STATE4
+    exit 0
+else
+    kill $(ps axu | grep XMCUNew | head -1 | awk '{print $2}')
+    echo > /tmp/haron/CU
+    echo "0" > /tmp/haron/STATE4
+    exit 0
+fi

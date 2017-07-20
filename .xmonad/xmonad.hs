@@ -359,7 +359,7 @@ myLogHook = do
                                         }
 
 -- StartupHook
-myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "gis-weather" <+> spawn "echo > /tmp/haron/MW2" <+> spawn "echo > /tmp/haron/DO" <+> spawn "echo > /tmp/haron/NS" <+> spawn "echo > /tmp/haron/TR" <+> spawn "echo > /tmp/haron/CU" <+> spawn "echo > /tmp/haron/TEMP" <+> spawn "echo > /tmp/haron/MEM" <+> spawn "echo > /tmp/haron/RU" <+> spawn "echo > /tmp/haron/UT" <+> spawn "XMVol2" <+> spawn "XMUpdate" <+> spawn "XMMPD" 
+myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "gis-weather" <+> spawn "echo > /tmp/haron/MW2" <+> spawn "echo > /tmp/haron/DO" <+> spawn "echo > /tmp/haron/NS" <+> spawn "echo > /tmp/haron/TR" <+> spawn "echo > /tmp/haron/CU" <+> spawn "echo > /tmp/haron/TEMP" <+> spawn "echo > /tmp/haron/MEM" <+> spawn "echo > /tmp/haron/RU" <+> spawn "echo > /tmp/haron/UT" <+> spawn "echo > /tmp/haron/VO" <+> spawn "XMUpdate" <+> spawn "XMMPD" 
 
 myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                   terminal           = myTerminal

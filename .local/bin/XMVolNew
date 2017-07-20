@@ -1,0 +1,49 @@
+#!/usr/bin/env zsh
+# Modified - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+while true; do
+  MIXER="default"
+  [ -n "$(lsmod | grep pulse)" ] && MIXER="pulse"
+  [ -n "$(lsmod | grep jack)" ] && MIXER="jackplug"
+  MIXER="${2:-$MIXER}"
+  
+  SCONTROL="${BLOCK_INSTANCE:-$(amixer -D $MIXER scontrols |
+                    sed -n "s/Simple mixer control '\([A-Za-z ]*\)',0/\1/p" |
+                    head -n1
+                  )}"
+  
+  STEP="${1:-5%}"
+  
+  capability() { # Return "Capture" if the device is a capture device
+    amixer -D $MIXER get $SCONTROL |
+      sed -n "s/  Capabilities:.*cvolume.*/Capture/p"
+  }
+  
+  volume() {
+    amixer -D $MIXER get $SCONTROL $(capability)
+  }
+  
+  format() {
+    perl_filter='if (/.*\[(\d+%)\] (\[(-?\d+.\d+dB)\] )?\[(on|off)\]/)'
+    perl_filter+='{CORE::say $4 eq "off" ? "MUTE" : "'
+    # If dB was selected, print that instead
+    perl_filter+=$([[ $STEP = *dB ]] && echo '$3' || echo '$1')
+    perl_filter+='"; exit}'
+    perl -ne "$perl_filter"
+  }
+  
+  VOL=`volume | format`
+  VOL2=`echo $VOL | sed 's/[%]//g'`
+  if [[ $VOL = "MUTE" ]]; then 
+    echo '<fn=2> </fn><fc=#e50><fn=2> </fn>'$VOL'</fc>' > /tmp/haron/VO
+  else 
+        if [ $VOL2 -gt 50 ] ; then
+            tmp="0$(printf "%x\n" $((255-($VOL2-50)*5)))"
+            echo '<fn=2> </fn><fc=#ff'${tmp: -2}'00>'$VOL'</fc>' > /tmp/haron/VO
+            else tmp="0$(printf "%x\n" $(( 5*$VOL2 )))ff00"
+            echo '<fn=2> </fn><fc=#'${tmp: -6}'>'$VOL'</fc>' >  /tmp/haron/VO
+        fi
+  fi
+  sleep 30
+done
