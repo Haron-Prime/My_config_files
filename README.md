@@ -24,6 +24,7 @@ The "develop" branch are for testing purposes only.
 ![](/screenshots/xmobar-1.png?raw=true)
 ![](/screenshots/xmobar-2.png?raw=true)
 ![](/screenshots/xmobar-3.png?raw=true)
+![](/screenshots/xmobar-4.png?raw=true)
 ![](/screenshots/xmobar-5.png?raw=true)
 ![](/screenshots/xmobar-6.png?raw=true)
 ![](/screenshots/xmobar-7.png?raw=true)
