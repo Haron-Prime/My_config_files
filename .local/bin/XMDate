@@ -4,9 +4,10 @@
 
 DATA=`date "+%d.%m.%Y"`
 DAY=`date "+%A"`
+SPACE=' '
 case $DAY in
-    Суббота     ) echo "<fc=#ffab00> $DAY</fc> $DATA " ;;
-    Воскресенье ) echo "<fc=#ff6500> $DAY</fc> $DATA " ;;
-    *           ) echo "<fc=#959595> $DAY</fc> $DATA " ;;
+    Суббота     ) echo "<fc=#ffab00> $DAY</fc> $DATA $SPACE" ;;
+    Воскресенье ) echo "<fc=#ff6500> $DAY</fc> $DATA $SPACE" ;;
+    *           ) echo "<fc=#959595> $DAY</fc> $DATA $SPACE" ;;
 esac
 exit 0
