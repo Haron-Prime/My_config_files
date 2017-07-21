@@ -102,9 +102,9 @@ viewShift            =  doF . liftM2 (.) W.greedyView W.shift
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
     --Applications management
-      ((0,                         0x1008ff13),  spawn "pulseaudio-ctl up")                                                         --XF86AudioRaiseVolume
-    , ((0,                         0x1008ff11),  spawn "pulseaudio-ctl down")                                                       --XF86AudioLowerVolume
-    , ((0,                         0x1008ff12),  spawn "pulseaudio-ctl mute")                                                       --XF86AudioMute
+      ((0,                         0x1008ff13),  spawn "pulseaudio-ctl up")                                               --XF86AudioRaiseVolume
+    , ((0,                         0x1008ff11),  spawn "pulseaudio-ctl down")                                             --XF86AudioLowerVolume
+    , ((0,                         0x1008ff12),  spawn "pulseaudio-ctl mute")                                             --XF86AudioMute
     -- , ((mod1Mask,                        0x60),  spawn "mpc toggle")                                                      --Alt+grave
     , ((0,                         0x1008ff14),  spawn "XMMPCtoggle")                                                     --XF86Play
     , ((0,                         0x1008ff15),  spawn "XMMPCstop")                                                       --XF86AudioStop
@@ -150,6 +150,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((mod1Mask,                        0x7a),  spawn "zim")                                                             --Alt+Z
     , ((modm     .|. shiftMask,        0xff0d),  spawn $ XMonad.terminal conf)                                            --Mod4+Shift+Return
 
+    --Recompile & restart
     , ((modm,                            0x63),  spawn "XMR")                                                             --Mod4+C
     , ((modm,                            0x71),  spawn "XMRR")                                                            --Mod4+Q
 
@@ -208,14 +209,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x78),  kill)                                                                    --Mod4+X
 
     --XMobar management
-    , ((mod1Mask .|. controlMask,        0x31), spawn "XMNetState")
-    , ((mod1Mask .|. controlMask,        0x32), spawn "XMTrafState")
-    , ((mod1Mask .|. controlMask,        0x33), spawn "XMCUState")
-    , ((mod1Mask .|. controlMask,        0x34), spawn "XMTempState")
-    , ((mod1Mask .|. controlMask,        0x35), spawn "XMMemState")
-    , ((mod1Mask .|. controlMask,        0x36), spawn "XMUptimeState")
-    , ((mod1Mask .|. controlMask,        0x37), spawn "XMVolState")
-    , ((mod1Mask .|. controlMask,        0x38), spawn "XMDateState")
+    , ((mod1Mask,                        0x30), spawn "XMStateAll")                                                       --Alt+0
+    , ((mod1Mask,                        0x31), spawn "XMNetState")                                                       --Alt+1
+    , ((mod1Mask,                        0x32), spawn "XMTrafState")                                                      --Alt+2
+    , ((mod1Mask,                        0x33), spawn "XMCPUState")                                                       --Alt+3
+    , ((mod1Mask,                        0x34), spawn "XMTempState")                                                      --Alt+4
+    , ((mod1Mask,                        0x35), spawn "XMMemState")                                                       --Alt+5
+    , ((mod1Mask,                        0x36), spawn "XMUptimeState")                                                    --Alt+6
+    , ((mod1Mask,                        0x37), spawn "XMVolState")                                                       --Alt+7
+    , ((mod1Mask,                        0x38), spawn "XMDateState")                                                      --Alt+8
     ]
 
     ++
