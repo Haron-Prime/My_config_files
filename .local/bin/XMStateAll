@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+XMNetState &
+XMTrafState &
+XMCPUState &
+XMTempState &
+XMMemState &
+XMUptimeState &
+XMVolState &
+XMDateState &
+exit 0
