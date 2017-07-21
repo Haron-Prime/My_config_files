@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+kill $(ps axu | grep XMNetSpeed | head -1 | awk '{print $2}') &
+kill $(ps axu | grep XMTraf     | head -1 | awk '{print $2}') &
+kill $(ps axu | grep XMCUNew    | head -1 | awk '{print $2}') &
+kill $(ps axu | grep XMTempAll  | head -1 | awk '{print $2}') &
+kill $(ps axu | grep XMMemAll   | head -1 | awk '{print $2}') &
+kill $(ps axu | grep XMRomNew   | head -1 | awk '{print $2}') &
+kill $(ps axu | grep XMUptime   | head -1 | awk '{print $2}') &
+kill $(ps axu | grep XMVolNew   | head -1 | awk '{print $2}') &
+kill $(ps axu | grep XMDate     | head -1 | awk '{print $2}') &
+
+exit 0
