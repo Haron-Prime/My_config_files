@@ -3,7 +3,8 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 while true; do
-    MYUP=`uptime | cut -d , -f 1 | awk '{print $3 $4}'`
+    # MYUP=`uptime | cut -d , -f 1 | awk '{print $3 $4}'`
+    MYUP=`uptime`
     echo '<action=`XMHtop` button=1><action=`XMinxi` button=3><fn=2> </fn>'$MYUP'</action></action>' > /tmp/haron/UT
     sleep 60
 done

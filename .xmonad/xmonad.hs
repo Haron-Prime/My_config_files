@@ -210,7 +210,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --XMobar management
     , ((mod1Mask .|. controlMask,        0x31), spawn "XMNetState")
     , ((mod1Mask .|. controlMask,        0x32), spawn "XMTrafState")
-    , ((mod1Mask .|. controlMask,        0x33), spawn "XMCUState")
+    , ((mod1Mask .|. controlMask,        0x33), spawn "XMCPUState")
     , ((mod1Mask .|. controlMask,        0x34), spawn "XMTempState")
     , ((mod1Mask .|. controlMask,        0x35), spawn "XMMemState")
     , ((mod1Mask .|. controlMask,        0x36), spawn "XMUptimeState")
