@@ -5,7 +5,6 @@
 while true; do
     OUT1=`uptime | cut -d , -f 1 | awk '{print $2,$3}'`
     OUT2=`uptime | awk '{print $8,$9,$10}'`
-    # MYUP=`uptime`
     echo '<action=`XMHtop` button=1><action=`XMinxi` button=3> <fc=#0e0>'$OUT1'</fc>  <fc=#9df>'$OUT2'</fc></action></action>' > /tmp/haron/UT
     sleep 60
 done
