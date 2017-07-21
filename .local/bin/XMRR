@@ -7,5 +7,6 @@ xmonad --recompile &&
 killall xmobar &&
 killall gis-weather &&
 killall sleep &&
+XMKill &
 xmonad --restart
 exit 0

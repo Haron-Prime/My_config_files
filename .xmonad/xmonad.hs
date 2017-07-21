@@ -206,6 +206,16 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x7a),  withFocused minimizeWindow <+> spawn "XMMWO")                            --Mod4+Z
     , ((modm,                            0x61),  sendMessage RestoreNextMinimizedWin <+> spawn "XMMWC")                   --Mod4+A
     , ((modm,                            0x78),  kill)                                                                    --Mod4+X
+
+    --XMobar management
+    , ((mod1Mask .|. controlMask,        0x31), spawn "XMNetState")
+    , ((mod1Mask .|. controlMask,        0x32), spawn "XMTrafState")
+    , ((mod1Mask .|. controlMask,        0x33), spawn "XMCUState")
+    , ((mod1Mask .|. controlMask,        0x34), spawn "XMTempState")
+    , ((mod1Mask .|. controlMask,        0x35), spawn "XMMemState")
+    , ((mod1Mask .|. controlMask,        0x36), spawn "XMUptimeState")
+    , ((mod1Mask .|. controlMask,        0x37), spawn "XMVolState")
+    , ((mod1Mask .|. controlMask,        0x38), spawn "XMDateState")
     ]
 
     ++
