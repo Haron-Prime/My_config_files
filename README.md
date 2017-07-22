@@ -97,4 +97,4 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 0. You just DO WHAT THE FUCK YOU WANT TO.
 
 ```
-![(http://www.wtfpl.net)](/screenshots/wtfpl-badge-1.png?raw=true)
+[[(WTFPL)](/screenshots/wtfpl-badge-1.png?raw=true)](http://www.wtfpl.net WTFPL)
