@@ -245,6 +245,10 @@ submenu = Tools
     cmd  = gnome-font-viewer
     icon = /usr/share/icons/nouveGnomeGray/24x24/apps/preferences-desktop-font.png
 
+    item = Gucharmap
+    cmd  = gnome-character-map
+    icon = /usr/share/icons/nouveGnomeGray/24x24/apps/preferences-desktop-font.png
+
 submenu = Settings
     icon = /usr/share/icons/nouveGnomeGray/24x24/categories/applications-system.png
 

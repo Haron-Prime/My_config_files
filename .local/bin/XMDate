@@ -2,12 +2,14 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-DATA=`date "+%d.%m.%Y"`
-DAY=`date "+%A"`
-TZ=`date "+%Z UTC%:::z"`
-case $DAY in
-    Суббота     ) echo "<fc=#ffab00> $DAY</fc> $DATA <fc=#ccc>$TZ</fc>" ;;
-    Воскресенье ) echo "<fc=#ff6500> $DAY</fc> $DATA <fc=#ccc>$TZ</fc>" ;;
-    *           ) echo "<fc=#959595> $DAY</fc> $DATA <fc=#ccc>$TZ</fc>" ;;
-esac
-exit 0
+while true; do
+    DATA=`date "+%d.%m.%Y"`
+    DAY=`date "+%A"`
+    TZ=`date "+%Z UTC%:::z"`
+    case $DAY in
+        Суббота     ) echo "<fc=#ffab00> $DAY</fc> $DATA <fc=#ccc>$TZ</fc>" > /tmp/haron/DO ;;
+        Воскресенье ) echo "<fc=#ff6500> $DAY</fc> $DATA <fc=#ccc>$TZ</fc>" > /tmp/haron/DO ;;
+        *           ) echo "<fc=#959595> $DAY</fc> $DATA <fc=#ccc>$TZ</fc>" > /tmp/haron/DO ;;
+    esac
+    sleep 60
+done
