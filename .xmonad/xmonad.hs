@@ -67,7 +67,7 @@ myHtop               =  "urxvtc -name htop -e htop"
 myPlayer             =  "urxvtc -name ncmpcpp -e ncmpcpp"
 myEditor             =  "urxvtc -name vim -e vim"
 myAppMenu            =  "mygtkmenu .menurc"
-myPlaceMenu          =  "mygtkmenu .bookmarksrc"
+myPlaceMenu          =  "mygtkmenu .placerc"
 myQSTerminal         =  scratchpadSpawnActionTerminal myTerminal
 
 myModMask            =  mod4Mask

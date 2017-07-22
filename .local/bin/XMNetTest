@@ -3,6 +3,7 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 echo  "" > /tmp/haron/NT
+sleep 5 &&
 while true; do
     STATUS=`ping -c 3 8.8.8.8 | sed -n 7p | awk '{print $4}'`
     if [ $STATUS -eq 0 ]; then
