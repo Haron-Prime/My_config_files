@@ -165,7 +165,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     --WS management
     , ((mod1Mask,                      0xff09),  nextWS)                                                                  --Alt+Tab
-    , ((mod1Mask,                      0xff1b),  prevWS)                                                                  --Alt+Escape
+    , ((mod1Mask .|. controlMask,      0xff09),  prevWS)                                                                  --Alt+Ctrl+Tab
     , ((mod1Mask .|. controlMask,      0xff53),  DO.moveTo Next HiddenNonEmptyWS)                                         --Alt+Ctrl+Right
     , ((mod1Mask .|. controlMask,      0xff51),  DO.moveTo Prev HiddenNonEmptyWS)                                         --Alt+Ctrl+Left
     , ((modm,                          0xff1b),  toggleWS' ["NSP"])                                                       --Mod4+Escape
@@ -209,7 +209,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x78),  kill)                                                                    --Mod4+X
 
     --XMobar management
-    -- , ((mod1Mask,                        0x30), spawn "XMStateAll")                                                       --Alt+0
+    , ((mod1Mask,                        0x30), spawn "XMKill")                                                           --Alt+0
     , ((mod1Mask,                        0x31), spawn "XMNetState")                                                       --Alt+1
     , ((mod1Mask,                        0x32), spawn "XMTrafState")                                                      --Alt+2
     , ((mod1Mask,                        0x33), spawn "XMCPUState")                                                       --Alt+3
@@ -218,8 +218,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x36), spawn "XMUptimeState")                                                    --Alt+6
     , ((mod1Mask,                        0x37), spawn "XMVolState")                                                       --Alt+7
     , ((mod1Mask,                        0x38), spawn "XMDateState")                                                      --Alt+8
-    , ((mod1Mask,                        0x3d), spawn "XMStateAll")                                                       --Alt+equal
-    , ((mod1Mask,                        0x2d), spawn "XMKill")                                                           --Alt+minus
+    , ((mod1Mask,                      0xff1b), spawn "XMStateAll")                                                       --Alt+Escape
     ]
 
     ++
