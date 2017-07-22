@@ -5,6 +5,6 @@
 while true; do
     RX=`vnstat | grep 'today' | awk '{print $2$3}'`
     TX=`vnstat | grep 'today' | awk '{print $5$6}'`
-    echo ' <action=`XMVnstat` button=1><action=`XMVnstat-m` button=3>'$RX'<fn=2> </fn><fc=#0e0></fc><fc=#e50></fc><fn=2> </fn>'$TX'</action></action>' > /tmp/haron/TR
+    echo ' <action=`XMVnstat-d` button=1><action=`XMVnstat-m` button=3>'$RX'<fn=2> </fn><fc=#0e0></fc><fc=#e50></fc><fn=2> </fn>'$TX'</action></action>' > /tmp/haron/TR
     sleep 60
 done

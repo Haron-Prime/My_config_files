@@ -1,28 +1,29 @@
-<fn=2>
-
-</fn>
-<action=`XMScreenfetch` button=13>
-    <icon=arch-mono-16x16.xpm/>
-</action>
-
-<action=`mygtkmenu .menurc` button=13>
-    <fn=3>
-        
-    </fn>
+ 
+ <action=`XMScreenfetch` button=3>
+    <action=`mygtkmenu .menurc` button=1>
+        <fn=5>
+            
+        </fn>
+    </action>
 </action>
 
 <action=`xdotool key 0xffeb+0xff1b` button=1>
     <action=`mygtkmenu .workspacesrc` button=3>
         <action=`xdotool key 0xffe3+0xffe9+0xff51` button=4>
             <action=`xdotool key 0xffe3+0xffe9+0xff53` button=5>
-                %XMonadLog%
+                <fn=4>
+                    %XMonadLog%
+                </fn>
             </action>
         </action>
     </action>
 </action>
+<fn=2>
 
-<action=`mygtkmenu .bookmarksrc` button=13>
-    <fn=3>
+
+</fn>
+<action=`mygtkmenu .bookmarksrc` button=1>
+    <fn=5>
         
     </fn>
 </action>
@@ -33,122 +34,108 @@
     %UP%
 </action>
 
-<action=`XMVnstat-h` button=1>
-    <action=`XMVnstat-d` button=3>
-        %dynnetwork%
+<action=`XMNetState` button=1>
+    <action=`XMVnstat-h & XMVnstat` button=45>
+        %NT%
     </action>
 </action>
+%NS%
 
-<action=`xdg-open http://localhost:9091/transmission/web/` button=3>
-    <action=`XMTransgui` button=1>
-        %TU%
+<action=`XMTrafState` button=1>
+    <action=`XMTransgui` button=3>
+        <action=`XMVnstat-m` button=4>
+            <action=`XMVnstat-d` button=5>
+                %TU%
+            </action>
+        </action>
     </action>
 </action>
+%TR%
 
-<action=`XMVnstat` button=1>
-    <action=`XMVnstat-m` button=3>
-        %TR%
-    </action>
-</action>
-
-<action=`XMTop-cpu` button=1>
-    <action=`XMHtop` button=3>
-        <fc=#ccc>
-            <fn=3>
-
-            </fn>
-        </fc>
-        <fn=2>
-
-
-        </fn>
-        %CU%
-    </action>
-</action>
-
-<action=`XMSensors` button=13>
+<action=`XMCPUState` button=1>
     <fc=#ccc>
-        <fn=3>
-            
+        
+    </fc>
+</action>
+%CU%
+
+<action=`XMTempState` button=1>
+    <fc=#ccc>
+        
+    </fc>
+</action>
+%TEMP%
+
+<action=`XMMemState` button=1>
+    <fc=#ccc>
+        <fn=5>
+            
         </fn>
     </fc>
-    <fn=2>
-
-
-    </fn>
-    %TEMP%
 </action>
+%MEM%
+%RU%
 
-<action=`XMTop-mem` button=1>
-    <action=`XMFree` button=3>
-        <fc=#ccc>
-            <fn=3>
-                
-            </fn>
-        </fc>
-        <fn=2>
-
-
-        </fn>
-        %MEM%
-    </action>
+<action=`XMUptimeState` button=1>
+    <fc=#ccc>
+        
+    </fc>
 </action>
+%UT%
 
-<action=`XMdf-h` button=1>
-    <action=`XMblkid` button=3>
-        %RU%
-    </action>
-</action>
-
-<action=`XMHtop` button=1>
-    <action=`XMinxi` button=3>
-        %UT%
-    </action>
-</action>
-
-<action=`XMVolUp` button=5>
-    <action=`XMVolDown` button=4>
-        <action=`XMVolMute` button=1>
-            <action=`XMPavucontrol` button=3>
-                %VO%
+<action=`XMVolState` button=1>
+    <action=`XMPavucontrol` button=2>
+        <action=`pulseaudio-ctl mute` button=3>
+            <action=`pulseaudio-ctl up` button=5>
+                <action=`pulseaudio-ctl down` button=4>
+                    <fc=#ccc>
+                        
+                    </fc>
+                    %VO%
+                </action>
             </action>
         </action>
     </action>
 </action>
 
-<action=`XMMPC` button=45>
-    <action=`XMncmpcpp` button=3>
-        <action=`XMMPCprev` button=1>
-            <fn=3>
+<fn=5>
+    <action=`XMMPC` button=45>
+        <action=`XMncmpcpp` button=3>
+            <action=`XMMPCprev` button=1>
                 
-            </fn>
-        </action>
+            </action>
 
-        <action=`XMMPCtoggle` button=1>
-            <action=`XMMPCstop` button=2>
-                %PS%
+            <action=`XMMPCtoggle` button=1>
+                <action=`XMMPCstop` button=2>
+                    %PS%
+                </action>
+            </action>
+
+            <action=`XMMPCnext` button=1>
+                
             </action>
         </action>
-
-        <action=`XMMPCnext` button=1>
-            <fn=3>
-                
-            </fn>
-        </action>
     </action>
-</action>
+</fn>
 
 <action=`xkblayout-state set +1`>
     %kbd%
 </action>
+<action=`XMDateState` button=1>
+    <action=`XMGSimplecal` button=4>
+        <action=`XMCal` button=5>
+            %DO%
 
-<action=`XMGSimplecal` button=1>
-    <action=`XMCal` button=3>
-        %XMTime%
+            <fn=1>
+                <fc=#ccc>
+                    %Time%
+                </fc>
+            </fn>
+        </action>
     </action>
 </action>
 
-<action=`XMGWeather` button=13>
+<action=`XMGWeather` button=1>
     %WI%
 </action>
 <fn=2>
@@ -156,19 +143,19 @@
 </fn>
 <action=`XMAccuWeather` button=1>
     <action=`XMGismeteo` button=3>
-        <fc=#95d5f5>
+        <fc=#ccc>
             <fn=1>
-                %CT%
+                %CT%C
             </fn>
         </fc>
     </action>
 </action>
-<action=`XMXClock` button=13>
+<action=`XMStateAll` button=1>
+    <action=`XMKill` button=3>
 
     <fc=#ccc>
-        <fn=3>
-            
-        </fn>
+        
     </fc>
 
+    </action>
 </action>
