@@ -209,7 +209,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                            0x78),  kill)                                                                    --Mod4+X
 
     --XMobar management
-    , ((mod1Mask,                        0x30), spawn "XMKill")                                                           --Alt+0
+    -- , ((mod1Mask,                        0x30), spawn "XMKill")                                                           --Alt+0
     , ((mod1Mask,                        0x31), spawn "XMNetState")                                                       --Alt+1
     , ((mod1Mask,                        0x32), spawn "XMTrafState")                                                      --Alt+2
     , ((mod1Mask,                        0x33), spawn "XMCPUState")                                                       --Alt+3
@@ -218,6 +218,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x36), spawn "XMUptimeState")                                                    --Alt+6
     , ((mod1Mask,                        0x37), spawn "XMVolState")                                                       --Alt+7
     , ((mod1Mask,                        0x38), spawn "XMDateState")                                                      --Alt+8
+    , ((mod1Mask,                        0x60), spawn "XMKill")                                                           --Alt+grave
     , ((mod1Mask,                      0xff1b), spawn "XMStateAll")                                                       --Alt+Escape
     ]
 
