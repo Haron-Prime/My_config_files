@@ -31,6 +31,10 @@ The "develop" branch are for testing purposes only.
 ![](/screenshots/xmobar-8.png?raw=true)
 ![](/screenshots/xmobar-full.png?raw=true)
 
+#### Dynamic blocks of information in XMobar (video)
+
+[![Dynamic blocks of information in XMobar](/screenshots/Dynamic_xmobar(video).png?raw=true)](https://youtu.be/9QjXUNTmquQ "Dynamic blocks of information in XMobar")
+
 #### Weather in xmobar and dunst
 
 ![](/screenshots/weather_in_xmobar_and_dunst.png?raw=true)
