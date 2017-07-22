@@ -112,8 +112,20 @@ submenu = git
     cmd  = xdg-open /home/haron/git/GitHub-out
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
 
-    item = MCF
+    item = GitLab
+    cmd = xdg-open /home/haron/git/GitLab
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
+
+    item = MCF-GH
     cmd  = xdg-open /home/haron/git/My_config_files
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
+
+    item = MCF-GL
+    cmd  = xdg-open /home/haron/git/GitLab/My_config_files
+    icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
+
+    item = MCF-BB
+    cmd  = xdg-open /home/haron/git/BitBuket/My_config_files
     icon = /usr/share/icons/nouveGnomeGray/Extra/folder_web.png
 
 submenu = local
