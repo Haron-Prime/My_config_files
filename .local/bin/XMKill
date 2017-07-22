@@ -2,16 +2,14 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-kill $(ps axu | grep XMNetSpeed | head -1 | awk '{print $2}') &
-kill $(ps axu | grep XMTraf     | head -1 | awk '{print $2}') &
-kill $(ps axu | grep XMCUNew    | head -1 | awk '{print $2}') &
-kill $(ps axu | grep XMTempAll  | head -1 | awk '{print $2}') &
-kill $(ps axu | grep XMMemAll   | head -1 | awk '{print $2}') &
-kill $(ps axu | grep XMRomNew   | head -1 | awk '{print $2}') &
-kill $(ps axu | grep XMUptime   | head -1 | awk '{print $2}') &
-kill $(ps axu | grep XMVolNew   | head -1 | awk '{print $2}') &
-kill $(ps axu | grep XMDate     | head -1 | awk '{print $2}') &
+kill $(ps axu | grep XMNetSpeed                         | grep -v grep | awk '{print $2}') &
+kill $(ps axu | grep XMTraf     | grep -v XMTrafState   | grep -v grep | awk '{print $2}') &
+kill $(ps axu | grep XMCUNew                            | grep -v grep | awk '{print $2}') &
+kill $(ps axu | grep XMTempAll                          | grep -v grep | awk '{print $2}') &
+kill $(ps axu | grep XMMemAll                           | grep -v grep | awk '{print $2}') &
+kill $(ps axu | grep XMRomNew                           | grep -v grep | awk '{print $2}') &
+kill $(ps axu | grep XMUptime   | grep -v XMUptimeState | grep -v grep | awk '{print $2}') &
+kill $(ps axu | grep XMVolNew                           | grep -v grep | awk '{print $2}') &
+kill $(ps axu | grep XMDate     | grep -v XMDateState   | grep -v grep | awk '{print $2}') &
 echo > /tmp/haron/{CU,DO,MEM,MW2,NS,RU,TEMP,TR,UT,VO} &
-echo "0" > /tmp/haron/{STATE,STATE2,STATE3,STATE4,STATE5,STATE6,STATE7,STATE8} &
-
 exit 0

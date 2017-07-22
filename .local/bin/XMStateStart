@@ -3,5 +3,4 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 echo > /tmp/haron/{CU,DO,MEM,MW2,NS,RU,TEMP,TR,UT,VO}
-echo "0" > /tmp/haron/{STATE,STATE2,STATE3,STATE4,STATE5,STATE6,STATE7,STATE8}
 exit 0

@@ -2,11 +2,12 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-STATE=`cat /tmp/haron/STATE`
-if [ $STATE -eq 0 ]; then
-    echo `XMDate` > /tmp/haron/DO
-    echo "1" > /tmp/haron/STATE
-else
+PID=`ps aux | grep XMDate | grep -v XMDateState | grep -v grep | awk '{print $2}'`
+if [[ $PID -gt 0 ]]; then
+    kill $PID
     echo > /tmp/haron/DO
-    echo "0" > /tmp/haron/STATE
+    exit 0
+else
+    XMDate &
+    exit 0
 fi

@@ -2,14 +2,12 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-STATE=`cat /tmp/haron/STATE4`
-if [ $STATE -eq 0 ]; then
-    XMCUNew &
-    echo "1" > /tmp/haron/STATE4
+PID=`ps aux | grep XMCUNew | grep -v grep | awk '{print $2}'`
+if [[ $PID -gt 0 ]]; then
+    kill $PID
+    echo > /tmp/haron/CU
     exit 0
 else
-    kill $(ps axu | grep XMCUNew | head -1 | awk '{print $2}')
-    echo > /tmp/haron/CU
-    echo "0" > /tmp/haron/STATE4
+    XMCUNew &
     exit 0
 fi
