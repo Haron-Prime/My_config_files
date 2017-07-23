@@ -8,8 +8,8 @@ while true; do
     OUT1=`uptime | cut -d , -f 1 | awk '{print $2,$3}'`
     case $UPTIME in
         min ) OUT2=`uptime | awk '{print $9,$10,$11}'`  ;;
-        *   ) OUT2=`uptime | awk '{print $8,$9,$10}'`  ;;
+        *   ) OUT2=`uptime | awk '{print $8,$9,$10}'`   ;;
     esac
-    echo '<action=`XMHtop` button=1><action=`XMinxi` button=3> <fc=#9df>'$KERN'</fc>  <fc=#0e0>'$OUT1'</fc>  <fc=#9df>'$OUT2'</fc> </action></action>' > /tmp/haron/UT
+    echo '<action=`XMHtop` button=1> <fc=#9df>'$KERN'</fc>  <fc=#0e0>'$OUT1'</fc>  <fc=#9df>'$OUT2'</fc> </action>' > /tmp/haron/UT
     sleep 60
 done
