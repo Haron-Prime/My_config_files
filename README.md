@@ -37,7 +37,7 @@ The "develop" branch are for testing purposes only.
 
 #### MPD management in XMobar
 
-![](/screenshots/mpd-1.png?raw=true) ![](/screenshots/mpd-2.png?raw=true) ![](/screenshots/mpd-3.png?raw=true)
+![](/screenshots/mpd-1.png?raw=true)  ![](/screenshots/mpd-2.png?raw=true)  ![](/screenshots/mpd-3.png?raw=true)
 
 ![](/screenshots/mpd-4.png?raw=true)
 
