@@ -35,6 +35,11 @@ The "develop" branch are for testing purposes only.
 
 [![Dynamic blocks of information in XMobar](/screenshots/My_XMobar.png?raw=true)](https://youtu.be/DihWJ4tGXG8 "Dynamic blocks of information in XMobar")
 
+#### MPD management in XMobar
+
+![](/screenshots/mpd-1.png?raw=true) ![](/screenshots/mpd-3.png?raw=true) ![](/screenshots/mpd-3.png?raw=true)
+
+![](/screenshots/mpd-4.png?raw=true)
 
 #### Weather in xmobar and dunst
 
