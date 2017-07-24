@@ -147,6 +147,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x74),  spawn "XMTransgui")                                                      --Alt+T
     , ((mod1Mask,                        0x76),  spawn myEditor)                                                          --Alt+V
     -- , ((mod1Mask,                        0x77),  spawn "GWeather")                                                        --Alt+W
+    , ((mod1Mask,                        0x79),  spawn "XMYaourt")                                                        --Alt+Y
     -- , ((mod1Mask,                        0x7a),  spawn "zim")                                                             --Alt+Z
     , ((modm     .|. shiftMask,        0xff0d),  spawn $ XMonad.terminal conf)                                            --Mod4+Shift+Return
 
