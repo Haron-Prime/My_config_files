@@ -41,7 +41,7 @@ The "develop" branch are for testing purposes only.
 
 ![](/screenshots/mpd-4.png?raw=true)
 
-[![Management of the MPD from the xmobar and other actions](/mpd-5.png?raw=true)](https://youtu.be/EP2uaAIy07E "Management of the MPD from the xmobar and other actions")
+[![Management of the MPD from the xmobar and other actions](/screenshots/mpd-5.png?raw=true)](https://youtu.be/EP2uaAIy07E "Management of the MPD from the xmobar and other actions")
 
 #### Weather in xmobar and dunst
 
