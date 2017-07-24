@@ -3,9 +3,10 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 # Recompile and restart xmonad
 
-killall xmobar &&
-killall gis-weather &&
-killall sleep &&
+killall xmobar &
+killall gis-weather &
+killall sleep &
+kill $(ps aux | grep XMMPD | grep -v grep | awk '{print $2}') &
 XMKill &
 xmonad --restart
 exit 0

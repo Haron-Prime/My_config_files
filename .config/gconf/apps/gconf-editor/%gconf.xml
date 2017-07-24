@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <gconf>
-	<entry name="recents" mtime="1490033625" type="list" ltype="string">
+	<entry name="recents" mtime="1500895891" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>/apps/nautilus/preferences/desktop_font</stringvalue>
+		</li>
 		<li type="string">
 			<stringvalue>/system/pulseaudio/modules/combine/name0</stringvalue>
 		</li>

@@ -6,7 +6,7 @@
 	</entry>
 	<entry name="rgba_colormap" mtime="1430743008" type="bool" value="false"/>
 	<entry name="pathbar_like_breadcrumbs" mtime="1430743008" type="bool" value="true"/>
-	<entry name="desktop_font" mtime="1430743006" type="string">
-		<stringvalue>Droid Sans 9</stringvalue>
+	<entry name="desktop_font" mtime="1500895891" type="string">
+		<stringvalue>SonyEricssonLogo 10</stringvalue>
 	</entry>
 </gconf>
