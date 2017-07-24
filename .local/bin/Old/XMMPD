@@ -2,8 +2,7 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-inotifywait -m -e modify /home/haron/.config/mpd |\
-(
+
 if (pidof mpd >/dev/null); then
     ST=`mpc | sed -n 2p | awk '{print $1}' | sed -e 's/[^a-z]//g'`
     case $ST in
@@ -12,4 +11,4 @@ if (pidof mpd >/dev/null); then
         *        ) echo "<fc=#ff8181></fc>  " > /tmp/haron/PS  ;;
     esac
 fi
-)
+exit 0
