@@ -2,13 +2,10 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-DATA=`date "+%d.%m.%Y"`
-DAY=`date "+%A"`
+HOUR=`date "+%H" | cut -c 1`
 TIME=`date "+%H:%M:%S"`
-TZ=`date +%:::z`
-case $DAY in
-    Суббота     ) echo "<fc=#ffab00>$DAY</fc> $DATA <fc=#ccc>$TIME</fc>" ;;
-    Воскресенье ) echo "<fc=#ff6500>$DAY</fc> $DATA <fc=#ccc>$TIME</fc>" ;;
-    *           ) echo "<fc=#959595>$DAY</fc> $DATA <fc=#ccc>$TIME</fc>" ;;
-esac
-exit 0
+if [[ $HOUR -eq 1 ]]; then
+    echo "<fn=2> </fn>"$TIME
+else
+    echo "<fn=2>  </fn>"$TIME
+fi
