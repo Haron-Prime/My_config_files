@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+HOUR=`date "+%H" | cut -c 1`
+TIME=`date "+%H:%M:%S"`
+if [[ $HOUR -eq 1 ]]; then
+    echo "<fn=2> </fn>"$TIME
+else
+    echo "<fn=2>  </fn>"$TIME
+fi
