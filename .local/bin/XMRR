@@ -7,7 +7,7 @@ killall xmobar &
 killall gis-weather &
 killall sleep &
 kill $(ps aux | grep XMMPD | grep -v grep | awk '{print $2}') &
-XMKill &
+XMStateKill &
 xmonad --recompile &&
 xmonad --restart
 exit 0
