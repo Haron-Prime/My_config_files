@@ -13,6 +13,12 @@ alias xi='startx $HOME/.xinitrc-i3'
 alias xa='startx $HOME/.xinitrc-awesome'
 
 alias sctl='systemctl'
+alias sctlu='systemctl --user'
+alias startu='systemctl --user start'
+alias statusu='systemctl --user status'
+alias stopu='systemctl --user stop'
+alias enableu='systemctl --user enable'
+
 alias jctl='journalctl'
 alias jctlb='journalctl -b'
 alias jctlf='journalctl -f'
