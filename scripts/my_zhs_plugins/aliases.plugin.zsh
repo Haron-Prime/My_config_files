@@ -89,7 +89,7 @@ alias gch='git checkout'
 alias gd='git checkout develop'
 alias gm='git checkout master'
 alias gmf='git merge --no-ff -m "Update"'
-alias GM='git checkout master && git merge --no-ff -m "Update" develop && git push && git checkout develop'
+alias GC='git checkout master && git merge --no-ff -m "Update" develop && git push && git checkout develop'
 alias GF='git add --all && git commit -m "Update" && git push'
 alias GG='mcf && GF && gsync && bb && GF && ggsync && gl && GF && mcf'
 
