@@ -7,7 +7,6 @@ XMTrafState &
 XMCPUState &
 XMTempState &
 XMMemState &
-XMUptimeState &
 XMVolState &
 XMDateState &
 exit 0

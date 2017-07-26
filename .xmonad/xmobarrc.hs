@@ -5,10 +5,11 @@ Config {
          font             = "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
        , additionalFonts  = [
                              "xft:Larabiefont:size=12:weight=bold:antialias=true:hinting=true"
-                            ,"xft:Terminus Re33:pixelsize=8"
+                            ,"xft:Terminus Re33:pixelsize=6"
                             ,"xft:Weather Icons:weight=bold:pixelsize=14"
                             ,"xft:SF Square Head:weight=bold:size=11:antialias=true:hinting=true"
                             ,"xft:Terminus Re33 Nerd Bold:size=11:antialias=true:hinting=true"
+                            ,"xft:Terminus Re33 Nerd Bold:size=10:antialias=true:hinting=true"
                             ]
        , iconRoot         = "/home/haron/.xmonad/resources"
        , borderColor      = "#151515"
@@ -17,7 +18,7 @@ Config {
        , fgColor          = "#959595"
        , alpha            = 0
        , position         = Top
-       , textOffset       = 16
+       , textOffset       = -1
        , iconOffset       = -1
        , lowerOnStart     = True
        , pickBroadest     = False
@@ -43,10 +44,10 @@ Config {
                             , Run PipeReader "/tmp/haron/DO"   "DO"
                             , Run PipeReader "/tmp/haron/WI"   "WI"
                             , Run PipeReader "/tmp/haron/CT"   "CT"
-                            , Run Kbd        [("us", "<fc=#9df></fc>"), ("ru", "<fc=#e50></fc>")]
-                            , Run Com        "date" ["+%H:%M:%S"] "Time" 10
+                            , Run Kbd        [("us", "<fn=5><fc=#9df></fc></fn>"), ("ru", "<fn=5><fc=#e50></fc></fn>")]
+                            , Run Com        "XMTime" [] "" 10
                             ]
        , sepChar  = "%"
        , alignSep = "||"
-       , template = " <action=`XMScreenfetch` button=3><action=`mygtkmenu .menurc` button=1><fn=5></fn></action></action> <action=`xdotool key 0xffeb+0xff1b` button=1><action=`mygtkmenu .workspacesrc` button=3><action=`xdotool key 0xffe3+0xffe9+0xff51` button=4><action=`xdotool key 0xffe3+0xffe9+0xff53` button=5><fn=4>%XMonadLog%</fn></action></action></action></action><fn=2>  </fn><action=`mygtkmenu .placerc` button=1><fn=5></fn></action> %MW2%||<action=XMYaourt>%UP%</action> <action=`XMNetState` button=1><action=`xdg-open http://192.168.0.1` button=2><action=`XMVnstat-h & XMVnstat` button=3><action=`XMifconfig` button=45>%NT%</action></action></action></action>%NS% <action=`XMTrafState` button=1><action=`XMTransgui` button=3><action=`XMVnstat-m` button=4><action=`XMVnstat-d` button=5>%TU%</action></action></action></action>%TR% <action=`XMCPUState` button=1><fc=#ccc></fc></action>%CU% <action=`XMTempState` button=1><action=`XMSensors` button=3><fc=#ccc></fc></action></action>%TEMP% <action=`XMMemState` button=1><fc=#ccc><fn=5></fn></fc></action>%MEM%%RU% <action=`XMUptimeState` button=1><action=`XMinxi` button=3><fc=#9df></fc></action></action>%UT% <action=`XMVolState` button=1><action=`XMPavucontrol` button=2><action=`pulseaudio-ctl mute` button=3><action=`pulseaudio-ctl up` button=5><action=`pulseaudio-ctl down` button=4><fc=#ccc></fc>%VO%</action></action></action></action></action> <fn=5><action=`XMncmpcpp` button=3><action=`XMMPC` button=45><action=`XMMPCprev` button=1></action> %PS% <action=`XMMPCnext` button=1></action></action></action></fn> <action=`xkblayout-state set +1`>%kbd%</action><action=`XMDateState` button=1><action=`XMGSimplecal` button=4><action=`XMCal` button=5>%DO% <fn=1><fc=#ccc>%Time%</fc></fn></action></action></action> <action=`XMGWeather` button=1>%WI%</action><fn=2> </fn><action=`XMAccuWeather` button=1><action=`XMGismeteo` button=3><fc=#ccc><fn=1>%CT%C</fn></fc></action></action><action=`XMStateAll` button=1><action=`XMKill` button=3> <fc=#ccc></fc> </action></action>"
+       , template = " <action=`XMUptimeState` button=1><action=`XMinxi` button=3><fc=#ccc></fc></action></action>%UT% <action=`XMScreenfetch` button=3><action=`mygtkmenu .menurc` button=1><fn=5></fn></action></action> <action=`xdotool key 0xffeb+0xff1b` button=1><action=`mygtkmenu .workspacesrc` button=3><action=`xdotool key 0xffe3+0xffe9+0xff51` button=4><action=`xdotool key 0xffe3+0xffe9+0xff53` button=5><fn=4>%XMonadLog%</fn></action></action></action></action><fn=2>  </fn><action=`mygtkmenu .placerc` button=1><fn=5></fn></action> %MW2%||<action=XMYaourt>%UP%</action> <action=`XMNetState` button=1><action=`xdg-open http://192.168.0.1` button=2><action=`XMVnstat-h & XMVnstat` button=3><action=`XMifconfig` button=45>%NT%</action></action></action></action>%NS% <action=`XMTrafState` button=1><action=`XMTransgui` button=3><action=`XMVnstat-m` button=4><action=`XMVnstat-d` button=5>%TU%</action></action></action></action>%TR% <action=`XMCPUState` button=1><fc=#ccc></fc></action>%CU% <action=`XMTempState` button=1><action=`XMSensors` button=3><fc=#ccc></fc></action></action>%TEMP% <action=`XMMemState` button=1><fc=#ccc><fn=5></fn></fc></action>%MEM%%RU% <action=`XMVolState` button=1><action=`XMPavucontrol` button=2><action=`pulseaudio-ctl mute` button=3><action=`pulseaudio-ctl up` button=5><action=`pulseaudio-ctl down` button=4><fc=#ccc></fc>%VO%</action></action></action></action></action> <fn=5><action=`XMncmpcpp` button=3><action=`XMMPC` button=45><action=`XMMPCprev` button=1></action> %PS% <action=`XMMPCnext` button=1></action></action></action></fn> <action=`xkblayout-state set +1`>%kbd%</action><action=`XMDateState` button=1><action=`XMGSimplecal` button=4><action=`XMCal` button=5>%DO%<fn=1><fc=#ccc>%XMTime%</fc></fn></action></action></action> <action=`XMGWeather` button=1>%WI%</action><fn=2> </fn><action=`XMAccuWeather` button=1><action=`XMGismeteo` button=3><fc=#ccc><fn=1>%CT%C</fn></fc></action></action><action=`XMStateAll` button=1><action=`XMStateKill` button=3> <fc=#ccc></fc> </action></action>"
        }
