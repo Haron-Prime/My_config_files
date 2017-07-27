@@ -4,7 +4,7 @@ set $down j
 set $up k
 set $right l
 set $term urxvtc
-set $menu dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'
+set $menu dmenu_run_history -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33 Nerd Bold:size=12'
 
 output * bg /home/haron/wall/black-hole_web.png fill
 
@@ -17,7 +17,7 @@ workspace_auto_back_and_forth yes
 # popup_during_fullscreen smart
 
 # Font
-font pango:SonyEricssonLogo 10
+font pango:Terminus Re33 Nerd Bold 12
 
 # Colors
 # class                 border  backgr. text    indicator
@@ -169,7 +169,7 @@ bar {
     strip_workspace_numbers yes
     # binding_mode_indicator yes
     workspace_buttons yes
-    font pango:Terminus Re33 12
+    font pango:Terminus Re33 Nerd Bold 12
     colors {
         background #252525
         # statusline #bbbbbb
