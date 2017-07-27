@@ -3,7 +3,7 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 if (pidof transgui >/dev/null); then 
-    kill $(pidof transgui)
+    kill $(pidof transgui) && xdotool key 0xffeb+0xff1b
 else 
     transgui
 fi
