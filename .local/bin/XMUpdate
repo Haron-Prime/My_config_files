@@ -2,11 +2,15 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-
-UPD=`checkupdates | wc -l`
-if [ $UPD -gt 0 ]; then 
-    echo "<fc=#e50></fc> <fc=#cccccc>Update:</fc><fn=2> </fn><fc=#e50>"$UPD"<fn=2> </fn>pkg</fc>" > /tmp/haron/UP
-else 
-    echo > /tmp/haron/UP
+STATUS=`ping -c 3 8.8.8.8 | tail -2 | head -1 | awk '{print $4}'`
+if [ $STATUS -gt 0 ]; then
+    UPD=`checkupdates | wc -l`
+    if [ $UPD -gt 0 ]; then 
+        echo "<fc=#e50></fc> <fc=#cccccc>Update:</fc><fn=2> </fn><fc=#e50>"$UPD"<fn=2> </fn>pkg</fc>" > /tmp/haron/UP
+    else 
+        echo > /tmp/haron/UP
+    fi
+else
+    echo "<fc=#e50></fc>" > /tmp/haron/UP
 fi
 exit 0
