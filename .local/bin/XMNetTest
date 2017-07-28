@@ -5,12 +5,12 @@
 echo  "" > /tmp/haron/NT
 sleep 5 &&
 while true; do
-    STATUS=`ping -c 3 8.8.8.8 | sed -n 7p | awk '{print $4}'`
+    STATUS=`ping -c 3 8.8.8.8 | tail -2 | head -1 | awk '{print $4}'`
     if [ $STATUS -eq 0 ]; then
         echo  "<fc=#e50></fc>" > /tmp/haron/NT
-        sleep 10
+        sleep 15
     else
         echo  "<fc=#0e0></fc>" > /tmp/haron/NT
-        sleep 30
+        sleep 60
     fi
 done

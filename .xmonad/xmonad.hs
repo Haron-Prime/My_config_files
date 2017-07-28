@@ -219,7 +219,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x36), spawn "XMVolState")                                                       --Alt+6
     , ((mod1Mask,                        0x37), spawn "XMDateState")                                                      --Alt+7
     , ((mod1Mask,                        0x60), spawn "XMStateAll")                                                       --Alt+grave
-    , ((mod1Mask,                      0xff1b), spawn "XMStateKill")                                                           --Alt+Escape
+    , ((mod1Mask,                      0xff1b), spawn "XMStateKill")                                                      --Alt+Escape
     ]
 
     ++
@@ -373,7 +373,7 @@ myLogHook = do
                                         }
 
 -- StartupHook
-myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "gis-weather" <+> spawn "XMStateStart" <+> spawn "XMUpdate" <+> spawn "XMMPD" 
+myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "gis-weather & XMStateStart & XMUpdate & XMNetTest & XMTrans & XMMPD" 
 
 myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                   terminal           = myTerminal

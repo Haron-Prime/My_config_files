@@ -2,6 +2,8 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
+echo  "" > /tmp/haron/TU
+sleep 5 &&
 while true; do
     if (pgrep transmission >/dev/null); then 
         echo  "<fc=#0e0></fc>" > /tmp/haron/TU
