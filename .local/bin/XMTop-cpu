@@ -5,6 +5,7 @@
 if (pidof dunst >/dev/null); then 
     kill $(pidof dunst)
 else 
+    kill $(pidof dunst) &
     ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -n 10 | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/devices/computer.png" -t 0
 fi
 exit 0
