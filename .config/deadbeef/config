@@ -80,7 +80,7 @@ playlist.column.04 "Альбом" "%b" -1 383 0
 playlist.column.05 "Дата" "%y" -1 169 1
 playlist.column.06 "Жанр" "%g" -1 126 0
 playlist.column.07 "Продолжительность" "%l" -1 167 1
-playlist.current 0
+playlist.current 1
 playlist.cursor.0 13
 playlist.cursor.1 -1
 playlist.cursor.2 0
@@ -91,6 +91,7 @@ playlist.scroll.1 0
 playlist.scroll.2 0
 playlist.scroll.cursorfollowplayback 1
 playlist.tab.00000 Хроники Амбера
+playlist.tab.00001 Default
 prefwin.geometry.h 438
 prefwin.geometry.w 962
 prefwin.geometry.x 478
@@ -98,7 +99,7 @@ prefwin.geometry.y 320
 replaygain_mode 2
 replaygain_scale 1
 resume.paused 0
-resume.playlist 0
+resume.playlist 1
 resume.position -1.000000
 resume.track -1
 resume_last_session 1
