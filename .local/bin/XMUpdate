@@ -7,11 +7,11 @@ if [[ $STATUS -gt 0 ]]; then
     UPD=`checkupdates | wc -l`
     if [[ $UPD -gt 0 ]]; then 
         if [[ $UPD -eq 1 ]]; then
-            PKG="package"
-        elif [[ $UPG -gt 1 ]]; then
-            PKG="packages"
+            PKG='package'
+        elif [[ $UPD -gt 1 ]]; then
+            PKG='packages'
         fi
-        echo "<fc=#ffab00> "$UPD"<fn=2> </fn>"$PKG" can be updated</fc>" > /tmp/haron/UP
+        echo "<fc=#ffab00> "$UPD $PKG" can be updated</fc>" > /tmp/haron/UP
     else 
         echo > /tmp/haron/UP
     fi
