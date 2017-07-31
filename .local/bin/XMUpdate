@@ -11,11 +11,11 @@ if [[ $STATUS -gt 0 ]]; then
         elif [[ $UPD -gt 1 ]]; then
             PKG='packages'
         fi
-        echo "<fc=#ffab00> "$UPD $PKG" can be updated</fc>" > /tmp/haron/UP
+        echo "<fc=#ffab00> $UPD $PKG can be updated</fc>" > /tmp/haron/UP
     else 
         echo > /tmp/haron/UP
     fi
 else
-    echo "<fc=#e50></fc>" > /tmp/haron/UP
+    echo "<fc=#e50> Disconnected</fc>" > /tmp/haron/UP
 fi
 exit 0
