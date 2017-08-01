@@ -211,11 +211,20 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     --XMobar management
     , ((mod1Mask,                        0x30), spawn "XMUptimeState")                                                    --Alt+0
+    , ((mod1Mask .|. controlMask,        0x30), spawn "XMinxi")                                                           --Alt+Ctrl+0
+    , ((mod1Mask .|. shiftMask,          0x30), spawn "XMScreenfetch")                                                    --Alt+Shift+0
     , ((mod1Mask,                        0x31), spawn "XMNetState")                                                       --Alt+1
+    , ((mod1Mask .|. controlMask,        0x31), spawn "XMVnstat-h & XMVnstat")                                            --Alt+Ctrl+1
     , ((mod1Mask,                        0x32), spawn "XMTrafState")                                                      --Alt+2
+    , ((mod1Mask .|. controlMask,        0x32), spawn "XMVnstat-d")                                                       --Alt+Ctrl+2
+    , ((mod1Mask .|. shiftMask,          0x32), spawn "XMVnstat-m")                                                       --Alt+Shift+2
     , ((mod1Mask,                        0x33), spawn "XMCPUState")                                                       --Alt+3
+    , ((mod1Mask .|. controlMask,        0x33), spawn "XMTop-cpu")                                                        --Alt+Ctrl+3
     , ((mod1Mask,                        0x34), spawn "XMTempState")                                                      --Alt+4
+    , ((mod1Mask .|. controlMask,        0x34), spawn "XMSensors")                                                        --Alt+Ctrl+4
     , ((mod1Mask,                        0x35), spawn "XMMemState")                                                       --Alt+5
+    , ((mod1Mask .|. controlMask,        0x35), spawn "XMTop-mem")                                                        --Alt+Ctrl+5
+    , ((mod1Mask .|. shiftMask,          0x35), spawn "XMdf-h")                                                           --Alt+Shift+5
     , ((mod1Mask,                        0x36), spawn "XMVolState")                                                       --Alt+6
     , ((mod1Mask,                        0x37), spawn "XMDateState")                                                      --Alt+7
     , ((mod1Mask,                        0x60), spawn "XMStateAll")                                                       --Alt+grave
