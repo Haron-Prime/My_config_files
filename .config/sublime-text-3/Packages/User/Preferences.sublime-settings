@@ -20,7 +20,7 @@
 	"ensure_newline_at_eof_on_save": true,
 	"fallback_encoding": "Cyrillic (Windows 1251)",
 	"find_selected_text": true,
-	"font_face": "Terminus Re33 Nerd",
+	"font_face": "Terminus Re33 Nerd Bold",
 	"font_options": "subpixel_antialias",
 	"font_size": 12,
 	"gpu_window_buffer": true,
