@@ -1,5 +1,5 @@
- 
- <action=`XMScreenfetch` button=3>
+
+<action=`XMScreenfetch` button=3>
     <action=`mygtkmenu .menurc` button=1>
         <fn=5>
             
@@ -7,7 +7,7 @@
     </action>
 </action>
 
-<action=`xdotool key 0xffeb+0xff1b` button=1>
+ <action=`xdotool key 0xffeb+0xff1b` button=1>
     <action=`mygtkmenu .workspacesrc` button=3>
         <action=`xdotool key 0xffe3+0xffe9+0xff51` button=4>
             <action=`xdotool key 0xffe3+0xffe9+0xff53` button=5>
@@ -22,11 +22,13 @@
 
 
 </fn>
-<action=`mygtkmenu .bookmarksrc` button=1>
+<action=`mygtkmenu .placerc` button=1>
     <fn=5>
         
     </fn>
 </action>
+
+%UT%
 
 %MW2%
 ||
@@ -35,8 +37,12 @@
 </action>
 
 <action=`XMNetState` button=1>
-    <action=`XMVnstat-h & XMVnstat` button=45>
-        %NT%
+    <action=`xdg-open http://192.168.0.1` button=2>
+        <action=`XMVnstat-h & XMVnstat` button=3>
+            <action=`XMifconfig` button=45>
+                %NT%
+            </action>
+        </action>
     </action>
 </action>
 %NS%
@@ -60,9 +66,11 @@
 %CU%
 
 <action=`XMTempState` button=1>
-    <fc=#ccc>
-        
-    </fc>
+    <action=`XMSensors` button=3>
+        <fc=#ccc>
+            
+        </fc>
+    </action>
 </action>
 %TEMP%
 
@@ -75,13 +83,6 @@
 </action>
 %MEM%
 %RU%
-
-<action=`XMUptimeState` button=1>
-    <fc=#ccc>
-        
-    </fc>
-</action>
-%UT%
 
 <action=`XMVolState` button=1>
     <action=`XMPavucontrol` button=2>
@@ -99,17 +100,13 @@
 </action>
 
 <fn=5>
-    <action=`XMMPC` button=45>
-        <action=`XMncmpcpp` button=3>
+    <action=`XMncmpcpp` button=3>
+        <action=`XMMPC` button=45>
             <action=`XMMPCprev` button=1>
                 
             </action>
 
-            <action=`XMMPCtoggle` button=1>
-                <action=`XMMPCstop` button=2>
-                    %PS%
-                </action>
-            </action>
+            %PS%
 
             <action=`XMMPCnext` button=1>
                 
@@ -125,10 +122,9 @@
     <action=`XMGSimplecal` button=4>
         <action=`XMCal` button=5>
             %DO%
-
             <fn=1>
                 <fc=#ccc>
-                    %Time%
+                    %XMTime%
                 </fc>
             </fn>
         </action>
@@ -145,17 +141,18 @@
     <action=`XMGismeteo` button=3>
         <fc=#ccc>
             <fn=1>
-                %CT%C
+                %CT%
+                C
             </fn>
         </fc>
     </action>
 </action>
 <action=`XMStateAll` button=1>
-    <action=`XMKill` button=3>
+    <action=`XMStateKill` button=3>
 
-    <fc=#ccc>
-        
-    </fc>
+        <fc=#ccc>
+            
+        </fc>
 
     </action>
 </action>
