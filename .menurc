@@ -63,6 +63,10 @@ submenu = Media
     cmd  = mpv --player-operation-mode=pseudo-gui -- %U
     icon = /home/haron/.icons/My_icons/mpv.png
 
+    item = TV
+    cmd  = TV
+    icon = /usr/share/icons/nouveGnomeGray/24x24/devices/computer.png
+
     item = DeadBeef
     cmd  = deadbeef
     icon = /home/haron/pics/deadbeef-grey.png
