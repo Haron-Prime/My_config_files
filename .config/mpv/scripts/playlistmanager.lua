@@ -51,7 +51,7 @@ local settings = {
   linux_over_windows = true,
 
   --path where you want to save playlists, notice trailing \ or /. Do not use shortcuts like ~ or $HOME
-  playlist_savepath = "$HOME/Video/Playlists",
+  playlist_savepath = "/home/haron/Video/Playlists",
 
 
   --show playlist every time a new file is loaded

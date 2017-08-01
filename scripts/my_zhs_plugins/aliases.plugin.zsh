@@ -49,7 +49,7 @@ alias wget='wget -c --progress=bar'
 alias ttmux='tmuxinator default'
 alias tmuxa='tmux attach'
 
-alias tv='mpv $HOME/Video/Playlists/multinet-play.m3u'
+alias tv='mpv --playlist=$HOME/Video/Playlists/multinet-play.m3u'
 alias asl='acestream-launcher --player mpv'
 
 alias gzip='tar -cvzf'
