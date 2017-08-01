@@ -49,14 +49,56 @@ d/home
 	haron
 2
 d/home/haron
+	Downloads
+3
+d/home/haron/Downloads
+	pkg
+6
+d/home/haron/Downloads/pkg
 	..
 0
+d/home/haron/Downloads
+	mail
+5
+d/home/haron/Downloads/mail
+	..
+0
+d/home/haron/Downloads
+	heroes3
+4
+d/home/haron/Downloads/heroes3
+	..
+0
+d/home/haron/Downloads
+	add-ons
+3
+d/home/haron/Downloads/add-ons
+	..
+0
+d/home/haron/Downloads
+	Work
+2
+d/home/haron/Downloads/Work
+	..
+0
+d/home/haron/Downloads
+	Telegram Desktop
+1
+d/home/haron/Downloads/Telegram Desktop
+	..
+0
+d/home/haron/Downloads
+	..
+0
+d/home/haron
+	distr
+8
 d
 
 # Right window history (oldest to newest):
 D/home/haron
-	..
-0
+	Dropbox
+4
 D
 
 # Command line history (oldest to newest):
