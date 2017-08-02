@@ -11,5 +11,5 @@ if [[ $F2 -eq 1 ]]; then
 else W="windows"
 fi
 echo $(( $F1 + 1 )) > $MW1 
-echo "<fc=#e50><fn=1>$F2 $W</fn></fc>" > $MW2
+echo "<fc=#fa0><fn=1>$F2 minimized $W</fn></fc>" > $MW2
 exit 0
