@@ -3,13 +3,22 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 while true; do
-    DATA=`date "+%d.%m.%Y"`
     DAY=`date "+%A"`
+    DATA=`date "+%d.%m.%Y"`
+    if [[ $(date "+%V" | cut -c 2) -eq 1 ]]; then
+        WEEK=`date "+%V-st week"`
+    elif [[ $(date "+%V" | cut -c 2) -eq 2 ]]; then
+        WEEK=`date "+%V-nd week"`
+    elif [[ $(date "+%V" | cut -c 2) -eq 3 ]]; then
+        WEEK=`date "+%V-rd week"`
+    else
+        WEEK=`date "+%V-th week"`
+    fi
     TZ=`date "+%Z UTC%:::z"`
     case $DAY in
-        Суббота     ) echo "<fc=#ffab00> $DAY</fc>  <fn=1><fc=#ccc>$DATA $TZ</fc></fn>" > /tmp/haron/DO ;;
-        Воскресенье ) echo "<fc=#ff6500> $DAY</fc>  <fn=1><fc=#ccc>$DATA $TZ</fc></fn>" > /tmp/haron/DO ;;
-        *           ) echo "<fc=#959595> $DAY</fc>  <fn=1><fc=#ccc>$DATA $TZ</fc></fn>" > /tmp/haron/DO ;;
+        Суббота     ) echo "<fc=#ffab00> $DAY</fc>  <fn=1><fc=#ccc>$DATA  $WEEK  $TZ </fc></fn>" > /tmp/haron/DO ;;
+        Воскресенье ) echo "<fc=#ff6500> $DAY</fc>  <fn=1><fc=#ccc>$DATA  $WEEK  $TZ </fc></fn>" > /tmp/haron/DO ;;
+        *           ) echo "<fc=#959595> $DAY</fc>  <fn=1><fc=#ccc>$DATA  $WEEK  $TZ </fc></fn>" > /tmp/haron/DO ;;
     esac
     sleep 60
 done
