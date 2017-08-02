@@ -217,7 +217,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask .|. controlMask,        0x31), spawn "XMVnstat-h & XMVnstat")                                            --Alt+Ctrl+1
     , ((mod1Mask,                        0x32), spawn "XMTrafState")                                                      --Alt+2
     , ((mod1Mask .|. controlMask,        0x32), spawn "XMVnstat-d")                                                       --Alt+Ctrl+2
-    , ((mod1Mask .|. shiftMask,          0x32), spawn "XMVnstat-m")                                                       --Alt+Shift+2
+    -- , ((mod1Mask .|. shiftMask,          0x32), spawn "XMVnstat-m")                                                       --Alt+Shift+2
     , ((mod1Mask,                        0x33), spawn "XMCPUState")                                                       --Alt+3
     , ((mod1Mask .|. controlMask,        0x33), spawn "XMTop-cpu")                                                        --Alt+Ctrl+3
     , ((mod1Mask,                        0x34), spawn "XMTempState")                                                      --Alt+4
@@ -382,7 +382,7 @@ myLogHook = do
                                         }
 
 -- StartupHook
-myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "gis-weather & XMStateStart & XMUpdate & XMNetTest & XMTrans & XMMPD" 
+myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "gis-weather & XMStateStart & XMUpdate & XMNetTest & XMTrans & XMMPD & XMTime2" 
 
 myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
                   terminal           = myTerminal

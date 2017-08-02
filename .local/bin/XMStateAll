@@ -2,11 +2,12 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
+XMTimeState &
 XMNetState &
 XMTrafState &
 XMCPUState &
 XMTempState &
 XMMemState &
 XMVolState &
-XMDateState &
+# XMDateState &
 exit 0
