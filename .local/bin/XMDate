@@ -3,9 +3,8 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 while true; do
-    DATA=`date "+%d.%m.%Y"`
     DAY=`date "+%A"`
-    TZ=`date "+%Z UTC%:::z"`
+    DATA=`date "+%d.%m.%Y"`
     if [[ $(date "+%V" | cut -c 2) -eq 1 ]]; then
         WEEK=`date "+%V-st week"`
     elif [[ $(date "+%V" | cut -c 2) -eq 2 ]]; then
@@ -15,6 +14,7 @@ while true; do
     else
         WEEK=`date "+%V-th week"`
     fi
+    TZ=`date "+%Z UTC%:::z"`
     case $DAY in
         Суббота     ) echo "<fc=#ffab00> $DAY</fc>  <fn=1><fc=#ccc>$DATA  $WEEK  $TZ </fc></fn>" > /tmp/haron/DO ;;
         Воскресенье ) echo "<fc=#ff6500> $DAY</fc>  <fn=1><fc=#ccc>$DATA  $WEEK  $TZ </fc></fn>" > /tmp/haron/DO ;;
