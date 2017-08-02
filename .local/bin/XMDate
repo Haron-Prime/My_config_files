@@ -6,14 +6,14 @@ while true; do
     DATA=`date "+%d.%m.%Y"`
     DAY=`date "+%A"`
     TZ=`date "+%Z UTC%:::z"`
-    if [[ $(date "+%W" | cut -c 2) -eq 1 ]]; then
-        WEEK=`date "+%W-st week"`
-    elif [[ $(date "+%W" | cut -c 2) -eq 2 ]]; then
-        WEEK=`date "+%W-nd week"`
-    elif [[ $(date "+%W" | cut -c 2) -eq 3 ]]; then
-        WEEK=`date "+%W-rd week"`
+    if [[ $(date "+%V" | cut -c 2) -eq 1 ]]; then
+        WEEK=`date "+%V-st week"`
+    elif [[ $(date "+%V" | cut -c 2) -eq 2 ]]; then
+        WEEK=`date "+%V-nd week"`
+    elif [[ $(date "+%V" | cut -c 2) -eq 3 ]]; then
+        WEEK=`date "+%V-rd week"`
     else
-        WEEK=`date "+%W-th week"`
+        WEEK=`date "+%V-th week"`
     fi
     case $DAY in
         Суббота     ) echo "<fc=#ffab00> $DAY</fc>  <fn=1><fc=#ccc>$DATA  $WEEK  $TZ </fc></fn>" > /tmp/haron/DO ;;
