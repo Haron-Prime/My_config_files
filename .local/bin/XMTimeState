@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+PID=`ps aux | grep XMTime2 | grep -v grep | awk '{print $2}'`
+if [[ $PID -gt 0 ]]; then
+    kill $PID
+    echo > /tmp/haron/TIME
+    exit 0
+else
+    XMTime2 &
+    exit 0
+fi
