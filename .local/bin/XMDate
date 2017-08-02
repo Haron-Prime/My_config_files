@@ -6,10 +6,19 @@ while true; do
     DATA=`date "+%d.%m.%Y"`
     DAY=`date "+%A"`
     TZ=`date "+%Z UTC%:::z"`
+    if [[ $(date "+%W" | cut -c 2) -eq 1 ]]; then
+        WEEK=`date "+%W-st week"`
+    elif [[ $(date "+%W" | cut -c 2) -eq 2 ]]; then
+        WEEK=`date "+%W-nd week"`
+    elif [[ $(date "+%W" | cut -c 2) -eq 3 ]]; then
+        WEEK=`date "+%W-rd week"`
+    else
+        WEEK=`date "+%W-th week"`
+    fi
     case $DAY in
-        Суббота     ) echo "<fc=#ffab00> $DAY</fc>  <fn=1><fc=#ccc>$DATA $TZ</fc></fn>" > /tmp/haron/DO ;;
-        Воскресенье ) echo "<fc=#ff6500> $DAY</fc>  <fn=1><fc=#ccc>$DATA $TZ</fc></fn>" > /tmp/haron/DO ;;
-        *           ) echo "<fc=#959595> $DAY</fc>  <fn=1><fc=#ccc>$DATA $TZ</fc></fn>" > /tmp/haron/DO ;;
+        Суббота     ) echo "<fc=#ffab00> $DAY</fc>  <fn=1><fc=#ccc>$DATA  $WEEK  $TZ </fc></fn>" > /tmp/haron/DO ;;
+        Воскресенье ) echo "<fc=#ff6500> $DAY</fc>  <fn=1><fc=#ccc>$DATA  $WEEK  $TZ </fc></fn>" > /tmp/haron/DO ;;
+        *           ) echo "<fc=#959595> $DAY</fc>  <fn=1><fc=#ccc>$DATA  $WEEK  $TZ </fc></fn>" > /tmp/haron/DO ;;
     esac
     sleep 60
 done
