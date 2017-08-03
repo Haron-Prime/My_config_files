@@ -75,7 +75,7 @@ icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder_home.png
 
 item = config
 cmd  = xdg-open /home/haron/.config
-icon = /usr/share/icons/nouveGnomeGray/Extra/folder_dev.png
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_config.png
 
 item = Documents
 cmd  = xdg-open /home/haron/Documents
@@ -181,6 +181,10 @@ icon = /usr/share/icons/nouveGnomeGray/24x24/places/folder-pictures.png
 item = scripts
 cmd  = xdg-open /home/haron/scripts
 icon = /usr/share/icons/nouveGnomeGray/Extra/folder_binary.png
+
+item = Storage
+cmd  = xdg-open /home/haron/Storage
+icon = /usr/share/icons/nouveGnomeGray/Extra/folder_special.png
 
 item = Templates
 cmd  = xdg-open /home/haron/Templates
