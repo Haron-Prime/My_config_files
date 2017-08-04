@@ -5,7 +5,7 @@
 echo  "" > /tmp/haron/TU
 sleep 5 &&
 while true; do
-    if (pgrep transmission >/dev/null); then 
+    if [[ -n $(pgrep transmission) ]]; then 
         echo  "<fc=#0e0></fc>" > /tmp/haron/TU
         sleep 30
     else

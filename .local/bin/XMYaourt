@@ -3,7 +3,7 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 urxvtc -name update -e yaourt -Syua &&
-while `pgrep yaourt >/dev/null`
+while [[ -n $(pgrep yaourt) ]]
 do 
     sleep 1
 done

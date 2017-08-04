@@ -2,7 +2,7 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-if (pidof xclock >/dev/null); then 
+if [[ -n $(pidof xclock) ]]; then 
     kill $(pidof xclock)
 else 
     xclock

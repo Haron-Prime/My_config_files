@@ -11,7 +11,7 @@ if [[ $STATUS -gt 0 ]]; then
         elif [[ $UPD -gt 1 ]]; then
             PKG='packages'
         fi
-        echo "<fc=#ffab00> $UPD $PKG can be updated</fc>" > /tmp/haron/UP
+        echo "<action=XMYaourt><fc=#ffab00> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
     else 
         echo > /tmp/haron/UP
     fi

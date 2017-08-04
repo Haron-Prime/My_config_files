@@ -10,9 +10,6 @@ kill $(ps aux | grep XMMPD     | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMNetTest | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMTrans   | grep -v grep | awk '{print $2}') &
 XMStateKill &
-echo > /tmp/haron/UP &
-echo > /tmp/haron/CT &
-echo > /tmp/haron/WI &
 xmonad --recompile &&
 xmonad --restart
 exit 0

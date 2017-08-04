@@ -2,7 +2,7 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-if (pidof dunst >/dev/null); then 
+if [[ -n $(pidof dunst) ]]; then 
     kill $(pidof dunst)
 else 
     screenfetch -N | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/categories/preferences-system.png" -t 0

@@ -4,7 +4,7 @@
 
 inotifywait -m -e modify /home/haron/.config/mpd |\
 (
-if (pidof mpd >/dev/null); then
+if [[ -n $(pidof mpd) ]]; then
     ST=`mpc | sed -n 2p | awk '{print $1}' | sed -e 's/[^a-z]//g'`
     case $ST in
         playing  ) echo "  <fc=#84ff7f></fc>" > /tmp/haron/PS  ;;
