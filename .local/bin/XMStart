@@ -3,7 +3,11 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 echo > /tmp/haron/{CT,CU,DO,MEM,MW2,NS,RU,TEMP,TR,UP,UT,VO,WI} &
-gis-weather &
+echo  "" > /tmp/haron/NT &
+echo  "" > /tmp/haron/TU &
+if [[ -z $(ps aux | grep gis-weather.py | grep -v grep | awk '{print $2}') ]]; then
+    gis-weather &
+fi
 if [[ -z $(ps aux | grep XMTimeNew | grep -v grep | awk '{print $2}') ]]; then
     XMTimeNew &
 fi
