@@ -2,13 +2,21 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-echo > /tmp/haron/{CT,CU,DO,MEM,MW2,NS,RU,TEMP,TR,UP,UT,VO,WI}
+echo > /tmp/haron/{CT,CU,DO,MEM,MW2,NS,RU,TEMP,TR,UP,UT,VO,WI} &
+gis-weather &
 if [[ -z $(ps aux | grep XMTimeNew | grep -v grep | awk '{print $2}') ]]; then
     XMTimeNew &
 fi
-gis-weather &
-XMUpdate &
-XMNetTest &
-XMTrans &
-XMMPD &
+if [[ -z $(ps aux | grep XMUpdate | grep -v grep | awk '{print $2}') ]]; then
+    XMUpdate &
+fi
+if [[ -z $(ps aux | grep XMNetTest | grep -v grep | awk '{print $2}') ]]; then
+    XMNetTest &
+fi
+if [[ -z $(ps aux | grep XMTrans | grep -v grep | awk '{print $2}') ]]; then
+    XMTrans &
+fi
+if [[ -z $(ps aux | grep XMMPD | grep -v grep | awk '{print $2}') ]]; then
+    XMMPD &
+fi
 exit 0
