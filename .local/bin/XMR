@@ -3,13 +3,21 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 # Recompile and restart xmonad
 
-killall xmobar &
-killall gis-weather &
+kill $(ps aux | grep XMMPD                              | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMNetTest                          | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMTrans                            | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMTimeNew                          | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMNetSpeed                         | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMTraf     | grep -v XMTrafState   | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMCUNew                            | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMTempAll                          | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMMemAll                           | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMRomNew                           | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMUptime   | grep -v XMUptimeState | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMVolNew                           | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMDate     | grep -v XMDateState   | grep -v grep | awk '{print $2}') &
 killall sleep &
-kill $(ps aux | grep XMMPD     | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMNetTest | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMTrans   | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMTimeNew | grep -v grep | awk '{print $2}') &
-XMStateKill &
+killall gis-weather &
+killall xmobar &
 xmonad --restart
 exit 0
