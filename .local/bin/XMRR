@@ -3,9 +3,6 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 # Recompile and restart xmonad
 
-killall xmobar &
-killall gis-weather &
-killall sleep &
 kill $(ps aux | grep XMMPD                              | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMNetTest                          | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMTrans                            | grep -v grep | awk '{print $2}') &
@@ -19,6 +16,9 @@ kill $(ps aux | grep XMRomNew                           | grep -v grep | awk '{p
 kill $(ps aux | grep XMUptime   | grep -v XMUptimeState | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMVolNew                           | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMDate     | grep -v XMDateState   | grep -v grep | awk '{print $2}') &
+killall sleep &
+killall gis-weather &
+killall xmobar &
 xmonad --recompile &&
 xmonad --restart
 exit 0
