@@ -2,7 +2,7 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-if (pidof ncmpcpp >/dev/null); then 
+if [[ -n $(pidof ncmpcpp) ]]; then 
     kill $(pidof ncmpcpp)
 else 
     urxvtc -name ncmpcpp -e /usr/bin/ncmpcpp

@@ -2,7 +2,7 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-if (pidof galculator >/dev/null); then 
+if [[ -n $(pidof galculator) ]]; then 
     kill $(pidof galculator)
 else 
     galculator

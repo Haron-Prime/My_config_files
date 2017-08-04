@@ -9,5 +9,4 @@ XMCPUState &
 XMTempState &
 XMMemState &
 XMVolState &
-# XMDateState &
 exit 0
