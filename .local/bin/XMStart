@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+echo > /tmp/haron/UP &
+echo > /tmp/haron/CT &
+echo > /tmp/haron/WI &
+if [[ -z $(ps aux | grep XMTimeNew | grep -v grep | awk '{print $2}') ]]; then
+    XMTimeNew &
+fi
+gis-weather &
+XMStateStart &
+XMUpdate &
+XMNetTest &
+XMTrans &
+XMMPD &
+exit 0
