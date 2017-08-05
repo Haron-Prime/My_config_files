@@ -4,7 +4,8 @@
 
 echo  "" > /tmp/haron/NT &
 echo  "" > /tmp/haron/TU &
-echo > /tmp/haron/{CT,CU,DO,MEM,MW2,NS,RU,TEMP,TR,UP,UT,VO,WI} &
+echo  " " > /tmp/haron/WI &
+echo > /tmp/haron/{CT,CU,DO,MEM,MW2,NS,RU,TEMP,TR,UP,UT,VO} &
 if [[ -z $(ps aux | grep gis-weather.py | grep -v grep | awk '{print $2}') ]]; then
     gis-weather &
 fi
