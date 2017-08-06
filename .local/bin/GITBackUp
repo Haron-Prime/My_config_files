@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+
+cd $HOME/git/My_config_files/
+COUNT=`git status | sed '/[А-Яа-я]/d' | sed '/^$/d' | wc -l`
+if [[ $COUNT -gt 0 ]]; then
+    git add --all && 
+    git commit -m "Update" && 
+    git push &&
+    rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/BitBuket/ &&
+    cd $HOME/git/BitBuket/My_config_files &&
+    git add --all && 
+    git commit -m "Update" && 
+    git push &&
+    rsync -ruptgo --exclude ".git" --delete --progress /home/haron/git/My_config_files /home/haron/git/GitLab/ &&
+    git add --all && 
+    git commit -m "Update" && 
+    git push &&
+    cd $HOME/git/My_config_files/
+    echo "BackUp is complete"
+else
+    echo "There is nothing to save"
+fi
