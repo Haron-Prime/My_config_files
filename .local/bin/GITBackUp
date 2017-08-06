@@ -1,10 +1,12 @@
 #!/usr/bin/env zsh
 
 cd $HOME/git/My_config_files
-COUNT1=`git status | sed '/[А-Яа-я]/d' | sed '/^$/d' | wc -l`
-COUNT2=`git status | grep -c "изменено"`
-COUNT3=`git status | grep -c "удалено"`
-if [[ $COUNT1 -gt 0 ]]||[[ $COUNT2 -gt 0 ]]||[[ $COUNT3 -gt 0 ]]; then
+# COUNT1=`git status | grep -c "изменено"`
+# COUNT2=`git status | grep -c "удалено"`
+# COUNT3=`git status | sed '/[А-Яа-я]/d' | sed '/^$/d' | wc -l`
+COUNT=`bc <<< "$(git status | grep -c "изменено")+$(git status | grep -c "удалено")+$(git status | sed '/[А-Яа-я]/d' | sed '/^$/d' | wc -l)"`
+# if [[ $COUNT1 -gt 0 ]]||[[ $COUNT2 -gt 0 ]]||[[ $COUNT3 -gt 0 ]]; then
+if [[ $COUNT -gt 0 ]]; then
     git add --all && 
     git commit -m "Update" && 
     git push &&
