@@ -3,6 +3,10 @@
 # License © 2017 WTFPL http://www.wtfpl.net/
 
 while true; do
-    echo "<fc=#9df>  "$(mpc | head -1)"</fc>" > /tmp/haron/PL
+    ST=`mpc | sed -n 2p | awk '{print $1}' | sed -e 's/[^a-z]//g'`
+    case $ST in
+        playing  ) echo "<fc=#9df>  "$(mpc | head -1)"</fc>" > /tmp/haron/PL  ;;
+        *        ) echo > /tmp/haron/PL  ;;
+    esac
     sleep 5
 done
