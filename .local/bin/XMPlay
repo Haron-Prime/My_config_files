@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+while true; do
+    echo "<fc=#9df>  "$(mpc | head -1)"</fc>" > /tmp/haron/PL
+    sleep 5
+done

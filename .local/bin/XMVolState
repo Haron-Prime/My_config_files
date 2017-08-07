@@ -2,12 +2,15 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-PID=`ps aux | grep XMVolNew | grep -v grep | awk '{print $2}'`
-if [[ -n $PID ]]; then
-    kill $PID
-    echo > /tmp/haron/VO
+PID1=`ps aux | grep XMVolNew | grep -v grep | awk '{print $2}'`
+PID2=`ps aux | grep XMPlay   | grep -v grep | awk '{print $2}'`
+if [[ -n $PID1 ]]||[[ -n $PID2 ]]; then
+    kill $PID1 &
+    kill $PID2 &
+    echo > /tmp/haron/{VO,PL}
     exit 0
 else
     XMVolNew &
+    XMPlay &
     exit 0
 fi
