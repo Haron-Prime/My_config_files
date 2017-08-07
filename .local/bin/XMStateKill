@@ -10,6 +10,7 @@ kill $(ps aux | grep XMMemAll                           | grep -v grep | awk '{p
 kill $(ps aux | grep XMRomNew                           | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMUptime   | grep -v XMUptimeState | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMVolNew                           | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMPlay                             | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMDate     | grep -v XMDateState   | grep -v grep | awk '{print $2}') &
-echo > /tmp/haron/{CU,DO,MEM,MW2,NS,RU,TEMP,TR,UT,VO} &
+echo > /tmp/haron/{CU,DO,MEM,MW2,NS,RU,TEMP,TR,UT,PL,VO} &
 exit 0
