@@ -23,4 +23,3 @@ else
     notify-send -u critical -t 0 -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "    <big><b><u>BACKUP SERVICE</u></b></big>" "\n There is nothing to save "
 fi
 exit 0
- 
