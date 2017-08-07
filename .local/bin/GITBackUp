@@ -18,8 +18,8 @@ if [[ $COUNT -gt 0 ]]; then
     git add --all && 
     git commit -m "Update" && 
     git push &&
-    echo "== BackUp complete ==" | xargs -0 notify-send -t 0
+    notify-send -u critical -t 0 -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" " <big><b><u>BACKUP SERVICE</u></b></big>" "\n  Backup complete "
 else
-    echo "== There is nothing to save ==" | xargs -0 notify-send -t 0
+    notify-send -u critical -t 0 -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "    <big><b><u>BACKUP SERVICE</u></b></big>" "\n There is nothing to save "
 fi
 exit 0

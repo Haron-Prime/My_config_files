@@ -9,5 +9,5 @@ do
 done
 sleep 1 && echo > /tmp/haron/UP &
 XMMWC &
-notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "      <u>YAOURT</u>" "Обновление завершено"
+notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "      <big><b><u>YAOURT</u></b></big>" "\n Обновление завершено"
 exit 0

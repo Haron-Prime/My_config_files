@@ -1,0 +1,11 @@
+[Unit]
+Description=Backup service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/haron/.local/bin/GITBackUp
+
+
+[Install]
+WantedBy=default.target
