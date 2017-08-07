@@ -15,6 +15,7 @@ kill $(ps aux | grep XMMemAll                           | grep -v grep | awk '{p
 kill $(ps aux | grep XMRomNew                           | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMUptime   | grep -v XMUptimeState | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMVolNew                           | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMPlay                             | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMDate     | grep -v XMDateState   | grep -v grep | awk '{print $2}') &
 killall sleep &
 killall gis-weather &
