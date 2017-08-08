@@ -6,7 +6,7 @@ Config {
        , additionalFonts  = [
                              "xft:Larabiefont:size=12:weight=bold:antialias=true:hinting=true"
                             ,"xft:Terminus Re33:pixelsize=6"
-                            ,"xft:Weather Icons:weight=bold:pixelsize=14"
+                            ,"xft:Weather Icons:weight=bold:pixelsize=14:antialias=true:hinting=true"
                             ,"xft:SF Square Head:weight=bold:size=11:antialias=true:hinting=true"
                             ,"xft:Terminus Re33 Nerd Bold:size=11:antialias=true:hinting=true"
                             ]
