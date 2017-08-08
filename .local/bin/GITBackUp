@@ -18,8 +18,8 @@ if [[ $COUNT -gt 0 ]]; then
     git add --all && 
     git commit -m "Update" && 
     git push &&
-    notify-send -u critical -t 0 -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" " <big><b><u>BACKUP SERVICE</u></b></big>" "\n  Backup complete "
+    notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" " <big><b><u>BACKUP SERVICE</u></b></big>" "  Backup complete "
 else
-    notify-send -u critical -t 0 -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "    <big><b><u>BACKUP SERVICE</u></b></big>" "\n There is nothing to save "
+    notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "   <big><b><u>BACKUP SERVICE</u></b></big>" " There is nothing to save "
 fi
 exit 0

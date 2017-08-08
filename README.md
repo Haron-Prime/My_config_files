@@ -17,6 +17,7 @@ The "develop" branch are for testing purposes only.
 ![](/screenshots/xmonad-1.png?raw=true)
 ![](/screenshots/xmonad-2.png?raw=true)
 ![](/screenshots/xmonad-3.png?raw=true)
+![](/screenshots/xmonad-4.png?raw=true)
 
 #### XMobar
 
