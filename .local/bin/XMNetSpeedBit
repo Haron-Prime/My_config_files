@@ -1,0 +1,31 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+while true; do
+    ORX=`echo "$(cat /sys/class/net/enp3s0/statistics/rx_bytes)*8" | bc -l`
+    OTX=`echo "$(cat /sys/class/net/enp3s0/statistics/tx_bytes)*8" | bc -l`
+    sleep 1 &&
+    NRX=`echo "$(cat /sys/class/net/enp3s0/statistics/rx_bytes)*8" | bc -l`
+    NTX=`echo "$(cat /sys/class/net/enp3s0/statistics/tx_bytes)*8" | bc -l`
+    TRX=`echo "scale=2; ($NRX-$ORX)" | bc -l`
+    TTX=`echo "scale=2; ($NTX-$OTX)" | bc -l`
+
+    if [ $TRX -ge 1000000 ]; then
+        RX=`echo "scale=2; ($TRX/1000000)" | bc -l`" mbps"
+    elif [ $TRX -ge 1000 ]; then
+        RX=`echo "scale=2; ($TRX/1000)" | bc -l`" kbps"
+    else
+        RX=$TRX" bps"
+    fi
+
+    if [ $TTX -ge 1000000 ]; then
+        TX=`echo "scale=2; ($TTX/1000000)" | bc -l`" mbps"
+    elif [ $TTX -ge 1000 ]; then
+        TX=`echo "scale=2; ($TTX/1000)" | bc -l`" kbps"
+    else
+        TX=$TTX" bps"
+    fi
+
+    echo ' <action=`XMVnstat-h` button=1><action=`XMVnstat` button=3>'$RX'<fn=2>  </fn><fc=#0e0></fc><fc=#e50></fc><fn=2>  </fn>'$TX'</action></action>' > /tmp/haron/NS
+done
