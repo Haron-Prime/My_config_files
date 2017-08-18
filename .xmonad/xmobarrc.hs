@@ -21,10 +21,10 @@ Config {
        , iconOffset       = -1
        , lowerOnStart     = True
        , pickBroadest     = False
-       , persistent       = True
+       -- , persistent       = False
        , hideOnStart      = False
-       , allDesktops      = True
-       , overrideRedirect = True
+       -- , allDesktops      = True
+       -- , overrideRedirect = True
        , commands         = [
                               Run XMonadLog
                             , Run PipeReader "/tmp/haron/UP"   "UP"
