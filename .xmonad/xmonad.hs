@@ -376,7 +376,8 @@ myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+>
 -- Status bars and logging.
 myLogHook = do
             dynamicLogString $ xmobarPP {
-                                          ppCurrent         = xmobarColor myHLColor ""
+                                          ppTitle           = xmobarStrip
+                                        , ppCurrent         = xmobarColor myHLColor ""
                                         , ppUrgent          = xmobarColor myUrgColor ""
                                         , ppOrder           = \(ws:_:t:_) -> [ws]
                                         }
