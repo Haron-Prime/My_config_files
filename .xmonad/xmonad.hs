@@ -34,7 +34,6 @@ import XMonad.Hooks.UrgencyHook hiding (Never)
 import XMonad.Layout.LayoutCombinators ((|||))
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
-import qualified XMonad.Layout.ToggleLayouts as Tog
 import XMonad.Layout.Spacing
 import XMonad.Layout.Master
 import XMonad.Layout.Minimize
@@ -43,6 +42,7 @@ import XMonad.Layout.Grid
 import XMonad.Layout.MouseResizableTile
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.WindowNavigation
+import qualified XMonad.Layout.ToggleLayouts as Tog
 
 -- Prompts
 import XMonad.Prompt
@@ -53,6 +53,7 @@ import XMonad.Prompt.Ssh
 -- Utils
 import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
+import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
 
 -- myOptions
@@ -80,7 +81,7 @@ myUrgColor           =  "#ff6500"
 myBgColor            =  "#151515"
 myFgColor            =  "#959595"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
-myMonospaceFont      =  "xft:Terminus Re33 Nerd:size=12:antialias=true:hinting=true"
+myMonospaceFont      =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
 
 myTL                 =  windowNavigation (mouseResizableTile{masterFrac = (1/2), fracIncrement = (1/100), draggerType = FixedDragger 2 6})

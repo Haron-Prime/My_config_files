@@ -77,6 +77,8 @@ alias GS='gsync && ggsync'
 alias d2hpp='printf \\n\#%02X%02X%02X `xclip -o` | xclip -selection clipboard'
 alias d2hp='printf \#%02X%02X%02X `xclip -o` | xclip -selection clipboard'
 
+alias transfer='curl -T - https://transfer.sh/777.txt'
+
 # my git aliases
 # alias gl='git log'
 alias gits='git status'
