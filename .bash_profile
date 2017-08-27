@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ~/.bash_profile
 
-PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/bin/core_perl:$HOME/.local/bin:$HOME/.cabal/bin"
+PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/bin/core_perl:/usr/lib/ccache/bin/:$HOME/.local/bin:$HOME/.cabal/bin"
 SHELL="/bin/bash"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
