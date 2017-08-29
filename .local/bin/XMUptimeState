@@ -2,10 +2,16 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-PID=`ps axu | grep XMUptime | grep -v XMUptimeState | grep -v grep | awk '{print $2}'`
-if [[ -n $PID ]]; then
-    kill $PID
-    echo > /tmp/haron/UT
+PID1=`ps axu | grep XMUptime | grep -v XMUptimeState | grep -v grep | awk '{print $2}'`
+PID2=`ps aux | grep XMDate   | grep -v XMDateState   | grep -v grep | awk '{print $2}'`
+if [[ -n $PID2 ]]; then
+    kill $PID2 &
+    echo > /tmp/haron/DO &
+fi
+XMTimeState &
+if [[ -n $PID1 ]]; then
+    kill $PID1
+    echo > /tmp/haron/UT &
     exit 0
 else
     XMUptime &
