@@ -11,7 +11,7 @@ fi
 XMTimeState &
 if [[ -n $PID1 ]]; then
     kill $PID1
-    echo > /tmp/haron/UT &
+    echo > /tmp/haron/UT
     exit 0
 else
     XMUptime &
