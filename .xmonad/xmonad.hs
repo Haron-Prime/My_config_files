@@ -101,14 +101,14 @@ onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.v
 viewShift            =  doF . liftM2 (.) W.greedyView W.shift
 
 xmobarEscape = concatMap doubleLts
-  where doubleLts '<' = "<<"
-        doubleLts x   = [x]
+    where doubleLts '<' = "<<"
+          doubleLts x   = [x]
 
 myWorkspaces = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
-  where clickable l = [ "<action=xdotool key 0xffeb+" ++ show (n) ++ ">" ++ ws ++ "</action>" |
-                      (i,ws) <- zip ["0x31", "0x32", "0x33", "0x34", "0x35", "0x36", "0x37", "0x38", "0x39", "0x30", "0x2d", "0x3d"] l,
-                      let n = i 
-                      ]
+    where clickable l = [ "<action=`xdotool key 0xffeb+" ++ show (n) ++ "` button=1>" ++ ws ++ "</action>" |
+                        (i,ws) <- zip ["0x31", "0x32", "0x33", "0x34", "0x35", "0x36", "0x37", "0x38", "0x39", "0x30", "0x2d", "0x3d"] l,
+                        let n = i 
+                        ]
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
