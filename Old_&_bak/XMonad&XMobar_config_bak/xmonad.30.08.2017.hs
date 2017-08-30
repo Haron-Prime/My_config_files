@@ -375,31 +375,35 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
 
 -- Event handling
 myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
+ 
+-- Status bars and logging.
+myLogHook = do
+            dynamicLogString $ xmobarPP {
+                                          ppTitle           = xmobarStrip
+                                        , ppCurrent         = xmobarColor myHLColor ""
+                                        , ppUrgent          = xmobarColor myUrgColor ""
+                                        , ppOrder           = \(ws:_:t:_) -> [ws]
+                                        }
 
 -- StartupHook
 myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "XMStart" 
 
+myConfig = ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
+                  terminal           = myTerminal
+                 ,focusFollowsMouse  = myFocusFollowsMouse
+                 ,borderWidth        = myBorderWidth
+                 ,modMask            = myModMask
+                 ,workspaces         = myWorkspaces
+                 ,normalBorderColor  = myNormalBorderColor
+                 ,focusedBorderColor = myFocusedBorderColor
+                 ,keys               = myKeys
+                 ,mouseBindings      = myMouseBindings
+                 ,layoutHook         = myLayoutHook
+                 ,manageHook         = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
+                 ,handleEventHook    = myEventHook
+                 ,logHook            = myLogHook >>= xmonadPropLog
+                 ,startupHook        = myStartupHook 
+                 }
+
 main = do
-       xmproc <- spawnPipe "/usr/bin/xmobar /home/haron/.xmonad/xmobarrc.hs"
-       xmonad $  ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
-        terminal           = myTerminal
-       ,focusFollowsMouse  = myFocusFollowsMouse
-       ,borderWidth        = myBorderWidth
-       ,modMask            = myModMask
-       ,workspaces         = myWorkspaces
-       ,normalBorderColor  = myNormalBorderColor
-       ,focusedBorderColor = myFocusedBorderColor
-       ,keys               = myKeys
-       ,mouseBindings      = myMouseBindings
-       ,layoutHook         = myLayoutHook
-       ,manageHook         = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
-       ,handleEventHook    = myEventHook
-       ,logHook            = dynamicLogWithPP $ def {
-                               ppOutput          = System.IO.hPutStrLn xmproc
-                             , ppTitle           = xmobarStrip
-                             , ppCurrent         = xmobarColor myHLColor ""
-                             , ppUrgent          = xmobarColor myUrgColor ""
-                             , ppOrder           = \(ws:_:t:_) -> [ws]
-                             }
-       ,startupHook        = myStartupHook 
-       }
+       xmonad =<< xmobar myConfig
