@@ -267,18 +267,18 @@ myLayoutHook =  avoidStruts
                 $ minimize
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
-                $ onWorkspace  "W"    (Full  ||| myTL  ||| myMTL)
-                $ onWorkspace  "M"    (myTL  ||| myMTL ||| Full)
-                $ onWorkspace  "E"    (myMTL ||| myTL  ||| Full) 
-                $ onWorkspace  "F"    (myMTL ||| myTL  ||| Full)
-                $ onWorkspace  "S"    (myMTL ||| myTL  ||| Full)
-                $ onWorkspace  "V"    (Full  ||| myTL  ||| myMTL)
-                $ onWorkspace  "P"    (myMTL ||| myTL  ||| Full)
-                $ onWorkspace  "J"    (myGL  ||| myTL  ||| myFCL)
-                $ onWorkspace  "T"    (myTL  ||| myMTL ||| Full)
-                $ onWorkspace  "X"    (myTL  ||| myMTL ||| myGL ||| myFCL)
-                $ onWorkspace  "XI"   (myGL  ||| myFCL)
-                $ onWorkspace  "XII"  (myMTL ||| myTL)
+                $ onWorkspace  (myWorkspaces !! 0)  (Full  ||| myTL   ||| myMTL)
+                $ onWorkspace  (myWorkspaces !! 1)  (myTL  ||| myMTL  ||| Full)
+                $ onWorkspace  (myWorkspaces !! 2)  (myMTL ||| myTL   ||| Full) 
+                $ onWorkspace  (myWorkspaces !! 3)  (myMTL ||| myTL   ||| Full)
+                $ onWorkspace  (myWorkspaces !! 4)  (myMTL ||| myTL   ||| Full)
+                $ onWorkspace  (myWorkspaces !! 5)  (Full  ||| myTL   ||| myMTL)
+                $ onWorkspace  (myWorkspaces !! 6)  (myMTL ||| myTL   ||| Full)
+                $ onWorkspace  (myWorkspaces !! 7)  (myGL  ||| myTL   ||| myFCL)
+                $ onWorkspace  (myWorkspaces !! 8)  (myTL  ||| myMTL  ||| Full)
+                $ onWorkspace  (myWorkspaces !! 9)  (myTL  ||| myMTL  ||| myGL ||| myFCL)
+                $ onWorkspace  (myWorkspaces !! 10) (myGL  ||| myFCL)
+                $ onWorkspace  (myWorkspaces !! 11) (myMTL ||| myTL)
                 $ myBL
 
 -- Prompts
@@ -386,7 +386,7 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
 myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
 
 -- StartupHook
-myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "XMStart" 
+myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView (myWorkspaces !! 0) <+> spawn "XMStart" 
 
 main = do
     xmproc <- spawnPipe "xmobar"
@@ -405,8 +405,6 @@ main = do
     ,handleEventHook    = myEventHook
     ,logHook            = dynamicLogWithPP $ def {
                                                    ppOutput          = System.IO.hPutStrLn xmproc
-                                                 -- , ppTitle           = xmobarStrip
-                                                 -- , ppTitle           = (\str -> "")
                                                  , ppCurrent         = xmobarColor myHLColor ""
                                                  , ppUrgent          = xmobarColor myUrgColor ""
                                                  , ppOrder           = \(ws:l:t:_) -> [ws]
