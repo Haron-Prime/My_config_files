@@ -74,7 +74,6 @@ myPlaceMenu          =  "mygtkmenu .placerc"
 myQSTerminal         =  scratchpadSpawnActionTerminal myTerminal
 
 myModMask            =  mod4Mask
-myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
 myBorderWidth        =  1
 myNormalBorderColor  =  "#555555"
 myFocusedBorderColor =  myHLColor
@@ -100,6 +99,16 @@ role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 viewShift            =  doF . liftM2 (.) W.greedyView W.shift
+
+xmobarEscape = concatMap doubleLts
+    where doubleLts '<' = "<<"
+          doubleLts x   = [x]
+
+myWorkspaces = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
+    where clickable l = [ "<action=`xdotool key 0xffeb+" ++ show (n) ++ "` button=1>" ++ ws ++ "</action>" |
+                        (i,ws) <- zip ["0x31", "0x32", "0x33", "0x34", "0x35", "0x36", "0x37", "0x38", "0x39", "0x30", "0x2d", "0x3d"] l,
+                        let n = i 
+                        ]
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -380,27 +389,26 @@ myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+>
 myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "XMStart" 
 
 main = do
-    xmproc <- spawnPipe "/usr/bin/xmobar /home/haron/.xmonad/xmobarrc.hs"
-    xmonad $  ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
-     terminal           = myTerminal
-    ,focusFollowsMouse  = myFocusFollowsMouse
-    ,borderWidth        = myBorderWidth
-    ,modMask            = myModMask
-    ,workspaces         = myWorkspaces
-    ,normalBorderColor  = myNormalBorderColor
-    ,focusedBorderColor = myFocusedBorderColor
-    ,keys               = myKeys
-    ,mouseBindings      = myMouseBindings
-    ,layoutHook         = myLayoutHook
-    ,manageHook         = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
-    ,handleEventHook    = myEventHook
-    ,logHook            = dynamicLogWithPP $ def {
-                                                   ppOutput          = System.IO.hPutStrLn xmproc
-                                                 , ppTitle           = xmobarStrip
-                                                 -- , ppTitle           = (\str -> "")
-                                                 , ppCurrent         = xmobarColor myHLColor ""
-                                                 , ppUrgent          = xmobarColor myUrgColor ""
-                                                 , ppOrder           = \(ws:l:t:_) -> [ws]
-                                                 }
-    ,startupHook        = myStartupHook 
-    }
+       xmproc <- spawnPipe "/usr/bin/xmobar /home/haron/.xmonad/xmobarrc.hs"
+       xmonad $  ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
+        terminal           = myTerminal
+       ,focusFollowsMouse  = myFocusFollowsMouse
+       ,borderWidth        = myBorderWidth
+       ,modMask            = myModMask
+       ,workspaces         = myWorkspaces
+       ,normalBorderColor  = myNormalBorderColor
+       ,focusedBorderColor = myFocusedBorderColor
+       ,keys               = myKeys
+       ,mouseBindings      = myMouseBindings
+       ,layoutHook         = myLayoutHook
+       ,manageHook         = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
+       ,handleEventHook    = myEventHook
+       ,logHook            = dynamicLogWithPP $ def {
+                               ppOutput          = System.IO.hPutStrLn xmproc
+                             , ppTitle           = xmobarStrip
+                             , ppCurrent         = xmobarColor myHLColor ""
+                             , ppUrgent          = xmobarColor myUrgColor ""
+                             , ppOrder           = \(ws:_:t:_) -> [ws]
+                             }
+       ,startupHook        = myStartupHook 
+       }
