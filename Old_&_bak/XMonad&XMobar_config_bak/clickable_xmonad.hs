@@ -298,37 +298,37 @@ myXPConfig = def {
 -- Windows rules:
 myManageHook = composeAll . concat $
     [ 
-      [className =? c                --> doF (W.shift "W")   <+> viewShift ("W")   | c <- myWeb]
-    , [className =? c                --> doF (W.shift "M")                         | c <- myMail]
-    , [className =? c                --> doF (W.shift "E")   <+> viewShift ("E")   | c <- myEdit]
-    , [className =? c                --> doF (W.shift "F")   <+> viewShift ("F")   | c <- myFile]
-    , [className =? c                --> doF (W.shift "S")   <+> viewShift ("S")   | c <- mySystem]
-    , [className =? c                --> doF (W.shift "V")   <+> viewShift ("V")   | c <- myVideo]
-    , [className =? c                --> doF (W.shift "P")   <+> viewShift ("P")   | c <- myPic]
-    , [className =? c                --> doF (W.shift "J")   <+> viewShift ("J")   | c <- myWork]
-    , [className =? c                --> doF (W.shift "T")   <+> viewShift ("T")   | c <- myTorrent]
-    , [className =? c                --> doF (W.shift "X")                         | c <- myX]
-    , [className =? c                --> doF (W.shift "XI")  <+> viewShift ("XI")  | c <- myXI]
-    , [className =? c                --> doF (W.shift "XII") <+> viewShift ("XII") | c <- myXII]
+      [className =? c                     --> doShift (myWorkspaces !! 0)   <+> viewShift (myWorkspaces !! 0)   | c <- myWeb]
+    , [className =? c                     --> doShift (myWorkspaces !! 1)                                       | c <- myMail]
+    , [className =? c                     --> doShift (myWorkspaces !! 2)   <+> viewShift (myWorkspaces !! 2)   | c <- myEdit]
+    , [className =? c                     --> doShift (myWorkspaces !! 3)   <+> viewShift (myWorkspaces !! 3)   | c <- myFile]
+    , [className =? c                     --> doShift (myWorkspaces !! 4)   <+> viewShift (myWorkspaces !! 4)   | c <- mySystem]
+    , [className =? c                     --> doShift (myWorkspaces !! 5)   <+> viewShift (myWorkspaces !! 5)   | c <- myVideo]
+    , [className =? c                     --> doShift (myWorkspaces !! 6)   <+> viewShift (myWorkspaces !! 6)   | c <- myPic]
+    , [className =? c                     --> doShift (myWorkspaces !! 7)   <+> viewShift (myWorkspaces !! 7)   | c <- myWork]
+    , [className =? c                     --> doShift (myWorkspaces !! 8)   <+> viewShift (myWorkspaces !! 8)   | c <- myTorrent]
+    , [className =? c                     --> doShift (myWorkspaces !! 9)                                       | c <- myX]
+    , [className =? c                     --> doShift (myWorkspaces !! 10)  <+> viewShift (myWorkspaces !! 10)  | c <- myXI]
+    , [className =? c                     --> doShift (myWorkspaces !! 11)  <+> viewShift (myWorkspaces !! 11)  | c <- myXII]
 
-    , [className =? c                --> doCenterFloat                             | c <- myFloatC]
-    , [appName   =? a                --> doCenterFloat                             | a <- myFloatA]
-    , [title     =? t                --> doCenterFloat                             | t <- myFloatT]
-    , [role      =? r                --> doCenterFloat                             | r <- myFloatR]
+    , [className =? c                     --> doCenterFloat                                                     | c <- myFloatC]
+    , [appName   =? a                     --> doCenterFloat                                                     | a <- myFloatA]
+    , [title     =? t                     --> doCenterFloat                                                     | t <- myFloatT]
+    , [role      =? r                     --> doCenterFloat                                                     | r <- myFloatR]
 
-    , [currentWs =? "W"              --> insertPosition Below Newer]
-    , [currentWs =? "M"              --> insertPosition Below Newer]
-    , [currentWs =? "E"              --> insertPosition Below Newer]
-    , [currentWs =? "T"              --> insertPosition Below Newer]
-    , [currentWs =? "X"              --> insertPosition Below Newer]
-    , [currentWs =? "XII"            --> insertPosition Below Newer]
+    , [currentWs =? (myWorkspaces !! 0)   --> insertPosition Below Newer]
+    , [currentWs =? (myWorkspaces !! 1)   --> insertPosition Below Newer]
+    , [currentWs =? (myWorkspaces !! 2)   --> insertPosition Below Newer]
+    , [currentWs =? (myWorkspaces !! 8)   --> insertPosition Below Newer]
+    , [currentWs =? (myWorkspaces !! 9)   --> insertPosition Below Newer]
+    , [currentWs =? (myWorkspaces !! 11)  --> insertPosition Below Newer]
 
-    , [className =? "Gis-weather.py" --> doIgnore]
-    , [resource  =? "stalonetray"    --> doIgnore]
+    , [className =? "Gis-weather.py"      --> doIgnore]
+    , [resource  =? "stalonetray"         --> doIgnore]
 
-    , [isDialog                      --> doCenterFloat]
+    , [isDialog                           --> doCenterFloat]
 
-    , [isFullscreen                  --> doFullFloat]
+    , [isFullscreen                       --> doFullFloat]
 
     , [transience']
 
@@ -389,26 +389,27 @@ myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+>
 myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "XMStart" 
 
 main = do
-       xmproc <- spawnPipe "/usr/bin/xmobar /home/haron/.xmonad/xmobarrc.hs"
-       xmonad $  ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
-        terminal           = myTerminal
-       ,focusFollowsMouse  = myFocusFollowsMouse
-       ,borderWidth        = myBorderWidth
-       ,modMask            = myModMask
-       ,workspaces         = myWorkspaces
-       ,normalBorderColor  = myNormalBorderColor
-       ,focusedBorderColor = myFocusedBorderColor
-       ,keys               = myKeys
-       ,mouseBindings      = myMouseBindings
-       ,layoutHook         = myLayoutHook
-       ,manageHook         = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
-       ,handleEventHook    = myEventHook
-       ,logHook            = dynamicLogWithPP $ def {
-                               ppOutput          = System.IO.hPutStrLn xmproc
-                             , ppTitle           = xmobarStrip
-                             , ppCurrent         = xmobarColor myHLColor ""
-                             , ppUrgent          = xmobarColor myUrgColor ""
-                             , ppOrder           = \(ws:_:t:_) -> [ws]
-                             }
-       ,startupHook        = myStartupHook 
-       }
+    xmproc <- spawnPipe "xmobar"
+    xmonad $  ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
+     terminal           = myTerminal
+    ,focusFollowsMouse  = myFocusFollowsMouse
+    ,borderWidth        = myBorderWidth
+    ,modMask            = myModMask
+    ,workspaces         = myWorkspaces
+    ,normalBorderColor  = myNormalBorderColor
+    ,focusedBorderColor = myFocusedBorderColor
+    ,keys               = myKeys
+    ,mouseBindings      = myMouseBindings
+    ,layoutHook         = myLayoutHook
+    ,manageHook         = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
+    ,handleEventHook    = myEventHook
+    ,logHook            = dynamicLogWithPP $ def {
+                                                   ppOutput          = System.IO.hPutStrLn xmproc
+                                                 -- , ppTitle           = xmobarStrip
+                                                 -- , ppTitle           = (\str -> "")
+                                                 , ppCurrent         = xmobarColor myHLColor ""
+                                                 , ppUrgent          = xmobarColor myUrgColor ""
+                                                 , ppOrder           = \(ws:l:t:_) -> [ws]
+                                                 }
+    ,startupHook        = myStartupHook 
+    }
