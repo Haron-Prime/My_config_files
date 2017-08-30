@@ -380,7 +380,7 @@ myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+>
 myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView "W" <+> spawn "XMStart" 
 
 main = do
-    xmproc <- spawnPipe "/usr/bin/xmobar /home/haron/.xmonad/xmobarrc.hs"
+    xmproc <- spawnPipe "xmobar"
     xmonad $  ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
      terminal           = myTerminal
     ,focusFollowsMouse  = myFocusFollowsMouse
@@ -396,7 +396,7 @@ main = do
     ,handleEventHook    = myEventHook
     ,logHook            = dynamicLogWithPP $ def {
                                                    ppOutput          = System.IO.hPutStrLn xmproc
-                                                 , ppTitle           = xmobarStrip
+                                                 -- , ppTitle           = xmobarStrip
                                                  -- , ppTitle           = (\str -> "")
                                                  , ppCurrent         = xmobarColor myHLColor ""
                                                  , ppUrgent          = xmobarColor myUrgColor ""
