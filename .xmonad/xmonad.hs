@@ -74,7 +74,6 @@ myPlaceMenu          =  "mygtkmenu .placerc"
 myQSTerminal         =  scratchpadSpawnActionTerminal myTerminal
 
 myModMask            =  mod4Mask
-myWorkspaces         =  [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
 myBorderWidth        =  1
 myNormalBorderColor  =  "#555555"
 myFocusedBorderColor =  myHLColor
@@ -100,6 +99,16 @@ role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 viewShift            =  doF . liftM2 (.) W.greedyView W.shift
+
+xmobarEscape = concatMap doubleLts
+    where doubleLts '<' = "<<"
+          doubleLts x   = [x]
+
+myWorkspaces = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
+    where clickable l = [ "<action=`xdotool key 0xffeb+" ++ show (n) ++ "` button=1>" ++ ws ++ "</action>" |
+                        (i,ws) <- zip ["0x31", "0x32", "0x33", "0x34", "0x35", "0x36", "0x37", "0x38", "0x39", "0x30", "0x2d", "0x3d"] l,
+                        let n = i 
+                        ]
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -289,37 +298,37 @@ myXPConfig = def {
 -- Windows rules:
 myManageHook = composeAll . concat $
     [ 
-      [className =? c                --> doF (W.shift "W")   <+> viewShift ("W")   | c <- myWeb]
-    , [className =? c                --> doF (W.shift "M")                         | c <- myMail]
-    , [className =? c                --> doF (W.shift "E")   <+> viewShift ("E")   | c <- myEdit]
-    , [className =? c                --> doF (W.shift "F")   <+> viewShift ("F")   | c <- myFile]
-    , [className =? c                --> doF (W.shift "S")   <+> viewShift ("S")   | c <- mySystem]
-    , [className =? c                --> doF (W.shift "V")   <+> viewShift ("V")   | c <- myVideo]
-    , [className =? c                --> doF (W.shift "P")   <+> viewShift ("P")   | c <- myPic]
-    , [className =? c                --> doF (W.shift "J")   <+> viewShift ("J")   | c <- myWork]
-    , [className =? c                --> doF (W.shift "T")   <+> viewShift ("T")   | c <- myTorrent]
-    , [className =? c                --> doF (W.shift "X")                         | c <- myX]
-    , [className =? c                --> doF (W.shift "XI")  <+> viewShift ("XI")  | c <- myXI]
-    , [className =? c                --> doF (W.shift "XII") <+> viewShift ("XII") | c <- myXII]
+      [className =? c                     --> doShift (myWorkspaces !! 0)   <+> viewShift (myWorkspaces !! 0)   | c <- myWeb]
+    , [className =? c                     --> doShift (myWorkspaces !! 1)                                       | c <- myMail]
+    , [className =? c                     --> doShift (myWorkspaces !! 2)   <+> viewShift (myWorkspaces !! 2)   | c <- myEdit]
+    , [className =? c                     --> doShift (myWorkspaces !! 3)   <+> viewShift (myWorkspaces !! 3)   | c <- myFile]
+    , [className =? c                     --> doShift (myWorkspaces !! 4)   <+> viewShift (myWorkspaces !! 4)   | c <- mySystem]
+    , [className =? c                     --> doShift (myWorkspaces !! 5)   <+> viewShift (myWorkspaces !! 5)   | c <- myVideo]
+    , [className =? c                     --> doShift (myWorkspaces !! 6)   <+> viewShift (myWorkspaces !! 6)   | c <- myPic]
+    , [className =? c                     --> doShift (myWorkspaces !! 7)   <+> viewShift (myWorkspaces !! 7)   | c <- myWork]
+    , [className =? c                     --> doShift (myWorkspaces !! 8)   <+> viewShift (myWorkspaces !! 8)   | c <- myTorrent]
+    , [className =? c                     --> doShift (myWorkspaces !! 9)                                       | c <- myX]
+    , [className =? c                     --> doShift (myWorkspaces !! 10)  <+> viewShift (myWorkspaces !! 10)  | c <- myXI]
+    , [className =? c                     --> doShift (myWorkspaces !! 11)  <+> viewShift (myWorkspaces !! 11)  | c <- myXII]
 
-    , [className =? c                --> doCenterFloat                             | c <- myFloatC]
-    , [appName   =? a                --> doCenterFloat                             | a <- myFloatA]
-    , [title     =? t                --> doCenterFloat                             | t <- myFloatT]
-    , [role      =? r                --> doCenterFloat                             | r <- myFloatR]
+    , [className =? c                     --> doCenterFloat                                                     | c <- myFloatC]
+    , [appName   =? a                     --> doCenterFloat                                                     | a <- myFloatA]
+    , [title     =? t                     --> doCenterFloat                                                     | t <- myFloatT]
+    , [role      =? r                     --> doCenterFloat                                                     | r <- myFloatR]
 
-    , [currentWs =? "W"              --> insertPosition Below Newer]
-    , [currentWs =? "M"              --> insertPosition Below Newer]
-    , [currentWs =? "E"              --> insertPosition Below Newer]
-    , [currentWs =? "T"              --> insertPosition Below Newer]
-    , [currentWs =? "X"              --> insertPosition Below Newer]
-    , [currentWs =? "XII"            --> insertPosition Below Newer]
+    , [currentWs =? (myWorkspaces !! 0)   --> insertPosition Below Newer]
+    , [currentWs =? (myWorkspaces !! 1)   --> insertPosition Below Newer]
+    , [currentWs =? (myWorkspaces !! 2)   --> insertPosition Below Newer]
+    , [currentWs =? (myWorkspaces !! 8)   --> insertPosition Below Newer]
+    , [currentWs =? (myWorkspaces !! 9)   --> insertPosition Below Newer]
+    , [currentWs =? (myWorkspaces !! 11)  --> insertPosition Below Newer]
 
-    , [className =? "Gis-weather.py" --> doIgnore]
-    , [resource  =? "stalonetray"    --> doIgnore]
+    , [className =? "Gis-weather.py"      --> doIgnore]
+    , [resource  =? "stalonetray"         --> doIgnore]
 
-    , [isDialog                      --> doCenterFloat]
+    , [isDialog                           --> doCenterFloat]
 
-    , [isFullscreen                  --> doFullFloat]
+    , [isFullscreen                       --> doFullFloat]
 
     , [transience']
 
