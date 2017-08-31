@@ -1,20 +1,18 @@
-
-<action=`XMScreenfetch` button=3>
-    <action=`mygtkmenu .menurc` button=1>
+ 
+<action=`mygtkmenu .menurc` button=1>
+    <action=`XMScreenfetch` button=3>
         <fn=5>
             
         </fn>
     </action>
 </action>
 
- <action=`xdotool key 0xffeb+0xff1b` button=1>
-    <action=`mygtkmenu .workspacesrc` button=3>
-        <action=`xdotool key 0xffe3+0xffe9+0xff51` button=4>
-            <action=`xdotool key 0xffe3+0xffe9+0xff53` button=5>
-                <fn=4>
-                    %XMonadLog%
-                </fn>
-            </action>
+<action=`xdotool key 0xffeb+0xff1b` button=3>
+    <action=`xdotool key 0xffe3+0xffe9+0xff51` button=4>
+        <action=`xdotool key 0xffe3+0xffe9+0xff53` button=5>
+            <fn=4>
+                %UnsafeStdinReader%
+            </fn>
         </action>
     </action>
 </action>
@@ -23,22 +21,39 @@
 
 </fn>
 <action=`mygtkmenu .placerc` button=1>
-    <fn=5>
-        
-    </fn>
+    <action=`XMUptimeState` button=3>
+        <fn=5>
+            
+        </fn>
+    </action>
 </action>
 
 %UT%
-
-%MW2%
-||
-<action=XMYaourt>
-    %UP%
+<action=`xdotool key 0xffeb+0x61`>
+    %MW2%
 </action>
+|
+
+<action=`XMDateState` button=1>
+    <action=`XMGSimplecal` button=3>
+        <action=`XMCal` button=45>
+            %DO%
+            <fn=1>
+                <fc=#ccc>
+
+                    %TIME%
+                </fc>
+            </fn>
+        </action>
+    </action>
+</action>
+
+|
+%UP%
 
 <action=`XMNetState` button=1>
     <action=`xdg-open http://192.168.0.1` button=2>
-        <action=`XMVnstat-h & XMVnstat` button=3>
+        <action=`XMVnstat & XMVnstat-h` button=3>
             <action=`XMifconfig` button=45>
                 %NT%
             </action>
@@ -57,6 +72,7 @@
     </action>
 </action>
 %TR%
+
 
 <action=`XMCPUState` button=1>
     <fc=#ccc>
@@ -93,11 +109,13 @@
                         
                     </fc>
                     %VO%
+                    %PL%
                 </action>
             </action>
         </action>
     </action>
 </action>
+
 
 <fn=5>
     <action=`XMncmpcpp` button=3>
@@ -115,44 +133,35 @@
     </action>
 </fn>
 
+
 <action=`xkblayout-state set +1`>
     %kbd%
 </action>
-<action=`XMDateState` button=1>
-    <action=`XMGSimplecal` button=4>
-        <action=`XMCal` button=5>
-            %DO%
-            <fn=1>
-                <fc=#ccc>
-                    %XMTime%
-                </fc>
-            </fn>
-        </action>
+
+
+<fc=#ccc>
+    <action=`XMGWeather` button=1>
+        %WI%
     </action>
-</action>
+    <fn=2>
 
-<action=`XMGWeather` button=1>
-    %WI%
-</action>
-<fn=2>
-
-</fn>
-<action=`XMAccuWeather` button=1>
-    <action=`XMGismeteo` button=3>
-        <fc=#ccc>
+    </fn>
+    <action=`XMAccuWeather` button=1>
+        <action=`XMGismeteo` button=3>
             <fn=1>
                 %CT%
                 C
             </fn>
-        </fc>
+        </action>
     </action>
-</action>
+</fc>
+
 <action=`XMStateAll` button=1>
     <action=`XMStateKill` button=3>
-
         <fc=#ccc>
-            
-        </fc>
 
+            
+
+        </fc>
     </action>
 </action>
