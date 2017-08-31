@@ -387,7 +387,7 @@ myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 
 
 main = do
     xmproc <- spawnPipe "xmobar"
-    xmonad $  ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
+    xmonad $ ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
      terminal           = myTerminal
     ,focusFollowsMouse  = myFocusFollowsMouse
     ,borderWidth        = myBorderWidth
