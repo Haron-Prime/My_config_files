@@ -4,13 +4,15 @@
 
 KERN=`uname -srm`
 PAC=`pacman -Q | wc -l`
+XMN=`pacman -Qi xmonad | sed -n 2p | awk '{print $3}'`
+XMB=`pacman -Qi xmobar | sed -n 2p | awk '{print $3}'`
 while true; do
     UPTIME=`uptime | awk '{print $4}'`
     case $UPTIME in
         min, ) OUT1=`uptime | cut -d , -f 1 | awk '{print $2,$3,$4}'`; OUT2=`uptime | awk '{print $5,$6,$9,$10,$11}'` ;;
         *    ) OUT1=`uptime | cut -d , -f 1 | awk '{print $2,$3}'`   ; OUT2=`uptime | awk '{print $4,$5,$8,$9,$10}'`  ;;
     esac
-    echo '<fc=#9df> </fc> <fn=1><fc=#9df>Arch '$KERN  $PAC 'packages</fc>  <fc=#0e0>'$OUT1'</fc>  <fc=#9df>'$OUT2'</fc></fn>' > /tmp/haron/UT
+    echo '<fc=#9df> </fc> <fn=1><fc=#9df>Arch '$KERN  $PAC 'packages</fc>  <fc=#0e0>'$OUT1'</fc>  <fc=#9df>'$OUT2'  xmonad' $XMN' xmobar' $XMB'</fc></fn>' > /tmp/haron/UT
     sleep 60
 done
 exit 0
