@@ -41,7 +41,6 @@ import XMonad.Layout.Master
 import XMonad.Layout.Minimize
 import XMonad.Layout.FixedColumn
 import XMonad.Layout.Grid
-import XMonad.Layout.MouseResizableTile
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.WindowNavigation
 import qualified XMonad.Layout.ToggleLayouts as Tog
@@ -85,8 +84,6 @@ myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=tru
 myMonospaceFont      =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
 
-myTL                 =  windowNavigation (mouseResizableTile{masterFrac = (1/2), fracIncrement = (1/100), draggerType = FixedDragger 2 6})
-myMTL                =  windowNavigation (mouseResizableTile{masterFrac = (2/3), fracIncrement = (1/100), draggerType = FixedDragger 2 6, isMirrored = True})
 myGL                 =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 myFCL                =  windowNavigation (spacing 1 $ FixedColumn 1 20 80 10)
 myRTL1               =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
@@ -191,8 +188,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,          0x68),  sendMessage MirrorShrink)                                                --Mod4+Shift+H
     , ((modm,                            0x6c),  sendMessage Expand)                                                      --Mod4+L
     , ((modm     .|. shiftMask,          0x6c),  sendMessage MirrorExpand)                                                --Mod4+Shift+L
-    , ((modm,                            0x75),  sendMessage ShrinkSlave)                                                 --Mod4+U
-    , ((modm,                            0x69),  sendMessage ExpandSlave)                                                 --Mod4+I
     , ((modm,                            0x74),  withFocused $ windows . W.sink)                                          --Mod4+T
     , ((modm,                            0x2c),  sendMessage (IncMasterN 1))                                              --Mod4+Comma
     , ((modm,                            0x2e),  sendMessage (IncMasterN (-1)))                                           --Mod4+Period
@@ -267,18 +262,18 @@ myLayoutHook =  avoidStruts
                 $ minimize
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
-                $ onWorkspace  (myWorkspaces !! 0)  (Full  ||| myTL   ||| myMTL)
-                $ onWorkspace  (myWorkspaces !! 1)  (myTL  ||| myMTL  ||| Full)
-                $ onWorkspace  (myWorkspaces !! 2)  (myMTL ||| myTL   ||| Full) 
-                $ onWorkspace  (myWorkspaces !! 3)  (myMTL ||| myTL   ||| Full)
-                $ onWorkspace  (myWorkspaces !! 4)  (myMTL ||| myTL   ||| Full)
-                $ onWorkspace  (myWorkspaces !! 5)  (Full  ||| myTL   ||| myMTL)
-                $ onWorkspace  (myWorkspaces !! 6)  (myMTL ||| myTL   ||| Full)
-                $ onWorkspace  (myWorkspaces !! 7)  (myGL  ||| myTL   ||| myFCL)
-                $ onWorkspace  (myWorkspaces !! 8)  (myTL  ||| myMTL  ||| Full)
-                $ onWorkspace  (myWorkspaces !! 9)  (myTL  ||| myMTL  ||| myGL ||| myFCL)
-                $ onWorkspace  (myWorkspaces !! 10) (myGL  ||| myFCL)
-                $ onWorkspace  (myWorkspaces !! 11) (myMTL ||| myTL)
+                $ onWorkspace  (myWorkspaces !! 0)  (Full    ||| myRTL1  ||| myMRTL1)
+                $ onWorkspace  (myWorkspaces !! 1)  (myRTL1  ||| myMRTL1 ||| Full)
+                $ onWorkspace  (myWorkspaces !! 2)  (myMRTL1 ||| myRTL1  ||| Full) 
+                $ onWorkspace  (myWorkspaces !! 3)  (myMRTL1 ||| myRTL1  ||| Full)
+                $ onWorkspace  (myWorkspaces !! 4)  (myMRTL1 ||| myRTL1  ||| Full)
+                $ onWorkspace  (myWorkspaces !! 5)  (Full    ||| myRTL1  ||| myMRTL1)
+                $ onWorkspace  (myWorkspaces !! 6)  (myMRTL1 ||| myRTL1  ||| Full)
+                $ onWorkspace  (myWorkspaces !! 7)  (myGL    ||| myRTL1  ||| myFCL)
+                $ onWorkspace  (myWorkspaces !! 8)  (myRTL1  ||| myMRTL1 ||| Full)
+                $ onWorkspace  (myWorkspaces !! 9)  (myRTL1  ||| myMRTL1 ||| myGL ||| myFCL)
+                $ onWorkspace  (myWorkspaces !! 10) (myGL    ||| myFCL)
+                $ onWorkspace  (myWorkspaces !! 11) (myMRTL1 ||| myRTL1)
                 $ myBL
 
 -- Prompts
