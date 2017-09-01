@@ -97,16 +97,6 @@ encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 viewShift            =  doF . liftM2 (.) W.greedyView W.shift
 
-xmobarEscape = concatMap doubleLts
-    where doubleLts '<' = "<<"
-          doubleLts x   = [x]
-
-myWorkspaces = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
-    where clickable l = [ "<action=`xdotool key 0xffeb+" ++ show (n) ++ "` button=1>" ++ ws ++ "</action>" |
-                        (i,ws) <- zip ["0x31", "0x32", "0x33", "0x34", "0x35", "0x36", "0x37", "0x38", "0x39", "0x30", "0x2d", "0x3d"] l,
-                        let n = i 
-                        ]
-
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
@@ -188,6 +178,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,          0x68),  sendMessage MirrorShrink)                                                --Mod4+Shift+H
     , ((modm,                            0x6c),  sendMessage Expand)                                                      --Mod4+L
     , ((modm     .|. shiftMask,          0x6c),  sendMessage MirrorExpand)                                                --Mod4+Shift+L
+    -- , ((modm,                            0x75),  sendMessage ShrinkSlave)                                                 --Mod4+U
+    -- , ((modm,                            0x69),  sendMessage ExpandSlave)                                                 --Mod4+I
     , ((modm,                            0x74),  withFocused $ windows . W.sink)                                          --Mod4+T
     , ((modm,                            0x2c),  sendMessage (IncMasterN 1))                                              --Mod4+Comma
     , ((modm,                            0x2e),  sendMessage (IncMasterN (-1)))                                           --Mod4+Period
@@ -256,6 +248,17 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm, button3), (\w -> focus w >> mouseResizeWindow w
                                        >> windows W.shiftMaster))
     ]
+
+-- Clickable workspaces
+xmobarEscape = concatMap doubleLts
+    where doubleLts '<' = "<<"
+          doubleLts x   = [x]
+
+myWorkspaces = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
+    where clickable l = [ "<fn=4><action=`xdotool key 0xffeb+" ++ show (n) ++ "` button=1>" ++ ws ++ "</action></fn>" |
+                        (i,ws) <- zip ["0x31", "0x32", "0x33", "0x34", "0x35", "0x36", "0x37", "0x38", "0x39", "0x30", "0x2d", "0x3d"] l,
+                        let n = i 
+                        ]
 
 -- Layouts:
 myLayoutHook =  avoidStruts
@@ -385,7 +388,7 @@ myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 
 
 main = do
     xmproc <- spawnPipe "xmobar"
-    xmonad $  ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
+    xmonad $ ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
      terminal           = myTerminal
     ,focusFollowsMouse  = myFocusFollowsMouse
     ,borderWidth        = myBorderWidth

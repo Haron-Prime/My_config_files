@@ -159,9 +159,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x62),  spawn myPlaceMenu)                                                       --Alt+B
 
     --Prompt management
-    , ((mod1Mask,                      0xffbe),  manPrompt myXPConfig)                                                    --Alt+F1
-    , ((mod1Mask,                      0xffbf),  runOrRaisePrompt myXPConfig)                                             --Alt+F2
-    , ((mod1Mask,                      0xffc0),  sshPrompt myXPConfig)                                                    --Alt+F3
+    , ((mod1Mask,                      0xffbe),  manPrompt myPromptConfig)                                                --Alt+F1
+    , ((mod1Mask,                      0xffbf),  runOrRaisePrompt myPromptConfig)                                         --Alt+F2
+    , ((mod1Mask,                      0xffc0),  sshPrompt myPromptConfig)                                                --Alt+F3
 
     --WS management
     , ((mod1Mask,                      0xff09),  nextWS)                                                                  --Alt+Tab
@@ -280,7 +280,7 @@ myLayoutHook =  avoidStruts
                 $ myBL
 
 -- Prompts
-myXPConfig = def {
+myPromptConfig = def {
                    font              = myMonospaceFont
                  , bgColor           = myBgColor
                  , fgColor           = myFgColor
