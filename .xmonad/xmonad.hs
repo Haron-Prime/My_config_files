@@ -281,17 +281,17 @@ myLayoutHook =  avoidStruts
 
 -- Prompts
 myPromptConfig = def {
-                   font              = myMonospaceFont
-                 , bgColor           = myBgColor
-                 , fgColor           = myFgColor
-                 , bgHLight          = myBgColor
-                 , fgHLight          = myHLColor
-                 , promptBorderWidth = 0
-                 , position          = Top
-                 , height            = 20
-                 , alwaysHighlight   = True
-                 , historySize       = 100
-                 }
+                       font              = myMonospaceFont
+                     , bgColor           = myBgColor
+                     , fgColor           = myFgColor
+                     , bgHLight          = myBgColor
+                     , fgHLight          = myHLColor
+                     , promptBorderWidth = 0
+                     , position          = Top
+                     , height            = 20
+                     , alwaysHighlight   = True
+                     , historySize       = 100
+                     }
 
 -- Windows rules:
 myManageHook = composeAll . concat $
@@ -334,27 +334,111 @@ myManageHook = composeAll . concat $
 
     ]
     where
-    myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
-    myMail    = ["Thunderbird"]
-    myEdit    = ["Subl3","Atom","Meld","Et","Wps","Wpp","FoxitReader","Zim","Cherrytree"]
-    myFile    = ["Pcmanfm"]
-    mySystem  = ["pacmanxg","GParted","Sysinfo","Tk","Systemadm","Zenmap"]
-    myVideo   = ["mpv","Vlc","Sopcast-player.py","Easytag"]
-    myPic     = ["Gimp","Gimp-2.8","Inkscape"]
-    myWork    = ["Wine"]
-    myTorrent = ["Tixati","Transgui","Transmission-gtk","Transmission-remote-gtk"]
-    myX       = ["Gitg","Gitk","SWT"]
-    myXI      = ["Hexchat","psi","Psi","Viber","TelegramDesktop"]
-    myXII     = ["GitKraken"]
+        myWeb     = [
+                      "Firefox"
+                    , "Opera"
+                    , "Tor Browser"
+                    , "Vivaldi-snapshot"
+                    ]
+        myMail    = [
+                      "Thunderbird"
+                    ]
+        myEdit    = [
+                      "Subl3"
+                    , "Atom"
+                    , "Meld"
+                    , "Et"
+                    , "Wps"
+                    , "Wpp"
+                    , "FoxitReader"
+                    , "Zim"
+                    , "Cherrytree"
+                    ]
+        myFile    = [
+                      "Pcmanfm"
+                    ]
+        mySystem  = [
+                      "pacmanxg"
+                    , "GParted"
+                    , "Sysinfo"
+                    , "Tk"
+                    , "Systemadm"
+                    , "Zenmap"
+                    ]
+        myVideo   = [
+                      "mpv"
+                    , "Vlc"
+                    , "Sopcast-player.py"
+                    , "Easytag"
+                    ]
+        myPic     = [
+                      "Gimp"
+                    , "Gimp-2.8"
+                    , "Inkscape"
+                    ]
+        myWork    = [
+                      "Wine"
+                    ]
+        myTorrent = [
+                      "Tixati"
+                    , "Transgui"
+                    , "Transmission-gtk"
+                    , "Transmission-remote-gtk"
+                    ]
+        myX       = [
+                      "Gitg"
+                    , "Gitk"
+                    , "SWT"
+                    ]
+        myXI      = [
+                      "Hexchat"
+                    , "psi"
+                    , "Psi"
+                    , "Viber"
+                    , "TelegramDesktop"
+                    ]
+        myXII     = [
+                      "GitKraken"
+                    ]
 
-    -- CenterFloat
-    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor","Font-manager","Gksu-properties"]
-    myFloatA  = ["lxappearance","xarchiver","gmrun","Update"]
-    myFloatT  = ["Software Update"]
-    myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
+-- CenterFloat
+        myFloatC  = [
+                      "Xmessage"
+                    , "Gxmessage"
+                    , "XClock"
+                    , "Galculator"
+                    , "Shutter"
+                    , "Zenity"
+                    , "Nvidia-settings"
+                    , "Pulseaudio-equalizer.py"
+                    , "Gnome-alsamixer"
+                    , "Gsmartcontrol"
+                    , "feh"
+                    , "Gconf-editor"
+                    , "Dconf-editor"
+                    , "Font-manager"
+                    , "Gksu-properties"
+                    ]
+        myFloatA  = [
+                      "lxappearance"
+                    , "xarchiver"
+                    , "gmrun"
+                    , "Update"
+                    ]
+        myFloatT  = [
+                      "Software Update"
+                    ]
+        myFloatR  = [
+                      "task_dialog"
+                    , "messages"
+                    , "pop-up"
+                    , "^conversation$"
+                    , "About"
+                    ]
 
 -- namedScratchpad
-mynameScratchpads = [ NS "MyPlayer"     myPlayer         (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+mynameScratchpads = [
+                      NS "MyPlayer"     myPlayer         (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                     , NS "MyHtop"       myHtop           (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
                     , NS "Gpick"        "gpick"          (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "Pavucontrol"  "pavucontrol"    (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
@@ -384,28 +468,31 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
 myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
 
 -- StartupHook
-myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView (myWorkspaces !! 0) <+> spawn "XMStart" 
+myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView (myWorkspaces !! 0) <+> spawn "XMStart" 
+
+-- ManageHook
+myAllHook = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
 
 main = do
     xmproc <- spawnPipe "xmobar"
     xmonad $ ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
-     terminal           = myTerminal
-    ,focusFollowsMouse  = myFocusFollowsMouse
-    ,borderWidth        = myBorderWidth
-    ,modMask            = myModMask
-    ,workspaces         = myWorkspaces
-    ,normalBorderColor  = myNormalBorderColor
-    ,focusedBorderColor = myFocusedBorderColor
-    ,keys               = myKeys
-    ,mouseBindings      = myMouseBindings
-    ,layoutHook         = myLayoutHook
-    ,manageHook         = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
-    ,handleEventHook    = myEventHook
-    ,logHook            = dynamicLogWithPP $ def {
-                                                   ppOutput          = System.IO.hPutStrLn xmproc
-                                                 , ppCurrent         = xmobarColor myHLColor ""
-                                                 , ppUrgent          = xmobarColor myUrgColor ""
-                                                 , ppOrder           = \(ws:l:t:_) -> [ws]
-                                                 }
-    ,startupHook        = myStartupHook 
+          terminal           = myTerminal
+        , focusFollowsMouse  = myFocusFollowsMouse
+        , borderWidth        = myBorderWidth
+        , modMask            = myModMask
+        , workspaces         = myWorkspaces
+        , normalBorderColor  = myNormalBorderColor
+        , focusedBorderColor = myFocusedBorderColor
+        , keys               = myKeys
+        , mouseBindings      = myMouseBindings
+        , layoutHook         = myLayoutHook
+        , manageHook         = myAllHook
+        , handleEventHook    = myEventHook
+        , logHook            = dynamicLogWithPP $ def {
+                                                        ppOutput          = System.IO.hPutStrLn xmproc
+                                                      , ppCurrent         = xmobarColor myHLColor ""
+                                                      , ppUrgent          = xmobarColor myUrgColor ""
+                                                      , ppOrder           = \(ws:l:t:_) -> [ws]
+                                                      }
+        , startupHook        = myStartupHook 
     }
