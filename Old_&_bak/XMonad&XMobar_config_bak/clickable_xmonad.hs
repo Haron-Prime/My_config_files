@@ -97,16 +97,6 @@ encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 viewShift            =  doF . liftM2 (.) W.greedyView W.shift
 
-xmobarEscape = concatMap doubleLts
-    where doubleLts '<' = "<<"
-          doubleLts x   = [x]
-
-myWorkspaces = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
-    where clickable l = [ "<action=`xdotool key 0xffeb+" ++ show (n) ++ "` button=1>" ++ ws ++ "</action>" |
-                        (i,ws) <- zip ["0x31", "0x32", "0x33", "0x34", "0x35", "0x36", "0x37", "0x38", "0x39", "0x30", "0x2d", "0x3d"] l,
-                        let n = i 
-                        ]
-
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
@@ -169,9 +159,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x62),  spawn myPlaceMenu)                                                       --Alt+B
 
     --Prompt management
-    , ((mod1Mask,                      0xffbe),  manPrompt myXPConfig)                                                    --Alt+F1
-    , ((mod1Mask,                      0xffbf),  runOrRaisePrompt myXPConfig)                                             --Alt+F2
-    , ((mod1Mask,                      0xffc0),  sshPrompt myXPConfig)                                                    --Alt+F3
+    , ((mod1Mask,                      0xffbe),  manPrompt myPromptConfig)                                                --Alt+F1
+    , ((mod1Mask,                      0xffbf),  runOrRaisePrompt myPromptConfig)                                         --Alt+F2
+    , ((mod1Mask,                      0xffc0),  sshPrompt myPromptConfig)                                                --Alt+F3
 
     --WS management
     , ((mod1Mask,                      0xff09),  nextWS)                                                                  --Alt+Tab
@@ -188,6 +178,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,          0x68),  sendMessage MirrorShrink)                                                --Mod4+Shift+H
     , ((modm,                            0x6c),  sendMessage Expand)                                                      --Mod4+L
     , ((modm     .|. shiftMask,          0x6c),  sendMessage MirrorExpand)                                                --Mod4+Shift+L
+    -- , ((modm,                            0x75),  sendMessage ShrinkSlave)                                                 --Mod4+U
+    -- , ((modm,                            0x69),  sendMessage ExpandSlave)                                                 --Mod4+I
     , ((modm,                            0x74),  withFocused $ windows . W.sink)                                          --Mod4+T
     , ((modm,                            0x2c),  sendMessage (IncMasterN 1))                                              --Mod4+Comma
     , ((modm,                            0x2e),  sendMessage (IncMasterN (-1)))                                           --Mod4+Period
@@ -257,6 +249,17 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
                                        >> windows W.shiftMaster))
     ]
 
+-- Clickable workspaces
+xmobarEscape = concatMap doubleLts
+    where doubleLts '<' = "<<"
+          doubleLts x   = [x]
+
+myWorkspaces = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
+    where clickable l = [ "<fn=4><action=`xdotool key 0xffeb+" ++ show (n) ++ "` button=1>" ++ ws ++ "</action></fn>" |
+                        (i,ws) <- zip ["0x31", "0x32", "0x33", "0x34", "0x35", "0x36", "0x37", "0x38", "0x39", "0x30", "0x2d", "0x3d"] l,
+                        let n = i 
+                        ]
+
 -- Layouts:
 myLayoutHook =  avoidStruts
                 $ minimize
@@ -277,18 +280,18 @@ myLayoutHook =  avoidStruts
                 $ myBL
 
 -- Prompts
-myXPConfig = def {
-                   font              = myMonospaceFont
-                 , bgColor           = myBgColor
-                 , fgColor           = myFgColor
-                 , bgHLight          = myBgColor
-                 , fgHLight          = myHLColor
-                 , promptBorderWidth = 0
-                 , position          = Top
-                 , height            = 20
-                 , alwaysHighlight   = True
-                 , historySize       = 100
-                 }
+myPromptConfig = def {
+                       font              = myMonospaceFont
+                     , bgColor           = myBgColor
+                     , fgColor           = myFgColor
+                     , bgHLight          = myBgColor
+                     , fgHLight          = myHLColor
+                     , promptBorderWidth = 0
+                     , position          = Top
+                     , height            = 20
+                     , alwaysHighlight   = True
+                     , historySize       = 100
+                     }
 
 -- Windows rules:
 myManageHook = composeAll . concat $
@@ -331,27 +334,111 @@ myManageHook = composeAll . concat $
 
     ]
     where
-    myWeb     = ["Firefox","Opera","Tor Browser","Vivaldi-snapshot"]
-    myMail    = ["Thunderbird"]
-    myEdit    = ["Subl3","Atom","Meld","Et","Wps","Wpp","FoxitReader","Zim","Cherrytree"]
-    myFile    = ["Pcmanfm"]
-    mySystem  = ["pacmanxg","GParted","Sysinfo","Tk","Systemadm","Zenmap"]
-    myVideo   = ["mpv","Vlc","Sopcast-player.py","Easytag"]
-    myPic     = ["Gimp","Gimp-2.8","Inkscape"]
-    myWork    = ["Wine"]
-    myTorrent = ["Tixati","Transgui","Transmission-gtk","Transmission-remote-gtk"]
-    myX       = ["Gitg","Gitk","SWT"]
-    myXI      = ["Hexchat","psi","Psi","Viber","TelegramDesktop"]
-    myXII     = ["GitKraken"]
+        myWeb     = [
+                      "Firefox"
+                    , "Opera"
+                    , "Tor Browser"
+                    , "Vivaldi-snapshot"
+                    ]
+        myMail    = [
+                      "Thunderbird"
+                    ]
+        myEdit    = [
+                      "Subl3"
+                    , "Atom"
+                    , "Meld"
+                    , "Et"
+                    , "Wps"
+                    , "Wpp"
+                    , "FoxitReader"
+                    , "Zim"
+                    , "Cherrytree"
+                    ]
+        myFile    = [
+                      "Pcmanfm"
+                    ]
+        mySystem  = [
+                      "pacmanxg"
+                    , "GParted"
+                    , "Sysinfo"
+                    , "Tk"
+                    , "Systemadm"
+                    , "Zenmap"
+                    ]
+        myVideo   = [
+                      "mpv"
+                    , "Vlc"
+                    , "Sopcast-player.py"
+                    , "Easytag"
+                    ]
+        myPic     = [
+                      "Gimp"
+                    , "Gimp-2.8"
+                    , "Inkscape"
+                    ]
+        myWork    = [
+                      "Wine"
+                    ]
+        myTorrent = [
+                      "Tixati"
+                    , "Transgui"
+                    , "Transmission-gtk"
+                    , "Transmission-remote-gtk"
+                    ]
+        myX       = [
+                      "Gitg"
+                    , "Gitk"
+                    , "SWT"
+                    ]
+        myXI      = [
+                      "Hexchat"
+                    , "psi"
+                    , "Psi"
+                    , "Viber"
+                    , "TelegramDesktop"
+                    ]
+        myXII     = [
+                      "GitKraken"
+                    ]
 
-    -- CenterFloat
-    myFloatC  = ["Xmessage","Gxmessage","XClock","Galculator","Shutter","Zenity","Nvidia-settings","Pulseaudio-equalizer.py","Gnome-alsamixer","Gsmartcontrol","feh","Gconf-editor","Dconf-editor","Font-manager","Gksu-properties"]
-    myFloatA  = ["lxappearance","xarchiver","gmrun","Update"]
-    myFloatT  = ["Software Update"]
-    myFloatR  = ["task_dialog","messages","pop-up","^conversation$","About"]
+-- CenterFloat
+        myFloatC  = [
+                      "Xmessage"
+                    , "Gxmessage"
+                    , "XClock"
+                    , "Galculator"
+                    , "Shutter"
+                    , "Zenity"
+                    , "Nvidia-settings"
+                    , "Pulseaudio-equalizer.py"
+                    , "Gnome-alsamixer"
+                    , "Gsmartcontrol"
+                    , "feh"
+                    , "Gconf-editor"
+                    , "Dconf-editor"
+                    , "Font-manager"
+                    , "Gksu-properties"
+                    ]
+        myFloatA  = [
+                      "lxappearance"
+                    , "xarchiver"
+                    , "gmrun"
+                    , "Update"
+                    ]
+        myFloatT  = [
+                      "Software Update"
+                    ]
+        myFloatR  = [
+                      "task_dialog"
+                    , "messages"
+                    , "pop-up"
+                    , "^conversation$"
+                    , "About"
+                    ]
 
 -- namedScratchpad
-mynameScratchpads = [ NS "MyPlayer"     myPlayer         (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+mynameScratchpads = [
+                      NS "MyPlayer"     myPlayer         (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                     , NS "MyHtop"       myHtop           (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
                     , NS "Gpick"        "gpick"          (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
                     , NS "Pavucontrol"  "pavucontrol"    (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
@@ -381,28 +468,31 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
 myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
 
 -- StartupHook
-myStartupHook  =  return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView (myWorkspaces !! 0) <+> spawn "XMStart" 
+myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView (myWorkspaces !! 0) <+> spawn "XMStart" 
+
+-- ManageHook
+myAllHook = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
 
 main = do
     xmproc <- spawnPipe "xmobar"
-    xmonad $  ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
-     terminal           = myTerminal
-    ,focusFollowsMouse  = myFocusFollowsMouse
-    ,borderWidth        = myBorderWidth
-    ,modMask            = myModMask
-    ,workspaces         = myWorkspaces
-    ,normalBorderColor  = myNormalBorderColor
-    ,focusedBorderColor = myFocusedBorderColor
-    ,keys               = myKeys
-    ,mouseBindings      = myMouseBindings
-    ,layoutHook         = myLayoutHook
-    ,manageHook         = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
-    ,handleEventHook    = myEventHook
-    ,logHook            = dynamicLogWithPP $ def {
-                                                   ppOutput          = System.IO.hPutStrLn xmproc
-                                                 , ppCurrent         = xmobarColor myHLColor ""
-                                                 , ppUrgent          = xmobarColor myUrgColor ""
-                                                 , ppOrder           = \(ws:l:t:_) -> [ws]
-                                                 }
-    ,startupHook        = myStartupHook 
+    xmonad $ ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
+          terminal           = myTerminal
+        , focusFollowsMouse  = myFocusFollowsMouse
+        , borderWidth        = myBorderWidth
+        , modMask            = myModMask
+        , workspaces         = myWorkspaces
+        , normalBorderColor  = myNormalBorderColor
+        , focusedBorderColor = myFocusedBorderColor
+        , keys               = myKeys
+        , mouseBindings      = myMouseBindings
+        , layoutHook         = myLayoutHook
+        , manageHook         = myAllHook
+        , handleEventHook    = myEventHook
+        , logHook            = dynamicLogWithPP $ def {
+                                                        ppOutput          = System.IO.hPutStrLn xmproc
+                                                      , ppCurrent         = xmobarColor myHLColor ""
+                                                      , ppUrgent          = xmobarColor myUrgColor ""
+                                                      , ppOrder           = \(ws:l:t:_) -> [ws]
+                                                      }
+        , startupHook        = myStartupHook 
     }
