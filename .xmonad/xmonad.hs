@@ -77,8 +77,6 @@ myQSTerminal         =  scratchpadSpawnActionTerminal myTerminal
 
 myModMask            =  mod4Mask
 myBorderWidth        =  1
-myNormalBorderColor  =  "#555555"
-myFocusedBorderColor =  myHLColor
 myHLColor            =  "#95d5f5"
 myUrgColor           =  "#ff6500"
 myBgColor            =  "#151515"
@@ -107,7 +105,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
       ((0,                         0x1008ff13),  spawn "pulseaudio-ctl up")                              --XF86AudioRaiseVolume
     , ((0,                         0x1008ff11),  spawn "pulseaudio-ctl down")                            --XF86AudioLowerVolume
     , ((0,                         0x1008ff12),  spawn "pulseaudio-ctl mute")                            --XF86AudioMute
-    -- , ((mod1Mask,                        0x60),  spawn "mpc toggle")                                     --Alt+grave
     , ((0,                         0x1008ff14),  spawn "XMMPCtoggle")                                    --XF86Play
     , ((0,                         0x1008ff15),  spawn "XMMPCstop")                                      --XF86AudioStop
     , ((0,                         0x1008ff16),  spawn "XMMPCprev")                                      --XF86AudioPrev
@@ -130,9 +127,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                             0xff61),  spawn myFullScrot)                                      --Print
     , ((0        .|. shiftMask,        0xff61),  spawn myAreaScrot)                                      --Shift+Print
     , ((mod1Mask,                      0xff61),  spawn myWindowScrot)                                    --Alt+Print
-    -- , ((mod1Mask,                        0x61),  spawn "atom-beta")                                      --Alt+A
     , ((mod1Mask,                        0x63),  spawn "cherrytree")                                     --Alt+C
-    -- , ((mod1Mask,                        0x65),  spawn "pulseaudio-equalizer-gtk")                       --Alt+E
     , ((mod1Mask,                        0x66),  spawn "firefox")                                        --Alt+F
     , ((mod1Mask,                        0x67),  spawn "gitkraken")                                      --Alt+G
     , ((mod1Mask .|. controlMask,        0x67),  spawn "gimp")                                           --Alt+Ctrl+G
@@ -141,16 +136,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x6d),  spawn "urxvtc -name mc -e mc")                          --Alt+M
     , ((mod1Mask,                        0x6e),  spawn "XMNotes-w")                                      --Alt+N
     , ((mod1Mask .|. controlMask,        0x6e),  namedScratchpadAction mynameScratchpads "MyNotes")      --Alt+Ctrl+N
-    -- , ((mod1Mask,                        0x6f),  spawn "opera12")                                        --Alt+O
-    -- , ((mod1Mask,                        0x70),  namedScratchpadAction mynameScratchpads "MyPlayer")     --Alt+P
     , ((mod1Mask,                        0x71),  namedScratchpadAction mynameScratchpads "Oblogout")     --Alt+Q
     , ((mod1Mask,                        0x72),  namedScratchpadAction mynameScratchpads "MyFM")         --Alt+R
-    -- , ((mod1Mask,                        0x73),  spawn "subl3")                                          --Alt+S
     , ((mod1Mask,                        0x74),  spawn "XMTransgui")                                     --Alt+T
     , ((mod1Mask,                        0x76),  spawn myEditor)                                         --Alt+V
-    -- , ((mod1Mask,                        0x77),  spawn "GWeather")                                       --Alt+W
     , ((mod1Mask,                        0x79),  spawn "XMYaourt")                                       --Alt+Y
-    -- , ((mod1Mask,                        0x7a),  spawn "zim")                                            --Alt+Z
     , ((modm     .|. shiftMask,        0xff0d),  spawn $ XMonad.terminal conf)                           --Mod4+Shift+Return
 
     --Recompile & restart
@@ -181,8 +171,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm     .|. shiftMask,          0x68),  sendMessage MirrorShrink)                               --Mod4+Shift+H
     , ((modm,                            0x6c),  sendMessage Expand)                                     --Mod4+L
     , ((modm     .|. shiftMask,          0x6c),  sendMessage MirrorExpand)                               --Mod4+Shift+L
-    -- , ((modm,                            0x75),  sendMessage ShrinkSlave)                                --Mod4+U
-    -- , ((modm,                            0x69),  sendMessage ExpandSlave)                                --Mod4+I
     , ((modm,                            0x74),  withFocused $ windows . W.sink)                         --Mod4+T
     , ((modm,                            0x2c),  sendMessage (IncMasterN 1))                             --Mod4+Comma
     , ((modm,                            0x2e),  sendMessage (IncMasterN (-1)))                          --Mod4+Period
@@ -219,7 +207,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask .|. controlMask,        0x31), spawn "XMVnstat-h & XMVnstat")                           --Alt+Ctrl+1
     , ((mod1Mask,                        0x32), spawn "XMTrafState")                                     --Alt+2
     , ((mod1Mask .|. controlMask,        0x32), spawn "XMVnstat-d")                                      --Alt+Ctrl+2
-    -- , ((mod1Mask .|. shiftMask,          0x32), spawn "XMVnstat-m")                                      --Alt+Shift+2
     , ((mod1Mask,                        0x33), spawn "XMCPUState")                                      --Alt+3
     , ((mod1Mask .|. controlMask,        0x33), spawn "XMTop-cpu")                                       --Alt+Ctrl+3
     , ((mod1Mask,                        0x34), spawn "XMTempState")                                     --Alt+4
@@ -474,7 +461,7 @@ myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+>
 myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView (myWorkspaces !! 0) <+> spawn "XMStart" 
 
 -- ManageHook
-myAllHook = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
+myAllManageHook = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
 
 main = do
     xmproc <- spawnPipe "xmobar"
@@ -484,12 +471,12 @@ main = do
         , borderWidth        = myBorderWidth
         , modMask            = myModMask
         , workspaces         = myWorkspaces
-        , normalBorderColor  = myNormalBorderColor
-        , focusedBorderColor = myFocusedBorderColor
+        , normalBorderColor  = myBgColor
+        , focusedBorderColor = myHLColor
         , keys               = myKeys
         , mouseBindings      = myMouseBindings
         , layoutHook         = myLayoutHook
-        , manageHook         = myAllHook
+        , manageHook         = myAllManageHook
         , handleEventHook    = myEventHook
         , logHook            = dynamicLogWithPP $ def {
                                                         ppOutput          = System.IO.hPutStrLn xmproc
