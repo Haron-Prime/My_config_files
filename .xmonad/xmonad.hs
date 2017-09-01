@@ -334,32 +334,32 @@ myManageHook = composeAll . concat $
                       "Thunderbird"
                     ]
         myEdit    = [
-                      "Subl3"
-                    , "Atom"
-                    , "Meld"
+                      "Atom"
+                    , "Cherrytree"
                     , "Et"
+                    , "FoxitReader"
+                    , "Meld"
+                    , "Subl3"
                     , "Wps"
                     , "Wpp"
-                    , "FoxitReader"
                     , "Zim"
-                    , "Cherrytree"
                     ]
         myFile    = [
                       "Pcmanfm"
                     ]
         mySystem  = [
-                      "pacmanxg"
-                    , "GParted"
+                      "GParted"
+                    , "pacmanxg"
                     , "Sysinfo"
-                    , "Tk"
                     , "Systemadm"
+                    , "Tk"
                     , "Zenmap"
                     ]
         myVideo   = [
-                      "mpv"
-                    , "Vlc"
+                      "Easytag"
+                    , "mpv"
                     , "Sopcast-player.py"
-                    , "Easytag"
+                    , "Vlc"
                     ]
         myPic     = [
                       "Gimp"
@@ -384,8 +384,8 @@ myManageHook = composeAll . concat $
                       "Hexchat"
                     , "psi"
                     , "Psi"
-                    , "Viber"
                     , "TelegramDesktop"
+                    , "Viber"
                     ]
         myXII     = [
                       "GitKraken"
