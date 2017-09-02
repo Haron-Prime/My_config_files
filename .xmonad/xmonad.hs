@@ -465,7 +465,8 @@ myAllManageHook = manageHook def <+> myManageHook <+> manageScratchPad <+> named
 
 main = do
     xmproc <- spawnPipe "xmobar"
-    xmonad $ ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def {
+    xmonad $ ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def 
+        {
           terminal           = myTerminal
         , focusFollowsMouse  = myFocusFollowsMouse
         , borderWidth        = myBorderWidth
@@ -485,4 +486,4 @@ main = do
                                                       , ppOrder           = \(ws:l:t:_) -> [ws]
                                                       }
         , startupHook        = myStartupHook 
-    }
+        }
