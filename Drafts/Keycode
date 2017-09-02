@@ -101,3 +101,23 @@ keycode     114     (keysym 0xff53,     Right)
 keycode     113     (keysym 0xff51,     Left)
 keycode     111     (keysym 0xff52,     Up)
 keycode     116     (keysym 0xff54,     Down)
+
+Numpud
+
+keycode     90      (keysym 0xffb0,     KP_0)
+keycode     87      (keysym 0xffb1,     KP_1)
+keycode     88      (keysym 0xffb2,     KP_2)
+keycode     89      (keysym 0xffb3,     KP_3)
+keycode     83      (keysym 0xffb4,     KP_4)
+keycode     84      (keysym 0xffb5,     KP_5)
+keycode     85      (keysym 0xffb6,     KP_6)
+keycode     79      (keysym 0xffb7,     KP_7)
+keycode     80      (keysym 0xffb8,     KP_8)
+keycode     81      (keysym 0xffb9,     KP_9)
+keycode     91      (keysym 0xffae,     KP_Decimal) XKeysymToKeycode returns keycode: 129
+keycode     104     (keysym 0xff8d,     KP_Enter)
+keycode     86      (keysym 0xffab,     KP_Add)
+keycode     82      (keysym 0xffad,     KP_Subtract)
+keycode     63      (keysym 0xffaa,     KP_Multiply)
+keycode     106     (keysym 0xffaf,     KP_Divide)
+keycode     77      (keysym 0xff7f,     Num_Lock)
