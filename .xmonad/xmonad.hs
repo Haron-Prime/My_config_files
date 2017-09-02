@@ -127,7 +127,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                             0xff61),  spawn myFullScrot)                                      --Print
     , ((0        .|. shiftMask,        0xff61),  spawn myAreaScrot)                                      --Shift+Print
     , ((mod1Mask,                      0xff61),  spawn myWindowScrot)                                    --Alt+Print
-    , ((mod1Mask,                        0x63),  spawn "cherrytree")                                     --Alt+C
+    , ((mod1Mask,                        0x63),  spawn "chromium")                                       --Alt+C
     , ((mod1Mask,                        0x66),  spawn "firefox")                                        --Alt+F
     , ((mod1Mask,                        0x67),  spawn "gitkraken")                                      --Alt+G
     , ((mod1Mask .|. controlMask,        0x67),  spawn "gimp")                                           --Alt+Ctrl+G

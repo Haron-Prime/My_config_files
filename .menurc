@@ -8,6 +8,10 @@ submenu = Network
     cmd  = vivaldi-snapshot
     icon = /usr/share/icons/hicolor/24x24/apps/vivaldi-snapshot.png
 
+    item = Chromium
+    cmd  = firefox
+    icon = /usr/share/icons/nouveGnomeGray/24x24/apps/chromium.png
+
     item = Firefox
     cmd  = firefox
     icon = /usr/share/icons/nouveGnomeGray/24x24/apps/firefox.png
