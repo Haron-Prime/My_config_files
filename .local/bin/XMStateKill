@@ -13,7 +13,6 @@ kill $(ps aux | grep XMUptime      | grep -v XMUptimeState | grep -v grep | awk 
 kill $(ps aux | grep XMVolNew                              | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMPlay                                | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMDate        | grep -v XMDateState   | grep -v grep | awk '{print $2}') &
-echo > /tmp/haron/CT &
 echo > /tmp/haron/CU &
 echo > /tmp/haron/DO &
 echo > /tmp/haron/MEM &
