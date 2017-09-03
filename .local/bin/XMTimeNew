@@ -2,7 +2,7 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-while [[ true ]]; do
+while true; do
     echo `date "+%H:%M:%S"` > /tmp/haron/TIME
     sleep 1
 done
