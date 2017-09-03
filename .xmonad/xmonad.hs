@@ -4,6 +4,7 @@
 -- Base
 import XMonad hiding ( (|||) )
 import Control.Monad (liftM2, filterM)
+import Data.List
 import Data.Ratio ((%))
 import Foreign.C (CChar)
 import Graphics.X11.Xlib
@@ -39,8 +40,6 @@ import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Spacing
 import XMonad.Layout.Master
 import XMonad.Layout.Minimize
-import XMonad.Layout.FixedColumn
-import XMonad.Layout.Grid
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.WindowNavigation
 import qualified XMonad.Layout.ToggleLayouts as Tog
@@ -85,13 +84,8 @@ myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=tru
 myMonospaceFont      =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
 
-myGL                 =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
-myFCL                =  windowNavigation (spacing 1 $ FixedColumn 1 20 80 10)
-myRTL1               =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
-myRTL2               =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
-myMRTL1              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
-myMRTL2              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
-myBL                 =  myRTL1 ||| myRTL2 ||| myMRTL1 ||| myMRTL2 ||| Full
+myRTL                =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
+myMRTL               =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
 
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
@@ -255,19 +249,7 @@ myLayoutHook =  avoidStruts
                 $ minimize
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
-                $ onWorkspace  (myWorkspaces !! 0)  (Full    ||| myRTL1  ||| myMRTL1)
-                $ onWorkspace  (myWorkspaces !! 1)  (myRTL1  ||| myMRTL1 ||| Full)
-                $ onWorkspace  (myWorkspaces !! 2)  (myMRTL1 ||| myRTL1  ||| Full) 
-                $ onWorkspace  (myWorkspaces !! 3)  (myMRTL1 ||| myRTL1  ||| Full)
-                $ onWorkspace  (myWorkspaces !! 4)  (myMRTL1 ||| myRTL1  ||| Full)
-                $ onWorkspace  (myWorkspaces !! 5)  (Full    ||| myRTL1  ||| myMRTL1)
-                $ onWorkspace  (myWorkspaces !! 6)  (myMRTL1 ||| myRTL1  ||| Full)
-                $ onWorkspace  (myWorkspaces !! 7)  (myGL    ||| myRTL1  ||| myFCL)
-                $ onWorkspace  (myWorkspaces !! 8)  (myRTL1  ||| myMRTL1 ||| Full)
-                $ onWorkspace  (myWorkspaces !! 9)  (myRTL1  ||| myMRTL1 ||| myGL ||| myFCL)
-                $ onWorkspace  (myWorkspaces !! 10) (myGL    ||| myFCL)
-                $ onWorkspace  (myWorkspaces !! 11) (myMRTL1 ||| myRTL1)
-                $ myBL
+                $ myRTL ||| myMRTL ||| Full
 
 -- Prompts
 myPromptConfig = def {
