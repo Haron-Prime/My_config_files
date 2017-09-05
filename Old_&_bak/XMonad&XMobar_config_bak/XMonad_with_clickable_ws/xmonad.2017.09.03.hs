@@ -367,7 +367,7 @@ myManageHook = composeAll . concat $
                     , "psi"
                     , "Psi"
                     , "TelegramDesktop"
-                    , "ViberPC"
+                    , "Viber"
                     ]
         myXII     = [
                       "GitKraken"
