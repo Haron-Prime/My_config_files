@@ -40,6 +40,8 @@ import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Spacing
 import XMonad.Layout.Master
 import XMonad.Layout.Minimize
+import XMonad.Layout.FixedColumn
+import XMonad.Layout.Grid
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.WindowNavigation
 import qualified XMonad.Layout.ToggleLayouts as Tog
@@ -84,8 +86,22 @@ myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=tru
 myMonospaceFont      =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
 
-myRTL                =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
-myMRTL               =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
+myRTL1               =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
+myRTL2               =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
+myMRTL1              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
+myMRTL2              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
+-- myFCL                =  windowNavigation (spacing 1 $ FixedColumn 1 20 80 10)
+myGL                 =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
+
+myWL                 =  Full     |||  myRTL1   ||| myMRTL1
+myML                 =  Full     |||  myRTL1
+myEL                 =  myMRTL1  |||  Full     ||| myRTL2
+myFL                 =  Full     |||  myGL
+mySL                 =  myRTL1   |||  myMRTL1  ||| Full
+myPL                 =  Full     |||  myGL
+myVL                 =  Full     |||  myRTL2
+myJL                 =  Full     |||  myRTL2
+myTL                 =  Full     |||  myMRTL1
 
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
@@ -250,7 +266,16 @@ myLayoutHook =  avoidStruts
                 $ minimize
                 $ Tog.toggleLayouts (noBorders Full) 
                 $ smartBorders
-                $ myRTL ||| myMRTL ||| Full
+                $ onWorkspace (myWorkspaces !! 0) myWL
+                $ onWorkspace (myWorkspaces !! 1) myML
+                $ onWorkspace (myWorkspaces !! 2) myEL
+                $ onWorkspace (myWorkspaces !! 3) myFL
+                $ onWorkspace (myWorkspaces !! 4) mySL
+                $ onWorkspace (myWorkspaces !! 5) myVL
+                $ onWorkspace (myWorkspaces !! 6) myPL
+                $ onWorkspace (myWorkspaces !! 7) myJL
+                $ onWorkspace (myWorkspaces !! 8) myTL
+                $ myRTL1 ||| myMRTL1 ||| Full
 
 -- Prompts
 myPromptConfig = def {
@@ -470,5 +495,5 @@ main = do
                                                       , ppUrgent          = xmobarColor myUrgColor ""
                                                       , ppOrder           = \(ws:l:t:_) -> [ws]
                                                       }
-        , startupHook        = myStartupHook 
+        , startupHook        = myStartupHook
         }
