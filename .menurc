@@ -9,8 +9,12 @@ submenu = Network
     icon = /usr/share/icons/hicolor/24x24/apps/vivaldi-snapshot.png
 
     item = Chromium
-    cmd  = firefox
+    cmd  = chromium
     icon = /usr/share/icons/nouveGnomeGray/24x24/apps/chromium.png
+
+    item = Opera-developer
+    cmd  = opera-developer
+    icon = /usr/share/icons/nouveKDEGray/32x32/apps/opera.png
 
     item = Firefox
     cmd  = firefox

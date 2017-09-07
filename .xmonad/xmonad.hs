@@ -129,6 +129,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((mod1Mask,                        0x6c),  spawn "XMLPass")                                        --Alt+L
     , ((mod1Mask,                        0x6d),  spawn "urxvtc -name mc -e mc")                          --Alt+M
     , ((mod1Mask,                        0x6e),  spawn "XMNotes-w")                                      --Alt+N
+    , ((mod1Mask,                        0x6f),  spawn "opera-developer")                                --Alt+O
     , ((mod1Mask .|. controlMask,        0x6e),  namedScratchpadAction mynameScratchpads "MyNotes")      --Alt+Ctrl+N
     , ((mod1Mask,                        0x71),  namedScratchpadAction mynameScratchpads "Oblogout")     --Alt+Q
     , ((mod1Mask,                        0x72),  namedScratchpadAction mynameScratchpads "MyFM")         --Alt+R
