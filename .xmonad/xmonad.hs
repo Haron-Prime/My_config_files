@@ -40,7 +40,6 @@ import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Spacing
 import XMonad.Layout.Master
 import XMonad.Layout.Minimize
-import XMonad.Layout.FixedColumn
 import XMonad.Layout.Grid
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.WindowNavigation
@@ -90,7 +89,6 @@ myRTL1               =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1
 myRTL2               =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
 myMRTL1              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
 myMRTL2              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
--- myFCL                =  windowNavigation (spacing 1 $ FixedColumn 1 20 80 10)
 myGL                 =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 
 myWL                 =  Full     |||  myRTL1   ||| myMRTL1
