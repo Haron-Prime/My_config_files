@@ -309,7 +309,9 @@ myManageHook = composeAll . concat $
     where
         myWeb     = [
                       "Firefox"
+                    , "Chromium"
                     , "Opera"
+                    , "Opera developer"
                     , "Tor Browser"
                     , "Vivaldi-snapshot"
                     ]
