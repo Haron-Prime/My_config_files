@@ -308,10 +308,10 @@ myWindowsRules = composeAll . concat $
     , [className =? c                     --> doShift (myWorkspaces !! 10)  <+> viewShift (myWorkspaces !! 10)  | c <- myXI]
     , [className =? c                     --> doShift (myWorkspaces !! 11)  <+> viewShift (myWorkspaces !! 11)  | c <- myXII]
 
-    , [className =? c                     --> doCenterFloat                                                     | c <- myFloatC]
-    , [appName   =? a                     --> doCenterFloat                                                     | a <- myFloatA]
-    , [title     =? t                     --> doCenterFloat                                                     | t <- myFloatT]
-    , [role      =? r                     --> doCenterFloat                                                     | r <- myFloatR]
+    , [className =? c                     --> doCenterFloat                                                     | c <- myFC]
+    , [appName   =? a                     --> doCenterFloat                                                     | a <- myFA]
+    , [title     =? t                     --> doCenterFloat                                                     | t <- myFT]
+    , [role      =? r                     --> doCenterFloat                                                     | r <- myFR]
 
     , [currentWs =? (myWorkspaces !! 0)   --> insertPosition Below Newer]
     , [currentWs =? (myWorkspaces !! 1)   --> insertPosition Below Newer]
@@ -402,41 +402,40 @@ myWindowsRules = composeAll . concat $
         myXII = [
                   "GitKraken"
                 ]
-
 -- CenterFloat
-        myFloatC  = [
-                      "Xmessage"
-                    , "Gxmessage"
-                    , "XClock"
-                    , "Galculator"
-                    , "Shutter"
-                    , "Zenity"
-                    , "Nvidia-settings"
-                    , "Pulseaudio-equalizer.py"
-                    , "Gnome-alsamixer"
-                    , "Gsmartcontrol"
-                    , "feh"
-                    , "Gconf-editor"
-                    , "Dconf-editor"
-                    , "Font-manager"
-                    , "Gksu-properties"
-                    ]
-        myFloatA  = [
-                      "lxappearance"
-                    , "xarchiver"
-                    , "gmrun"
-                    , "Update"
-                    ]
-        myFloatT  = [
-                      "Software Update"
-                    ]
-        myFloatR  = [
-                      "task_dialog"
-                    , "messages"
-                    , "pop-up"
-                    , "^conversation$"
-                    , "About"
-                    ]
+        myFC  = [
+                  "Xmessage"
+                , "Gxmessage"
+                , "XClock"
+                , "Galculator"
+                , "Shutter"
+                , "Zenity"
+                , "Nvidia-settings"
+                , "Pulseaudio-equalizer.py"
+                , "Gnome-alsamixer"
+                , "Gsmartcontrol"
+                , "feh"
+                , "Gconf-editor"
+                , "Dconf-editor"
+                , "Font-manager"
+                , "Gksu-properties"
+                ]
+        myFA  = [
+                  "lxappearance"
+                , "xarchiver"
+                , "gmrun"
+                , "Update"
+                ]
+        myFT  = [
+                  "Software Update"
+                ]
+        myFR  = [
+                  "task_dialog"
+                , "messages"
+                , "pop-up"
+                , "^conversation$"
+                , "About"
+                ]
 
 -- NamedScratchpad
 mynameScratchpads = [
