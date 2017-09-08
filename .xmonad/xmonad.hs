@@ -259,7 +259,7 @@ myWorkspaces = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", 
                         let n = i 
                         ]
 
--- Layouts:
+-- Layouts
 myLayoutHook =  avoidStruts
                 $ minimize
                 $ Tog.toggleLayouts (noBorders Full) 
@@ -289,18 +289,21 @@ myPromptConfig = def {
                      , historySize       = 100
                      }
 
--- Windows rules:
-myManageHook = composeAll . concat $
+-- ManageHook
+myManageHook = manageHook def <+> myWindowsRules <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
+
+-- Windows rules
+myWindowsRules = composeAll . concat $
     [ 
-      [className =? c                     --> doShift (myWorkspaces !! 0)   <+> viewShift (myWorkspaces !! 0)   | c <- myWeb]
-    , [className =? c                     --> doShift (myWorkspaces !! 1)                                       | c <- myMail]
-    , [className =? c                     --> doShift (myWorkspaces !! 2)   <+> viewShift (myWorkspaces !! 2)   | c <- myEdit]
-    , [className =? c                     --> doShift (myWorkspaces !! 3)   <+> viewShift (myWorkspaces !! 3)   | c <- myFile]
-    , [className =? c                     --> doShift (myWorkspaces !! 4)   <+> viewShift (myWorkspaces !! 4)   | c <- mySystem]
-    , [className =? c                     --> doShift (myWorkspaces !! 5)   <+> viewShift (myWorkspaces !! 5)   | c <- myVideo]
-    , [className =? c                     --> doShift (myWorkspaces !! 6)   <+> viewShift (myWorkspaces !! 6)   | c <- myPic]
-    , [className =? c                     --> doShift (myWorkspaces !! 7)   <+> viewShift (myWorkspaces !! 7)   | c <- myWork]
-    , [className =? c                     --> doShift (myWorkspaces !! 8)   <+> viewShift (myWorkspaces !! 8)   | c <- myTorrent]
+      [className =? c                     --> doShift (myWorkspaces !! 0)   <+> viewShift (myWorkspaces !! 0)   | c <- myW]
+    , [className =? c                     --> doShift (myWorkspaces !! 1)                                       | c <- myM]
+    , [className =? c                     --> doShift (myWorkspaces !! 2)   <+> viewShift (myWorkspaces !! 2)   | c <- myE]
+    , [className =? c                     --> doShift (myWorkspaces !! 3)   <+> viewShift (myWorkspaces !! 3)   | c <- myF]
+    , [className =? c                     --> doShift (myWorkspaces !! 4)   <+> viewShift (myWorkspaces !! 4)   | c <- myS]
+    , [className =? c                     --> doShift (myWorkspaces !! 5)   <+> viewShift (myWorkspaces !! 5)   | c <- myV]
+    , [className =? c                     --> doShift (myWorkspaces !! 6)   <+> viewShift (myWorkspaces !! 6)   | c <- myP]
+    , [className =? c                     --> doShift (myWorkspaces !! 7)   <+> viewShift (myWorkspaces !! 7)   | c <- myJ]
+    , [className =? c                     --> doShift (myWorkspaces !! 8)   <+> viewShift (myWorkspaces !! 8)   | c <- myT]
     , [className =? c                     --> doShift (myWorkspaces !! 9)                                       | c <- myX]
     , [className =? c                     --> doShift (myWorkspaces !! 10)  <+> viewShift (myWorkspaces !! 10)  | c <- myXI]
     , [className =? c                     --> doShift (myWorkspaces !! 11)  <+> viewShift (myWorkspaces !! 11)  | c <- myXII]
@@ -312,10 +315,11 @@ myManageHook = composeAll . concat $
 
     , [currentWs =? (myWorkspaces !! 0)   --> insertPosition Below Newer]
     , [currentWs =? (myWorkspaces !! 1)   --> insertPosition Below Newer]
-    , [currentWs =? (myWorkspaces !! 2)   --> insertPosition Below Newer]
     , [currentWs =? (myWorkspaces !! 8)   --> insertPosition Below Newer]
-    , [currentWs =? (myWorkspaces !! 9)   --> insertPosition Below Newer]
-    , [currentWs =? (myWorkspaces !! 11)  --> insertPosition Below Newer]
+
+    , [currentWs =? (myWorkspaces !! 2)   --> insertPosition End Newer]
+    , [currentWs =? (myWorkspaces !! 9)   --> insertPosition End Newer]
+    , [currentWs =? (myWorkspaces !! 11)  --> insertPosition End Newer]
 
     , [className =? "Gis-weather.py"      --> doIgnore]
     , [resource  =? "stalonetray"         --> doIgnore]
@@ -330,74 +334,74 @@ myManageHook = composeAll . concat $
 
     ]
     where
-        myWeb     = [
-                      "Firefox"
-                    , "Chromium"
-                    , "Opera"
-                    , "Opera developer"
-                    , "Tor Browser"
-                    , "Vivaldi-snapshot"
-                    ]
-        myMail    = [
-                      "Thunderbird"
-                    ]
-        myEdit    = [
-                      "Atom"
-                    , "Cherrytree"
-                    , "Et"
-                    , "FoxitReader"
-                    , "Meld"
-                    , "Subl3"
-                    , "Wps"
-                    , "Wpp"
-                    , "Zim"
-                    ]
-        myFile    = [
-                      "Pcmanfm"
-                    ]
-        mySystem  = [
-                      "GParted"
-                    , "pacmanxg"
-                    , "Sysinfo"
-                    , "Systemadm"
-                    , "Tk"
-                    , "Zenmap"
-                    ]
-        myVideo   = [
-                      "Easytag"
-                    , "mpv"
-                    , "Sopcast-player.py"
-                    , "Vlc"
-                    ]
-        myPic     = [
-                      "Gimp"
-                    , "Gimp-2.8"
-                    , "Inkscape"
-                    ]
-        myWork    = [
-                      "Wine"
-                    ]
-        myTorrent = [
-                      "Tixati"
-                    , "Transgui"
-                    , "Transmission-gtk"
-                    , "Transmission-remote-gtk"
-                    ]
-        myX       = [
-                      "Gitg"
-                    , "Gitk"
-                    , "SWT"
-                    ]
-        myXI      = [
-                      "Hexchat"
-                    , "psi"
-                    , "Psi"
-                    , "TelegramDesktop"
-                    , "ViberPC"
-                    ]
-        myXII     = [
-                      "GitKraken"
-                    ]
+        myW   = [
+                  "Firefox"
+                , "Chromium"
+                , "Opera"
+                , "Opera developer"
+                , "Tor Browser"
+                , "Vivaldi-snapshot"
+                ]
+        myM   = [
+                  "Thunderbird"
+                ]
+        myE   = [
+                  "Atom"
+                , "Cherrytree"
+                , "Et"
+                , "FoxitReader"
+                , "Meld"
+                , "Subl3"
+                , "Wps"
+                , "Wpp"
+                , "Zim"
+                ]
+        myF   = [
+                  "Pcmanfm"
+                ]
+        myS   = [
+                  "GParted"
+                , "pacmanxg"
+                , "Sysinfo"
+                , "Systemadm"
+                , "Tk"
+                , "Zenmap"
+                ]
+        myV   = [
+                  "Easytag"
+                , "mpv"
+                , "Sopcast-player.py"
+                , "Vlc"
+                ]
+        myP   = [
+                  "Gimp"
+                , "Gimp-2.8"
+                , "Inkscape"
+                ]
+        myJ   = [
+                  "Wine"
+                ]
+        myT   = [
+                  "Tixati"
+                , "Transgui"
+                , "Transmission-gtk"
+                , "Transmission-remote-gtk"
+                ]
+        myX   = [
+                  "Gitg"
+                , "Gitk"
+                , "SWT"
+                ]
+        myXI  = [
+                  "Hexchat"
+                , "psi"
+                , "Psi"
+                , "TelegramDesktop"
+                , "ViberPC"
+                ]
+        myXII = [
+                  "GitKraken"
+                ]
 
 -- CenterFloat
         myFloatC  = [
@@ -434,7 +438,7 @@ myManageHook = composeAll . concat $
                     , "About"
                     ]
 
--- namedScratchpad
+-- NamedScratchpad
 mynameScratchpads = [
                       NS "MyPlayer"     myPlayer         (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
                     , NS "MyHtop"       myHtop           (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
@@ -452,9 +456,10 @@ mynameScratchpads = [
                     , NS "Organizer"    "Organizer"      (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     , NS "Msgcompose"   "Msgcompose"     (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     , NS "addressbook"  "addressbook"    (role       =? "addressbook")  (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+                    , NS "filterlist"   "filterlist"     (role       =? "filterlist")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
                     ]
 
--- Scratchpad                       
+-- Scratchpad (myQSTerminal)
 manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     where
         h = 0.333   -- terminal height
@@ -463,13 +468,10 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
         l = 1 - w   -- distance from left edge
 
 -- Event handling
-myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> focusOnMouseMove <+> ewmhDesktopsEventHook
+myEventHook = handleEventHook def <+> fullscreenEventHook <+> docksEventHook <+> ewmhDesktopsEventHook <+> focusOnMouseMove
 
 -- StartupHook
 myStartupHook = return () <+> adjustEventInput <+> setWMName "LG3D" <+> onScr 1 W.greedyView (myWorkspaces !! 0) <+> spawn "XMStart" 
-
--- ManageHook
-myAllManageHook = manageHook def <+> myManageHook <+> manageScratchPad <+> namedScratchpadManageHook mynameScratchpads <+> placeHook (smart (0.5,0.5)) <+> workspaceByPos
 
 main = do
     xmproc <- spawnPipe "xmobar"
@@ -485,7 +487,7 @@ main = do
         , keys               = myKeys
         , mouseBindings      = myMouseBindings
         , layoutHook         = myLayoutHook
-        , manageHook         = myAllManageHook
+        , manageHook         = myManageHook
         , handleEventHook    = myEventHook
         , logHook            = dynamicLogWithPP $ def {
                                                         ppOutput          = System.IO.hPutStrLn xmproc
