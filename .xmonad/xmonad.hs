@@ -337,6 +337,7 @@ myWindowsRules = composeAll . concat $
         myW   = [
                   "Firefox"
                 , "Chromium"
+                , "Icecat"
                 , "Opera"
                 , "Opera developer"
                 , "Tor Browser"
