@@ -11,7 +11,7 @@ if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
 fi
 
 /usr/bin/xdg-user-dirs-update &
-setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp grp_led:scroll &
+# setxkbmap -layout us,ru -variant -option grp:caps_toggle,terminate:ctrl_alt_bksp grp_led:scroll &
 xsetroot -cursor_name left_ptr &
 # xset -dpms &
 xset m 5/2 0 &
