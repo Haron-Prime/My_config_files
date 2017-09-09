@@ -34,14 +34,14 @@ import XMonad.Hooks.XPropManage
 import XMonad.Hooks.UrgencyHook hiding (Never)
 
 -- Layouts
+import XMonad.Layout.Grid
 import XMonad.Layout.LayoutCombinators ((|||))
-import XMonad.Layout.NoBorders
-import XMonad.Layout.PerWorkspace
-import XMonad.Layout.Spacing
 import XMonad.Layout.Master
 import XMonad.Layout.Minimize
-import XMonad.Layout.Grid
+import XMonad.Layout.NoBorders
+import XMonad.Layout.PerWorkspace
 import XMonad.Layout.ResizableTile
+import XMonad.Layout.Spacing
 import XMonad.Layout.WindowNavigation
 import qualified XMonad.Layout.ToggleLayouts as Tog
 
@@ -52,12 +52,13 @@ import XMonad.Prompt.RunOrRaise
 import XMonad.Prompt.Ssh
 
 -- Utils
-import XMonad.Util.Scratchpad
 import XMonad.Util.NamedScratchpad
+import XMonad.Util.Scratchpad
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
 
 -- myOptions
+-- Applications
 myBrowser            =  "vivaldi-snapshot"
 browserClass         =  "Vivaldi-snapshot"
 myTerminal           =  "urxvtc"
@@ -74,7 +75,7 @@ myWindowScrot        =  "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/de
 myAppMenu            =  "mygtkmenu .menurc"
 myPlaceMenu          =  "mygtkmenu .placerc"
 myQSTerminal         =  scratchpadSpawnActionTerminal myTerminal
-
+-- Decorations
 myModMask            =  mod4Mask
 myBorderWidth        =  1
 myHLColor            =  "#95d5f5"
@@ -84,7 +85,7 @@ myFgColor            =  "#959595"
 myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 myMonospaceFont      =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
 myFocusFollowsMouse  =  True
-
+-- Layouts combinations
 myRTL1               =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
 myRTL2               =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
 myMRTL1              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
@@ -100,7 +101,7 @@ myPL                 =  Full     |||  myGL
 myVL                 =  Full     |||  myRTL2
 myJL                 =  Full     |||  myRTL2
 myTL                 =  Full     |||  myMRTL1
-
+-- Other options
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
@@ -273,7 +274,7 @@ myLayoutHook =  avoidStruts
                 $ onWorkspace (myWorkspaces !! 6) myPL
                 $ onWorkspace (myWorkspaces !! 7) myJL
                 $ onWorkspace (myWorkspaces !! 8) myTL
-                $ myRTL1 ||| myMRTL1 ||| Full
+                $ myRTL1 ||| myMRTL1 ||| myGL ||| Full
 
 -- Prompts
 myPromptConfig = def {
@@ -334,6 +335,7 @@ myWindowsRules = composeAll . concat $
 
     ]
     where
+-- Application groups attached to workspaces
         myW   = [
                   "Firefox"
                 , "Chromium"
@@ -403,39 +405,37 @@ myWindowsRules = composeAll . concat $
         myXII = [
                   "GitKraken"
                 ]
--- CenterFloat
+-- Application groups in floating windows (CenterFloat)
         myFC  = [
-                  "Xmessage"
-                , "Gxmessage"
-                , "XClock"
+                  "Dconf-editor"
+                , "feh"
+                , "Font-manager"
                 , "Galculator"
-                , "Shutter"
-                , "Zenity"
-                , "Nvidia-settings"
-                , "Pulseaudio-equalizer.py"
+                , "Gconf-editor"
+                , "Gksu-properties"
                 , "Gnome-alsamixer"
                 , "Gsmartcontrol"
-                , "feh"
-                , "Gconf-editor"
-                , "Dconf-editor"
-                , "Font-manager"
-                , "Gksu-properties"
+                , "Gxmessage"
+                , "Pulseaudio-equalizer.py"
+                , "XClock"
+                , "Xmessage"
+                , "Zenity"
                 ]
         myFA  = [
-                  "lxappearance"
-                , "xarchiver"
-                , "gmrun"
+                  "gmrun"
+                , "lxappearance"
                 , "Update"
+                , "xarchiver"
                 ]
         myFT  = [
                   "Software Update"
                 ]
         myFR  = [
-                  "task_dialog"
+                  "About"
                 , "messages"
                 , "pop-up"
+                , "task_dialog"
                 , "^conversation$"
-                , "About"
                 ]
 
 -- NamedScratchpad
