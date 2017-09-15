@@ -76,7 +76,6 @@ myAppMenu            =  "mygtkmenu .menurc"
 myPlaceMenu          =  "mygtkmenu .placerc"
 myQSTerminal         =  scratchpadSpawnActionTerminal myTerminal
 -- Decorations
-myModMask            =  mod4Mask
 myBorderWidth        =  1
 myHLColor            =  "#95d5f5"
 myUrgColor           =  "#ff6500"
@@ -91,7 +90,7 @@ myRTL2               =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2
 myMRTL1              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
 myMRTL2              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
 myGL                 =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
-
+--
 myWL                 =  Full     |||  myRTL1   ||| myMRTL1
 myML                 =  Full     |||  myRTL1
 myEL                 =  myMRTL1  |||  Full     ||| myRTL2
@@ -102,6 +101,7 @@ myVL                 =  Full     |||  myRTL2
 myJL                 =  Full     |||  myRTL2
 myTL                 =  Full     |||  myMRTL1
 -- Other options
+myModMask            =  mod4Mask
 role                 =  stringProperty "WM_WINDOW_ROLE"
 encodeCChar          =  map fromIntegral . B.unpack
 onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
@@ -501,6 +501,7 @@ main = do
         , focusedBorderColor = myHLColor
         , keys               = myKeys
         , mouseBindings      = myMouseBindings
+        , startupHook        = myStartupHook
         , layoutHook         = myLayoutHook
         , manageHook         = myManageHook
         , handleEventHook    = myEventHook
@@ -510,5 +511,4 @@ main = do
                                                       , ppUrgent  = xmobarColor myUrgColor ""
                                                       , ppOrder   = \(ws:l:t:_) -> [ws]
                                                       }
-        , startupHook        = myStartupHook
         }
