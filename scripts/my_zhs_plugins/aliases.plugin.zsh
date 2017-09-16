@@ -64,6 +64,8 @@ alias pacfs='pacman -Qo'
 
 alias sv='s -b vivaldi-snapshot'
 
+alias weather='curl -H "Accept-Language: ru" wttr.in'
+
 alias mcf='cd $HOME/git/My_config_files'
 alias bb='cd $HOME/git/BitBuket/My_config_files'
 alias gl='cd $HOME/git/GitLab/My_config_files'
