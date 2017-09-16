@@ -138,6 +138,9 @@
 			"path": "/home/haron/.config/awesome"
 		},
 		{
+			"path": "/home/haron"
+		},
+		{
 			"path": "/etc/skel"
 		}
 	],
