@@ -56,6 +56,8 @@ alias scast='ffmpeg -f x11grab -s 1920x1080 -r 25 -i :0.0 -vcodec libx264 -b 700
 alias gzip='tar -cvzf'
 alias bzip='tar -cvjf'
 
+alias crypt='gpg -c --cipher-algo AES256'
+
 alias cclean='yaourt -Sc'
 alias pclean='sudo pacman -Rns $(pacman -Qtdq)'
 # alias pacfs='pacman -Fs'
