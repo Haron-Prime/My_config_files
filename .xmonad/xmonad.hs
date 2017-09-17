@@ -59,60 +59,60 @@ import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
 
 -- myOptions
 -- Applications
-myBrowser            =  spawn "vivaldi-snapshot"
-browserClass         =  "Vivaldi-snapshot"
-myTerminal           =  "urxvtc"
-terminalClass        =  "URxvt"
-myShell              =  "zsh"
-myFM                 =  "urxvtc -name ranger -e ranger"
-myNotes              =  "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree"
-myHtop               =  "urxvtc -name htop -e htop"
-myPlayer             =  "urxvtc -name ncmpcpp -e ncmpcpp"
-myEditor             =  spawn "urxvtc -name vim -e vim"
-myFullScrot          =  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
-myAreaScrot          =  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
-myWindowScrot        =  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
-myAppMenu            =  spawn "mygtkmenu .menurc"
-myPlaceMenu          =  spawn "mygtkmenu .placerc"
-mySreenLock          =  spawn "i3lock -i /home/haron/wall/starrynight.png"
-myQSTerminal         =  scratchpadSpawnActionTerminal myTerminal
+myBrowser        =  spawn "vivaldi-snapshot"
+browserClass     =  "Vivaldi-snapshot"
+myTerminal       =  "urxvtc"
+terminalClass    =  "URxvt"
+myShell          =  "zsh"
+myFM             =  "urxvtc -name ranger -e ranger"
+myNotes          =  "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree"
+myHtop           =  "urxvtc -name htop -e htop"
+myPlayer         =  "urxvtc -name ncmpcpp -e ncmpcpp"
+myEditor         =  spawn "urxvtc -name vim -e vim"
+myFullScrot      =  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+myAreaScrot      =  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+myWindowScrot    =  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+myAppMenu        =  spawn "mygtkmenu .menurc"
+myPlaceMenu      =  spawn "mygtkmenu .placerc"
+mySreenLock      =  spawn "i3lock -i /home/haron/wall/starrynight.png"
+myQSTerminal     =  scratchpadSpawnActionTerminal myTerminal
 -- Decorations
-myBorderWidth        =  1
-myHLColor            =  "#95d5f5"
-myUrgColor           =  "#ffab00"
-myBgColor            =  "#151515"
-myFgColor            =  "#959595"
-myFont               =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
-myMonospaceFont      =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
+myBorderWidth    =  1
+myHLColor        =  "#95d5f5"
+myUrgColor       =  "#ffab00"
+myBgColor        =  "#151515"
+myFgColor        =  "#959595"
+myFont           =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
+myMonospaceFont  =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
 -- Layouts combinations
-myRTL1               =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
-myRTL2               =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
-myMRTL1              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
-myMRTL2              =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
-myGL                 =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
+myRTL1           =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
+myRTL2           =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
+myMRTL1          =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
+myMRTL2          =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
+myGL             =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 --
-myWL                 =  Full     |||  myRTL1   ||| myMRTL1
-myML                 =  Full     |||  myRTL1
-myEL                 =  myMRTL1  |||  Full     ||| myRTL2
-myFL                 =  Full     |||  myGL
-mySL                 =  myRTL1   |||  myMRTL1  ||| Full
-myPL                 =  Full     |||  myGL
-myVL                 =  Full     |||  myRTL2
-myJL                 =  Full     |||  myRTL2
-myTL                 =  Full     |||  myMRTL1
+myWL             =  Full     |||  myRTL1   ||| myMRTL1
+myML             =  Full     |||  myRTL1
+myEL             =  myMRTL1  |||  Full     ||| myRTL2
+myFL             =  Full     |||  myGL
+mySL             =  myRTL1   |||  myMRTL1  ||| Full
+myPL             =  Full     |||  myGL
+myVL             =  Full     |||  myRTL2
+myJL             =  Full     |||  myRTL2
+myTL             =  Full     |||  myMRTL1
 -- Modkey
-modm                 =  mod4Mask
-altm                 =  mod1Mask
-ctrlm                =  controlMask
-shftm                =  shiftMask
+modm             =  mod4Mask
+altm             =  mod1Mask
+ctrlm            =  controlMask
+shftm            =  shiftMask
 -- Actions
-encodeCChar          =  map fromIntegral . B.unpack
-onScr n f i          =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
-viewShift            =  doF . liftM2 (.) W.greedyView W.shift
-minWin               =  withFocused minimizeWindow <+> spawn "XMMWO"
-restWin              =  sendMessage RestoreNextMinimizedWin <+> spawn "XMMWC"
+encodeCChar      =  map fromIntegral . B.unpack
+onScr n f i      =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
+viewShift        =  doF . liftM2 (.) W.greedyView W.shift
+minWin           =  withFocused minimizeWindow <+> spawn "XMMWO"
+restWin          =  sendMessage RestoreNextMinimizedWin <+> spawn "XMMWC"
 -- Other
-role                 =  stringProperty "WM_WINDOW_ROLE"
+role             =  stringProperty "WM_WINDOW_ROLE"
 
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -151,8 +151,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x6c),  spawn "XMLPass")                          --Alt+L
     , ((altm,                 0x6d),  spawn "urxvtc -name mc -e mc")            --Alt+M
     , ((altm,                 0x6e),  spawn "XMNotes-w")                        --Alt+N
-    , ((altm,                 0x6f),  spawn "opera-developer")                  --Alt+O
     , ((altm .|. ctrlm,       0x6e),  namedScratchpadAction myNS "MyNotes")     --Alt+Ctrl+N
+    , ((altm,                 0x6f),  spawn "opera-developer")                  --Alt+O
     , ((altm,                 0x71),  namedScratchpadAction myNS "Oblogout")    --Alt+Q
     , ((altm,                 0x72),  namedScratchpadAction myNS "MyFM")        --Alt+R
     , ((altm,                 0x74),  spawn "XMTransgui")                       --Alt+T
