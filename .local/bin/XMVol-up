@@ -2,5 +2,6 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5%
+pactl set-sink-mute 0 false
+pactl set-sink-volume 0 +5%
 exit 0

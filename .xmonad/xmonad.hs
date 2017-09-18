@@ -75,11 +75,11 @@ myWindowScrot    =  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/
 myAppMenu        =  spawn "mygtkmenu .menurc"
 myPlaceMenu      =  spawn "mygtkmenu .placerc"
 mySreenLock      =  spawn "i3lock -i /home/haron/wall/starrynight.png"
-myQSTerminal     =  scratchpadSpawnActionTerminal myTerminal
+myQST            =  scratchpadSpawnActionTerminal myTerminal
 -- Decorations
 myBorderWidth    =  1
 myHLColor        =  "#95d5f5"
-myUrgColor       =  "#ffab00"
+myUrgColor       =  "#ff6500"
 myBgColor        =  "#151515"
 myFgColor        =  "#959595"
 myFont           =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
@@ -131,15 +131,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,              0x1008ff33),  spawn "pcmanfm")                          --XF86MyComputer
     , ((0,              0x1008ff5d),  spawn "pcmanfm")                          --XF86Explorer
     , ((0,              0x1008ff1d),  spawn "XMGalculator")                     --XF86Calculator
-    , ((0,              0x1008ff1b),  namedScratchpadAction myNS "MyHtop")      --XF86Search
-    , ((0,              0x1008ff77),  namedScratchpadAction myNS "MyPlayer")    --XF86Save
+    , ((0,              0x1008ff1b),  namedScratchpadAction myNS "HTOP")        --XF86Search
+    , ((0,              0x1008ff77),  namedScratchpadAction myNS "NCMPCPP")     --XF86Save
     , ((0,              0x1008ff46),  spawn "XMR")                              --XF86Launch6
     , ((0,              0x1008ff2f),  mySreenLock)                              --XF86Sleep
-    , ((0,              0x1008ff56),  namedScratchpadAction myNS "Oblogout")    --XF86Close
+    , ((0,              0x1008ff56),  namedScratchpadAction myNS "OBLOGOUT")    --XF86Close
     , ((0,              0x1008ff73),  spawn "compreboot")                       --XF86Reload
     , ((0,                  0xff69),  spawn "compdown")                         --Cancel
     , ((0,                  0xff67),  spawn "gmrun")                            --Menu
-    , ((0,                  0xffc9),  myQSTerminal)                             --F12
+    , ((0,                  0xffc9),  myQST)                                    --F12
     , ((0,                  0xff61),  myFullScrot)                              --Print
     , ((0    .|. shftm,     0xff61),  myAreaScrot)                              --Shift+Print
     , ((altm,               0xff61),  myWindowScrot)                            --Alt+Print
@@ -151,10 +151,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x6c),  spawn "XMLPass")                          --Alt+L
     , ((altm,                 0x6d),  spawn "urxvtc -name mc -e mc")            --Alt+M
     , ((altm,                 0x6e),  spawn "XMNotes-w")                        --Alt+N
-    , ((altm .|. ctrlm,       0x6e),  namedScratchpadAction myNS "MyNotes")     --Alt+Ctrl+N
+    , ((altm .|. ctrlm,       0x6e),  namedScratchpadAction myNS "NOTES")       --Alt+Ctrl+N
     , ((altm,                 0x6f),  spawn "opera-developer")                  --Alt+O
-    , ((altm,                 0x71),  namedScratchpadAction myNS "Oblogout")    --Alt+Q
-    , ((altm,                 0x72),  namedScratchpadAction myNS "MyFM")        --Alt+R
+    , ((altm,                 0x71),  namedScratchpadAction myNS "OBLOGOUT")    --Alt+Q
+    , ((altm,                 0x72),  namedScratchpadAction myNS "FM")          --Alt+R
     , ((altm,                 0x74),  spawn "XMTransgui")                       --Alt+T
     , ((altm,                 0x76),  myEditor)                                 --Alt+V
     , ((altm,                 0x79),  spawn "XMYaourt")                         --Alt+Y
@@ -452,26 +452,26 @@ myWindowsRules = composeAll . concat $
 
 -- NamedScratchpad
 myNS = [
-          NS "MyPlayer"     myPlayer       (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-        , NS "MyHtop"       myHtop         (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
-        , NS "Gpick"        "gpick"        (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-        , NS "Pavucontrol"  "pavucontrol"  (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-        , NS "XMUpdate"     "XMUpdate"     (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-        , NS "MyNotes"      myNotes        (appName    =? "Notes")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-        , NS "MyFM"         myFM           (appName    =? "ranger")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+          NS "NCMPCPP"      myPlayer       (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+        , NS "HTOP"         myHtop         (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
+        , NS "GPICK"        "gpick"        (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+        , NS "PAVUCONTROL"  "pavucontrol"  (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+        , NS "XMUPDATE"     "XMUpdate"     (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+        , NS "NOTES"        myNotes        (appName    =? "Notes")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+        , NS "FM"           myFM           (appName    =? "ranger")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
 
-        , NS "Mirage"       "mirage"       (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-        , NS "Gsimplecal"   "Gsimplecal"   (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
-        , NS "Oblogout"     "oblogout"     (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.32 0.4 0.36 0.2)
-        , NS "DeadBeef"     "deadbeef"     (className  =? "Deadbeef")     (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+        , NS "MIRAGE"       "mirage"       (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+        , NS "GSIMPLECAL"   "Gsimplecal"   (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
+        , NS "OBLOGOUT"     "oblogout"     (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.32 0.4 0.36 0.2)
+        , NS "DEADBEEF"     "deadbeef"     (className  =? "Deadbeef")     (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
 
-        , NS "Organizer"    "Organizer"    (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-        , NS "Msgcompose"   "Msgcompose"   (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-        , NS "addressbook"  "addressbook"  (role       =? "addressbook")  (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-        , NS "filterlist"   "filterlist"   (role       =? "filterlist")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+        , NS "ORGANIZER"    "Organizer"    (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+        , NS "MSGCOMPOSE"   "Msgcompose"   (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+        , NS "ADDRESSBOOK"  "addressbook"  (role       =? "addressbook")  (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+        , NS "FILTERLIST"   "filterlist"   (role       =? "filterlist")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
         ]
 
--- Scratchpad (myQSTerminal)
+-- Scratchpad (myQST)
 manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     where
         h = 0.333   -- terminal height
