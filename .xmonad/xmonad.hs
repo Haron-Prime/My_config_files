@@ -299,14 +299,14 @@ myPromptConfig = def {
 
 -- ManageHook
 myMH = manageHook def <+> 
-       myWindowsRules <+> 
+       myWR <+> 
        manageScratchPad <+> 
        namedScratchpadManageHook myNS <+> 
        placeHook (smart (0.5,0.5)) <+> 
        workspaceByPos
 
 -- Windows rules
-myWindowsRules = composeAll . concat $
+myWR = composeAll . concat $
     [ 
       [className =? c                 --> doShift (myWS !! 0)   <+> viewShift (myWS !! 0)   | c <- myW]
     , [className =? c                 --> doShift (myWS !! 1)                               | c <- myM]
