@@ -57,7 +57,7 @@ import XMonad.Util.Scratchpad
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
 
--- myOptions
+--- My options ---
 -- Applications
 myBrowser        =  spawn "vivaldi-snapshot"
 browserClass     =  "Vivaldi-snapshot"
@@ -248,7 +248,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 -- Mouse bindings: default actions bound to mouse events
-myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
+myMB (XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm, button1), (\w -> focus w >> mouseMoveWindow w
                                        >> windows W.shiftMaster))
     , ((modm, button2), (\w -> focus w >> windows W.shiftMaster))
@@ -268,20 +268,20 @@ myWS = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J"
                         ]
 
 -- Layouts
-myLayoutHook =  avoidStruts
-                $ minimize
-                $ Tog.toggleLayouts (noBorders Full) 
-                $ smartBorders
-                $ onWorkspace (myWS !! 0) myWL
-                $ onWorkspace (myWS !! 1) myML
-                $ onWorkspace (myWS !! 2) myEL
-                $ onWorkspace (myWS !! 3) myFL
-                $ onWorkspace (myWS !! 4) mySL
-                $ onWorkspace (myWS !! 5) myVL
-                $ onWorkspace (myWS !! 6) myPL
-                $ onWorkspace (myWS !! 7) myJL
-                $ onWorkspace (myWS !! 8) myTL
-                $ myRTL1 ||| myMRTL1 ||| myGL ||| Full
+myLH =  avoidStruts
+        $ minimize
+        $ Tog.toggleLayouts (noBorders Full) 
+        $ smartBorders
+        $ onWorkspace (myWS !! 0) myWL
+        $ onWorkspace (myWS !! 1) myML
+        $ onWorkspace (myWS !! 2) myEL
+        $ onWorkspace (myWS !! 3) myFL
+        $ onWorkspace (myWS !! 4) mySL
+        $ onWorkspace (myWS !! 5) myVL
+        $ onWorkspace (myWS !! 6) myPL
+        $ onWorkspace (myWS !! 7) myJL
+        $ onWorkspace (myWS !! 8) myTL
+        $ myRTL1 ||| myMRTL1 ||| myGL ||| Full
 
 -- Prompts
 myPromptConfig = def {
@@ -298,12 +298,12 @@ myPromptConfig = def {
                      }
 
 -- ManageHook
-myManageHook = manageHook def <+> 
-               myWindowsRules <+> 
-               manageScratchPad <+> 
-               namedScratchpadManageHook myNS <+> 
-               placeHook (smart (0.5,0.5)) <+> 
-               workspaceByPos
+myMH = manageHook def <+> 
+       myWindowsRules <+> 
+       manageScratchPad <+> 
+       namedScratchpadManageHook myNS <+> 
+       placeHook (smart (0.5,0.5)) <+> 
+       workspaceByPos
 
 -- Windows rules
 myWindowsRules = composeAll . concat $
@@ -480,18 +480,18 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
         l = 1 - w   -- distance from left edge
 
 -- Event handling
-myEventHook = handleEventHook def <+> 
-              fullscreenEventHook <+> 
-              docksEventHook <+> 
-              ewmhDesktopsEventHook <+> 
-              focusOnMouseMove
+myEH = handleEventHook def <+> 
+       fullscreenEventHook <+> 
+       docksEventHook <+> 
+       ewmhDesktopsEventHook <+> 
+       focusOnMouseMove
 
 -- StartupHook
-myStartupHook = return () <+> 
-                adjustEventInput <+> 
-                setWMName "LG3D" <+> 
-                onScr 1 W.greedyView (myWS !! 0) <+> 
-                spawn "XMStart" 
+mySH = return () <+> 
+       adjustEventInput <+> 
+       setWMName "LG3D" <+> 
+       onScr 1 W.greedyView (myWS !! 0) <+> 
+       spawn "XMStart" 
 
 main = do
     xmproc <- spawnPipe "xmobar"
@@ -505,11 +505,11 @@ main = do
         , normalBorderColor  = myBgColor
         , focusedBorderColor = myHLColor
         , keys               = myKeys
-        , mouseBindings      = myMouseBindings
-        , startupHook        = myStartupHook
-        , layoutHook         = myLayoutHook
-        , manageHook         = myManageHook
-        , handleEventHook    = myEventHook
+        , mouseBindings      = myMB
+        , startupHook        = mySH
+        , layoutHook         = myLH
+        , manageHook         = myMH
+        , handleEventHook    = myEH
         , logHook            = dynamicLogWithPP $ def {
                                                         ppOutput  = System.IO.hPutStrLn xmproc
                                                       , ppCurrent = xmobarColor myHLColor ""
