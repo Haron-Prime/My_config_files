@@ -118,9 +118,9 @@ role             =  stringProperty "WM_WINDOW_ROLE"
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
     --Applications management
-      ((0,              0x1008ff13),  spawn "pulseaudio-ctl up")                --XF86AudioRaiseVolume
-    , ((0,              0x1008ff11),  spawn "pulseaudio-ctl down")              --XF86AudioLowerVolume
-    , ((0,              0x1008ff12),  spawn "pulseaudio-ctl mute")              --XF86AudioMute
+      ((0,              0x1008ff13),  spawn "pactl set-sink-volume 0 +5%")      --XF86AudioRaiseVolume
+    , ((0,              0x1008ff11),  spawn "pactl set-sink-volume 0 -5%")      --XF86AudioLowerVolume
+    , ((0,              0x1008ff12),  spawn "pactl set-sink-mute 0 toggle")     --XF86AudioMute
     , ((0,              0x1008ff14),  spawn "XMMPCtoggle")                      --XF86Play
     , ((0,              0x1008ff15),  spawn "XMMPCstop")                        --XF86AudioStop
     , ((0,              0x1008ff16),  spawn "XMMPCprev")                        --XF86AudioPrev
@@ -452,23 +452,23 @@ myWindowsRules = composeAll . concat $
 
 -- NamedScratchpad
 myNS = [
-          NS "MyPlayer"     myPlayer         (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-        , NS "MyHtop"       myHtop           (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
-        , NS "Gpick"        "gpick"          (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-        , NS "Pavucontrol"  "pavucontrol"    (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-        , NS "XMUpdate"     "XMUpdate"       (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-        , NS "MyNotes"      myNotes          (appName    =? "Notes")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-        , NS "MyFM"         myFM             (appName    =? "ranger")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+          NS "MyPlayer"     myPlayer       (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+        , NS "MyHtop"       myHtop         (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
+        , NS "Gpick"        "gpick"        (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+        , NS "Pavucontrol"  "pavucontrol"  (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+        , NS "XMUpdate"     "XMUpdate"     (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+        , NS "MyNotes"      myNotes        (appName    =? "Notes")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+        , NS "MyFM"         myFM           (appName    =? "ranger")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
 
-        , NS "Mirage"       "mirage"         (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-        , NS "Gsimplecal"   "Gsimplecal"     (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
-        , NS "Oblogout"     "oblogout"       (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.32 0.4 0.36 0.2)
-        , NS "DeadBeef"     "deadbeef"       (className  =? "Deadbeef")     (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+        , NS "Mirage"       "mirage"       (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+        , NS "Gsimplecal"   "Gsimplecal"   (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
+        , NS "Oblogout"     "oblogout"     (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.32 0.4 0.36 0.2)
+        , NS "DeadBeef"     "deadbeef"     (className  =? "Deadbeef")     (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
 
-        , NS "Organizer"    "Organizer"      (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-        , NS "Msgcompose"   "Msgcompose"     (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-        , NS "addressbook"  "addressbook"    (role       =? "addressbook")  (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-        , NS "filterlist"   "filterlist"     (role       =? "filterlist")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+        , NS "Organizer"    "Organizer"    (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+        , NS "Msgcompose"   "Msgcompose"   (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+        , NS "addressbook"  "addressbook"  (role       =? "addressbook")  (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+        , NS "filterlist"   "filterlist"   (role       =? "filterlist")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
         ]
 
 -- Scratchpad (myQSTerminal)
