@@ -85,21 +85,21 @@ myFgColor        =  "#959595"
 myFont           =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 myMonospaceFont  =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
 -- Layouts combinations
-myRTL1           =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
-myRTL2           =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
-myMRTL1          =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
-myMRTL2          =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
-myGL             =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
+myRT1            =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
+myRT2            =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
+myMRT1           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
+myMRT2           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
+myMGR            =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 --
-myWL             =  Full     |||  myRTL1   ||| myMRTL1
-myML             =  Full     |||  myRTL1
-myEL             =  myMRTL1  |||  Full     ||| myRTL2
-myFL             =  Full     |||  myGL
-mySL             =  myRTL1   |||  myMRTL1  ||| Full
-myPL             =  Full     |||  myGL
-myVL             =  Full     |||  myRTL2
-myJL             =  Full     |||  myRTL2
-myTL             =  Full     |||  myMRTL1
+myWL             =  Full    |||  myRT1   ||| myMRT1
+myML             =  Full    |||  myRT1
+myEL             =  myMRT1  |||  Full    ||| myRT2
+myFL             =  Full    |||  myMGR
+mySL             =  myRT1   |||  myMRT1  ||| Full
+myPL             =  Full    |||  myMGR
+myVL             =  Full    |||  myRT2
+myJL             =  Full    |||  myRT2
+myTL             =  Full    |||  myMRT1
 -- Modkey
 modm             =  mod4Mask
 altm             =  mod1Mask
@@ -161,7 +161,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x79),  spawn "XMYaourt")                       --Alt+Y
     , ((modm .|. shftm,     0xff0d),  spawn $ XMonad.terminal conf)           --Mod4+Shift+Return
 
-    --Recompile & restart
+    --Recompile & restart xmonad
     , ((modm,                 0x63),  spawn "XMR")                            --Mod4+C
     , ((modm,                 0x71),  spawn "XMRR")                           --Mod4+Q
 
@@ -282,7 +282,7 @@ myLH =  avoidStruts
         $ onWorkspace (myWS !! 6) myPL
         $ onWorkspace (myWS !! 7) myJL
         $ onWorkspace (myWS !! 8) myTL
-        $ myRTL1 ||| myMRTL1 ||| myGL ||| Full
+        $ myRT1 ||| myMRT1 ||| myMGR ||| Full
 
 -- Prompts
 myPromptConfig = def {
