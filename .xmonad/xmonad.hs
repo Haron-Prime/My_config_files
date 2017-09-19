@@ -303,7 +303,7 @@ myPromptConfig = def {
 -- ManageHook
 myMH = manageHook def <+> 
        myWR <+> 
-       manageScratchPad <+> 
+       mySP <+> 
        namedScratchpadManageHook myNS <+> 
        placeHook (smart (0.5,0.5)) <+> 
        workspaceByPos
@@ -455,27 +455,27 @@ myWR = composeAll . concat $
 
 -- NamedScratchpad
 myNS = [
-          NS "MIRAGE"       "mirage"       (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-        , NS "GSIMPLECAL"   "Gsimplecal"   (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
-        , NS "OBLOGOUT"     "oblogout"     (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.32 0.4 0.36 0.2)
-        , NS "DEADBEEF"     "deadbeef"     (className  =? "Deadbeef")     (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+         NS "MIRAGE"       "mirage"       (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
+       , NS "GSIMPLECAL"   "Gsimplecal"   (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
+       , NS "OBLOGOUT"     "oblogout"     (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.32 0.4 0.36 0.2)
+       , NS "DEADBEEF"     "deadbeef"     (className  =? "Deadbeef")     (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
 
-        , NS "NCMPCPP"      myPlayer       (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-        , NS "HTOP"         myHtop         (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
-        , NS "GPICK"        "gpick"        (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-        , NS "PAVUCONTROL"  "pavucontrol"  (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-        , NS "XMUPDATE"     "XMUpdate"     (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
-        , NS "NOTES"        myNotes        (appName    =? "Notes")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-        , NS "FM"           myFM           (appName    =? "ranger")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+       , NS "NCMPCPP"      myPlayer       (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+       , NS "HTOP"         myHtop         (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
+       , NS "GPICK"        "gpick"        (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+       , NS "PAVUCONTROL"  "pavucontrol"  (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+       , NS "XMUPDATE"     "XMUpdate"     (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+       , NS "NOTES"        myNotes        (appName    =? "Notes")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
+       , NS "FM"           myFM           (appName    =? "ranger")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
 
-        , NS "ORGANIZER"    "Organizer"    (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-        , NS "MSGCOMPOSE"   "Msgcompose"   (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-        , NS "ADDRESSBOOK"  "addressbook"  (role       =? "addressbook")  (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-        , NS "FILTERLIST"   "filterlist"   (role       =? "filterlist")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
-        ]
+       , NS "ORGANIZER"    "Organizer"    (role       =? "Organizer")    (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+       , NS "MSGCOMPOSE"   "Msgcompose"   (role       =? "Msgcompose")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+       , NS "ADDRESSBOOK"  "addressbook"  (role       =? "addressbook")  (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+       , NS "FILTERLIST"   "filterlist"   (role       =? "filterlist")   (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
+       ]
 
 -- Scratchpad (myQST)
-manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
+mySP = scratchpadManageHook (W.RationalRect l t w h)
     where
         h = 0.333   -- terminal height
         w = 1       -- terminal width
