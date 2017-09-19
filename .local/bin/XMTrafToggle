@@ -2,7 +2,7 @@
 # Author - Haron Prime
 # License © 2017 WTFPL http://www.wtfpl.net/
 
-PID=`ps aux | grep XMTraf | grep -v XMTrafState | grep -v grep | awk '{print $2}'`
+PID=`ps aux | grep XMTraf | grep -v XMTrafToggle | grep -v grep | awk '{print $2}'`
 if [[ -n $PID ]]; then
     kill $PID
     echo > /tmp/haron/TR
