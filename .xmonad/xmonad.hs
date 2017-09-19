@@ -84,22 +84,22 @@ myBgColor        =  "#151515"
 myFgColor        =  "#959595"
 myFont           =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 myMonospaceFont  =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
--- Layouts combinations
+-- Basic combinations of layouts
 myRT1            =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
 myRT2            =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
 myMRT1           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
 myMRT2           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
 myMGR            =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
---
-myWL             =  Full    |||  myRT1   ||| myMRT1
-myML             =  Full    |||  myRT1
-myEL             =  myMRT1  |||  Full    ||| myRT2
-myFL             =  Full    |||  myMGR
-mySL             =  myRT1   |||  myMRT1  ||| Full
-myPL             =  Full    |||  myMGR
-myVL             =  Full    |||  myRT2
-myJL             =  Full    |||  myRT2
-myTL             =  Full    |||  myMRT1
+-- Combinations of layouts for various workspaces
+myWL             =  Full    |||  myRT1   ||| myMRT1  -- WS1
+myML             =  Full    |||  myRT1               -- WS2
+myEL             =  myMRT1  |||  Full    ||| myRT2   -- WS3
+myFL             =  Full    |||  myMGR               -- WS4
+mySL             =  myRT1   |||  myMRT1  ||| Full    -- WS5
+myPL             =  Full    |||  myMGR               -- WS6
+myVL             =  Full    |||  myRT2               -- WS7
+myJL             =  Full    |||  myRT2               -- WS8
+myTL             =  Full    |||  myMRT1              -- WS9
 -- Modkey
 modm             =  mod4Mask
 altm             =  mod1Mask
@@ -113,7 +113,7 @@ minWin           =  withFocused minimizeWindow <+> spawn "XMMWO"
 restWin          =  sendMessage RestoreNextMinimizedWin <+> spawn "XMMWC"
 cycleWin         =  cycleRecentWindows [0xffeb] 0xff09 0x77
 nSA              =  namedScratchpadAction myNS
--- Other
+-- Other options
 role             =  stringProperty "WM_WINDOW_ROLE"
 
 -- Key bindings.
@@ -219,7 +219,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                 0x61),  restWin)                             --Mod4+A
     , ((modm,                 0x78),  kill)                                --Mod4+X
 
-    --XMobar management
+    -- Management of actions in XMobar
     , ((altm,                 0x30),  spawn "XMUptimeToggle")              --Alt+0
     , ((altm .|. ctrlm,       0x30),  spawn "XMinxi")                      --Alt+Ctrl+0
     , ((altm .|. shftm,       0x30),  spawn "XMScreenfetch")               --Alt+Shift+0
@@ -308,7 +308,7 @@ myMH = manageHook def <+>
        placeHook (smart (0.5,0.5)) <+> 
        workspaceByPos
 
--- Windows rules
+-- Window Management Rules
 myWR = composeAll . concat $
     [ 
       [className =? c                 --> doShift (myWS !! 0)   <+> viewShift (myWS !! 0)   | c <- myW]
