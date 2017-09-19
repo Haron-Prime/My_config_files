@@ -77,7 +77,6 @@ myPlaceMenu      =  spawn "mygtkmenu .placerc"
 mySreenLock      =  spawn "i3lock -i /home/haron/wall/starrynight.png"
 myQST            =  scratchpadSpawnActionTerminal myTerm
 -- Decorations
-myBorderWidth    =  1
 myHlColor        =  "#95d5f5"
 myUrgColor       =  "#ff6500"
 myBgColor        =  "#151515"
@@ -456,7 +455,7 @@ myWR = composeAll . concat $
 -- NamedScratchpad
 myNS = [
          NS "MIRAGE"       "mirage"       (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
-       , NS "GSIMPLECAL"   "Gsimplecal"   (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
+       , NS "GSIMPLECAL"   "gsimplecal"   (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
        , NS "OBLOGOUT"     "oblogout"     (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.32 0.4 0.36 0.2)
        , NS "DEADBEEF"     "deadbeef"     (className  =? "Deadbeef")     (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
 
@@ -501,12 +500,12 @@ main = do
     xmonad $ ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def 
         {
           terminal           = myTerm
-        , focusFollowsMouse  = True
-        , borderWidth        = myBorderWidth
-        , modMask            = modm
-        , workspaces         = myWS
+        , borderWidth        = 1
         , normalBorderColor  = myBgColor
         , focusedBorderColor = myHlColor
+        , modMask            = modm
+        , focusFollowsMouse  = True
+        , workspaces         = myWS
         , keys               = myKeys
         , mouseBindings      = myMB
         , startupHook        = mySH
