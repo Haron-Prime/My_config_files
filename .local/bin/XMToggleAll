@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License © 2017 WTFPL http://www.wtfpl.net/
+
+if [[ -n $(ps aux | grep XMDate | grep -v XMDateToggle | grep -v grep | awk '{print $2}') ]]; then
+    kill $(ps aux | grep XMDate | grep -v XMDateToggle | grep -v grep | awk '{print $2}') &
+    echo > /tmp/haron/DO &
+fi
+XMTimeToggle &
+XMNetToggle &
+XMTrafToggle &
+XMCPUToggle &
+XMTempToggle &
+XMMemToggle &
+XMVolToggle &
+exit 0

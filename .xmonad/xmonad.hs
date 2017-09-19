@@ -218,24 +218,24 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                 0x78),  kill)                                   --Mod4+X
 
     --XMobar management
-    , ((altm,                 0x30),  spawn "XMUptimeState")                  --Alt+0
+    , ((altm,                 0x30),  spawn "XMUptimeToggle")                 --Alt+0
     , ((altm .|. ctrlm,       0x30),  spawn "XMinxi")                         --Alt+Ctrl+0
     , ((altm .|. shftm,       0x30),  spawn "XMScreenfetch")                  --Alt+Shift+0
-    , ((altm,                 0x31),  spawn "XMNetState")                     --Alt+1
+    , ((altm,                 0x31),  spawn "XMNetToggle")                    --Alt+1
     , ((altm .|. ctrlm,       0x31),  spawn "XMVnstat-h & XMVnstat")          --Alt+Ctrl+1
-    , ((altm,                 0x32),  spawn "XMTrafState")                    --Alt+2
+    , ((altm,                 0x32),  spawn "XMTrafToggle")                   --Alt+2
     , ((altm .|. ctrlm,       0x32),  spawn "XMVnstat-d")                     --Alt+Ctrl+2
-    , ((altm,                 0x33),  spawn "XMCPUState")                     --Alt+3
+    , ((altm,                 0x33),  spawn "XMCPUToggle")                    --Alt+3
     , ((altm .|. ctrlm,       0x33),  spawn "XMTop-cpu")                      --Alt+Ctrl+3
-    , ((altm,                 0x34),  spawn "XMTempState")                    --Alt+4
+    , ((altm,                 0x34),  spawn "XMTempToggle")                   --Alt+4
     , ((altm .|. ctrlm,       0x34),  spawn "XMSensors")                      --Alt+Ctrl+4
-    , ((altm,                 0x35),  spawn "XMMemState")                     --Alt+5
+    , ((altm,                 0x35),  spawn "XMMemToggle")                    --Alt+5
     , ((altm .|. ctrlm,       0x35),  spawn "XMTop-mem")                      --Alt+Ctrl+5
     , ((altm .|. shftm,       0x35),  spawn "XMdf-h")                         --Alt+Shift+5
-    , ((altm,                 0x36),  spawn "XMVolState")                     --Alt+6
-    , ((altm,                 0x37),  spawn "XMDateState")                    --Alt+7
-    , ((altm,                 0x60),  spawn "XMStateAll")                     --Alt+grave
-    , ((altm,               0xff1b),  spawn "XMStateKill")                    --Alt+Escape
+    , ((altm,                 0x36),  spawn "XMVolToggle")                    --Alt+6
+    , ((altm,                 0x37),  spawn "XMDateToggle")                   --Alt+7
+    , ((altm,                 0x60),  spawn "XMToggleAll")                    --Alt+grave
+    , ((altm,               0xff1b),  spawn "XMKillAll")                      --Alt+Escape
     ]
 
     ++
