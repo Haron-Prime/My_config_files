@@ -155,6 +155,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x6e),  spawn "XMNotes-w")                   --Alt+N
     , ((altm .|. ctrlm,       0x6e),  nSA "NOTES")                         --Alt+Ctrl+N
     , ((altm,                 0x6f),  spawn "opera-developer")             --Alt+O
+    , ((altm,                 0x70),  nSA "NCMPCPP")                       --Alt+P
     , ((altm,                 0x71),  nSA "OBLOGOUT")                      --Alt+Q
     , ((altm,                 0x72),  nSA "FM")                            --Alt+R
     , ((altm,                 0x74),  spawn "XMTransgui")                  --Alt+T
