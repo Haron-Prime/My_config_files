@@ -54,7 +54,7 @@ import XMonad.Util.Scratchpad
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
 
---- MY OPTIONS ---
+--- CUSTOM OPTIONS ---
 -- Applications
 myBrowser        =  "vivaldi-snapshot"
 myTerm           =  "urxvtc"
