@@ -2,6 +2,7 @@
 -- Author - Haron Prime
 -- License © 2017 WTFPL http://www.wtfpl.net/
 
+--- MODULES INCLUDED ---
 -- Base
 import XMonad hiding ( (|||) )
 import Control.Monad (liftM2, filterM)
@@ -15,13 +16,11 @@ import System.IO
 import qualified Data.Map        as M
 import qualified Data.ByteString as B
 import qualified XMonad.StackSet as W
-
 -- Actions
 import XMonad.Actions.CycleWindows
 import XMonad.Actions.CycleWS
 import XMonad.Actions.UpdateFocus
 import qualified XMonad.Actions.DynamicWorkspaceOrder as DO
-
 -- Hooks
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
@@ -33,7 +32,6 @@ import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceByPos
 import XMonad.Hooks.XPropManage
 import XMonad.Hooks.UrgencyHook hiding (Never)
-
 -- Layouts
 import XMonad.Layout.Grid
 import XMonad.Layout.LayoutCombinators ((|||))
@@ -45,20 +43,18 @@ import XMonad.Layout.ResizableTile
 import XMonad.Layout.Spacing
 import XMonad.Layout.WindowNavigation
 import qualified XMonad.Layout.ToggleLayouts as Tog
-
 -- Prompts
 import XMonad.Prompt
 import XMonad.Prompt.Man
 import XMonad.Prompt.RunOrRaise
 import XMonad.Prompt.Ssh
-
 -- Utils
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.Scratchpad
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
 
---- My options ---
+--- MY OPTIONS ---
 -- Applications
 myBrowser        =  "vivaldi-snapshot"
 myTerm           =  "urxvtc"
@@ -88,15 +84,15 @@ myMRT1           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100
 myMRT2           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
 myMGR            =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 -- Combinations of layouts for various workspaces
-myWL             =  Full    |||  myRT1   ||| myMRT1  -- WS1
-myML             =  Full    |||  myRT1               -- WS2
-myEL             =  myMRT1  |||  Full    ||| myRT2   -- WS3
-myFL             =  Full    |||  myMGR               -- WS4
-mySL             =  myRT1   |||  myMRT1  ||| Full    -- WS5
-myPL             =  Full    |||  myMGR               -- WS6
-myVL             =  Full    |||  myRT2               -- WS7
-myJL             =  Full    |||  myRT2               -- WS8
-myTL             =  Full    |||  myMRT1              -- WS9
+myWL             =  Full    |||  myRT1   ||| myMRT1  -- for WS1
+myML             =  Full    |||  myRT1               -- for WS2
+myEL             =  myMRT1  |||  Full    ||| myRT2   -- for WS3
+myFL             =  Full    |||  myMGR               -- for WS4
+mySL             =  myRT1   |||  myMRT1  ||| Full    -- for WS5
+myPL             =  Full    |||  myMGR               -- for WS6
+myVL             =  Full    |||  myRT2               -- for WS7
+myJL             =  Full    |||  myRT2               -- for WS8
+myTL             =  Full    |||  myMRT1              -- for WS9
 -- Modkey
 modm             =  mod4Mask
 altm             =  mod1Mask
@@ -169,7 +165,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x61),  spawn myAppMenu)                      --Alt+A
     , ((altm,                 0x62),  spawn myPlaceMenu)                    --Alt+B
 
-    --Prompt management
+    --Prompts management
     , ((altm,               0xffbe),  manPrompt myPromptConfig)            --Alt+F1
     , ((altm,               0xffbf),  runOrRaisePrompt myPromptConfig)     --Alt+F2
     , ((altm,               0xffc0),  sshPrompt myPromptConfig)            --Alt+F3
@@ -217,7 +213,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                 0x61),  restWin)                             --Mod4+A
     , ((modm,                 0x78),  kill)                                --Mod4+X
 
-    -- Management of actions in XMobar
+    -- XMobar action management
     , ((altm,                 0x30),  spawn "XMUptimeToggle")              --Alt+0
     , ((altm .|. ctrlm,       0x30),  spawn "XMinxi")                      --Alt+Ctrl+0
     , ((altm .|. shftm,       0x30),  spawn "XMScreenfetch")               --Alt+Shift+0
@@ -235,7 +231,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x36),  spawn "XMVolToggle")                 --Alt+6
     , ((altm,                 0x37),  spawn "XMDateToggle")                --Alt+7
     , ((altm,                 0x60),  spawn "XMToggleAll")                 --Alt+grave
-    , ((altm,               0xff1b),  spawn "XMKillAll")                   --Alt+Escape
+    , ((altm,               0xff1b),  spawn "XMCleanAll")                  --Alt+Escape
     ]
 
     ++
