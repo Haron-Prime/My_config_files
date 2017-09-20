@@ -75,8 +75,8 @@ myHlColor        =  "#95d5f5"
 myUrgColor       =  "#ff6500"
 myBgColor        =  "#151515"
 myFgColor        =  "#959595"
-myFont           =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
-myMonospaceFont  =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
+myRFont          =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
+myMFont          =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
 -- Basic combinations of layouts
 myRT1            =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
 myRT2            =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
@@ -282,7 +282,7 @@ myLH =  avoidStruts
 
 -- Prompts
 myPromptConfig = def {
-                       font              = myMonospaceFont
+                       font              = myMFont   
                      , bgColor           = myBgColor
                      , fgColor           = myFgColor
                      , bgHLight          = myBgColor
@@ -450,13 +450,13 @@ myWR = composeAll . concat $
                 , "addressbook"
                 , "filterlist"
                 ]
--- The position below for newer windows in the specified ws
+-- The position below for newer windows to the specified workspaces
         myPBN = [
                   (myWS !! 0)
                 , (myWS !! 1)
                 , (myWS !! 8)
                 ]
--- The position end for newer windows in the specified ws
+-- The position end for newer windows to the specified workspaces
         myPEN = [
                   (myWS !! 2)
                 , (myWS !! 9)
