@@ -237,12 +237,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     ++
     [((m .|. modm, k), windows $ f i)
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1, xK_2, xK_3, xK_4, xK_5, xK_6, xK_7, xK_8, xK_9, xK_0, xK_minus, xK_equal]
-        , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
+        , (f, m) <- [(W.greedyView, 0), (W.shift, shftm)]]
 
     ++
     [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
         | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
-        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
+        , (f, m) <- [(W.view, 0), (W.shift, shftm)]]
 
 -- Mouse bindings: default actions bound to mouse events
 myMB (XConfig {XMonad.modMask = modm}) = M.fromList $
@@ -325,13 +325,8 @@ myWR = composeAll . concat $
 
     , [role      =? r                 --> (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)  | r <- myCF]
 
-    , [currentWs =? (myWS !! 0)       --> insertPosition Below Newer]
-    , [currentWs =? (myWS !! 1)       --> insertPosition Below Newer]
-    , [currentWs =? (myWS !! 8)       --> insertPosition Below Newer]
-
-    , [currentWs =? (myWS !! 2)       --> insertPosition End Newer]
-    , [currentWs =? (myWS !! 9)       --> insertPosition End Newer]
-    , [currentWs =? (myWS !! 11)      --> insertPosition End Newer]
+    , [currentWs =? w                 --> insertPosition Below Newer                         | w <- myPBN]
+    , [currentWs =? w                 --> insertPosition End Newer                           | w <- myPEN]
 
     , [className =? "Gis-weather.py"  --> doIgnore]
     , [resource  =? "stalonetray"     --> doIgnore]
@@ -454,6 +449,18 @@ myWR = composeAll . concat $
                 , "Msgcompose"
                 , "addressbook"
                 , "filterlist"
+                ]
+-- The position below for newer windows in the specified ws
+        myPBN = [
+                  (myWS !! 0)
+                , (myWS !! 1)
+                , (myWS !! 8)
+                ]
+-- The position end for newer windows in the specified ws
+        myPEN = [
+                  (myWS !! 2)
+                , (myWS !! 9)
+                , (myWS !! 11)
                 ]
 
 -- NamedScratchpad
