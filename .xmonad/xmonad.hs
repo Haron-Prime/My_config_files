@@ -206,7 +206,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                 0x6a),  windows W.focusDown)                 --Mod4+J
     , ((modm,                 0x6b),  windows W.focusUp)                   --Mod4+K
     , ((modm,                 0x6d),  windows W.focusMaster)               --Mod4+M
-    , ((modm,               0xff0d),  windows W.swapMaster)                --Mod4+Ret
+    , ((modm,               0xff0d),  windows W.swapMaster)                --Mod4+Return
     , ((modm .|. shftm,       0x6a),  windows W.swapDown)                  --Mod4+Shift+J
     , ((modm .|. shftm,       0x6b),  windows W.swapUp)                    --Mod4+Shift+K
     , ((modm,                 0x7a),  minWin)                              --Mod4+Z
@@ -460,6 +460,7 @@ myWR = composeAll . concat $
         myPEN = [
                   (myWS !! 2)
                 , (myWS !! 9)
+                , (myWS !! 10)
                 , (myWS !! 11)
                 ]
 
