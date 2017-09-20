@@ -1,5 +1,9 @@
 [
-	{ "keys": ["f4"], "command": "open_terminal" },
+    { "keys": ["f4"], "command": "open_terminal" },
+    { "keys": ["ctrl+shift+n"], "command": "new_window" },
+    { "keys": ["ctrl+shift+w"], "command": "close_window" },
+    { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" },
+    { "keys": ["ctrl+shift+s"], "command": "prompt_save_as" },
     { "keys": ["ctrl+1"], "command": "select_by_index", "args": { "index": 0 } },
     { "keys": ["ctrl+2"], "command": "select_by_index", "args": { "index": 1 } },
     { "keys": ["ctrl+3"], "command": "select_by_index", "args": { "index": 2 } },
