@@ -318,7 +318,7 @@ myWR = composeAll . concat $
     , [className =? c                 --> doShift (myWS !! 6)   <+> viewShift (myWS !! 6)    | c <- myP]
     , [className =? c                 --> doShift (myWS !! 7)   <+> viewShift (myWS !! 7)    | c <- myJ]
     , [className =? c                 --> doShift (myWS !! 8)   <+> viewShift (myWS !! 8)    | c <- myT]
-    , [className =? c                 --> doShift (myWS !! 9)                                | c <- myX]
+    , [className =? c                 --> doShift (myWS !! 9)   <+> viewShift (myWS !! 9)    | c <- myX]
     , [className =? c                 --> doShift (myWS !! 10)  <+> viewShift (myWS !! 10)   | c <- myXI]
     , [className =? c                 --> doShift (myWS !! 11)  <+> viewShift (myWS !! 11)   | c <- myXII]
 
@@ -495,6 +495,7 @@ myEH = handleEventHook def <+>
 mySH = return () <+> 
        adjustEventInput <+> 
        setWMName "LG3D" <+> 
+       onScr 1 W.greedyView (myWS !! 0) <+> 
        spawn "XMStart" 
 
 main = do
