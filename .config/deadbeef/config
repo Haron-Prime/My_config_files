@@ -11,10 +11,10 @@ converter.output_format 0
 converter.overwrite_action 1
 converter.write_to_source_folder 1
 deadbeef_version 0.7.2
-filechooser.lastdir file:///home/haron/Music/Foreign/Sacred%20Spirit%20(Claus%20Zundel)
+filechooser.lastdir file:///home/haron/Music/Equalizer%20Presets
 filechooser.playlist.lastdir file:///home/haron/Music/DeadBeef_playlists
 gtkui.embolden_current_track 1
-gtkui.eq.visible 0
+gtkui.eq.visible 1
 gtkui.hide_remove_from_disk 1
 gtkui.last_playlist_save_name /home/haron/Music/DeadBeef_playlists/Чайф.dbpl
 gtkui.layout.0.6.2 vbox expand="0 1" fill="1 1" homogeneous=0 {hbox expand="0 1 0" fill="1 1 1" homogeneous=0 {playtb {} seekbar {} volumebar {} } tabbed_playlist hideheaders=0 {} } 
@@ -87,7 +87,7 @@ playlist.column.07 "Продолжительность" "%l" -1 167 1
 playlist.current 2
 playlist.cursor.0 13
 playlist.cursor.1 5
-playlist.cursor.2 0
+playlist.cursor.2 12
 playlist.group_by %a - [%y] %b
 playlist.pin.groups 0
 playlist.scroll.0 0
@@ -103,10 +103,10 @@ prefwin.geometry.x 480
 prefwin.geometry.y 315
 replaygain_mode 2
 replaygain_scale 1
-resume.paused 1
+resume.paused 0
 resume.playlist 2
-resume.position 114.20743
-resume.track 0
+resume.position -1.000000
+resume.track -1
 resume_last_session 1
 streamer.16_to_24 1
 streamer.8_to_16 1
