@@ -1,10 +1,11 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License © 2017 WTFPL http://www.wtfpl.net/
+# License WTFPL © 2017 http://www.wtfpl.net/
 
 echo  "" > /tmp/haron/NT &
 echo  "" > /tmp/haron/TU &
 echo  " " > /tmp/haron/WI &
+echo "C" > /tmp/haron/CC &
 echo > /tmp/haron/CT &
 echo > /tmp/haron/CU &
 echo > /tmp/haron/DO &
