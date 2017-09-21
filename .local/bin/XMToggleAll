@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License © 2017 WTFPL http://www.wtfpl.net/
+# License WTFPL © 2017 http://www.wtfpl.net/
 
 if [[ -n $(ps aux | grep XMDate | grep -v XMDateToggle | grep -v grep | awk '{print $2}') ]]; then
     kill $(ps aux | grep XMDate | grep -v XMDateToggle | grep -v grep | awk '{print $2}') &
