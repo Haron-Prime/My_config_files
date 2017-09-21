@@ -71,7 +71,7 @@ Xmessage*form.message.Scroll:      WhenNeeded
 *pointerBlank:                     true
 *pointerColor:                     #656565
 *imLocale:                         en_US.utf8
-*imFont:                           xft:Terminus Re33:size=11:antialias=false:hinting=true
+*imFont:                           xft:Terminus Re33 Nerd:size=11:antialias=false:hinting=true
 *utf8Title:                        true
 
 ! XTerm/UXTerm parameters
@@ -81,7 +81,7 @@ Xmessage*form.message.Scroll:      WhenNeeded
 *xterm*utf8:                       2
 *xterm*metaSendsEscape:            true
 *xterm*renderFont:                 true
-*xterm*faceName:                   xft:Terminus Re33:size=11:antialias=false:hinting=true
+*xterm*faceName:                   xft:Terminus Re33 Nerd:size=11:antialias=false:hinting=true
 *xterm*bellIsUrgent:               true
 *xterm*scaleHeight:                1.01
 *xterm*borderWidth:                0
@@ -104,8 +104,8 @@ Xmessage*form.message.Scroll:      WhenNeeded
 
 ! URxvt parameters
 
-URxvt*font:                        xft:Terminus Re33:size=11:antialias=false:hinting=true
-URxvt*boldFont:                    xft:Terminus Re33:weight=bold:size=11:antialias=false:hinting=true
+URxvt*font:                        xft:Terminus Re33 Nerd:size=11:antialias=false:hinting=true
+URxvt*boldFont:                    xft:Terminus Re33 Nerd Bold:weight=bold:size=11:antialias=false:hinting=true
 URxvt*scrollBar:                   false
 URxvt*internalBorder:              5
 URxvt*depth:                       32
