@@ -1,6 +1,6 @@
 -- XMobar config
 -- Author - Haron Prime
--- License © 2017 WTFPL http://www.wtfpl.net/
+-- License WTFPL © 2017 http://www.wtfpl.net/
 
 Config {
          font             = "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"

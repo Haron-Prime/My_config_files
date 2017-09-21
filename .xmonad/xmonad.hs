@@ -1,6 +1,6 @@
 -- XMonad config
 -- Author - Haron Prime
--- License © 2017 WTFPL http://www.wtfpl.net/
+-- License WTFPL © 2017 http://www.wtfpl.net/
 
 --- MODULES INCLUDED ---
 -- Base
@@ -84,19 +84,19 @@ myMRT1           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100
 myMRT2           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
 myMGR            =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 -- Combinations of layouts for various workspaces
-myWL             =  Full    |||  myRT1   ||| myMRT1  -- for WS1
-myML             =  Full    |||  myRT1               -- for WS2
-myEL             =  myMRT1  |||  Full    ||| myRT2   -- for WS3
-myFL             =  Full    |||  myMGR               -- for WS4
-mySL             =  myRT1   |||  myMRT1  ||| Full    -- for WS5
-myPL             =  Full    |||  myMGR               -- for WS6
-myVL             =  Full    |||  myRT2               -- for WS7
-myJL             =  Full    |||  myRT2               -- for WS8
-myTL             =  Full    |||  myMRT1              -- for WS9
+myWL             =  Full    |||  myRT1   ||| myMRT1  -- for WS1 (W)
+myML             =  Full    |||  myRT1               -- for WS2 (M)
+myEL             =  myMRT1  |||  Full    ||| myRT2   -- for WS3 (E)
+myFL             =  Full    |||  myMGR               -- for WS4 (F)
+mySL             =  myRT1   |||  myMRT1  ||| Full    -- for WS5 (S)
+myPL             =  Full    |||  myMGR               -- for WS6 (P)
+myVL             =  Full    |||  myRT2               -- for WS7 (V)
+myJL             =  Full    |||  myRT2               -- for WS8 (J)
+myTL             =  Full    |||  myMRT1              -- for WS9 (T)
 -- Modkey
-modm             =  mod4Mask
 altm             =  mod1Mask
 ctrlm            =  controlMask
+modm             =  mod4Mask
 shftm            =  shiftMask
 -- Actions
 encodeCChar      =  map fromIntegral . B.unpack
@@ -109,6 +109,7 @@ nSA              =  namedScratchpadAction myNS
 -- Other options
 role             =  stringProperty "WM_WINDOW_ROLE"
 
+--- CONFIG ---
 -- Key bindings.
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
@@ -157,9 +158,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x79),  spawn "XMYaourt")                    --Alt+Y
     , ((modm .|. shftm,     0xff0d),  spawn $ XMonad.terminal conf)        --Mod4+Shift+Return
 
-    --Recompile & restart XMonad
+    --Recompile || restart || terminate XMonad
     , ((modm,                 0x63),  spawn "XMR")                         --Mod4+C
     , ((modm,                 0x71),  spawn "XMRR")                        --Mod4+Q
+    , ((modm .|. shftm,       0x71),  io (exitWith ExitSuccess))           --Mod4+Shift+Q
 
     --Menu
     , ((altm,                 0x61),  spawn myAppMenu)                      --Alt+A
@@ -188,7 +190,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                 0x74),  withFocused $ windows . W.sink)      --Mod4+T
     , ((modm,                 0x2c),  sendMessage (IncMasterN 1))          --Mod4+Comma
     , ((modm,                 0x2e),  sendMessage (IncMasterN (-1)))       --Mod4+Period
-    , ((modm .|. shftm,       0x71),  io (exitWith ExitSuccess))           --Mod4+Shift+Q
 
     --Windows management
     , ((modm,                 0x60),  rotOpposite)                         --Mod4+grave
@@ -280,28 +281,6 @@ myLH =  avoidStruts
         $ onWorkspace (myWS !! 8) myTL
         $ myRT1 ||| myMRT1 ||| myMGR ||| Full
 
--- Prompts
-myPromptConfig = def {
-                       font              = myMFont   
-                     , bgColor           = myBgColor
-                     , fgColor           = myFgColor
-                     , bgHLight          = myBgColor
-                     , fgHLight          = myHlColor
-                     , promptBorderWidth = 0
-                     , position          = Top
-                     , height            = 20
-                     , alwaysHighlight   = True
-                     , historySize       = 100
-                     }
-
--- ManageHook
-myMH = manageHook def <+> 
-       myWR <+> 
-       mySP <+> 
-       namedScratchpadManageHook myNS <+> 
-       placeHook (smart (0.5,0.5)) <+> 
-       workspaceByPos
-
 -- Window Management Rules
 myWR = composeAll . concat $
     [ 
@@ -341,7 +320,7 @@ myWR = composeAll . concat $
 
     ]
     where
--- Application groups attached to workspaces
+        -- Application groups attached to workspaces
         myW   = [
                   "Firefox"
                 , "Chromium"
@@ -411,7 +390,7 @@ myWR = composeAll . concat $
                 ]
         myXII = [
                 ]
--- Application groups in center floating windows
+        -- Application groups in center floating windows
         myFC  = [
                   "Dconf-editor"
                 , "feh"
@@ -443,26 +422,40 @@ myWR = composeAll . concat $
                 , "task_dialog"
                 , "^conversation$"
                 ]
--- Custom floating windows
+        -- Custom floating windows
         myCF  = [
                   "Organizer"
                 , "Msgcompose"
                 , "addressbook"
                 , "filterlist"
                 ]
--- The position below for newer windows to the specified workspaces
+        -- The position below for newer windows to the specified workspaces
         myPBN = [
                   (myWS !! 0)
                 , (myWS !! 1)
                 , (myWS !! 8)
                 ]
--- The position end for newer windows to the specified workspaces
+        -- The position end for newer windows to the specified workspaces
         myPEN = [
                   (myWS !! 2)
                 , (myWS !! 9)
                 , (myWS !! 10)
                 , (myWS !! 11)
                 ]
+
+-- Prompts
+myPromptConfig = def {
+                       font              = myMFont   
+                     , bgColor           = myBgColor
+                     , fgColor           = myFgColor
+                     , bgHLight          = myBgColor
+                     , fgHLight          = myHlColor
+                     , promptBorderWidth = 0
+                     , position          = Top
+                     , height            = 20
+                     , alwaysHighlight   = True
+                     , historySize       = 100
+                     }
 
 -- NamedScratchpad
 myNS = [
@@ -487,6 +480,14 @@ mySP = scratchpadManageHook (W.RationalRect l t w h)
         w = 1       -- terminal width
         t = 1 - h   -- distance from top edge
         l = 1 - w   -- distance from left edge
+
+-- ManageHook
+myMH = manageHook def <+> 
+       myWR <+> 
+       mySP <+> 
+       namedScratchpadManageHook myNS <+> 
+       placeHook (smart (0.5,0.5)) <+> 
+       workspaceByPos
 
 -- Event handling
 myEH = handleEventHook def <+> 
