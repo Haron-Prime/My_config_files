@@ -9,6 +9,7 @@ if [[ -n $PID2 ]]; then
     echo > /tmp/haron/DO &
 fi
 XMTimeToggle &
+XMGWToggle &
 if [[ -n $PID1 ]]; then
     kill $PID1
     echo > /tmp/haron/UT

@@ -13,4 +13,5 @@ XMCPUToggle &
 XMTempToggle &
 XMMemToggle &
 XMVolToggle &
+XMGWToggle &
 exit 0
