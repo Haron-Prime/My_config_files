@@ -7,7 +7,8 @@ while [[ -n $(pgrep yaourt) ]]
 do 
     sleep 1
 done
-sleep 1 && echo > /tmp/haron/UP &
+# sleep 1 && 
+XMUpdate &&
 XMMWC &
-notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "      <big><b><u>YAOURT</u></b></big>" " Обновление завершено"
+notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "      <big><b><u>YAOURT</u></b></big>" " Update complete"
 exit 0
