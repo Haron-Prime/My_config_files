@@ -1,14 +1,13 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License © 2017 WTFPL http://www.wtfpl.net/
+# License WTFPL © 2017 http://www.wtfpl.net/
 
 urxvtc -name update -e yaourt -Syua &&
-while [[ -n $(pgrep yaourt) ]]
-do 
+while [[ -n $(pgrep yaourt) ]]; do 
     sleep 1
 done
 # sleep 1 && 
 XMUpdate &&
 XMMWC &
-notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "      <big><b><u>YAOURT</u></b></big>" " Update complete"
+notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "   <big><b><u>YAOURT</u></b></big>" " Update complete"
 exit 0
