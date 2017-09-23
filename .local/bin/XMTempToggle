@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License © 2017 WTFPL http://www.wtfpl.net/
+# License WTFPL © 2017 http://www.wtfpl.net/
 
 PID=`ps aux | grep XMTempAll | grep -v grep | awk '{print $2}'`
 if [[ -n $PID ]]; then

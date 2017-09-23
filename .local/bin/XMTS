@@ -1,4 +1,7 @@
 #!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL © 2017 http://www.wtfpl.net/
+
 STATE=`cat /tmp/haron/STATE2`
 IN=`vnstat | grep 'today' | awk '{print $2$3}'`
 OUT=`vnstat | grep 'today' | awk '{print $5$6}'`

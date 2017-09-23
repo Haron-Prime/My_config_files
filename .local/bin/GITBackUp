@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License © 2017 WTFPL http://www.wtfpl.net/
+# License WTFPL © 2017 http://www.wtfpl.net/
 
 cd $HOME/git/My_config_files
 COUNT=`bc <<< "$(git status | grep -c "изменено")+$(git status | grep -c "удалено")+$(git status | sed '/[А-Яа-я]/d' | sed '/^$/d' | wc -l)"`

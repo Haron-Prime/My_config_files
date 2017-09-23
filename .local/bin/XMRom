@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License © 2017 WTFPL http://www.wtfpl.net/
+# License WTFPL © 2017 http://www.wtfpl.net/
 
 # ROM1=`df -h | grep -w / | tr -s \  | cut -d \  -f 5 | cut -c 1-3 | sed -e 's/[%]//'`
 ROM1=`df -h | grep -w / | awk '{print $5}' | grep -o '[0-9]*'`
