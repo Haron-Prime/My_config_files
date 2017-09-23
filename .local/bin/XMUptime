@@ -12,7 +12,7 @@ while true; do
         min, ) OUT1=`uptime | cut -d , -f 1 | awk '{print $2,$3,$4}'`; OUT2=`uptime | awk '{print $5,$6,$9,$10,$11}'` ;;
         *    ) OUT1=`uptime | cut -d , -f 1 | awk '{print $2,$3}'`   ; OUT2=`uptime | awk '{print $4,$5,$8,$9,$10}'`  ;;
     esac
-    echo '<fc=#9df> </fc> <fn=1><fc=#9df>Arch '$KERN  $PAC 'packages</fc>  <fc=#0e0>'$OUT1'</fc>  <fc=#9df>'$OUT2'  xmonad' $XMN' xmobar' $XMB'</fc></fn>' > /tmp/haron/UT
+    echo '<fc=#9df>    </fc><fn=1><fc=#9df>Arch '$KERN  $PAC 'packages</fc>  <fc=#0e0>'$OUT1'</fc>  <fc=#9df>'$OUT2'  xmonad' $XMN' xmobar' $XMB'</fc></fn>' > /tmp/haron/UT
     sleep 60
 done
 exit 0
