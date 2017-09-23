@@ -1,5 +1,6 @@
- 
-<action=`mygtkmenu .menurc` button=1>
+"
+
+ <action=`mygtkmenu .menurc` button=1>
     <action=`XMScreenfetch` button=3>
         <fn=5>
             
@@ -10,9 +11,7 @@
 <action=`xdotool key 0xffeb+0xff1b` button=3>
     <action=`xdotool key 0xffe3+0xffe9+0xff51` button=4>
         <action=`xdotool key 0xffe3+0xffe9+0xff53` button=5>
-            <fn=4>
-                %UnsafeStdinReader%
-            </fn>
+            %UnsafeStdinReader%
         </action>
     </action>
 </action>
@@ -21,7 +20,7 @@
 
 </fn>
 <action=`mygtkmenu .placerc` button=1>
-    <action=`XMUptimeState` button=3>
+    <action=`XMUptimeToggle` button=3>
         <fn=5>
             
         </fn>
@@ -33,8 +32,7 @@
     %MW2%
 </action>
 |
-
-<action=`XMDateState` button=1>
+<action=`XMDateToggle` button=1>
     <action=`XMGSimplecal` button=3>
         <action=`XMCal` button=45>
             %DO%
@@ -48,10 +46,28 @@
     </action>
 </action>
 
+
+<fc=#ccc>
+    <action=`XMGWeather` button=1>
+        %WI%
+    </action>
+    <fn=2>
+
+    </fn>
+    <action=`XMAccuWeather` button=1>
+        <action=`XMGismeteo` button=3>
+            <fn=1>
+                %CT%
+                %CC%
+            </fn>
+        </action>
+    </action>
+</fc>
+
 |
 %UP%
 
-<action=`XMNetState` button=1>
+<action=`XMNetToggle` button=1>
     <action=`xdg-open http://192.168.0.1` button=2>
         <action=`XMVnstat & XMVnstat-h` button=3>
             <action=`XMifconfig` button=45>
@@ -62,7 +78,7 @@
 </action>
 %NS%
 
-<action=`XMTrafState` button=1>
+<action=`XMTrafToggle` button=1>
     <action=`XMTransgui` button=3>
         <action=`XMVnstat-m` button=4>
             <action=`XMVnstat-d` button=5>
@@ -74,14 +90,14 @@
 %TR%
 
 
-<action=`XMCPUState` button=1>
+<action=`XMCPUToggle` button=1>
     <fc=#ccc>
         
     </fc>
 </action>
 %CU%
 
-<action=`XMTempState` button=1>
+<action=`XMTempToggle` button=1>
     <action=`XMSensors` button=3>
         <fc=#ccc>
             
@@ -90,7 +106,7 @@
 </action>
 %TEMP%
 
-<action=`XMMemState` button=1>
+<action=`XMMemToggle` button=1>
     <fc=#ccc>
         <fn=5>
             
@@ -100,11 +116,11 @@
 %MEM%
 %RU%
 
-<action=`XMVolState` button=1>
+<action=`XMVolToggle` button=1>
     <action=`XMPavucontrol` button=2>
         <action=`pulseaudio-ctl mute` button=3>
-            <action=`pulseaudio-ctl up` button=5>
-                <action=`pulseaudio-ctl down` button=4>
+            <action=`pulseaudio-ctl down` button=4>
+                <action=`pulseaudio-ctl up` button=5>
                     <fc=#ccc>
                         
                     </fc>
@@ -138,26 +154,8 @@
     %kbd%
 </action>
 
-
-<fc=#ccc>
-    <action=`XMGWeather` button=1>
-        %WI%
-    </action>
-    <fn=2>
-
-    </fn>
-    <action=`XMAccuWeather` button=1>
-        <action=`XMGismeteo` button=3>
-            <fn=1>
-                %CT%
-                C
-            </fn>
-        </action>
-    </action>
-</fc>
-
-<action=`XMStateAll` button=1>
-    <action=`XMStateKill` button=3>
+<action=`XMToggleAll` button=1>
+    <action=`XMCleanAll` button=3>
         <fc=#ccc>
 
             
@@ -165,3 +163,4 @@
         </fc>
     </action>
 </action>
+"

@@ -1,21 +1,21 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License © 2017 WTFPL http://www.wtfpl.net/
+# License WTFPL © 2017 http://www.wtfpl.net/
 
 STATUS=`ping -c 3 8.8.8.8 | tail -2 | head -1 | awk '{print $4}'`
-if [[ $STATUS -gt 0 ]]; then
-    UPD=`checkupdates | wc -l`
-    if [[ $UPD -gt 0 ]]; then 
-        if [[ $UPD -eq 1 ]]; then
-            PKG='package'
-        elif [[ $UPD -gt 1 ]]; then
-            PKG='packages'
-        fi
-        echo "<action=XMYaourt><fc=#ffab00> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
-    else 
-        echo > /tmp/haron/UP
+while [[ $STATUS -eq 0 ]]; do
+    echo "<fc=#e50> Server is not available</fc>" > /tmp/haron/UP
+    sleep 60 &&
+done
+UPD=`checkupdates | wc -l`
+if [[ $UPD -gt 0 ]]; then 
+    if [[ $UPD -eq 1 ]]; then
+        PKG='package'
+    elif [[ $UPD -gt 1 ]]; then
+        PKG='packages'
     fi
-else
-    echo "<fc=#e50> Disconnected</fc>" > /tmp/haron/UP
+    echo "<action=XMYaourt><fc=#fb0> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
+else 
+    echo > /tmp/haron/UP
 fi
 exit 0

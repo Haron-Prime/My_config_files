@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Modified - Haron Prime
-# License © 2017 WTFPL http://www.wtfpl.net/
+# License WTFPL © 2017 http://www.wtfpl.net/
 
 while true; do
   MIXER="default"
@@ -36,13 +36,13 @@ while true; do
   VOL=`volume | format`
   VOL2=`echo $VOL | sed 's/[%]//g'`
   if [[ $VOL = "MUTE" ]]; then 
-    echo '<fn=2> </fn><fc=#e50><fn=2> </fn>'$VOL'</fc>' > /tmp/haron/VO
+    echo ' <fc=#e50>'$VOL'</fc>' > /tmp/haron/VO
   else 
         if [ $VOL2 -gt 50 ] ; then
             tmp="0$(printf "%x\n" $((255-($VOL2-50)*5)))"
-            echo '<fn=2> </fn><fc=#ff'${tmp: -2}'00>'$VOL'</fc>' > /tmp/haron/VO
+            echo ' <fc=#ff'${tmp: -2}'00>'$VOL'</fc>' > /tmp/haron/VO
             else tmp="0$(printf "%x\n" $(( 5*$VOL2 )))ff00"
-            echo '<fn=2> </fn><fc=#'${tmp: -6}'>'$VOL'</fc>' >  /tmp/haron/VO
+            echo ' <fc=#'${tmp: -6}'>'$VOL'</fc>' >  /tmp/haron/VO
         fi
   fi
   sleep 1
