@@ -93,14 +93,14 @@ alias gadd='git add'
 alias gi='git add -i'
 alias gcom='git commit -m "Update"'
 alias gpush='git push'
-alias gfull='git add --all && git commit -m "Update" && git push'
+# alias gfull='git add --all && git commit -m "Update" && git push'
 alias gch='git checkout'
 alias gcd='git checkout develop'
 alias gcm='git checkout master'
 alias gmf='git merge --no-ff -m "Update"'
-alias GC='git checkout master && git merge --no-ff -m "Update" develop && git push && git checkout develop'
 alias GF='git add --all && git commit -m "Update" && git push'
-alias GG='mcf && GF && gsync && bb && GF && ggsync && gl && GF && mcf'
+alias BS='git checkout master && git merge --no-ff -m "Update" develop && git push && git checkout develop'
+alias GU='mcf && GF && gsync && bb && GF && ggsync && gl && GF && mcf'
 
 
 # цветной вывод с помощью grc
