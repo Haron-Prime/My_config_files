@@ -56,19 +56,19 @@ import XMonad.Util.EZConfig(additionalKeysP, additionalKeys)
 
 --- CUSTOM OPTIONS ---
 -- Applications
-myBrowser        =  "vivaldi-snapshot"
+myBrowser        =  spawn "vivaldi-snapshot"
 myTerm           =  "urxvtc"
 myFM             =  "urxvtc -name ranger -e ranger"
 myNotes          =  "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree"
 myHtop           =  "urxvtc -name htop -e htop"
 myPlayer         =  "urxvtc -name ncmpcpp -e ncmpcpp"
-myEditor         =  "urxvtc -name vim -e vim"
-myFullScrot      =  "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
-myWindowScrot    =  "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
-myAreaScrot      =  "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
-myAppMenu        =  "mygtkmenu .menurc"
-myPlaceMenu      =  "mygtkmenu .placerc"
-mySreenLock      =  "i3lock -i /home/haron/wall/starrynight.png"
+myEditor         =  spawn "urxvtc -name vim -e vim"
+myFullScrot      =  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+myWindowScrot    =  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+myAreaScrot      =  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+myAppMenu        =  spawn "mygtkmenu .menurc"
+myPlaceMenu      =  spawn "mygtkmenu .placerc"
+mySreenLock      =  spawn "i3lock -i /home/haron/wall/starrynight.png"
 myQST            =  scratchpadSpawnActionTerminal myTerm
 -- Decorations
 myHlColor        =  "#95d5f5"
@@ -122,7 +122,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,              0x1008ff16),  spawn "XMMPCprev")                   --XF86AudioPrev
     , ((0,              0x1008ff17),  spawn "XMMPCnext")                   --XF86AudioNext
     , ((0,              0x1008ff30),  spawn "subl3")                       --XF86Favorites
-    , ((0,              0x1008ff18),  spawn myBrowser)                     --XF86HomePage
+    , ((0,              0x1008ff18),  myBrowser)                           --XF86HomePage
     , ((0,              0x1008ff19),  spawn "thunderbird")                 --XF86Mail
     , ((0,              0x1008ff33),  spawn "pcmanfm")                     --XF86MyComputer
     , ((0,              0x1008ff5d),  spawn "pcmanfm")                     --XF86Explorer
@@ -130,15 +130,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,              0x1008ff1b),  nSA "HTOP")                          --XF86Search
     , ((0,              0x1008ff77),  nSA "NCMPCPP")                       --XF86Save
     , ((0,              0x1008ff46),  spawn "XMR")                         --XF86Launch6
-    , ((0,              0x1008ff2f),  spawn mySreenLock)                   --XF86Sleep
+    , ((0,              0x1008ff2f),  mySreenLock)                         --XF86Sleep
     , ((0,              0x1008ff56),  nSA "OBLOGOUT")                      --XF86Close
     , ((0,              0x1008ff73),  spawn "compreboot")                  --XF86Reload
     , ((0,                  0xff69),  spawn "compdown")                    --Cancel
     , ((0,                  0xff67),  spawn "gmrun")                       --Menu
     , ((0,                  0xffc9),  myQST)                               --F12
-    , ((0,                  0xff61),  spawn myFullScrot)                   --Print
-    , ((0    .|. shftm,     0xff61),  spawn myWindowScrot)                 --Shift+Print
-    , ((altm,               0xff61),  spawn myAreaScrot)                   --Alt+Print
+    , ((0,                  0xff61),  myFullScrot)                         --Print
+    , ((0    .|. shftm,     0xff61),  myWindowScrot)                       --Shift+Print
+    , ((altm,               0xff61),  myAreaScrot)                         --Alt+Print
     , ((altm,                 0x63),  spawn "chromium")                    --Alt+C
     , ((altm,                 0x64),  nSA "DEADBEEF")                      --Alt+D
     , ((altm,                 0x66),  spawn "firefox")                     --Alt+F
@@ -154,7 +154,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x71),  nSA "OBLOGOUT")                      --Alt+Q
     , ((altm,                 0x72),  nSA "FM")                            --Alt+R
     , ((altm,                 0x74),  spawn "XMTransgui")                  --Alt+T
-    , ((altm,                 0x76),  spawn myEditor)                      --Alt+V
+    , ((altm,                 0x76),  myEditor)                            --Alt+V
     , ((altm,                 0x79),  spawn "XMYaourt")                    --Alt+Y
     , ((modm .|. shftm,     0xff0d),  spawn $ XMonad.terminal conf)        --Mod4+Shift+Return
 
@@ -164,8 +164,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shftm,       0x71),  io (exitWith ExitSuccess))           --Mod4+Shift+Q
 
     --Menu
-    , ((altm,                 0x61),  spawn myAppMenu)                      --Alt+A
-    , ((altm,                 0x62),  spawn myPlaceMenu)                    --Alt+B
+    , ((altm,                 0x61),  myAppMenu)                           --Alt+A
+    , ((altm,                 0x62),  myPlaceMenu)                         --Alt+B
 
     --Prompts management
     , ((altm,               0xffbe),  manPrompt myPromptConfig)            --Alt+F1
