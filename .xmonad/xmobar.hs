@@ -5,11 +5,11 @@
 Config {
          font             = "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
        , additionalFonts  = [
-                             "xft:Larabiefont:size=12:weight=bold:antialias=true:hinting=true"
-                            ,"xft:Terminus Re33:pixelsize=6"  -- for separators
-                            ,"xft:Weather Icons:weight=bold:pixelsize=14:antialias=true:hinting=true"
-                            ,"xft:SF Square Head:weight=bold:size=11:antialias=true:hinting=true"
-                            ,"xft:Terminus Re33 Nerd Bold:size=11:antialias=true:hinting=true"
+                             "xft:Larabiefont:size=12:weight=bold:antialias=true:hinting=true"         -- fn=1
+                            ,"xft:Terminus Re33:pixelsize=6"                                           -- fn=2 (for separators)
+                            ,"xft:Weather Icons:weight=bold:pixelsize=14:antialias=true:hinting=true"  -- fn=3
+                            ,"xft:SF Square Head:weight=bold:size=11:antialias=true:hinting=true"      -- fn=4
+                            ,"xft:Terminus Re33 Nerd Bold:size=11:antialias=true:hinting=true"         -- fn=5
                             ]
        , iconRoot         = "/home/haron/.xmonad/resources"
        , borderColor      = "#151515"
@@ -28,9 +28,9 @@ Config {
        , persistent       = False
        , commands         = [
                               Run UnsafeStdinReader
-                            , Run PipeReader         "/tmp/haron/UT"    "UT"    -- Uptime etc
+                            , Run PipeReader         "/tmp/haron/UT"    "UT"    -- Uptime, load average, kernel etc
                             , Run PipeReader         "/tmp/haron/MW2"   "MW"    -- Minimized windows
-                            , Run PipeReader         "/tmp/haron/DO"    "DO"    -- Current date etc
+                            , Run PipeReader         "/tmp/haron/DO"    "DO"    -- Current date, tz etc
                             , Run PipeReader         "/tmp/haron/TIME"  "TIME"  -- Current time
                             , Run PipeReader         "/tmp/haron/WI"    "WI"    -- Weather icon
                             , Run PipeReader         "/tmp/haron/CT"    "CT"    -- Current temperature
@@ -45,7 +45,7 @@ Config {
                             , Run PipeReader         "/tmp/haron/MEM"   "MEM"   -- Using RAM and SWAP
                             , Run PipeReader         "/tmp/haron/RU"    "RU"    -- Using disk partitions
                             , Run PipeReader         "/tmp/haron/VO"    "VO"    -- Volume level
-                            , Run PipeReader         "/tmp/haron/PL"    "PL"    -- MPD status
+                            , Run PipeReader         "/tmp/haron/PL"    "PL"    -- Playback (artist, track)
                             , Run PipeReader         "/tmp/haron/PS"    "PS"    -- MPD control
                             , Run Kbd                [
                                                        ("us", "<fc=#ccc></fc>")
