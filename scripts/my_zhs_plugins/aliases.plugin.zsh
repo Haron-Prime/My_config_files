@@ -247,3 +247,6 @@ alias -s {avi,mpeg,mpg,mov,m2v,mkv}=mpv
 alias -s {odt,doc,sxw,rtf}=libreoffice
 alias -s {png,gif,jpg,jpeg}=feh
 alias -s text=vim
+
+alias P16S='rsync -ruptgo --delete --progress /home/haron/.local/lib/Pro100-5.20-GIV /media/16GB/Pro100-5.20-GIV/'
+alias P8S='rsync -ruptgo --delete --progress /home/haron/.local/lib/Pro100-5.20-GIV /media/8GB/Pro100-5.20-GIV/'
