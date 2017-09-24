@@ -2,7 +2,7 @@
 # Author - Haron Prime
 # License WTFPL © 2017 http://www.wtfpl.net/
 
-STATUS=`cat /tmp/haron/NetState`
+STATUS=`ping -c 3 8.8.8.8 | tail -2 | head -1 | awk '{print $4}'`
 while [[ $STATUS -eq 0 ]]; do
     echo "<fc=#e50> Server is not available</fc>" > /tmp/haron/UP
     sleep 15 &&
