@@ -3,20 +3,20 @@
 # License WTFPL © 2017 http://www.wtfpl.net/
 # Recompile and restart xmonad
 
-kill $(ps aux | grep XMMPD                              | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMNetTest                          | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMTrans                            | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMTimeNew                          | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMNetSpeed                         | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMTraf     | grep -v XMTrafState   | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMCUNew                            | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMTempAll                          | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMMemAll                           | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMRomNew                           | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMUptime   | grep -v XMUptimeState | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMVolNew                           | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMPlay                             | grep -v grep | awk '{print $2}') &
-kill $(ps aux | grep XMDate     | grep -v XMDateState   | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMMPD                               | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMNetTest                           | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMTrans                             | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMTimeNew                           | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMNetSpeed                          | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMTraf     | grep -v XMTrafToggle   | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMCUNew                             | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMTempAll                           | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMMemAll                            | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMRomNew                            | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMUptime   | grep -v XMUptimeToggle | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMVolNew                            | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMPlay                              | grep -v grep | awk '{print $2}') &
+kill $(ps aux | grep XMDate     | grep -v XMDateToggle   | grep -v grep | awk '{print $2}') &
 killall sleep &
 killall gis-weather &
 killall xmobar &
