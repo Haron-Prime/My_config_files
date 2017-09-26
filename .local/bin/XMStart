@@ -5,7 +5,6 @@
 echo  "" > /tmp/haron/NT &
 echo  "" > /tmp/haron/TU &
 echo  " " > /tmp/haron/WI &
-echo "C" > /tmp/haron/CC &
 echo > /tmp/haron/CT &
 echo > /tmp/haron/CU &
 echo > /tmp/haron/DO &

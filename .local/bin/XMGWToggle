@@ -6,10 +6,8 @@ if [[ -n $(ps aux | grep gis-weather | grep -v grep | awk '{print $2}') ]]; then
     killall gis-weather  &
     echo > /tmp/haron/WI &
     echo > /tmp/haron/CT &
-    echo > /tmp/haron/CC &
 else
     echo  " " > /tmp/haron/WI &
-    echo "C" > /tmp/haron/CC &
     gis-weather &
 fi
 exit 0
