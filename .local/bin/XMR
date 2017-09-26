@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
 # License WTFPL © 2017 http://www.wtfpl.net/
-# Recompile and restart xmonad
+# Restart xmonad
 
 kill $(ps aux | grep XMMPD                               | grep -v grep | awk '{print $2}') &
 kill $(ps aux | grep XMNetTest                           | grep -v grep | awk '{print $2}') &
