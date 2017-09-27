@@ -12,5 +12,5 @@ else
     W="windows"
 fi
 echo $(( $F1 + 1 )) > $MW1 
-echo "<fc=#fa0><fn=1> $F2 minimized $W</fn></fc>" > $MW2
+echo "<fc=#fa0> <fn=5></fn> <fn=1>$F2 minimized $W</fn></fc>" > $MW2
 exit 0
