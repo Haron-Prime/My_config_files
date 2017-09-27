@@ -57,7 +57,7 @@ Xmessage*form.message.Scroll:      WhenNeeded
 
 *transparent:                      false
 *lineSpace:                        0
-*letterSpace:                      -1
+! *letterSpace:                      -1
 ! *fading:                           30
 *cursorBlink:                      true
 *cursorUnderline:                  true
@@ -104,8 +104,8 @@ Xmessage*form.message.Scroll:      WhenNeeded
 
 ! URxvt parameters
 
-URxvt*font:                        xft:Terminus Re33 Nerd Bold:size=11:antialias=false:hinting=true
-URxvt*boldFont:                    xft:Terminus Re33 Nerd Bold:weight=bold:size=11:antialias=false:hinting=true
+URxvt*font:                        xft:Terminus Re33 Nerd:size=12:antialias=false:hinting=true
+URxvt*boldFont:                    xft:Terminus Re33 Nerd:weight=bold:size=12:antialias=false:hinting=true
 URxvt*scrollBar:                   false
 URxvt*internalBorder:              5
 URxvt*depth:                       32
