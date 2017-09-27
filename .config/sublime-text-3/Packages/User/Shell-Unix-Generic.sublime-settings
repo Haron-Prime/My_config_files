@@ -2,12 +2,12 @@
 	"extensions":
 	[
 		"bash",
-		"zsh",
 		"sh",
+		"zsh",
+		"x-uptime",
+		"nnm",
 		"config",
 		"conf",
-		"x-uptime",
-		"cpu-freq",
-		"nnm"
+		"cpu-freq"
 	]
 }
