@@ -1,10 +1,10 @@
 {
 	"extensions":
 	[
-		"php4",
-		"php5",
 		"phtml",
 		"inc",
+		"php4",
+		"php5",
 		"php3"
 	]
 }
