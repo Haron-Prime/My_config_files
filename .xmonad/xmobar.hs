@@ -2,6 +2,8 @@
 -- Author - Haron Prime
 -- License WTFPL © 2017 http://www.wtfpl.net/
 
+-- List of all scripts used and their description is in the file /.local/bin/READ.ME
+
 Config {
          font             = "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
        , additionalFonts  = [

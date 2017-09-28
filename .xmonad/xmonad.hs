@@ -2,6 +2,8 @@
 -- Author - Haron Prime
 -- License WTFPL © 2017 http://www.wtfpl.net/
 
+-- List of all scripts used and their description is in the file /.local/bin/READ.ME
+
 --- MODULES INCLUDED ---
 -- Base
 import XMonad hiding ( (|||) )
