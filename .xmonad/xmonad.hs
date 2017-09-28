@@ -260,7 +260,7 @@ xmobarEscape = concatMap doubleLts
           doubleLts x   = [x]
 
 myWS = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J", "T" , "X" , "XI" , "XII"]
-    where clickable l = [ "<fn=4><action=`xdotool key 0xffeb+" ++ show (n) ++ "` button=1>" ++ ws ++ "</action></fn>" |
+    where clickable l = [ "<fn=4><action=`xdotool key 0xffeb+" ++ show (n) ++ "` button=1><action=`xdotool key 0xffeb+0xff1b` button=3><action=`xdotool key 0xffe3+0xffe9+0xff51` button=4><action=`xdotool key 0xffe3+0xffe9+0xff53` button=5>" ++ ws ++ "</action></action></action></action></fn>" |
                         (i,ws) <- zip ["0x31", "0x32", "0x33", "0x34", "0x35", "0x36", "0x37", "0x38", "0x39", "0x30", "0x2d", "0x3d"] l,
                         let n = i 
                         ]

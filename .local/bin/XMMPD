@@ -5,9 +5,9 @@
 while [[ true ]]; do
     ST=`mpc | sed -n 2p | awk '{print $1}' | sed -e 's/[^a-z]//g'`
     case $ST in
-        playing  ) echo '<action=`mpc stop`></action> <action=`mpc pause`></action> <fc=#84ff7f><action=`mpc play`></action></fc>' > /tmp/haron/PS  ;;
-        paused   ) echo '<action=`mpc stop`></action> <fc=#f7ff7f><action=`mpc pause`></action></fc> <action=`mpc play`></action>' > /tmp/haron/PS  ;;
-        *        ) echo '<fc=#ff8181><action=`mpc stop`></action></fc> <action=`mpc pause`></action> <action=`mpc play`></action>' > /tmp/haron/PS  ;;
+        playing  ) echo '<fn=5><action=`XMncmpcpp` button=3><action=`XMMPC` button=45><action=`XMMPCprev` button=1></action> <action=`mpc stop`></action> <action=`mpc pause`></action> <fc=#84ff7f><action=`mpc play`></action></fc> <action=`XMMPCnext` button=1></action></action></action></fn>' > /tmp/haron/PS  ;;
+        paused   ) echo '<fn=5><action=`XMncmpcpp` button=3><action=`XMMPC` button=45><action=`XMMPCprev` button=1></action> <action=`mpc stop`></action> <fc=#f7ff7f><action=`mpc pause`></action></fc> <action=`mpc play`></action> <action=`XMMPCnext` button=1></action></action></action></fn>' > /tmp/haron/PS  ;;
+        *        ) echo '<fn=5><action=`XMncmpcpp` button=3><action=`XMMPC` button=45><action=`XMMPCprev` button=1></action> <fc=#ff8181><action=`mpc stop`></action></fc> <action=`mpc pause`></action> <action=`mpc play`></action> <action=`XMMPCnext` button=1></action></action></action></fn>' > /tmp/haron/PS  ;;
     esac
     sleep 1
 done
