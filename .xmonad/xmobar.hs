@@ -41,13 +41,13 @@ Config {
                             , Run PipeReader         "/tmp/haron/NS"  "NS"  -- Network speed
                             , Run PipeReader         "/tmp/haron/TS"  "TS"  -- Transmission-daemon status
                             , Run PipeReader         "/tmp/haron/DT"  "DT"  -- Daily traffic
-                            , Run PipeReader         "/tmp/haron/CU"  "CU"  -- CPU load
+                            , Run PipeReader         "/tmp/haron/CU"  "CU"  -- CPU load and freq
                             , Run PipeReader         "/tmp/haron/TA"  "TA"  -- Temperature of all devices
                             , Run PipeReader         "/tmp/haron/MU"  "MU"  -- Using RAM and SWAP
                             , Run PipeReader         "/tmp/haron/RU"  "RU"  -- Using disk partitions
                             , Run PipeReader         "/tmp/haron/VL"  "VL"  -- Volume level
                             , Run PipeReader         "/tmp/haron/PL"  "PL"  -- Playback (artist, track)
-                            , Run PipeReader         "/tmp/haron/PS"  "PS"  -- MPD control
+                            , Run PipeReader         "/tmp/haron/PS"  "PS"  -- MPD control buttons
                             , Run Kbd                [
                                                        ("us", "<fc=#ccc></fc>")
                                                      , ("ru", "<fc=#f60></fc>")
