@@ -10,14 +10,14 @@ All listed scripts must be in the directory $HOME/.local/bin
 XMStart                     -  Running programs and scripts at start xmonad
 XMR                         -  Restart xmonad, xmobar, gis-weather and running scripts
 XMRR                        -  Recompile xmonad. Restart xmonad, xmobar, gis-weather and running scripts
-XMMWO                       -  
-XMMWC                       -  
-XMMPCtoggle                 -  
-XMMPCstop                   -  
-XMMPCprev                   -  
-XMMPCnext                   -  
+XMMWO                       -  Minimize windows
+XMMWC                       -  Restore minimize windows
+XMMPCtoggle                 -  ` mpc toggle` and current artist/track in popup notification
+XMMPCstop                   -  ` mpc stop` and current artist/track in popup notification
+XMMPCprev                   -  ` mpc prev` and current artist/track in popup notification
+XMMPCnext                   -  ` mpc next` and current artist/track in popup notification
 XMGalculator                -  Start/stop galculator
-XMNotes-w                   -  
+XMNotes-w                   -  Terminal window with vim (my text notes)
 XMTransgui                  -  Start/stop transgui
 XMYaourt                    -  Terminal window with yaourt
 XMUptimeToggle              -  ON/OFF XMUptime
@@ -37,8 +37,8 @@ XMVolToggle                 -  ON/OFF XMVolNew
 XMDateToggle                -  ON/OFF XMDate
 XMToggleAll                 -  ON/OFF all used in xmobar scripts
 XMCleanAll                  -  clear all pipes
-compdown                    -  Shutdown computer
-compreboot                  -  Restart computer
+compdown                    -  Shutdown computer (with zenity)
+compreboot                  -  Restart computer (with zenity)
 gis-weaether                -  Script to run the git-version of Gis-weather
 
         -- In xmobar.hs and in other scripts --
