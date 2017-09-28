@@ -5,7 +5,7 @@
 PID=`ps aux | grep XMTraf | grep -v XMTrafToggle | grep -v grep | awk '{print $2}'`
 if [[ -n $PID ]]; then
     kill $PID
-    echo > /tmp/haron/TR
+    echo > /tmp/haron/DT
     exit 0
 else
     XMTraf &

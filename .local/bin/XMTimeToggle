@@ -5,7 +5,7 @@
 PID=`ps aux | grep XMTimeNew | grep -v grep | awk '{print $2}'`
 if [[ -n $PID ]]; then
     kill $PID
-    echo > /tmp/haron/TIME
+    echo > /tmp/haron/LT
     exit 0
 else
     XMTimeNew &

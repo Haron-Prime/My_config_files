@@ -15,14 +15,14 @@ kill $(ps aux | grep XMPlay                                 | grep -v grep | awk
 kill $(ps aux | grep XMDate        | grep -v XMDateToggle   | grep -v grep | awk '{print $2}') &
 echo > /tmp/haron/CU &
 echo > /tmp/haron/DO &
-echo > /tmp/haron/MEM &
-echo > /tmp/haron/MW2 &
+echo > /tmp/haron/MU &
+echo > /tmp/haron/MW &
 echo > /tmp/haron/NS &
 echo > /tmp/haron/PL &
 echo > /tmp/haron/RU &
-echo > /tmp/haron/TEMP &
-echo > /tmp/haron/TR &
+echo > /tmp/haron/TA &
+echo > /tmp/haron/DT &
 echo > /tmp/haron/UP &
 echo > /tmp/haron/UT &
-echo > /tmp/haron/VO &
+echo > /tmp/haron/VL &
 exit 0

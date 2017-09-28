@@ -17,6 +17,6 @@ while true; do
           else tmp="0$(printf '%x\n' $(( 5*$SWAP )))ff00"
           SU=`echo "<fc=#${tmp: -6}>$SWAP%</fc>"`
     fi
-    echo '<action=`XMTop-mem` button=1><action=`XMFree` button=3>'$MU $SU'</action></action>' > /tmp/haron/MEM
+    echo '<action=`XMTop-mem` button=1><action=`XMFree` button=3>'$MU $SU'</action></action>' > /tmp/haron/MU
     sleep 5
 done
