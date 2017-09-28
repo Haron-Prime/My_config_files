@@ -3,21 +3,21 @@
 # License WTFPL © 2017 http://www.wtfpl.net/
 
 echo  "" > /tmp/haron/NT &
-echo  "" > /tmp/haron/TU &
+echo  "" > /tmp/haron/TS &
 echo  " " > /tmp/haron/WI &
 echo > /tmp/haron/CT &
 echo > /tmp/haron/CU &
 echo > /tmp/haron/DO &
-echo > /tmp/haron/MEM &
-echo > /tmp/haron/MW2 &
+echo > /tmp/haron/DT &
+echo > /tmp/haron/MU &
+echo > /tmp/haron/MW &
 echo > /tmp/haron/NS &
 echo > /tmp/haron/PL &
 echo > /tmp/haron/RU &
-echo > /tmp/haron/TEMP &
-echo > /tmp/haron/TR &
+echo > /tmp/haron/TA &
 echo > /tmp/haron/UP &
 echo > /tmp/haron/UT &
-echo > /tmp/haron/VO &
+echo > /tmp/haron/VL &
 if [[ -z $(ps aux | grep gis-weather.py | grep -v grep | awk '{print $2}') ]]; then
     gis-weather &
 fi

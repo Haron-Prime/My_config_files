@@ -7,7 +7,7 @@ PID2=`ps aux | grep XMRomNew | grep -v grep | awk '{print $2}'`
 if [[ -n $PID1 ]]|[[ -n $PID2 ]]; then
     kill $PID1
     kill $PID2
-    echo > /tmp/haron/MEM
+    echo > /tmp/haron/MU
     echo > /tmp/haron/RU
     exit 0
 else

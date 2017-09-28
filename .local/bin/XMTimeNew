@@ -3,6 +3,6 @@
 # License WTFPL © 2017 http://www.wtfpl.net/
 
 while true; do
-    echo `date "+%H:%M:%S"` > /tmp/haron/TIME
+    echo `date "+%H:%M:%S"` > /tmp/haron/LT
     sleep 1
 done
