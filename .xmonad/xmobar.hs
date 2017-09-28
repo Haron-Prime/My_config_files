@@ -5,7 +5,6 @@
 -- List of all scripts used and their description is in the file /.local/bin/READ.ME
 
 Config {
-
          position         = Static { xpos = 0 , ypos = 0, width = 1920, height = 24 }
        , textOffset       = -1
        , iconOffset       = -1
@@ -31,24 +30,24 @@ Config {
                             ]
        , commands         = [
                               Run UnsafeStdinReader
-                            , Run PipeReader         "/tmp/haron/UT"  "UT"                             -- Uptime, load average, kernel etc
-                            , Run PipeReader         "/tmp/haron/MW"  "MW"                             -- Minimized windows
-                            , Run PipeReader         "/tmp/haron/DO"  "DO"                             -- Current local date, tz etc
-                            , Run PipeReader         "/tmp/haron/LT"  "LT"                             -- Current local time
-                            , Run PipeReader         "/tmp/haron/WI"  "WI"                             -- Current weather icon
-                            , Run PipeReader         "/tmp/haron/CT"  "CT"                             -- Current local temperature
-                            , Run PipeReader         "/tmp/haron/UP"  "UP"                             -- Availability of updates
-                            , Run PipeReader         "/tmp/haron/NT"  "NT"                             -- Network status
-                            , Run PipeReader         "/tmp/haron/NS"  "NS"                             -- Network speed
-                            , Run PipeReader         "/tmp/haron/TS"  "TS"                             -- Transmission-daemon status
-                            , Run PipeReader         "/tmp/haron/DT"  "DT"                             -- Daily traffic
-                            , Run PipeReader         "/tmp/haron/CU"  "CU"                             -- CPU load and freq
-                            , Run PipeReader         "/tmp/haron/TA"  "TA"                             -- Temperature of all devices
-                            , Run PipeReader         "/tmp/haron/MU"  "MU"                             -- Using RAM and SWAP
-                            , Run PipeReader         "/tmp/haron/RU"  "RU"                             -- Using disk partitions
-                            , Run PipeReader         "/tmp/haron/VL"  "VL"                             -- Volume level
-                            , Run PipeReader         "/tmp/haron/PL"  "PL"                             -- Playback (artist/track)
-                            , Run PipeReader         "/tmp/haron/PS"  "PS"                             -- MPD control buttons
+                            , Run PipeReader         "/tmp/haron/UT"    "UT"                           -- Uptime, load average, kernel etc
+                            , Run PipeReader         "/tmp/haron/MW"    "MW"                           -- Minimized windows
+                            , Run PipeReader         "/tmp/haron/DO"    "DO"                           -- Current local date, tz etc
+                            , Run PipeReader         "/tmp/haron/LT"    "LT"                           -- Current local time
+                            , Run PipeReader         "/tmp/haron/WI"    "WI"                           -- Current weather icon
+                            , Run PipeReader         "/tmp/haron/CT"    "CT"                           -- Current local temperature
+                            , Run PipeReader         "/tmp/haron/UP"    "UP"                           -- Availability of updates
+                            , Run PipeReader         "/tmp/haron/NT"    "NT"                           -- Network status
+                            , Run PipeReader         "/tmp/haron/NS"    "NS"                           -- Network speed
+                            , Run PipeReader         "/tmp/haron/TS"    "TS"                           -- Transmission-daemon status
+                            , Run PipeReader         "/tmp/haron/DT"    "DT"                           -- Daily traffic
+                            , Run PipeReader         "/tmp/haron/CU"    "CU"                           -- CPU load and freq
+                            , Run PipeReader         "/tmp/haron/TA"    "TA"                           -- Temperature of all devices
+                            , Run PipeReader         "/tmp/haron/MU"    "MU"                           -- Using RAM and SWAP
+                            , Run PipeReader         "/tmp/haron/RU"    "RU"                           -- Using disk partitions
+                            , Run PipeReader         "/tmp/haron/VL"    "VL"                           -- Volume level
+                            , Run PipeReader         "/tmp/haron/PL"    "PL"                           -- Playback (artist/track)
+                            , Run PipeReader         "/tmp/haron/PS"    "PS"                           -- MPD control buttons
                             , Run Kbd                [
                                                        ("us", "<fc=#ccc></fc>")
                                                      , ("ru", "<fc=#f60></fc>")
