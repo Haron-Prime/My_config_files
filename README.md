@@ -88,7 +88,7 @@ The "develop" branch are for testing purposes only.
 ![](/screenshots/herbstluftwm-3.png?raw=true)
 
 
-### License - © 2017 WTFPL - http://www.wtfpl.net/ 
+### License - WTFPL © 2017  http://www.wtfpl.net/ 
 
 ```
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
