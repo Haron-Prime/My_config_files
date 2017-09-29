@@ -32,6 +32,7 @@
 	[
 		"ApplySyntax",
 		"AutoSetSyntax",
+		"BracketGuard",
 		"Color Highlighter",
 		"Configify",
 		"Diff",
