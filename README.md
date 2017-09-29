@@ -22,20 +22,35 @@ The "develop" branch are for testing purposes only.
 #### XMobar
 
 ![](/screenshots/xmobar-1.png?raw=true)
+
 ![](/screenshots/xmobar-2.png?raw=true)
+
 ![](/screenshots/xmobar-3.png?raw=true)
+
 ![](/screenshots/xmobar-4.png?raw=true)
+
 ![](/screenshots/xmobar-5.png?raw=true)
+
 ![](/screenshots/xmobar-6.png?raw=true)
+
 ![](/screenshots/xmobar-7.png?raw=true)
+
 ![](/screenshots/xmobar-8.png?raw=true)
+
 ![](/screenshots/xmobar-9.png?raw=true)
+
 ![](/screenshots/xmobar-10.png?raw=true)
+
 ![](/screenshots/xmobar-11.png?raw=true)
+
 ![](/screenshots/xmobar-12.png?raw=true)
+
 ![](/screenshots/xmobar-13.png?raw=true)
+
 ![](/screenshots/xmobar-14.png?raw=true)
+
 ![](/screenshots/xmobar-15.png?raw=true)
+
 ![](/screenshots/xmobar-16.png?raw=true)
 
 
