@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL © 2017 http://www.wtfpl.net/
+
+while true; do 
+    vnstat -m | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/devices/network-wired.png" -t 0
+    sleep 60
+    kill $(pidof dunst)
+done
+exit 0

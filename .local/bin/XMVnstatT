@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL © 2017 http://www.wtfpl.net/
+
+if [[ -n $(pidof dunst) ]]; then 
+    kill $(pidof dunst)
+else
+    vnstat    | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/devices/network-wired.png" -t 0 &
+    vnstat -h | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/devices/network-wired.png" -t 0 &
+fi
+exit 0
