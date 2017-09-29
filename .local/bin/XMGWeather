@@ -5,6 +5,7 @@
 if [[ -n $(pidof dunst) ]]; then 
     kill $(pidof dunst)
 else 
+    kill $(pidof dunst) &
     notify-send -t 0 -i "/home/haron/.config/gis-weather/cur_icon.png" "$(cat /tmp/haron/condition)"
 fi
 exit 0
