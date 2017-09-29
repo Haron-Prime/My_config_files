@@ -21,6 +21,8 @@ The "develop" branch are for testing purposes only.
 
 #### XMobar (latest version)
 
+##### Left side
+
 ![](/screenshots/xmobar-1.png?raw=true)
 
 ![](/screenshots/xmobar-3.png?raw=true)
