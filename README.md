@@ -21,7 +21,6 @@ The "develop" branch are for testing purposes only.
 
 #### XMobar
 
-![](/screenshots/xmobar-0.png?raw=true)
 ![](/screenshots/xmobar-1.png?raw=true)
 ![](/screenshots/xmobar-2.png?raw=true)
 ![](/screenshots/xmobar-3.png?raw=true)
@@ -30,7 +29,15 @@ The "develop" branch are for testing purposes only.
 ![](/screenshots/xmobar-6.png?raw=true)
 ![](/screenshots/xmobar-7.png?raw=true)
 ![](/screenshots/xmobar-8.png?raw=true)
-![](/screenshots/xmobar-full.png?raw=true)
+![](/screenshots/xmobar-9.png?raw=true)
+![](/screenshots/xmobar-10.png?raw=true)
+![](/screenshots/xmobar-11.png?raw=true)
+![](/screenshots/xmobar-12.png?raw=true)
+![](/screenshots/xmobar-13.png?raw=true)
+![](/screenshots/xmobar-14.png?raw=true)
+![](/screenshots/xmobar-15.png?raw=true)
+![](/screenshots/xmobar-16.png?raw=true)
+
 
 #### Dynamic blocks of information in XMobar (video)
 

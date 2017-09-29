@@ -6,7 +6,7 @@
 
 Config {
          position         = Static { xpos = 0 , ypos = 0, width = 1920, height = 24 }
-       , textOffset       = -1
+       , textOffset       = 20
        , iconOffset       = -1
        , lowerOnStart     = True
        , hideOnStart      = False
