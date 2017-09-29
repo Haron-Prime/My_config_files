@@ -39,6 +39,8 @@ The "develop" branch are for testing purposes only.
 
 ![](/screenshots/xmobar-6.png?raw=true)
 
+![](/screenshots/xmobar-16.png?raw=true)
+
 ![](/screenshots/xmobar-7.png?raw=true)
 
 ![](/screenshots/xmobar-8.png?raw=true)
@@ -56,8 +58,6 @@ The "develop" branch are for testing purposes only.
 ![](/screenshots/xmobar-14.png?raw=true)
 
 ![](/screenshots/xmobar-15.png?raw=true)
-
-![](/screenshots/xmobar-16.png?raw=true)
 
 
 #### Dynamic blocks of information in XMobar (video)
