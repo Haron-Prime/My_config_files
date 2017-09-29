@@ -1,0 +1,19 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL © 2017 http://www.wtfpl.net/
+
+PID1=`ps aux | grep XMVnstat1 | grep -v XMVnstat1Toggle | grep -v grep | awk '{print $2}'`
+PID2=`ps aux | grep dunst                               | grep -v grep | awk '{print $2}'`
+if [[ -n $PID1 ]]; then
+    if [[ -n $PID2 ]]; then
+        kill $PID2 &
+    fi
+    kill $PID1 &
+    exit 0
+else
+    if [[ -n $PID2 ]]; then
+        kill $PID2
+    fi
+    XMVnstat1 &
+fi
+exit 0
