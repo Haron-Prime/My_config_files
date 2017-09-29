@@ -29,9 +29,13 @@ The "develop" branch are for testing purposes only.
 
 ![](/screenshots/xmobar-2.png?raw=true)
 
+##### Center
+
 ![](/screenshots/xmobar-4.png?raw=true)
 
 ![](/screenshots/xmobar-5.png?raw=true)
+
+##### Right side
 
 ![](/screenshots/xmobar-6.png?raw=true)
 
