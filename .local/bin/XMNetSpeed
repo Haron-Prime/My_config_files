@@ -27,5 +27,5 @@ while true; do
         TX=$TTX"B/s"
     fi
 
-    echo ' <action=`XMVnstatT` button=13>'$RX' <fc=#0e0></fc><fc=#e50></fc> '$TX'</action>' > /tmp/haron/NS
+    echo " $RX <fc=#0e0></fc><fc=#e50></fc> $TX" > /tmp/haron/NS
 done

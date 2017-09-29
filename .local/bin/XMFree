@@ -5,6 +5,7 @@
 if [[ -n $(pidof dunst) ]]; then 
     kill $(pidof dunst)
 else 
+    kill $(pidof dunst) &
     free | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/devices/media-floppy.png" -t 0
 fi
 exit 0

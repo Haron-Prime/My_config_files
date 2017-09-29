@@ -5,6 +5,7 @@
 if [[ -n $(pidof dunst) ]]; then 
     kill $(pidof dunst)
 else
+    kill $(pidof dunst) &
     vnstat    | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/devices/network-wired.png" -t 0 &
     vnstat -h | xargs -0 notify-send -i "/home/haron/.icons/nouveGnomeGray/24x24/devices/network-wired.png" -t 0 &
 fi
