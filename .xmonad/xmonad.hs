@@ -504,7 +504,7 @@ mySH = return () <+>
        spawn "XMStart" 
 
 main = do
-    xmproc <- spawnPipe "xmobar $HOME/.xmonad/xmobar.hs"
+    xmproc <- spawnPipe "xmobar $HOME/.xmonad/xmobar-test.hs"
     xmonad $ ewmh $ withUrgencyHookC NoUrgencyHook urgencyConfig def 
         {
           terminal           = myTerm
