@@ -12,19 +12,19 @@ while true; do
     TTX=`echo "scale=2; ($NTX-$OTX)" | bc -l`
 
     if [ $TRX -ge 1048576 ]; then
-        RX=`echo "scale=2; ($TRX/1048576)" | bc -l`"MB/s"
+        RX=`echo "scale=2; ($TRX/1048576)" | bc -l`" MiB/s"
     elif [ $TRX -ge 1024 ]; then
-        RX=`echo "scale=2; ($TRX/1024)" | bc -l`"KB/s"
+        RX=`echo "scale=2; ($TRX/1024)" | bc -l`" KiB/s"
     else
-        RX=$TRX"B/s"
+        RX=$TRX" B/s"
     fi
 
     if [ $TTX -ge 1048576 ]; then
-        TX=`echo "scale=2; ($TTX/1048576)" | bc -l`"MB/s"
+        TX=`echo "scale=2; ($TTX/1048576)" | bc -l`" MiB/s"
     elif [ $TTX -ge 1024 ]; then
-        TX=`echo "scale=2; ($TTX/1024)" | bc -l`"KB/s"
+        TX=`echo "scale=2; ($TTX/1024)" | bc -l`" KiB/s"
     else
-        TX=$TTX"B/s"
+        TX=$TTX" B/s"
     fi
 
     echo " $RX <fc=#0e0></fc><fc=#e50></fc> $TX" > /tmp/haron/NS

@@ -12,7 +12,7 @@ while true; do
     TTX=`echo "scale=2; ($NTX-$OTX)" | bc -l`
 
     if [ $TRX -ge 1000000 ]; then
-        RX=`echo "scale=2; ($TRX/1000000)" | bc -l`" mbps"
+        RX=`echo "scale=2; ($TRX/1000000)" | bc -l`" Mbps"
     elif [ $TRX -ge 1000 ]; then
         RX=`echo "scale=2; ($TRX/1000)" | bc -l`" kbps"
     else
@@ -20,7 +20,7 @@ while true; do
     fi
 
     if [ $TTX -ge 1000000 ]; then
-        TX=`echo "scale=2; ($TTX/1000000)" | bc -l`" mbps"
+        TX=`echo "scale=2; ($TTX/1000000)" | bc -l`" Mbps"
     elif [ $TTX -ge 1000 ]; then
         TX=`echo "scale=2; ($TTX/1000)" | bc -l`" kbps"
     else
