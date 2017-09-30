@@ -219,7 +219,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- XMobar action management
     , ((altm,                 0x30),  spawn "XMUptimeToggle")              --Alt+0
     , ((altm,                 0x31),  spawn "XMNetToggle")                 --Alt+1
-    , ((altm .|. ctrlm,       0x31),  spawn "XMVnstatT")                   --Alt+Ctrl+1
+    , ((altm .|. ctrlm,       0x31),  spawn "XMVnstat+h")                  --Alt+Ctrl+1
     , ((altm,                 0x32),  spawn "XMTrafToggle")                --Alt+2
     , ((altm .|. ctrlm,       0x32),  spawn "XMVnstat-d")                  --Alt+Ctrl+2
     , ((altm,                 0x33),  spawn "XMCPUToggle")                 --Alt+3
