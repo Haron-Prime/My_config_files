@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+while true; do
+    echo "<fc=#5f5>  </fc>" > /tmp/haron/count
+    sleep 1 &&
+    echo "<fc=#5f5>  </fc>" > /tmp/haron/count
+    sleep 1 &&
+    echo "<fc=#5f5>  </fc>" > /tmp/haron/count
+    sleep 1 &&
+    echo "<fc=#5f5>  </fc>" > /tmp/haron/count
+    sleep 1 &&
+    echo "<fc=#5f5>  </fc>" > /tmp/haron/count
+    sleep 1 &&
+done
