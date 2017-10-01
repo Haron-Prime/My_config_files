@@ -4,13 +4,13 @@
 
 while true; do
     echo "<fc=#5f5>  </fc>" > /tmp/haron/battery
-    sleep 1 &&
+    sleep 0.5
     echo "<fc=#5f5>  </fc>" > /tmp/haron/battery
-    sleep 1 &&
+    sleep 0.5
     echo "<fc=#5f5>  </fc>" > /tmp/haron/battery
-    sleep 1 &&
+    sleep 0.5
     echo "<fc=#5f5>  </fc>" > /tmp/haron/battery
-    sleep 1 &&
+    sleep 0.5
     echo "<fc=#5f5>  </fc>" > /tmp/haron/battery
-    sleep 1 &&
+    sleep 0.5
 done
