@@ -86,6 +86,8 @@ alias d2hp='printf \#%02X%02X%02X `xclip -o` | xclip -selection clipboard'
 
 alias transfer='curl -T - https://transfer.sh/777.txt'
 
+alias dlna-rebase='sudo rm -f /var/cache/minidlna/files.db && sudo systemctl daemon-reload && sudo systemctl restart minidlna'
+
 # my git aliases
 # alias gl='git log'
 alias gstat='git status'
