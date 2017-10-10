@@ -8,9 +8,9 @@ Some scripts use characters from [Font-Awesome](https://github.com/FortAwesome/F
 
 ### Scripts used in xmonad.h
 
-|
-|--------------------------- |:-----------------------------------------------|
-| XMStart                    |  Running programs and scripts at start xmonad  |
+| Name                       | Descriptions                                   |
+| -------------------------- |:---------------------------------------------- |
+| XMStart                    | Running programs and scripts at start xmonad   |
 XMR                         -  Restart xmonad, xmobar, gis-weather and running scripts
 XMRR                        -  Recompile xmonad. Restart xmonad, xmobar, gis-weather and running scripts
 XMMWO                       -  Minimize windows with XMonad.Layout.Minimize
