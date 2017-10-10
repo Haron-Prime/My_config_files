@@ -80,7 +80,7 @@ XMTransgui | Start/stop transgui
 XMCUNew | CPU load & freq
 XMCPUToggle | ON/OFF XMCUNew
 XMTop-cpu | Top-cpu 9 apps in popup notification (dunst)
-XMHtop | Start/stop urxvt+htop 
+XMHtop | Start/stop `urxvt -name htop -e htop`
 XMTempAll | Temperature all device
 XMTempToggle | ON/OFF XMTempAll
 XMSensors | `sensors` in popup notification (dunst)
