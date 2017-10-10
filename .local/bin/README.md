@@ -7,7 +7,7 @@ Some scripts use characters from [Font-Awesome](https://github.com/FortAwesome/F
 
 
 
-### Scripts used in xmonad.h
+### Scripts used in xmonad.hs
 
 Name | Description                                                               
 --- | ---
