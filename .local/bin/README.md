@@ -3,7 +3,7 @@ All listed scripts must be in the directory `$HOME/.local/bin`
 
 The results of all scripts are displayed in the xmobar using pipes
 
-Some scripts use characters from [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) and [Weather Icons Font](https://github.com/erikflowers/weather-icons)
+Some scripts use characters from [Font-Awesome]: https://github.com/FortAwesome/Font-Awesome and [Weather Icons Font]: https://github.com/erikflowers/weather-icons
 
 
 
@@ -74,7 +74,7 @@ XMVnstat-m | `vnstat -m` in popup notification (dunst)
 XMVnstat-d | `vnstat -d` in popup notification (dunst)
 XMifconfig | `ifconfig` in popup notification (dunst)
 XMTrans | Transmission-daemon status
-XMTraf | Traffic for today
+XMTraf | Traffic for day
 XMTrafToggle | ON/OFF XMTraf
 XMTransgui | Start/stop transgui
 XMCUNew | CPU load & freq
