@@ -1,7 +1,7 @@
 #### Author - Haron Prime
 #### License WTFPL © 2017 [http://www.wtfpl.net/](http://www.wtfpl.net/)
 
-All listed scripts must be in the directory '$HOME/.local/bin'
+All listed scripts must be in the directory `$HOME/.local/bin`
 The results of all scripts are displayed in the xmobar using pipes
 Some scripts use characters from [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) and [Weather Icons Font](https://github.com/erikflowers/weather-icons)
 
