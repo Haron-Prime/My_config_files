@@ -10,8 +10,8 @@ Some scripts use characters from Awesome Font (https://github.com/FortAwesome/Fo
 ##            --- ALL USED SCRIPTS ---
 
 ###        -- Scripts used in xmonad.hs --
-
-####XMStart####                     -  Running programs and scripts at start xmonad
+```
+XMStart                     -  Running programs and scripts at start xmonad
 
 XMR                         -  Restart xmonad, xmobar, gis-weather and running scripts
 
@@ -78,9 +78,10 @@ compdown                    -  Shutdown computer (with zenity)
 compreboot                  -  Restart computer (with zenity)
 
 gis-weather                 -  Script to run the git-version of Gis-weather
+```
 
 ###        -- Scripts used in xmobar.hs and in other scripts --
-
+```
 XMUptime                    -  Uptime, load average, kernel version etc
 
 XMUptimeToggle              -  ON/OFF XMUptime
@@ -168,3 +169,4 @@ XMncmpcpp                   -  Open/close a new terminal window with ncmpcpp
 XMToggleAll                 -  ON/OFF all used in xmobar scripts
 
 XMCleanAll                  -  Clear all pipes
+```
