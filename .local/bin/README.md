@@ -6,6 +6,7 @@ The results of all scripts are displayed in the xmobar using pipes
 Some scripts use characters from [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) and [Weather Icons Font](https://github.com/erikflowers/weather-icons)
 
 
+
 ### Scripts used in xmonad.h
 
 Name | Description                                                               
@@ -44,6 +45,7 @@ XMCleanAll | Clear all pipes
 compdown | Shutdown computer (with zenity)
 compreboot | Restart computer (with zenity)
 gis-weather | Script to run the git-version of Gis-weather
+
 
 
 ### Scripts used in xmobar.hs and in other scripts
