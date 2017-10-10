@@ -6,6 +6,7 @@ Some scripts use characters from [Font-Awesome](https://github.com/FortAwesome/F
 
 ### Scripts used in xmonad.h
 
+| Name                       | Description                                                               |
 | -------------------------- | ------------------------------------------------------------------------- |
 | XMStart                    | Running programs and scripts at start xmonad                              |
 | XMR                        | Restart xmonad, xmobar, gis-weather and running scripts                   |
@@ -45,8 +46,8 @@ Some scripts use characters from [Font-Awesome](https://github.com/FortAwesome/F
 
 ### Scripts used in xmobar.hs and in other scripts
 
-
-| -------------------------- | ---------------------------------------------- |
+| Name                       | Description                                                               |
+| -------------------------- | ------------------------------------------------------------------------- |
 | XMUptime                   | Uptime, load average, kernel version etc |
 | XMUptimeToggle             | ON/OFF XMUptime |
 | XMDate                     | Date, tz etc |
