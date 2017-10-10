@@ -6,42 +6,42 @@ Some scripts use characters from [Font-Awesome](https://github.com/FortAwesome/F
 
 ### Scripts used in xmonad.h
 
-| Name                       | Description                                                               |
-| -------------------------- | ------------------------------------------------------------------------- |
-| XMStart                    | Running programs and scripts at start xmonad                              |
-| XMR                        | Restart xmonad, xmobar, gis-weather and running scripts                   |
-| XMRR                       | Recompile xmonad. Restart xmonad, xmobar, gis-weather and running scripts |
-| XMMWO                      | Minimize windows with XMonad.Layout.Minimize                              |
-| XMMWC                      | Restore minimize windows with XMonad.Layout.Minimize                      |
-| XMMPCtoggle                | `mpc toggle` and current artist/track in popup notification (dunst)       |
-| XMMPCstop                  | `mpc stop` and current artist/track in popup notification (dunst)         |
-| XMMPCprev                  | `mpc prev` and current artist/track in popup notification (dunst)         |
-| XMMPCnext                  | `mpc next` and current artist/track in popup notification (dunst)         |
-| XMGalculator               | Start/stop galculator                                                     |
-| XMNotes-w                  | Write the selected text to a file (my text notes)                         |
-| XMTransgui                 | Start/stop transgui                                                       |
-| XMYaourt                   | Start `yaourt -Syua` in a new terminal window                             |
-| XMUptimeToggle             | ON/OFF XMUptime                                                           |
-| XMNetToggle                | ON/OFF XMNetSpeed                                                         |
-| XMVnstat                   | `vnstat` in popup notification (dunst)                                    |
-| XMVnstat-h                 | `vnstat -h` in popup notification (dunst)                                 |
-| XMVnstat+h                 | `vnstat & vnstat -h` in popup notification (dunst)                        |
-| MVnstat-d                  | `vnstat -d` in popup notification (dunst)                                 |
-| XMTrafToggle               | ON/OFF XMTraf                                                             |
-| XMCPUToggle                | ON/OFF XMCUNew                                                            |
-| XMTop-cpu                  | Top-cpu apps in popup notification (dunst)                                |
-| XMTempToggle               | ON/OFF XMTempAll                                                          |
-| XMSensors                  | `sensors` in popup notification (dunst)                                   |
-| XMMemToggle                | ON/OFF XMMemAll                                                           |
-| XMTop-mem                  | Top-mem apps in popup notification (dunst)                                |
-| XMdf-h                     | `df-h` in popup notification (dunst)                                      |
-| XMVolToggle                | ON/OFF XMVolNew                                                           |
-| XMDateToggle               | ON/OFF XMDate                                                             |
-| XMToggleAll                | ON/OFF all used in xmobar scripts                                         |
-| XMCleanAll                 | Clear all pipes                                                           |
-| compdown                   | Shutdown computer (with zenity)                                           |
-| compreboot                 | Restart computer (with zenity)                                            |
-| gis-weather                | Script to run the git-version of Gis-weather                              |
+Name           | Description                                                               
+-------------- | ------------------------------------------------------------------------- 
+XMStart        | Running programs and scripts at start xmonad                              
+XMR            | Restart xmonad, xmobar, gis-weather and running scripts                   
+XMRR           | Recompile xmonad. Restart xmonad, xmobar, gis-weather and running scripts 
+XMMWO          | Minimize windows with XMonad.Layout.Minimize                              
+XMMWC          | Restore minimize windows with XMonad.Layout.Minimize                      
+XMMPCtoggle    | `mpc toggle` and current artist/track in popup notification (dunst)       
+XMMPCstop      | `mpc stop` and current artist/track in popup notification (dunst)         
+XMMPCprev      | `mpc prev` and current artist/track in popup notification (dunst)         
+XMMPCnext      | `mpc next` and current artist/track in popup notification (dunst)         
+XMGalculator   | Start/stop galculator                                                     
+XMNotes-w      | Write the selected text to a file (my text notes)                         
+XMTransgui     | Start/stop transgui                                                       
+XMYaourt       | Start `yaourt -Syua` in a new terminal window                             
+XMUptimeToggle | ON/OFF XMUptime                                                           
+XMNetToggle    | ON/OFF XMNetSpeed                                                         
+XMVnstat       | `vnstat` in popup notification (dunst)                                    
+XMVnstat-h     | `vnstat -h` in popup notification (dunst)                                 
+XMVnstat+h     | `vnstat & vnstat -h` in popup notification (dunst)                        
+MVnstat-d      | `vnstat -d` in popup notification (dunst)                                 
+XMTrafToggle   | ON/OFF XMTraf                                                             
+XMCPUToggle    | ON/OFF XMCUNew                                                            
+XMTop-cpu      | Top-cpu apps in popup notification (dunst)                                
+XMTempToggle   | ON/OFF XMTempAll                                                          
+XMSensors      | `sensors` in popup notification (dunst)                                   
+XMMemToggle    | ON/OFF XMMemAll                                                           
+XMTop-mem      | Top-mem apps in popup notification (dunst)                                
+XMdf-h         | `df-h` in popup notification (dunst)                                      
+XMVolToggle    | ON/OFF XMVolNew                                                           
+XMDateToggle   | ON/OFF XMDate                                                             
+XMToggleAll    | ON/OFF all used in xmobar scripts                                         
+XMCleanAll     | Clear all pipes                                                           
+compdown       | Shutdown computer (with zenity)                                           
+compreboot     | Restart computer (with zenity)                                            
+gis-weather    | Script to run the git-version of Gis-weather                              
 
 
 ### Scripts used in xmobar.hs and in other scripts
