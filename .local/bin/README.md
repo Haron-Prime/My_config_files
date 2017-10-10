@@ -11,7 +11,7 @@ Some scripts use characters from Awesome Font (https://github.com/FortAwesome/Fo
 
 ###        -- Scripts used in xmonad.hs --
 
-XMStart                     -  Running programs and scripts at start xmonad
+####XMStart####                     -  Running programs and scripts at start xmonad
 
 XMR                         -  Restart xmonad, xmobar, gis-weather and running scripts
 
