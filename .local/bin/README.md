@@ -1,10 +1,12 @@
 ### Author - Haron Prime
 ### License WTFPL © 2017 http://www.wtfpl.net/
+
 ```
 All listed scripts must be in the directory $HOME/.local/bin
 The results of all scripts are displayed in the xmobar using pipes
 Some scripts use characters from Awesome Font (https://github.com/FortAwesome/Font-Awesome) and Weather Icons Font (https://github.com/erikflowers/weather-icons)
 ```
+
 ##            --- ALL USED SCRIPTS ---
 
 ###        -- Scripts used in xmonad.hs --
@@ -80,46 +82,89 @@ gis-weather                 -  Script to run the git-version of Gis-weather
 ###        -- Scripts used in xmobar.hs and in other scripts --
 
 XMUptime                    -  Uptime, load average, kernel version etc
+
 XMUptimeToggle              -  ON/OFF XMUptime
+
 XMDate                      -  Date, tz etc
+
 XMDateToggle                -  ON/OFF XMDate
+
 XMTime                      -  Current time
+
 XMGSimplecal                -  Start/stop gsimplecal
+
 XMCal                       -  `cal -y` in popup notification (dunst)
+
 XMGWeather                  -  Current weather state in popup notification (dunst)
+
 XMAccuWeather               -  Open https://www.accuweather.com in default browser
+
 XMGismeteo                  -  Open https://www.gismeteo.ru in default browser
+
 XMUpdate                    -  Checking for packages updates
+
 XMYaourt                    -  Start `yaourt -Syua` in a new terminal window
+
 XMNetTest                   -  Network connection status
+
 XMNetSpeed (XMNetSpeedBit)  -  Current speed - B/s, KiB/s, MiB/s (bps, kbps, Mbps)
+
 XMNetToggle                 -  ON/OFF XMNetSpeed
+
 XMVnstat                    -  `vnstat` in popup notification (dunst)
+
 XMVnstat-h                  -  `vnstat -h` in popup notification (dunst)
+
 XMVnstat+h                  -  `vnstat & vnstat -h` in popup notification (dunst)
+
 XMVnstat-m                  -  `vnstat -m` in popup notification (dunst)
+
 XMVnstat-d                  -  `vnstat -d` in popup notification (dunst)
+
 XMifconfig                  -  `ifconfig` in popup notification (dunst)
+
 XMTrans                     -  Transmission-daemon status
+
 XMTraf                      -  Traffic for today
+
 XMTrafToggle                -  ON/OFF XMTraf
+
 XMTransgui                  -  Start/stop transgui
+
 XMCUNew                     -  CPU load & freq
+
 XMCPUToggle                 -  ON/OFF XMCUNew
+
 XMTop-cpu                   -  Top-cpu 9 apps in popup notification (dunst)
+
 XMHtop                      -  Start/stop urxvt+htop
+
 XMTempAll                   -  Temperature all device
+
 XMTempToggle                -  ON/OFF XMTempAll
+
 XMSensors                   -  `sensors` in popup notification (dunst)
+
 XMMemAll                    -  Using RAM, SWAP and disk partitions
+
 XMMemToggle                 -  ON/OFF XMMemAll
+
 XMTop-mem                   -  Top-mem 9 apps in popup notification (dunst)
+
 XMFree                      -  `free` in popup notification (dunst)
+
 XMVolNew                    -  Volume level
+
 XMVolToggle                 -  ON/OFF XMVolNew
+
 XMPlay                      -  Playback (current artist/track)
+
 XMPavucontrol               -  Start/stop pavucontrol
+
 XMMPD                       -  MPD control buttons
+
 XMncmpcpp                   -  Open/close a new terminal window with ncmpcpp
+
 XMToggleAll                 -  ON/OFF all used in xmobar scripts
+
 XMCleanAll                  -  Clear all pipes
