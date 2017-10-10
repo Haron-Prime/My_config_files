@@ -7,8 +7,8 @@ Some scripts use characters from [Font-Awesome](https://github.com/FortAwesome/F
 
 
 ### Scripts used in xmonad.h
-```
-XMStart                     -  Running programs and scripts at start xmonad
+
+|XMStart                     |  Running programs and scripts at start xmonad |
 XMR                         -  Restart xmonad, xmobar, gis-weather and running scripts
 XMRR                        -  Recompile xmonad. Restart xmonad, xmobar, gis-weather and running scripts
 XMMWO                       -  Minimize windows with XMonad.Layout.Minimize
@@ -42,7 +42,7 @@ XMCleanAll                  -  Clear all pipes
 compdown                    -  Shutdown computer (with zenity)
 compreboot                  -  Restart computer (with zenity)
 gis-weather                 -  Script to run the git-version of Gis-weather
-```
+
 
 ### Scripts used in xmobar.hs and in other scripts
 ```
