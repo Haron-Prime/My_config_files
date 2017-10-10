@@ -2,7 +2,7 @@
 -- Author - Haron Prime
 -- License WTFPL © 2017 http://www.wtfpl.net/
 
--- List of all scripts used and their description is in the file /.local/bin/READ.ME
+-- List of all scripts used and their description is in the file /.local/bin/README.md
 
 Config {
          position         = Static { xpos = 0 , ypos = 0, width = 1920, height = 24 }
