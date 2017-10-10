@@ -24,7 +24,7 @@ from string import Template
 
 
 def plugin_loaded():
-    """The ST3 entry point for plugins."""
+    """Entry point for SL plugins."""
 
     persist.plugin_is_loaded = True
     persist.settings.load()
@@ -172,7 +172,7 @@ class SublimeLinter(sublime_plugin.EventListener):
                         window_views[wid] = other_view
 
         for view in window_views.values():
-            self.on_selection_modified_async(view)
+            self.display_errors(view)
 
     def hit(self, view):
         """Record an activity that could trigger a lint and enqueue a desire to lint."""
@@ -249,7 +249,7 @@ class SublimeLinter(sublime_plugin.EventListener):
     # sublime_plugin.EventListener event handlers
 
     def on_modified_async(self, view):
-        """Called when a view is modified."""
+        """Ran when view is motified."""
 
         if self.is_scratch(view):
             return
@@ -268,7 +268,7 @@ class SublimeLinter(sublime_plugin.EventListener):
             self.clear(view)
 
     def on_activated_async(self, view):
-        """Called when a view gains input focus."""
+        """Ran when a view gains input focus."""
 
         if self.is_scratch(view):
             return
@@ -286,11 +286,11 @@ class SublimeLinter(sublime_plugin.EventListener):
             if persist.settings.get('lint_mode', 'background') in ('background', 'load/save'):
                 self.hit(view)
 
-        self.on_selection_modified_async(view)
+        self.display_errors(view)
 
     def on_open_settings(self, view):
         """
-        Called when any settings file is opened.
+        Ran when any settings file is opened.
 
         view is the view that contains the text of the settings file.
 
@@ -320,14 +320,14 @@ class SublimeLinter(sublime_plugin.EventListener):
 
     @classmethod
     def on_settings_updated(cls, relint=False):
-        """Callback triggered when the settings are updated."""
+        """Ran when the settings are updated."""
         if relint:
             cls.lint_all_views()
         else:
             Linter.redraw_all()
 
     def on_new_async(self, view):
-        """Called when a new buffer is created."""
+        """Ran when a new buffer is created."""
         self.on_open_settings(view)
 
         if self.is_scratch(view):
@@ -353,7 +353,16 @@ class SublimeLinter(sublime_plugin.EventListener):
                 return view
 
     def on_selection_modified_async(self, view):
-        """Called when the selection changes (cursor moves or text selected)."""
+        """Ran when the selection changes (cursor moves or text selected)."""
+        self.display_errors(view, tooltip=True)
+
+    def display_errors(self, view, tooltip=False):
+        """
+        Display lint errors in the view status.
+
+        If tooltip is set to True, also display lint errors in a tooltip
+        at the caret's position.
+        """
 
         if self.is_scratch(view):
             return
@@ -399,12 +408,11 @@ class SublimeLinter(sublime_plugin.EventListener):
                         status = 'Error: '
 
                     status += '; '.join(line_errors)
-                    if persist.settings.get('tooltips'):
+
+                    if persist.settings.get('tooltips') and tooltip:
                         self.open_tooltip(lineno, line_errors)
                 else:
                     status = '%i error%s' % (count, plural)
-                    if persist.settings.get('tooltips'):
-                        self.close_tooltip()
 
                 view.set_status('sublimelinter', status)
             else:
@@ -437,7 +445,8 @@ class SublimeLinter(sublime_plugin.EventListener):
         """
         Show a tooltip containing all linting errors on a given line.
 
-        If no tooltip template can be created, does nothing.
+        Does nothing if no tooltip template can be created, or if another popup
+        is already displayed.
 
         """
         template = self.get_template()
@@ -446,7 +455,12 @@ class SublimeLinter(sublime_plugin.EventListener):
             return
 
         active_view = self.get_active_view()
-        tooltip_content = template.substitute(line=line,
+
+        # Leave any existing popup open without replacing it
+        if active_view.is_popup_visible():
+            return
+
+        tooltip_content = template.substitute(line=line + 1,
                                               message='<br />'.join(errors),
                                               font_size=persist.settings.get('tooltip_fontsize'))
         active_view.show_popup(tooltip_content,
@@ -454,14 +468,9 @@ class SublimeLinter(sublime_plugin.EventListener):
                                location=-1,
                                max_width=600)
 
-    def close_tooltip(self):
-        """Close the currently active tooltip, if there is one."""
-        active_view = self.get_active_view()
-        active_view.hide_popup()
-
     def on_pre_save_async(self, view):
         """
-        Called before view is saved.
+        Ran before view is saved.
 
         If a settings file is the active view and is saved,
         copy the current settings first so we can compare post-save.
@@ -471,7 +480,7 @@ class SublimeLinter(sublime_plugin.EventListener):
             persist.settings.copy()
 
     def on_post_save_async(self, view):
-        """Called after view is saved."""
+        """Ran after view is saved."""
 
         if self.is_scratch(view):
             return
@@ -527,7 +536,7 @@ class SublimeLinter(sublime_plugin.EventListener):
             view.run_command('sublimelinter_show_all_errors')
 
     def on_close_async(self, view):
-        """Called after view is closed."""
+        """Ran after view is closed."""
 
         if self.is_scratch(view):
             return
