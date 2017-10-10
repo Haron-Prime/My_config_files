@@ -1,13 +1,13 @@
-Author - Haron Prime
-License WTFPL © 2017 http://www.wtfpl.net/
-
+### Author - Haron Prime
+### License WTFPL © 2017 http://www.wtfpl.net/
+```
 All listed scripts must be in the directory $HOME/.local/bin
 The results of all scripts are displayed in the xmobar using pipes
 Some scripts use characters from Awesome Font (https://github.com/FortAwesome/Font-Awesome) and Weather Icons Font (https://github.com/erikflowers/weather-icons)
+```
+#            --- ALL USED SCRIPTS ---
 
-            --- ALL USED SCRIPTS ---
-
-        -- Scripts used in xmonad.hs --
+###        -- Scripts used in xmonad.hs --
 
 XMStart                     -  Running programs and scripts at start xmonad
 XMR                         -  Restart xmonad, xmobar, gis-weather and running scripts
@@ -44,7 +44,7 @@ compdown                    -  Shutdown computer (with zenity)
 compreboot                  -  Restart computer (with zenity)
 gis-weather                 -  Script to run the git-version of Gis-weather
 
-        -- Scripts used in xmobar.hs and in other scripts --
+###        -- Scripts used in xmobar.hs and in other scripts --
 
 XMUptime                    -  Uptime, load average, kernel version etc
 XMUptimeToggle              -  ON/OFF XMUptime
