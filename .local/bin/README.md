@@ -1,6 +1,6 @@
 
 ## ALL MY SCRIPTS
-
+---
 **For XMonad and XMobar to work properly, all the listed scripts are required to be in the directory `$HOME/.local/bin`**
 
 The results of all scripts are displayed in the xmobar using pipes
