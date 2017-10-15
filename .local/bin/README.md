@@ -1,10 +1,13 @@
 
+## ALL MY SCRIPTS
+
 **For XMonad and XMobar to work properly, all the listed scripts are required to be in the directory `$HOME/.local/bin`**
 
 The results of all scripts are displayed in the xmobar using pipes
 
 Some scripts use characters from [Font-Awesome](https://github.com/FortAwesome/Font-Awesome) and [Weather Icons Font](https://github.com/erikflowers/weather-icons)
 
+As an alternative to the Font-Awesome, you can use the [Terminus Re33 Nerd](https://github.com/Haron-Prime/My_config_files/blob/master/.fonts/TerminusRe33Nerd.ttf) - it contains the same set of symbols, but is based on the monospaced font Terminus Re33
 
 
 ### Scripts used in xmonad.hs
@@ -65,7 +68,8 @@ XMGismeteo | Open https://www.gismeteo.ru in default browser
 XMUpdate | Checking for packages updates
 XMYaourt | Start `yaourt -Syua` in a new terminal window
 XMNetTest | Network connection status
-XMNetSpeed (XMNetSpeedBit) | Current speed - B/s, KiB/s, MiB/s (bps, kbps, Mbps)
+XMNetSpeed | Current speed - B/s, KiB/s, MiB/s
+XMNetSpeedBit | Current speed - bps, kbps, Mbps
 XMNetToggle | ON/OFF XMNetSpeed
 XMVnstat | `vnstat` in popup notification (dunst)
 XMVnstat-h | `vnstat -h` in popup notification (dunst)
