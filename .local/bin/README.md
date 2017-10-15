@@ -48,7 +48,7 @@ gis-weather | Script to run the git-version of Gis-weather
 
 
 
-### Scripts used in xmobar.hs and in other scripts
+### Scripts used in xmobar.hs and other related scripts
 
 Name | Description
 --- | ---
