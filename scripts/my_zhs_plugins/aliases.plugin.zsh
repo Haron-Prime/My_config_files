@@ -50,7 +50,7 @@ alias nout='ssh haron@192.168.0.11 -p 232'
 alias wget='wget -c --progress=bar'
 alias ttmux='tmuxinator default'
 alias tmuxa='tmux attach'
-alias st='/usr/bin/st -f "Terminus Re33 Nerd:size=12"'
+# alias st='/usr/bin/st -f "Terminus Re33 Nerd:size=12"'
 
 alias tv='mpv --playlist=$HOME/Video/Playlists/multinet-play.m3u'
 alias asl='acestream-launcher --player mpv'
