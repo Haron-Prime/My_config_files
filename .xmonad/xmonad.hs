@@ -64,13 +64,13 @@ myTerm           =  "urxvtc"
 myFM             =  "urxvtc -name ranger -e ranger"
 myNotes          =  "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree"
 myHtop           =  "urxvtc -name htop -e htop"
-myPlayer         =  "urxvtc -name ncmpcpp -e ncmpcpp"
+myPwsayer         =  "urxvtc -name ncmpcpp -e ncmpcpp"
 myEditor         =  spawn "urxvtc -name vim -e vim"
 myFullScrot      =  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 myWindowScrot    =  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 myAreaScrot      =  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 myAppMenu        =  spawn "mygtkmenu .menurc"
-myPlaceMenu      =  spawn "mygtkmenu .placerc"
+myPwsaceMenu      =  spawn "mygtkmenu .placerc"
 mySreenLock      =  spawn "i3lock -i /home/haron/wall/starrynight.png"
 myQST            =  scratchpadSpawnActionTerminal myTerm
 -- Decorations
@@ -87,15 +87,15 @@ myMRT1           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100
 myMRT2           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
 myMGR            =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 -- Combinations of layouts for various workspaces
-myWL             =  Full    |||  myRT1   ||| myMRT1  -- for WS1 (W)
-myML             =  Full    |||  myRT1               -- for WS2 (M)
-myEL             =  myMRT1  |||  Full    ||| myRT2   -- for WS3 (E)
-myFL             =  Full    |||  myMGR               -- for WS4 (F)
-mySL             =  myRT1   |||  myMRT1  ||| Full    -- for WS5 (S)
-myPL             =  Full    |||  myMGR               -- for WS6 (P)
-myVL             =  Full    |||  myRT2               -- for WS7 (V)
-myJL             =  Full    |||  myRT2               -- for WS8 (J)
-myTL             =  Full    |||  myMRT1              -- for WS9 (T)
+myWws            =  Full    |||  myRT1   ||| myMRT1  -- for WS1 (W)
+myMws            =  Full    |||  myRT1               -- for WS2 (M)
+myEws            =  myMRT1  |||  Full    ||| myRT2   -- for WS3 (E)
+myFws            =  Full    |||  myMGR               -- for WS4 (F)
+mySws            =  myRT1   |||  myMRT1  ||| Full    -- for WS5 (S)
+myPws            =  Full    |||  myMGR               -- for WS6 (P)
+myVws            =  Full    |||  myRT2               -- for WS7 (V)
+myJws            =  Full    |||  myRT2               -- for WS8 (J)
+myTws            =  Full    |||  myMRT1              -- for WS9 (T)
 -- Modkey
 altm             =  mod1Mask
 ctrlm            =  controlMask
@@ -171,7 +171,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Menu
     , ((altm,                 0x61),  myAppMenu)                           --Alt+A
-    , ((altm,                 0x62),  myPlaceMenu)                         --Alt+B
+    , ((altm,                 0x62),  myPwsaceMenu)                         --Alt+B
 
     -- Prompts management
     , ((altm,               0xffbe),  manPrompt myPC)                      --Alt+F1
@@ -274,15 +274,15 @@ myLH =  avoidStruts
         $ minimize
         $ Tog.toggleLayouts (noBorders Full) 
         $ smartBorders
-        $ onWorkspace (myWS !! 0) myWL
-        $ onWorkspace (myWS !! 1) myML
-        $ onWorkspace (myWS !! 2) myEL
-        $ onWorkspace (myWS !! 3) myFL
-        $ onWorkspace (myWS !! 4) mySL
-        $ onWorkspace (myWS !! 5) myVL
-        $ onWorkspace (myWS !! 6) myPL
-        $ onWorkspace (myWS !! 7) myJL
-        $ onWorkspace (myWS !! 8) myTL
+        $ onWorkspace (myWS !! 0) myWws
+        $ onWorkspace (myWS !! 1) myMws
+        $ onWorkspace (myWS !! 2) myEws
+        $ onWorkspace (myWS !! 3) myFws
+        $ onWorkspace (myWS !! 4) mySws
+        $ onWorkspace (myWS !! 5) myVws
+        $ onWorkspace (myWS !! 6) myPws
+        $ onWorkspace (myWS !! 7) myJws
+        $ onWorkspace (myWS !! 8) myTws
         $ myRT1 ||| myMRT1 ||| myMGR ||| Full
 
 -- Window Management Rules
@@ -468,7 +468,7 @@ myNS = [
        , NS "OBLOGOUT"     "oblogout"     (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.32 0.4 0.36 0.2)
        , NS "DEADBEEF"     "deadbeef"     (className  =? "Deadbeef")     (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
 
-       , NS "NCMPCPP"      myPlayer       (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+       , NS "NCMPCPP"      myPwsayer       (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
        , NS "HTOP"         myHtop         (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
        , NS "GPICK"        "gpick"        (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
        , NS "PAVUCONTROL"  "pavucontrol"  (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
