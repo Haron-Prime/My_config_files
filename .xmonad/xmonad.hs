@@ -2,7 +2,7 @@
 -- Author - Haron Prime
 -- License WTFPL © 2017 http://www.wtfpl.net/
 
--- List of all scripts used and their description is in the file https://github.com/Haron-Prime/My_config_files/blob/master/.local/bin/README.md
+-- List of all custom scripts used and their description is in the file https://github.com/Haron-Prime/My_config_files/blob/master/.local/bin/README.md
 
 
 --- MODULES INCLUDED ---
@@ -64,13 +64,13 @@ myTerm           =  "urxvtc"
 myFM             =  "urxvtc -name ranger -e ranger"
 myNotes          =  "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree"
 myHtop           =  "urxvtc -name htop -e htop"
-myPwsayer         =  "urxvtc -name ncmpcpp -e ncmpcpp"
+myPlayer         =  "urxvtc -name ncmpcpp -e ncmpcpp"
 myEditor         =  spawn "urxvtc -name vim -e vim"
 myFullScrot      =  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 myWindowScrot    =  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 myAreaScrot      =  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 myAppMenu        =  spawn "mygtkmenu .menurc"
-myPwsaceMenu      =  spawn "mygtkmenu .placerc"
+myPlaceMenu      =  spawn "mygtkmenu .placerc"
 mySreenLock      =  spawn "i3lock -i /home/haron/wall/starrynight.png"
 myQST            =  scratchpadSpawnActionTerminal myTerm
 -- Decorations
@@ -171,7 +171,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Menu
     , ((altm,                 0x61),  myAppMenu)                           --Alt+A
-    , ((altm,                 0x62),  myPwsaceMenu)                         --Alt+B
+    , ((altm,                 0x62),  myPlaceMenu)                         --Alt+B
 
     -- Prompts management
     , ((altm,               0xffbe),  manPrompt myPC)                      --Alt+F1
@@ -468,7 +468,7 @@ myNS = [
        , NS "OBLOGOUT"     "oblogout"     (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.32 0.4 0.36 0.2)
        , NS "DEADBEEF"     "deadbeef"     (className  =? "Deadbeef")     (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
 
-       , NS "NCMPCPP"      myPwsayer       (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+       , NS "NCMPCPP"      myPlayer       (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
        , NS "HTOP"         myHtop         (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
        , NS "GPICK"        "gpick"        (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
        , NS "PAVUCONTROL"  "pavucontrol"  (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
