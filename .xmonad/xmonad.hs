@@ -173,9 +173,9 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x62),  myPlaceMenu)                         --Alt+B
 
     --Prompts management
-    , ((altm,               0xffbe),  manPrompt myPromptConfig)            --Alt+F1
-    , ((altm,               0xffbf),  runOrRaisePrompt myPromptConfig)     --Alt+F2
-    , ((altm,               0xffc0),  sshPrompt myPromptConfig)            --Alt+F3
+    , ((altm,               0xffbe),  manPrompt myPC)                      --Alt+F1
+    , ((altm,               0xffbf),  runOrRaisePrompt myPC)               --Alt+F2
+    , ((altm,               0xffc0),  sshPrompt myPC)                      --Alt+F3
 
     --WS management
     , ((altm,               0xff09),  nextWS)                              --Alt+Tab
@@ -446,21 +446,21 @@ myWR = composeAll . concat $
                 , (myWS !! 11)
                 ]
 
--- Prompts
-myPromptConfig = def {
-                       font              = myMFont   
-                     , bgColor           = myBgColor
-                     , fgColor           = myFgColor
-                     , bgHLight          = myBgColor
-                     , fgHLight          = myHlColor
-                     , promptBorderWidth = 0
-                     , position          = Top
-                     , height            = 20
-                     , alwaysHighlight   = True
-                     , historySize       = 100
-                     }
+-- Prompts config
+myPC = def {
+             font              = myMFont   
+           , bgColor           = myBgColor
+           , fgColor           = myFgColor
+           , bgHLight          = myBgColor
+           , fgHLight          = myHlColor
+           , promptBorderWidth = 0
+           , position          = Top
+           , height            = 20
+           , alwaysHighlight   = True
+           , historySize       = 100
+           }
 
--- NamedScratchpad
+-- Named Scratchpad
 myNS = [
          NS "MIRAGE"       "mirage"       (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
        , NS "GSIMPLECAL"   "gsimplecal"   (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
