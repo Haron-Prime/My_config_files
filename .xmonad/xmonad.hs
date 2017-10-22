@@ -159,25 +159,26 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x74),  spawn "XMTransgui")                  --Alt+T
     , ((altm,                 0x76),  myEditor)                            --Alt+V
     , ((altm,                 0x79),  spawn "XMYaourt")                    --Alt+Y
+    -- Terminals
     , ((modm .|. ctrlm,     0xff0d),  spawn "st")                          --Mod4+Ctrl+Return
     , ((modm .|. altm,      0xff0d),  spawn "xterm")                       --Mod4+Alt+Return
     , ((modm .|. shftm,     0xff0d),  spawn $ XMonad.terminal conf)        --Mod4+Shift+Return
 
-    --Recompile || restart || terminate XMonad
+    -- Recompile || restart || terminate XMonad
     , ((modm,                 0x63),  spawn "XMR")                         --Mod4+C
     , ((modm,                 0x71),  spawn "XMRR")                        --Mod4+Q
     , ((modm .|. shftm,       0x71),  io (exitWith ExitSuccess))           --Mod4+Shift+Q
 
-    --Menu
+    -- Menu
     , ((altm,                 0x61),  myAppMenu)                           --Alt+A
     , ((altm,                 0x62),  myPlaceMenu)                         --Alt+B
 
-    --Prompts management
+    -- Prompts management
     , ((altm,               0xffbe),  manPrompt myPC)                      --Alt+F1
     , ((altm,               0xffbf),  runOrRaisePrompt myPC)               --Alt+F2
     , ((altm,               0xffc0),  sshPrompt myPC)                      --Alt+F3
 
-    --WS management
+    -- WS management
     , ((altm,               0xff09),  nextWS)                              --Alt+Tab
     , ((altm .|. ctrlm,     0xff09),  prevWS)                              --Alt+Ctrl+Tab
     , ((altm .|. ctrlm,     0xff53),  DO.moveTo Next HiddenNonEmptyWS)     --Alt+Ctrl+Right
@@ -196,7 +197,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,                 0x2c),  sendMessage (IncMasterN 1))          --Mod4+Comma
     , ((modm,                 0x2e),  sendMessage (IncMasterN (-1)))       --Mod4+Period
 
-    --Windows management
+    -- Windows management
     , ((modm,                 0x60),  rotOpposite)                         --Mod4+grave
     , ((modm,               0xff09),  cycleWin)                            --Mod4+Tab
     , ((modm,               0xff53),  sendMessage $ Go R)                  --Mod4+Right
@@ -268,7 +269,7 @@ myWS = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J"
                         let n = i 
                         ]
 
--- Layouts
+-- Layouts Hook
 myLH =  avoidStruts
         $ minimize
         $ Tog.toggleLayouts (noBorders Full) 
@@ -484,7 +485,7 @@ mySP = scratchpadManageHook (W.RationalRect l t w h)
         t = 1 - h   -- distance from top edge
         l = 1 - w   -- distance from left edge
 
--- ManageHook
+-- Manage Hook
 myMH = manageHook def <+> 
        myWR <+> 
        mySP <+> 
@@ -499,7 +500,7 @@ myEH = handleEventHook def <+>
        ewmhDesktopsEventHook <+> 
        focusOnMouseMove
 
--- StartupHook
+-- Startup Hook
 mySH = return () <+> 
        adjustEventInput <+> 
        setWMName "LG3D" <+> 
