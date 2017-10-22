@@ -114,7 +114,7 @@ role             =  stringProperty "WM_WINDOW_ROLE"
 
 --- CONFIG ---
 -- Key bindings.
-myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
+myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
     --Applications management
       ((0,              0x1008ff13),  spawn "pulseaudio-ctl up")           --XF86AudioRaiseVolume
@@ -517,7 +517,7 @@ main = do
         , modMask            = modm
         , focusFollowsMouse  = True
         , workspaces         = myWS
-        , keys               = myKeys
+        , keys               = myHK
         , mouseBindings      = myMB
         , startupHook        = mySH
         , layoutHook         = myLH
