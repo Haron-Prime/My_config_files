@@ -44,7 +44,7 @@ autoload colors; colors
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
 
-export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n  %{$fg[cyan]%}$SHELL  %{$fg_bold[blue]%}%l %{$fg[red]%}%? %{$fg_bold[blue]%}%h%b  %{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%}%*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
+export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n  %{$fg[red]%}zsh  %{$fg_bold[blue]%}%l %{$fg[red]%}%? %{$fg_bold[blue]%}%h%b  %{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%}%*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
 
 # format titles for screen and rxvt
 function title() {
