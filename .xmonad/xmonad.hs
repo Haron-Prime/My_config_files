@@ -139,6 +139,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                  0xff69),  spawn "compdown")                    --Cancel
     , ((0,                  0xff67),  spawn "gmrun")                       --Menu
     , ((0,                  0xffc9),  myQST)                               --F12
+    , ((0,                  0xff14),  nSA "NCMPCPP")                       --Scroll_Lock
     , ((0,                  0xff61),  myFullScrot)                         --Print
     , ((0    .|. shftm,     0xff61),  myWindowScrot)                       --Shift+Print
     , ((altm,               0xff61),  myAreaScrot)                         --Alt+Print
