@@ -28,7 +28,7 @@ def plugin_loaded():
 
     persist.plugin_is_loaded = True
     persist.settings.load()
-    persist.printf('debug mode:', 'on' if persist.debug_mode() else 'off')
+    persist.debug('debug mode: on')
     util.create_tempdir()
 
     for linter in persist.linter_classes.values():
@@ -347,6 +347,8 @@ class SublimeLinter(sublime_plugin.EventListener):
 
         """
         active_view = view.window().active_view()
+        if active_view is None:
+            return
 
         for view in view.window().views():
             if view == active_view:
