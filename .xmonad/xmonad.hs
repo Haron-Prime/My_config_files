@@ -334,6 +334,7 @@ myWR = composeAll . concat $
                 , "Opera developer"
                 , "Tor Browser"
                 , "Vivaldi-snapshot"
+                , "Vivaldi-stable"
                 ]
         myM   = [
                   "Thunderbird"
