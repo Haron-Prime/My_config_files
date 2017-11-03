@@ -330,6 +330,7 @@ myWR = composeAll . concat $
                   "Firefox"
                 , "Chromium"
                 , "Icecat"
+                , "Nightly"
                 , "Opera"
                 , "Opera developer"
                 , "Tor Browser"
