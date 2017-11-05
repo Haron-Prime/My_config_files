@@ -1,1 +1,1 @@
-# Oxygen corsors set
+# Oxygen cursors set
