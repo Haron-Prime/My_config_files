@@ -1,5 +1,30 @@
 # Changelog
 
+## 3.1.1
+
+> Nov 4, 2017
+
+- **FIX**: Color matcher library should only return gradients when one is actually found.
+
+## 3.1.0
+
+> Nov 3, 2017
+
+- **NEW**: Handle parsing `.sublime-color-scheme` files with hashed syntax highlighting foreground colors.
+- **FIX**: Rework `*.sublime-color-scheme` merging and ensure `User` package is merged last.
+
+## 3.0.5
+
+> Oct 30, 2017
+
+- **FIX**: Parse color schemes with unexpected extensions correctly.
+
+## 3.0.4
+
+> Oct 27, 2017
+
+- **FIX**: Support for irregular `.sublime-color-scheme` values.
+
 ## 3.0.3
 
 > Oct 23, 2017
