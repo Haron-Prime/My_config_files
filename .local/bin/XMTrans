@@ -2,14 +2,14 @@
 # Author - Haron Prime
 # License WTFPL © 2017 http://www.wtfpl.net/
 
-echo  "" > /tmp/haron/TS
+echo  "" > /tmp/haron/TS
 sleep 5 &&
 while true; do
     if [[ -n $(pgrep transmission) ]]; then 
-        echo  "<fc=#0e0></fc>" > /tmp/haron/TS
+        echo  "<fc=#0e0></fc>" > /tmp/haron/TS
         sleep 30
     else
-        echo  "<fc=#e50></fc>" > /tmp/haron/TS
+        echo  "<fc=#e50></fc>" > /tmp/haron/TS
         sleep 5
     fi
 done
