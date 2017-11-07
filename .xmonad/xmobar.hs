@@ -45,7 +45,7 @@ Config {
                             , Run PipeReader         "/tmp/haron/TA"    "TA"                           -- Temperature of all devices
                             , Run PipeReader         "/tmp/haron/MU"    "MU"                           -- Using RAM and SWAP
                             , Run PipeReader         "/tmp/haron/RU"    "RU"                           -- Using disk partitions
-                            , Run PipeReader         "/tmp/haron/VS"    "VS"
+                            , Run PipeReader         "/tmp/haron/VS"    "VS"                           -- Volume status
                             , Run PipeReader         "/tmp/haron/VL"    "VL"                           -- Volume level
                             , Run PipeReader         "/tmp/haron/PL"    "PL"                           -- Playback (artist/track)
                             , Run PipeReader         "/tmp/haron/PS"    "PS"                           -- MPD control buttons
