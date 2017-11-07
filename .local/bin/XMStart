@@ -2,8 +2,8 @@
 # Author - Haron Prime
 # License WTFPL © 2017 http://www.wtfpl.net/
 
-echo  "" > /tmp/haron/NT &
-echo  "" > /tmp/haron/TS &
+echo  ""  > /tmp/haron/NT &
+echo  ""  > /tmp/haron/TS &
 echo  " " > /tmp/haron/WI &
 echo > /tmp/haron/CT &
 echo > /tmp/haron/CU &
@@ -18,6 +18,11 @@ echo > /tmp/haron/TA &
 echo > /tmp/haron/UP &
 echo > /tmp/haron/UT &
 echo > /tmp/haron/VL &
+if [[ `pulseaudio-ctl full-status | awk '{print $2}'` == "yes" ]]; then
+    echo "<fc=#f60></fc>" > /tmp/haron/VS &
+else
+    echo "<fc=#0e0></fc>" > /tmp/haron/VS &
+fi
 if [[ -z $(ps aux | grep gis-weather.py | grep -v grep | awk '{print $2}') ]]; then
     gis-weather &
 fi
