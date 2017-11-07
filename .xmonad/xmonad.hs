@@ -119,7 +119,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --Applications management
       ((0,              0x1008ff13),  spawn "pulseaudio-ctl up")           --XF86AudioRaiseVolume
     , ((0,              0x1008ff11),  spawn "pulseaudio-ctl down")         --XF86AudioLowerVolume
-    , ((0,              0x1008ff12),  spawn "pulseaudio-ctl mute")         --XF86AudioMute
+    , ((0,              0x1008ff12),  spawn "XMMute")                      --XF86AudioMute
     , ((0,              0x1008ff14),  spawn "XMMPCtoggle")                 --XF86Play
     , ((0,              0x1008ff15),  spawn "XMMPCstop")                   --XF86AudioStop
     , ((0,              0x1008ff16),  spawn "XMMPCprev")                   --XF86AudioPrev

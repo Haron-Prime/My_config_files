@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL © 2017 http://www.wtfpl.net/
+
+ST=`pulseaudio-ctl full-status | awk '{print $2}'`
+if [[ $ST == "yes" ]]; then
+    pulseaudio-ctl mute
+    echo "<fc=#0e0></fc>" > /tmp/haron/VS
+else
+    pulseaudio-ctl mute
+    echo "<fc=#f60></fc>" > /tmp/haron/VS
+fi
+exit 0
