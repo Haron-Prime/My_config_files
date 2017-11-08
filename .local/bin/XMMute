@@ -8,6 +8,6 @@ if [[ $ST == "yes" ]]; then
     echo "<fc=#0e0></fc>" > /tmp/haron/VS
 else
     pulseaudio-ctl mute
-    echo "<fc=#f60></fc>" > /tmp/haron/VS
+    echo "<fc=#f60></fc>" > /tmp/haron/VS
 fi
 exit 0
