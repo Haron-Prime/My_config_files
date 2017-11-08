@@ -41,6 +41,7 @@ XMSensors | `sensors` in popup notification (dunst)
 XMMemToggle | ON/OFF XMMemAll
 XMTop-mem | Top-mem apps in popup notification (dunst)
 XMdf-h | `df-h` in popup notification (dunst)
+XMMute | displays the sound status indicator (mute/unmute)
 XMVolToggle | ON/OFF XMVolNew
 XMDateToggle | ON/OFF XMDate
 XMToggleAll | ON/OFF all used in xmobar scripts
