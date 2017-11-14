@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.1.3
+
+> Nov 8, 2017
+
+- **FIX**: Create fallback file read for resource race condition.
+
+## 3.1.2
+
+> Nov 7, 2017
+
+- **FIX**: Parse legacy `foregroundSelection` properly.
+
 ## 3.1.1
 
 > Nov 4, 2017
