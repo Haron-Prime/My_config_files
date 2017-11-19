@@ -30,7 +30,7 @@ export PAGER="less"
 export EDITOR="vim"
 export ARCHFLAGS="arch x86_64"
 export BROWSER="vivaldi-snapshot"
-export MAIL="thunderbird-45"
+export MAIL="thunderbird"
 export OOO_FORCE_DESKTOP="xmonad"
 export MANOPT="-L ru"
 
@@ -44,7 +44,7 @@ autoload colors; colors
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
 
-export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n  %{$fg[red]%}zsh  %{$fg_bold[blue]%}%l %{$fg[red]%}%? %{$fg_bold[blue]%}%h%b  %{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%}%*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
+export PS1="%{$fg[white]%}┌─[%{$fg[green]%}%n  %{$fg_bold[blue]%}%l %{$fg[red]%}%? %{$fg_bold[blue]%}%h%b  %{$fg[green]%}%d%{$fg[white]%}] %{$fg[cyan]%}%*%{$reset_color%}"$'\n'"%{$fg[white]%}└─> %{$reset_color%}"
 
 # format titles for screen and rxvt
 function title() {
