@@ -132,6 +132,7 @@ source $HOME/scripts/my_zhs_plugins/aliases.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/git-prompt.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/zsh-autosuggestions.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/git-flow-completion.plugin.zsh
+source $HOME/scripts/my_zhs_plugins/grc-aliases.zsh
 # source $HOME/git/zsh-git-prompt/zshrc.sh
 
 ##Set some keybindings
