@@ -107,6 +107,7 @@ Xmessage*form.message.Scroll:      WhenNeeded
 URxvt*font:                        xft:Terminus Re33 Nerd:size=12:antialias=false:hinting=true
 URxvt*boldFont:                    xft:Terminus Re33 Nerd:weight=bold:size=12:antialias=false:hinting=true
 URxvt*scrollBar:                   false
+URxvt*borderLess:                  false
 URxvt*internalBorder:              5
 URxvt*depth:                       32
 URxvt*skipBuiltinGlyphs:           true
@@ -114,6 +115,7 @@ URxvt*perl-lib:                    /home/haron/.config/urxvt/perl
 URxvt*perl-ext-common:             default,tabbedex,clipboard,matcher,url-select,url-picker,osc-xterm-clipboard,resize-font,vtwheel
 URxvt*iso14755:                    false
 URxvt*iso14755_52:                 false
+URxvt*cutchars:                    BACKSLASH '"'&()*,;<=>?@[]^{|}
 URxvt*keysym.Shift-Home:           command:\033]720;4096\007
 URxvt*keysym.Shift-End:            command:\033]721;4096\007
 URxvt*keysym.Control-Shift-C:      perl:clipboard:copy
