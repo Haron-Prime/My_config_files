@@ -88,8 +88,8 @@ alias GS='gsync && ggsync'
 # alias gmx='mount https://storage-file-eu.gmx.com'
 
 # alias d2h='printf \\n\#%02X%02X%02X `xclip -o`'
-alias d2hpp='printf \\n\#%02X%02X%02X `xclip -o` | xclip -selection clipboard'
-alias d2hp='printf \#%02X%02X%02X `xclip -o` | xclip -selection clipboard'
+# alias d2hpp='printf \\n\#%02X%02X%02X `xclip -o` | xclip -selection clipboard'
+# alias d2hp='printf \#%02X%02X%02X `xclip -o` | xclip -selection clipboard'
 
 alias transfer='curl -T - https://transfer.sh/777.txt'
 
@@ -180,5 +180,5 @@ alias -s {odt,doc,sxw,rtf}=libreoffice
 alias -s {png,gif,jpg,jpeg}=feh
 alias -s text=vim
 
-alias P16S='rsync -ruptgo --delete --progress /home/haron/.local/lib/Pro100-5.20-GIV /media/16GB/Pro100-5.20-GIV/'
-alias P8S='rsync -ruptgo --delete --progress /home/haron/.local/lib/Pro100-5.20-GIV /media/8GB/Pro100-5.20-GIV/'
+# alias P16S='rsync -ruptgo --delete --progress /home/haron/.local/lib/Pro100-5.20-GIV /media/16GB/Pro100-5.20-GIV/'
+# alias P8S='rsync -ruptgo --delete --progress /home/haron/.local/lib/Pro100-5.20-GIV /media/8GB/Pro100-5.20-GIV/'
