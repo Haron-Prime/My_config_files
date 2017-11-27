@@ -9709,6 +9709,42 @@
         <key>foreground</key>
         <string>#ffffff</string>
     </dict>
+</dict><dict>
+    <key>name</key>
+    <string>CH_color_scheme_fix</string>
+    <key>scope</key>
+    <string>ch_gutter_icon</string>
+    <key>settings</key>
+    <dict>
+        <key>foreground</key>
+        <string>#ffffff</string>
+    </dict>
+</dict><dict>
+<key>name</key>
+<string>CH_color</string>
+<key>scope</key>
+<string>CH_color_007799ff</string>
+<key>settings</key>
+<dict>
+<key>background</key>
+<string>#007799ff</string>
+<key>foreground</key>
+<string>#65DCFFFF</string>
+<key>caret</key>
+<string>#65DCFFFF</string>
+</dict>
+</dict><dict>
+<key>scope</key>
+<string>CH_text_color_007799ff</string>
+<key>settings</key>
+<dict>
+<key>background</key>
+<string>#19191aFF</string>
+<key>foreground</key>
+<string>#007799ff</string>
+<key>caret</key>
+<string>#65DCFFFF</string>
+</dict>
 </dict></array>
 	<key>uuid</key>
 	<string>F96223EB-1A60-4617-92F3-D24D4F13DB09</string>
