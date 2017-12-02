@@ -1,0 +1,25 @@
+[
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "Dark NNM Club",
+		"sections": [
+			{
+				"code": "body, .forumline {\n\tbackground-color: #152025 !important;\n\tcolor: #ccc !important;\n\tborder: none !important;\n}\ninput, select, .folded, .folded2, .spoiler-body, tbody, .tg, .menutable, th, .top, .rowlightgreen, .spaceRow, input.post, textarea.post {\n\tbackground-image: none !important;\n\tbackground-color: #253035 !important;\n\tbox-shadow: 0 0 1px #757575 !important;\n\tborder: none !important;\n\tcolor: #ccc !important;\n}\n.thHead, .row1, .row2, .row3, .postbody, .gen, .genmed, .gensmall, table, td.cat, td.catHead, td.catSides, td.catLeft, td.catRight, td.catBottom {\n\tbackground-image: none !important;\n\tbackground-color: #253035 !important;\n\tbox-shadow: none !important;\n\tborder: none !important;\n\tcolor: #ccc !important;\t\n}\n.gen, .mainmenu, .tDL {\n\tcolor: #ccc !important;\n}\na:link, a:active, a:visited, a.gen, a.genmed, a.gensmall, .nav, .gen, .genmed, .gensmall,.copyright {\n\tcolor: #09b !important;\n}\na:hover {\n    color: #9df !important\n}\n.seed,.seedmed,.seedsmall{\n\tcolor:#090 !important;\n}\n.seed_bonus,.bonusmed,.bonussmall{\n\tcolor:#08d !important;\n}\n.dlDown, span[style=\"color: #800000\"], .leech,.leechmed,.leechsmall{\n\tcolor:#c33 !important;\n}\n.dlWill{\n\tcolor:#069 !important;\n}\n.name, .postdetails {\n\tcolor:#689 !important;\n}\n.rank_progress_bar .bar {\n\tbackground: linear-gradient(to right,  rgba(234,234,234,1) 31%,rgba(174,212,248,1) 57%,rgba(94,184,232,1) 87%) !important;\n}\n.rank_progress_bar.tit, .rank_progress_bar.tit-b {\n\tcolor:#578 !important;\n\tborder: 1px solid #757575 !important;\n}\n.audioplayer {\n\tborder: none !important;\n\tmargin: 3px !important;\n}\n.forumline tbody tr .row1, .forumline tbody tr .row3 {\n\tbox-shadow: 0 0 1px #757575 !important;\n}",
+				"urls": [],
+				"urlPrefixes": [
+					"https://nnmclub.to/forum/profile.php?mode=viewprofile&u=8819522",
+					"http://nnmclub.to/forum/profile.php?mode=viewprofile&u=8819522",
+					"https://nnm-club.me/forum/profile.php?mode=viewprofile&u=8819522",
+					"http://nnm-club.me/forum/profile.php?mode=viewprofile&u=8819522"
+				],
+				"domains": [],
+				"regexps": []
+			}
+		],
+		"id": 1
+	}
+]
