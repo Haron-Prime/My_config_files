@@ -1,0 +1,13 @@
+.tabbrowser-tab[fadein]:not([pinned]) {
+    min-height: 22px  !important;
+    max-height: 26px  !important;
+    min-width:  60px  !important;
+    max-width:  150px !important;
+    font-size:  14px  !important;
+}
+#tabbrowser-tabs {
+    margin-left:-34px !important;
+}
+browser {
+    background: #202020!important;
+} 
