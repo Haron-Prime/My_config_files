@@ -358,6 +358,7 @@ myWR = composeAll . concat $
         myS   = [
                   "GParted"
                 , "pacmanxg"
+                , "PkgBrowser"
                 , "Sysinfo"
                 , "Systemadm"
                 , "Tk"
