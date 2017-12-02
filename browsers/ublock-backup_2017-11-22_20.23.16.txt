@@ -1,0 +1,159 @@
+{
+  "timeStamp": 1511374996279,
+  "version": "1.14.18",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "alwaysDetachLogger": false,
+    "autoUpdate": true,
+    "cloudStorageEnabled": true,
+    "collapseBlocked": true,
+    "colorBlindFriendly": false,
+    "contextMenuEnabled": true,
+    "dynamicFilteringEnabled": true,
+    "externalLists": "https://easylist-downloads.adblockplus.org/bitblockext.txt\nhttps://easylist-downloads.adblockplus.org/cntblock.txt\nhttps://github.com/jspenguin2017/uBlockProtector/raw/master/uBlockProtectorList.txt\nhttps://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt",
+    "firewallPaneMinimized": true,
+    "hyperlinkAuditingDisabled": true,
+    "ignoreGenericCosmeticFilters": false,
+    "largeMediaSize": 50,
+    "parseAllABPHideFilters": true,
+    "prefetchingDisabled": true,
+    "requestLogMaxEntries": 1000,
+    "showIconBadge": true,
+    "tooltipsDisabled": true,
+    "webrtcIPAddressHidden": true
+  },
+  "selectedFilterLists": [
+    "https://github.com/jspenguin2017/uBlockProtector/raw/master/uBlockProtectorList.txt",
+    "https://easylist-downloads.adblockplus.org/cntblock.txt",
+    "https://easylist-downloads.adblockplus.org/bitblockext.txt",
+    "https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt",
+    "RUS-0",
+    "RUS-2",
+    "plowe-0",
+    "mvps-0",
+    "fanboy-social",
+    "fanboy-cookiemonster",
+    "fanboy-annoyance",
+    "adguard-annoyance",
+    "spam404-0",
+    "disconnect-malware",
+    "malware-1",
+    "malware-0",
+    "disconnect-malvertising",
+    "fanboy-enhanced",
+    "easyprivacy",
+    "adguard-spyware",
+    "easylist",
+    "adguard-generic",
+    "awrl-0",
+    "aak-continued",
+    "ublock-unbreak",
+    "ublock-abuse",
+    "ublock-privacy",
+    "ublock-experimental",
+    "ublock-badware",
+    "ublock-filters",
+    "user-filters"
+  ],
+  "hiddenSettingsString": "assetFetchTimeout 30\nautoUpdateAssetFetchPeriod 120\nautoUpdatePeriod 7\nignoreRedirectFilters false\nignoreScriptInjectFilters false\nmanualUpdateAssetFetchPeriod 2000\npopupFontSize unset\nsuspendTabsUntilReady false\nuserResourcesLocation unset",
+  "netWhitelist": "about-scheme\nbehind-the-scene\nchrome-extension-scheme\nchrome-scheme\nloopconversation.about-scheme\nopera-scheme\nprivat24.privatbank.ua\nvivaldi-scheme\nwww.visitlinks.xyz",
+  "dynamicFilteringString": "behind-the-scene * 3p-frame noop\nbehind-the-scene * 3p noop\nnnm-club.name piguiqproxy.com * allow\n* piguiqproxy.com * allow\nnnmclub.to nnm-club.ws * allow\n* nnm-club.ws * allow\n* nnmclub.to * allow\n* nnm-club.name * allow",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-csp-reports: * true",
+  "userFilters": "! 10.06.2017, 12:18:00 http://forum.ubuntu.ru/index.php?action=unread\nforum.ubuntu.ru##.slinks.description\n\n! 22.11.2017, 14:59:14 https://4pda.ru/forum/index.php?showtopic=152562&st=32480#entry67339594\n||s.4pda.to/Cph4iryiD8y1NkEi1W5Djnk6PK4Oz25y5tsse.gif$image\n",
+  "filterLists": {
+    "https://github.com/jspenguin2017/uBlockProtector/raw/master/uBlockProtectorList.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/cntblock.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/bitblockext.txt": {
+      "off": false
+    },
+    "https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/advblock.txt": {
+      "off": false
+    },
+    "https://adguard.com/en/filter-rules.html?id=1": {
+      "off": false
+    },
+    "assets/thirdparties/pgl.yoyo.org/as/serverlist": {
+      "off": false
+    },
+    "http://winhelp2002.mvps.org/hosts.txt": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/fanboy-social.txt": {
+      "off": false
+    },
+    "fanboy-cookiemonster": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt": {
+      "off": false
+    },
+    "adguard-annoyance": {
+      "off": false
+    },
+    "https://raw.githubusercontent.com/Dawsey21/Lists/master/adblock-list.txt": {
+      "off": false
+    },
+    "https://s3.amazonaws.com/lists.disconnect.me/simple_malware.txt": {
+      "off": false
+    },
+    "assets/thirdparties/mirror1.malwaredomains.com/files/justdomains": {
+      "off": false
+    },
+    "assets/thirdparties/www.malwaredomainlist.com/hostslist/hosts.txt": {
+      "off": false
+    },
+    "https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt": {
+      "off": false
+    },
+    "https://www.fanboy.co.nz/enhancedstats.txt": {
+      "off": false
+    },
+    "assets/thirdparties/easylist-downloads.adblockplus.org/easyprivacy.txt": {
+      "off": false
+    },
+    "adguard-spyware": {
+      "off": false
+    },
+    "assets/thirdparties/easylist-downloads.adblockplus.org/easylist.txt": {
+      "off": false
+    },
+    "adguard-generic": {
+      "off": false
+    },
+    "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt": {
+      "off": false
+    },
+    "aak-continued": {
+      "off": false
+    },
+    "assets/ublock/unbreak.txt": {
+      "off": false
+    },
+    "ublock-abuse": {
+      "off": false
+    },
+    "assets/ublock/privacy.txt": {
+      "off": false
+    },
+    "assets/ublock/experimental.txt": {
+      "off": false
+    },
+    "assets/ublock/badware.txt": {
+      "off": false
+    },
+    "assets/ublock/filters.txt": {
+      "off": false
+    },
+    "assets/user/filters.txt": {
+      "off": false
+    }
+  }
+}
