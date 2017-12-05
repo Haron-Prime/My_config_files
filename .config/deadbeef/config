@@ -84,13 +84,13 @@ playlist.column.04 "Альбом" "%b" -1 383 0
 playlist.column.05 "Дата" "%y" -1 169 1
 playlist.column.06 "Жанр" "%g" -1 126 0
 playlist.column.07 "Продолжительность" "%l" -1 167 1
-playlist.current 2
-playlist.cursor.0 13
+playlist.current 0
+playlist.cursor.0 18
 playlist.cursor.1 5
 playlist.cursor.2 12
 playlist.group_by %a - [%y] %b
 playlist.pin.groups 0
-playlist.scroll.0 0
+playlist.scroll.0 40
 playlist.scroll.1 0
 playlist.scroll.2 0
 playlist.scroll.cursorfollowplayback 1
@@ -103,10 +103,10 @@ prefwin.geometry.x 480
 prefwin.geometry.y 315
 replaygain_mode 2
 replaygain_scale 1
-resume.paused 0
-resume.playlist 2
-resume.position -1.000000
-resume.track -1
+resume.paused 1
+resume.playlist 0
+resume.position 8.4901781
+resume.track 18
 resume_last_session 1
 streamer.16_to_24 1
 streamer.8_to_16 1
