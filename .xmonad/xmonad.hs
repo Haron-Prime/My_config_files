@@ -418,6 +418,7 @@ myWR = composeAll . concat $
         myFA  = [
                   "gmrun"
                 , "lxappearance"
+                , "Toplevel"
                 , "Update"
                 , "xarchiver"
                 ]
