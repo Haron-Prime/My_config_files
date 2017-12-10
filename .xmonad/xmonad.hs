@@ -111,6 +111,7 @@ cycleWin         =  cycleRecentWindows [0xffeb] 0xff09 0x77
 nSA              =  namedScratchpadAction myNS
 -- Other options
 role             =  stringProperty "WM_WINDOW_ROLE"
+wname            =  stringProperty "WM_NAME"
 
 --- CONFIG ---
 -- Key bindings.
@@ -307,6 +308,7 @@ myWR = composeAll . concat $
     , [appName   =? a                 --> doCenterFloat                                      | a <- myFA]
     , [title     =? t                 --> doCenterFloat                                      | t <- myFT]
     , [role      =? r                 --> doCenterFloat                                      | r <- myFR]
+    , [wname     =? n                 --> doCenterFloat                                      | n <- myFN]
 
     , [role      =? r                 --> (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)  | r <- myCF]
 
@@ -418,7 +420,6 @@ myWR = composeAll . concat $
         myFA  = [
                   "gmrun"
                 , "lxappearance"
-                , "Toplevel"
                 , "Update"
                 , "xarchiver"
                 ]
@@ -431,6 +432,9 @@ myWR = composeAll . concat $
                 , "pop-up"
                 , "task_dialog"
                 , "^conversation$"
+                ]
+        myFN  = [
+                  "About Nightly"
                 ]
         -- Custom floating windows
         myCF  = [
