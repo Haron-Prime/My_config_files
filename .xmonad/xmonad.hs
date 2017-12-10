@@ -490,10 +490,10 @@ myNS = [
 -- Scratchpad (myQST)
 mySP = scratchpadManageHook (W.RationalRect l t w h)
     where
-        h = 0.333   -- terminal height
-        w = 1       -- terminal width
-        t = 1 - h   -- distance from top edge
-        l = 1 - w   -- distance from left edge
+        h = 0.333       -- terminal height
+        w = 1           -- terminal width
+        t = 1 - h       -- distance from top edge
+        l = (1 - w)/2   -- distance from left edge
 
 -- Manage Hook
 myMH = manageHook def <+> 
