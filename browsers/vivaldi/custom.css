@@ -1,6 +1,13 @@
-.tab-header .favicon {
-    /**[Remove border around favicon(tab icon) and and shadow]**/
+/*.tab-header .favicon {
+    *[Remove border around favicon(tab icon) and and shadow]*
     box-shadow: none !important;
     background-color: transparent !important;
-    /*-webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7)) !important;*/
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7)) !important;
+}*/
+.tab-position .tab.active .tab-header .favicon {
+  box-shadow: none !important;
+  overflow: hidden;
+  background-color: #656565 !important;
+  fill: #151515 !important;
+  -webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.7)) !important;
 }
