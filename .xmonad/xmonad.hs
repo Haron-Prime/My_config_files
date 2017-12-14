@@ -140,7 +140,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                  0xff69),  spawn "compdown")                    -- Cancel
     , ((0,                  0xff67),  spawn "gmrun")                       -- Menu
     , ((0,                  0xffc9),  myQST)                               -- F12
-    , ((0,                  0xff14),  nSA "NCMPCPP")                       -- Scroll_Lock
+    -- , ((0,                  0xff14),  nSA "NCMPCPP")                       -- Scroll_Lock
     , ((0,                  0xff61),  myFullScrot)                         -- Print
     , ((0    .|. shftm,     0xff61),  myWindowScrot)                       -- Shift+Print
     , ((altm,               0xff61),  myAreaScrot)                         -- Alt+Print
@@ -151,7 +151,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm .|. ctrlm,       0x67),  spawn "gimp")                        -- Alt+Ctrl+G
     , ((altm,                 0x68),  spawn "hexchat")                     -- Alt+H
     , ((altm,                 0x6c),  spawn "XMLPass")                     -- Alt+L
-    , ((altm .|. ctrlm,       0x6c),  mySreenLock)                         -- Alt+Ctrl+L
+    -- , ((altm .|. ctrlm,       0x6c),  mySreenLock)                         -- Alt+Ctrl+L
     , ((altm,                 0x6d),  spawn "urxvtc -name mc -e mc")       -- Alt+M
     , ((altm,                 0x6e),  spawn "XMNotes-w")                   -- Alt+N
     , ((altm .|. ctrlm,       0x6e),  nSA "NOTES")                         -- Alt+Ctrl+N
@@ -514,7 +514,7 @@ myEH = handleEventHook def <+>
 mySH = return () <+> 
        adjustEventInput <+> 
        setWMName "LG3D" <+> 
-       onScr 1 W.greedyView (myWS !! 0) <+> 
+       -- onScr 1 W.greedyView (myWS !! 0) <+> 
        spawn "XMStart" 
 
 main = do
