@@ -66,9 +66,9 @@ myNotes          =  "urxvtc -name Notes -cd ~/MyNotes -e vim -c NERDTree"
 myHtop           =  "urxvtc -name htop -e htop"
 myPlayer         =  "urxvtc -name ncmpcpp -e ncmpcpp"
 myEditor         =  spawn "urxvtc -name vim -e vim"
-myFullScrot      =  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
-myWindowScrot    =  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
-myAreaScrot      =  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+myFScrot         =  spawn "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+myWScrot         =  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
+myAScrot         =  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 myAppMenu        =  spawn "mygtkmenu .menurc"
 myPlaceMenu      =  spawn "mygtkmenu .placerc"
 mySreenLock      =  spawn "i3lock -i /home/haron/wall/starrynight.png"
@@ -140,10 +140,9 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                  0xff69),  spawn "compdown")                    -- Cancel
     , ((0,                  0xff67),  spawn "gmrun")                       -- Menu
     , ((0,                  0xffc9),  myQST)                               -- F12
-    -- , ((0,                  0xff14),  nSA "NCMPCPP")                       -- Scroll_Lock
-    , ((0,                  0xff61),  myFullScrot)                         -- Print
-    , ((0    .|. shftm,     0xff61),  myWindowScrot)                       -- Shift+Print
-    , ((altm,               0xff61),  myAreaScrot)                         -- Alt+Print
+    , ((0,                  0xff61),  myFScrot)                            -- Print
+    , ((0    .|. shftm,     0xff61),  myWScrot)                            -- Shift+Print
+    , ((altm,               0xff61),  myAScrot)                            -- Alt+Print
     , ((altm,                 0x63),  spawn "chromium")                    -- Alt+C
     , ((altm,                 0x64),  nSA "DEADBEEF")                      -- Alt+D
     , ((altm,                 0x66),  spawn "firefox")                     -- Alt+F
@@ -151,12 +150,12 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm .|. ctrlm,       0x67),  spawn "gimp")                        -- Alt+Ctrl+G
     , ((altm,                 0x68),  spawn "hexchat")                     -- Alt+H
     , ((altm,                 0x6c),  spawn "XMLPass")                     -- Alt+L
-    -- , ((altm .|. ctrlm,       0x6c),  mySreenLock)                         -- Alt+Ctrl+L
     , ((altm,                 0x6d),  spawn "urxvtc -name mc -e mc")       -- Alt+M
-    , ((altm,                 0x6e),  spawn "XMNotes-w")                   -- Alt+N
-    , ((altm .|. ctrlm,       0x6e),  nSA "NOTES")                         -- Alt+Ctrl+N
+    -- , ((altm,                 0x6e),  spawn "XMNotes-w")                   -- Alt+N
+    -- , ((altm .|. ctrlm,       0x6e),  nSA "NOTES")                         -- Alt+Ctrl+N
+    , ((altm,                 0x6e),  nSA "NCMPCPP")                       -- Alt+N
     , ((altm,                 0x6f),  spawn "opera-developer")             -- Alt+O
-    , ((altm,                 0x70),  nSA "NCMPCPP")                       -- Alt+P
+    -- , ((altm,                 0x70),  nSA "NCMPCPP")                       -- Alt+P
     , ((altm,                 0x71),  nSA "OBLOGOUT")                      -- Alt+Q
     , ((altm,                 0x72),  nSA "FM")                            -- Alt+R
     , ((altm,                 0x74),  spawn "XMTransgui")                  -- Alt+T
