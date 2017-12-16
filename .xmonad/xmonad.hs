@@ -135,7 +135,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,              0x1008ff77),  nSA "NCMPCPP")                       -- XF86Save
     , ((0,              0x1008ff46),  spawn "XMR")                         -- XF86Launch6
     , ((0,              0x1008ff2f),  mySreenLock)                         -- XF86Sleep
-    , ((0,              0x1008ff56),  nSA "OBLOGOUT")                      -- XF86Close
+    , ((0,              0x1008ff56),  nSA "ExitMenu")                      -- XF86Close
     , ((0,              0x1008ff73),  spawn "compreboot")                  -- XF86Reload
     , ((0,                  0xff69),  spawn "compdown")                    -- Cancel
     , ((0,                  0xff67),  spawn "gmrun")                       -- Menu
@@ -156,7 +156,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x6e),  nSA "NCMPCPP")                       -- Alt+N
     , ((altm,                 0x6f),  spawn "opera-developer")             -- Alt+O
     -- , ((altm,                 0x70),  nSA "NCMPCPP")                       -- Alt+P
-    , ((altm,                 0x71),  nSA "OBLOGOUT")                      -- Alt+Q
+    , ((altm,                 0x71),  nSA "ExitMenu")                      -- Alt+Q
     , ((altm,                 0x72),  nSA "FM")                            -- Alt+R
     , ((altm,                 0x74),  spawn "XMTransgui")                  -- Alt+T
     , ((altm,                 0x76),  myEditor)                            -- Alt+V
@@ -474,7 +474,7 @@ myPC = def {
 myNS = [
          NS "MIRAGE"       "mirage"       (className  =? "Mirage")       (customFloating $ W.RationalRect 0.05 0.05 0.9 0.9)
        , NS "GSIMPLECAL"   "gsimplecal"   (className  =? "Gsimplecal")   (customFloating $ W.RationalRect 0.43 0.4 0.14 0.2)
-       , NS "OBLOGOUT"     "oblogout"     (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.32 0.4 0.36 0.2)
+       , NS "ExitMenu"     "oblogout"     (className  =? "Oblogout")     (customFloating $ W.RationalRect 0.32 0.4 0.36 0.2)
        , NS "DEADBEEF"     "deadbeef"     (className  =? "Deadbeef")     (customFloating $ W.RationalRect 0.1 0.1 0.8 0.8)
 
        , NS "NCMPCPP"      myPlayer       (appName    =? "ncmpcpp")      (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
