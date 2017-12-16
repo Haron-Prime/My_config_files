@@ -22,7 +22,7 @@ Config {
        , iconRoot         = "/home/haron/.xmonad/resources"
        , font             = "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
        , additionalFonts  = [
-                             "xft:Larabiefont:size=12:weight=bold:antialias=true:hinting=true"         -- fn=1
+                             "xft:Larabiefont:size=11:weight=bold:antialias=true:hinting=true"         -- fn=1
                             ,"xft:Terminus Re33 Nerd Bold:pixelsize=6"                                 -- fn=2 (for separators)
                             ,"xft:Weather Icons:weight=bold:pixelsize=14:antialias=true:hinting=true"  -- fn=3
                             ,"xft:SF Square Head:weight=bold:size=11:antialias=true:hinting=true"      -- fn=4 (for UnsafeStdinReader)
