@@ -7,7 +7,10 @@ body {
     background-color: #252525 !important;
 }
 .topic-list>tbody>tr:nth-child(odd)>td, .category-table>tbody>tr:nth-child(odd)>td, .topic-list>tbody>tr:nth-child(odd)>th, .category-table>tbody>tr:nth-child(odd)>th {
-    background-color: #222;
+    background-color: #222 !important;
+}
+.post-info, .post thead, .post tfoot, .block .header, .block .info {
+    background: #222 !important;
 }
 .navbar, .navbar-inverse, .navbar-inverse .navbar-collapse.wrapper  {
     position: fixed !important;
