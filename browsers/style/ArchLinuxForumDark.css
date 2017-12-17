@@ -71,4 +71,8 @@ pre {
     background: #222 !important;
     border: 1px solid #555 !important;
 }
+.form-control {
+    background-color: #333 !important;
+    color: #aaa !important;
+}
 }
