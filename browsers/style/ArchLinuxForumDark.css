@@ -68,8 +68,8 @@ pre {
     border: 1px solid #555 !important;
 }
 blockquote {
-    background: #333;
-    border-left: 3px solid #959595;
+    background: #333 !important;
+    border-left: 3px solid #959595 !important;
 }
 .form-control {
     background-color: #333 !important;
