@@ -22,13 +22,13 @@ body {
 .input-group .form-control:first-child, .input-group-btn > .btn-default {
     height: 20px !important;
     font-size: 12px !important;
-    vertical-align: middle;
+    vertical-align: middle !important;
     margin-top: 6px !important;
     padding-top: 0px !important;
     padding-bottom: 2px !important;
 }
 .breadcrumb {
-    padding: 4px 8px;
+    padding: 4px 8px !important;
     margin-top: 80px !important;
     background: #333 !important;
 }
@@ -48,7 +48,7 @@ body {
     margin: 8px 0 !important;
 }
 .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
-    color: #7bd;
+    color: #7bd !important;
     background-color: #555 !important;
     border-color: #555 !important;
 }
