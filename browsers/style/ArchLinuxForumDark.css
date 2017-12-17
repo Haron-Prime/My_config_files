@@ -1,3 +1,7 @@
+/*Dark stule fix for archlinux.org.ru/forum
+Author - Haron Prime
+License WTFPL © 2017 http://www.wtfpl.net/*/
+
 @-moz-document url-prefix("https://archlinux.org.ru/forum") {
 body {
     background-color: #252525 !important;
