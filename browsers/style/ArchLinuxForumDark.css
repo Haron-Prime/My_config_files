@@ -1,9 +1,4 @@
-@-moz-document url-prefix("https://archlinux.org.ru/forum"), url-prefix("http://archlinux.org.ru/forum") {
-
-/*Dark style fix for archlinux.org.ru/forum
-Author - Haron Prime
-License WTFPL © 2017 http://www.wtfpl.net/*/
-
+@-moz-document url-prefix("https://archlinux.org.ru/"), url-prefix("http://archlinux.org.ru/") {
 body {
     background-color: #252525 !important;
 }
