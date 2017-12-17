@@ -32,14 +32,12 @@ body {
 .label-info {
     background-color: #333 !important;
     color: #3a87ad !important;
-    border: solid 1px !important;
-    border-color: #555 !important;
+    border: solid 1px #555 !important;
 }
 .label-danger {
     background-color: #333 !important;
     color: #d9534f !important;
-    border: solid 1px !important;
-    border-color: #555 !important;
+    border: solid 1px #555 !important;
 }
 .pagination>li>a, .pagination>li>span{
     line-height: 1.2 !important;
@@ -59,7 +57,11 @@ a:hover, a:focus {
     box-shadow: none !important;
     background-image: none !important;
     background-color: #333 !important;
-    border: solid 1px !important;
-    border-color: #555 !important;
+    border: solid 1px #555 !important;
+}
+pre {
+    color: #959595 !important;
+    background: #222 !important;
+    border: 1px solid #555 !important;
 }
 }
