@@ -35,14 +35,21 @@ body {
     border: solid 1px !important;
     border-color: #555 !important;
 }
-.pagination {
+.pagination>li>a, .pagination>li>span{
+    line-height: 1.2 !important;
     font-size: 0.8em !important;
     margin: 8px 0 !important;
+}
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+    color: #7bd;
+    background-color: #555 !important;
+    border-color: #555 !important;
 }
 a:hover, a:focus {
     color: #7bd !important;
 }
 .btn-default, .btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger {
+    line-height: 1.2 !important;
     box-shadow: none !important;
     background-image: none !important;
     background-color: #333 !important;
