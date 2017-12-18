@@ -89,6 +89,10 @@ blockquote {
     font-size: 1.1em !important;
     border: none !important;
 }
+.post-signature {
+    font-size: 0.8em !important;
+    line-height: 1.2 !important;
+}
 @media (max-width: 980px) {
     .navbar-nav>li>a[href="https://archlinux.org/download/"], .navbar-nav>li>a[href="/donate/"] {
         display: none !important;
