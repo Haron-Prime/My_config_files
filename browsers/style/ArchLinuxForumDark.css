@@ -77,6 +77,9 @@ a:hover, a:focus {
     border: solid 1px #555 !important;
     font-size: 0.8em !important;
 }
+.btn-primary:hover, .btn-primary:focus {
+    color: #7bd !important;
+}
 pre {
     color: #959595 !important;
     background: #222 !important;
