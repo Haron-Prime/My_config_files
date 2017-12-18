@@ -18,6 +18,10 @@ body {
     box-shadow: 0px 4px 10px rgba(15,15,15,0.7) !important;
     font-size: 0.8em !important;
 }
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    background-image: none !important;
+    background-color: #333 !important;
+}
 .input-group .form-control:first-child, .input-group-btn > .btn-default {
     height: 20px !important;
     font-size: 12px !important;
@@ -89,10 +93,17 @@ blockquote {
 .forum h1 {
     font-size: 1.1em !important;
     border: none !important;
+    color: #bbb !important;
+    font-weight: bold !important;
 }
 .post-signature {
     font-size: 0.8em !important;
     line-height: 1.2 !important;
+}
+.markItUpPreviewFrame {
+    padding: 5px !important;
+    background-color: #333 !important;
+    border: 1px solid #555 !important;
 }
 @media (max-width: 980px) {
     .navbar-nav>li>a[href="https://archlinux.org/download/"], .navbar-nav>li>a[href="/donate/"] {
