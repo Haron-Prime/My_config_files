@@ -61,6 +61,7 @@ a:hover, a:focus {
     background-image: none !important;
     background-color: #333 !important;
     border: solid 1px #555 !important;
+    font-size: 0.8em !important;
 }
 pre {
     color: #959595 !important;
