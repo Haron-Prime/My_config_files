@@ -1,12 +1,10 @@
 @-moz-document url-prefix("https://archlinux.org.ru/"), url-prefix("http://archlinux.org.ru/") {
 body {
     background-color: #252525 !important;
+    line-height: 1.3 !important;
 }
-.topic-list>tbody>tr:nth-child(odd)>td, .category-table>tbody>tr:nth-child(odd)>td, .topic-list>tbody>tr:nth-child(odd)>th, .category-table>tbody>tr:nth-child(odd)>th {
+.topic-list>tbody>tr:nth-child(odd)>td, .category-table>tbody>tr:nth-child(odd)>td, .topic-list>tbody>tr:nth-child(odd)>th, .category-table>tbody>tr:nth-child(odd)>th, .post-info, .post thead, .post tfoot, .block .header, .block .info {
     background-color: #222 !important;
-}
-.post-info, .post thead, .post tfoot, .block .header, .block .info {
-    background: #222 !important;
 }
 .navbar, .navbar-inverse, .navbar-inverse .navbar-collapse.wrapper  {
     position: fixed !important;
@@ -16,7 +14,7 @@ body {
     background-image: none !important;
     border: none !important;
     background-color: #222 !important;
-    box-shadow: 0px 4px 10px rgb(15, 15, 15) !important;
+    box-shadow: 0px 4px 10px rgba(15,15,15,0.7) !important;
     font-size: 0.8em !important;
 }
 .input-group .form-control:first-child, .input-group-btn > .btn-default {
@@ -29,8 +27,16 @@ body {
 }
 .breadcrumb {
     padding: 4px 8px !important;
-    margin-top: 70px !important;
-    background: #333 !important;
+    margin-top: 55px !important;
+    margin-bottom: 10px !important;
+    background: inherit !important;
+    font-size: 1.2em !important;
+}
+.table.topic-list {
+    margin-bottom: 10px !important;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    line-height: 1.3 !important;
 }
 .label-info {
     background-color: #333 !important;
@@ -41,6 +47,9 @@ body {
     background-color: #333 !important;
     color: #d9534f !important;
     border: solid 1px #555 !important;
+}
+.forum .text-center .pagination {
+    margin: 10px 0 !important;
 }
 .pagination>li>a, .pagination>li>span{
     line-height: 1.2 !important;
@@ -75,6 +84,10 @@ blockquote {
 .form-control {
     background-color: #333 !important;
     color: #aaa !important;
+}
+.forum h1 {
+    font-size: 1.1em !important;
+    border: none !important;
 }
 @media (max-width: 980px) {
     .navbar-nav>li>a[href="https://archlinux.org/download/"], .navbar-nav>li>a[href="/donate/"] {
