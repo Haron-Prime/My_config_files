@@ -43,6 +43,9 @@ body {
     background: inherit !important;
     font-size: 1.2em !important;
 }
+.breadcrumb a {
+    color: #3a87ad !important;
+}
 .table.topic-list {
     margin-bottom: 10px !important;
 }
