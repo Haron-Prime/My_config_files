@@ -37,8 +37,7 @@ body {
     padding-bottom: 2px !important;
 }
 .breadcrumb {
-    padding: 4px 8px !important;
-    margin-top: 55px !important;
+    padding: 55px 8px 0px 8px !important;
     margin-bottom: 10px !important;
     background: inherit !important;
     font-size: 1.2em !important;
