@@ -1,4 +1,8 @@
 @-moz-document url-prefix("https://archlinux.org.ru/"), url-prefix("http://archlinux.org.ru/") {
+
+/* Author - Haron Prime
+License WTFPL © 2017 http://www.wtfpl.net/ */
+
 body {
     background-color: #252525 !important;
     color: #aaa !important;
