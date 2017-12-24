@@ -1,5 +1,4 @@
 @-moz-document url-prefix("https://archlinux.org.ru/"), url-prefix("http://archlinux.org.ru/") {
-
 /* Author - Haron Prime
 License WTFPL © 2017 http://www.wtfpl.net/ */
 
@@ -20,7 +19,7 @@ body {
     background-image: none !important;
     border: none !important;
     background-color: #222 !important;
-    box-shadow: 0px 4px 10px rgba(15,15,15,0.7) !important;
+    box-shadow: 0px 6px 10px rgba(0,0,0,0.5) !important;
     font-size: 0.8em !important;
 }
 .navbar .nav .active a {
@@ -48,6 +47,9 @@ body {
 }
 .breadcrumb a {
     color: #3a87ad !important;
+}
+.nav>li>a>img {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB+EMGAsqIvfPktsAAAMBSURBVDjLnZRPaCRFFMa/mqqanko73bBJDEREcshl3MAKIf5hwNNCIGDYGfDgRTSOE3AGeghraE3nDwwzA7kEIuwE0YOXPQizBD0EDysE1kOMoOQmkRwCErIMYhK60+lK1R6GDrtRk1nrVLz31a++V+9RQBfLcZw3XNfNdqNl3Ygsy/rcNM0UgNvXaclVycXFRYRhaAgh/mSM8Xa7PVCv14NkMvmfZxLXAZVSdwzDuEEpTQ8ODn5yFexaIAD09fV9RSkFIQRCiOWJiYnU/yq5Xq9DKXXbsqwflFJQSsXQcrFY/OK5HJZKJbiuiyiKXgiC4GvGGBhjSCQS0Fo7ALC0tPR8Dmu12pv9/f0/RVG0FYZhTyqVuqm1BqUUURS9XyqVvunK4cLCAgBgYGDgAeccQogx27Zvcs7BOYfWGpZl3atUKqlGo9Gdw2az+XY6nf6REELOzs5wcnKCKIoQOzQMA5TSdwuFwrddDbZpmveklOTw8BC+74MQAkI6d2utAQDJZHINwD+A9HJgZWXl46Ojow/a7TaklCCEQEr5u1LqMaW0L4YrpUQ2m+Wbm5sP/7XkcrkM27YpY+wPSukrcTwMw/vVavU9AJibm/vSMIyP4pxS6nB/f/+l4eFhOTs7+2xTVldXEQRB/mmYUgoxbHd3F9VqtaCUOrvoaCLxYm9vrxPDLoAjIyPI5/Np27bvX3qBXwBgdHQU2Wznszk/P38UJ4Mg+M00zeVyufzy0NBQB5jL5bCzs4NMJvMpIeSZMdJa+wCwvb2Ng4ODOPx3vBFCjBwfH9/VWg/u7e1hcnISrNVqddrN2GeXG3R6evr4ckxK+Rfn/KJCy7KWe3p6fgXw2vr6eqfk+fn57ymlCa01pJQt3/dznufxRqORdxznAjYzM4Narfah53nc9/2clLKltQbn/JbneQ8BgLiu+6oQ4mcp5aONjY13tra2gmKxiLW1tSt/oenpaTSbTYyNjYnx8fHvGGNvBUHwOhzHmXJdNxMLp6am0O16Wuu6bqZSqRSeAFUFKGnbgkE5AAAAAElFTkSuQmCC') !important;
 }
 .table.topic-list {
     margin-bottom: 10px !important;
