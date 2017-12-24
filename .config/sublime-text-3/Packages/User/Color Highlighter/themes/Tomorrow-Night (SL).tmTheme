@@ -15285,9 +15285,32 @@
         <key>foreground</key>
         <string>#ffffff</string>
     </dict>
+<<<<<<< HEAD
 =======
 >>>>>>> develop
 =======
+>>>>>>> develop
+=======
+</dict><dict>
+    <key>name</key>
+    <string>CH_color_scheme_fix</string>
+    <key>scope</key>
+    <string>ch_gutter_icon</string>
+    <key>settings</key>
+    <dict>
+        <key>foreground</key>
+        <string>#ffffff</string>
+    </dict>
+</dict><dict>
+    <key>name</key>
+    <string>CH_color_scheme_fix</string>
+    <key>scope</key>
+    <string>ch_gutter_icon</string>
+    <key>settings</key>
+    <dict>
+        <key>foreground</key>
+        <string>#ffffff</string>
+    </dict>
 >>>>>>> develop
 </dict></array>
 	<key>uuid</key>
