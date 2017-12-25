@@ -15182,6 +15182,19 @@
         <string>#ffffff</string>
     </dict>
 </dict><dict>
+<<<<<<< HEAD
+    <key>name</key>
+    <string>CH_color_scheme_fix</string>
+    <key>scope</key>
+    <string>ch_gutter_icon</string>
+    <key>settings</key>
+    <dict>
+        <key>foreground</key>
+        <string>#ffffff</string>
+    </dict>
+</dict><dict>
+=======
+>>>>>>> develop
 <key>name</key>
 <string>CH_color</string>
 <key>scope</key>
@@ -15207,6 +15220,31 @@
 <key>caret</key>
 <string>#C8C8C8FF</string>
 </dict>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> develop
+</dict><dict>
+    <key>name</key>
+    <string>CH_color_scheme_fix</string>
+    <key>scope</key>
+    <string>ch_gutter_icon</string>
+    <key>settings</key>
+    <dict>
+        <key>foreground</key>
+        <string>#ffffff</string>
+    </dict>
+</dict><dict>
+    <key>name</key>
+    <string>CH_color_scheme_fix</string>
+    <key>scope</key>
+    <string>ch_gutter_icon</string>
+    <key>settings</key>
+    <dict>
+        <key>foreground</key>
+        <string>#ffffff</string>
+    </dict>
+<<<<<<< HEAD
 </dict><dict>
     <key>name</key>
     <string>CH_color_scheme_fix</string>
@@ -15247,6 +15285,35 @@
         <key>foreground</key>
         <string>#ffffff</string>
     </dict>
+<<<<<<< HEAD
+=======
+>>>>>>> develop
+=======
+>>>>>>> develop
+=======
+</dict><dict>
+    <key>name</key>
+    <string>CH_color_scheme_fix</string>
+    <key>scope</key>
+    <string>ch_gutter_icon</string>
+    <key>settings</key>
+    <dict>
+        <key>foreground</key>
+        <string>#ffffff</string>
+    </dict>
+</dict><dict>
+    <key>name</key>
+    <string>CH_color_scheme_fix</string>
+    <key>scope</key>
+    <string>ch_gutter_icon</string>
+    <key>settings</key>
+    <dict>
+        <key>foreground</key>
+        <string>#ffffff</string>
+    </dict>
+<<<<<<< HEAD
+>>>>>>> develop
+=======
 </dict><dict>
     <key>name</key>
     <string>CH_color_scheme_fix</string>
@@ -15287,6 +15354,9 @@
         <key>foreground</key>
         <string>#ffffff</string>
     </dict>
+<<<<<<< HEAD
+>>>>>>> develop
+=======
 </dict><dict>
     <key>name</key>
     <string>CH_color_scheme_fix</string>
@@ -15307,6 +15377,7 @@
         <key>foreground</key>
         <string>#ffffff</string>
     </dict>
+>>>>>>> develop
 </dict></array>
 	<key>uuid</key>
 	<string>F96223EB-1A60-4617-92F3-D24D4F13DB09</string>
