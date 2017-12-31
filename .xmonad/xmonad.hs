@@ -1,6 +1,6 @@
 -- XMonad config
 -- Author - Haron Prime
--- License WTFPL © 2017 http://www.wtfpl.net/
+-- License WTFPL http://www.wtfpl.net/
 
 -- List of all custom scripts used and their description is in the file https://github.com/Haron-Prime/My_config_files/blob/master/.local/bin/README.md
 
