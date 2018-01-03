@@ -238,6 +238,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm .|. shftm,       0x35),  spawn "XMdf-h")                      -- Alt+Shift+5
     , ((altm,                 0x36),  spawn "XMVolToggle")                 -- Alt+6
     , ((altm,                 0x37),  spawn "XMDateToggle")                -- Alt+7
+    , ((altm,                 0x39),  spawn "XMGWeather")                  -- Alt+9
     , ((altm,                 0x60),  spawn "XMToggleAll")                 -- Alt+grave
     , ((altm,               0xff1b),  spawn "XMCleanAll")                  -- Alt+Escape
     ]
