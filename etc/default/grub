@@ -1,7 +1,7 @@
 GRUB_DEFAULT=1
 GRUB_TIMEOUT=1
 GRUB_DISTRIBUTOR="Arch"
-GRUB_CMDLINE_LINUX_DEFAULT="noresume audit=0 ipv6.disable=1"
+GRUB_CMDLINE_LINUX_DEFAULT="noresume audit=0 ipv6.disable=1 pti=off"
 GRUB_CMDLINE_LINUX="acpi_enforce_resources=lax"
 GRUB_PRELOAD_MODULES="part_gpt part_msdos"
 GRUB_HIDDEN_TIMEOUT=0
