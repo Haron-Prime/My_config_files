@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Author - Haron Prime
-# License WTFPL © 2017 http://www.wtfpl.net/
+# License WTFPL   http://www.wtfpl.net/
 
 CPUF=`cat /proc/cpuinfo | grep MHz | tail -1 | cut -c 12-15`
 PREV_TOTAL=0
