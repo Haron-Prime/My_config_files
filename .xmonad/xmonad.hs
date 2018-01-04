@@ -1,6 +1,6 @@
 -- XMonad config
 -- Author - Haron Prime
--- License WTFPL © 2017 http://www.wtfpl.net/
+-- License WTFPL http://www.wtfpl.net/
 
 -- List of all custom scripts used and their description is in the file https://github.com/Haron-Prime/My_config_files/blob/master/.local/bin/README.md
 
@@ -238,6 +238,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm .|. shftm,       0x35),  spawn "XMdf-h")                      -- Alt+Shift+5
     , ((altm,                 0x36),  spawn "XMVolToggle")                 -- Alt+6
     , ((altm,                 0x37),  spawn "XMDateToggle")                -- Alt+7
+    , ((altm,                 0x39),  spawn "XMGWeather")                  -- Alt+9
     , ((altm,                 0x60),  spawn "XMToggleAll")                 -- Alt+grave
     , ((altm,               0xff1b),  spawn "XMCleanAll")                  -- Alt+Escape
     ]
