@@ -84,19 +84,22 @@ playlist.column.04 "Альбом" "%b" -1 383 0
 playlist.column.05 "Дата" "%y" -1 169 1
 playlist.column.06 "Жанр" "%g" -1 126 0
 playlist.column.07 "Продолжительность" "%l" -1 167 1
-playlist.current 0
+playlist.current 3
 playlist.cursor.0 18
 playlist.cursor.1 5
 playlist.cursor.2 12
+playlist.cursor.3 0
 playlist.group_by %a - [%y] %b
 playlist.pin.groups 0
 playlist.scroll.0 40
 playlist.scroll.1 0
 playlist.scroll.2 0
+playlist.scroll.3 0
 playlist.scroll.cursorfollowplayback 1
 playlist.tab.00000 Хроники Амбера
 playlist.tab.00001 ЧайФ - Дискография (lossless)
 playlist.tab.00002 Sacred Spirit 1994 Vol.1 Chants & Dances of the Native Americans
+playlist.tab.00003 Default
 prefwin.geometry.h 450
 prefwin.geometry.w 958
 prefwin.geometry.x 480
@@ -104,9 +107,9 @@ prefwin.geometry.y 315
 replaygain_mode 2
 replaygain_scale 1
 resume.paused 1
-resume.playlist 0
-resume.position 8.4901781
-resume.track 18
+resume.playlist 3
+resume.position 348.43933
+resume.track 0
 resume_last_session 1
 streamer.16_to_24 1
 streamer.8_to_16 1
