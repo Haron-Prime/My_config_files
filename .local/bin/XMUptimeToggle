@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License WTFPL © 2017 http://www.wtfpl.net/
+# License WTFPL  http://www.wtfpl.net/
 
 PID1=`ps axu | grep XMUptime | grep -v XMUptimeToggle | grep -v grep | awk '{print $2}'`
 PID2=`ps aux | grep XMDate   | grep -v XMDateToggle   | grep -v grep | awk '{print $2}'`

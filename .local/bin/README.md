@@ -103,4 +103,4 @@ XMToggleAll | ON/OFF all used in xmobar scripts
 XMCleanAll | Clear all pipes
 
 #### Author - Haron Prime
-#### License WTFPL © 2017 [http://www.wtfpl.net/](http://www.wtfpl.net/)
+#### License WTFPL [http://www.wtfpl.net/](http://www.wtfpl.net/)

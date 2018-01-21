@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License WTFPL © 2017 http://www.wtfpl.net/
+# License WTFPL  http://www.wtfpl.net/
 
 if [[ -n $(pidof ncmpcpp) ]]; then 
     kill $(pidof ncmpcpp)

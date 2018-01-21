@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License WTFPL © 2017 http://www.wtfpl.net/
+# License WTFPL http://www.wtfpl.net/
 
 python3 ~/.local/lib/gis-weather/gis-weather.py
 exit 0

@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License WTFPL © 2017 http://www.wtfpl.net/
+# License WTFPL  http://www.wtfpl.net/
 
 while true; do
     MEM=`bc <<< "100-$(bc <<< "$(free -b | grep Mem | awk '{print $7}')/$(bc -l <<< "$(free -b | grep Mem | awk '{print $2}')/100")")"`

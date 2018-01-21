@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License WTFPL © 2017 http://www.wtfpl.net/
+# License WTFPL  http://www.wtfpl.net/
 
 while true; do
     ST=`mpc | sed -n 2p | awk '{print $1}' | sed -e 's/[^a-z]//g'`

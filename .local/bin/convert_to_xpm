@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License WTFPL © 2017 http://www.wtfpl.net/
+# License WTFPL http://www.wtfpl.net/
 
 cd /home/haron/.config/gis-weather &&
 convert -resize 18x18 cur_icon.png cur_icon_18.png && 

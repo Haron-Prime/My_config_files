@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License WTFPL © 2017 http://www.wtfpl.net/
+# License WTFPL  http://www.wtfpl.net/
 
 # STATUS=`ping -c 3 8.8.8.8 | tail -2 | head -1 | awk '{print $4}'`
 # while [[ $STATUS -eq 0 ]]; do
