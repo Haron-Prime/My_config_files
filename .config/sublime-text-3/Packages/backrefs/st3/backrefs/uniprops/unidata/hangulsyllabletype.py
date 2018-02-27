@@ -15,3 +15,17 @@ unicode_hangul_syllable_type = {
     "t": "\u11a8-\u11ff\ud7cb-\ud7fb",
     "v": "\u1160-\u11a7\ud7b0-\ud7c6"
 }
+ascii_hangul_syllable_type = {
+    "^l": "\x00-\xff",
+    "^lv": "\x00-\xff",
+    "^lvt": "\x00-\xff",
+    "^na": "",
+    "^t": "\x00-\xff",
+    "^v": "\x00-\xff",
+    "l": "",
+    "lv": "",
+    "lvt": "",
+    "na": "\x00-\xff",
+    "t": "",
+    "v": ""
+}

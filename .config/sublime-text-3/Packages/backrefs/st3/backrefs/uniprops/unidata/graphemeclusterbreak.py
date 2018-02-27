@@ -25,3 +25,27 @@ unicode_grapheme_cluster_break = {
     "t": "\u11a8-\u11ff\ud7cb-\ud7fb",
     "v": "\u1160-\u11a7\ud7b0-\ud7c6"
 }
+ascii_grapheme_cluster_break = {
+    "^control": "\x0a\x0d\x20-\x7e\xa0-\xac\xae-\xff",
+    "^cr": "\x00-\x0c\x0e-\xff",
+    "^extend": "\x00-\xff",
+    "^l": "\x00-\xff",
+    "^lf": "\x00-\x09\x0b-\xff",
+    "^lv": "\x00-\xff",
+    "^lvt": "\x00-\xff",
+    "^other": "\x00-\x1f\x7f-\x9f\xad",
+    "^spacingmark": "\x00-\xff",
+    "^t": "\x00-\xff",
+    "^v": "\x00-\xff",
+    "control": "\x00-\x09\x0b-\x0c\x0e-\x1f\x7f-\x9f\xad",
+    "cr": "\x0d",
+    "extend": "",
+    "l": "",
+    "lf": "\x0a",
+    "lv": "",
+    "lvt": "",
+    "other": "\x20-\x7e\xa0-\xac\xae-\xff",
+    "spacingmark": "",
+    "t": "",
+    "v": ""
+}

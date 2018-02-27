@@ -4,7 +4,7 @@ repo_url: https://github.com/facelessuser/sublime-markdown-popups
 edit_uri: tree/master/docs/src/markdown
 site_description: Popup tooltips for Sublime generated with Markdown.
 copyright: |
-  Copyright &copy; 2015 - 2017 <a href="https://github.com/facelessuser">Isaac Muse</a>
+  Copyright &copy; 2015 - 2018 <a href="https://github.com/facelessuser">Isaac Muse</a>
   <br><span class="md-footer-custom-text">emoji provided free by </span><a href="http://www.emojione.com">EmojiOne</a>
 
 docs_dir: docs/src/markdown
@@ -43,6 +43,7 @@ markdown_extensions:
   - markdown.extensions.def_list:
   - markdown.extensions.tables:
   - markdown.extensions.abbr:
+  - markdown.extensions.footnotes:
   - pymdownx.extrarawhtml:
   - pymdownx.superfences:
   - pymdownx.highlight:
@@ -52,10 +53,17 @@ markdown_extensions:
           lang: php
           options:
             startinline: true
+        - name: pycon3
+          lang: pycon
+          options:
+            python3: true
   - pymdownx.inlinehilite:
   - pymdownx.magiclink:
       repo_url_shortener: true
-      base_repo_url: https://github.com/facelessuser/sublime-markdown-popups
+      repo_url_shorthand: true
+      social_url_shorthand: true
+      user: facelessuser
+      repo: sublime-markdown-popups
   - pymdownx.tilde:
   - pymdownx.caret:
   - pymdownx.smartsymbols:
@@ -67,8 +75,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.progressbar:
-  - pymdownx.plainhtml:
-      strip_attributes: ''
+  - pymdownx.striphtml:
   - pymdownx.snippets:
       base_path: docs/src/markdown/_snippets
   - pymdownx.keys:
@@ -80,6 +87,6 @@ extra:
     - type: github
       link: https://github.com/facelessuser
 extra_css:
-  - extra-00833721db.css
+  - extra-4e53a56959.css
 extra_javascript:
-  - extra-4596f9831a.js
+  - extra-d8800ea088.js

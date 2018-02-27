@@ -15,3 +15,17 @@ unicode_east_asian_width = {
     "na": "\u0020-\u007e\u00a2-\u00a3\u00a5-\u00a6\u00ac\u00af\u27e6-\u27ed\u2985-\u2986",
     "w": "\u1100-\u115f\u11a3-\u11a7\u11fa-\u11ff\u2329-\u232a\u2e80-\u2e99\u2e9b-\u2ef3\u2f00-\u2fd5\u2ff0-\u2ffb\u3001-\u303e\u3041-\u3096\u3099-\u30ff\u3105-\u312d\u3131-\u318e\u3190-\u31ba\u31c0-\u31e3\u31f0-\u321e\u3220-\u3247\u3250-\u32fe\u3300-\u4dbf\u4e00-\ua48c\ua490-\ua4c6\ua960-\ua97c\uac00-\ud7a3\ud7b0-\ud7c6\ud7cb-\ud7fb\uf900-\ufaff\ufe10-\ufe19\ufe30-\ufe52\ufe54-\ufe66\ufe68-\ufe6b\U0001b000-\U0001b001\U0001f200-\U0001f202\U0001f210-\U0001f23a\U0001f240-\U0001f248\U0001f250-\U0001f251\U00020000-\U0002fffd\U00030000-\U0003fffd"
 }
+ascii_east_asian_width = {
+    "^a": "\x00-\xa0\xa2-\xa3\xa5-\xa6\xa9\xab-\xac\xaf\xb5\xbb\xc0-\xc5\xc7-\xcf\xd1-\xd6\xd9-\xdd\xe2-\xe5\xe7\xeb\xee-\xef\xf1\xf4-\xf6\xfb\xfd\xff",
+    "^f": "\x00-\xff",
+    "^h": "\x00-\xff",
+    "^n": "\x20-\x7e\xa1-\xa8\xaa\xac-\xb4\xb6-\xba\xbc-\xbf\xc6\xd0\xd7-\xd8\xde-\xe1\xe6\xe8-\xea\xec-\xed\xf0\xf2-\xf3\xf7-\xfa\xfc\xfe",
+    "^na": "\x00-\x1f\x7f-\xa1\xa4\xa7-\xab\xad-\xae\xb0-\xff",
+    "^w": "\x00-\xff",
+    "a": "\xa1\xa4\xa7-\xa8\xaa\xad-\xae\xb0-\xb4\xb6-\xba\xbc-\xbf\xc6\xd0\xd7-\xd8\xde-\xe1\xe6\xe8-\xea\xec-\xed\xf0\xf2-\xf3\xf7-\xfa\xfc\xfe",
+    "f": "",
+    "h": "",
+    "n": "\x00-\x1f\x7f-\xa0\xa9\xab\xb5\xbb\xc0-\xc5\xc7-\xcf\xd1-\xd6\xd9-\xdd\xe2-\xe5\xe7\xeb\xee-\xef\xf1\xf4-\xf6\xfb\xfd\xff",
+    "na": "\x20-\x7e\xa2-\xa3\xa5-\xa6\xac\xaf",
+    "w": ""
+}

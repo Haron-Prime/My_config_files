@@ -24,18 +24,11 @@ from .st_mapping import lang_map
 from . import imagetint
 import re
 import os
+from . import frontmatter
 try:
     import bs4
 except Exception:
     bs4 = None
-try:
-    from . import frontmatter
-except Exception as e:
-    frontmatter = None
-try:
-    import pymdownx
-except Exception:
-    pymdownx = None
 
 DEFAULT_CSS = 'Packages/mdpopups/css/default.css'
 DEFAULT_USER_CSS = 'Packages/User/mdpopups.css'
@@ -329,11 +322,9 @@ def _create_html(
             allow_code_wrap=allow_code_wrap
         )
     else:
-        if frontmatter:
-            # Strip out frontmatter if found as we don't currently
-            # do anything with it when content is just HTML.
-            content = frontmatter.get_frontmatter(content)[1]
-        content = _markup_template(content, template_vars, template_env_options)
+        # Strip out frontmatter if found as we don't currently
+        # do anything with it when content is just HTML.
+        content = _markup_template(frontmatter.get_frontmatter(content)[1], template_vars, template_env_options)
 
     if debug:
         _debug('=====HTML OUTPUT=====', INFO)
@@ -384,10 +375,7 @@ def md2html(
     else:
         sublime_hl = (False, None)
 
-    if frontmatter:
-        fm, markup = frontmatter.get_frontmatter(markup)
-    else:
-        fm = {}
+    fm, markup = frontmatter.get_frontmatter(markup)
 
     # We allways include these
     extensions = [
@@ -417,9 +405,9 @@ def md2html(
                 "markdown.extensions.admonition",
                 "markdown.extensions.attr_list",
                 "markdown.extensions.def_list",
-                "pymdownx.betterem" if pymdownx else "mdpopups.mdx.betterem",
-                "pymdownx.magiclink" if pymdownx else "mdpopups.mdx.magiclink",
-                "pymdownx.extrarawhtml" if pymdownx else "mdpopups.mdx.extrarawhtml"
+                "pymdownx.betterem",
+                "pymdownx.magiclink",
+                "pymdownx.extrarawhtml"
             ]
         )
 
@@ -532,6 +520,27 @@ def syntax_highlight(view, src, language=None, inline=False, allow_code_wrap=Fal
         _debug(traceback.format_exc(), ERROR)
 
     return code
+
+
+def tabs2spaces(text, tab_size=4):
+    """
+    Convert tabs to spaces on tab stops.
+
+    Does not account for char width.
+    """
+
+    new_text = []
+    for line in text.splitlines(True):
+        count = 0
+        for c in line:
+            if c == '\t':
+                spaces = tab_size - count % tab_size
+                new_text.append(' ' * spaces)
+                count += spaces
+            else:
+                new_text.append(c)
+                count += 1
+    return ''.join(new_text)
 
 
 def scope2style(view, scope, selected=False, explicit_background=False):
@@ -782,8 +791,7 @@ class PhantomSet(sublime.PhantomSet):
         self.phantoms = new_phantoms
 
 
-if frontmatter:
-    def format_frontmatter(values):
-        """Format values as frontmatter."""
+def format_frontmatter(values):
+    """Format values as frontmatter."""
 
-        return frontmatter.dump_frontmatter(values)
+    return frontmatter.dump_frontmatter(values)
