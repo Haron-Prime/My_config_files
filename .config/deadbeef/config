@@ -11,10 +11,10 @@ converter.output_format 0
 converter.overwrite_action 1
 converter.write_to_source_folder 1
 deadbeef_version 0.7.2
-filechooser.lastdir file:///home/haron/Music/audiobooks/%D0%9A%D0%B8%D0%BD%D0%B3%20%D0%A1%D1%82%D0%B8%D0%B2%D0%B5%D0%BD%20%E2%80%93%20%D0%A2%D1%91%D0%BC%D0%BD%D0%B0%D1%8F%20%D0%91%D0%B0%D1%88%D0%BD%D1%8F%20%5B%D0%93%D1%80%D1%83%D0%BF%D0%BF%D0%B0%20%D0%B4%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2%20%D0%BF%D0%BE%D0%B4%20%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE%D0%BC%20%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D0%B0%20%D0%92%D0%BE%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0%5D%20(64%20kbps)
+filechooser.lastdir file:///home/haron/Music/audiobooks
 filechooser.playlist.lastdir file:///home/haron/Music/DeadBeef_playlists
 gtkui.embolden_current_track 1
-gtkui.eq.visible 1
+gtkui.eq.visible 0
 gtkui.hide_remove_from_disk 1
 gtkui.last_playlist_save_name /home/haron/Music/DeadBeef_playlists/Чайф.dbpl
 gtkui.layout.0.6.2 vbox expand="0 1" fill="1 1" homogeneous=0 {hbox expand="0 1 0" fill="1 1 1" homogeneous=0 {playtb {} seekbar {} volumebar {} } tabbed_playlist hideheaders=0 {} } 
@@ -61,10 +61,10 @@ hotkey.key32 "Ctrl k" 0 0 toggle_stop_after_album
 hotkeys_created 1
 ignore_archives 1
 junk.enable_cp1251_detection 1
-mainwin.geometry.h 862
-mainwin.geometry.w 1534
-mainwin.geometry.x 191
-mainwin.geometry.y 184
+mainwin.geometry.h 1056
+mainwin.geometry.w 1920
+mainwin.geometry.x 0
+mainwin.geometry.y 24
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -84,32 +84,29 @@ playlist.column.04 "Альбом" "%b" -1 383 0
 playlist.column.05 "Дата" "%y" -1 169 1
 playlist.column.06 "Жанр" "%g" -1 126 0
 playlist.column.07 "Продолжительность" "%l" -1 167 1
-playlist.current 3
-playlist.cursor.0 18
-playlist.cursor.1 5
+playlist.current 0
+playlist.cursor.0 -1
+playlist.cursor.1 12
 playlist.cursor.2 12
 playlist.cursor.3 115
 playlist.group_by %a - [%y] %b
 playlist.pin.groups 0
-playlist.scroll.0 40
+playlist.scroll.0 0
 playlist.scroll.1 0
 playlist.scroll.2 0
 playlist.scroll.3 2440
 playlist.scroll.cursorfollowplayback 1
-playlist.tab.00000 Хроники Амбера
-playlist.tab.00001 ЧайФ - Дискография (lossless)
-playlist.tab.00002 Sacred Spirit 1994 Vol.1 Chants & Dances of the Native Americans
-playlist.tab.00003 5. Волки Кальи
-prefwin.geometry.h 450
-prefwin.geometry.w 958
-prefwin.geometry.x 480
+playlist.tab.00000 Плейлист
+prefwin.geometry.h 448
+prefwin.geometry.w 956
+prefwin.geometry.x 481
 prefwin.geometry.y 315
 replaygain_mode 2
 replaygain_scale 1
 resume.paused 1
-resume.playlist 3
-resume.position 3.0333345
-resume.track 115
+resume.playlist 0
+resume.position 5.2425733
+resume.track -1
 resume_last_session 1
 streamer.16_to_24 1
 streamer.8_to_16 1

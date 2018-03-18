@@ -119,7 +119,7 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
-bindsym F12 scratchpad show
+bindsym $mod+F12 scratchpad show
 
 # switch to workspace
 bindsym $mod+1 workspace 1:W
@@ -221,11 +221,12 @@ bindsym XF86Favorites        exec --no-startup-id "if(pidof transgui >/dev/null)
 bindsym XF86HomePage         exec --no-startup-id vivaldi-snapshot
 bindsym XF86Mail             exec --no-startup-id thunderbird
 bindsym XF86Explorer         exec --no-startup-id pcmanfm
+bindsym XF86MyComputer       exec --no-startup-id pcmanfm
 bindsym XF86Calculator       exec --no-startup-id "if(pidof galculator >/dev/null); then kill $(pidof galculator); else galculator; fi"
 bindsym XF86Sleep            exec --no-startup-id i3lock
 bindsym Menu                 exec --no-startup-id gmrun
 
-bindsym $mod+F12             exec --no-startup-id "urxvtc -name guake"
+bindsym F12                  exec --no-startup-id "urxvtc -name guake"
 bindsym Mod1+F2              exec --no-startup-id "dmenu_run -i -p 'Run:' -sb '#333' -nf '#999' -sf '#9df' -fn 'Terminus Re33:size=12'"
 bindsym Print                exec --no-startup-id "scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 bindsym Mod1+Print           exec --no-startup-id "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
@@ -238,17 +239,21 @@ bindsym Mod1+r               exec --no-startup-id "urxvtc -name ranger -e ranger
 bindsym Mod1+p               exec --no-startup-id PRO100-5
 bindsym Mod1+s               exec --no-startup-id subl3
 bindsym Mod1+Shift+s         exec --no-startup-id "gksu subl3"
-bindsym Mod1+t               exec --no-startup-id telegram-desktop
+# bindsym Mod1+t               exec --no-startup-id telegram-desktop
 bindsym Mod1+w               exec --no-startup-id "gksu pacmanxg"
 bindsym Mod1+f               exec --no-startup-id firefox
 # bindsym Mod1+e               exec --no-startup-id "urxvtc -name equalizer -e alsamixer -D equal"
 # bindsym Mod1+e               exec --no-startup-id "pulseaudio-equalizer-gtk"
 bindsym Mod1+e               exec --no-startup-id pavucontrol
-bindsym Mod1+i               exec --no-startup-id 2D-Place
+# bindsym Mod1+i               exec --no-startup-id 2D-Place
 # bindsym Mod1+h               exec --no-startup-id "urxvtc -name vifm -e vifm"
 bindsym Mod1+h               exec --no-startup-id hexchat
+bindsym Mod1+n               exec --no-startup-id "urxvtc -name ncmpcpp -e ncmpcpp"
+bindsym Mod1+o               exec --no-startup-id opera-developer
+bindsym $mod+m               exec --no-startup-id "mygtkmenu $HOME/.menurc"
+bindsym $mod+p               exec --no-startup-id "mygtkmenu $HOME/.placerc"
 
-assign [class="Vivaldi-snapshot|Firefox|Tor Browser"] 1:W
+assign [class="Vivaldi-snapshot|Firefox|Tor Browser|Opera developer"] 1:W
 assign [class="Thunderbird"] 2:M
 assign [class="Subl3|libreoffice-startcenter|Et|Wps|Acroread|FoxitReader"] 3:E
 assign [class="Pcmanfm"] 4:F

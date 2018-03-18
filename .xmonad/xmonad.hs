@@ -164,7 +164,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x79),  spawn "XMYaourt")                    -- Alt+Y
     -- Terminals
     , ((modm .|. ctrlm,     0xff0d),  spawn "st")                          -- Mod4+Ctrl+Return
-    , ((modm .|. altm,      0xff0d),  spawn "xterm")                       -- Mod4+Alt+Return
+    , ((modm .|. altm,      0xff0d),  spawn "urxvtc")                       -- Mod4+Alt+Return
     , ((modm .|. shftm,     0xff0d),  spawn $ XMonad.terminal conf)        -- Mod4+Shift+Return
 
     -- Recompile || restart || terminate XMonad
