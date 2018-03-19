@@ -447,7 +447,7 @@ myWR = composeAll . concat $
         -- The position below for newer windows to the specified workspaces
         myPBN = [
                   (myWS !! 0)
-                , (myWS !! 1)
+                -- , (myWS !! 1)
                 , (myWS !! 8)
                 ]
         -- The position end for newer windows to the specified workspaces

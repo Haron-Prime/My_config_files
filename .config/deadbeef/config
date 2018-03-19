@@ -11,7 +11,7 @@ converter.output_format 0
 converter.overwrite_action 1
 converter.write_to_source_folder 1
 deadbeef_version 0.7.2
-filechooser.lastdir file:///home/haron/Music/audiobooks
+filechooser.lastdir file:///home/haron/Music/Foreign/Sacred%20Spirit%20(Claus%20Zundel)
 filechooser.playlist.lastdir file:///home/haron/Music/DeadBeef_playlists
 gtkui.embolden_current_track 1
 gtkui.eq.visible 0
@@ -61,10 +61,10 @@ hotkey.key32 "Ctrl k" 0 0 toggle_stop_after_album
 hotkeys_created 1
 ignore_archives 1
 junk.enable_cp1251_detection 1
-mainwin.geometry.h 1056
-mainwin.geometry.w 1920
-mainwin.geometry.x 0
-mainwin.geometry.y 24
+mainwin.geometry.h 862
+mainwin.geometry.w 1534
+mainwin.geometry.x 192
+mainwin.geometry.y 108
 mp3.id3v1_encoding iso8859-1
 mp3.id3v2_version 3
 mp3.write_id3v1 1
@@ -85,8 +85,8 @@ playlist.column.05 "Дата" "%y" -1 169 1
 playlist.column.06 "Жанр" "%g" -1 126 0
 playlist.column.07 "Продолжительность" "%l" -1 167 1
 playlist.current 0
-playlist.cursor.0 -1
-playlist.cursor.1 12
+playlist.cursor.0 23
+playlist.cursor.1 0
 playlist.cursor.2 12
 playlist.cursor.3 115
 playlist.group_by %a - [%y] %b
@@ -96,7 +96,7 @@ playlist.scroll.1 0
 playlist.scroll.2 0
 playlist.scroll.3 2440
 playlist.scroll.cursorfollowplayback 1
-playlist.tab.00000 Плейлист
+playlist.tab.00000 Новый плейлист
 prefwin.geometry.h 448
 prefwin.geometry.w 956
 prefwin.geometry.x 481
@@ -105,8 +105,8 @@ replaygain_mode 2
 replaygain_scale 1
 resume.paused 1
 resume.playlist 0
-resume.position 5.2425733
-resume.track -1
+resume.position 127.77005
+resume.track 23
 resume_last_session 1
 streamer.16_to_24 1
 streamer.8_to_16 1
