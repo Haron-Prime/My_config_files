@@ -80,14 +80,14 @@ _REGEX_TYPE = type(_regex.compile('', 0))
 
 
 @_util.lru_cache(maxsize=_MAXCACHE)
-def _cached_search_compile(pattern, re_verbose, re_version):
+def _cached_search_compile(pattern, re_verbose, re_version, pattern_type):
     """Cached search compile."""
 
     return _bregex_parse._SearchParser(pattern, re_verbose, re_version).parse()
 
 
 @_util.lru_cache(maxsize=_MAXCACHE)
-def _cached_replace_compile(pattern, repl, flags):
+def _cached_replace_compile(pattern, repl, flags, pattern_type):
     """Cached replace compile."""
 
     return _bregex_parse._ReplaceParser().parse(pattern, repl, bool(flags & FORMAT))
@@ -140,7 +140,7 @@ def _apply_search_backrefs(pattern, flags=0):
         else:
             re_version = 0
         if not (flags & DEBUG):
-            pattern = _cached_search_compile(pattern, re_verbose, re_version)
+            pattern = _cached_search_compile(pattern, re_verbose, re_version, type(pattern))
         else:  # pragma: no cover
             pattern = _bregex_parse._SearchParser(pattern, re_verbose, re_version).parse()
     elif isinstance(pattern, Bregex):
@@ -168,7 +168,7 @@ def _assert_expandable(repl, use_format=False):
         raise TypeError("Expected string, buffer, or compiled replace!")
 
 
-def compile(pattern, flags=0, auto_compile=None):
+def compile(pattern, flags=0, auto_compile=None, **kwargs):
     """Compile both the search or search and replace into one object."""
 
     if isinstance(pattern, Bregex):
@@ -181,7 +181,7 @@ def compile(pattern, flags=0, auto_compile=None):
         if auto_compile is None:
             auto_compile = True
 
-        return Bregex(compile_search(pattern, flags), auto_compile)
+        return Bregex(compile_search(pattern, flags, **kwargs), auto_compile)
 
 
 def compile_search(pattern, flags=0, **kwargs):
@@ -197,7 +197,7 @@ def compile_replace(pattern, repl, flags=0):
     if pattern is not None and isinstance(pattern, _REGEX_TYPE):
         if isinstance(repl, (_util.string_type, _util.binary_type)):
             if not (pattern.flags & DEBUG):
-                call = _cached_replace_compile(pattern, repl, flags)
+                call = _cached_replace_compile(pattern, repl, flags, type(repl))
             else:  # pragma: no cover
                 call = _bregex_parse._ReplaceParser().parse(pattern, repl, bool(flags & FORMAT))
         elif isinstance(repl, ReplaceTemplate):
@@ -227,7 +227,7 @@ class Bregex(_util.Immutable):
         super(Bregex, self).__init__(
             _pattern=pattern,
             auto_compile=auto_compile,
-            _hash=hash((type(self), pattern, auto_compile))
+            _hash=hash((type(self), type(pattern), pattern, auto_compile))
         )
 
     @property
@@ -312,12 +312,12 @@ class Bregex(_util.Immutable):
 
         return compile_replace(self._pattern, repl, flags)
 
-    def search(self, string, pos=None, endpos=None, concurrent=None, partial=False,):
+    def search(self, string, pos=None, endpos=None, concurrent=None, partial=False):
         """Apply `search`."""
 
         return self._pattern.search(string, pos, endpos, concurrent, partial)
 
-    def match(self, string, pos=None, endpos=None, concurrent=None, partial=False,):
+    def match(self, string, pos=None, endpos=None, concurrent=None, partial=False):
         """Apply `match`."""
 
         return self._pattern.match(string, pos, endpos, concurrent, partial)
