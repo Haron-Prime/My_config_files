@@ -11,12 +11,6 @@ while true; do
         WEEK=`date "+%V-nd week"`
     elif [[ $(date "+%V" | cut -c 2) -eq 3 ]] && [[ $(date "+%V") -ne 13 ]]; then
         WEEK=`date "+%V-rd week"`
-    elif [[ $(date "+%V") -eq 11 ]]; then
-        WEEK=`date "+%V-n week"`
-    elif [[ $(date "+%V") -eq 12 ]]; then
-        WEEK=`date "+%V-ve week"`
-    elif [[ $(date "+%V") -eq 13 ]]; then
-        WEEK=`date "+%V-en week"`
     else
         WEEK=`date "+%V-th week"`
     fi
