@@ -5,11 +5,11 @@
 while true; do
     DAY=`date "+%A"`
     DATA=`date "+%d.%m.%Y"`
-    if [[ $(date "+%V" | cut -c 2) -eq 1  &&  $(date "+%V") -ne 11 ]]; then
+    if [[ $(date "+%V" | cut -c 2) -eq 1 && $(date "+%V") -ne 11 ]]; then
         WEEK=`date "+%V-st week"`
-    elif [[ $(date "+%V" | cut -c 2) -eq 2  &&  $(date "+%V") -ne 12 ]]; then
+    elif [[ $(date "+%V" | cut -c 2) -eq 2 && $(date "+%V") -ne 12 ]]; then
         WEEK=`date "+%V-nd week"`
-    elif [[ $(date "+%V" | cut -c 2) -eq 3  &&  $(date "+%V") -ne 13 ]]; then
+    elif [[ $(date "+%V" | cut -c 2) -eq 3 && $(date "+%V") -ne 13 ]]; then
         WEEK=`date "+%V-rd week"`
     else
         WEEK=`date "+%V-th week"`
