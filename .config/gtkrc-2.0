@@ -1,10 +1,16 @@
-# created by KDE, чт авг. 21 16:11:03 2014
-#
-# If you do not want KDE to override your GTK settings, select
-# Appearance -> Colors in the System Settings and disable the checkbox
-# "Apply colors to non-KDE4 applications"
-#
-#
-
+gtk-theme-name="oomox-HD1"
+gtk-icon-theme-name="nouveGnomeGray"
+gtk-font-name="SonyEricssonLogo 11"
+gtk-cursor-theme-name="oxy-black"
+gtk-cursor-theme-size=0
+gtk-toolbar-style=GTK_TOOLBAR_ICONS
+gtk-toolbar-icon-size=GTK_ICON_SIZE_SMALL_TOOLBAR
+gtk-button-images=1
+gtk-menu-images=1
+gtk-enable-event-sounds=1
+gtk-enable-input-feedback-sounds=1
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintslight"
+gtk-xft-rgba="rgb"
 gtk-alternative-button-order = 1
-
