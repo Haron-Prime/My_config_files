@@ -37,7 +37,7 @@ alias jctlf='journalctl -f'
 alias jctlerr='journalctl -b -p3 g'
 alias jctlc='sudo journalctl --vacuum-size=20000'
 
-alias rein='sudo renice -5 $(pidof -s Xorg)'
+alias sren='sudo renice -5 $(pidof -s Xorg)'
 alias dump='sudo screendump > $HOME/output.txt'
 alias fonts='fc-cache -fv $HOME/.fonts && sudo fc-cache -fv'
 alias psc='ps xawf -eo pid,user,cgroup,args'
@@ -54,9 +54,10 @@ alias nstat="netstat -atpn"
 alias nout='ssh haron@192.168.0.11 -p 232'
 
 alias wget='wget -c --progress=bar'
-alias ttmux='tmuxinator default'
-alias tmuxa='tmux attach'
+# alias ttmux='tmuxinator default'
+# alias tmuxa='tmux attach'
 # alias st='/usr/bin/st -f "Terminus Re33 Nerd:size=12"'
+alias viv="sudo sed -i '1s/^/@import "custom.css";/' /opt/vivaldi-snapshot/resources/vivaldi/style/common.css"
 
 alias tv='mpv --playlist=$HOME/Video/Playlists/multinet-play.m3u'
 alias asl='acestream-launcher --player mpv'
