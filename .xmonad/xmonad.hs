@@ -161,6 +161,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x72),  nSA "FM")                            -- Alt+R
     , ((altm,                 0x74),  spawn "XMTransgui")                  -- Alt+T
     , ((altm,                 0x76),  myEditor)                            -- Alt+V
+    , ((altm,                 0x77),  spawn "VoteCoin Wallet")             -- Alt+W
     , ((altm,                 0x79),  spawn "XMYaourt")                    -- Alt+Y
     -- Terminals
     , ((modm .|. ctrlm,     0xff0d),  spawn "st")                          -- Mod4+Ctrl+Return
@@ -365,6 +366,7 @@ myWR = composeAll . concat $
                 , "Sysinfo"
                 , "Systemadm"
                 , "Tk"
+                , "VoteCoin Wallet"
                 , "Zenmap"
                 ]
         myV   = [
