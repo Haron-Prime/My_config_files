@@ -366,7 +366,6 @@ myWR = composeAll . concat $
                 , "Sysinfo"
                 , "Systemadm"
                 , "Tk"
-                , "VoteCoin Wallet"
                 , "Zenmap"
                 ]
         myV   = [
@@ -403,6 +402,7 @@ myWR = composeAll . concat $
                 , "ViberPC"
                 ]
         myXII = [
+                  "VoteCoin Wallet"
                 ]
         -- Application groups in center floating windows
         myFC  = [
