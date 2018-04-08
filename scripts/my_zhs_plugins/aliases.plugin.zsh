@@ -60,7 +60,8 @@ alias wget='wget -c --progress=bar'
 alias viv="sudo sed -i '1s/^/@import "custom.css";/' /opt/vivaldi-snapshot/resources/vivaldi/style/common.css"
 
 alias tv='mpv --playlist=$HOME/Video/Playlists/multinet-play.m3u'
-alias asl='acestream-launcher --player mpv'
+alias aslm='acestream-launcher --player mpv'
+alias aslv='acestream-launcher --player vlc'
 alias scast='ffmpeg -f x11grab -s 1920x1080 -r 25 -i :0.0 -vcodec libx264 -b 700K ~/Video/Screencast/$(date +"%d.%m.%Y_%H:%M:%S").mkv'
 
 alias gzip='tar -cvzf'
