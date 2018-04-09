@@ -22,7 +22,7 @@ if [ -f /usr/bin/grc ]; then
   alias ps="grc --colour=auto ps"
   alias dig="grc --colour=auto dig"
   alias ifconfig='grc --colour=auto ifconfig'
-  alias ls="grc --colour=auto ls"
+  # alias ls="grc --colour=auto ls"
   alias df="grc --colour=auto df"
   alias du="grc --colour=auto du"
   alias addr="grc --colour=auto ip addr"

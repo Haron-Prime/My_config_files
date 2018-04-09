@@ -30,7 +30,6 @@ alias disableu='systemctl --user disable'
 alias daemonu='systemctl --user daemon-reload'
 alias statusu='systemctl --user status'
 
-
 alias jctl='journalctl'
 alias jctlb='journalctl -b'
 alias jctlf='journalctl -f'
@@ -160,14 +159,14 @@ alias -g C='| wc -l'
 
 # другие альясы
 # other aliases
-alias ls="ls -la --classify --color=auto"
-alias grep='grep --colour=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+alias ls='ls -la --classify --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias li='ls -ial'
+alias grep='grep --colour=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 alias mv='nocorrect mv -i'
 alias cp='nocorrect cp -iR'
