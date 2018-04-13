@@ -18,6 +18,7 @@ ExecStart=-/usr/bin/rm -r %h/Downloads
 ExecStart=-/usr/bin/ln -s /tmp/%u/.cache %h/.cache
 ExecStart=-/usr/bin/ln -s /tmp/%u/.compose-cache %h/.compose-cache
 ExecStart=-/usr/bin/ln -s /tmp/%u/Downloads %h/Downloads
+ExecStart=-/usr/bin/xdg-user-dirs-update
 
 ExecStop=-/usr/bin/rm -r /tmp/%u
 ExecStop=-/usr/bin/mkdir %h/.cache
