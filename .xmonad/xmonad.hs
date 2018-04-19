@@ -137,8 +137,8 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,              0x1008ff46),  spawn "XMR")                         -- XF86Launch6
     , ((0,              0x1008ff2f),  mySreenLock)                         -- XF86Sleep
     , ((0,              0x1008ff56),  nSA "ExitMenu")                      -- XF86Close
-    , ((0,              0x1008ff73),  spawn "compreboot")                  -- XF86Reload
-    , ((0,                  0xff69),  spawn "compdown")                    -- Cancel
+    -- , ((0,              0x1008ff73),  spawn "compreboot")                  -- XF86Reload
+    -- , ((0,                  0xff69),  spawn "compdown")                    -- Cancel
     -- , ((0,                  0xff14),  mySreenLock)                         -- ScrollLock
     , ((0,                  0xff67),  spawn "gmrun")                       -- Menu
     , ((0,                  0xffc9),  myQST)                               -- F12
