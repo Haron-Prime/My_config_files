@@ -132,10 +132,16 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,              0x1008ff5d),  spawn "pcmanfm")                     -- XF86Explorer
     , ((0,              0x1008ff1d),  spawn "XMGalculator")                -- XF86Calculator
     , ((0,              0x1008ff1b),  nSA "HTOP")                          -- XF86Search
+    -- , ((0,              0x1008ff77),  nSA "NCMPCPP")                       -- XF86Save
     , ((0,              0x1008ff81),  nSA "NCMPCPP")                       -- XF86Tools
     , ((0,              0x1008ff46),  spawn "XMR")                         -- XF86Launch6
+    -- , ((0,              0x1008ff2f),  mySreenLock)                         -- XF86Sleep
+    -- , ((0,              0x1008ff56),  nSA "ExitMenu")                      -- XF86Close
+    -- , ((0,              0x1008ff73),  spawn "compreboot")                  -- XF86Reload
     , ((0,              0x1008ff73),  mySreenLock)                         -- XF86Reload
+    -- , ((0,                  0xff69),  spawn "compdown")                    -- Cancel
     , ((0,                  0xff69),  nSA "ExitMenu")                      -- Cancel
+    -- , ((0,                  0xff14),  mySreenLock)                         -- ScrollLock
     , ((0,                  0xff67),  spawn "gmrun")                       -- Menu
     , ((0,                  0xffc9),  myQST)                               -- F12
     , ((0,                  0xff61),  myFScrot)                            -- Print
@@ -149,7 +155,11 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x68),  spawn "hexchat")                     -- Alt+H
     , ((altm,                 0x6c),  spawn "XMLPass")                     -- Alt+L
     , ((altm,                 0x6d),  spawn "urxvtc -name mc -e mc")       -- Alt+M
+    -- , ((altm,                 0x6e),  spawn "XMNotes-w")                   -- Alt+N
+    -- , ((altm .|. ctrlm,       0x6e),  nSA "NOTES")                         -- Alt+Ctrl+N
+    -- , ((altm,                 0x6e),  nSA "NCMPCPP")                       -- Alt+N
     , ((altm,                 0x6f),  spawn "opera-developer")             -- Alt+O
+    -- , ((altm,                 0x70),  nSA "NCMPCPP")                       -- Alt+P
     , ((altm,                 0x71),  nSA "ExitMenu")                      -- Alt+Q
     , ((altm,                 0x72),  nSA "FM")                            -- Alt+R
     , ((altm,                 0x74),  spawn "XMTransgui")                  -- Alt+T
