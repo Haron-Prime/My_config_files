@@ -150,7 +150,6 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x6c),  spawn "XMLPass")                     -- Alt+L
     , ((altm,                 0x6d),  spawn "urxvtc -name mc -e mc")       -- Alt+M
     , ((altm,                 0x6f),  spawn "opera-developer")             -- Alt+O
-    , ((altm,                 0x71),  nSA "ExitMenu")                      -- Alt+Q
     , ((altm,                 0x72),  nSA "FM")                            -- Alt+R
     , ((altm,                 0x74),  spawn "XMTransgui")                  -- Alt+T
     , ((altm,                 0x76),  myEditor)                            -- Alt+V
