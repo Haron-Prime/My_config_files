@@ -17,8 +17,9 @@ from SublimeLinter.lint import Linter, util
 class Perl(Linter):
 
     """Provides an interface to perl -c."""
-
-    syntax = ('modernperl', 'perl')
+    defaults = {
+        'selector': 'source.perl, source.modernperl'
+    }
     executable = 'perl'
 
     regex = r'(?P<message>.+?) at - line (?P<line>\d+)(, near "(?P<near>.+?)")?'

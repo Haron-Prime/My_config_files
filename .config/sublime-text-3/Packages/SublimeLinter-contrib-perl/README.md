@@ -1,5 +1,5 @@
-SublimeLinter-perl
-==================
+SublimeLinter-contrib-perl
+==========================
 
 This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) provides an interface to [perl](http://www.perl.org/). It will be used with files that have the "Perl" or "ModernPerl" syntax.
 
@@ -11,7 +11,7 @@ Before using this plugin, you must ensure that `perl` is installed on your syste
 
 Once `perl` is installed, you must ensure it is in your system PATH so that SublimeLinter can find it. This may not be as straightforward as you think, so please read [How linter executables are located](http://sublimelinter.readthedocs.org/en/latest/usage.html#how-linter-executables-are-located) in the documentation.
 
-Once you have installed `perl` you can proceed to install the SublimeLinter-perl plugin if it is not yet installed.
+Once you have installed `perl` you can proceed to install the SublimeLinter-contrib-perl plugin if it is not yet installed.
 
 ### Plugin installation
 Please use [Package Control](https://sublime.wbond.net/installation) to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
@@ -20,16 +20,31 @@ To install via Package Control, do the following:
 
 1. Within Sublime Text, bring up the [Command Palette](http://docs.sublimetext.info/en/sublime-text-3/extensibility/command_palette.html) and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
 
-1. When the plugin list appears, type `perl`. Among the entries you should see `SublimeLinter-perl`. If that entry is not highlighted, use the keyboard or mouse to select it.
+1. When the plugin list appears, type `perl`. Among the entries you should see `SublimeLinter-contrib-perl`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
-In addition to the standard SublimeLinter settings, SublimeLinter-perl provides its own settings.
+In addition to the standard SublimeLinter settings, SublimeLinter-contrib-perl provides its own settings.
 
 |Setting|Description|
 |:------|:----------|
 |include_dirs|A list of directories to be added to the module include search paths|
+
+###Example
+
+```json
+...
+"linters": {
+            "perl": {
+                "@disable": false,
+                "args": [],
+                "excludes": [],
+                "include_dirs": ["/path/to/my/project"]
+            },
+...
+```
+
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
