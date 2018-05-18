@@ -17,5 +17,6 @@ if [[ $UPD -gt 0 ]]; then
     echo "<action=XMYaourt><fc=#fb0> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
 else 
     echo > /tmp/haron/UP
+    notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "    <big><b><u>YAOURT</u></b></big>" "Nothing to update" 
 fi
 exit 0
