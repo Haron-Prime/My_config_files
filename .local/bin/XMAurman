@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL © 2017 http://www.wtfpl.net/
+
+urxvtc -name update -e aurman --color auto -Syu &&
+while [[ -n $(pgrep aurman) ]]; do 
+    sleep 1
+done
+XMMWC &
+XMUpdate &&
+if [[ $(checkupdates | wc -l) -eq 0 ]]; then
+    notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "   <big><b><u>AURMAN</u></b></big>" " Update complete"
+else
+    notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "       <big><b><u>AURMAN</u></b></big>" " Update do not complete"
+fi
+exit 0
