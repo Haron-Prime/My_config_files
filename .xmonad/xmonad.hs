@@ -155,7 +155,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x75),  spawn "XMUpdate")                    -- Alt+U
     , ((altm,                 0x76),  myEditor)                            -- Alt+V
     , ((altm,                 0x77),  spawn "VoteCoin Wallet")             -- Alt+W
-    , ((altm,                 0x79),  spawn "XMYaourt")                    -- Alt+Y
+    , ((altm,                 0x79),  spawn "XMAurman")                    -- Alt+Y
     -- Terminals
     , ((modm .|. ctrlm,     0xff0d),  spawn "st")                          -- Mod4+Ctrl+Return
     , ((modm .|. altm,      0xff0d),  spawn "urxvtc")                       -- Mod4+Alt+Return
