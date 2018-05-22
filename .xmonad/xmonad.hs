@@ -134,7 +134,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,              0x1008ff1b),  nSA "HTOP")                          -- XF86Search
     , ((0,              0x1008ff81),  nSA "NCMPCPP")                       -- XF86Tools
     , ((0,              0x1008ff46),  spawn "XMR")                         -- XF86Launch6
-    , ((0,              0x1008ff73),  mySreenLock)                         -- XF86Reload
+    , ((0,              0x1008ff73),  spawn "XMUpdate")                    -- XF86Reload
     , ((0,              0x1008ff2f),  mySreenLock)                         -- XF86Sleep
     , ((0,                  0xff69),  nSA "ExitMenu")                      -- Cancel
     , ((0,                  0xff67),  spawn "gmrun")                       -- Menu
@@ -153,10 +153,10 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x6f),  spawn "opera-developer")             -- Alt+O
     , ((altm,                 0x72),  nSA "FM")                            -- Alt+R
     , ((altm,                 0x74),  spawn "XMTransgui")                  -- Alt+T
-    , ((altm,                 0x75),  spawn "XMUpdate")                    -- Alt+U
+    , ((altm,                 0x75),  spawn "XMAurman")                    -- Alt+U
     , ((altm,                 0x76),  myEditor)                            -- Alt+V
     , ((altm,                 0x77),  spawn "VoteCoin Wallet")             -- Alt+W
-    , ((altm,                 0x79),  spawn "XMAurman")                    -- Alt+Y
+    -- , ((altm,                 0x79),  spawn "XMAurman")                    -- Alt+Y
     -- Terminals
     , ((modm .|. ctrlm,     0xff0d),  spawn "st")                          -- Mod4+Ctrl+Return
     , ((modm .|. altm,      0xff0d),  spawn "urxvtc")                       -- Mod4+Alt+Return
