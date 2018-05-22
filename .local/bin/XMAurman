@@ -2,7 +2,7 @@
 # Author - Haron Prime
 # License WTFPL © 2017 http://www.wtfpl.net/
 
-urxvtc -name update -e aurman --color auto -Syu &&
+urxvtc -name update -e aurman --color auto -Syu --noconfirm &&
 while [[ -n $(pgrep aurman) ]]; do 
     sleep 1
 done
