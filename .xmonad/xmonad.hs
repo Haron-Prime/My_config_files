@@ -105,8 +105,8 @@ shftm            =  shiftMask
 encodeCChar      =  map fromIntegral . B.unpack
 onScr n f i      =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 viewShift        =  doF . liftM2 (.) W.greedyView W.shift
-minWin           =  withFocused minimizeWindow <+> spawn "XMMWO"
-restWin          =  sendMessage RestoreNextMinimizedWin <+> spawn "XMMWC"
+-- minWin           =  withFocused minimizeWindow <+> spawn "XMMWO"
+-- restWin          =  sendMessage RestoreNextMinimizedWin <+> spawn "XMMWC"
 cycleWin         =  cycleRecentWindows [0xffeb] 0xff09 0x77
 nSA              =  namedScratchpadAction myNS
 -- Other options
@@ -135,6 +135,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,              0x1008ff81),  nSA "NCMPCPP")                       -- XF86Tools
     , ((0,              0x1008ff46),  spawn "XMR")                         -- XF86Launch6
     , ((0,              0x1008ff73),  mySreenLock)                         -- XF86Reload
+    , ((0,              0x1008ff2f),  mySreenLock)                         -- XF86Sleep
     , ((0,                  0xff69),  nSA "ExitMenu")                      -- Cancel
     , ((0,                  0xff67),  spawn "gmrun")                       -- Menu
     , ((0,                  0xffc9),  myQST)                               -- F12
@@ -213,8 +214,8 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               0xff0d),  windows W.swapMaster)                -- Mod4+Return
     , ((modm .|. shftm,       0x6a),  windows W.swapDown)                  -- Mod4+Shift+J
     , ((modm .|. shftm,       0x6b),  windows W.swapUp)                    -- Mod4+Shift+K
-    , ((modm,                 0x7a),  minWin)                              -- Mod4+Z
-    , ((modm,                 0x61),  restWin)                             -- Mod4+A
+    -- , ((modm,                 0x7a),  minWin)                              -- Mod4+
+    -- , ((modm,                 0x61),  restWin)                             -- Mod4+
     , ((modm,                 0x78),  kill)                                -- Mod4+X
 
     -- XMobar action management
