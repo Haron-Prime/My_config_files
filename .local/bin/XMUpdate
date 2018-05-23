@@ -16,6 +16,6 @@ if [[ $UPD -gt 0 ]]; then
     fi
     echo "<action=XMAurman><fc=#fb0> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
 else 
-    echo > /tmp/haron/UP
+    echo "<action=XMUpdate2><fc=#0e0></fc></action>" > /tmp/haron/UP
 fi
 exit 0
