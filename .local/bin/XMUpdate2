@@ -16,4 +16,3 @@ else
     echo "<action=XMUpdate2><fc=#0e0></fc></action>" > /tmp/haron/UP 
 fi
 exit 0
-
