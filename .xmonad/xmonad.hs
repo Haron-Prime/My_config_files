@@ -39,7 +39,7 @@ import XMonad.Hooks.UrgencyHook hiding (Never)
 import XMonad.Layout.Grid
 import XMonad.Layout.LayoutCombinators ((|||))
 import XMonad.Layout.Master
-import XMonad.Layout.Minimize
+-- import XMonad.Layout.Minimize
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.ResizableTile
@@ -270,7 +270,7 @@ myWS = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J"
 
 -- Layouts Hook
 myLH =  avoidStruts
-        $ minimize
+        -- $ minimize
         $ Tog.toggleLayouts (noBorders Full) 
         $ smartBorders
         $ onWorkspace (myWS !! 0) myWws
