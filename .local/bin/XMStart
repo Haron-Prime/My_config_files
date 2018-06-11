@@ -30,7 +30,7 @@ if [[ -z $(ps aux | grep XMTimeNew | grep -v grep | awk '{print $2}') ]]; then
     XMTimeNew &
 fi
 if [[ -z $(ps aux | grep XMUpdate | grep -v grep | awk '{print $2}') ]]; then
-    XMUpdate &
+    XMUpdate3 &
 fi
 if [[ -z $(ps aux | grep XMNetTest | grep -v grep | awk '{print $2}') ]]; then
     XMNetTest &

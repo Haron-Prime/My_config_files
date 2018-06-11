@@ -1,0 +1,18 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL  http://www.wtfpl.net/
+
+UPD=`checkupdates | wc -l`
+if [[ $UPD -gt 0 ]]; then 
+    if [[ $UPD -eq 1 ]]; then
+        PKG='package'
+    elif [[ $UPD -gt 1 ]]; then
+        PKG='packages'
+    fi
+    echo "<action=XMYAY><fc=#fb0> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
+else 
+    echo "<fc=#fb0> Nothing to update</fc>" > /tmp/haron/UP
+    sleep 5 &&
+    echo "<action=XMUpdate3><fc=#0e0></fc></action>" > /tmp/haron/UP 
+fi
+exit 0
