@@ -9,7 +9,7 @@ if test -z "$DBUS_SESSION_BUS_ADDRESS"; then
    eval $(dbus-launch --sh-syntax --exit-with-session)
 fi
 xsetroot -cursor_name left_ptr &
-xset m 5/2 0 &
+xset m 7/2 20 &
 hsetroot -solid '#000000' &
 numlockx &
 perWindowLayoutD &
