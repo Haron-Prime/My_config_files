@@ -153,7 +153,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x6f),  spawn "opera-developer")             -- Alt+O
     , ((altm,                 0x72),  nSA "FM")                            -- Alt+R
     , ((altm,                 0x74),  spawn "XMTransgui")                  -- Alt+T
-    , ((altm,                 0x75),  spawn "XMAurman")                    -- Alt+U
+    , ((altm,                 0x75),  spawn "XMYAY")                       -- Alt+U
     , ((altm,                 0x76),  myEditor)                            -- Alt+V
     , ((altm,                 0x77),  spawn "VoteCoin Wallet")             -- Alt+W
     -- , ((altm,                 0x79),  spawn "XMAurman")                    -- Alt+Y
