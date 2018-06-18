@@ -12,6 +12,7 @@ ExecStart=-/usr/bin/mkdir /tmp/%u/.acestream_cache
 ExecStart=-/usr/bin/mkdir /tmp/%u/Downloads
 ExecStart=-/bin/sh -c 'mkfifo /tmp/haron/{CT,CU,DO,MU,MW,NT,NS,PL,PS,RU,TA,LT,DT,TS,UP,UT,VS,VL,WI} && chmod 644 /tmp/haron/{CT,CU,DO,MU,MW,NT,NS,PL,PS,RU,TA,LT,DT,TS,UP,UT,VS,VL,WI}'
 ExecStart=-/usr/bin/touch /tmp/%u/MW1
+ExecStart=-/bin/sh -c 'echo 0 > /tmp/%u/update'
 ExecStart=-/usr/bin/rm -r %h/.cache
 ExecStart=-/usr/bin/rm -r %h/.compose-cache
 ExecStart=-/usr/bin/rm -r %h/Downloads

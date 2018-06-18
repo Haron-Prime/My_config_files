@@ -29,8 +29,8 @@ fi
 if [[ -z $(ps aux | grep XMTimeNew | grep -v grep | awk '{print $2}') ]]; then
     XMTimeNew &
 fi
-if [[ -z $(ps aux | grep XMUpdate3 | grep -v grep | awk '{print $2}') ]]; then
-    XMUpdate3 &
+if [[ -z $(ps aux | grep XMUpdateNew | grep -v grep | awk '{print $2}') ]]; then
+    XMUpdateNew &
 fi
 if [[ -z $(ps aux | grep XMNetTest | grep -v grep | awk '{print $2}') ]]; then
     XMNetTest &

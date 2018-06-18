@@ -134,7 +134,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,              0x1008ff1b),  nSA "HTOP")                          -- XF86Search
     , ((0,              0x1008ff81),  nSA "NCMPCPP")                       -- XF86Tools
     , ((0,              0x1008ff46),  spawn "XMR")                         -- XF86Launch6
-    , ((0,              0x1008ff73),  spawn "XMUpdate3")                   -- XF86Reload
+    , ((0,              0x1008ff73),  spawn "XMUpdateNew")                 -- XF86Reload
     , ((0,              0x1008ff2f),  mySreenLock)                         -- XF86Sleep
     , ((0,                  0xff69),  nSA "ExitMenu")                      -- Cancel
     , ((0,                  0xff67),  spawn "gmrun")                       -- Menu
@@ -479,7 +479,7 @@ myNS = [
        , NS "HTOP"         myHtop         (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
        , NS "GPICK"        "gpick"        (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
        , NS "PAVUCONTROL"  "pavucontrol"  (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-       , NS "XMUPDATE"     "XMUpdate3"    (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+       , NS "XMUPDATE"     "XMUpdateNew"    (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
        , NS "NOTES"        myNotes        (appName    =? "Notes")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
        , NS "FM"           myFM           (appName    =? "ranger")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
        ]
