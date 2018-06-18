@@ -2,9 +2,10 @@
 # Author - Haron Prime
 # License WTFPL  http://www.wtfpl.net/
 
-echo  ""  > /tmp/haron/NT &
-echo  ""  > /tmp/haron/TS &
-echo  " " > /tmp/haron/WI &
+echo   "0"  > /tmp/haron/ChU &
+echo  ""  > /tmp/haron/NT  &
+echo  ""  > /tmp/haron/TS  &
+echo  " " > /tmp/haron/WI  &
 echo > /tmp/haron/CT &
 echo > /tmp/haron/CU &
 echo > /tmp/haron/DO &

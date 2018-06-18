@@ -1,16 +1,26 @@
 #!/usr/bin/env zsh
 # Author - Haron Prime
-# License WTFPL © 2017 http://www.wtfpl.net/
+# License WTFPL  http://www.wtfpl.net/
 
 urxvtc -name update -e yay -Syu &&
 while [[ -n $(pgrep yay) ]]; do 
     sleep 1
 done
-XMMWC &
-XMUpdateNew &&
-if [[ $(checkupdates | wc -l) -eq 0 ]]; then
-    notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "     <big><b><u>YAY</u></b></big>" " Update complete"
+# XMMWC &
+UPD=`checkupdates | wc -l`
+if [[ $UPD -ne 0 ]]; then
+    notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "    <big><b><u>Update info</u></b></big>" " Update do not complete"
+    if [[ $UPD -eq 1 ]]; then
+        PKG='package'
+    elif [[ $UPD -gt 1 ]]; then
+        PKG='packages'
+    fi
+    echo "<action=XMYAY><fc=#fb0> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
+    echo $UPD > /tmp/haron/ChU
 else
-    notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "        <big><b><u>YAY</u></b></big>" " Update do not complete"
+    echo "<fc=#0e0> System is up to date</fc>" > /tmp/haron/UP
+    echo $UPD > /tmp/haron/ChU
+    sleep 5 &&
+    echo "<action=XMUpdateNew><fc=#0e0></fc></action>" > /tmp/haron/UP
 fi
 exit 0
