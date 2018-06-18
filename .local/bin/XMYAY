@@ -8,8 +8,12 @@ while [[ -n $(pgrep yay) ]]; do
 done
 # XMMWC &
 UPD=`checkupdates | wc -l`
-if [[ $UPD -ne 0 ]]; then
-    notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "    <big><b><u>Update info</u></b></big>" " Update do not complete"
+if [[ $UPD -eq 0 ]]; then
+    echo "<fc=#0e0> System is up to date</fc>" > /tmp/haron/UP
+    echo $UPD > /tmp/haron/ChU
+    sleep 5 &&
+    echo "<action=XMUpdateNew><fc=#0e0></fc></action>" > /tmp/haron/UP
+else
     if [[ $UPD -eq 1 ]]; then
         PKG='package'
     elif [[ $UPD -gt 1 ]]; then
@@ -17,10 +21,6 @@ if [[ $UPD -ne 0 ]]; then
     fi
     echo "<action=XMYAY><fc=#fb0> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
     echo $UPD > /tmp/haron/ChU
-else
-    echo "<fc=#0e0> System is up to date</fc>" > /tmp/haron/UP
-    echo $UPD > /tmp/haron/ChU
-    sleep 5 &&
-    echo "<action=XMUpdateNew><fc=#0e0></fc></action>" > /tmp/haron/UP
+    notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "    <big><b><u>Update info</u></b></big>" " Update do not complete"
 fi
 exit 0
