@@ -35,7 +35,7 @@ else
         return2
     else
         return1
-        echo "<action=XMYAY><fc=#fb0> Update do not complete! $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
+        echo "<action=XMYAY><fc=#fb0> Update do not complete! $UPD $PKG not updated!</fc></action>" > /tmp/haron/UP
     fi
 fi
 exit 0
