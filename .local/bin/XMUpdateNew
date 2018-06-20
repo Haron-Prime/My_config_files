@@ -2,26 +2,26 @@
 # Author - Haron Prime
 # License WTFPL  http://www.wtfpl.net/
 
-TMP=`cat /tmp/haron/ChU`
 function return1 {
-    if [[ $UPD -eq 1 ]]; then
-        PKG='package'
-    elif [[ $UPD -gt 1 ]]; then
-        PKG='packages'
+    if [[ $actual_value -eq 1 ]]; then
+        unit='package'
+    elif [[ $actual_value -gt 1 ]]; then
+        unit='packages'
     fi
-    echo $UPD > /tmp/haron/ChU
+    echo $actual_value > /tmp/haron/ChU
 }
 function return2 {
-    echo $UPD > /tmp/haron/ChU
+    echo $actual_value > /tmp/haron/ChU
     echo "<fc=#0e0> System is up to date</fc>" > /tmp/haron/UP
     sleep 5 &&
     echo "<action=XMUpdateNew><fc=#0e0></fc></action>" > /tmp/haron/UP
 }
-if [[ $TMP -eq 0 ]] || [[ -z $TMP ]]; then
-    UPD=`checkupdates | wc -l`
-    if [[ $UPD -gt 0 ]]; then 
+previous_value=`cat /tmp/haron/ChU`
+if [[ $previous_value -eq 0 ]] || [[ -z $previous_value ]]; then
+    actual_value=`checkupdates | wc -l`
+    if [[ $actual_value -gt 0 ]]; then 
         return1
-        echo "<action=XMYAY><fc=#fb0> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
+        echo "<action=XMUpdateNew><fc=#fb0> $actual_value $unit can be updated</fc></action>" > /tmp/haron/UP
     else 
         return2
     fi
@@ -30,12 +30,12 @@ else
     while [[ -n $(pgrep yay) ]]; do 
         sleep 1
     done
-    UPD=`checkupdates | wc -l`
-    if [[ $UPD -eq 0 ]]; then
+    actual_value=`checkupdates | wc -l`
+    if [[ $actual_value -eq 0 ]]; then
         return2
     else
         return1
-        echo "<action=XMYAY><fc=#fb0> Update do not complete! $UPD $PKG not updated!</fc></action>" > /tmp/haron/UP
+        echo "<action=XMUpdateNew><fc=#fb0> Update do not complete! $actual_value $unit not updated!</fc></action>" > /tmp/haron/UP
     fi
 fi
 exit 0
