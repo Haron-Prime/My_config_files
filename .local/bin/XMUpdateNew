@@ -10,7 +10,6 @@ function return1 {
         PKG='packages'
     fi
     echo $UPD > /tmp/haron/ChU
-    echo "<action=XMYAY><fc=#fb0> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
 }
 function return2 {
     echo $UPD > /tmp/haron/ChU
@@ -22,6 +21,7 @@ if [[ $TMP -eq 0 ]] || [[ -z $TMP ]]; then
     UPD=`checkupdates | wc -l`
     if [[ $UPD -gt 0 ]]; then 
         return1
+        echo "<action=XMYAY><fc=#fb0> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
     else 
         return2
     fi
@@ -35,7 +35,7 @@ else
         return2
     else
         return1
-        notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "    <big><b><u>Update info</u></b></big>" " Update do not complete"
+        echo "<action=XMYAY><fc=#fb0> Update do not complete! $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
     fi
 fi
 exit 0
