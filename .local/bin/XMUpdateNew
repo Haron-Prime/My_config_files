@@ -3,7 +3,6 @@
 # License WTFPL  http://www.wtfpl.net/
 
 TMP=`cat /tmp/haron/ChU`
-UPD=`checkupdates | wc -l`
 function return1 {
     if [[ $UPD -eq 1 ]]; then
         PKG='package'
@@ -20,7 +19,7 @@ function return2 {
     echo "<action=XMUpdateNew><fc=#0e0></fc></action>" > /tmp/haron/UP
 }
 if [[ $TMP -eq 0 ]] || [[ -z $TMP ]]; then
-    UPD
+    UPD=`checkupdates | wc -l`
     if [[ $UPD -gt 0 ]]; then 
         return1
     else 
@@ -31,7 +30,7 @@ else
     while [[ -n $(pgrep yay) ]]; do 
         sleep 1
     done
-    UPD
+    UPD=`checkupdates | wc -l`
     if [[ $UPD -eq 0 ]]; then
         return2
     else
