@@ -52,6 +52,7 @@
 		"SublimeLinter-ghc",
 		"SublimeLinter-json",
 		"SublimeLinter-lua",
+		"SublimeLinter-mdl",
 		"SublimeLinter-shellcheck",
 		"SublimeLinter-xmllint",
 		"SyntaxHighlighter Reloaded Color Scheme",
