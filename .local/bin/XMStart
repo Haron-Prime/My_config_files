@@ -3,8 +3,8 @@
 # License WTFPL  http://www.wtfpl.net/
 
 echo   "0"  > /tmp/haron/ChU &
-echo  ""  > /tmp/haron/NT  &
-echo  ""  > /tmp/haron/TS  &
+echo  ""  > /tmp/haron/NT  &
+echo  ""  > /tmp/haron/TS  &
 echo  " " > /tmp/haron/WI  &
 echo > /tmp/haron/CT &
 echo > /tmp/haron/CU &
@@ -30,9 +30,6 @@ fi
 if [[ -z $(ps aux | grep XMTimeNew | grep -v grep | awk '{print $2}') ]]; then
     XMTimeNew &
 fi
-if [[ -z $(ps aux | grep XMUpdateNew | grep -v grep | awk '{print $2}') ]]; then
-    XMUpdateNew &
-fi
 if [[ -z $(ps aux | grep XMNetTest | grep -v grep | awk '{print $2}') ]]; then
     XMNetTest &
 fi
@@ -41,5 +38,8 @@ if [[ -z $(ps aux | grep XMTrans | grep -v grep | awk '{print $2}') ]]; then
 fi
 if [[ -z $(ps aux | grep XMMPD | grep -v grep | awk '{print $2}') ]]; then
     XMMPD &
+fi
+if [[ -z $(ps aux | grep XMUpdateNew | grep -v grep | awk '{print $2}') ]]; then
+    XMUpdateNew &
 fi
 exit 0
