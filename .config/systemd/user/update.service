@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/home/haron/.local/bin/XMUpdate
+ExecStart=/home/haron/.local/bin/XMUpdateNew
 ExecReload=/bin/kill -s HUP $MAINPID
 
 [Install]

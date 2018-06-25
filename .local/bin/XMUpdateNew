@@ -23,7 +23,7 @@ if [[ $previous_value -eq 0 ]] || [[ -z $previous_value ]]; then
         return1
         echo "<action=XMUpdateNew><fc=#fb0> $actual_value $unit can be updated</fc></action>" > /tmp/haron/UP
     else 
-        return2
+        echo "<action=XMUpdateNew><fc=#0e0></fc></action>" > /tmp/haron/UP
     fi
 else
     urxvtc -name update -e yay -Syu &&
