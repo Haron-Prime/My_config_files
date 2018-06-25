@@ -7,4 +7,4 @@ Target = usr/share/man/*
 [Action]
 Description = start man-db
 When = PostTransaction
-Exec = /usr/bin/systemctl --no-block start man-db
+Exec = /usr/bin/systemctl --no-block start man-db.service
