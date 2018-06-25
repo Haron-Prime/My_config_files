@@ -1,0 +1,9 @@
+[Trigger]
+Type = File
+Operation = Install
+Operation = Upgrade
+Target = usr/share/*
+[Action]
+Description = start man-db
+When = PostTransaction
+Exec = /usr/bin/systemctl start man-db
