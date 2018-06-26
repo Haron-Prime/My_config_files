@@ -14,7 +14,7 @@ if [[ $previous_value -eq 0 ]] || [[ -z $previous_value ]]; then
         echo $actual_value > /tmp/haron/ChU
         echo "<action=XMUpdateNew><fc=#fb0> $actual_value $unit can be updated</fc></action>" > /tmp/haron/UP
     else 
-        echo "<action=XMUpdateNew><fc=#0e0></fc></action>" > /tmp/haron/UP
+        echo "<action=XMUpdateNew><fc=#0e0></fc></action>" > /tmp/haron/UP
         sleep 3 &&
         echo "<action=XMUpdateNew><fc=#ccc></fc></action>" > /tmp/haron/UP
     fi
@@ -26,7 +26,7 @@ else
     actual_value=`checkupdates | wc -l`
     if [[ $actual_value -eq 0 ]]; then
         echo $actual_value > /tmp/haron/ChU
-        echo "<fc=#0e0> System is up to date</fc>" > /tmp/haron/UP
+        echo "<fc=#0e0> System is up to date</fc>" > /tmp/haron/UP
         sleep 3 &&
         echo "<action=XMUpdateNew><fc=#ccc></fc></action>" > /tmp/haron/UP
     else
@@ -36,7 +36,7 @@ else
             unit='packages'
         fi
         echo $actual_value > /tmp/haron/ChU
-        echo "<action=XMUpdateNew><fc=#fb0> Update do not complete! $actual_value $unit not updated!</fc></action>" > /tmp/haron/UP
+        echo "<action=XMUpdateNew><fc=#fb0> Update do not complete! $actual_value $unit not updated!</fc></action>" > /tmp/haron/UP
     fi
 fi
 exit 0
