@@ -4,6 +4,7 @@
 
 previous_value=`cat /tmp/haron/ChU`
 if [[ $previous_value -eq 0 ]] || [[ -z $previous_value ]]; then
+    echo "<fc=#ccc></fc>" > /tmp/haron/UP
     actual_value=`checkupdates | wc -l`
     if [[ $actual_value -gt 0 ]]; then 
         if [[ $actual_value -eq 1 ]]; then
@@ -14,7 +15,7 @@ if [[ $previous_value -eq 0 ]] || [[ -z $previous_value ]]; then
         echo $actual_value > /tmp/haron/ChU
         echo "<action=XMUpdateNew><fc=#fb0> $actual_value $unit can be updated</fc></action>" > /tmp/haron/UP
     else 
-        echo "<action=XMUpdateNew><fc=#0e0></fc></action>" > /tmp/haron/UP
+        echo "<fc=#0e0></fc>" > /tmp/haron/UP
         sleep 3 &&
         echo "<action=XMUpdateNew><fc=#ccc></fc></action>" > /tmp/haron/UP
     fi
