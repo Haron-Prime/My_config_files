@@ -4,7 +4,7 @@
 
 previous_value=`cat /tmp/haron/ChU`
 if [[ $previous_value -eq 0 ]] || [[ -z $previous_value ]]; then
-    echo "<fc=#ccc></fc>" > /tmp/haron/UP
+    echo "<fc=#0e0></fc>" > /tmp/haron/UP
     actual_value=`checkupdates | wc -l`
     if [[ $actual_value -gt 0 ]]; then 
         if [[ $actual_value -eq 1 ]]; then
