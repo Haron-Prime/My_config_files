@@ -3,7 +3,7 @@
 # License WTFPL  http://www.wtfpl.net/
 
 previous_value=`cat /tmp/haron/ChU`
-if [[ $previous_value -eq 0 ]] || [[ -z $previous_value ]]; then
+if [[ -z $previous_value || $previous_value -eq 0 ]]; then
     echo "<fc=#0e0></fc>" > /tmp/haron/UP
     actual_value=`checkupdates | wc -l`
     if [[ $actual_value -gt 0 ]]; then 
