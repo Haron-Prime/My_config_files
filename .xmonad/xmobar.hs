@@ -50,8 +50,8 @@ Config {
                             , Run PipeReader         "/tmp/haron/PL"    "PL"                           -- Playback (artist/track)
                             , Run PipeReader         "/tmp/haron/PS"    "PS"                           -- MPD control buttons
                             , Run Kbd                [
-                                                       ("us", "<fn=4><fc=#9df>EN</fc></fn>")
-                                                     , ("ru", "<fn=4><fc=#f60>RU</fc></fn>")
+                                                       ("us", "<fn=4><fc=#9df><< EN >></fc></fn>")
+                                                     , ("ru", "<fn=4><fc=#f60><< RU >></fc></fn>")
                                                      ]
                             ]
        , sepChar          = "%"
