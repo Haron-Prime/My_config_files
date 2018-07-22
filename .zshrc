@@ -118,22 +118,22 @@ ZSH_HIGHLIGHT_STYLES[root]='bg=red'
 [[ -a $(whence -p pacman-color) ]] && compdef _pacman pacman-color=pacman
 
 # active plugins
-source /usr/share/oh-my-zsh/plugins/archlinux/archlinux.plugin.zsh
-source /usr/share/oh-my-zsh/plugins/autojump/autojump.plugin.zsh
-source /usr/share/oh-my-zsh/plugins/command-not-found/command-not-found.plugin.zsh
-source /usr/share/oh-my-zsh/plugins/cp/cp.plugin.zsh
-source /usr/share/oh-my-zsh/plugins/rsync/rsync.plugin.zsh
-source /usr/share/oh-my-zsh/plugins/web-search/web-search.plugin.zsh
-source /usr/share/oh-my-zsh/plugins/history-substring-search/history-substring-search.zsh
-source /usr/share/oh-my-zsh/plugins/zsh_reload/zsh_reload.plugin.zsh
-source /usr/share/oh-my-zsh/plugins/colorize/colorize.plugin.zsh
+# source $HOME/scripts/my_zhs_plugins/archlinux.plugin.zsh
+source $HOME/scripts/my_zhs_plugins/autojump.plugin.zsh
+source $HOME/scripts/my_zhs_plugins/command-not-found.plugin.zsh
+source $HOME/scripts/my_zhs_plugins/cp.plugin.zsh
+source $HOME/scripts/my_zhs_plugins/rsync.plugin.zsh
+source $HOME/scripts/my_zhs_plugins/web-search.plugin.zsh
+source $HOME/scripts/my_zhs_plugins/history-substring-search.zsh
+source $HOME/scripts/my_zhs_plugins/zsh_reload.plugin.zsh
+source $HOME/scripts/my_zhs_plugins/colorize.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/action.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/aliases.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/aurman.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/git-prompt.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/zsh-autosuggestions.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/git-flow-completion.plugin.zsh
-source $HOME/scripts/my_zhs_plugins/grc-aliases.zsh
+source $HOME/scripts/my_zhs_plugins/grc-aliases.plugin.zsh
 source $HOME/scripts/my_zhs_plugins/yay.plugin.zsh
 # source $HOME/git/zsh-git-prompt/zshrc.sh
 
