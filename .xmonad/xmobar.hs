@@ -12,8 +12,8 @@ Config {
        , hideOnStart      = False
        , allDesktops      = True
        , overrideRedirect = True
-       , pickBroadest     = False
-       , persistent       = False
+       , pickBroadest     = True
+       , persistent       = True
        , borderColor      = "#151515"
        , border           = NoBorder
        , bgColor          = "#151515"
