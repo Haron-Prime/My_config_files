@@ -68,7 +68,7 @@ alias bzip='tar -cvjf'
 
 alias crypt='gpg -c --cipher-algo AES256'
 
-alias cclean='yaourt -Sc'
+alias cclean='yay -Sc'
 alias pclean='sudo pacman -Rns $(pacman -Qtdq)'
 # alias pacfs='pacman -Fs'
 alias pacfs='pacman -Qo'
