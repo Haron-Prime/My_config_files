@@ -479,7 +479,7 @@ myNS = [
        , NS "HTOP"         myHtop         (appName    =? "htop")         (customFloating $ W.RationalRect 0.05 0.1 0.9 0.8)
        , NS "GPICK"        "gpick"        (appName    =? "gpick")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
        , NS "PAVUCONTROL"  "pavucontrol"  (appName    =? "pavucontrol")  (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
-       , NS "XMUPDATE"     "XMUpdateNew"    (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
+       , NS "XMUPDATE"     "XMUpdateNew"  (appName    =? "update")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
        , NS "NOTES"        myNotes        (appName    =? "Notes")        (customFloating $ W.RationalRect 0.2 0.2 0.6 0.6)
        , NS "FM"           myFM           (appName    =? "ranger")       (customFloating $ W.RationalRect 0.15 0.2 0.7 0.6)
        ]
