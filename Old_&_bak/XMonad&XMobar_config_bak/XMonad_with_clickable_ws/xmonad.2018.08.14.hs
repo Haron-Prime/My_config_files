@@ -86,21 +86,16 @@ myMFont          =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=
 -- myMRT1           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
 -- myMRT2           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
 -- myMGR            =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
-myRT1            = (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
-myRT2            = (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
-myMRT1           = (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
-myMRT2           = (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
-myMGR            = (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 -- Combinations of layouts for various workspaces
-myWws            =  Full    |||  myRT1   ||| myMRT1  -- for WS1 (W)
-myMws            =  Full    |||  myRT1               -- for WS2 (M)
-myEws            =  myMRT1  |||  Full    ||| myRT2   -- for WS3 (E)
-myFws            =  Full    |||  myMGR               -- for WS4 (F)
-mySws            =  myRT1   |||  myMRT1  ||| Full    -- for WS5 (S)
-myPws            =  Full    |||  myMGR               -- for WS6 (P)
-myVws            =  Full    |||  myRT2               -- for WS7 (V)
-myJws            =  Full    |||  myRT2               -- for WS8 (J)
-myTws            =  Full    |||  myMRT1              -- for WS9 (T)
+-- myWws            =  Full    |||  myRT1   ||| myMRT1  -- for WS1 (W)
+-- myMws            =  Full    |||  myRT1               -- for WS2 (M)
+-- myEws            =  myMRT1  |||  Full    ||| myRT2   -- for WS3 (E)
+-- myFws            =  Full    |||  myMGR               -- for WS4 (F)
+-- mySws            =  myRT1   |||  myMRT1  ||| Full    -- for WS5 (S)
+-- myPws            =  Full    |||  myMGR               -- for WS6 (P)
+-- myVws            =  Full    |||  myRT2               -- for WS7 (V)
+-- myJws            =  Full    |||  myRT2               -- for WS8 (J)
+-- myTws            =  Full    |||  myMRT1              -- for WS9 (T)
 -- Modkey
 altm             =  mod1Mask
 ctrlm            =  controlMask
@@ -278,16 +273,18 @@ myLH =  avoidStruts
         -- $ minimize
         $ Tog.toggleLayouts (noBorders Full) 
         $ smartBorders
-        $ onWorkspace (myWS !! 0) myWws
-        $ onWorkspace (myWS !! 1) myMws
-        $ onWorkspace (myWS !! 2) myEws
-        $ onWorkspace (myWS !! 3) myFws
-        $ onWorkspace (myWS !! 4) mySws
-        $ onWorkspace (myWS !! 5) myVws
-        $ onWorkspace (myWS !! 6) myPws
-        $ onWorkspace (myWS !! 7) myJws
-        $ onWorkspace (myWS !! 8) myTws
-        $ myRT1 ||| myMRT1 ||| myMGR ||| Full
+        -- $ onWorkspace (myWS !! 0) myWws
+        -- $ onWorkspace (myWS !! 1) myMws
+        -- $ onWorkspace (myWS !! 2) myEws
+        -- $ onWorkspace (myWS !! 3) myFws
+        -- $ onWorkspace (myWS !! 4) mySws
+        -- $ onWorkspace (myWS !! 5) myVws
+        -- $ onWorkspace (myWS !! 6) myPws
+        -- $ onWorkspace (myWS !! 7) myJws
+        -- $ onWorkspace (myWS !! 8) myTws
+        -- $ myRT1 ||| myMRT1 ||| myMGR ||| Full
+        $ Full
+
 -- Window Management Rules
 myWR = composeAll . concat $
     [ 
