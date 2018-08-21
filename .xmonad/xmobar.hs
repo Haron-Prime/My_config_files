@@ -5,7 +5,7 @@
 -- List of all scripts used and their description is in the file https://github.com/Haron-Prime/My_config_files/blob/master/.local/bin/README.md
 
 Config {
-         position         = Static { xpos = 0 , ypos = 0, width = 1920, height = 24 }
+         position         = Static { xpos = 0 , ypos = 2, width = 1920, height = 22 }
        , textOffset       = -1
        , iconOffset       = -1
        , lowerOnStart     = True
