@@ -81,16 +81,16 @@ myFgColor        =  "#959595"
 myRFont          =  "xft:SonyEricssonLogo:size=10:antialias=true:hinting=true"
 myMFont          =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=true"
 -- Basic combinations of layouts
--- myRT1            =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
--- myRT2            =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
--- myMRT1           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
+myRT1            =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
+myRT2            =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
+myMRT1           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
 -- myMRT2           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
--- myMGR            =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
-myRT1            = (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
-myRT2            = (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
-myMRT1           = (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
-myMRT2           = (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
-myMGR            = (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
+myMGR            =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
+-- myRT1            = (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
+-- myRT2            = (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
+-- myMRT1           = (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
+-- myMRT2           = (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
+-- myMGR            = (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 -- Combinations of layouts for various workspaces
 myWws            =  Full    |||  myRT1   ||| myMRT1  -- for WS1 (W)
 myMws            =  Full    |||  myRT1               -- for WS2 (M)
