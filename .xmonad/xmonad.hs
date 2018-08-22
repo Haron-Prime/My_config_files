@@ -88,15 +88,15 @@ myRT2            =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) 
 myMRT            =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
 myMGR            =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 -- Combinations of layouts for various workspaces
-myWws            =  Full    |||  myRT1   ||| myMRT   -- for WS1 (W)
-myMws            =  Full    |||  myRT1               -- for WS2 (M)
-myEws            =  myMRT   |||  Full    ||| myRT2   -- for WS3 (E)
-myFws            =  Full    |||  myMGR               -- for WS4 (F)
-mySws            =  myRT1   |||  myMRT   ||| Full    -- for WS5 (S)
-myPws            =  Full    |||  myMGR               -- for WS6 (P)
-myVws            =  Full    |||  myRT2               -- for WS7 (V)
-myJws            =  Full    |||  myRT2               -- for WS8 (J)
-myTws            =  Full    |||  myMRT               -- for WS9 (T)
+myWws            =  Full   |||  myRT1  |||  myMRT   -- for WS1 (W)
+myMws            =  Full   |||  myRT1               -- for WS2 (M)
+myEws            =  myMRT  |||  Full   |||  myRT2   -- for WS3 (E)
+myFws            =  Full   |||  myMGR               -- for WS4 (F)
+mySws            =  myRT1  |||  myMRT  |||  Full    -- for WS5 (S)
+myPws            =  Full   |||  myMGR               -- for WS6 (P)
+myVws            =  Full   |||  myRT2               -- for WS7 (V)
+myJws            =  Full   |||  myRT2               -- for WS8 (J)
+myTws            =  Full   |||  myMRT               -- for WS9 (T)
 -- Modkey
 altm             =  mod1Mask
 ctrlm            =  controlMask
@@ -161,7 +161,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- , ((altm,                 0x79),  spawn "XMAurman")                    -- Alt+Y
     -- Terminals
     , ((modm .|. ctrlm,     0xff0d),  spawn "st")                          -- Mod4+Ctrl+Return
-    , ((modm .|. altm,      0xff0d),  spawn "urxvtc")                       -- Mod4+Alt+Return
+    , ((modm .|. altm,      0xff0d),  spawn "urxvtc")                      -- Mod4+Alt+Return
     , ((modm .|. shftm,     0xff0d),  spawn $ XMonad.terminal conf)        -- Mod4+Shift+Return
 
     -- Recompile || restart || terminate XMonad
