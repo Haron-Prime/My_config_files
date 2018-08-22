@@ -85,19 +85,18 @@ myMFont          =  "xft:Terminus Re33 Nerd Bold:size=12:antialias=true:hinting=
 -- Basic combinations of layouts
 myRT1            =  windowNavigation (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
 myRT2            =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
-myMRT1           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
--- myMRT2           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
+myMRT            =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
 myMGR            =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 -- Combinations of layouts for various workspaces
-myWws            =  Full    |||  myRT1   ||| myMRT1  -- for WS1 (W)
+myWws            =  Full    |||  myRT1   ||| myMRT   -- for WS1 (W)
 myMws            =  Full    |||  myRT1               -- for WS2 (M)
-myEws            =  myMRT1  |||  Full    ||| myRT2   -- for WS3 (E)
+myEws            =  myMRT   |||  Full    ||| myRT2   -- for WS3 (E)
 myFws            =  Full    |||  myMGR               -- for WS4 (F)
-mySws            =  myRT1   |||  myMRT1  ||| Full    -- for WS5 (S)
+mySws            =  myRT1   |||  myMRT   ||| Full    -- for WS5 (S)
 myPws            =  Full    |||  myMGR               -- for WS6 (P)
 myVws            =  Full    |||  myRT2               -- for WS7 (V)
 myJws            =  Full    |||  myRT2               -- for WS8 (J)
-myTws            =  Full    |||  myMRT1              -- for WS9 (T)
+myTws            =  Full    |||  myMRT               -- for WS9 (T)
 -- Modkey
 altm             =  mod1Mask
 ctrlm            =  controlMask
@@ -285,7 +284,7 @@ myLH =  avoidStruts
         $ onWorkspace (myWS !! 6) myPws
         $ onWorkspace (myWS !! 7) myJws
         $ onWorkspace (myWS !! 8) myTws
-        $ myRT1 ||| myMRT1 ||| myMGR ||| Full
+        $ myRT1 ||| myMRT ||| myMGR ||| Full
 -- Window Management Rules
 myWR = composeAll . concat $
     [ 
