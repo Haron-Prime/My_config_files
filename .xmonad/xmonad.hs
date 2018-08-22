@@ -31,6 +31,7 @@ import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.InsertPosition
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.Minimize
 import XMonad.Hooks.Place
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.WorkspaceByPos
@@ -506,6 +507,7 @@ myEH = handleEventHook def <+>
        fullscreenEventHook <+> 
        docksEventHook <+> 
        ewmhDesktopsEventHook <+> 
+       minimizeEventHook <+>
        focusOnMouseMove
 
 -- Startup Hook
