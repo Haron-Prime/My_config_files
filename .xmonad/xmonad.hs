@@ -22,6 +22,7 @@ import qualified XMonad.StackSet as W
 -- Actions
 import XMonad.Actions.CycleWindows
 import XMonad.Actions.CycleWS
+import XMonad.Actions.Minimize
 import XMonad.Actions.UpdateFocus
 import qualified XMonad.Actions.DynamicWorkspaceOrder as DO
 -- Hooks
@@ -39,7 +40,7 @@ import XMonad.Hooks.UrgencyHook hiding (Never)
 import XMonad.Layout.Grid
 import XMonad.Layout.LayoutCombinators ((|||))
 import XMonad.Layout.Master
--- import XMonad.Layout.Minimize
+import XMonad.Layout.Minimize
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.ResizableTile
@@ -86,11 +87,6 @@ myRT2            =  windowNavigation (spacing 1 $ ResizableTall 2 (1/100) (2/3) 
 myMRT1           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
 -- myMRT2           =  windowNavigation (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
 myMGR            =  windowNavigation (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
--- myRT1            = (spacing 1 $ ResizableTall 1 (1/100) (1/2) [])
--- myRT2            = (spacing 1 $ ResizableTall 2 (1/100) (2/3) [])
--- myMRT1           = (spacing 1 $ Mirror (ResizableTall 1 (1/100) (2/3) []))
--- myMRT2           = (spacing 1 $ Mirror (ResizableTall 2 (1/100) (2/3) []))
--- myMGR            = (spacing 1 $ multimastered 2 (1/100) (1/3) $ GridRatio (16/10))
 -- Combinations of layouts for various workspaces
 myWws            =  Full    |||  myRT1   ||| myMRT1  -- for WS1 (W)
 myMws            =  Full    |||  myRT1               -- for WS2 (M)
@@ -110,8 +106,9 @@ shftm            =  shiftMask
 encodeCChar      =  map fromIntegral . B.unpack
 onScr n f i      =  screenWorkspace n >>= \sn -> windows (f i . maybe id W.view sn)
 viewShift        =  doF . liftM2 (.) W.greedyView W.shift
--- minWin           =  withFocused minimizeWindow <+> spawn "XMMWO"
+minWin           =  withFocused minimizeWindow <+> spawn "XMMWO"
 -- restWin          =  sendMessage RestoreNextMinimizedWin <+> spawn "XMMWC"
+restWin          =  withLastMinimized maximizeWindowAndFocus <+> spawn "XMMWC"
 cycleWin         =  cycleRecentWindows [0xffeb] 0xff09 0x77
 nSA              =  namedScratchpadAction myNS
 -- Other options
@@ -160,7 +157,7 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x74),  spawn "XMTransgui")                  -- Alt+T
     , ((altm,                 0x75),  spawn "XMYAY")                       -- Alt+U
     , ((altm,                 0x76),  myEditor)                            -- Alt+V
-    , ((altm,                 0x77),  spawn "VoteCoin Wallet")             -- Alt+W
+    -- , ((altm,                 0x77),  spawn "VoteCoin Wallet")             -- Alt+W
     -- , ((altm,                 0x79),  spawn "XMAurman")                    -- Alt+Y
     -- Terminals
     , ((modm .|. ctrlm,     0xff0d),  spawn "st")                          -- Mod4+Ctrl+Return
@@ -219,8 +216,8 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               0xff0d),  windows W.swapMaster)                -- Mod4+Return
     , ((modm .|. shftm,       0x6a),  windows W.swapDown)                  -- Mod4+Shift+J
     , ((modm .|. shftm,       0x6b),  windows W.swapUp)                    -- Mod4+Shift+K
-    -- , ((modm,                 0x7a),  minWin)                              -- Mod4+
-    -- , ((modm,                 0x61),  restWin)                             -- Mod4+
+    , ((modm,                 0x7a),  minWin)                              -- Mod4+Z
+    , ((modm .|. shftm,       0x7a),  restWin)                             -- Mod4+Shift+Z
     , ((modm,                 0x78),  kill)                                -- Mod4+X
 
     -- XMobar action management
@@ -275,7 +272,7 @@ myWS = clickable . (map xmobarEscape) $ [ "W", "M", "E", "F", "S", "V", "P", "J"
 
 -- Layouts Hook
 myLH =  avoidStruts
-        -- $ minimize
+        $ minimize
         $ Tog.toggleLayouts (noBorders Full) 
         $ smartBorders
         $ onWorkspace (myWS !! 0) myWws
