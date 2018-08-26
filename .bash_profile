@@ -6,6 +6,8 @@ SHELL="/bin/bash"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export TERM=xterm-256color

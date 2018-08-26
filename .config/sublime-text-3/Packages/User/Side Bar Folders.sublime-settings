@@ -141,6 +141,9 @@
 			"path": "/home/haron"
 		},
 		{
+			"path": "/etc/X11/xorg.conf.d"
+		},
+		{
 			"path": "/etc/skel"
 		}
 	],
