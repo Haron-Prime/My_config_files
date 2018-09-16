@@ -73,7 +73,7 @@ myWScrot         =  spawn "scrot -u -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/
 myAScrot         =  spawn "scrot -s -q 100 -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'"
 myAppMenu        =  spawn "mygtkmenu .menurc"
 myPlaceMenu      =  spawn "mygtkmenu .placerc"
-mySreenLock      =  spawn "i3lock -i /home/haron/wall/starrynight.png"
+mySreenLock      =  spawn "i3lock -i /home/haron/wall/flame+water.png"
 myQST            =  scratchpadSpawnActionTerminal myTerm
 -- Decorations
 myHlColor        =  "#95d5f5"

@@ -12,6 +12,8 @@ if test -z "$DBUS_SESSION_BUS_ADDRESS"; then
    eval $(dbus-launch --sh-syntax --exit-with-session)
 fi
 xsetroot -cursor_name left_ptr &
+xset s 6999 &
+xset dpms 6000 6001 6002 &
 xset m 10 50 &
 hsetroot -solid '#000000' &
 numlockx &
