@@ -147,8 +147,8 @@ myHK conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altm,                 0x63),  spawn "chromium")                    -- Alt+C
     , ((altm,                 0x64),  nSA "DEADBEEF")                      -- Alt+D
     , ((altm,                 0x66),  spawn "firefox")                     -- Alt+F
-    , ((altm,                 0x67),  spawn "gitkraken")                   -- Alt+G
-    , ((altm .|. ctrlm,       0x67),  spawn "gimp")                        -- Alt+Ctrl+G
+    -- , ((altm,                 0x67),  spawn "gitkraken")                   -- Alt+G
+    -- , ((altm .|. ctrlm,       0x67),  spawn "gimp")                        -- Alt+Ctrl+G
     , ((altm,                 0x68),  spawn "hexchat")                     -- Alt+H
     , ((altm,                 0x6c),  spawn "XMLPass")                     -- Alt+L
     , ((altm,                 0x6d),  spawn "urxvtc -name mc -e mc")       -- Alt+M
