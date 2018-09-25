@@ -368,6 +368,7 @@ myWR = composeAll . concat $
                 , "mpv"
                 , "Sopcast-player.py"
                 , "Vlc"
+                , "Auryo"
                 ]
         myP   = [
                   "Gimp"
