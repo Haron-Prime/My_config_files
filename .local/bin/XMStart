@@ -19,6 +19,11 @@ echo > /tmp/haron/TA &
 echo > /tmp/haron/UP &
 echo > /tmp/haron/UT &
 echo > /tmp/haron/VL &
+if [[ -n $(pgrep auryo | head -n 1) ]]; then
+    echo "<fc=#ccc></fc>" > /tmp/haron/SC &
+else
+    echo "<fc=#0e0></fc>" > /tmp/haron/SC &
+fi
 if [[ `pulseaudio-ctl full-status | awk '{print $2}'` == "yes" ]]; then
     echo "<fc=#f60></fc>" > /tmp/haron/VS &
 else

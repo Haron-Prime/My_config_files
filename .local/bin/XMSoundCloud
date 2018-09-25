@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+# Author - Haron Prime
+# License WTFPL  http://www.wtfpl.net/
+
+if [[ -n $(pgrep auryo | head -n 1) ]]; then 
+    kill $(pgrep auryo | head -n 1) &&
+    echo "<fc=#ccc></fc>" > /tmp/haron/SC
+else 
+    auryo &
+    echo "<fc=#0e0></fc>" > /tmp/haron/SC
+fi
+exit 0
