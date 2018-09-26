@@ -2,25 +2,27 @@
 # Author - Haron Prime
 # License WTFPL  http://www.wtfpl.net/
 
-urxvtc -name update -e yay -Syu &&
-while [[ -n $(pgrep yay) ]]; do 
-    sleep 1
-done
-# XMMWC &
-UPD=`checkupdates | wc -l`
-if [[ $UPD -eq 0 ]]; then
-    echo $UPD > /tmp/haron/ChU
-    echo "<fc=#0e0> System is up to date</fc>" > /tmp/haron/UP
-    sleep 5 &&
-    echo "<action=XMUpdateNew><fc=#0e0></fc></action>" > /tmp/haron/UP
-else
-    if [[ $UPD -eq 1 ]]; then
-        PKG='package'
-    elif [[ $UPD -gt 1 ]]; then
-        PKG='packages'
+if [[ -z $(pgrep yay) ]]; then
+    urxvtc -name update -e yay -Syu &&
+    while [[ -n $(pgrep yay) ]]; do 
+        sleep 1
+    done
+    # XMMWC &
+    UPD=`checkupdates | wc -l`
+    if [[ $UPD -eq 0 ]]; then
+        echo $UPD > /tmp/haron/ChU
+        echo "<fc=#0e0> System is up to date</fc>" > /tmp/haron/UP
+        sleep 5 &&
+        echo "<action=XMUpdateNew><fc=#0e0></fc></action>" > /tmp/haron/UP
+    else
+        if [[ $UPD -eq 1 ]]; then
+            PKG='package'
+        elif [[ $UPD -gt 1 ]]; then
+            PKG='packages'
+        fi
+        echo $UPD > /tmp/haron/ChU
+        echo "<action=XMYAY><fc=#fb0> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
+        notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "    <big><b><u>Update info</u></b></big>" " Update do not complete"
     fi
-    echo $UPD > /tmp/haron/ChU
-    echo "<action=XMYAY><fc=#fb0> $UPD $PKG can be updated</fc></action>" > /tmp/haron/UP
-    notify-send -u critical -i "/home/haron/.icons/nouveGnomeGray/24x24/status/pk-update-security.png" "    <big><b><u>Update info</u></b></big>" " Update do not complete"
 fi
 exit 0
